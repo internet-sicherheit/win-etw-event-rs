@@ -1,0 +1,10 @@
+[package]
+name = "win-etw-event"
+version = "0.1.0"
+edition = "2021"
+authors = ["Marvin Gudel <marvin.s.gudel@studmail.w-hs.de>"]
+license = "MIT"
+description = "Event formats used in Event Tracing for Windows (ETW)."
+
+
+[dependencies]
