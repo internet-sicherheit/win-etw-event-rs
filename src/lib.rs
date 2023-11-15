@@ -1,7 +1,8 @@
 #![doc = include_str!("../README.md")]
-use std::str::FromStr;
 
 pub mod modern_event;
+
+pub use guid::*;
 
 /// Trace Header formats
 ///
@@ -24,53 +25,103 @@ pub enum TraceHeaderType {
     Instance64 = 0x15,
 }
 
-#[derive(Clone, Copy, PartialEq, Eq)]
-#[repr(C)]
-pub struct Guid(u128);
-#[derive(Debug, PartialEq, Eq)]
-pub struct ParseGuidError;
+mod guid {
+    #[derive(Clone, Copy, PartialEq, Eq)]
+    #[repr(C)]
+    pub struct Guid(u128);
+    #[derive(Debug, PartialEq, Eq)]
+    pub struct ParseGuidError;
 
-impl From<u128> for Guid {
-    fn from(value: u128) -> Self {
-        Guid(value)
+    impl From<u128> for Guid {
+        fn from(value: u128) -> Self {
+            Guid(value)
+        }
     }
-}
-impl FromStr for Guid {
-    type Err = ParseGuidError;
 
-    /// Parse GUIDs in the form of `{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}` where _X_ is a hex digit
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let stripped = s
-            .strip_prefix('{')
-            .and_then(|s| s.strip_suffix('}'))
-            .ok_or(ParseGuidError)?;
-
-        let hex = stripped.replace('-', "_");
-
-        let value = u128::from_str_radix(&hex, 16).map_err(|_| ParseGuidError)?;
-
-        Ok(Guid(value))
+    impl From<Guid> for u128 {
+        fn from(value: Guid) -> Self {
+            value.0
+        }
     }
-}
 
-impl std::fmt::Display for Guid {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        // Format: {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}
-        //        0x00000000_0000_0000_0000_000000000000
-        let d1 = self.0 & 0x00000000_0000_0000_0000_FFFFFFFFFFFF;
-        let d2 = self.0 & 0x00000000_0000_0000_FFFF_000000000000;
-        let d3 = self.0 & 0x00000000_0000_FFFF_0000_000000000000;
-        let d4 = self.0 & 0x00000000_FFFF_0000_0000_000000000000;
-        let d5 = self.0 & 0xFFFFFFFF_0000_0000_0000_000000000000;
-        write!(
-            f,
-            "{{{:08X}-{:04X}-{:04X}-{:04X}-{:012X}}}",
-            d5, d4, d3, d2, d1
-        )
+    impl std::str::FromStr for Guid {
+        type Err = ParseGuidError;
+
+        /// Parse GUIDs in the form of `{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}` where _X_ is a hex digit
+        fn from_str(s: &str) -> Result<Self, Self::Err> {
+            let stripped = s
+                .strip_prefix('{')
+                .and_then(|s| s.strip_suffix('}'))
+                .ok_or(ParseGuidError)?;
+
+            let mut hex = stripped.to_string();
+            hex.retain(|c| c != '-');
+
+            let value = u128::from_str_radix(&hex, 16).map_err(|_| ParseGuidError)?;
+
+            Ok(Guid(value))
+        }
     }
-}
-impl std::fmt::Debug for Guid {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "GUID {{{:032X}}}", self.0)
+
+    impl std::fmt::Display for Guid {
+        fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+            // Format: {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}
+            //        0x00000000_0000_0000_0000_000000000000
+            let d1 = self.0 & 0x00000000_0000_0000_0000_FFFFFFFFFFFF;
+            let d2 = (self.0 & 0x00000000_0000_0000_FFFF_000000000000) >> (12 * 4);
+            let d3 = (self.0 & 0x00000000_0000_FFFF_0000_000000000000) >> (16 * 4);
+            let d4 = (self.0 & 0x00000000_FFFF_0000_0000_000000000000) >> (20 * 4);
+            let d5 = (self.0 & 0xFFFFFFFF_0000_0000_0000_000000000000) >> (24 * 4);
+            write!(
+                f,
+                "{{{:08X}-{:04X}-{:04X}-{:04X}-{:012X}}}",
+                d5, d4, d3, d2, d1
+            )
+        }
+    }
+    impl std::fmt::Debug for Guid {
+        fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+            write!(f, "GUID {{ {:032X} }}", self.0)
+        }
+    }
+
+    #[cfg(test)]
+    mod tests {
+        use super::*;
+        use std::str::FromStr;
+
+        #[test]
+        fn test_parse() {
+            let value: u128 = 0x6B29FC40_CA47_1067_B31D_00DD010662DA;
+            assert_eq!(
+                Guid::from_str("{6B29FC40-CA47-1067-B31D-00DD010662DA}").unwrap(),
+                value.into()
+            );
+            assert_eq!(
+                Guid::from_str("{6b29fc40-ca47-1067-b31d-00dd010662da}").unwrap(),
+                value.into()
+            );
+        }
+
+        #[test]
+        fn test_display() {
+            let value: Guid = 0x6B29FC40_CA47_1067_B31D_00DD010662DA.into();
+            let guid_string = value.to_string();
+            assert_eq!(&guid_string, "{6B29FC40-CA47-1067-B31D-00DD010662DA}");
+        }
+
+        #[test]
+        fn test_debug() {
+            use std::fmt::Write;
+            let mut debug_string = String::new();
+            write!(
+                debug_string,
+                "{:?}",
+                Guid::from_str("{6b29fc40-ca47-1067-b31d-00dd010662da}").unwrap()
+            )
+            .unwrap();
+
+            assert_eq!(&debug_string, "GUID { 6B29FC40CA471067B31D00DD010662DA }")
+        }
     }
 }
