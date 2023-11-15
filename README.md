@@ -1,4 +1,4 @@
-# win-etw
+# win-etw-event
 
 Event formats used in Event Tracing for Windows (ETW).
 
