@@ -26,6 +26,22 @@ pub enum TraceHeaderType {
 }
 
 mod guid {
+    /// Global Unique Identifier (GUID)
+    ///
+    /// A text string representing a Class identifier (ID).
+    /// The valid format for a GUID is `{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}` where X is a hex digit (0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F).
+    ///
+    /// # Examples
+    /// GUIDs can be constructed from strings as well as 128-bit unsigned integers.
+    /// ```
+    /// # use win_etw_event::Guid;
+    /// # use std::str::FromStr;
+    /// // Building from a u128
+    /// let class_id: Guid = 0x6B29FC40_CA47_1067_B31D_00DD010662DA.into();
+    /// // Building from a str
+    /// let class_id: Guid = "{6B29FC40-CA47-1067-B31D-00DD010662DA}".parse().unwrap();
+    /// ```
+    ///
     #[derive(Clone, Copy, PartialEq, Eq)]
     #[repr(C)]
     pub struct Guid(u128);
