@@ -8,3 +8,4 @@ description = "Event formats used in Event Tracing for Windows (ETW)."
 
 
 [dependencies]
+uuid = "1.6.1"

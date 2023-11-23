@@ -1,4 +1,5 @@
-use super::{Guid, TraceHeaderType};
+use super::TraceHeaderType;
+use uuid::Uuid;
 
 /// A modern event
 ///
@@ -23,11 +24,11 @@ pub struct ModernEventHeader {
     pub thread_id: u32,
     pub process_id: u32,
     pub timestamp: u64,
-    pub provider_id: Guid,
+    pub provider_id: Uuid,
     pub event_descriptor: EventDescriptor,
     /// Placeholder for the union describing kernel or processor time
     pub time_union: u64,
-    pub activity_id: Guid,
+    pub activity_id: Uuid,
 }
 
 /// WIP Placeholder
