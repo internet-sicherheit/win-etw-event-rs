@@ -1,0 +1,143 @@
+use std::io::{Error, ErrorKind, Read, Result, Seek};
+
+use super::TraceHeaderType;
+
+const SYSTEM_TRACE_EVENT_HEADER_LEN: u8 = 32;
+const COMPACT_SYSTEM_TRACE_EVENT_HEADER_LEN: u8 = 32;
+
+pub struct SystemTraceEvent {
+    pub header: SystemTraceEventHeader,
+    pub payload: Vec<u8>,
+}
+
+#[derive(Debug, Clone)]
+pub struct SystemTraceEventHeader {
+    pub version: u16,
+    pub header_type: TraceHeaderType,
+    pub flags: u8,
+    pub size: u16,
+    packet: Packet,
+    pub thread_id: u32,
+    pub process_id: u32,
+    pub system_time: u64,
+    pub kernel_time: Option<u32>,
+    pub user_time: Option<u32>,
+}
+
+#[derive(Clone, Copy)]
+union Packet {
+    hook_id: u16,
+    group_type: GroupType,
+}
+impl core::fmt::Debug for Packet {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "WMI_TRACE_PACKET")
+    }
+}
+
+#[derive(Clone, Copy)]
+#[repr(C)]
+pub struct GroupType {
+    pub event_type: u8,
+    pub group: u8,
+}
+
+impl SystemTraceEventHeader {
+    pub fn get_hook_id(&self) -> u16 {
+        unsafe { self.packet.hook_id }
+    }
+    pub fn get_group_type(&self) -> GroupType {
+        unsafe { self.packet.group_type }
+    }
+
+    pub fn is_compact(&self) -> bool {
+        use TraceHeaderType::*;
+        matches!(self.header_type, Compact32 | Compact64)
+    }
+    pub fn length(&self) -> u8 {
+        if self.is_compact() {
+            COMPACT_SYSTEM_TRACE_EVENT_HEADER_LEN
+        } else {
+            SYSTEM_TRACE_EVENT_HEADER_LEN
+        }
+    }
+
+    pub(crate) fn parse<R: Read + Seek>(buf: &mut R) -> Result<SystemTraceEventHeader> {
+        let mut comp_header_bytes = [0u8; 24];
+        buf.read_exact(&mut comp_header_bytes)?;
+
+        let version = u16::from_le_bytes(comp_header_bytes[0..2].try_into().unwrap());
+
+        let header_type = TraceHeaderType::try_from(comp_header_bytes[2]).map_err(|_| {
+            Error::new(
+                ErrorKind::InvalidData,
+                "encountered unknown TraceHeaderType!",
+            )
+        })?;
+
+        if !matches!(
+            header_type,
+            TraceHeaderType::System32
+                | TraceHeaderType::System64
+                | TraceHeaderType::Compact32
+                | TraceHeaderType::Compact64
+        ) {
+            return Err(Error::new(
+                ErrorKind::InvalidData,
+                "trying to parse SystemTraceEventHeader, but found other TraceHeaderType!",
+            ));
+        }
+
+        let flags = comp_header_bytes[3];
+        let size = u16::from_le_bytes(comp_header_bytes[4..6].try_into().unwrap());
+
+        let packet = Packet {
+            hook_id: u16::from_le_bytes(comp_header_bytes[6..8].try_into().unwrap()),
+        };
+
+        let thread_id = u32::from_le_bytes(comp_header_bytes[8..12].try_into().unwrap());
+        let process_id = u32::from_le_bytes(comp_header_bytes[12..16].try_into().unwrap());
+        let system_time = u64::from_le_bytes(comp_header_bytes[16..24].try_into().unwrap());
+
+        let (kernel_time, user_time) = if matches!(
+            header_type,
+            TraceHeaderType::System32 | TraceHeaderType::System64
+        ) {
+            let mut bytes = [0u8; 8];
+            buf.read_exact(&mut bytes)?;
+            let kernel_time = u32::from_le_bytes(bytes[0..4].try_into().unwrap());
+            let user_time = u32::from_le_bytes(bytes[4..8].try_into().unwrap());
+
+            (Some(kernel_time), Some(user_time))
+        } else {
+            (None, None)
+        };
+
+        Ok(SystemTraceEventHeader {
+            version,
+            header_type,
+            flags,
+            size,
+            packet,
+            thread_id,
+            process_id,
+            system_time,
+            kernel_time,
+            user_time,
+        })
+    }
+}
+
+impl SystemTraceEvent {
+    pub(crate) fn parse<R: Read + Seek>(buf: &mut R) -> Result<SystemTraceEvent> {
+        let header = SystemTraceEventHeader::parse(buf)?;
+
+        let payload_size = header.size - header.length() as u16;
+
+        let mut payload: Vec<u8> = vec![0u8; payload_size as usize];
+
+        buf.read_exact(&mut payload)?;
+
+        Ok(SystemTraceEvent { header, payload })
+    }
+}
