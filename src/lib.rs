@@ -1,6 +1,5 @@
 #![doc = include_str!("../README.md")]
 
-use log::debug;
 use num_enum::TryFromPrimitive;
 use std::io::{Read, Seek, SeekFrom};
 
