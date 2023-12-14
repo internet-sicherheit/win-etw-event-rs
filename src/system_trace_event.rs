@@ -3,13 +3,18 @@ use std::io::{Error, ErrorKind, Read, Result, Seek};
 use super::TraceHeaderType;
 
 const SYSTEM_TRACE_EVENT_HEADER_LEN: u8 = 32;
-const COMPACT_SYSTEM_TRACE_EVENT_HEADER_LEN: u8 = 32;
+const COMPACT_SYSTEM_TRACE_EVENT_HEADER_LEN: u8 = 24;
 
 pub struct SystemTraceEvent {
     pub header: SystemTraceEventHeader,
     pub payload: Vec<u8>,
 }
 
+/// SYSTEM_TRACE_HEADER
+///
+/// One of several types of fixed-size headers for ETW events.
+///
+/// <https://www.geoffchappell.com/studies/windows/km/ntoskrnl/inc/api/ntwmi/traceheaders/system_trace_header.htm>
 #[derive(Debug, Clone)]
 pub struct SystemTraceEventHeader {
     pub version: u16,
@@ -35,6 +40,9 @@ impl core::fmt::Debug for Packet {
     }
 }
 
+/// The type and group of the event
+///
+/// Together these form the Hook ID of the event.
 #[derive(Clone, Copy)]
 #[repr(C)]
 pub struct GroupType {
@@ -43,17 +51,26 @@ pub struct GroupType {
 }
 
 impl SystemTraceEventHeader {
+    /// Get the Hook ID of the event
+    ///
+    /// The Hook ID is a compound of the group and type of the event.
     pub fn get_hook_id(&self) -> u16 {
         unsafe { self.packet.hook_id }
     }
+    /// Get the group and type of the event
     pub fn get_group_type(&self) -> GroupType {
         unsafe { self.packet.group_type }
     }
 
+    /// Wether the header is in compact form or not
     pub fn is_compact(&self) -> bool {
         use TraceHeaderType::*;
         matches!(self.header_type, Compact32 | Compact64)
     }
+
+    /// The length of the header
+    ///
+    /// The header has a fixed size, but differs for compact or normal headers.
     pub fn length(&self) -> u8 {
         if self.is_compact() {
             COMPACT_SYSTEM_TRACE_EVENT_HEADER_LEN
@@ -63,7 +80,7 @@ impl SystemTraceEventHeader {
     }
 
     pub(crate) fn parse<R: Read + Seek>(buf: &mut R) -> Result<SystemTraceEventHeader> {
-        let mut comp_header_bytes = [0u8; 24];
+        let mut comp_header_bytes = [0u8; COMPACT_SYSTEM_TRACE_EVENT_HEADER_LEN as usize];
         buf.read_exact(&mut comp_header_bytes)?;
 
         let version = u16::from_le_bytes(comp_header_bytes[0..2].try_into().unwrap());
