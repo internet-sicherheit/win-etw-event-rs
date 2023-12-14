@@ -79,7 +79,7 @@ impl SystemTraceEventHeader {
         }
     }
 
-    pub(crate) fn parse<R: Read + Seek>(buf: &mut R) -> Result<SystemTraceEventHeader> {
+    pub(crate) fn parse<T: Read + Seek>(buf: &mut T) -> Result<SystemTraceEventHeader> {
         let mut comp_header_bytes = [0u8; COMPACT_SYSTEM_TRACE_EVENT_HEADER_LEN as usize];
         buf.read_exact(&mut comp_header_bytes)?;
 

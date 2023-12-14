@@ -1,5 +1,9 @@
+use std::io::{Error, ErrorKind, Read, Result, Seek};
+
 use super::TraceHeaderType;
 use uuid::Uuid;
+
+const MODERN_EVENT_HEADER_SIZE: usize = 80;
 
 /// A modern event
 ///
@@ -33,3 +37,33 @@ pub struct ModernEventHeader {
 
 /// WIP Placeholder
 pub struct EventDescriptor(u128);
+
+impl ModernEventHeader {
+    pub fn parse<T: Read + Seek>(buf: &mut T) -> Result<ModernEventHeader> {
+        let mut bytes = [0; MODERN_EVENT_HEADER_SIZE];
+        buf.read_exact(&mut bytes)?;
+        let size = u16::from_le_bytes(bytes[0..2].try_into().unwrap());
+
+        let header_type = TraceHeaderType::try_from(bytes[2]).map_err(|_| {
+            Error::new(
+                ErrorKind::InvalidData,
+                "encountered unknown TraceHeaderType!",
+            )
+        })?;
+
+        if !matches!(
+            header_type,
+            TraceHeaderType::System32
+                | TraceHeaderType::System64
+                | TraceHeaderType::Compact32
+                | TraceHeaderType::Compact64
+        ) {
+            return Err(Error::new(
+                ErrorKind::InvalidData,
+                "trying to parse SystemTraceEventHeader, but found other TraceHeaderType!",
+            ));
+        }
+
+        todo!()
+    }
+}
