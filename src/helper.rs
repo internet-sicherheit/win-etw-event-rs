@@ -20,7 +20,7 @@ pub(crate) fn u16_from_le_slice(s: &[u8]) -> Result<u16, ParseError> {
 ///
 /// Panics if the slice is not of sufficient size.
 pub(crate) fn u32_from_le_slice(s: &[u8]) -> Result<u32, ParseError> {
-    if s.len() != 2 {
+    if s.len() != 4 {
         return Err(ParseError);
     }
 
@@ -34,7 +34,7 @@ pub(crate) fn u32_from_le_slice(s: &[u8]) -> Result<u32, ParseError> {
 ///
 /// Panics if the slice is not of sufficient size.
 pub(crate) fn u64_from_le_slice(s: &[u8]) -> Result<u64, ParseError> {
-    if s.len() != 2 {
+    if s.len() != 8 {
         return Err(ParseError);
     }
 
