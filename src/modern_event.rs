@@ -20,6 +20,24 @@ pub struct ModernEvent {
     pub payload: Vec<u8>,
 }
 
+impl ModernEvent {
+    pub(crate) fn parse<R: Read + Seek>(buf: &mut R) -> Result<ModernEvent> {
+        let header = ModernEventHeader::parse(buf)?;
+
+        let payload_size = header.size - header.length() as u16;
+
+        let mut payload: Vec<u8> = vec![0u8; payload_size as usize];
+
+        buf.read_exact(&mut payload)?;
+
+        Ok(ModernEvent {
+            header,
+            extended_header: Vec::new(),
+            payload,
+        })
+    }
+}
+
 /// Header of a modern event
 #[repr(C)]
 #[derive(Debug)]
@@ -98,6 +116,12 @@ impl ModernEventHeader {
             time_union,
             activity_id,
         })
+    }
+
+    /// Return the length of the header
+    pub fn length(&self) -> usize {
+        // TODO: extended header
+        MODERN_EVENT_HEADER_SIZE
     }
 }
 

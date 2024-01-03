@@ -1,5 +1,6 @@
 #![doc = include_str!("../README.md")]
 
+use modern_event::ModernEvent;
 use num_enum::TryFromPrimitive;
 use std::io::{Read, Seek, SeekFrom};
 
@@ -72,8 +73,10 @@ pub fn parse_header<R: Read + Seek>(buf: &mut R) -> std::io::Result<EtwEvent> {
 
     match header_type {
         TraceHeaderType::System32 => Ok(EtwEvent::SystemTraceEvent(SystemTraceEvent::parse(buf)?)),
-
         TraceHeaderType::System64 => Ok(EtwEvent::SystemTraceEvent(SystemTraceEvent::parse(buf)?)),
+
+        TraceHeaderType::ModernEvent32 => Ok(EtwEvent::ModernEvent(ModernEvent::parse(buf)?)),
+        TraceHeaderType::ModernEvent64 => Ok(EtwEvent::ModernEvent(ModernEvent::parse(buf)?)),
         _ => unimplemented!(),
     }
 }
