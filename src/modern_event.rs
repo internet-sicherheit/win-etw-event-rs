@@ -3,6 +3,8 @@ use std::io::{Error, ErrorKind, Read, Result, Seek};
 use super::TraceHeaderType;
 use uuid::Uuid;
 
+use crate::helper::{u16_from_le_slice, u32_from_le_slice, u64_from_le_slice};
+
 const MODERN_EVENT_HEADER_SIZE: usize = 80;
 
 /// A modern event
@@ -42,7 +44,7 @@ impl ModernEventHeader {
     pub fn parse<T: Read + Seek>(buf: &mut T) -> Result<ModernEventHeader> {
         let mut bytes = [0; MODERN_EVENT_HEADER_SIZE];
         buf.read_exact(&mut bytes)?;
-        let size = u16::from_le_bytes(bytes[0..2].try_into().unwrap());
+        let size = u16_from_le_slice(&bytes[0..2])?;
 
         let header_type = TraceHeaderType::try_from(bytes[2]).map_err(|_| {
             Error::new(
@@ -53,17 +55,61 @@ impl ModernEventHeader {
 
         if !matches!(
             header_type,
-            TraceHeaderType::System32
-                | TraceHeaderType::System64
-                | TraceHeaderType::Compact32
-                | TraceHeaderType::Compact64
+            TraceHeaderType::ModernEvent32 | TraceHeaderType::ModernEvent64
         ) {
             return Err(Error::new(
                 ErrorKind::InvalidData,
-                "trying to parse SystemTraceEventHeader, but found other TraceHeaderType!",
+                "trying to parse ModernEventHeader, but found other TraceHeaderType!",
             ));
         }
 
-        todo!()
+        let flags = bytes[3];
+        let event_flags = u16_from_le_slice(&bytes[4..6])?;
+
+        let event_properties = u16_from_le_slice(&bytes[6..8])?;
+        let thread_id = u32_from_le_slice(&bytes[8..12])?;
+        let process_id = u32_from_le_slice(&bytes[12..16])?;
+
+        let timestamp = u64_from_le_slice(&bytes[16..24])?;
+
+        let provider_id = Uuid::from_slice_le(&bytes[24..40]).unwrap(); // errors if slice to short
+
+        let event_descriptor =
+            EventDescriptor(u128::from_le_bytes(bytes[40..56].try_into().unwrap()));
+
+        let time_union = u64_from_le_slice(&bytes[56..64])?;
+
+        let activity_id = Uuid::from_slice_le(&bytes[64..80]).unwrap();
+
+        Ok(ModernEventHeader {
+            size,
+            header_type,
+            flags,
+            event_flags,
+            event_properties,
+            thread_id,
+            process_id,
+            timestamp,
+            provider_id,
+            event_descriptor,
+            time_union,
+            activity_id,
+        })
+    }
+
+    /// Size + 16 byte alignment
+    ///
+    /// The total space the event needs with 16 byte alignment.
+    pub fn space(&self) -> u16 {
+        self.size + (16 - self.size % 16)
+    }
+}
+
+impl From<crate::helper::ParseError> for Error {
+    fn from(_: crate::helper::ParseError) -> Self {
+        Error::new(
+            ErrorKind::Other,
+            "Oops, error parsing, a wrong slice size was used somewhere.",
+        )
     }
 }

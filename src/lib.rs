@@ -8,6 +8,8 @@ use crate::system_trace_event::SystemTraceEvent;
 pub mod modern_event;
 pub mod system_trace_event;
 
+mod helper;
+
 /// Trace Header formats
 ///
 /// Events can be one of six different formats,
