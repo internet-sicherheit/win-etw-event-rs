@@ -44,6 +44,17 @@ impl EtwEvent {
             EtwEvent::SystemTraceEvent(event) => event.header.header_type,
         }
     }
+
+    /// Size + 16 byte alignment
+    ///
+    /// The total space the event needs with 16 byte alignment.
+    pub fn space(&self) -> u16 {
+        let size = match self {
+            EtwEvent::ModernEvent(e) => e.header.size,
+            EtwEvent::SystemTraceEvent(e) => e.header.size,
+        };
+        size + (16 - size % 16)
+    }
 }
 
 pub fn parse_header<R: Read + Seek>(buf: &mut R) -> std::io::Result<EtwEvent> {

@@ -96,13 +96,6 @@ impl ModernEventHeader {
             activity_id,
         })
     }
-
-    /// Size + 16 byte alignment
-    ///
-    /// The total space the event needs with 16 byte alignment.
-    pub fn space(&self) -> u16 {
-        self.size + (16 - self.size % 16)
-    }
 }
 
 impl From<crate::helper::ParseError> for Error {
