@@ -32,6 +32,7 @@ pub enum TraceHeaderType {
 }
 
 #[non_exhaustive]
+#[derive(Debug)]
 pub enum EtwEvent {
     ModernEvent(modern_event::ModernEvent),
     SystemTraceEvent(system_trace_event::SystemTraceEvent),

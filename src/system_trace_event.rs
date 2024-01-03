@@ -5,6 +5,7 @@ use super::TraceHeaderType;
 const SYSTEM_TRACE_EVENT_HEADER_LEN: u8 = 32;
 const COMPACT_SYSTEM_TRACE_EVENT_HEADER_LEN: u8 = 24;
 
+#[derive(Debug)]
 pub struct SystemTraceEvent {
     pub header: SystemTraceEventHeader,
     pub payload: Vec<u8>,
