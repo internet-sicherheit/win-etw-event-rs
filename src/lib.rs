@@ -68,8 +68,9 @@ pub fn parse_header<R: Read + Seek>(buf: &mut R) -> std::io::Result<EtwEvent> {
     trace!("Event header bytes: {:X?}", header_type_bytes);
     let header_type = TraceHeaderType::try_from(header_type_bytes[2]).map_err(|_| {
         trace!(
-            "Encountered unknown TraceHeaderType: 0x{:X}",
-            header_type_bytes[2]
+            "Encountered unknown TraceHeaderType 0x{:X} at stream position 0x{:X}",
+            header_type_bytes[2],
+            buf.stream_position().unwrap()
         );
         std::io::Error::new(
             std::io::ErrorKind::InvalidData,
