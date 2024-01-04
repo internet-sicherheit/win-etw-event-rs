@@ -3,7 +3,7 @@
 use log::trace;
 use modern_event::ModernEvent;
 use num_enum::TryFromPrimitive;
-use std::io::{Read, Seek, SeekFrom};
+use std::io::{Error, Read, Seek, SeekFrom};
 
 use crate::system_trace_event::SystemTraceEvent;
 
@@ -90,7 +90,10 @@ pub fn parse_header<R: Read + Seek>(buf: &mut R) -> std::io::Result<EtwEvent> {
                 "Found event of type {:?} which is (not jet) supported.",
                 header_type
             );
-            unimplemented!()
+            Err(Error::new(
+                std::io::ErrorKind::Unsupported,
+                "Event type not supported (jet)",
+            ))
         }
     }
 }
