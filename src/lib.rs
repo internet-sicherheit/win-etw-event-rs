@@ -85,6 +85,12 @@ pub fn parse_header<R: Read + Seek>(buf: &mut R) -> std::io::Result<EtwEvent> {
 
         TraceHeaderType::ModernEvent32 => Ok(EtwEvent::ModernEvent(ModernEvent::parse(buf)?)),
         TraceHeaderType::ModernEvent64 => Ok(EtwEvent::ModernEvent(ModernEvent::parse(buf)?)),
-        _ => unimplemented!(),
+        _ => {
+            trace!(
+                "Found event of type {:?} which is (not jet) supported.",
+                header_type
+            );
+            unimplemented!()
+        }
     }
 }
