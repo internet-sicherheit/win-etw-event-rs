@@ -64,6 +64,8 @@ pub fn parse_header<R: Read + Seek>(buf: &mut R) -> std::io::Result<EtwEvent> {
     let start = buf.stream_position()?;
     let mut header_type_bytes = [0u8; 4];
     buf.read_exact(&mut header_type_bytes)?;
+
+    trace!("Event header bytes: {:X?}", header_type_bytes);
     let header_type = TraceHeaderType::try_from(header_type_bytes[2]).map_err(|_| {
         trace!(
             "Encountered unknown TraceHeaderType: 0x{:X}",
