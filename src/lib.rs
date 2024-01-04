@@ -1,5 +1,6 @@
 #![doc = include_str!("../README.md")]
 
+use log::trace;
 use modern_event::ModernEvent;
 use num_enum::TryFromPrimitive;
 use std::io::{Read, Seek, SeekFrom};
@@ -64,9 +65,13 @@ pub fn parse_header<R: Read + Seek>(buf: &mut R) -> std::io::Result<EtwEvent> {
     let mut header_type_bytes = [0u8; 4];
     buf.read_exact(&mut header_type_bytes)?;
     let header_type = TraceHeaderType::try_from(header_type_bytes[2]).map_err(|_| {
+        trace!(
+            "Encountered unknown TraceHeaderType: 0x{:X}",
+            header_type_bytes[2]
+        );
         std::io::Error::new(
             std::io::ErrorKind::InvalidData,
-            "encountered unknown TraceHeaderType!",
+            "Encountered unknown TraceHeaderType!",
         )
     })?;
     buf.seek(SeekFrom::Start(start))?;
