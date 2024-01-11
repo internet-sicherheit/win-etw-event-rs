@@ -48,15 +48,24 @@ impl EtwEvent {
         }
     }
 
-    /// Size + 16 byte alignment
+    /// Size + 8 byte alignment
     ///
-    /// The total space the event needs with 16 byte alignment.
+    /// The total space the event needs with 8 byte alignment.
     pub fn space(&self) -> u16 {
         let size = match self {
             EtwEvent::ModernEvent(e) => e.header.size,
             EtwEvent::SystemTraceEvent(e) => e.header.size,
         };
         size + (8 - size % 8)
+    }
+
+    /// Padding to the next event
+    pub fn padding(&self) -> u8 {
+        let size = match self {
+            EtwEvent::ModernEvent(e) => e.header.size,
+            EtwEvent::SystemTraceEvent(e) => e.header.size,
+        };
+        8 - size % 8
     }
 }
 
