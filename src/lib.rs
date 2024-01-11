@@ -56,7 +56,7 @@ impl EtwEvent {
             EtwEvent::ModernEvent(e) => e.header.size,
             EtwEvent::SystemTraceEvent(e) => e.header.size,
         };
-        size + (16 - size % 16)
+        size + (8 - size % 8)
     }
 }
 
