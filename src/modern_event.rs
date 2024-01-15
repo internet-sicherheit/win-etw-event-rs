@@ -1,6 +1,7 @@
 use std::io::{Error, ErrorKind, Read, Result, Seek};
 
 use super::TraceHeaderType;
+use bitflags::bitflags;
 use uuid::Uuid;
 
 use crate::helper::{u16_from_le_slice, u32_from_le_slice, u64_from_le_slice};
@@ -24,6 +25,11 @@ impl ModernEvent {
     pub(crate) fn parse<R: Read + Seek>(buf: &mut R) -> Result<ModernEvent> {
         let header = ModernEventHeader::parse(buf)?;
 
+        if header.event_flags.contains(Flags::ExtendedInfo) {
+            log::warn!("Events containing extended header items not jet supported.");
+            todo!();
+        }
+
         let payload_size = header.size - header.length() as u16;
 
         let mut payload: Vec<u8> = vec![0u8; payload_size as usize];
@@ -45,12 +51,14 @@ pub struct ModernEventHeader {
     pub size: u16,
     pub header_type: TraceHeaderType,
     pub flags: u8,
-    pub event_flags: u16,
+    pub event_flags: Flags,
     pub event_properties: u16,
     pub thread_id: u32,
     pub process_id: u32,
     pub timestamp: u64,
+    /// The GUID of the provider
     pub provider_id: Uuid,
+    /// Event descriptor
     pub event_descriptor: EventDescriptor,
     /// Placeholder for the union describing kernel or processor time
     pub time_union: u64,
@@ -59,7 +67,37 @@ pub struct ModernEventHeader {
 
 /// WIP Placeholder
 #[derive(Debug)]
-pub struct EventDescriptor(u128);
+pub struct EventDescriptor {
+    pub id: u16,
+    pub version: u8,
+    pub channel: u8,
+    pub level: u8,
+    pub opcode: u8,
+    pub task: u16,
+    /// Placeholder for keyword flags
+    pub keywords: u64,
+}
+
+impl EventDescriptor {
+    fn parse(buf: [u8; 16]) -> EventDescriptor {
+        let id = u16_from_le_slice(&buf[0..2]).unwrap();
+        let version = buf[2];
+        let channel = buf[3];
+        let level = buf[4];
+        let opcode = buf[5];
+        let task = u16_from_le_slice(&buf[6..8]).unwrap();
+        let keywords = u64_from_le_slice(&buf[8..]).unwrap();
+        EventDescriptor {
+            id,
+            version,
+            channel,
+            level,
+            opcode,
+            task,
+            keywords,
+        }
+    }
+}
 
 impl ModernEventHeader {
     pub fn parse<T: Read + Seek>(buf: &mut T) -> Result<ModernEventHeader> {
@@ -85,7 +123,10 @@ impl ModernEventHeader {
         }
 
         let flags = bytes[3];
-        let event_flags = u16_from_le_slice(&bytes[4..6])?;
+        let event_flags = Flags::from_bits(u16_from_le_slice(&bytes[4..6])?).ok_or(Error::new(
+            ErrorKind::InvalidData,
+            "encountered unknown event flag!",
+        ))?;
 
         let event_properties = u16_from_le_slice(&bytes[6..8])?;
         let thread_id = u32_from_le_slice(&bytes[8..12])?;
@@ -95,8 +136,10 @@ impl ModernEventHeader {
 
         let provider_id = Uuid::from_slice_le(&bytes[24..40]).unwrap(); // errors if slice to short
 
-        let event_descriptor =
-            EventDescriptor(u128::from_le_bytes(bytes[40..56].try_into().unwrap()));
+        // let event_descriptor =
+        //     EventDescriptor(u128::from_le_bytes(bytes[40..56].try_into().unwrap()));
+
+        let event_descriptor = EventDescriptor::parse(bytes[40..56].try_into().unwrap());
 
         let time_union = u64_from_le_slice(&bytes[56..64])?;
 
@@ -131,5 +174,21 @@ impl From<crate::helper::ParseError> for Error {
             ErrorKind::Other,
             "Oops, error parsing, a wrong slice size was used somewhere.",
         )
+    }
+}
+
+bitflags! {
+    #[derive(Clone, Copy, Debug)]
+    pub struct Flags: u16 {
+        const ExtendedInfo = 0x0001;
+        const PrivateSession = 0x0002;
+        const StringOnly = 0x0004;
+        const TraceMessage = 0x0008;
+        const NoCputime = 0x0010;
+        const Header32Bit = 0x0020;
+        const Header64Bit = 0x0040;
+        const DecodeGuid = 0x0080;
+        const ClassicHeader = 0x0100;
+        const ProcessorIndex = 0x0200;
     }
 }

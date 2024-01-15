@@ -8,6 +8,7 @@ description = "Event formats used in Event Tracing for Windows (ETW)."
 
 
 [dependencies]
+bitflags = "2.4.1"
 log = "0.4.20"
 num_enum = "0.7.1"
 uuid = "1.6.1"
