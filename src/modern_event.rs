@@ -1,8 +1,10 @@
+// pub mod provider;
+
 use std::io::{Error, ErrorKind, Read, Result, Seek};
 
 use super::TraceHeaderType;
 use bitflags::bitflags;
-use uuid::Uuid;
+use uuid::{uuid, Uuid};
 
 use crate::helper::{u16_from_le_slice, u32_from_le_slice, u64_from_le_slice};
 
@@ -17,11 +19,12 @@ const MODERN_EVENT_HEADER_SIZE: usize = 80;
 #[derive(Debug)]
 pub struct ModernEvent {
     pub header: ModernEventHeader,
-    pub extended_header: Vec<u8>,
+    pub extended_header: Option<Vec<u8>>,
     pub payload: Vec<u8>,
 }
 
 impl ModernEvent {
+    /// Parse a ModernEvent from Windows native binary representation
     pub(crate) fn parse<R: Read + Seek>(buf: &mut R) -> Result<ModernEvent> {
         let header = ModernEventHeader::parse(buf)?;
 
@@ -38,22 +41,38 @@ impl ModernEvent {
 
         Ok(ModernEvent {
             header,
-            extended_header: Vec::new(),
+            extended_header: None,
             payload,
         })
     }
 }
 
+proc_etw_manifest::include_manifests!("./manifest");
+
+// const TEST_GUID: Uuid = uuid!("{00000000-0000-0000-0000-ffff00000000}");
+
+// impl ModernEvent {
+//     pub fn get_provider_name(&self) -> Option<&str> {
+//         match self.header.provider_id {
+//             TEST_GUID => Some("test"),
+//             _ => None,
+//         }
+//     }
+// }
+
 /// Header of a modern event
 #[repr(C)]
 #[derive(Debug)]
 pub struct ModernEventHeader {
+    /// Total size of the event (not including potential padding)
     pub size: u16,
     pub header_type: TraceHeaderType,
     pub flags: u8,
     pub event_flags: Flags,
     pub event_properties: u16,
+    /// Thread id the event occured in
     pub thread_id: u32,
+    /// Process id the event occured in
     pub process_id: u32,
     pub timestamp: u64,
     /// The GUID of the provider
@@ -68,17 +87,26 @@ pub struct ModernEventHeader {
 /// WIP Placeholder
 #[derive(Debug)]
 pub struct EventDescriptor {
+    /// Event id
+    ///
+    /// Forms the distinct event type together with the version and the provider GUID.
     pub id: u16,
+    /// Version of the event
     pub version: u8,
+    /// Channel id
     pub channel: u8,
+    /// Log level of this event
     pub level: u8,
+    /// Opcode of this event (if existent)
     pub opcode: u8,
+    /// The event-task this event describes
     pub task: u16,
-    /// Placeholder for keyword flags
+    /// Flags for filters
     pub keywords: u64,
 }
 
 impl EventDescriptor {
+    /// Parse an EventDescriptor from Windows native binary representation
     fn parse(buf: [u8; 16]) -> EventDescriptor {
         let id = u16_from_le_slice(&buf[0..2]).unwrap();
         let version = buf[2];
@@ -100,6 +128,7 @@ impl EventDescriptor {
 }
 
 impl ModernEventHeader {
+    /// Parse a ModernEventHeader from Windows native binary representation
     pub fn parse<T: Read + Seek>(buf: &mut T) -> Result<ModernEventHeader> {
         let mut bytes = [0; MODERN_EVENT_HEADER_SIZE];
         buf.read_exact(&mut bytes)?;
