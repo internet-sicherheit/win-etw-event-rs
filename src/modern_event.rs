@@ -45,16 +45,32 @@ impl ModernEvent {
             payload,
         })
     }
+    // pub fn get_event_task_name(&self) -> Option<&str> {
+    //     match self.header.provider_id {
+    //         TEST_GUID => TestProvider::get_event_task_name(&self.header.event_descriptor),
+    //         _ => None,
+    //     }
+    // }
 }
 
 proc_etw_manifest::include_manifests!("./manifest");
-
-// const TEST_GUID: Uuid = uuid!("{00000000-0000-0000-0000-ffff00000000}");
 
 // impl ModernEvent {
 //     pub fn get_provider_name(&self) -> Option<&str> {
 //         match self.header.provider_id {
 //             TEST_GUID => Some("test"),
+//             _ => None,
+//         }
+//     }
+// }
+
+// const TEST_GUID: Uuid = uuid!("{00000000-0000-0000-0000-ffff00000000}");
+
+// struct TestProvider;
+// impl TestProvider {
+//     fn get_event_task_name(ed: &EventDescriptor) -> Option<&str> {
+//         match ed.id {
+//             5 => Some("Test-Task"),
 //             _ => None,
 //         }
 //     }
