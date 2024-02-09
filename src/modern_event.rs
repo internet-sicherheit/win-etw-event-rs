@@ -45,36 +45,21 @@ impl ModernEvent {
             payload,
         })
     }
-    // pub fn get_event_task_name(&self) -> Option<&str> {
-    //     match self.header.provider_id {
-    //         TEST_GUID => TestProvider::get_event_task_name(&self.header.event_descriptor),
-    //         _ => None,
-    //     }
-    // }
+
+    #[cfg(not(feature = "proc-etw-manifest"))]
+    pub fn into_contained_event(self) -> Option<Box<dyn Event>> {
+        None
+    }
 }
 
+pub trait Event: core::ops::Deref<Target = ModernEvent> {
+    fn get_provider_name(&self) -> &str;
+    fn get_event_task_name(&self) -> Option<&str>;
+    fn get_event_symbol(&self) -> Option<&str>;
+}
+
+#[cfg(feature = "proc-etw-manifest")]
 proc_etw_manifest::include_manifests!("./manifest");
-
-// impl ModernEvent {
-//     pub fn get_provider_name(&self) -> Option<&str> {
-//         match self.header.provider_id {
-//             TEST_GUID => Some("test"),
-//             _ => None,
-//         }
-//     }
-// }
-
-// const TEST_GUID: Uuid = uuid!("{00000000-0000-0000-0000-ffff00000000}");
-
-// struct TestProvider;
-// impl TestProvider {
-//     fn get_event_task_name(ed: &EventDescriptor) -> Option<&str> {
-//         match ed.id {
-//             5 => Some("Test-Task"),
-//             _ => None,
-//         }
-//     }
-// }
 
 /// Header of a modern event
 #[repr(C)]
@@ -100,7 +85,7 @@ pub struct ModernEventHeader {
     pub activity_id: Uuid,
 }
 
-/// WIP Placeholder
+/// Event description
 #[derive(Debug)]
 pub struct EventDescriptor {
     /// Event id
@@ -236,4 +221,32 @@ bitflags! {
         const ClassicHeader = 0x0100;
         const ProcessorIndex = 0x0200;
     }
+}
+
+enum WinInType {
+    Int8,
+    UInt8,
+    Int16,
+    UInt16,
+    Int32,
+    UInt32,
+    Int64,
+    UInt64,
+    Float,
+    Double,
+    Boolean,
+    AnsiString,
+    UnicodeString,
+    Binary,
+    Pointer,
+    SizeT,
+    Guid,
+    Sid,
+    Filetime,
+    Systemtime,
+}
+
+enum WinOutType {
+    Int8(i8),
+    UInt8(u8),
 }

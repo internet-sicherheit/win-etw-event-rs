@@ -6,10 +6,12 @@ authors = ["Marvin Gudel <marvin.s.gudel@studmail.w-hs.de>"]
 license = "MIT"
 description = "Event formats used in Event Tracing for Windows (ETW)."
 
+[features]
+default = ["proc-etw-manifest"]
 
 [dependencies]
 bitflags = "2.4.1"
 log = "0.4.20"
 num_enum = "0.7.1"
 uuid = "1.6.1"
-proc-etw-manifest ={ git = "ssh://git@gitlab.internet-sicherheit.de/wissvert-mgudel/proc-etw-manifest.git" }
+proc-etw-manifest = { git = "ssh://git@gitlab.internet-sicherheit.de/wissvert-mgudel/proc-etw-manifest.git", optional = true }
