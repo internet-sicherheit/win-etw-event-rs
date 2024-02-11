@@ -1,12 +1,16 @@
 // pub mod provider;
 
-use std::io::{Error, ErrorKind, Read, Result, Seek};
+use std::{
+    borrow::Cow,
+    collections::HashMap,
+    io::{BufRead, Cursor, Error, ErrorKind, Read, Result, Seek},
+};
 
 use super::TraceHeaderType;
 use bitflags::bitflags;
 use uuid::{uuid, Uuid};
 
-use crate::helper::{u16_from_le_slice, u32_from_le_slice, u64_from_le_slice};
+use crate::helper::*;
 
 const MODERN_EVENT_HEADER_SIZE: usize = 80;
 
@@ -20,7 +24,7 @@ const MODERN_EVENT_HEADER_SIZE: usize = 80;
 pub struct ModernEvent {
     pub header: ModernEventHeader,
     pub extended_header: Option<Vec<u8>>,
-    pub payload: Vec<u8>,
+    pub payload: Cursor<Vec<u8>>,
 }
 
 impl ModernEvent {
@@ -39,6 +43,8 @@ impl ModernEvent {
 
         buf.read_exact(&mut payload)?;
 
+        let payload = Cursor::new(payload);
+
         Ok(ModernEvent {
             header,
             extended_header: None,
@@ -46,7 +52,119 @@ impl ModernEvent {
         })
     }
 
+    fn read_payload_item(&mut self, in_type: WinInType) -> Result<WinOutType> {
+        match in_type {
+            WinInType::Int8 => {
+                let mut buf = [0_u8; 1];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinOutType::Int8(buf[0] as i8))
+            }
+            WinInType::UInt8 => {
+                let mut buf = [0_u8; 1];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinOutType::UInt8(buf[0]))
+            }
+            WinInType::Int16 => {
+                let mut buf = [0_u8; 2];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinOutType::Int16(i16::from_le_bytes(buf)))
+            }
+            WinInType::UInt16 => {
+                let mut buf = [0_u8; 2];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinOutType::UInt16(u16::from_le_bytes(buf)))
+            }
+            WinInType::Int32 => {
+                let mut buf = [0_u8; 4];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinOutType::Int32(i32::from_le_bytes(buf)))
+            }
+            WinInType::UInt32 => {
+                let mut buf = [0_u8; 4];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinOutType::UInt32(u32::from_le_bytes(buf)))
+            }
+            WinInType::Int64 => {
+                let mut buf = [0_u8; 8];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinOutType::Int64(i64::from_le_bytes(buf)))
+            }
+            WinInType::UInt64 => {
+                let mut buf = [0_u8; 8];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinOutType::UInt64(u64::from_le_bytes(buf)))
+            }
+            WinInType::Float => {
+                let mut buf = [0_u8; 4];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinOutType::Float(f32::from_le_bytes(buf)))
+            }
+            WinInType::Double => {
+                let mut buf = [0_u8; 8];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinOutType::Double(f64::from_le_bytes(buf)))
+            }
+            WinInType::Boolean => {
+                let mut buf = [0_u8; 4];
+                self.payload.read_exact(&mut buf)?;
+                let x = u32::from_le_bytes(buf);
+                if x == 0 {
+                    Ok(WinOutType::Boolean(false))
+                } else {
+                    Ok(WinOutType::Boolean(true))
+                }
+            }
+            WinInType::AnsiString => {
+                let mut buf = Vec::new();
+                self.payload.read_until(0_u8, &mut buf)?;
+                if buf.last() != Some(&0) {
+                    Err(Error::other("No zero termination found for ANSI string!"))
+                } else {
+                    Ok(WinOutType::AnsiString(buf))
+                }
+            }
+            WinInType::UnicodeString => {
+                let s = read_utf16_string(&mut self.payload)?;
+                Ok(WinOutType::UnicodeString(s))
+            }
+            WinInType::Binary => {
+                todo!()
+            }
+            WinInType::Pointer => {
+                let mut buf = [0_u8; 8];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinOutType::Pointer(u64::from_le_bytes(buf)))
+            }
+            WinInType::SizeT => {
+                // TODO support different sizes
+                let mut buf = [0_u8; 8];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinOutType::SizeT(u64::from_le_bytes(buf)))
+            }
+            WinInType::Guid => {
+                let mut buf = [0_u8; 16];
+                self.payload.read_exact(&mut buf)?;
+                let guid = Uuid::from_bytes_le(buf);
+                Ok(WinOutType::Guid(guid))
+            }
+            WinInType::Sid => todo!(),
+            WinInType::Filetime => {
+                let mut buf = [0_u8; 8];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinOutType::Filetime(u64::from_le_bytes(buf)))
+            }
+            WinInType::Systemtime => {
+                let mut buf = [0_u8; 16];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinOutType::Systemtime(buf))
+            }
+        }
+    }
+
     #[cfg(not(feature = "proc-etw-manifest"))]
+    /// Wraps the generic event in a concise event
+    ///
+    /// Returns always None if no manifests have been included with proc-etw-manifest.
     pub fn into_contained_event(self) -> Option<Box<dyn Event>> {
         None
     }
@@ -56,6 +174,7 @@ pub trait Event: core::ops::Deref<Target = ModernEvent> {
     fn get_provider_name(&self) -> &str;
     fn get_event_task_name(&self) -> Option<&str>;
     fn get_event_symbol(&self) -> Option<&str>;
+    // fn get_payload_items(&mut self) -> &HashMap<&str, WinOutType>;
 }
 
 #[cfg(feature = "proc-etw-manifest")]
@@ -246,7 +365,27 @@ enum WinInType {
     Systemtime,
 }
 
-enum WinOutType {
+// TODO improve memory efficiency
+enum WinOutType<'a> {
     Int8(i8),
     UInt8(u8),
+    Int16(i16),
+    UInt16(u16),
+    Int32(i32),
+    UInt32(u32),
+    Int64(i64),
+    UInt64(u64),
+    Float(f32),
+    Double(f64),
+    Boolean(bool),
+    AnsiString(Vec<u8>),
+    UnicodeString(String),
+    Binary(Cow<'a, [u8]>),
+    /// Pointer on 64bit machines
+    // TODO support 32bit and 64bit windows
+    Pointer(u64),
+    SizeT(u64),
+    Guid(Uuid),
+    Filetime(u64),
+    Systemtime([u8; 16]),
 }
