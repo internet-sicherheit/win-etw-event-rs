@@ -34,7 +34,7 @@ impl ModernEvent {
 
         if header.event_flags.contains(Flags::ExtendedInfo) {
             log::warn!("Events containing extended header items not jet supported.");
-            todo!();
+            return Err(Error::other("Extended header items not jet supported!"));
         }
 
         let payload_size = header.size - header.length() as u16;
@@ -120,7 +120,10 @@ impl ModernEvent {
                 if buf.last() != Some(&0) {
                     Err(Error::other("No zero termination found for ANSI string!"))
                 } else {
-                    Ok(WinOutType::AnsiString(buf))
+                    use core::ffi::CStr;
+                    let cstr = CStr::from_bytes_with_nul(&buf)
+                        .map_err(|_| Error::other("Failed to crate cstr from buf!"))?;
+                    Ok(WinOutType::AnsiString(cstr.to_string_lossy().into_owned()))
                 }
             }
             WinInType::UnicodeString => {
@@ -147,7 +150,7 @@ impl ModernEvent {
                 let guid = Uuid::from_bytes_le(buf);
                 Ok(WinOutType::Guid(guid))
             }
-            WinInType::Sid => todo!(),
+            WinInType::Sid => Err(Error::other("not implemented")),
             WinInType::Filetime => {
                 let mut buf = [0_u8; 8];
                 self.payload.read_exact(&mut buf)?;
@@ -174,7 +177,7 @@ pub trait Event: core::ops::Deref<Target = ModernEvent> {
     fn get_provider_name(&self) -> &str;
     fn get_event_task_name(&self) -> Option<&str>;
     fn get_event_symbol(&self) -> Option<&str>;
-    // fn get_payload_items(&mut self) -> &HashMap<&str, WinOutType>;
+    fn get_payload_items(&mut self) -> Option<&HashMap<&'static str, WinOutType>>;
 }
 
 #[cfg(feature = "proc-etw-manifest")]
@@ -366,7 +369,8 @@ enum WinInType {
 }
 
 // TODO improve memory efficiency
-enum WinOutType<'a> {
+#[derive(Debug, Clone)]
+pub enum WinOutType {
     Int8(i8),
     UInt8(u8),
     Int16(i16),
@@ -378,9 +382,9 @@ enum WinOutType<'a> {
     Float(f32),
     Double(f64),
     Boolean(bool),
-    AnsiString(Vec<u8>),
+    AnsiString(String),
     UnicodeString(String),
-    Binary(Cow<'a, [u8]>),
+    Binary(),
     /// Pointer on 64bit machines
     // TODO support 32bit and 64bit windows
     Pointer(u64),
