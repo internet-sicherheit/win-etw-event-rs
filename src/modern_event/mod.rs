@@ -1,7 +1,6 @@
-// pub mod provider;
+mod sid;
 
 use std::{
-    borrow::Cow,
     collections::HashMap,
     io::{BufRead, Cursor, Error, ErrorKind, Read, Result, Seek},
 };

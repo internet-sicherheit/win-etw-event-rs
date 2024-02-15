@@ -1,6 +1,6 @@
 use std::io::{self, Seek};
 
-use byteorder::{BigEndian, ByteOrder};
+use byteorder::{ByteOrder, LittleEndian};
 
 #[derive(Clone, Copy, Debug)]
 pub(crate) struct ParseError;
@@ -62,7 +62,7 @@ pub(crate) fn read_utf16_string<T: AsRef<[u8]>>(r: &mut io::Cursor<T>) -> io::Re
 
     // Now we can create a [u16] slice to find the utf16 zero terminated string
     let mut u16_buf = vec![0; s.len() / 2];
-    BigEndian::read_u16_into(s, &mut u16_buf);
+    LittleEndian::read_u16_into(s, &mut u16_buf);
     let u16cstr = widestring::U16CStr::from_slice_truncate(&u16_buf)
         .map_err(|_| io::Error::other("Missing nul terminator for unicode string!"))?;
 
@@ -83,8 +83,8 @@ mod tests {
         ///
         /// By having three extra bytes at the end we test that strings are read correctly from uneven remaining bytes.
         const CONTAINS_UTF16_C_STRING: &[u8] = &[
-            0xAA, 0xAA, 0xAA, 0x00, 0x6e, 0x00, 0x6f, 0x00, 0x74, 0x00, 0x65, 0x00, 0x70, 0x00,
-            0x61, 0x00, 0x64, 0x00, 0x2e, 0x00, 0x65, 0x00, 0x78, 0x00, 0x65, 0x00, 0x00, 0xBB,
+            0xAA, 0xAA, 0xAA, 0x6e, 0x00, 0x6f, 0x00, 0x74, 0x00, 0x65, 0x00, 0x70, 0x00, 0x61,
+            0x00, 0x64, 0x00, 0x2e, 0x00, 0x65, 0x00, 0x78, 0x00, 0x65, 0x00, 0x00, 0x00, 0xBB,
             0xBB, 0xBB,
         ];
 
