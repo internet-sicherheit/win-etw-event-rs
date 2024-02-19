@@ -9,6 +9,7 @@ use crate::system_trace_event::SystemTraceEvent;
 
 pub mod modern_event;
 pub mod system_trace_event;
+pub mod types;
 
 mod helper;
 
@@ -33,6 +34,7 @@ pub enum TraceHeaderType {
     Instance64 = 0x15,
 }
 
+/// A ETW event in one of the suported formats
 #[non_exhaustive]
 #[derive(Debug)]
 pub enum EtwEvent {
@@ -69,6 +71,9 @@ impl EtwEvent {
     }
 }
 
+/// Parse a ETW event from a buffer
+///
+/// Parses the header of a ETW event and creates a event containing the header and payload.
 pub fn parse_header<R: Read + Seek>(buf: &mut R) -> std::io::Result<EtwEvent> {
     let start = buf.stream_position()?;
     let mut header_type_bytes = [0u8; 4];
