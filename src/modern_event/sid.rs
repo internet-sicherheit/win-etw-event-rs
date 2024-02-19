@@ -1,10 +1,31 @@
 use std::fmt::Display;
 
-#[derive(Debug, Clone)]
-struct Sid {
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct Sid {
     revision: u8,
     identifier_authority: [u8; 6],
-    sub_auhtority: Vec<u32>,
+    sub_auhtoritys: Vec<u32>,
+}
+impl Sid {
+    pub fn parse<R: std::io::Read>(r: &mut R) -> std::io::Result<Self> {
+        let mut header = [0_u8; 2];
+        let mut ident_auth = [0_u8; 6];
+        r.read_exact(&mut header)?;
+        r.read_exact(&mut ident_auth)?;
+
+        let mut sub_auths = Vec::with_capacity(header[1] as usize);
+
+        for _ in 0..header[1] {
+            let mut buf = [0_u8; 4];
+            r.read_exact(&mut buf)?;
+            sub_auths.push(u32::from_le_bytes(buf));
+        }
+        Ok(Sid {
+            revision: header[0],
+            identifier_authority: ident_auth,
+            sub_auhtoritys: sub_auths,
+        })
+    }
 }
 
 impl Display for Sid {
@@ -20,23 +41,62 @@ impl Display for Sid {
 
         let mut sub_auths = String::new();
         use std::fmt::Write;
-        for x in &self.sub_auhtority {
+        for x in &self.sub_auhtoritys {
             write!(sub_auths, "-{x}")?;
         }
 
-        write!(f, "s-{}-{}-{}", self.revision, ident_auth, sub_auths)
+        write!(f, "s-{}-{}{}", self.revision, ident_auth, sub_auths)
     }
 }
 
 #[cfg(test)]
 mod test {
+    use std::io::Cursor;
+
     use super::Sid;
 
-    fn _test_display() {
+    #[test]
+    fn test_display() {
         let sid = Sid {
-            revision: todo!(),
-            identifier_authority: todo!(),
-            sub_auhtority: todo!(),
+            revision: 1,
+            identifier_authority: [0, 0, 0, 0, 0, 5],
+            sub_auhtoritys: vec![632, 723811915, 3361004348, 33368],
         };
+
+        let sid_string = sid.to_string();
+
+        assert_eq!(sid_string, "s-1-5-632-723811915-3361004348-33368");
+    }
+
+    #[test]
+    fn test_parse() {
+        let mut buf: Vec<u8> = Vec::new();
+        buf.push(1); // revision 1
+        buf.push(4); // sub authority count 4
+        [0_u8, 0, 0, 0, 0, 5].iter().for_each(|i| buf.push(*i)); // ident authority 5
+        632_u32.to_le_bytes().iter().for_each(|i| buf.push(*i));
+        723811915_u32
+            .to_le_bytes()
+            .iter()
+            .for_each(|i| buf.push(*i));
+        3361004348_u32
+            .to_le_bytes()
+            .iter()
+            .for_each(|i| buf.push(*i));
+        33368_u32.to_le_bytes().iter().for_each(|i| buf.push(*i));
+
+        let buf_len = buf.len();
+
+        let mut buf = Cursor::new(buf);
+        let sid = Sid::parse(&mut buf).expect("Failed to parse sid from buffer!");
+
+        let expected = Sid {
+            revision: 1,
+            identifier_authority: [0, 0, 0, 0, 0, 5],
+            sub_auhtoritys: vec![632, 723811915, 3361004348, 33368],
+        };
+
+        assert_eq!(sid, expected);
+        assert_eq!(buf.position(), buf_len as u64);
     }
 }

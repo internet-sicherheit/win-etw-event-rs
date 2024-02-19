@@ -1,7 +1,8 @@
-mod sid;
+pub mod sid;
 
 use std::{
     collections::HashMap,
+    fmt::Display,
     io::{BufRead, Cursor, Error, ErrorKind, Read, Result, Seek},
 };
 
@@ -149,7 +150,10 @@ impl ModernEvent {
                 let guid = Uuid::from_bytes_le(buf);
                 Ok(WinOutType::Guid(guid))
             }
-            WinInType::Sid => Err(Error::other("not implemented")),
+            WinInType::Sid => {
+                let sid = sid::Sid::parse(&mut self.payload)?;
+                Ok(WinOutType::Sid(sid))
+            }
             WinInType::Filetime => {
                 let mut buf = [0_u8; 8];
                 self.payload.read_exact(&mut buf)?;
@@ -344,6 +348,7 @@ bitflags! {
     }
 }
 
+#[allow(unused)]
 enum WinInType {
     Int8,
     UInt8,
@@ -385,10 +390,37 @@ pub enum WinOutType {
     UnicodeString(String),
     Binary(),
     /// Pointer on 64bit machines
-    // TODO support 32bit and 64bit windows
     Pointer(u64),
     SizeT(u64),
     Guid(Uuid),
+    Sid(sid::Sid),
     Filetime(u64),
     Systemtime([u8; 16]),
+}
+
+impl Display for WinOutType {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            WinOutType::Int8(x) => write!(f, "{}", x),
+            WinOutType::UInt8(x) => write!(f, "{}", x),
+            WinOutType::Int16(x) => write!(f, "{}", x),
+            WinOutType::UInt16(x) => write!(f, "{}", x),
+            WinOutType::Int32(x) => write!(f, "{}", x),
+            WinOutType::UInt32(x) => write!(f, "{}", x),
+            WinOutType::Int64(x) => write!(f, "{}", x),
+            WinOutType::UInt64(x) => write!(f, "{}", x),
+            WinOutType::Float(x) => write!(f, "{}", x),
+            WinOutType::Double(x) => write!(f, "{}", x),
+            WinOutType::Boolean(x) => write!(f, "{}", x),
+            WinOutType::AnsiString(x) => write!(f, "{}", x),
+            WinOutType::UnicodeString(x) => write!(f, "{}", x),
+            WinOutType::Binary() => write!(f, "[Binary]"), // TODO
+            WinOutType::Pointer(x) => write!(f, "{}", x),
+            WinOutType::SizeT(x) => write!(f, "{}", x),
+            WinOutType::Guid(x) => write!(f, "{}", x),
+            WinOutType::Sid(x) => write!(f, "{}", x),
+            WinOutType::Filetime(x) => write!(f, "{}", x),
+            WinOutType::Systemtime(x) => write!(f, "{:?}", x),
+        }
+    }
 }
