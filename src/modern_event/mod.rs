@@ -53,7 +53,11 @@ impl ModernEvent {
         })
     }
 
-    fn read_payload_item(&mut self, in_type: WinInType) -> Result<WinInTypeItem> {
+    fn read_payload_item(
+        &mut self,
+        in_type: WinInType,
+        size: Option<u16>,
+    ) -> Result<WinInTypeItem> {
         match in_type {
             WinInType::Int8 => {
                 let mut buf = [0_u8; 1];
@@ -134,7 +138,15 @@ impl ModernEvent {
                 Ok(WinInTypeItem::UnicodeString(s))
             }
             WinInType::Binary => {
-                todo!()
+                let Some(size) = size else {
+                    return Err(Error::new(
+                        ErrorKind::InvalidInput,
+                        "tried to read binary data without specifying size",
+                    ));
+                };
+                let mut buf: Vec<u8> = vec![0; size as usize];
+                self.payload.read_exact(&mut buf)?;
+                Ok(WinInTypeItem::Binary(buf))
             }
             WinInType::Pointer => {
                 let mut buf = [0_u8; 8];
@@ -187,7 +199,7 @@ pub trait Event: core::ops::Deref<Target = ModernEvent> {
 }
 
 #[cfg(feature = "proc-etw-manifest")]
-proc_etw_manifest::include_manifests!("./manifest");
+proc_etw_manifest::include_manifests!("./manifest/microsoft-windows-kernel");
 
 /// Header of a modern event
 #[repr(C)]
@@ -402,7 +414,7 @@ pub mod types {
         Boolean(bool),
         AnsiString(String),
         UnicodeString(String),
-        Binary(),
+        Binary(Vec<u8>),
         /// Pointer on 64bit machines
         Pointer(u64),
         SizeT(u64),
@@ -428,7 +440,7 @@ pub mod types {
                 WinInTypeItem::Boolean(x) => write!(f, "{}", x),
                 WinInTypeItem::AnsiString(x) => write!(f, "{}", x),
                 WinInTypeItem::UnicodeString(x) => write!(f, "{}", x),
-                WinInTypeItem::Binary() => write!(f, "[Binary]"), // TODO
+                WinInTypeItem::Binary(_) => write!(f, "[Binary]"), // TODO
                 WinInTypeItem::Pointer(x) => write!(f, "{}", x),
                 WinInTypeItem::SizeT(x) => write!(f, "{}", x),
                 WinInTypeItem::Guid(x) => write!(f, "{}", x),
