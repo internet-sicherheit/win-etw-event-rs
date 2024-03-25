@@ -2,7 +2,8 @@
 
 use std::{
     collections::HashMap,
-    io::{BufRead, Cursor, Error, ErrorKind, Read, Result, Seek},
+    fmt::Display,
+    io::{BufRead, Cursor, Error, ErrorKind, Read, Seek},
 };
 
 use self::types::WinInTypeItem;
@@ -14,6 +15,58 @@ use uuid::{uuid, Uuid};
 use crate::helper::*;
 
 const MODERN_EVENT_HEADER_SIZE: usize = 80;
+
+#[derive(Debug)]
+pub struct ModernEventError {
+    kind: ErrorType,
+}
+impl ModernEventError {
+    fn new(kind: ErrorType) -> ModernEventError {
+        ModernEventError { kind }
+    }
+    fn invalid_payload<D: std::fmt::Debug + 'static>(e: D) -> ModernEventError {
+        ModernEventError {
+            kind: ErrorType::InvalidPayload(Box::new(e)),
+        }
+    }
+}
+impl Display for ModernEventError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self.kind {
+            ErrorType::Io(_) => write!(f, "A error occured while reading data to parse an event."),
+            ErrorType::InvalidHeader => write!(f, "Failed to parse modern event header."),
+            ErrorType::InvalidPayload(_) => write!(f, "Failed to parse a event payload item."),
+            ErrorType::ParseError => write!(f, "A error occured while parsing an event."),
+            ErrorType::NotSupported(e) => {
+                write!(f, "Encountered modern event with unsuppored format: {e}")
+            }
+        }
+    }
+}
+impl From<std::io::Error> for ModernEventError {
+    fn from(value: std::io::Error) -> Self {
+        ModernEventError {
+            kind: ErrorType::Io(value),
+        }
+    }
+}
+impl std::error::Error for ModernEventError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            ErrorType::Io(e) => Some(e),
+            _ => None,
+        }
+    }
+}
+
+#[derive(Debug)]
+enum ErrorType {
+    Io(std::io::Error),
+    InvalidHeader,
+    InvalidPayload(Box<dyn std::fmt::Debug>),
+    ParseError,
+    NotSupported(&'static str),
+}
 
 /// A modern event
 ///
@@ -30,12 +83,14 @@ pub struct ModernEvent {
 
 impl ModernEvent {
     /// Parse a ModernEvent from Windows native binary representation
-    pub(crate) fn parse<R: Read + Seek>(buf: &mut R) -> Result<ModernEvent> {
+    pub(crate) fn parse<R: Read + Seek>(buf: &mut R) -> Result<ModernEvent, ModernEventError> {
         let header = ModernEventHeader::parse(buf)?;
 
         if header.event_flags.contains(Flags::ExtendedInfo) {
             log::warn!("Events containing extended header items not jet supported.");
-            return Err(Error::other("Extended header items not jet supported!"));
+            return Err(ModernEventError::new(ErrorType::NotSupported(
+                "Extended header items not jet supported!",
+            )));
         }
 
         let payload_size = header.size - header.length() as u16;
@@ -57,7 +112,7 @@ impl ModernEvent {
         &mut self,
         in_type: WinInType,
         size: Option<u16>,
-    ) -> Result<WinInTypeItem> {
+    ) -> Result<WinInTypeItem, ModernEventError> {
         match in_type {
             WinInType::Int8 => {
                 let mut buf = [0_u8; 1];
@@ -122,16 +177,12 @@ impl ModernEvent {
             WinInType::AnsiString => {
                 let mut buf = Vec::new();
                 self.payload.read_until(0_u8, &mut buf)?;
-                if buf.last() != Some(&0) {
-                    Err(Error::other("No zero termination found for ANSI string!"))
-                } else {
-                    use core::ffi::CStr;
-                    let cstr = CStr::from_bytes_with_nul(&buf)
-                        .map_err(|_| Error::other("Failed to crate cstr from buf!"))?;
-                    Ok(WinInTypeItem::AnsiString(
-                        cstr.to_string_lossy().into_owned(),
-                    ))
-                }
+                use core::ffi::CStr;
+                let cstr =
+                    CStr::from_bytes_with_nul(&buf).map_err(ModernEventError::invalid_payload)?;
+                Ok(WinInTypeItem::AnsiString(
+                    cstr.to_string_lossy().into_owned(),
+                ))
             }
             WinInType::UnicodeString => {
                 let s = read_utf16_string(&mut self.payload)?;
@@ -139,10 +190,11 @@ impl ModernEvent {
             }
             WinInType::Binary => {
                 let Some(size) = size else {
-                    return Err(Error::new(
-                        ErrorKind::InvalidInput,
-                        "tried to read binary data without specifying size",
-                    ));
+                    return Err(ModernEventError::new(ErrorType::ParseError));
+                    // return Err(Error::new(
+                    //     ErrorKind::InvalidInput,
+                    //     "tried to read binary data without specifying size",
+                    // ));
                 };
                 let mut buf: Vec<u8> = vec![0; size as usize];
                 self.payload.read_exact(&mut buf)?;
@@ -177,7 +229,9 @@ impl ModernEvent {
             WinInType::Systemtime => {
                 let mut buf = [0_u8; 16];
                 self.payload.read_exact(&mut buf)?;
-                Ok(WinInTypeItem::Systemtime(buf))
+                Ok(WinInTypeItem::Systemtime(
+                    buf.try_into().map_err(ModernEventError::invalid_payload)?,
+                ))
             }
         }
     }
@@ -215,7 +269,7 @@ pub struct ModernEventHeader {
     pub thread_id: u32,
     /// Process id the event occured in
     pub process_id: u32,
-    pub timestamp: u64,
+    pub timestamp: types::EtwTimestamp,
     /// The GUID of the provider
     pub provider_id: Uuid,
     /// Event descriptor
@@ -270,7 +324,7 @@ impl EventDescriptor {
 
 impl ModernEventHeader {
     /// Parse a ModernEventHeader from Windows native binary representation
-    pub fn parse<T: Read + Seek>(buf: &mut T) -> Result<ModernEventHeader> {
+    pub fn parse<T: Read + Seek>(buf: &mut T) -> Result<ModernEventHeader, ModernEventError> {
         let mut bytes = [0; MODERN_EVENT_HEADER_SIZE];
         buf.read_exact(&mut bytes)?;
         let size = u16_from_le_slice(&bytes[0..2])?;
@@ -286,10 +340,7 @@ impl ModernEventHeader {
             header_type,
             TraceHeaderType::ModernEvent32 | TraceHeaderType::ModernEvent64
         ) {
-            return Err(Error::new(
-                ErrorKind::InvalidData,
-                "trying to parse ModernEventHeader, but found other TraceHeaderType!",
-            ));
+            return Err(ModernEventError::new(ErrorType::InvalidHeader));
         }
 
         let flags = bytes[3];
@@ -302,7 +353,8 @@ impl ModernEventHeader {
         let thread_id = u32_from_le_slice(&bytes[8..12])?;
         let process_id = u32_from_le_slice(&bytes[12..16])?;
 
-        let timestamp = u64_from_le_slice(&bytes[16..24])?;
+        let timestamp =
+            types::EtwTimestamp::EtwTime(types::EtwTime(u64_from_le_slice(&bytes[16..24])?));
 
         let provider_id = Uuid::from_slice_le(&bytes[24..40]).unwrap(); // errors if slice to short
 
@@ -338,12 +390,11 @@ impl ModernEventHeader {
     }
 }
 
-impl From<crate::helper::ParseError> for Error {
+impl From<crate::helper::ParseError> for ModernEventError {
     fn from(_: crate::helper::ParseError) -> Self {
-        Error::new(
-            ErrorKind::Other,
-            "Oops, error parsing, a wrong slice size was used somewhere.",
-        )
+        ModernEventError {
+            kind: ErrorType::ParseError,
+        }
     }
 }
 
@@ -397,6 +448,11 @@ pub mod types {
     mod sid;
     pub use sid::Sid;
 
+    mod etw_time;
+    pub use etw_time::*;
+
+    use crate::types::SystemTime;
+
     /// Win InType Items
     // TODO improve memory efficiency
     #[derive(Debug, Clone)]
@@ -421,7 +477,7 @@ pub mod types {
         Guid(Uuid),
         Sid(Sid),
         Filetime(FileTime),
-        Systemtime([u8; 16]),
+        Systemtime(SystemTime),
     }
 
     impl Display for WinInTypeItem {

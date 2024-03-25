@@ -3,7 +3,7 @@
 use log::trace;
 use modern_event::ModernEvent;
 use num_enum::TryFromPrimitive;
-use std::io::{Error, Read, Seek, SeekFrom};
+use std::io::{Read, Seek, SeekFrom};
 
 use crate::system_trace_event::SystemTraceEvent;
 
@@ -74,7 +74,7 @@ impl EtwEvent {
 /// Parse a ETW event from a buffer
 ///
 /// Parses the header of a ETW event and creates a event containing the header and payload.
-pub fn parse_header<R: Read + Seek>(buf: &mut R) -> std::io::Result<EtwEvent> {
+pub fn parse_header<R: Read + Seek>(buf: &mut R) -> Result<EtwEvent, Error> {
     let start = buf.stream_position()?;
     let mut header_type_bytes = [0u8; 4];
     buf.read_exact(&mut header_type_bytes)?;
@@ -104,10 +104,34 @@ pub fn parse_header<R: Read + Seek>(buf: &mut R) -> std::io::Result<EtwEvent> {
                 "Found event of type {:?} which is (not jet) supported.",
                 header_type
             );
-            Err(Error::new(
-                std::io::ErrorKind::Unsupported,
-                "Event type not supported (jet)",
-            ))
+            Err(Error::Unsupported)
+        }
+    }
+}
+
+#[derive(Debug)]
+pub enum Error {
+    Io(std::io::Error),
+    // TraceHeader(std::io::Error),
+    ModernEvent(modern_event::ModernEventError),
+    Unsupported,
+}
+impl From<std::io::Error> for Error {
+    fn from(value: std::io::Error) -> Self {
+        Error::Io(value)
+    }
+}
+impl From<modern_event::ModernEventError> for Error {
+    fn from(value: modern_event::ModernEventError) -> Self {
+        Error::ModernEvent(value)
+    }
+}
+impl std::fmt::Display for Error {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            Error::Io(_) => write!(f, "A error occured while reading data to parse an event."),
+            Error::ModernEvent(_) => write!(f, "A error occured while parsing a modern event."),
+            Error::Unsupported => write!(f, "Unsupported event type found."),
         }
     }
 }
