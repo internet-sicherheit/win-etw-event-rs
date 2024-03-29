@@ -3,6 +3,7 @@
 use log::trace;
 use modern_event::ModernEvent;
 use num_enum::TryFromPrimitive;
+use serde::Serialize;
 use std::io::{Read, Seek, SeekFrom};
 
 use crate::system_trace_event::SystemTraceEvent;
@@ -17,7 +18,7 @@ mod helper;
 ///
 /// Events can be one of six different formats,
 /// each having a 32-bit and a 64-bit version.
-#[derive(Debug, Clone, Copy, Eq, PartialEq, TryFromPrimitive)]
+#[derive(Debug, Clone, Copy, Eq, PartialEq, TryFromPrimitive, Serialize)]
 #[repr(u8)]
 pub enum TraceHeaderType {
     System32 = 0x01,

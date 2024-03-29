@@ -2,6 +2,7 @@
 //!
 //! Usually these originate from kernel internal provider-classes.
 
+use serde::Serialize;
 use std::io::{Error, ErrorKind, Read, Result, Seek};
 
 use super::TraceHeaderType;
@@ -9,7 +10,7 @@ use super::TraceHeaderType;
 const SYSTEM_TRACE_EVENT_HEADER_LEN: u8 = 32;
 const COMPACT_SYSTEM_TRACE_EVENT_HEADER_LEN: u8 = 24;
 
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct SystemTraceEvent {
     pub header: SystemTraceEventHeader,
     pub payload: Vec<u8>,
@@ -20,7 +21,7 @@ pub struct SystemTraceEvent {
 /// One of several types of fixed-size headers for ETW events.
 ///
 /// <https://www.geoffchappell.com/studies/windows/km/ntoskrnl/inc/api/ntwmi/traceheaders/system_trace_header.htm>
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize)]
 pub struct SystemTraceEventHeader {
     pub version: u16,
     pub header_type: TraceHeaderType,
@@ -44,11 +45,19 @@ impl core::fmt::Debug for Packet {
         write!(f, "WMI_TRACE_PACKET")
     }
 }
+impl Serialize for Packet {
+    fn serialize<S>(&self, serializer: S) -> std::prelude::v1::Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        unsafe { self.group_type.serialize(serializer) }
+    }
+}
 
 /// The type and group of the event
 ///
 /// Together these form the Hook ID of the event.
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, Serialize)]
 #[repr(C)]
 pub struct GroupType {
     pub event_type: u8,

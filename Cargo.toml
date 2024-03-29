@@ -10,12 +10,13 @@ description = "Event formats used in Event Tracing for Windows (ETW)."
 default = ["proc-etw-manifest"]
 
 [dependencies]
-bitflags = "2.4.1"
+bitflags = { version = "2.4.1", features = ["serde"]}
 log = "0.4.20"
 num_enum = "0.7.1"
-uuid = "1.6.1"
+uuid = { version = "1.6.1", features = ["serde"]}
 proc-etw-manifest = { git = "ssh://git@gitlab.internet-sicherheit.de/wissvert-mgudel/proc-etw-manifest.git", optional = true }
 widestring = "1.0.2"
 byteorder = "1.5.0"
 filetime_type = "0.1.3"
-chrono = "0.4.34"
+chrono = { version = "0.4.34", features = ["serde"]}
+serde = { version = "1.0.197", features = ["derive"]}

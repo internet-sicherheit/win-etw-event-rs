@@ -10,6 +10,7 @@ use self::types::WinInTypeItem;
 
 use super::TraceHeaderType;
 use bitflags::bitflags;
+use serde::Serialize;
 use uuid::{uuid, Uuid};
 
 use crate::helper::*;
@@ -32,10 +33,12 @@ impl ModernEventError {
 }
 impl Display for ModernEventError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match self.kind {
+        match &self.kind {
             ErrorType::Io(_) => write!(f, "A error occured while reading data to parse an event."),
             ErrorType::InvalidHeader => write!(f, "Failed to parse modern event header."),
-            ErrorType::InvalidPayload(_) => write!(f, "Failed to parse a event payload item."),
+            ErrorType::InvalidPayload(e) => {
+                write!(f, "Failed to parse a event payload item: {e:?}")
+            }
             ErrorType::ParseError => write!(f, "A error occured while parsing an event."),
             ErrorType::NotSupported(e) => {
                 write!(f, "Encountered modern event with unsuppored format: {e}")
@@ -245,7 +248,7 @@ impl ModernEvent {
     }
 }
 
-pub trait Event: core::ops::Deref<Target = ModernEvent> {
+pub trait Event: core::ops::Deref<Target = ModernEvent> + core::ops::DerefMut {
     fn get_provider_name(&self) -> &str;
     fn get_event_task_name(&self) -> Option<&str>;
     fn get_event_symbol(&self) -> Option<&str>;
@@ -257,7 +260,7 @@ proc_etw_manifest::include_manifests!("./manifest/microsoft-windows-kernel");
 
 /// Header of a modern event
 #[repr(C)]
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct ModernEventHeader {
     /// Total size of the event (not including potential padding)
     pub size: u16,
@@ -280,7 +283,7 @@ pub struct ModernEventHeader {
 }
 
 /// Event description
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct EventDescriptor {
     /// Event id
     ///
@@ -399,7 +402,7 @@ impl From<crate::helper::ParseError> for ModernEventError {
 }
 
 bitflags! {
-    #[derive(Clone, Copy, Debug)]
+    #[derive(Clone, Copy, Debug, Serialize)]
     pub struct Flags: u16 {
         const ExtendedInfo = 0x0001;
         const PrivateSession = 0x0002;

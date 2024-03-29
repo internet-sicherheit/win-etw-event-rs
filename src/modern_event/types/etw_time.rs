@@ -1,4 +1,5 @@
 use crate::types::FileTime;
+use serde::Serialize;
 
 /// Container for ETW timestamps
 ///
@@ -10,13 +11,30 @@ pub enum EtwTimestamp {
     Filetime(FileTime),
 }
 
+impl Serialize for EtwTimestamp {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        match *self {
+            EtwTimestamp::EtwTime(ref e) => {
+                serializer.serialize_newtype_variant("EtwTimestamp", 0, "EtwTime", e)
+            }
+            EtwTimestamp::Filetime(ref f) => {
+                let utc_time = f.to_datetime();
+                serializer.serialize_newtype_variant("EtwTimestamp", 1, "Filetime", &utc_time)
+            }
+        }
+    }
+}
+
 /// Time format used in modern event headers
 ///
 /// Format with no fix time base and scale dependent of etw session and system configuration.
 /// Other than timestamps in event payloads, the timestamp present in a modern event header
 /// has no fixed scale and time base and must always be converted to a other format.
 /// Can be converted to a [FileTime] by providing a time base and scale.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, Serialize)]
 pub struct EtwTime(pub u64);
 
 impl EtwTime {
