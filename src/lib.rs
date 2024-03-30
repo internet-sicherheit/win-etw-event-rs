@@ -80,9 +80,10 @@ pub fn parse_header<R: Read + Seek>(buf: &mut R) -> Result<EtwEvent, Error> {
     let mut header_type_bytes = [0u8; 4];
     buf.read_exact(&mut header_type_bytes)?;
 
+    trace!("Parsing event...");
     trace!("Event header bytes: {:X?}", header_type_bytes);
     let header_type = TraceHeaderType::try_from(header_type_bytes[2]).map_err(|_| {
-        trace!(
+        log::warn!(
             "Encountered unknown TraceHeaderType 0x{:X} at stream position 0x{:X}",
             header_type_bytes[2],
             buf.stream_position().unwrap()
@@ -94,6 +95,7 @@ pub fn parse_header<R: Read + Seek>(buf: &mut R) -> Result<EtwEvent, Error> {
     })?;
     buf.seek(SeekFrom::Start(start))?;
 
+    trace!("Found valid trace header type ({:?})", header_type);
     match header_type {
         TraceHeaderType::System32 => Ok(EtwEvent::SystemTraceEvent(SystemTraceEvent::parse(buf)?)),
         TraceHeaderType::System64 => Ok(EtwEvent::SystemTraceEvent(SystemTraceEvent::parse(buf)?)),
@@ -101,7 +103,7 @@ pub fn parse_header<R: Read + Seek>(buf: &mut R) -> Result<EtwEvent, Error> {
         TraceHeaderType::ModernEvent32 => Ok(EtwEvent::ModernEvent(ModernEvent::parse(buf)?)),
         TraceHeaderType::ModernEvent64 => Ok(EtwEvent::ModernEvent(ModernEvent::parse(buf)?)),
         _ => {
-            trace!(
+            log::warn!(
                 "Found event of type {:?} which is (not jet) supported.",
                 header_type
             );

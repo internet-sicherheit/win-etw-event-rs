@@ -152,6 +152,15 @@ impl TryFrom<[u8; 16]> for SystemTime {
     }
 }
 
+impl serde::Serialize for SystemTime {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        self.to_datetime().serialize(serializer)
+    }
+}
+
 impl Display for SystemTime {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(

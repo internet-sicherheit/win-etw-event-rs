@@ -1,10 +1,12 @@
 use std::fmt::Display;
 
+use serde::Serialize;
+
 /// Security Identifier
 ///
 /// A identifier used to uniquely identify a security principal or security group.
 /// For further information refer to the [Microsoft Windows Documentation](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-identifiers).
-#[derive(Debug, Clone, PartialEq, Eq)]
+#[derive(Debug, Clone, PartialEq, Eq, Serialize)]
 pub struct Sid {
     revision: u8,
     identifier_authority: [u8; 6],

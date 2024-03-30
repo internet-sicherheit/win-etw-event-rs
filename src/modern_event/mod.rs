@@ -194,11 +194,8 @@ impl ModernEvent {
             WinInType::Binary => {
                 let Some(size) = size else {
                     return Err(ModernEventError::new(ErrorType::ParseError));
-                    // return Err(Error::new(
-                    //     ErrorKind::InvalidInput,
-                    //     "tried to read binary data without specifying size",
-                    // ));
                 };
+                log::trace!("reading binary payload with size {size}");
                 let mut buf: Vec<u8> = vec![0; size as usize];
                 self.payload.read_exact(&mut buf)?;
                 Ok(WinInTypeItem::Binary(buf))
@@ -260,7 +257,7 @@ proc_etw_manifest::include_manifests!("./manifest/microsoft-windows-kernel");
 
 /// Header of a modern event
 #[repr(C)]
-#[derive(Debug, Serialize)]
+#[derive(Debug, Clone, Serialize)]
 pub struct ModernEventHeader {
     /// Total size of the event (not including potential padding)
     pub size: u16,
@@ -283,7 +280,7 @@ pub struct ModernEventHeader {
 }
 
 /// Event description
-#[derive(Debug, Serialize)]
+#[derive(Debug, Clone, Serialize)]
 pub struct EventDescriptor {
     /// Event id
     ///
@@ -445,6 +442,7 @@ pub mod types {
     //! Types uniqe to modern events
 
     use filetime_type::FileTime;
+    use serde::Serialize;
     use std::fmt::Display;
     use uuid::Uuid;
 
@@ -481,6 +479,79 @@ pub mod types {
         Sid(Sid),
         Filetime(FileTime),
         Systemtime(SystemTime),
+    }
+
+    impl Serialize for WinInTypeItem {
+        fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+        where
+            S: serde::Serializer,
+        {
+            match self {
+                WinInTypeItem::Int8(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 0, "i8", x)
+                }
+                WinInTypeItem::UInt8(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 1, "u8", x)
+                }
+                WinInTypeItem::Int16(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 2, "i16", x)
+                }
+                WinInTypeItem::UInt16(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 3, "u16", x)
+                }
+                WinInTypeItem::Int32(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 4, "i32", x)
+                }
+                WinInTypeItem::UInt32(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 5, "u32", x)
+                }
+                WinInTypeItem::Int64(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 6, "i64", x)
+                }
+                WinInTypeItem::UInt64(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 7, "u64", x)
+                }
+                WinInTypeItem::Float(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 8, "float", x)
+                }
+                WinInTypeItem::Double(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 9, "double", x)
+                }
+                WinInTypeItem::Boolean(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 10, "bool", x)
+                }
+                WinInTypeItem::AnsiString(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 11, "ansi_string", x)
+                }
+                WinInTypeItem::UnicodeString(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 12, "unicode_string", x)
+                }
+                WinInTypeItem::Binary(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 13, "binary", x)
+                }
+                WinInTypeItem::Pointer(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 14, "pointer", x)
+                }
+                WinInTypeItem::SizeT(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 15, "size_t", x)
+                }
+                WinInTypeItem::Guid(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 16, "guid", x)
+                }
+                WinInTypeItem::Sid(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 17, "sid", x)
+                }
+                WinInTypeItem::Filetime(x) => serializer.serialize_newtype_variant(
+                    "WinInTypeItem",
+                    18,
+                    "time",
+                    &x.to_datetime(),
+                ),
+                WinInTypeItem::Systemtime(x) => {
+                    serializer.serialize_newtype_variant("WinInTypeItem", 19, "time", x)
+                }
+            }
+        }
     }
 
     impl Display for WinInTypeItem {
