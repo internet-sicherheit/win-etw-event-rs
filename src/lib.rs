@@ -68,7 +68,12 @@ impl EtwEvent {
             EtwEvent::ModernEvent(e) => e.header.size,
             EtwEvent::SystemTraceEvent(e) => e.header.size,
         };
-        (8 - size % 8) as u8
+        let rest = size % 8;
+        if rest == 0 {
+            0
+        } else {
+            (8 - rest) as u8
+        }
     }
 }
 
