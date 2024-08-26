@@ -11,6 +11,12 @@ pub enum EtwTimestamp {
     Filetime(FileTime),
 }
 
+impl Default for EtwTimestamp {
+    fn default() -> Self {
+        EtwTimestamp::EtwTime(EtwTime(0))
+    }
+}
+
 impl Serialize for EtwTimestamp {
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
     where
