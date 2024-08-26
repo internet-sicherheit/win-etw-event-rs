@@ -1,5 +1,6 @@
 #![doc = include_str!("../README.md")]
 
+use helper::padding_8_byte;
 use log::trace;
 use modern_event::ModernEvent;
 use num_enum::TryFromPrimitive;
@@ -68,12 +69,7 @@ impl EtwEvent {
             EtwEvent::ModernEvent(e) => e.header.size,
             EtwEvent::SystemTraceEvent(e) => e.header.size,
         };
-        let rest = size % 8;
-        if rest == 0 {
-            0
-        } else {
-            (8 - rest) as u8
-        }
+        padding_8_byte(size as usize)
     }
 }
 

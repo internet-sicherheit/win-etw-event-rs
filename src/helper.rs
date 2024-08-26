@@ -47,6 +47,26 @@ pub(crate) fn u64_from_le_slice(s: &[u8]) -> Result<u64, ParseError> {
     Ok(u64::from_le_bytes(x))
 }
 
+/// Calculate the padding needed to fill _size_ to be a multiple of 8 bytes  
+pub(crate) fn padding_8_byte(size: usize) -> u8 {
+    let rest = size % 8;
+    if rest == 0 {
+        0
+    } else {
+        (8 - rest) as u8
+    }
+}
+
+/// Calculate the padding needed to fill _size_ to be a multiple of 2 bytes  
+pub(crate) fn padding_2_byte(size: usize) -> u8 {
+    let rest = size % 2;
+    if rest == 0 {
+        0
+    } else {
+        (2 - rest) as u8
+    }
+}
+
 pub(crate) fn read_utf16_string<T: AsRef<[u8]>>(r: &mut io::Cursor<T>) -> io::Result<String> {
     // parsing a utf16 string from a u8 buffer isnt't simple...
     let reference = r.get_ref().as_ref();
@@ -72,8 +92,26 @@ pub(crate) fn read_utf16_string<T: AsRef<[u8]>>(r: &mut io::Cursor<T>) -> io::Re
     Ok(u16cstr.to_string_lossy())
 }
 
+pub(crate) fn read_utf16_string_from_slice(buf: &[u8]) -> io::Result<String> {
+    // We get us a &[u8] which contains all remaining bytes and truncate it to a even number of bytes
+    let s = if buf.len() % 2 != 0 {
+        &buf[..buf.len() - 1]
+    } else {
+        buf
+    };
+
+    // Now we can create a [u16] slice to find the utf16 zero terminated string
+    let mut u16_buf = vec![0; s.len() / 2];
+    LittleEndian::read_u16_into(s, &mut u16_buf);
+    let u16cstr = widestring::U16CStr::from_slice_truncate(&u16_buf)
+        .map_err(|_| io::Error::other("Missing nul terminator for unicode string!"))?;
+
+    Ok(u16cstr.to_string_lossy())
+}
+
 #[cfg(test)]
 mod tests {
+    use crate::helper::{padding_2_byte, padding_8_byte};
 
     #[test]
     fn test_utf16_from_buf() {
@@ -98,5 +136,38 @@ mod tests {
         let mut buf = Vec::new();
         cur.read_to_end(&mut buf).unwrap();
         assert_eq!(&buf, &[0xBB, 0xBB, 0xBB]);
+    }
+
+    #[test]
+    fn test_utf16_from_slice() {
+        /// A buffer with "notepad.exe" as utf16 preceeded by 3x 0xAA and followed by 3x 0xBB
+        ///
+        /// By having three extra bytes at the end we test that strings are read correctly from uneven remaining bytes.
+        const CONTAINS_UTF16_C_STRING: &[u8] = &[
+            0xAA, 0xAA, 0xAA, 0x6e, 0x00, 0x6f, 0x00, 0x74, 0x00, 0x65, 0x00, 0x70, 0x00, 0x61,
+            0x00, 0x64, 0x00, 0x2e, 0x00, 0x65, 0x00, 0x78, 0x00, 0x65, 0x00, 0x00, 0x00, 0xBB,
+            0xBB, 0xBB,
+        ];
+
+        let s = super::read_utf16_string_from_slice(&CONTAINS_UTF16_C_STRING[3..]).unwrap();
+        assert_eq!(s, "notepad.exe");
+    }
+
+    #[test]
+    fn test_padding_8_byte() {
+        let multiple_of_8 = 216;
+
+        assert_eq!(padding_8_byte(multiple_of_8), 0);
+        assert_eq!(padding_8_byte(multiple_of_8 - 3), 3);
+        assert_eq!(padding_8_byte(multiple_of_8 - 8), 0);
+    }
+
+    #[test]
+    fn test_padding_2_byte() {
+        let multiple_of_2 = 6;
+
+        assert_eq!(padding_2_byte(multiple_of_2), 0);
+        assert_eq!(padding_2_byte(multiple_of_2 - 1), 1);
+        assert_eq!(padding_2_byte(multiple_of_2 - 2), 0);
     }
 }
