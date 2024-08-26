@@ -111,7 +111,7 @@ impl ModernEvent {
         })
     }
 
-    fn read_payload_item(
+    pub(crate) fn read_payload_item(
         &mut self,
         in_type: WinInType,
         size: Option<u16>,
@@ -415,7 +415,7 @@ bitflags! {
 }
 
 #[allow(unused)]
-enum WinInType {
+pub(crate) enum WinInType {
     Int8,
     UInt8,
     Int16,

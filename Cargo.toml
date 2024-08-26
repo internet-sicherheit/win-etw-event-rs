@@ -1,3 +1,4 @@
+workspace = { members = ["proc-etw-manifest"] }
 [package]
 name = "win-etw-event"
 version = "0.1.0"
@@ -14,7 +15,8 @@ bitflags = { version = "2.4.1", features = ["serde"]}
 log = "0.4.20"
 num_enum = "0.7.1"
 uuid = { version = "1.6.1", features = ["serde"]}
-proc-etw-manifest = { git = "ssh://git@gitlab.internet-sicherheit.de/wissvert-mgudel/proc-etw-manifest.git", optional = true }
+# proc-etw-manifest = { git = "ssh://git@gitlab.internet-sicherheit.de/wissvert-mgudel/proc-etw-manifest.git", optional = true }
+proc-etw-manifest = { path = "./proc-etw-manifest", optional = true }
 widestring = "1.0.2"
 byteorder = "1.5.0"
 filetime_type = "0.1.3"
