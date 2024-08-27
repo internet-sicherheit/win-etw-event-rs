@@ -5,7 +5,7 @@
 //! Designed to be used for events extracted via VMI (Virtual Machine Introspection).
 use std::{
     ffi::CStr,
-    io::{Cursor, Read, Seek},
+    io::{Cursor, Read},
 };
 
 use bitflags::bitflags;
@@ -42,15 +42,15 @@ pub struct XED2Event {
 }
 
 impl XED2Event {
-    pub fn parse<R: Read + Seek>(buf: &mut R) -> Result<XED2Event, ModernEventError> {
+    pub fn parse<R: Read>(buf: &mut R) -> Result<XED2Event, ModernEventError> {
         let mut size_bytes = [0u8; 2];
         buf.read_exact(&mut size_bytes)?;
         let size = u16_from_le_slice(&size_bytes)?;
 
-        buf.seek(std::io::SeekFrom::Current(-2))?;
-
         let mut event_bytes = vec![0u8; size as usize];
-        buf.read_exact(&mut event_bytes)?;
+        event_bytes[0] = size_bytes[0];
+        event_bytes[1] = size_bytes[1];
+        buf.read_exact(&mut event_bytes[2..])?;
 
         XED2Event::parse_slice(&event_bytes)
     }
@@ -389,6 +389,8 @@ impl TryFrom<XED2Event> for super::ModernEvent {
 
 #[cfg(test)]
 mod tests {
+    use std::io::Cursor;
+
     use crate::modern_event::ModernEvent;
 
     use super::XED2Event;
@@ -396,8 +398,25 @@ mod tests {
     const XED2_EXAMPLE: &[u8] = include_bytes!("etw.xed2");
 
     #[test]
-    fn from_file() {
+    fn xed2_from_slice() {
         let xed2_event = XED2Event::parse_slice(XED2_EXAMPLE);
+        assert!(xed2_event.is_ok());
+
+        let xed2_event = xed2_event.unwrap();
+
+        let modern_event: ModernEvent = xed2_event.try_into().unwrap();
+
+        let mut event = modern_event.into_contained_event().unwrap();
+
+        println!("{}", event.get_provider_name());
+        println!("{:?}", event.get_event_task_name());
+        println!("{:#?}", event.get_payload_items());
+    }
+
+    #[test]
+    fn xed2_from_reader() {
+        let mut reader = Cursor::new(XED2_EXAMPLE);
+        let xed2_event = XED2Event::parse(&mut reader);
         assert!(xed2_event.is_ok());
 
         let xed2_event = xed2_event.unwrap();
