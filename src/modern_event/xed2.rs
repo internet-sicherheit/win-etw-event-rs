@@ -46,8 +46,16 @@ impl XED2Event {
         let mut size_bytes = [0u8; 2];
         buf.read_exact(&mut size_bytes)?;
         let size = u16_from_le_slice(&size_bytes)?;
+        log::trace!("Parsing a event with size {size}");
 
-        let mut event_bytes = vec![0u8; size as usize];
+        if (size as usize) < XED2_HEADER_SIZE {
+            log::warn!("Read a event size of {size}, which is smaller than XED2_HEADER_SIZE ({XED2_HEADER_SIZE})");
+            return Err(ModernEventError::new(
+                crate::modern_event::ErrorType::InvalidHeader,
+            ));
+        }
+
+        let mut event_bytes = vec![0u8; size as usize + padding_8_byte(size as usize) as usize];
         event_bytes[0] = size_bytes[0];
         event_bytes[1] = size_bytes[1];
         buf.read_exact(&mut event_bytes[2..])?;

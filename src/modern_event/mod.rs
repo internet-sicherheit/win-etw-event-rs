@@ -36,7 +36,10 @@ impl ModernEventError {
 impl Display for ModernEventError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match &self.kind {
-            ErrorType::Io(_) => write!(f, "A error occured while reading data to parse an event."),
+            ErrorType::Io(e) => write!(
+                f,
+                "A error occured while reading data to parse an event: {e}"
+            ),
             ErrorType::InvalidHeader => write!(f, "Failed to parse modern event header."),
             ErrorType::InvalidPayload(e) => {
                 write!(f, "Failed to parse a event payload item: {e:?}")
