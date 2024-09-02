@@ -331,35 +331,48 @@ impl TryFrom<&XED2EventHeader> for super::EventDescriptor {
     fn try_from(value: &XED2EventHeader) -> Result<Self, Self::Error> {
         use super::ErrorType::NotSupported;
         Ok(super::EventDescriptor {
-            id: value.event_id.ok_or(ModernEventError::new(NotSupported(
-                "XED2 header has no event-id set",
-            )))?,
+            id: value
+                .event_id
+                .ok_or(ModernEventError::new_with_description(
+                    NotSupported,
+                    "XED2 header has no event-id set",
+                ))?,
             version: value
                 .event_version
-                .ok_or(ModernEventError::new(NotSupported(
+                .ok_or(ModernEventError::new_with_description(
+                    NotSupported,
                     "XED2 header has no event version set",
-                )))?,
+                ))?,
             channel: value
                 .event_channel
-                .ok_or(ModernEventError::new(NotSupported(
+                .ok_or(ModernEventError::new_with_description(
+                    NotSupported,
                     "XED2 header has no event channel set",
-                )))?,
-            level: value.event_level.ok_or(ModernEventError::new(NotSupported(
-                "XED2 header has no event level set",
-            )))?,
+                ))?,
+            level: value
+                .event_level
+                .ok_or(ModernEventError::new_with_description(
+                    NotSupported,
+                    "XED2 header has no event level set",
+                ))?,
             opcode: value
                 .event_opcode
-                .ok_or(ModernEventError::new(NotSupported(
+                .ok_or(ModernEventError::new_with_description(
+                    NotSupported,
                     "XED2 header has no event opcode set",
-                )))?,
-            task: value.event_task.ok_or(ModernEventError::new(NotSupported(
-                "XED2 header has no event task set",
-            )))?,
+                ))?,
+            task: value
+                .event_task
+                .ok_or(ModernEventError::new_with_description(
+                    NotSupported,
+                    "XED2 header has no event task set",
+                ))?,
             keywords: value
                 .event_keywords
-                .ok_or(ModernEventError::new(NotSupported(
+                .ok_or(ModernEventError::new_with_description(
+                    NotSupported,
                     "XED2 header has no event keywords set",
-                )))?,
+                ))?,
         })
     }
 }
@@ -378,11 +391,13 @@ impl TryFrom<XED2Event> for super::ModernEvent {
             thread_id: value.header.thread_id.unwrap_or_default() as u32, // TODO u64 or u32 whats correct?
             process_id: value.header.process_id.unwrap_or_default() as u32,
             timestamp: EtwTimestamp::default(),
-            provider_id: value.header.provider_id.ok_or(ModernEventError::new(
-                ErrorType::NotSupported(
+            provider_id: value
+                .header
+                .provider_id
+                .ok_or(ModernEventError::new_with_description(
+                    ErrorType::NotSupported,
                     "XED2 event has no provider id set (required to convert into ModernEvent)",
-                ),
-            ))?,
+                ))?,
             event_descriptor: (&value.header).try_into()?,
             time_union: value.header.timestamp,
             activity_id: Uuid::default(),

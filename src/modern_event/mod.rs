@@ -22,58 +22,99 @@ const MODERN_EVENT_HEADER_SIZE: usize = 80;
 #[derive(Debug)]
 pub struct ModernEventError {
     kind: ErrorType,
+    source: Option<Box<dyn std::error::Error + 'static>>,
+    description: Option<Box<dyn core::fmt::Debug>>,
 }
 impl ModernEventError {
     fn new(kind: ErrorType) -> ModernEventError {
-        ModernEventError { kind }
+        ModernEventError {
+            kind,
+            source: None,
+            description: None,
+        }
+    }
+    fn new_with_source<S: std::error::Error + 'static>(
+        kind: ErrorType,
+        source: S,
+    ) -> ModernEventError {
+        ModernEventError {
+            kind,
+            source: Some(Box::new(source)),
+            description: None,
+        }
+    }
+    fn new_with_description<D: core::fmt::Debug + 'static>(
+        kind: ErrorType,
+        description: D,
+    ) -> ModernEventError {
+        ModernEventError {
+            kind,
+            source: None,
+            description: Some(Box::new(description)),
+        }
     }
     fn invalid_payload<D: std::fmt::Debug + 'static>(e: D) -> ModernEventError {
         ModernEventError {
-            kind: ErrorType::InvalidPayload(Box::new(e)),
+            kind: ErrorType::InvalidPayload,
+            source: None,
+            description: Some(Box::new(e)),
         }
+    }
+
+    pub fn kind(&self) -> ErrorType {
+        self.kind
     }
 }
 impl Display for ModernEventError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match &self.kind {
-            ErrorType::Io(e) => write!(
-                f,
-                "A error occured while reading data to parse an event: {e}"
-            ),
+            ErrorType::Io => {
+                write!(f, "A error occured while reading data to parse an event")?;
+                if let Some(s) = &self.source {
+                    write!(f, ": {s}")?;
+                }
+                Ok(())
+            }
             ErrorType::InvalidHeader => write!(f, "Failed to parse modern event header."),
-            ErrorType::InvalidPayload(e) => {
-                write!(f, "Failed to parse a event payload item: {e:?}")
+            ErrorType::InvalidPayload => {
+                write!(f, "Failed to parse a event payload item")?;
+                if let Some(d) = &self.description {
+                    write!(f, ": {:?}", d)?;
+                }
+                Ok(())
             }
             ErrorType::ParseError => write!(f, "A error occured while parsing an event."),
-            ErrorType::NotSupported(e) => {
-                write!(f, "Encountered modern event with unsuppored format: {e}")
+            ErrorType::NotSupported => {
+                write!(f, "Encountered modern event with unsuppored format")?;
+                if let Some(d) = &self.description {
+                    write!(f, ": {:?}", d)?;
+                }
+                Ok(())
             }
         }
     }
 }
 impl From<std::io::Error> for ModernEventError {
     fn from(value: std::io::Error) -> Self {
-        ModernEventError {
-            kind: ErrorType::Io(value),
-        }
+        ModernEventError::new_with_source(ErrorType::Io, value)
     }
 }
 impl std::error::Error for ModernEventError {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
-        match &self.kind {
-            ErrorType::Io(e) => Some(e),
-            _ => None,
+        match &self.source {
+            Some(e) => Some(e.as_ref()),
+            None => None,
         }
     }
 }
 
-#[derive(Debug)]
-enum ErrorType {
-    Io(std::io::Error),
+#[derive(Clone, Copy, Debug)]
+pub enum ErrorType {
+    Io,
     InvalidHeader,
-    InvalidPayload(Box<dyn std::fmt::Debug>),
+    InvalidPayload,
     ParseError,
-    NotSupported(&'static str),
+    NotSupported,
 }
 
 /// A modern event
@@ -96,9 +137,10 @@ impl ModernEvent {
 
         if header.event_flags.contains(Flags::ExtendedInfo) {
             log::warn!("Events containing extended header items not jet supported.");
-            return Err(ModernEventError::new(ErrorType::NotSupported(
+            return Err(ModernEventError::new_with_description(
+                ErrorType::NotSupported,
                 "Extended header items not jet supported!",
-            )));
+            ));
         }
 
         let payload_size = header.size - header.length() as u16;
@@ -399,6 +441,8 @@ impl From<crate::helper::ParseError> for ModernEventError {
     fn from(_: crate::helper::ParseError) -> Self {
         ModernEventError {
             kind: ErrorType::ParseError,
+            source: None,
+            description: None,
         }
     }
 }
