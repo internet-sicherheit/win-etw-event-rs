@@ -1,16 +1,16 @@
 use std::fmt::Display;
 
-use serde::Serialize;
+use serde::{ser::SerializeStruct, Serialize};
 
 /// Security Identifier
 ///
 /// A identifier used to uniquely identify a security principal or security group.
 /// For further information refer to the [Microsoft Windows Documentation](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-identifiers).
-#[derive(Debug, Clone, PartialEq, Eq, Serialize)]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub struct Sid {
     revision: u8,
     identifier_authority: [u8; 6],
-    sub_auhtoritys: Vec<u32>,
+    sub_auhtorities: Vec<u32>,
 }
 impl Sid {
     pub fn parse<R: std::io::Read>(r: &mut R) -> std::io::Result<Self> {
@@ -29,8 +29,25 @@ impl Sid {
         Ok(Sid {
             revision: header[0],
             identifier_authority: ident_auth,
-            sub_auhtoritys: sub_auths,
+            sub_auhtorities: sub_auths,
         })
+    }
+}
+
+impl Serialize for Sid {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        if serializer.is_human_readable() {
+            self.to_string().serialize(serializer)
+        } else {
+            let mut sid = serializer.serialize_struct("Sid", 3)?;
+            sid.serialize_field("revision", &self.revision)?;
+            sid.serialize_field("identifier_authority", &self.identifier_authority)?;
+            sid.serialize_field("sub_auhtorities", &self.sub_auhtorities)?;
+            sid.end()
+        }
     }
 }
 
@@ -47,7 +64,7 @@ impl Display for Sid {
 
         let mut sub_auths = String::new();
         use std::fmt::Write;
-        for x in &self.sub_auhtoritys {
+        for x in &self.sub_auhtorities {
             write!(sub_auths, "-{x}")?;
         }
 
@@ -66,7 +83,7 @@ mod test {
         let sid = Sid {
             revision: 1,
             identifier_authority: [0, 0, 0, 0, 0, 5],
-            sub_auhtoritys: vec![632, 723811915, 3361004348, 33368],
+            sub_auhtorities: vec![632, 723811915, 3361004348, 33368],
         };
 
         let sid_string = sid.to_string();
@@ -99,7 +116,7 @@ mod test {
         let expected = Sid {
             revision: 1,
             identifier_authority: [0, 0, 0, 0, 0, 5],
-            sub_auhtoritys: vec![632, 723811915, 3361004348, 33368],
+            sub_auhtorities: vec![632, 723811915, 3361004348, 33368],
         };
 
         assert_eq!(sid, expected);
