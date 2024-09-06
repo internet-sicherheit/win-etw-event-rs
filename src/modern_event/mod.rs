@@ -300,7 +300,7 @@ pub trait Event: core::ops::Deref<Target = ModernEvent> + core::ops::DerefMut {
 }
 
 #[cfg(feature = "proc-etw-manifest")]
-proc_etw_manifest::include_manifests!("./manifest/microsoft-windows-kernel");
+proc_etw_manifest::include_manifests!("./manifest/enabled");
 
 /// Header of a modern event
 #[repr(C)]
