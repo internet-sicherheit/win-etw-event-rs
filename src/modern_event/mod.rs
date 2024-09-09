@@ -297,6 +297,7 @@ pub trait Event: core::ops::Deref<Target = ModernEvent> + core::ops::DerefMut {
     fn get_event_task_name(&self) -> Option<&str>;
     fn get_event_symbol(&self) -> Option<&str>;
     fn get_payload_items(&mut self) -> Option<&HashMap<&'static str, WinInTypeItem>>;
+    fn get_keywords(&self) -> Vec<&'static str>;
 }
 
 #[cfg(feature = "proc-etw-manifest")]

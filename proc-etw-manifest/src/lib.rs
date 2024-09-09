@@ -134,6 +134,17 @@ fn quote_provider_struct(p: &Provider) -> TokenStream {
         .unzip();
 
     let templates = template::generate_templates(symbol.clone(), &p.templates);
+
+    let (keyword_names, keyword_masks): (Vec<_>, Vec<_>) = p
+        .keywords
+        .iter()
+        .map(|k| {
+            (
+                proc_macro2::Literal::string(k.name.as_str()),
+                proc_macro2::Literal::u64_suffixed(k.mask),
+            )
+        })
+        .unzip();
     quote! {
         #[derive(Debug)]
         pub struct #symbol {
@@ -187,6 +198,17 @@ fn quote_provider_struct(p: &Provider) -> TokenStream {
                     #(#unique_ids => Some(#event_symbol),)*
                     _ => None,
                 }
+            }
+            fn get_keywords(&self) -> Vec<&'static str> {
+                let ed = &self.header.event_descriptor;
+                let mut keywords = ::std::vec::Vec::new();
+                #(
+                    if ed.keywords & #keyword_masks != 0x0 {
+                        keywords.push(#keyword_names)
+                    }
+                )*
+
+                keywords
             }
             fn get_payload_items(&mut self) -> Option<&HashMap<&'static str, crate::modern_event::types::WinInTypeItem>> {
                 if self.payload.is_some() {
