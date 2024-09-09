@@ -2,6 +2,8 @@
 
 pub mod xed2;
 
+pub mod provider;
+
 use std::{
     collections::HashMap,
     fmt::Display,
@@ -283,12 +285,12 @@ impl ModernEvent {
         }
     }
 
-    #[cfg(not(feature = "proc-etw-manifest"))]
     /// Wraps the generic event in a concise event
     ///
-    /// Returns always None if no manifests have been included with proc-etw-manifest.
+    /// Returns `None` if the GUID of this event doesn't match any available [provider].
     pub fn into_contained_event(self) -> Option<Box<dyn Event>> {
-        None
+        #[cfg(feature = "proc-etw-manifest")]
+        provider::generated_into_contained_event(self)
     }
 }
 
@@ -299,9 +301,6 @@ pub trait Event: core::ops::Deref<Target = ModernEvent> + core::ops::DerefMut {
     fn get_payload_items(&mut self) -> Option<&HashMap<&'static str, WinInTypeItem>>;
     fn get_keywords(&self) -> Vec<&'static str>;
 }
-
-#[cfg(feature = "proc-etw-manifest")]
-proc_etw_manifest::include_manifests!("./manifest/enabled");
 
 /// Header of a modern event
 #[repr(C)]

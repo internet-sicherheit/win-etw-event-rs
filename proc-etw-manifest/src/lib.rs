@@ -59,13 +59,7 @@ fn create_quote(providers: &[Provider]) -> proc_macro2::TokenStream {
     let provider_structs = quote_provider_structs(providers);
 
     quote! {
-        /// Event Providers
-        ///
-        /// Event providers which are generated from their instrumentation manifest.
-        pub mod provider {
-            use super::*;
-            #provider_structs
-        }
+        #provider_structs
     }
 }
 
@@ -86,15 +80,14 @@ fn quote_provider_structs(providers: &[Provider]) -> proc_macro2::TokenStream {
         .unzip();
 
     quote! {
-        impl ModernEvent {
-            /// Try to wrap this opaque event in a concise event
-            ///
-            /// Returns None if no implementation for the provided event exists.
-            pub fn into_contained_event(self) -> Option<Box<dyn Event>> {
-                match self.header.provider_id {
-                    #(#struct_idents::#guid_idents => Some(Box::new(#struct_idents::from(self))),)*
-                    _ => None,
-                }
+        /// Try to wrap a opaque event in a concise event
+        ///
+        /// Generated function to match against every provider generated from xml manifests with include_manifests!().
+        /// Returns None if no implementation for the provided event exists.
+        pub(crate) fn generated_into_contained_event(event: crate::modern_event::ModernEvent) -> Option<Box<dyn Event>> {
+            match event.header.provider_id {
+                #(#struct_idents::#guid_idents => Some(Box::new(#struct_idents::from(event))),)*
+                _ => None,
             }
         }
         #(#quotes)*
