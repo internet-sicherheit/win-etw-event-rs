@@ -294,11 +294,23 @@ impl ModernEvent {
     }
 }
 
+/// Event trait implemented by providerclasses
+///
+/// Provides methods to access dynamic data of a [ModernEvent].
 pub trait Event: core::ops::Deref<Target = ModernEvent> + core::ops::DerefMut {
+    /// Get the providers name
     fn get_provider_name(&self) -> &str;
+    /// Get the task name of the event
+    ///
+    /// Can be None if the header can't be associated to a event.
     fn get_event_task_name(&self) -> Option<&str>;
+    /// Get the symbol of the event
+    ///
+    /// Can be None if the header can't be associated to a event.
     fn get_event_symbol(&self) -> Option<&str>;
+    /// Parse the events payload into a map of named items
     fn get_payload_items(&mut self) -> Option<&HashMap<&'static str, WinInTypeItem>>;
+    /// Get the named keywords of the event
     fn get_keywords(&self) -> Vec<&'static str>;
 }
 
