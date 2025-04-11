@@ -289,8 +289,17 @@ impl ModernEvent {
     ///
     /// Returns `None` if the GUID of this event doesn't match any available [provider].
     pub fn into_contained_event(self) -> Option<Box<dyn Event>> {
-        #[cfg(feature = "proc-etw-manifest")]
-        provider::generated_into_contained_event(self)
+        match self.header.provider_id {
+            provider::MicrosoftWindowsKernelNetwork::MICROSOFT_WINDOWS_KERNEL_NETWORK => Some(
+                Box::new(provider::MicrosoftWindowsKernelNetwork::try_from(self).unwrap()),
+            ),
+            _ => {
+                #[cfg(feature = "proc-etw-manifest")]
+                return provider::generated_into_contained_event(self);
+                #[cfg(not(feature = "proc-etw-manifest"))]
+                return None;
+            }
+        }
     }
 }
 
