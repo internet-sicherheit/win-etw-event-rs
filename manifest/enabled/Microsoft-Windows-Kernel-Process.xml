@@ -251,6 +251,7 @@
             <data name="TimeDateStamp" inType="win:UInt32" />
             <data name="PackageFullName" inType="win:UnicodeString" />
             <data name="PackageRelativeAppId" inType="win:UnicodeString" />
+            <data name="CommandLine" inType="win:AnsiString" />
           </template>
           <template tid="PsIoRateControlStartArgs_V1">
             <data name="JobID" inType="win:UInt32" />
