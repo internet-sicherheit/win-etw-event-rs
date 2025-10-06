@@ -1,0 +1,111 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+  <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+    <events>
+      <provider name="Microsoft-Windows-Services" guid="{0063715b-eeda-4007-9429-ad526f62696e}" resourceFileName="Microsoft-Windows-Services" messageFileName="Microsoft-Windows-Services" symbol="MicrosoftWindowsServices" source="Xml">
+        <keywords>
+          <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x10000" />
+          <keyword name="Control" message="$(string.keyword_Control)" mask="0x100000" />
+          <keyword name="ConfigChange" message="$(string.keyword_ConfigChange)" mask="0x200000" />
+          <keyword name="ServiceStart" message="$(string.keyword_ServiceStart)" mask="0x400000" />
+        </keywords>
+        <tasks>
+          <task name="Autostart" message="$(string.task_Autostart)" value="101" />
+          <task name="StartingGroup" message="$(string.task_StartingGroup)" value="103" />
+          <task name="ServiceStatusChange" message="$(string.task_ServiceStatusChange)" value="105">
+&gt;
+      <opcodes><opcode name="StatusChange" message="$(string.opcode_ServiceStatusChangeStatusChange)" value="101" /></opcodes></task>
+          <task name="PerfCriticalAutostart" message="$(string.task_PerfCriticalAutostart)" value="107" />
+          <task name="SendControl" message="$(string.task_SendControl)" value="200" />
+          <task name="ServiceConfigChange" message="$(string.task_ServiceConfigChange)" value="201" />
+          <task name="ServiceStart" message="$(string.task_ServiceStart)" value="202" />
+        </tasks>
+        <events>
+          <event value="101" symbol="AutostartStarten" version="0" task="Autostart" opcode="win:Starten" level="win:Informational" keywords="Performance" />
+          <event value="102" symbol="AutostartBeenden" version="0" task="Autostart" opcode="win:Beenden" level="win:Informational" keywords="Performance" />
+          <event value="103" symbol="StartingGroupStarten" version="0" task="StartingGroup" opcode="win:Starten" level="win:Informational" keywords="Performance" template="StartingGroupStartenArgs" />
+          <event value="104" symbol="StartingGroupBeenden" version="0" task="StartingGroup" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="StartingGroupStartenArgs" />
+          <event value="105" symbol="ServiceStatusChange" version="0" task="ServiceStatusChange" opcode="StatusChange" level="win:Informational" keywords="Performance" template="ServiceStatusChangeArgs" />
+          <event value="106" symbol="PerfCriticalAutostartStarten" version="0" task="PerfCriticalAutostart" opcode="win:Starten" level="win:Informational" keywords="Performance" />
+          <event value="107" symbol="PerfCriticalAutostartBeenden" version="0" task="PerfCriticalAutostart" opcode="win:Beenden" level="win:Informational" keywords="Performance" />
+          <event value="200" symbol="SendControl" version="0" task="SendControl" level="win:Informational" keywords="Control" template="SendControlArgs" />
+          <event value="201" symbol="ServiceConfigChange" version="0" task="ServiceConfigChange" level="win:Informational" keywords="ConfigChange" template="ServiceConfigChangeArgs" />
+          <event value="202" symbol="ServiceConfigChange202" version="0" task="ServiceConfigChange" level="win:Informational" keywords="ConfigChange" template="ServiceConfigChange202Args" />
+          <event value="203" symbol="ServiceConfigChange203" version="0" task="ServiceConfigChange" level="win:Informational" keywords="ConfigChange" template="ServiceConfigChange202Args" />
+          <event value="204" symbol="ServiceStart" version="0" task="ServiceStart" level="win:Informational" keywords="ServiceStart" template="ServiceStartArgs" />
+          <event value="205" symbol="ServiceStart205" version="0" task="ServiceStart" level="win:Informational" keywords="ServiceStart" template="ServiceStart205Args" />
+        </events>
+        <templates>
+          <template tid="StartingGroupStartenArgs">
+            <data name="GroupName" inType="win:UnicodeString" />
+          </template>
+          <template tid="ServiceStatusChangeArgs">
+            <data name="ExecutionPhase" inType="win:UInt32" />
+            <data name="CurrentState" inType="win:UInt32" />
+            <data name="StartType" inType="win:UInt32" />
+            <data name="PID" inType="win:UInt32" />
+            <data name="ServiceName" inType="win:UnicodeString" />
+            <data name="ImageName" inType="win:UnicodeString" />
+          </template>
+          <template tid="SendControlArgs">
+            <data name="ServiceName" inType="win:UnicodeString" />
+            <data name="DisplayName" inType="win:UnicodeString" />
+            <data name="ControlCode" inType="win:UInt32" />
+            <data name="ClientProcessStartKey" inType="win:UInt64" />
+            <data name="ClientProcessId" inType="win:UInt32" />
+            <data name="ParentProcessId" inType="win:UInt32" />
+          </template>
+          <template tid="ServiceConfigChangeArgs">
+            <data name="ServiceName" inType="win:UnicodeString" />
+            <data name="NewStartType" inType="win:UInt32" />
+            <data name="ClientProcessStartKey" inType="win:UInt64" />
+            <data name="ClientProcessId" inType="win:UInt32" />
+            <data name="ParentProcessId" inType="win:UInt32" />
+          </template>
+          <template tid="ServiceConfigChange202Args">
+            <data name="ServiceName" inType="win:UnicodeString" />
+            <data name="NewValueName" inType="win:UnicodeString" />
+            <data name="ClientProcessStartKey" inType="win:UInt64" />
+            <data name="ClientProcessId" inType="win:UInt32" />
+            <data name="ParentProcessId" inType="win:UInt32" />
+          </template>
+          <template tid="ServiceStartArgs">
+            <data name="ServiceName" inType="win:UnicodeString" />
+            <data name="ServiceHostName" inType="win:UnicodeString" />
+            <data name="ClientProcessStartKey" inType="win:UInt64" />
+            <data name="ClientProcessId" inType="win:UInt32" />
+            <data name="ParentProcessId" inType="win:UInt32" />
+          </template>
+          <template tid="ServiceStart205Args">
+            <data name="ServiceName" inType="win:UnicodeString" />
+            <data name="LoadOrderGroup" inType="win:UnicodeString" />
+            <data name="SvchostGroup" inType="win:UnicodeString" />
+            <data name="IsCritical" inType="win:Boolean" />
+            <data name="IsUserService" inType="win:Boolean" />
+            <data name="IsOwnProcess" inType="win:Boolean" />
+            <data name="ClientProcessStartKey" inType="win:UInt64" />
+            <data name="ClientProcessId" inType="win:UInt32" />
+            <data name="ParentProcessId" inType="win:UInt32" />
+          </template>
+        </templates>
+      </provider>
+    </events>
+  </instrumentation>
+  <localization>
+    <resources culture="de-DE">
+      <stringTable>
+        <string id="keyword_Performance" value="Performance" />
+        <string id="keyword_Control" value="Control" />
+        <string id="keyword_ConfigChange" value="ConfigChange" />
+        <string id="keyword_ServiceStart" value="ServiceStart" />
+        <string id="task_Autostart" value="Autostart" />
+        <string id="task_StartingGroup" value="StartingGroup" />
+        <string id="task_ServiceStatusChange" value="ServiceStatusChange" />
+        <string id="opcode_ServiceStatusChangeStatusChange" value="StatusChange" />
+        <string id="task_PerfCriticalAutostart" value="PerfCriticalAutostart" />
+        <string id="task_SendControl" value="SendControl" />
+        <string id="task_ServiceConfigChange" value="ServiceConfigChange" />
+        <string id="task_ServiceStart" value="ServiceStart" />
+      </stringTable>
+    </resources>
+  </localization>
+</instrumentationManifest>
