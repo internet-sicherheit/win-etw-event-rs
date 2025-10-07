@@ -274,7 +274,7 @@ pub enum ExtractionMethod {
     /// 64 Bit Kernel Mode `nt!EtwWriteEx` function
     KMEtwWriteEx64 = 1,
     /// 64 Bit User Mode `ntdll!EtwpEventWriteFull` function
-    UMEtwpEventWriteFull64 = 2
+    UMEtwpEventWriteFull64 = 2,
 }
 
 bitflags! {
