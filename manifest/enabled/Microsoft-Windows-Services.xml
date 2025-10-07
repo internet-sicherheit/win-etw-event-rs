@@ -12,8 +12,10 @@
           <task name="Autostart" message="$(string.task_Autostart)" value="101" />
           <task name="StartingGroup" message="$(string.task_StartingGroup)" value="103" />
           <task name="ServiceStatusChange" message="$(string.task_ServiceStatusChange)" value="105">
-&gt;
-      <opcodes><opcode name="StatusChange" message="$(string.opcode_ServiceStatusChangeStatusChange)" value="101" /></opcodes></task>
+            <opcodes>
+              <opcode name="StatusChange" message="$(string.opcode_ServiceStatusChangeStatusChange)" value="101" />
+            </opcodes>
+          </task>
           <task name="PerfCriticalAutostart" message="$(string.task_PerfCriticalAutostart)" value="107" />
           <task name="SendControl" message="$(string.task_SendControl)" value="200" />
           <task name="ServiceConfigChange" message="$(string.task_ServiceConfigChange)" value="201" />
@@ -91,7 +93,7 @@
     </events>
   </instrumentation>
   <localization>
-    <resources culture="de-DE">
+    <resources culture="en-US">
       <stringTable>
         <string id="keyword_Performance" value="Performance" />
         <string id="keyword_Control" value="Control" />
