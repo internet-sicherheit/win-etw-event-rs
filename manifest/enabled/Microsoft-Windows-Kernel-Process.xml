@@ -46,7 +46,7 @@
           <event value="1" symbol="ProcessStart_V1" version="1" task="ProcessStart" opcode="win:Start" level="win:Informational" keywords="WINEVENT_KEYWORD_PROCESS" template="ProcessStartArgs_V1" />
           <event value="1" symbol="ProcessStart_V2" version="2" task="ProcessStart" opcode="win:Start" level="win:Informational" keywords="WINEVENT_KEYWORD_PROCESS" template="ProcessStartArgs_V2" />
           <event value="1" symbol="ProcessStart_V3" version="3" task="ProcessStart" opcode="win:Start" level="win:Informational" keywords="WINEVENT_KEYWORD_PROCESS" template="ProcessRundownArgs_V1" />
-          <event value="1" symbol="ProcessStart_VHypErSIS" version="100" task="ProcessStart" opcode="win:Start" level="win:Informational" keywords="WINEVENT_KEYWORD_PROCESS" template="ProcessStartArgs_VHypErSIS" />
+          <event value="1" symbol="ProcessStart_V100" version="100" task="ProcessStart" opcode="win:Start" level="win:Informational" keywords="WINEVENT_KEYWORD_PROCESS" template="ProcessStartArgs_V100" />
           <event value="2" symbol="ProcessStop" version="0" task="ProcessStop" opcode="win:Stop" level="win:Informational" keywords="WINEVENT_KEYWORD_PROCESS" template="ProcessStopArgs" />
           <event value="2" symbol="ProcessStop_V1" version="1" task="ProcessStop" opcode="win:Stop" level="win:Informational" keywords="WINEVENT_KEYWORD_PROCESS" template="ProcessStopArgs_V1" />
           <event value="2" symbol="ProcessStop_V2" version="2" task="ProcessStop" opcode="win:Stop" level="win:Informational" keywords="WINEVENT_KEYWORD_PROCESS" template="ProcessStopArgs_V2" />
@@ -253,7 +253,7 @@
             <data name="PackageFullName" inType="win:UnicodeString" />
             <data name="PackageRelativeAppId" inType="win:UnicodeString" />
           </template>
-          <template tid="ProcessRundownArgs_VHypErSIS">
+          <template tid="ProcessRundownArgs_V100">
             <data name="ProcessID" inType="win:UInt32" />
             <data name="ProcessSequenceNumber" inType="win:UInt64" />
             <data name="CreateTime" inType="win:FILETIME" />
