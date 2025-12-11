@@ -1,0 +1,195 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Disk" guid="{6b4db0bc-9a3d-467d-81b9-a84c6f2f3d40}" resourceFileName="Microsoft-Windows-Disk" messageFileName="Microsoft-Windows-Disk" symbol="MicrosoftWindowsDisk" source="Xml" >
+    <keywords>
+     <keyword name="DiskCache" message="$(string.keyword_DiskCache)" mask="0x1"/>
+     <keyword name="IO_Performance" message="$(string.keyword_IO_Performance)" mask="0x100000"/>
+     <keyword name="Read" message="$(string.keyword_Read)" mask="0x200000"/>
+     <keyword name="Write" message="$(string.keyword_Write)" mask="0x400000"/>
+     <keyword name="PagingRead" message="$(string.keyword_PagingRead)" mask="0x800000"/>
+     <keyword name="PagingWrite" message="$(string.keyword_PagingWrite)" mask="0x1000000"/>
+     <keyword name="LowMemoryRead" message="$(string.keyword_LowMemoryRead)" mask="0x2000000"/>
+     <keyword name="LowMemoryWrite" message="$(string.keyword_LowMemoryWrite)" mask="0x4000000"/>
+     <keyword name="NonReadWrite" message="$(string.keyword_NonReadWrite)" mask="0x8000000"/>
+     <keyword name="PassThrough" message="$(string.keyword_PassThrough)" mask="0x10000000"/>
+     <keyword name="Flush" message="$(string.keyword_Flush)" mask="0x20000000"/>
+     <keyword name="IOCTL" message="$(string.keyword_IOCTL)" mask="0x40000000"/>
+     <keyword name="WMI" message="$(string.keyword_WMI)" mask="0x80000000"/>
+     <keyword name="Power" message="$(string.keyword_Power)" mask="0x100000000"/>
+     <keyword name="PnP" message="$(string.keyword_PnP)" mask="0x200000000"/>
+     <keyword name="Enum" message="$(string.keyword_Enum)" mask="0x400000000"/>
+     <keyword name="Queue" message="$(string.keyword_Queue)" mask="0x800000000"/>
+     <keyword name="ISR" message="$(string.keyword_ISR)" mask="0x1000000000"/>
+     <keyword name="DPC" message="$(string.keyword_DPC)" mask="0x2000000000"/>
+     <keyword name="Timer" message="$(string.keyword_Timer)" mask="0x4000000000"/>
+     <keyword name="Protocol" message="$(string.keyword_Protocol)" mask="0x8000000000"/>
+    </keywords>
+    <tasks>
+     <task name="Datenträgercache_Informationen" message="$(string.task_Datenträgercache_Informationen)" value="1">
+      <opcodes>
+       <opcode name="OpCodeDiskCacheInfo" message="$(string.opcode_Datenträgercache_InformationenOpCodeDiskCacheInfo)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="Klasse" message="$(string.task_Klasse)" value="200">
+      <opcodes>
+       <opcode name="Anforderungwirdweitergeleitet." message="$(string.opcode_KlasseAnforderungwirdweitergeleitet.)" value="100"/>
+       <opcode name="AbschlussderAnforderung." message="$(string.opcode_KlasseAbschlussderAnforderung.)" value="101"/>
+       <opcode name="VerarbeitungvonWiederholungen." message="$(string.opcode_KlasseVerarbeitungvonWiederholungen.)" value="104"/>
+       <opcode name="WarteschlangenbezogenerVorgang." message="$(string.opcode_KlasseWarteschlangenbezogenerVorgang.)" value="106"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1" symbol="Datenträgercache_InformationenOpCodeDiskCacheInfo_V1" version="1" task="Datenträgercache_Informationen" opcode="OpCodeDiskCacheInfo" level="win:Informational" keywords="DiskCache" template="Datenträgercache_InformationenOpCodeDiskCacheInfoArgs_V1"/>
+     <event value="201" symbol="Klasse_V1" version="1" task="Klasse" level="win:Informational" keywords="IO_Performance" template="KlasseArgs_V1"/>
+     <event value="202" symbol="KlasseAnforderungwirdweitergeleitet._V1" version="1" task="Klasse" opcode="Anforderungwirdweitergeleitet." level="win:Informational" keywords="Read" template="KlasseAnforderungwirdweitergeleitet.Args_V1"/>
+     <event value="203" symbol="KlasseAnforderungwirdweitergeleitet.203_V1" version="1" task="Klasse" opcode="Anforderungwirdweitergeleitet." level="win:Informational" keywords="Write" template="KlasseAnforderungwirdweitergeleitet.Args_V1"/>
+     <event value="204" symbol="KlasseAnforderungwirdweitergeleitet.204_V1" version="1" task="Klasse" opcode="Anforderungwirdweitergeleitet." level="win:Informational" keywords="Read PagingRead" template="KlasseAnforderungwirdweitergeleitet.Args_V1"/>
+     <event value="205" symbol="KlasseAnforderungwirdweitergeleitet.205_V1" version="1" task="Klasse" opcode="Anforderungwirdweitergeleitet." level="win:Informational" keywords="Write PagingWrite" template="KlasseAnforderungwirdweitergeleitet.Args_V1"/>
+     <event value="206" symbol="KlasseAnforderungwirdweitergeleitet.206_V1" version="1" task="Klasse" opcode="Anforderungwirdweitergeleitet." level="win:Informational" keywords="Read LowMemoryRead" template="KlasseAnforderungwirdweitergeleitet.Args_V1"/>
+     <event value="207" symbol="KlasseAnforderungwirdweitergeleitet.207_V1" version="1" task="Klasse" opcode="Anforderungwirdweitergeleitet." level="win:Informational" keywords="Write LowMemoryWrite" template="KlasseAnforderungwirdweitergeleitet.Args_V1"/>
+     <event value="208" symbol="KlasseAbschlussderAnforderung._V1" version="1" task="Klasse" opcode="AbschlussderAnforderung." level="win:Informational" keywords="Read Write PagingRead PagingWrite LowMemoryRead LowMemoryWrite" template="KlasseAbschlussderAnforderung.Args_V1"/>
+     <event value="209" symbol="KlasseVerarbeitungvonWiederholungen._V1" version="1" task="Klasse" opcode="VerarbeitungvonWiederholungen." level="win:Informational" keywords="Read Write PagingRead PagingWrite LowMemoryRead LowMemoryWrite" template="KlasseVerarbeitungvonWiederholungen.Args_V1"/>
+     <event value="210" symbol="Klasse210_V1" version="1" task="Klasse" level="win:Informational" keywords="Flush" template="Klasse210Args_V1"/>
+     <event value="211" symbol="KlasseAbschlussderAnforderung.211_V1" version="1" task="Klasse" opcode="AbschlussderAnforderung." level="win:Informational" keywords="Flush" template="KlasseAbschlussderAnforderung.Args_V1"/>
+     <event value="212" symbol="KlasseAnforderungwirdweitergeleitet.212_V1" version="1" task="Klasse" opcode="Anforderungwirdweitergeleitet." level="win:Informational" keywords="IOCTL" template="KlasseAnforderungwirdweitergeleitet.212Args_V1"/>
+     <event value="213" symbol="KlasseAnforderungwirdweitergeleitet.213_V1" version="1" task="Klasse" opcode="Anforderungwirdweitergeleitet." level="win:Informational" keywords="WMI" template="KlasseAnforderungwirdweitergeleitet.212Args_V1"/>
+     <event value="214" symbol="KlasseAbschlussderAnforderung.214_V1" version="1" task="Klasse" opcode="AbschlussderAnforderung." level="win:Informational" keywords="IOCTL WMI" template="KlasseAbschlussderAnforderung.214Args_V1"/>
+     <event value="215" symbol="KlasseAnforderungwirdweitergeleitet.215_V1" version="1" task="Klasse" opcode="Anforderungwirdweitergeleitet." level="win:Informational" keywords="Power" template="KlasseAnforderungwirdweitergeleitet.215Args_V1"/>
+     <event value="216" symbol="KlasseAbschlussderAnforderung.216_V1" version="1" task="Klasse" opcode="AbschlussderAnforderung." level="win:Informational" keywords="Power" template="KlasseAbschlussderAnforderung.214Args_V1"/>
+     <event value="217" symbol="KlasseAnforderungwirdweitergeleitet.217_V1" version="1" task="Klasse" opcode="Anforderungwirdweitergeleitet." level="win:Informational" keywords="PnP" template="KlasseAnforderungwirdweitergeleitet.217Args_V1"/>
+     <event value="218" symbol="KlasseAbschlussderAnforderung.218_V1" version="1" task="Klasse" opcode="AbschlussderAnforderung." level="win:Informational" keywords="PnP" template="KlasseAbschlussderAnforderung.214Args_V1"/>
+     <event value="219" symbol="KlasseAbschlussderAnforderung.219_V1" version="1" task="Klasse" opcode="AbschlussderAnforderung." level="win:Informational" keywords="PnP Enum" template="KlasseAbschlussderAnforderung.219Args_V1"/>
+     <event value="220" symbol="KlasseWarteschlangenbezogenerVorgang._V1" version="1" task="Klasse" opcode="WarteschlangenbezogenerVorgang." level="win:Informational" keywords="Queue" template="KlasseWarteschlangenbezogenerVorgang.Args_V1"/>
+     <event value="221" symbol="KlasseAnforderungwirdweitergeleitet.221_V1" version="1" task="Klasse" opcode="Anforderungwirdweitergeleitet." level="win:Informational" keywords="PassThrough IOCTL" template="KlasseAnforderungwirdweitergeleitet.212Args_V1"/>
+    </events>
+    <templates>
+     <template tid="Datenträgercache_InformationenOpCodeDiskCacheInfoArgs_V1">
+      <data name="ReadCacheEnabled" inType="win:UInt8"/>
+      <data name="WriteCacheEnabled" inType="win:UInt8"/>
+      <data name="ReadRetentionPriority" inType="win:UInt8"/>
+      <data name="WriteRetentionPriority" inType="win:UInt8"/>
+      <data name="PrefetchScalar" inType="win:UInt8"/>
+      <data name="DisablePrefetchTransferLength" inType="win:UInt16"/>
+      <data name="Minimum" inType="win:UInt16"/>
+      <data name="Maximum" inType="win:UInt16"/>
+      <data name="MaximumBlocks" inType="win:UInt16"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="KlasseArgs_V1">
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="RequestDuration" inType="win:UInt64"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="Command" inType="win:UInt8"/>
+      <data name="SrbStatus" inType="win:UInt8"/>
+     </template>
+     <template tid="KlasseAnforderungwirdweitergeleitet.Args_V1">
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="Command" inType="win:UInt8"/>
+      <data name="LengthOfTransfer" inType="win:UInt64"/>
+      <data name="LBA" inType="win:HexInt64"/>
+     </template>
+     <template tid="KlasseAbschlussderAnforderung.Args_V1">
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="NTStatus" inType="win:HexInt32"/>
+      <data name="SrbStatus" inType="win:UInt8"/>
+      <data name="ScsiStatus" inType="win:UInt8"/>
+      <data name="SenseKey" inType="win:UInt8"/>
+      <data name="AddSense" inType="win:UInt8"/>
+      <data name="AddSenseQ" inType="win:UInt8"/>
+     </template>
+     <template tid="KlasseVerarbeitungvonWiederholungen.Args_V1">
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="CurrentRetryCount" inType="win:UInt32"/>
+     </template>
+     <template tid="Klasse210Args_V1">
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Target" inType="win:UInt8"/>
+      <data name="LUN" inType="win:UInt8"/>
+     </template>
+     <template tid="KlasseAnforderungwirdweitergeleitet.212Args_V1">
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="MajorFunction" inType="win:HexInt32"/>
+      <data name="MinorFunction" inType="win:HexInt32"/>
+      <data name="Parameter" inType="win:HexInt32"/>
+     </template>
+     <template tid="KlasseAbschlussderAnforderung.214Args_V1">
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="KlasseAnforderungwirdweitergeleitet.215Args_V1">
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="MinorFunction" inType="win:HexInt32"/>
+      <data name="Type" inType="win:UInt8"/>
+      <data name="OldState" inType="win:HexInt32"/>
+      <data name="NewState" inType="win:HexInt32"/>
+      <data name="Action" inType="win:HexInt32"/>
+      <data name="PowerStateContext" inType="win:HexInt32"/>
+     </template>
+     <template tid="KlasseAnforderungwirdweitergeleitet.217Args_V1">
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="MinorFunction" inType="win:HexInt32"/>
+      <data name="Type" inType="win:HexInt32"/>
+      <data name="DeviceObject" inType="win:Pointer"/>
+     </template>
+     <template tid="KlasseAbschlussderAnforderung.219Args_V1">
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="NumberOfChildren" inType="win:UInt32"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="KlasseWarteschlangenbezogenerVorgang.Args_V1">
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="QueueTag" inType="win:HexInt32"/>
+      <data name="Operation" inType="win:UInt8"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_DiskCache" value="DiskCache"/>
+    <string id="keyword_IO_Performance" value="IO_Performance"/>
+    <string id="keyword_Read" value="Read"/>
+    <string id="keyword_Write" value="Write"/>
+    <string id="keyword_PagingRead" value="PagingRead"/>
+    <string id="keyword_PagingWrite" value="PagingWrite"/>
+    <string id="keyword_LowMemoryRead" value="LowMemoryRead"/>
+    <string id="keyword_LowMemoryWrite" value="LowMemoryWrite"/>
+    <string id="keyword_NonReadWrite" value="NonReadWrite"/>
+    <string id="keyword_PassThrough" value="PassThrough"/>
+    <string id="keyword_Flush" value="Flush"/>
+    <string id="keyword_IOCTL" value="IOCTL"/>
+    <string id="keyword_WMI" value="WMI"/>
+    <string id="keyword_Power" value="Power"/>
+    <string id="keyword_PnP" value="PnP"/>
+    <string id="keyword_Enum" value="Enum"/>
+    <string id="keyword_Queue" value="Queue"/>
+    <string id="keyword_ISR" value="ISR"/>
+    <string id="keyword_DPC" value="DPC"/>
+    <string id="keyword_Timer" value="Timer"/>
+    <string id="keyword_Protocol" value="Protocol"/>
+    <string id="task_Datenträgercache_Informationen" value="Datenträgercache_Informationen"/>
+    <string id="opcode_Datenträgercache_InformationenOpCodeDiskCacheInfo" value="OpCodeDiskCacheInfo"/>
+    <string id="task_Klasse" value="Klasse"/>
+    <string id="opcode_KlasseAnforderungwirdweitergeleitet." value="Anforderungwirdweitergeleitet."/>
+    <string id="opcode_KlasseAbschlussderAnforderung." value="AbschlussderAnforderung."/>
+    <string id="opcode_KlasseVerarbeitungvonWiederholungen." value="VerarbeitungvonWiederholungen."/>
+    <string id="opcode_KlasseWarteschlangenbezogenerVorgang." value="WarteschlangenbezogenerVorgang."/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

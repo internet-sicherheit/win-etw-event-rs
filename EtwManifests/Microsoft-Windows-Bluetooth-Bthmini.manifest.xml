@@ -1,0 +1,41 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Bluetooth-Bthmini" guid="{db25b328-a6f6-444f-9d97-a50e20217d16}" resourceFileName="Microsoft-Windows-Bluetooth-Bthmini" messageFileName="Microsoft-Windows-Bluetooth-Bthmini" symbol="MicrosoftWindowsBluetoothBthmini" source="Xml" >
+    <keywords>
+     <keyword name="_BTHMINI_KEYWORD" message="$(string.keyword__BTHMINI_KEYWORD)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="BthMini_DriverPnP" message="$(string.task_BthMini_DriverPnP)" value="1"/>
+     <task name="BthMini_ReadPump" message="$(string.task_BthMini_ReadPump)" value="2"/>
+    </tasks>
+    <events>
+     <event value="200" symbol="BthMini_DriverPnP" version="0" task="BthMini_DriverPnP" level="win:Error" keywords="_BTHMINI_KEYWORD" template="BthMini_DriverPnPArgs"/>
+     <event value="201" symbol="BthMini_ReadPump" version="0" task="BthMini_ReadPump" level="win:Error" keywords="_BTHMINI_KEYWORD" template="BthMini_ReadPumpArgs"/>
+     <event value="202" symbol="BthMini_ReadPump202" version="0" task="BthMini_ReadPump" level="win:Error" keywords="_BTHMINI_KEYWORD" template="BthMini_ReadPumpArgs"/>
+    </events>
+    <templates>
+     <template tid="BthMini_DriverPnPArgs">
+      <data name="Major" inType="win:UInt32"/>
+      <data name="Minor" inType="win:UInt32"/>
+      <data name="Service" inType="win:UInt32"/>
+     </template>
+     <template tid="BthMini_ReadPumpArgs">
+      <data name="ExpectedLengthMin" inType="win:UInt32"/>
+      <data name="ExpectedLengthMax" inType="win:UInt32"/>
+      <data name="ActualLength" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword__BTHMINI_KEYWORD" value="_BTHMINI_KEYWORD"/>
+    <string id="task_BthMini_DriverPnP" value="BthMini_DriverPnP"/>
+    <string id="task_BthMini_ReadPump" value="BthMini_ReadPump"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

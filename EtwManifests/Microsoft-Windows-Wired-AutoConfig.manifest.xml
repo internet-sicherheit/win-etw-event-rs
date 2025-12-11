@@ -1,0 +1,443 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Wired-AutoConfig" guid="{b92cf7fd-dc10-4c6b-a72d-1613bf25e597}" resourceFileName="Microsoft-Windows-Wired-AutoConfig" messageFileName="Microsoft-Windows-Wired-AutoConfig" symbol="MicrosoftWindowsWiredAutoConfig" source="Xml" >
+    <keywords>
+     <keyword name="AutoConf" message="$(string.keyword_AutoConf)" mask="0x1"/>
+     <keyword name="MSM" message="$(string.keyword_MSM)" mask="0x2"/>
+     <keyword name="DeviceLayer" message="$(string.keyword_DeviceLayer)" mask="0x4"/>
+     <keyword name="ut:SendPath" message="$(string.keyword_ut:SendPath)" mask="0x100000000"/>
+     <keyword name="ut:ReceivePath" message="$(string.keyword_ut:ReceivePath)" mask="0x200000000"/>
+     <keyword name="ut:L3ConnectPath" message="$(string.keyword_ut:L3ConnectPath)" mask="0x400000000"/>
+     <keyword name="ut:L2ConnectPath" message="$(string.keyword_ut:L2ConnectPath)" mask="0x800000000"/>
+     <keyword name="ut:ClosePath" message="$(string.keyword_ut:ClosePath)" mask="0x1000000000"/>
+     <keyword name="ut:Authentication" message="$(string.keyword_ut:Authentication)" mask="0x2000000000"/>
+     <keyword name="ut:Configuration" message="$(string.keyword_ut:Configuration)" mask="0x4000000000"/>
+     <keyword name="ut:Global" message="$(string.keyword_ut:Global)" mask="0x8000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="Geräteschicht" message="$(string.task_Geräteschicht)" value="1"/>
+     <task name="MSM" message="$(string.task_MSM)" value="2"/>
+     <task name="Autokonfiguration" message="$(string.task_Autokonfiguration)" value="3"/>
+    </tasks>
+    <maps>
+     <valueMap name="tid_Dot3svcPrelogon.Result">
+      <map value="0x0" message="$(string.map_tid_Dot3svcPrelogon.ResultDie Betriebsvoraussetzungen wurden nicht erfüllt.)"/>
+      <map value="0x1" message="$(string.map_tid_Dot3svcPrelogon.ResultDie Betriebsvoraussetzungen wurden erfüllt.)"/>
+     </valueMap>
+     <valueMap name="tid_Dot3svcPostlogon.Result">
+      <map value="0x0" message="$(string.map_tid_Dot3svcPostlogon.ResultErfolg)"/>
+      <map value="0x1" message="$(string.map_tid_Dot3svcPostlogon.ResultFehler)"/>
+      <map value="0x2" message="$(string.map_tid_Dot3svcPostlogon.ResultDie Betriebsvoraussetzungen wurden nicht erfüllt.)"/>
+      <map value="0x3" message="$(string.map_tid_Dot3svcPostlogon.ResultDie Betriebsvoraussetzungen wurden erfüllt.)"/>
+     </valueMap>
+     <valueMap name="tid_Dot3svcPostlogonSkip.Reason">
+      <map value="0x1" message="$(string.map_tid_Dot3svcPostlogonSkip.ReasonDer Computer wurde keiner Domäne hinzugefügt.)"/>
+      <map value="0x2" message="$(string.map_tid_Dot3svcPostlogonSkip.ReasonEs sind keine Nach der Anmeldung-Netzwerkprofile vorhanden.)"/>
+     </valueMap>
+     <valueMap name="ProfileType">
+      <map value="0x0" message="$(string.map_ProfileTypeSchnittstelle)"/>
+      <map value="0x1" message="$(string.map_ProfileTypeGruppenrichtlinie)"/>
+      <map value="0x5" message="$(string.map_ProfileTypeStandard)"/>
+     </valueMap>
+     <valueMap name="NdisPortControlState">
+      <map value="0x0" message="$(string.map_NdisPortControlStateGesteuert)"/>
+      <map value="0x1" message="$(string.map_NdisPortControlStateNicht gesteuert)"/>
+     </valueMap>
+     <valueMap name="AdapterState">
+      <map value="0x0" message="$(string.map_AdapterStateDeaktiviert)"/>
+      <map value="0x1" message="$(string.map_AdapterStateAktiviert)"/>
+     </valueMap>
+     <valueMap name="mapCSMState">
+      <map value="0x1" message="$(string.map_mapCSMStateGetrennt)"/>
+      <map value="0x2" message="$(string.map_mapCSMStateVerbindung wird hergestellt)"/>
+      <map value="0x3" message="$(string.map_mapCSMStateVerbunden)"/>
+      <map value="0x4" message="$(string.map_mapCSMStateFehler beim Verbinden.)"/>
+      <map value="0x5" message="$(string.map_mapCSMStateAuthentifizierung)"/>
+      <map value="0x6" message="$(string.map_mapCSMStateAuthentifiziert)"/>
+      <map value="0x7" message="$(string.map_mapCSMStateFehler beim Authentifizieren.)"/>
+      <map value="0x8" message="$(string.map_mapCSMStateDer Authentifikator konnte nicht gefunden werden.)"/>
+      <map value="0x9" message="$(string.map_mapCSMStateOneX deaktiviert)"/>
+      <map value="0xa" message="$(string.map_mapCSMStateFehler)"/>
+     </valueMap>
+     <valueMap name="mapCSMLocalEvent">
+      <map value="0x1" message="$(string.map_mapCSMLocalEventLocal:UCT)"/>
+      <map value="0x2" message="$(string.map_mapCSMLocalEventLokal:Verbinden)"/>
+      <map value="0x3" message="$(string.map_mapCSMLocalEventLokal:Verbindung trennen)"/>
+      <map value="0x4" message="$(string.map_mapCSMLocalEventLocal:Media-Verbindung)"/>
+      <map value="0x5" message="$(string.map_mapCSMLocalEventLocal:Media-Verbindung trennen)"/>
+      <map value="0x6" message="$(string.map_mapCSMLocalEventLokal:Zeitüberschreitung beim Verbinden)"/>
+      <map value="0x7" message="$(string.map_mapCSMLocalEventLokal:Authentifizierung wird ausgeführt)"/>
+      <map value="0x8" message="$(string.map_mapCSMLocalEventLokal:Authentifizierung erneut gestartet)"/>
+      <map value="0x9" message="$(string.map_mapCSMLocalEventLokal:Authentifikation erfolgreich)"/>
+      <map value="0xa" message="$(string.map_mapCSMLocalEventLokal:Authentifikationsfehler)"/>
+      <map value="0xb" message="$(string.map_mapCSMLocalEventLokal:OneX (erzwungen) Peer nicht gefunden)"/>
+      <map value="0xc" message="$(string.map_mapCSMLocalEventLokal:OneX (nicht erzwungen) Peer nicht gefunden)"/>
+      <map value="0xd" message="$(string.map_mapCSMLocalEventLokal:OneX (nicht erzwungen) deaktiviert)"/>
+      <map value="0xe" message="$(string.map_mapCSMLocalEventLokal:OneX (erzwungen) deaktiviert)"/>
+      <map value="0xf" message="$(string.map_mapCSMLocalEventLokal:OneX aktiviert)"/>
+      <map value="0x10" message="$(string.map_mapCSMLocalEventLokal:OneX äußerer Zeitgeber abgelaufen)"/>
+      <map value="0x11" message="$(string.map_mapCSMLocalEventLokal:OneX erneutes Authentifizieren)"/>
+      <map value="0x12" message="$(string.map_mapCSMLocalEventLokal:Laufzeitstatus festlegen)"/>
+     </valueMap>
+     <valueMap name="mapCSMGlobalEvent">
+      <map value="0x0" message="$(string.map_mapCSMGlobalEventGlobal:Verbinden)"/>
+      <map value="0x1" message="$(string.map_mapCSMGlobalEventGlobal:Verbindung trennen)"/>
+      <map value="0x2" message="$(string.map_mapCSMGlobalEventGlobal:Media-Verbindung)"/>
+      <map value="0x3" message="$(string.map_mapCSMGlobalEventGlobal:Media-Verbindung trennen)"/>
+      <map value="0x4" message="$(string.map_mapCSMGlobalEventGlobal:OneX-Ergebnis)"/>
+      <map value="0x5" message="$(string.map_mapCSMGlobalEventGlobal:Zeitüberschreitung)"/>
+      <map value="0x6" message="$(string.map_mapCSMGlobalEventGlobal:erneutes Authentifizieren)"/>
+      <map value="0x7" message="$(string.map_mapCSMGlobalEventGlobal:Laufzeitstatus festlegen)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="13021" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="13022" symbol="task_013022" version="0" task="task_0" level="win:Informational" template="task_013022Args"/>
+     <event value="13031" symbol="task_013031" version="0" task="task_0" level="win:Informational" template="task_013031Args"/>
+     <event value="13032" symbol="task_013032" version="0" task="task_0" level="win:Informational" template="task_013032Args"/>
+     <event value="13033" symbol="task_013033" version="0" task="task_0" level="win:Informational" template="task_013033Args"/>
+     <event value="15500" symbol="task_015500" version="0" task="task_0" level="win:Informational" template="task_015500Args"/>
+     <event value="15501" symbol="task_015501" version="0" task="task_0" level="win:Informational" template="task_015500Args"/>
+     <event value="15502" symbol="task_015502" version="0" task="task_0" level="win:Informational" template="task_015502Args"/>
+     <event value="15503" symbol="task_015503" version="0" task="task_0" level="win:Informational" template="task_015503Args"/>
+     <event value="15504" symbol="task_015504" version="0" task="task_0" level="win:Informational" template="task_015504Args"/>
+     <event value="15505" symbol="task_015505" version="0" task="task_0" level="win:Informational" template="task_015505Args"/>
+     <event value="15506" symbol="task_015506" version="0" task="task_0" level="win:Informational" template="task_015506Args"/>
+     <event value="15507" symbol="task_015507" version="0" task="task_0" level="win:Informational" template="task_015500Args"/>
+     <event value="15508" symbol="task_015508" version="0" task="task_0" level="win:Informational" template="task_015508Args"/>
+     <event value="15509" symbol="task_015509" version="0" task="task_0" level="win:Informational" template="task_015509Args"/>
+     <event value="15510" symbol="task_015510" version="0" task="task_0" level="win:Informational" template="task_015510Args"/>
+     <event value="15511" symbol="task_015511" version="0" task="task_0" level="win:Informational"/>
+     <event value="15512" symbol="task_015512" version="0" task="task_0" level="win:Informational"/>
+     <event value="15513" symbol="task_015513" version="0" task="task_0" level="win:Informational" template="task_015510Args"/>
+     <event value="15514" symbol="task_015514" version="0" task="task_0" level="win:Error" template="task_015505Args"/>
+     <event value="15515" symbol="task_015515" version="0" task="task_0" level="win:Informational"/>
+     <event value="15516" symbol="task_015516" version="0" task="task_0" level="win:Informational"/>
+     <event value="20001" symbol="Autokonfiguration" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="20002" symbol="Autokonfiguration20002" version="0" task="Autokonfiguration" level="win:Informational" keywords="AutoConf ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="20003" symbol="Autokonfiguration20003" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20003Args"/>
+     <event value="20004" symbol="Autokonfiguration20004" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="20005" symbol="Autokonfiguration20005" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="20006" symbol="Autokonfiguration20006" version="0" task="Autokonfiguration" level="win:Warning" keywords="AutoConf ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="20007" symbol="Autokonfiguration20007" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="20008" symbol="Autokonfiguration20008" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="20009" symbol="Autokonfiguration20009" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="20010" symbol="Autokonfiguration20010" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="20011" symbol="Autokonfiguration20011" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="20012" symbol="Autokonfiguration20012" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="20013" symbol="Autokonfiguration20013" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="20014" symbol="Autokonfiguration20014" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="20015" symbol="Autokonfiguration20015" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20003Args"/>
+     <event value="20016" symbol="Autokonfiguration20016" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20003Args"/>
+     <event value="20017" symbol="Autokonfiguration20017" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20003Args"/>
+     <event value="20018" symbol="Autokonfiguration20018" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20003Args"/>
+     <event value="20019" symbol="Autokonfiguration20019" version="0" task="Autokonfiguration" level="win:Informational" keywords="AutoConf ut:Authentication" template="Autokonfiguration20019Args"/>
+     <event value="20020" symbol="Autokonfiguration20020" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20019Args"/>
+     <event value="20021" symbol="Autokonfiguration20021" version="0" task="Autokonfiguration" level="win:Informational" keywords="AutoConf ut:Authentication" template="Autokonfiguration20019Args"/>
+     <event value="20022" symbol="Autokonfiguration20022" version="0" task="Autokonfiguration" level="win:Informational" keywords="AutoConf ut:Authentication" template="Autokonfiguration20019Args"/>
+     <event value="20024" symbol="Autokonfiguration20024" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20019Args"/>
+     <event value="20025" symbol="Autokonfiguration20025" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20025Args"/>
+     <event value="20026" symbol="Autokonfiguration20026" version="0" task="Autokonfiguration" level="win:Informational" keywords="AutoConf ut:Authentication" template="Autokonfiguration20019Args"/>
+     <event value="20028" symbol="Autokonfiguration20028" version="0" task="Autokonfiguration" level="win:Informational" keywords="AutoConf ut:Authentication" template="Autokonfiguration20019Args"/>
+     <event value="20029" symbol="Autokonfiguration20029" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20019Args"/>
+     <event value="20030" symbol="Autokonfiguration20030" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20025Args"/>
+     <event value="20031" symbol="Autokonfiguration20031" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20025Args"/>
+     <event value="20032" symbol="Autokonfiguration20032" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20019Args"/>
+     <event value="20033" symbol="Autokonfiguration20033" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20019Args"/>
+     <event value="20034" symbol="Autokonfiguration20034" version="0" task="Autokonfiguration" level="win:Informational" keywords="AutoConf ut:Authentication" template="Autokonfiguration20019Args"/>
+     <event value="20035" symbol="Autokonfiguration20035" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20025Args"/>
+     <event value="20036" symbol="Autokonfiguration20036" version="0" task="Autokonfiguration" level="win:Informational" keywords="AutoConf ut:Authentication" template="Autokonfiguration20003Args"/>
+     <event value="20037" symbol="Autokonfiguration20037" version="0" task="Autokonfiguration" level="win:Informational" keywords="AutoConf ut:Authentication" template="Autokonfiguration20037Args"/>
+     <event value="20038" symbol="Autokonfiguration20038" version="0" task="Autokonfiguration" level="win:Error" keywords="AutoConf ut:Authentication" template="Autokonfiguration20003Args"/>
+     <event value="21001" symbol="Geräteschicht" version="0" task="Geräteschicht" level="win:Error" keywords="DeviceLayer ut:Authentication" template="GeräteschichtArgs"/>
+     <event value="21002" symbol="Geräteschicht21002" version="0" task="Geräteschicht" level="win:Error" keywords="DeviceLayer ut:Authentication" template="GeräteschichtArgs"/>
+     <event value="21003" symbol="Geräteschicht21003" version="0" task="Geräteschicht" level="win:Error" keywords="DeviceLayer ut:Authentication" template="GeräteschichtArgs"/>
+     <event value="21004" symbol="Geräteschicht21004" version="0" task="Geräteschicht" level="win:Error" keywords="DeviceLayer ut:Authentication" template="GeräteschichtArgs"/>
+     <event value="21005" symbol="Geräteschicht21005" version="0" task="Geräteschicht" level="win:Error" keywords="DeviceLayer ut:Authentication" template="GeräteschichtArgs"/>
+     <event value="21006" symbol="Geräteschicht21006" version="0" task="Geräteschicht" level="win:Error" keywords="DeviceLayer ut:Authentication" template="Geräteschicht21006Args"/>
+     <event value="21007" symbol="Geräteschicht21007" version="0" task="Geräteschicht" level="win:Error" keywords="DeviceLayer ut:Authentication" template="Geräteschicht21007Args"/>
+     <event value="21008" symbol="Geräteschicht21008" version="0" task="Geräteschicht" level="win:Error" keywords="DeviceLayer ut:Authentication" template="Geräteschicht21008Args"/>
+     <event value="21009" symbol="Geräteschicht21009" version="0" task="Geräteschicht" level="win:Error" keywords="DeviceLayer ut:Authentication" template="Geräteschicht21008Args"/>
+     <event value="21010" symbol="Geräteschicht21010" version="0" task="Geräteschicht" level="win:Error" keywords="DeviceLayer ut:Authentication" template="Geräteschicht21008Args"/>
+     <event value="21011" symbol="Geräteschicht21011" version="0" task="Geräteschicht" level="win:Error" keywords="DeviceLayer ut:Authentication" template="Geräteschicht21008Args"/>
+     <event value="21012" symbol="MSM" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21013" symbol="MSM21013" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21014" symbol="MSM21014" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21015" symbol="MSM21015" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21016" symbol="MSM21016" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21017" symbol="MSM21017" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21018" symbol="MSM21018" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21019" symbol="MSM21019" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21020" symbol="MSM21020" version="0" task="MSM" level="win:Informational" keywords="MSM ut:Authentication" template="MSM21020Args"/>
+     <event value="21021" symbol="MSM21021" version="0" task="MSM" level="win:Informational" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21022" symbol="MSM21022" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21023" symbol="MSM21023" version="0" task="MSM" level="win:Informational" keywords="MSM ut:Authentication" template="MSM21023Args"/>
+     <event value="21024" symbol="MSM21024" version="0" task="MSM" level="win:Informational" keywords="MSM ut:Authentication" template="MSM21024Args"/>
+     <event value="21025" symbol="MSM21025" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21026" symbol="MSM21026" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21027" symbol="MSM21027" version="0" task="MSM" level="win:Informational" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21028" symbol="MSM21028" version="0" task="MSM" level="win:Informational" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21029" symbol="MSM21029" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21030" symbol="MSM21030" version="0" task="MSM" level="win:Informational" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21031" symbol="MSM21031" version="0" task="MSM" level="win:Informational" keywords="MSM ut:Authentication" template="MSM21031Args"/>
+     <event value="21032" symbol="MSM21032" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21033" symbol="MSM21033" version="0" task="MSM" level="win:Informational" keywords="MSM ut:Authentication" template="MSM21033Args"/>
+     <event value="21034" symbol="MSM21034" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="MSM21023Args"/>
+     <event value="21035" symbol="MSM21035" version="0" task="MSM" level="win:Informational" keywords="MSM ut:Authentication" template="MSM21023Args"/>
+     <event value="21036" symbol="MSM21036" version="0" task="MSM" level="win:Informational" keywords="MSM ut:Authentication" template="MSM21036Args"/>
+     <event value="21037" symbol="MSM21037" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="Autokonfiguration20003Args"/>
+     <event value="21038" symbol="MSM21038" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21039" symbol="MSM21039" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="Autokonfiguration20003Args"/>
+     <event value="21040" symbol="MSM21040" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="Autokonfiguration20003Args"/>
+     <event value="21041" symbol="MSM21041" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21042" symbol="MSM21042" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="AutokonfigurationArgs"/>
+     <event value="21043" symbol="MSM21043" version="0" task="MSM" level="win:Error" keywords="MSM ut:Authentication" template="Autokonfiguration20003Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="Result" inType="win:UInt32" map="tid_Dot3svcPrelogon.Result"/>
+      <data name="Reason" inType="win:UInt32"/>
+     </template>
+     <template tid="task_013022Args">
+      <data name="Result" inType="win:UInt32"/>
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="RequestedFields" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_013031Args">
+      <data name="Result" inType="win:UInt32" map="tid_Dot3svcPostlogon.Result"/>
+      <data name="Reason" inType="win:UInt32" map="tid_Dot3svcPostlogonSkip.Reason"/>
+     </template>
+     <template tid="task_013032Args">
+      <data name="Result" inType="win:UInt32"/>
+      <data name="InterfaceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="task_013033Args">
+      <data name="Result" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="InterfaceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="task_015500Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_015502Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+      <data name="ProfileType" inType="win:UInt32" map="ProfileType"/>
+      <data name="ProfileContent" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_015503Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+      <data name="ConnectionID" inType="win:Pointer"/>
+     </template>
+     <template tid="task_015504Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+      <data name="ConnectionID" inType="win:Pointer"/>
+      <data name="RestartReason" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_015505Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+      <data name="SwitchMAC" inType="win:UnicodeString"/>
+      <data name="LocalMAC" inType="win:UnicodeString"/>
+      <data name="ConnectionID" inType="win:Pointer"/>
+      <data name="Identity" inType="win:UnicodeString"/>
+      <data name="User" inType="win:UnicodeString"/>
+      <data name="Domain" inType="win:UnicodeString"/>
+      <data name="ReasonCode" inType="win:HexInt32"/>
+      <data name="ReasonText" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+      <data name="ExplicitCredentials" inType="win:Boolean"/>
+     </template>
+     <template tid="task_015506Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+      <data name="ReasonCode" inType="win:UnicodeString"/>
+      <data name="BlockingTime" inType="win:UInt32"/>
+     </template>
+     <template tid="task_015508Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+      <data name="NdisPortControlState" inType="win:UInt32" map="NdisPortControlState"/>
+      <data name="NdisPortAuthState" inType="win:UInt32"/>
+     </template>
+     <template tid="task_015509Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+      <data name="AdapterState" inType="win:UInt32" map="AdapterState"/>
+     </template>
+     <template tid="task_015510Args">
+      <data name="InterfaceGuid" inType="win:UnicodeString"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+     </template>
+     <template tid="AutokonfigurationArgs">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Location" inType="win:UInt32"/>
+      <data name="Context" inType="win:UInt32"/>
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Autokonfiguration20003Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Location" inType="win:UInt32"/>
+      <data name="Context" inType="win:UInt32"/>
+     </template>
+     <template tid="Autokonfiguration20019Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="ProfileName" inType="win:UnicodeString"/>
+      <data name="Location" inType="win:UInt32"/>
+      <data name="Context" inType="win:UInt32"/>
+     </template>
+     <template tid="Autokonfiguration20025Args">
+      <data name="Error" inType="win:UInt32"/>
+      <data name="Location" inType="win:UInt32"/>
+      <data name="Context" inType="win:UInt32"/>
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="ProfileName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Autokonfiguration20037Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="Profile" inType="win:UnicodeString"/>
+      <data name="Start" inType="win:UInt32"/>
+      <data name="Stop" inType="win:UInt32"/>
+      <data name="Duration" inType="win:UInt32"/>
+     </template>
+     <template tid="GeräteschichtArgs">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Location" inType="win:UInt32"/>
+      <data name="Context" inType="win:UInt32"/>
+      <data name="InterfaceContext" inType="win:Pointer"/>
+     </template>
+     <template tid="Geräteschicht21006Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="InterfaceContext" inType="win:Pointer"/>
+      <data name="PacketContext" inType="win:Pointer"/>
+      <data name="Size" inType="win:UInt32"/>
+     </template>
+     <template tid="Geräteschicht21007Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="InterfaceContext" inType="win:Pointer"/>
+      <data name="PacketContext" inType="win:Pointer"/>
+      <data name="Type" inType="win:UInt32"/>
+     </template>
+     <template tid="Geräteschicht21008Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="InterfaceContext" inType="win:Pointer"/>
+      <data name="PacketContext" inType="win:Pointer"/>
+     </template>
+     <template tid="MSM21020Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+      <data name="OldState" inType="win:UInt32"/>
+      <data name="NewState" inType="win:UInt32" map="mapCSMState"/>
+     </template>
+     <template tid="MSM21023Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+      <data name="EventId" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="MSM21024Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+      <data name="EventId" inType="win:UInt32" map="mapCSMLocalEvent"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="MSM21031Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+      <data name="MACAddr" inType="win:Binary"/>
+     </template>
+     <template tid="MSM21033Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+      <data name="EventId" inType="win:UInt32" map="mapCSMGlobalEvent"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="MSM21036Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceDescription" inType="win:UnicodeString"/>
+      <data name="Location" inType="win:UInt32"/>
+      <data name="Context" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_AutoConf" value="AutoConf"/>
+    <string id="keyword_MSM" value="MSM"/>
+    <string id="keyword_DeviceLayer" value="DeviceLayer"/>
+    <string id="keyword_ut:SendPath" value="ut:SendPath"/>
+    <string id="keyword_ut:ReceivePath" value="ut:ReceivePath"/>
+    <string id="keyword_ut:L3ConnectPath" value="ut:L3ConnectPath"/>
+    <string id="keyword_ut:L2ConnectPath" value="ut:L2ConnectPath"/>
+    <string id="keyword_ut:ClosePath" value="ut:ClosePath"/>
+    <string id="keyword_ut:Authentication" value="ut:Authentication"/>
+    <string id="keyword_ut:Configuration" value="ut:Configuration"/>
+    <string id="keyword_ut:Global" value="ut:Global"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_Geräteschicht" value="Geräteschicht"/>
+    <string id="task_MSM" value="MSM"/>
+    <string id="task_Autokonfiguration" value="Autokonfiguration"/>
+    <string id="map_tid_Dot3svcPrelogon.ResultDie Betriebsvoraussetzungen wurden nicht erfüllt." value="Die Betriebsvoraussetzungen wurden nicht erfüllt."/>
+    <string id="map_tid_Dot3svcPrelogon.ResultDie Betriebsvoraussetzungen wurden erfüllt." value="Die Betriebsvoraussetzungen wurden erfüllt."/>
+    <string id="map_tid_Dot3svcPostlogon.ResultErfolg" value="Erfolg"/>
+    <string id="map_tid_Dot3svcPostlogon.ResultFehler" value="Fehler"/>
+    <string id="map_tid_Dot3svcPostlogon.ResultDie Betriebsvoraussetzungen wurden nicht erfüllt." value="Die Betriebsvoraussetzungen wurden nicht erfüllt."/>
+    <string id="map_tid_Dot3svcPostlogon.ResultDie Betriebsvoraussetzungen wurden erfüllt." value="Die Betriebsvoraussetzungen wurden erfüllt."/>
+    <string id="map_tid_Dot3svcPostlogonSkip.ReasonDer Computer wurde keiner Domäne hinzugefügt." value="Der Computer wurde keiner Domäne hinzugefügt."/>
+    <string id="map_tid_Dot3svcPostlogonSkip.ReasonEs sind keine Nach der Anmeldung-Netzwerkprofile vorhanden." value="Es sind keine Nach der Anmeldung-Netzwerkprofile vorhanden."/>
+    <string id="map_ProfileTypeSchnittstelle" value="Schnittstelle"/>
+    <string id="map_ProfileTypeGruppenrichtlinie" value="Gruppenrichtlinie"/>
+    <string id="map_ProfileTypeStandard" value="Standard"/>
+    <string id="map_NdisPortControlStateGesteuert" value="Gesteuert"/>
+    <string id="map_NdisPortControlStateNicht gesteuert" value="Nicht gesteuert"/>
+    <string id="map_AdapterStateDeaktiviert" value="Deaktiviert"/>
+    <string id="map_AdapterStateAktiviert" value="Aktiviert"/>
+    <string id="map_mapCSMStateGetrennt" value="Getrennt"/>
+    <string id="map_mapCSMStateVerbindung wird hergestellt" value="Verbindung wird hergestellt"/>
+    <string id="map_mapCSMStateVerbunden" value="Verbunden"/>
+    <string id="map_mapCSMStateFehler beim Verbinden." value="Fehler beim Verbinden."/>
+    <string id="map_mapCSMStateAuthentifizierung" value="Authentifizierung"/>
+    <string id="map_mapCSMStateAuthentifiziert" value="Authentifiziert"/>
+    <string id="map_mapCSMStateFehler beim Authentifizieren." value="Fehler beim Authentifizieren."/>
+    <string id="map_mapCSMStateDer Authentifikator konnte nicht gefunden werden." value="Der Authentifikator konnte nicht gefunden werden."/>
+    <string id="map_mapCSMStateOneX deaktiviert" value="OneX deaktiviert"/>
+    <string id="map_mapCSMStateFehler" value="Fehler"/>
+    <string id="map_mapCSMLocalEventLocal:UCT" value="Local:UCT"/>
+    <string id="map_mapCSMLocalEventLokal:Verbinden" value="Lokal:Verbinden"/>
+    <string id="map_mapCSMLocalEventLokal:Verbindung trennen" value="Lokal:Verbindung trennen"/>
+    <string id="map_mapCSMLocalEventLocal:Media-Verbindung" value="Local:Media-Verbindung"/>
+    <string id="map_mapCSMLocalEventLocal:Media-Verbindung trennen" value="Local:Media-Verbindung trennen"/>
+    <string id="map_mapCSMLocalEventLokal:Zeitüberschreitung beim Verbinden" value="Lokal:Zeitüberschreitung beim Verbinden"/>
+    <string id="map_mapCSMLocalEventLokal:Authentifizierung wird ausgeführt" value="Lokal:Authentifizierung wird ausgeführt"/>
+    <string id="map_mapCSMLocalEventLokal:Authentifizierung erneut gestartet" value="Lokal:Authentifizierung erneut gestartet"/>
+    <string id="map_mapCSMLocalEventLokal:Authentifikation erfolgreich" value="Lokal:Authentifikation erfolgreich"/>
+    <string id="map_mapCSMLocalEventLokal:Authentifikationsfehler" value="Lokal:Authentifikationsfehler"/>
+    <string id="map_mapCSMLocalEventLokal:OneX (erzwungen) Peer nicht gefunden" value="Lokal:OneX (erzwungen) Peer nicht gefunden"/>
+    <string id="map_mapCSMLocalEventLokal:OneX (nicht erzwungen) Peer nicht gefunden" value="Lokal:OneX (nicht erzwungen) Peer nicht gefunden"/>
+    <string id="map_mapCSMLocalEventLokal:OneX (nicht erzwungen) deaktiviert" value="Lokal:OneX (nicht erzwungen) deaktiviert"/>
+    <string id="map_mapCSMLocalEventLokal:OneX (erzwungen) deaktiviert" value="Lokal:OneX (erzwungen) deaktiviert"/>
+    <string id="map_mapCSMLocalEventLokal:OneX aktiviert" value="Lokal:OneX aktiviert"/>
+    <string id="map_mapCSMLocalEventLokal:OneX äußerer Zeitgeber abgelaufen" value="Lokal:OneX äußerer Zeitgeber abgelaufen"/>
+    <string id="map_mapCSMLocalEventLokal:OneX erneutes Authentifizieren" value="Lokal:OneX erneutes Authentifizieren"/>
+    <string id="map_mapCSMLocalEventLokal:Laufzeitstatus festlegen" value="Lokal:Laufzeitstatus festlegen"/>
+    <string id="map_mapCSMGlobalEventGlobal:Verbinden" value="Global:Verbinden"/>
+    <string id="map_mapCSMGlobalEventGlobal:Verbindung trennen" value="Global:Verbindung trennen"/>
+    <string id="map_mapCSMGlobalEventGlobal:Media-Verbindung" value="Global:Media-Verbindung"/>
+    <string id="map_mapCSMGlobalEventGlobal:Media-Verbindung trennen" value="Global:Media-Verbindung trennen"/>
+    <string id="map_mapCSMGlobalEventGlobal:OneX-Ergebnis" value="Global:OneX-Ergebnis"/>
+    <string id="map_mapCSMGlobalEventGlobal:Zeitüberschreitung" value="Global:Zeitüberschreitung"/>
+    <string id="map_mapCSMGlobalEventGlobal:erneutes Authentifizieren" value="Global:erneutes Authentifizieren"/>
+    <string id="map_mapCSMGlobalEventGlobal:Laufzeitstatus festlegen" value="Global:Laufzeitstatus festlegen"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

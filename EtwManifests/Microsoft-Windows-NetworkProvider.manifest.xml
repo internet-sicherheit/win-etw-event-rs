@@ -1,0 +1,133 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-NetworkProvider" guid="{1e9a4978-78c2-441e-8858-75b5d1326bc5}" resourceFileName="Microsoft-Windows-NetworkProvider" messageFileName="Microsoft-Windows-NetworkProvider" symbol="MicrosoftWindowsNetworkProvider" source="Xml" >
+    <keywords>
+     <keyword name="UncHardening" message="$(string.keyword_UncHardening)" mask="0x100"/>
+    </keywords>
+    <tasks>
+     <task name="KonfigurationfürdenabgesichertenUNC_Zugriff" message="$(string.task_KonfigurationfürdenabgesichertenUNC_Zugriff)" value="11">
+      <opcodes>
+       <opcode name="NichtunterstützterRegistrierungswerttyp" message="$(string.opcode_KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterRegistrierungswerttyp)" value="11"/>
+       <opcode name="UngültigerUNC_Pfad" message="$(string.opcode_KonfigurationfürdenabgesichertenUNC_ZugriffUngültigerUNC_Pfad)" value="12"/>
+       <opcode name="NichtunterstützterUNC_Pfad" message="$(string.opcode_KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterUNC_Pfad)" value="13"/>
+       <opcode name="UngültigeSyntax" message="$(string.opcode_KonfigurationfürdenabgesichertenUNC_ZugriffUngültigeSyntax)" value="14"/>
+       <opcode name="NichtunterstützterEigenschaftsname" message="$(string.opcode_KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterEigenschaftsname)" value="15"/>
+       <opcode name="NichtunterstützterEigenschaftswert" message="$(string.opcode_KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterEigenschaftswert)" value="16"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <maps>
+     <valueMap name="RegValueType">
+      <map value="0x0" message="$(string.map_RegValueTypeREG_NONE)"/>
+      <map value="0x1" message="$(string.map_RegValueTypeREG_SZ)"/>
+      <map value="0x2" message="$(string.map_RegValueTypeREG_EXPAND_SZ)"/>
+      <map value="0x3" message="$(string.map_RegValueTypeREG_BINARY)"/>
+      <map value="0x4" message="$(string.map_RegValueTypeREG_DWORD)"/>
+      <map value="0x7" message="$(string.map_RegValueTypeREG_MULTI_SZ)"/>
+      <map value="0xb" message="$(string.map_RegValueTypeREG_QWORD)"/>
+     </valueMap>
+     <valueMap name="MupCskvExpectedToken">
+      <map value="0x1" message="$(string.map_MupCskvExpectedToken<Eigenschaft>)"/>
+      <map value="0x2" message="$(string.map_MupCskvExpectedToken=)"/>
+      <map value="0x3" message="$(string.map_MupCskvExpectedToken<Wert>)"/>
+      <map value="0x4" message="$(string.map_MupCskvExpectedToken<Ganze Zahl>)"/>
+      <map value="0x5" message="$(string.map_MupCskvExpectedToken<Zeichenfolge in Anführungszeichen>)"/>
+      <map value="0x6" message="$(string.map_MupCskvExpectedToken,)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1000" symbol="KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterRegistrierungswerttyp" version="0" task="KonfigurationfürdenabgesichertenUNC_Zugriff" opcode="NichtunterstützterRegistrierungswerttyp" level="win:Error" keywords="UncHardening" template="KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterRegistrierungswerttypArgs"/>
+     <event value="1001" symbol="KonfigurationfürdenabgesichertenUNC_ZugriffUngültigerUNC_Pfad" version="0" task="KonfigurationfürdenabgesichertenUNC_Zugriff" opcode="UngültigerUNC_Pfad" level="win:Error" keywords="UncHardening" template="KonfigurationfürdenabgesichertenUNC_ZugriffUngültigerUNC_PfadArgs"/>
+     <event value="1002" symbol="KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterUNC_Pfad" version="0" task="KonfigurationfürdenabgesichertenUNC_Zugriff" opcode="NichtunterstützterUNC_Pfad" level="win:Error" keywords="UncHardening" template="KonfigurationfürdenabgesichertenUNC_ZugriffUngültigerUNC_PfadArgs"/>
+     <event value="1003" symbol="KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterEigenschaftsname" version="0" task="KonfigurationfürdenabgesichertenUNC_Zugriff" opcode="NichtunterstützterEigenschaftsname" level="win:Warning" keywords="UncHardening" template="KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterEigenschaftsnameArgs"/>
+     <event value="1004" symbol="KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterEigenschaftsname1004" version="0" task="KonfigurationfürdenabgesichertenUNC_Zugriff" opcode="NichtunterstützterEigenschaftsname" level="win:Warning" keywords="UncHardening" template="KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterEigenschaftsname1004Args"/>
+     <event value="1005" symbol="KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterEigenschaftswert" version="0" task="KonfigurationfürdenabgesichertenUNC_Zugriff" opcode="NichtunterstützterEigenschaftswert" level="win:Error" keywords="UncHardening" template="KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterEigenschaftsname1004Args"/>
+     <event value="1006" symbol="KonfigurationfürdenabgesichertenUNC_ZugriffUngültigeSyntax" version="0" task="KonfigurationfürdenabgesichertenUNC_Zugriff" opcode="UngültigeSyntax" level="win:Error" keywords="UncHardening" template="KonfigurationfürdenabgesichertenUNC_ZugriffUngültigerUNC_PfadArgs"/>
+     <event value="1007" symbol="KonfigurationfürdenabgesichertenUNC_ZugriffUngültigeSyntax1007" version="0" task="KonfigurationfürdenabgesichertenUNC_Zugriff" opcode="UngültigeSyntax" level="win:Error" keywords="UncHardening" template="KonfigurationfürdenabgesichertenUNC_ZugriffUngültigeSyntax1007Args"/>
+     <event value="1008" symbol="KonfigurationfürdenabgesichertenUNC_ZugriffUngültigeSyntax1008" version="0" task="KonfigurationfürdenabgesichertenUNC_Zugriff" opcode="UngültigeSyntax" level="win:Error" keywords="UncHardening" template="KonfigurationfürdenabgesichertenUNC_ZugriffUngültigeSyntax1008Args"/>
+     <event value="1009" symbol="KonfigurationfürdenabgesichertenUNC_ZugriffUngültigeSyntax1009" version="0" task="KonfigurationfürdenabgesichertenUNC_Zugriff" opcode="UngültigeSyntax" level="win:Error" keywords="UncHardening" template="KonfigurationfürdenabgesichertenUNC_ZugriffUngültigeSyntax1007Args"/>
+    </events>
+    <templates>
+     <template tid="KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterRegistrierungswerttypArgs">
+      <data name="RegistryKeyLength" inType="win:UInt16"/>
+      <data name="RegistryKey" inType="win:UnicodeString" length="RegistryKeyLength"/>
+      <data name="RegistryValueNameLength" inType="win:UInt16"/>
+      <data name="RegistryValueName" inType="win:UnicodeString" length="RegistryValueNameLength"/>
+      <data name="RegistryValueType" inType="win:UInt32" map="RegValueType"/>
+     </template>
+     <template tid="KonfigurationfürdenabgesichertenUNC_ZugriffUngültigerUNC_PfadArgs">
+      <data name="UncPathLength" inType="win:UInt16"/>
+      <data name="UncPath" inType="win:UnicodeString" length="UncPathLength"/>
+      <data name="UncHardeningConfigurationLength" inType="win:UInt32"/>
+      <data name="UncHardeningConfiguration" inType="win:UnicodeString" length="UncHardeningConfigurationLength"/>
+     </template>
+     <template tid="KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterEigenschaftsnameArgs">
+      <data name="UncPathLength" inType="win:UInt16"/>
+      <data name="UncPath" inType="win:UnicodeString" length="UncPathLength"/>
+      <data name="UncHardeningConfigurationLength" inType="win:UInt32"/>
+      <data name="UncHardeningConfiguration" inType="win:UnicodeString" length="UncHardeningConfigurationLength"/>
+      <data name="PropertyNameLength" inType="win:UInt16"/>
+      <data name="PropertyName" inType="win:UnicodeString" length="PropertyNameLength"/>
+      <data name="PropertyValue" inType="win:UInt64"/>
+     </template>
+     <template tid="KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterEigenschaftsname1004Args">
+      <data name="UncPathLength" inType="win:UInt16"/>
+      <data name="UncPath" inType="win:UnicodeString" length="UncPathLength"/>
+      <data name="UncHardeningConfigurationLength" inType="win:UInt32"/>
+      <data name="UncHardeningConfiguration" inType="win:UnicodeString" length="UncHardeningConfigurationLength"/>
+      <data name="PropertyNameLength" inType="win:UInt16"/>
+      <data name="PropertyName" inType="win:UnicodeString" length="PropertyNameLength"/>
+      <data name="PropertyValueLength" inType="win:UInt16"/>
+      <data name="PropertyValue" inType="win:UnicodeString" length="PropertyValueLength"/>
+     </template>
+     <template tid="KonfigurationfürdenabgesichertenUNC_ZugriffUngültigeSyntax1007Args">
+      <data name="UncPathLength" inType="win:UInt16"/>
+      <data name="UncPath" inType="win:UnicodeString" length="UncPathLength"/>
+      <data name="UncHardeningConfigurationLength" inType="win:UInt32"/>
+      <data name="UncHardeningConfiguration" inType="win:UnicodeString" length="UncHardeningConfigurationLength"/>
+      <data name="ExpectedToken" inType="win:UInt32"/>
+      <data name="FoundTokenLength" inType="win:UInt16"/>
+      <data name="FoundToken" inType="win:UnicodeString" length="FoundTokenLength"/>
+     </template>
+     <template tid="KonfigurationfürdenabgesichertenUNC_ZugriffUngültigeSyntax1008Args">
+      <data name="UncPathLength" inType="win:UInt16"/>
+      <data name="UncPath" inType="win:UnicodeString" length="UncPathLength"/>
+      <data name="UncHardeningConfigurationLength" inType="win:UInt32"/>
+      <data name="UncHardeningConfiguration" inType="win:UnicodeString" length="UncHardeningConfigurationLength"/>
+      <data name="ExpectedToken" inType="win:UInt32" map="MupCskvExpectedToken"/>
+      <data name="FoundTokenLength" inType="win:UInt16"/>
+      <data name="FoundToken" inType="win:UnicodeString" length="FoundTokenLength"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_UncHardening" value="UncHardening"/>
+    <string id="task_KonfigurationfürdenabgesichertenUNC_Zugriff" value="KonfigurationfürdenabgesichertenUNC_Zugriff"/>
+    <string id="opcode_KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterRegistrierungswerttyp" value="NichtunterstützterRegistrierungswerttyp"/>
+    <string id="opcode_KonfigurationfürdenabgesichertenUNC_ZugriffUngültigerUNC_Pfad" value="UngültigerUNC_Pfad"/>
+    <string id="opcode_KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterUNC_Pfad" value="NichtunterstützterUNC_Pfad"/>
+    <string id="opcode_KonfigurationfürdenabgesichertenUNC_ZugriffUngültigeSyntax" value="UngültigeSyntax"/>
+    <string id="opcode_KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterEigenschaftsname" value="NichtunterstützterEigenschaftsname"/>
+    <string id="opcode_KonfigurationfürdenabgesichertenUNC_ZugriffNichtunterstützterEigenschaftswert" value="NichtunterstützterEigenschaftswert"/>
+    <string id="map_RegValueTypeREG_NONE" value="REG_NONE"/>
+    <string id="map_RegValueTypeREG_SZ" value="REG_SZ"/>
+    <string id="map_RegValueTypeREG_EXPAND_SZ" value="REG_EXPAND_SZ"/>
+    <string id="map_RegValueTypeREG_BINARY" value="REG_BINARY"/>
+    <string id="map_RegValueTypeREG_DWORD" value="REG_DWORD"/>
+    <string id="map_RegValueTypeREG_MULTI_SZ" value="REG_MULTI_SZ"/>
+    <string id="map_RegValueTypeREG_QWORD" value="REG_QWORD"/>
+    <string id="map_MupCskvExpectedToken<Eigenschaft>" value="<Eigenschaft>"/>
+    <string id="map_MupCskvExpectedToken=" value="="/>
+    <string id="map_MupCskvExpectedToken<Wert>" value="<Wert>"/>
+    <string id="map_MupCskvExpectedToken<Ganze Zahl>" value="<Ganze Zahl>"/>
+    <string id="map_MupCskvExpectedToken<Zeichenfolge in Anführungszeichen>" value="<Zeichenfolge in Anführungszeichen>"/>
+    <string id="map_MupCskvExpectedToken," value=","/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,129 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-WMPNSS-PublicAPI" guid="{614696c9-85af-4e64-b389-d2c0db4ff87b}" resourceFileName="Microsoft-Windows-WMPNSS-PublicAPI" messageFileName="Microsoft-Windows-WMPNSS-PublicAPI" symbol="MicrosoftWindowsWMPNSSPublicAPI" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="showShareMediaCPL" message="$(string.task_showShareMediaCPL)" value="1001"/>
+     <task name="get_userHomeMediaSharingState" message="$(string.task_get_userHomeMediaSharingState)" value="1002"/>
+     <task name="put_userHomeMediaSharingState" message="$(string.task_put_userHomeMediaSharingState)" value="1003"/>
+     <task name="get_userHomeMediaSharingLibraryName" message="$(string.task_get_userHomeMediaSharingLibraryName)" value="1004"/>
+     <task name="put_userHomeMediaSharingLibraryName" message="$(string.task_put_userHomeMediaSharingLibraryName)" value="1005"/>
+     <task name="get_computerHomeMediaSharingAllowedState" message="$(string.task_get_computerHomeMediaSharingAllowedState)" value="1006"/>
+     <task name="put_computerHomeMediaSharingAllowedState" message="$(string.task_put_computerHomeMediaSharingAllowedState)" value="1007"/>
+     <task name="get_userInternetMediaSharingState" message="$(string.task_get_userInternetMediaSharingState)" value="1008"/>
+     <task name="put_userInternetMediaSharingState" message="$(string.task_put_userInternetMediaSharingState)" value="1009"/>
+     <task name="get_computerInternetMediaSharingAllowedState" message="$(string.task_get_computerInternetMediaSharingAllowedState)" value="1010"/>
+     <task name="put_computerInternetMediaSharingAllowedState" message="$(string.task_put_computerInternetMediaSharingAllowedState)" value="1011"/>
+     <task name="get_internetMediaSharingSecurityGroup" message="$(string.task_get_internetMediaSharingSecurityGroup)" value="1012"/>
+     <task name="put_internetMediaSharingSecurityGroup" message="$(string.task_put_internetMediaSharingSecurityGroup)" value="1013"/>
+     <task name="get_allowSharingToAllDevices" message="$(string.task_get_allowSharingToAllDevices)" value="1014"/>
+     <task name="put_allowSharingToAllDevices" message="$(string.task_put_allowSharingToAllDevices)" value="1015"/>
+     <task name="setDefaultAuthorization" message="$(string.task_setDefaultAuthorization)" value="1016"/>
+     <task name="setAuthorizationState" message="$(string.task_setAuthorizationState)" value="1017"/>
+     <task name="getAllDevices" message="$(string.task_getAllDevices)" value="1018"/>
+     <task name="get_customSettingsApplied" message="$(string.task_get_customSettingsApplied)" value="1019"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="get_userHomeMediaSharingStateStarten" version="0" task="get_userHomeMediaSharingState" opcode="win:Starten" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="101" symbol="get_userHomeMediaSharingStateBeenden" version="0" task="get_userHomeMediaSharingState" opcode="win:Beenden" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="102" symbol="put_userHomeMediaSharingStateStarten" version="0" task="put_userHomeMediaSharingState" opcode="win:Starten" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="103" symbol="put_userHomeMediaSharingStateBeenden" version="0" task="put_userHomeMediaSharingState" opcode="win:Beenden" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="104" symbol="get_userHomeMediaSharingLibraryNameStarten" version="0" task="get_userHomeMediaSharingLibraryName" opcode="win:Starten" level="win:Informational" template="get_userHomeMediaSharingLibraryNameStartenArgs"/>
+     <event value="105" symbol="get_userHomeMediaSharingLibraryNameBeenden" version="0" task="get_userHomeMediaSharingLibraryName" opcode="win:Beenden" level="win:Informational" template="get_userHomeMediaSharingLibraryNameStartenArgs"/>
+     <event value="106" symbol="put_userHomeMediaSharingLibraryNameStarten" version="0" task="put_userHomeMediaSharingLibraryName" opcode="win:Starten" level="win:Informational" template="get_userHomeMediaSharingLibraryNameStartenArgs"/>
+     <event value="107" symbol="put_userHomeMediaSharingLibraryNameBeenden" version="0" task="put_userHomeMediaSharingLibraryName" opcode="win:Beenden" level="win:Informational" template="get_userHomeMediaSharingLibraryNameStartenArgs"/>
+     <event value="108" symbol="get_computerHomeMediaSharingAllowedStateStarten" version="0" task="get_computerHomeMediaSharingAllowedState" opcode="win:Starten" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="109" symbol="get_computerHomeMediaSharingAllowedStateBeenden" version="0" task="get_computerHomeMediaSharingAllowedState" opcode="win:Beenden" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="110" symbol="put_computerHomeMediaSharingAllowedStateStarten" version="0" task="put_computerHomeMediaSharingAllowedState" opcode="win:Starten" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="111" symbol="put_computerHomeMediaSharingAllowedStateBeenden" version="0" task="put_computerHomeMediaSharingAllowedState" opcode="win:Beenden" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="112" symbol="get_userInternetMediaSharingStateStarten" version="0" task="get_userInternetMediaSharingState" opcode="win:Starten" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="113" symbol="get_userInternetMediaSharingStateBeenden" version="0" task="get_userInternetMediaSharingState" opcode="win:Beenden" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="114" symbol="put_userInternetMediaSharingStateStarten" version="0" task="put_userInternetMediaSharingState" opcode="win:Starten" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="115" symbol="put_userInternetMediaSharingStateBeenden" version="0" task="put_userInternetMediaSharingState" opcode="win:Beenden" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="116" symbol="get_computerInternetMediaSharingAllowedStateStarten" version="0" task="get_computerInternetMediaSharingAllowedState" opcode="win:Starten" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="117" symbol="get_computerInternetMediaSharingAllowedStateBeenden" version="0" task="get_computerInternetMediaSharingAllowedState" opcode="win:Beenden" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="118" symbol="put_computerInternetMediaSharingAllowedStateStarten" version="0" task="put_computerInternetMediaSharingAllowedState" opcode="win:Starten" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="119" symbol="put_computerInternetMediaSharingAllowedStateBeenden" version="0" task="put_computerInternetMediaSharingAllowedState" opcode="win:Beenden" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="120" symbol="get_allowSharingToAllDevicesStarten" version="0" task="get_allowSharingToAllDevices" opcode="win:Starten" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="121" symbol="get_allowSharingToAllDevicesBeenden" version="0" task="get_allowSharingToAllDevices" opcode="win:Beenden" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="122" symbol="put_allowSharingToAllDevicesStarten" version="0" task="put_allowSharingToAllDevices" opcode="win:Starten" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="123" symbol="put_allowSharingToAllDevicesBeenden" version="0" task="put_allowSharingToAllDevices" opcode="win:Beenden" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="124" symbol="setDefaultAuthorizationStarten" version="0" task="setDefaultAuthorization" opcode="win:Starten" level="win:Informational" template="setDefaultAuthorizationStartenArgs"/>
+     <event value="125" symbol="setDefaultAuthorizationBeenden" version="0" task="setDefaultAuthorization" opcode="win:Beenden" level="win:Informational" template="setDefaultAuthorizationStartenArgs"/>
+     <event value="126" symbol="setAuthorizationStateStarten" version="0" task="setAuthorizationState" opcode="win:Starten" level="win:Informational" template="setAuthorizationStateStartenArgs"/>
+     <event value="127" symbol="setAuthorizationStateBeenden" version="0" task="setAuthorizationState" opcode="win:Beenden" level="win:Informational" template="setAuthorizationStateStartenArgs"/>
+     <event value="128" symbol="getAllDevicesStarten" version="0" task="getAllDevices" opcode="win:Starten" level="win:Informational" template="getAllDevicesStartenArgs"/>
+     <event value="129" symbol="getAllDevicesBeenden" version="0" task="getAllDevices" opcode="win:Beenden" level="win:Informational" template="getAllDevicesStartenArgs"/>
+     <event value="130" symbol="get_customSettingsAppliedStarten" version="0" task="get_customSettingsApplied" opcode="win:Starten" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="131" symbol="get_customSettingsAppliedBeenden" version="0" task="get_customSettingsApplied" opcode="win:Beenden" level="win:Informational" template="get_userHomeMediaSharingStateStartenArgs"/>
+     <event value="132" symbol="showShareMediaCPLStarten" version="0" task="showShareMediaCPL" opcode="win:Starten" level="win:Informational" template="showShareMediaCPLStartenArgs"/>
+     <event value="133" symbol="showShareMediaCPLBeenden" version="0" task="showShareMediaCPL" opcode="win:Beenden" level="win:Informational" template="showShareMediaCPLStartenArgs"/>
+     <event value="134" symbol="get_internetMediaSharingSecurityGroupStarten" version="0" task="get_internetMediaSharingSecurityGroup" opcode="win:Starten" level="win:Informational" template="get_internetMediaSharingSecurityGroupStartenArgs"/>
+     <event value="135" symbol="get_internetMediaSharingSecurityGroupBeenden" version="0" task="get_internetMediaSharingSecurityGroup" opcode="win:Beenden" level="win:Informational" template="get_internetMediaSharingSecurityGroupStartenArgs"/>
+     <event value="136" symbol="put_internetMediaSharingSecurityGroupStarten" version="0" task="put_internetMediaSharingSecurityGroup" opcode="win:Starten" level="win:Informational" template="get_internetMediaSharingSecurityGroupStartenArgs"/>
+     <event value="137" symbol="put_internetMediaSharingSecurityGroupBeenden" version="0" task="put_internetMediaSharingSecurityGroup" opcode="win:Beenden" level="win:Informational" template="get_internetMediaSharingSecurityGroupStartenArgs"/>
+    </events>
+    <templates>
+     <template tid="get_userHomeMediaSharingStateStartenArgs">
+      <data name="Enable" inType="win:Boolean"/>
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+     <template tid="get_userHomeMediaSharingLibraryNameStartenArgs">
+      <data name="LibraryName" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+     <template tid="setDefaultAuthorizationStartenArgs">
+      <data name="MACAddress" inType="win:UnicodeString"/>
+      <data name="FriendlyName" inType="win:UnicodeString"/>
+      <data name="Authorize" inType="win:Boolean"/>
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+     <template tid="setAuthorizationStateStartenArgs">
+      <data name="MACAddress" inType="win:UnicodeString"/>
+      <data name="Authorize" inType="win:Boolean"/>
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+     <template tid="getAllDevicesStartenArgs">
+      <data name="Devices" inType="win:Pointer"/>
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+     <template tid="showShareMediaCPLStartenArgs">
+      <data name="DeviceID" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+     <template tid="get_internetMediaSharingSecurityGroupStartenArgs">
+      <data name="SecurityGroup" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_showShareMediaCPL" value="showShareMediaCPL"/>
+    <string id="task_get_userHomeMediaSharingState" value="get_userHomeMediaSharingState"/>
+    <string id="task_put_userHomeMediaSharingState" value="put_userHomeMediaSharingState"/>
+    <string id="task_get_userHomeMediaSharingLibraryName" value="get_userHomeMediaSharingLibraryName"/>
+    <string id="task_put_userHomeMediaSharingLibraryName" value="put_userHomeMediaSharingLibraryName"/>
+    <string id="task_get_computerHomeMediaSharingAllowedState" value="get_computerHomeMediaSharingAllowedState"/>
+    <string id="task_put_computerHomeMediaSharingAllowedState" value="put_computerHomeMediaSharingAllowedState"/>
+    <string id="task_get_userInternetMediaSharingState" value="get_userInternetMediaSharingState"/>
+    <string id="task_put_userInternetMediaSharingState" value="put_userInternetMediaSharingState"/>
+    <string id="task_get_computerInternetMediaSharingAllowedState" value="get_computerInternetMediaSharingAllowedState"/>
+    <string id="task_put_computerInternetMediaSharingAllowedState" value="put_computerInternetMediaSharingAllowedState"/>
+    <string id="task_get_internetMediaSharingSecurityGroup" value="get_internetMediaSharingSecurityGroup"/>
+    <string id="task_put_internetMediaSharingSecurityGroup" value="put_internetMediaSharingSecurityGroup"/>
+    <string id="task_get_allowSharingToAllDevices" value="get_allowSharingToAllDevices"/>
+    <string id="task_put_allowSharingToAllDevices" value="put_allowSharingToAllDevices"/>
+    <string id="task_setDefaultAuthorization" value="setDefaultAuthorization"/>
+    <string id="task_setAuthorizationState" value="setAuthorizationState"/>
+    <string id="task_getAllDevices" value="getAllDevices"/>
+    <string id="task_get_customSettingsApplied" value="get_customSettingsApplied"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

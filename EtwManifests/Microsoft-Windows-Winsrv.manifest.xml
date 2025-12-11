@@ -1,0 +1,115 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Winsrv" guid="{9d55b53d-449b-4824-a637-24f9d69aa02f}" resourceFileName="Microsoft-Windows-Winsrv" messageFileName="Microsoft-Windows-Winsrv" symbol="MicrosoftWindowsWinsrv" source="Xml" >
+    <keywords>
+     <keyword name="Perf" message="$(string.keyword_Perf)" mask="0x100"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="ThreadShutdown" message="$(string.task_ThreadShutdown)" value="12001"/>
+     <task name="ThreadShutdown_SentMessage" message="$(string.task_ThreadShutdown_SentMessage)" value="12003"/>
+     <task name="TerminateProcess" message="$(string.task_TerminateProcess)" value="12005"/>
+     <task name="WaitForProcess" message="$(string.task_WaitForProcess)" value="12007"/>
+     <task name="ShutdownProcess" message="$(string.task_ShutdownProcess)" value="12009"/>
+     <task name="NotificationEvent" message="$(string.task_NotificationEvent)" value="12010"/>
+    </tasks>
+    <events>
+     <event value="10001" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="10002" symbol="task_010002" version="0" task="task_0" level="win:Informational" template="task_010002Args"/>
+     <event value="12001" symbol="ThreadShutdownStarten" version="0" task="ThreadShutdown" opcode="win:Starten" level="win:Informational" keywords="Perf" template="ThreadShutdownStartenArgs"/>
+     <event value="12001" symbol="ThreadShutdownStarten_V1" version="1" task="ThreadShutdown" opcode="win:Starten" level="win:Informational" keywords="Perf" template="ThreadShutdownStartenArgs_V1"/>
+     <event value="12002" symbol="ThreadShutdownBeenden" version="0" task="ThreadShutdown" opcode="win:Beenden" level="win:Informational" keywords="Perf" template="ThreadShutdownBeendenArgs"/>
+     <event value="12002" symbol="ThreadShutdownBeenden_V1" version="1" task="ThreadShutdown" opcode="win:Beenden" level="win:Informational" keywords="Perf" template="ThreadShutdownBeendenArgs_V1"/>
+     <event value="12003" symbol="ThreadShutdown_SentMessage" version="0" task="ThreadShutdown_SentMessage" level="win:Informational" keywords="Perf" template="ThreadShutdown_SentMessageArgs"/>
+     <event value="12003" symbol="ThreadShutdown_SentMessage_V1" version="1" task="ThreadShutdown_SentMessage" level="win:Informational" keywords="Perf" template="ThreadShutdown_SentMessageArgs_V1"/>
+     <event value="12005" symbol="TerminateProcessStarten" version="0" task="TerminateProcess" opcode="win:Starten" level="win:Informational" keywords="Perf"/>
+     <event value="12005" symbol="TerminateProcessStarten_V1" version="1" task="TerminateProcess" opcode="win:Starten" level="win:Informational" keywords="Perf" template="TerminateProcessStartenArgs_V1"/>
+     <event value="12006" symbol="TerminateProcessBeenden" version="0" task="TerminateProcess" opcode="win:Beenden" level="win:Informational" keywords="Perf"/>
+     <event value="12006" symbol="TerminateProcessBeenden_V1" version="1" task="TerminateProcess" opcode="win:Beenden" level="win:Informational" keywords="Perf" template="TerminateProcessBeendenArgs_V1"/>
+     <event value="12007" symbol="WaitForProcessStarten" version="0" task="WaitForProcess" opcode="win:Starten" level="win:Informational" keywords="Perf"/>
+     <event value="12007" symbol="WaitForProcessStarten_V1" version="1" task="WaitForProcess" opcode="win:Starten" level="win:Informational" keywords="Perf" template="TerminateProcessStartenArgs_V1"/>
+     <event value="12008" symbol="WaitForProcessBeenden" version="0" task="WaitForProcess" opcode="win:Beenden" level="win:Informational" keywords="Perf" template="WaitForProcessBeendenArgs"/>
+     <event value="12008" symbol="WaitForProcessBeenden_V1" version="1" task="WaitForProcess" opcode="win:Beenden" level="win:Informational" keywords="Perf" template="WaitForProcessBeendenArgs_V1"/>
+     <event value="12009" symbol="ShutdownProcessStarten_V1" version="1" task="ShutdownProcess" opcode="win:Starten" level="win:Informational" keywords="Perf" template="ShutdownProcessStartenArgs_V1"/>
+     <event value="12010" symbol="ShutdownProcessBeenden_V1" version="1" task="ShutdownProcess" opcode="win:Beenden" level="win:Informational" keywords="Perf" template="ShutdownProcessBeendenArgs_V1"/>
+     <event value="12011" symbol="NotificationEventStarten_V1" version="1" task="NotificationEvent" opcode="win:Starten" level="win:Informational" keywords="Perf" template="NotificationEventStartenArgs_V1"/>
+     <event value="12012" symbol="NotificationEventBeenden_V1" version="1" task="NotificationEvent" opcode="win:Beenden" level="win:Informational" keywords="Perf" template="NotificationEventStartenArgs_V1"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="AppName" inType="win:UnicodeString"/>
+      <data name="ResponseTime" inType="win:UInt32"/>
+     </template>
+     <template tid="task_010002Args">
+      <data name="AppName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ThreadShutdownStartenArgs">
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+     </template>
+     <template tid="ThreadShutdownBeendenArgs">
+      <data name="Command" inType="win:UInt32"/>
+     </template>
+     <template tid="ThreadShutdown_SentMessageArgs">
+      <data name="MessageId" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+     </template>
+     <template tid="WaitForProcessBeendenArgs">
+      <data name="WaitStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="ThreadShutdownStartenArgs_V1">
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="ThreadShutdownBeendenArgs_V1">
+      <data name="Command" inType="win:UInt32"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+     </template>
+     <template tid="ThreadShutdown_SentMessageArgs_V1">
+      <data name="MessageId" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+     </template>
+     <template tid="TerminateProcessStartenArgs_V1">
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="TerminateProcessBeendenArgs_V1">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TerminateStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="WaitForProcessBeendenArgs_V1">
+      <data name="WaitStatus" inType="win:UInt32"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="ShutdownProcessStartenArgs_V1">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+     </template>
+     <template tid="ShutdownProcessBeendenArgs_V1">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="NotificationEventStartenArgs_V1">
+      <data name="EventType" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Perf" value="Perf"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_ThreadShutdown" value="ThreadShutdown"/>
+    <string id="task_ThreadShutdown_SentMessage" value="ThreadShutdown_SentMessage"/>
+    <string id="task_TerminateProcess" value="TerminateProcess"/>
+    <string id="task_WaitForProcess" value="WaitForProcess"/>
+    <string id="task_ShutdownProcess" value="ShutdownProcess"/>
+    <string id="task_NotificationEvent" value="NotificationEvent"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

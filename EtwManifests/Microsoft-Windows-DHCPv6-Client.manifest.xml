@@ -1,0 +1,463 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-DHCPv6-Client" guid="{6a1f2b00-6a90-4c38-95a5-5cab3b056778}" resourceFileName="Microsoft-Windows-DHCPv6-Client" messageFileName="Microsoft-Windows-DHCPv6-Client" symbol="MicrosoftWindowsDHCPv6Client" source="Xml" >
+    <keywords>
+     <keyword name="DHCPV6_AOAC" message="$(string.keyword_DHCPV6_AOAC)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="Medienstatusereignis" message="$(string.task_Medienstatusereignis)" value="1">
+      <opcodes>
+       <opcode name="Media_Verbindung" message="$(string.opcode_MedienstatusereignisMedia_Verbindung)" value="11"/>
+       <opcode name="Media_Verbindungtrennen" message="$(string.opcode_MedienstatusereignisMedia_Verbindungtrennen)" value="12"/>
+       <opcode name="Routerankündigungwurdegeändert." message="$(string.opcode_MedienstatusereignisRouterankündigungwurdegeändert.)" value="13"/>
+       <opcode name="PerfTrack:DieMediensindverbunden." message="$(string.opcode_MedienstatusereignisPerfTrack:DieMediensindverbunden.)" value="14"/>
+       <opcode name="PerfTrack:EndederMedienverbindung." message="$(string.opcode_MedienstatusereignisPerfTrack:EndederMedienverbindung.)" value="15"/>
+       <opcode name="DieSchnittstellewurdehinzugefügt." message="$(string.opcode_MedienstatusereignisDieSchnittstellewurdehinzugefügt.)" value="16"/>
+       <opcode name="AcquireNICReference" message="$(string.opcode_MedienstatusereignisAcquireNICReference)" value="85"/>
+       <opcode name="ReleaseNICReference" message="$(string.opcode_MedienstatusereignisReleaseNICReference)" value="86"/>
+      </opcodes>
+     </task>
+     <task name="Protokollstatusereignis" message="$(string.task_Protokollstatusereignis)" value="2">
+      <opcodes>
+       <opcode name="SARRwurdeinitialisiert." message="$(string.opcode_ProtokollstatusereignisSARRwurdeinitialisiert.)" value="17"/>
+       <opcode name="Initialisierung:Antwortbestätigen." message="$(string.opcode_ProtokollstatusereignisInitialisierung:Antwortbestätigen.)" value="18"/>
+       <opcode name="DieAnfragewurdegesendet." message="$(string.opcode_ProtokollstatusereignisDieAnfragewurdegesendet.)" value="19"/>
+       <opcode name="DieAnkündigungwurdeempfangen." message="$(string.opcode_ProtokollstatusereignisDieAnkündigungwurdeempfangen.)" value="20"/>
+       <opcode name="DieAnkündigungwurdeverworfen." message="$(string.opcode_ProtokollstatusereignisDieAnkündigungwurdeverworfen.)" value="21"/>
+       <opcode name="DieAnforderungwurdegesendet." message="$(string.opcode_ProtokollstatusereignisDieAnforderungwurdegesendet.)" value="22"/>
+       <opcode name="DieAntwortfürdieAnforderungwurdeempfangen." message="$(string.opcode_ProtokollstatusereignisDieAntwortfürdieAnforderungwurdeempfangen.)" value="23"/>
+       <opcode name="FürdieAnforderungwurdeeineungültigeAntwortempfangen." message="$(string.opcode_ProtokollstatusereignisFürdieAnforderungwurdeeineungültigeAntwortempfangen.)" value="24"/>
+       <opcode name="DieErneuerungwurdegesendet." message="$(string.opcode_ProtokollstatusereignisDieErneuerungwurdegesendet.)" value="25"/>
+       <opcode name="DieAntwortfürdieErneuerungwurdeempfangen." message="$(string.opcode_ProtokollstatusereignisDieAntwortfürdieErneuerungwurdeempfangen.)" value="26"/>
+       <opcode name="FürdieErneuerungwurdeeineungültigeAntwortempfangen." message="$(string.opcode_ProtokollstatusereignisFürdieErneuerungwurdeeineungültigeAntwortempfangen.)" value="27"/>
+       <opcode name="DieNeubindungwurdegesendet." message="$(string.opcode_ProtokollstatusereignisDieNeubindungwurdegesendet.)" value="28"/>
+       <opcode name="DieAntwortfürdieNeubindungwurdeempfangen." message="$(string.opcode_ProtokollstatusereignisDieAntwortfürdieNeubindungwurdeempfangen.)" value="29"/>
+       <opcode name="FürdieNeubindungwurdeeineungültigeAntwortempfangen." message="$(string.opcode_ProtokollstatusereignisFürdieNeubindungwurdeeineungültigeAntwortempfangen.)" value="30"/>
+       <opcode name="DieBestätigungwurdegesendet." message="$(string.opcode_ProtokollstatusereignisDieBestätigungwurdegesendet.)" value="31"/>
+       <opcode name="DieAntwortfürdieBestätigungwurdeempfangen." message="$(string.opcode_ProtokollstatusereignisDieAntwortfürdieBestätigungwurdeempfangen.)" value="32"/>
+       <opcode name="FürdieBestätigungwurdeeineungültigeAntwortempfangen." message="$(string.opcode_ProtokollstatusereignisFürdieBestätigungwurdeeineungültigeAntwortempfangen.)" value="33"/>
+       <opcode name="DieAblehnungwurdegesendet." message="$(string.opcode_ProtokollstatusereignisDieAblehnungwurdegesendet.)" value="34"/>
+       <opcode name="DieAntwortfürdieAblehnungwurdeempfangen." message="$(string.opcode_ProtokollstatusereignisDieAntwortfürdieAblehnungwurdeempfangen.)" value="35"/>
+       <opcode name="FürdieAblehnungwurdeeineungültigeAntwortempfangen." message="$(string.opcode_ProtokollstatusereignisFürdieAblehnungwurdeeineungültigeAntwortempfangen.)" value="36"/>
+       <opcode name="DieFreigabewurdegesendet." message="$(string.opcode_ProtokollstatusereignisDieFreigabewurdegesendet.)" value="37"/>
+       <opcode name="DieInformationsanforderungwurdegesendet." message="$(string.opcode_ProtokollstatusereignisDieInformationsanforderungwurdegesendet.)" value="38"/>
+       <opcode name="DieAntwortfürdieInformationsanforderungwurdeempfangen." message="$(string.opcode_ProtokollstatusereignisDieAntwortfürdieInformationsanforderungwurdeempfangen.)" value="39"/>
+       <opcode name="FürdieInformationsanforderungwurdeeineungültigeAntwortempfangen." message="$(string.opcode_ProtokollstatusereignisFürdieInformationsanforderungwurdeeineungültigeAntwortempfangen.)" value="40"/>
+       <opcode name="FehlerbeimErstellendesPakets." message="$(string.opcode_ProtokollstatusereignisFehlerbeimErstellendesPakets.)" value="42"/>
+       <opcode name="FehlerbeimExtrahierenvonOptionen." message="$(string.opcode_ProtokollstatusereignisFehlerbeimExtrahierenvonOptionen.)" value="43"/>
+       <opcode name="Parsingfehler" message="$(string.opcode_ProtokollstatusereignisParsingfehler)" value="44"/>
+       <opcode name="ZeitoptionzurInformationsaktualisierungwurdeempfangen." message="$(string.opcode_ProtokollstatusereignisZeitoptionzurInformationsaktualisierungwurdeempfangen.)" value="45"/>
+       <opcode name="DieInformationsaktualisierungszeitistabgelaufen." message="$(string.opcode_ProtokollstatusereignisDieInformationsaktualisierungszeitistabgelaufen.)" value="46"/>
+       <opcode name="PerfTrack:SARR." message="$(string.opcode_ProtokollstatusereignisPerfTrack:SARR.)" value="47"/>
+       <opcode name="PerfTrack:Informationsanforderung." message="$(string.opcode_ProtokollstatusereignisPerfTrack:Informationsanforderung.)" value="48"/>
+       <opcode name="Netzwerkfehler" message="$(string.opcode_ProtokollstatusereignisNetzwerkfehler)" value="68"/>
+       <opcode name="DieunbekannteNachrichtwurdeverworfen." message="$(string.opcode_ProtokollstatusereignisDieunbekannteNachrichtwurdeverworfen.)" value="70"/>
+       <opcode name="FirewallPortExempted" message="$(string.opcode_ProtokollstatusereignisFirewallPortExempted)" value="77"/>
+       <opcode name="FirewallPortClosed" message="$(string.opcode_ProtokollstatusereignisFirewallPortClosed)" value="78"/>
+       <opcode name="AggressiveRetryOn" message="$(string.opcode_ProtokollstatusereignisAggressiveRetryOn)" value="80"/>
+       <opcode name="DontStartSolicitInCSSinceV4Plumbed" message="$(string.opcode_ProtokollstatusereignisDontStartSolicitInCSSinceV4Plumbed)" value="81"/>
+       <opcode name="StartSolicitInCSSinceV4Unplumbed" message="$(string.opcode_ProtokollstatusereignisStartSolicitInCSSinceV4Unplumbed)" value="82"/>
+       <opcode name="AbandonSolicitInCSSinceDhcp" message="$(string.opcode_ProtokollstatusereignisAbandonSolicitInCSSinceDhcp)" value="83"/>
+       <opcode name="StartSolicitInCSAtCompulsoryTime" message="$(string.opcode_ProtokollstatusereignisStartSolicitInCSAtCompulsoryTime)" value="84"/>
+       <opcode name="FirewallPortExemptionTriggered" message="$(string.opcode_ProtokollstatusereignisFirewallPortExemptionTriggered)" value="87"/>
+       <opcode name="FirewallPortCloseTriggered" message="$(string.opcode_ProtokollstatusereignisFirewallPortCloseTriggered)" value="88"/>
+       <opcode name="AbandonSolicitInCSSinceStatic" message="$(string.opcode_ProtokollstatusereignisAbandonSolicitInCSSinceStatic)" value="91"/>
+       <opcode name="EnableDhcpV6" message="$(string.opcode_ProtokollstatusereignisEnableDhcpV6)" value="92"/>
+       <opcode name="DisableDhcpV6" message="$(string.opcode_ProtokollstatusereignisDisableDhcpV6)" value="93"/>
+       <opcode name="NoProcessingSinceDhcpV6Disabled" message="$(string.opcode_ProtokollstatusereignisNoProcessingSinceDhcpV6Disabled)" value="94"/>
+       <opcode name="AbandonSolicitInCSSinceV6Static" message="$(string.opcode_ProtokollstatusereignisAbandonSolicitInCSSinceV6Static)" value="95"/>
+       <opcode name="AbandonSolicitInCSSinceV6Stateless" message="$(string.opcode_ProtokollstatusereignisAbandonSolicitInCSSinceV6Stateless)" value="96"/>
+       <opcode name="AbandonSolicitSinceNonMulticast" message="$(string.opcode_ProtokollstatusereignisAbandonSolicitSinceNonMulticast)" value="97"/>
+       <opcode name="NoteFlagValues" message="$(string.opcode_ProtokollstatusereignisNoteFlagValues)" value="103"/>
+      </opcodes>
+     </task>
+     <task name="Adressenkonfigurations_Statusereignis" message="$(string.task_Adressenkonfigurations_Statusereignis)" value="3">
+      <opcodes>
+       <opcode name="Wechselvonzustandsbehaftetzuzustandslos." message="$(string.opcode_Adressenkonfigurations_StatusereignisWechselvonzustandsbehaftetzuzustandslos.)" value="49"/>
+       <opcode name="Wechselvonzustandsloszuzustandsbehaftet." message="$(string.opcode_Adressenkonfigurations_StatusereignisWechselvonzustandsloszuzustandsbehaftet.)" value="50"/>
+       <opcode name="WechselvonnichtDHCPzuzustandsbehaftet." message="$(string.opcode_Adressenkonfigurations_StatusereignisWechselvonnichtDHCPzuzustandsbehaftet.)" value="51"/>
+       <opcode name="WechselvonnichtDHCPzuzustandslos." message="$(string.opcode_Adressenkonfigurations_StatusereignisWechselvonnichtDHCPzuzustandslos.)" value="52"/>
+       <opcode name="StatischerModus." message="$(string.opcode_Adressenkonfigurations_StatusereignisStatischerModus.)" value="53"/>
+       <opcode name="DieAdressewurdeangeflanscht." message="$(string.opcode_Adressenkonfigurations_StatusereignisDieAdressewurdeangeflanscht.)" value="54"/>
+       <opcode name="DasAnflanschenderAdressewurdeaufgehoben." message="$(string.opcode_Adressenkonfigurations_StatusereignisDasAnflanschenderAdressewurdeaufgehoben.)" value="55"/>
+       <opcode name="IP_Konflikt" message="$(string.opcode_Adressenkonfigurations_StatusereignisIP_Konflikt)" value="56"/>
+       <opcode name="FehlerbeimInitialisierenderNetzwerkschnittstelle." message="$(string.opcode_Adressenkonfigurations_StatusereignisFehlerbeimInitialisierenderNetzwerkschnittstelle.)" value="58"/>
+       <opcode name="FehlerbeimAnflanschenderParameter." message="$(string.opcode_Adressenkonfigurations_StatusereignisFehlerbeimAnflanschenderParameter.)" value="59"/>
+       <opcode name="FehlerbeimInitialisierenderSchnittstelle." message="$(string.opcode_Adressenkonfigurations_StatusereignisFehlerbeimInitialisierenderSchnittstelle.)" value="67"/>
+       <opcode name="Wechselvonzustandsbehaftetzuzustandsbehaftet." message="$(string.opcode_Adressenkonfigurations_StatusereignisWechselvonzustandsbehaftetzuzustandsbehaftet.)" value="69"/>
+       <opcode name="DieAdresseistbereitsvorhanden." message="$(string.opcode_Adressenkonfigurations_StatusereignisDieAdresseistbereitsvorhanden.)" value="71"/>
+       <opcode name="KeineIP_Adresse." message="$(string.opcode_Adressenkonfigurations_StatusereignisKeineIP_Adresse.)" value="72"/>
+       <opcode name="DieKlassen_IDwirdfestgelegt." message="$(string.opcode_Adressenkonfigurations_StatusereignisDieKlassen_IDwirdfestgelegt.)" value="73"/>
+       <opcode name="FehlerbeimAbrufenderLease." message="$(string.opcode_Adressenkonfigurations_StatusereignisFehlerbeimAbrufenderLease.)" value="74"/>
+       <opcode name="FehlerbeiderErneuerungderLease." message="$(string.opcode_Adressenkonfigurations_StatusereignisFehlerbeiderErneuerungderLease.)" value="75"/>
+       <opcode name="Modusänderung" message="$(string.opcode_Adressenkonfigurations_StatusereignisModusänderung)" value="79"/>
+       <opcode name="DHCPv6NetworkHintMatch" message="$(string.opcode_Adressenkonfigurations_StatusereignisDHCPv6NetworkHintMatch)" value="99"/>
+       <opcode name="DHCPv6NetworkHintStatefullConfig" message="$(string.opcode_Adressenkonfigurations_StatusereignisDHCPv6NetworkHintStatefullConfig)" value="100"/>
+       <opcode name="DHCPv6NetworkHintStatelessConfig" message="$(string.opcode_Adressenkonfigurations_StatusereignisDHCPv6NetworkHintStatelessConfig)" value="101"/>
+       <opcode name="DHCPv6NetworkHintConfigExpired" message="$(string.opcode_Adressenkonfigurations_StatusereignisDHCPv6NetworkHintConfigExpired)" value="102"/>
+      </opcodes>
+     </task>
+     <task name="Dienststatusereignis" message="$(string.task_Dienststatusereignis)" value="4">
+      <opcodes>
+       <opcode name="DerDienstwirdgestartet." message="$(string.opcode_DienststatusereignisDerDienstwirdgestartet.)" value="62"/>
+       <opcode name="DerDienstwirdbeendet." message="$(string.opcode_DienststatusereignisDerDienstwirdbeendet.)" value="63"/>
+       <opcode name="FehlerbeimBeendendesDiensts." message="$(string.opcode_DienststatusereignisFehlerbeimBeendendesDiensts.)" value="76"/>
+       <opcode name="FehlerbeiderDHCPv6DUID_Validierung" message="$(string.opcode_DienststatusereignisFehlerbeiderDHCPv6DUID_Validierung)" value="98"/>
+       <opcode name="ServiceStopWithRefCount" message="$(string.opcode_DienststatusereignisServiceStopWithRefCount)" value="104"/>
+      </opcodes>
+     </task>
+     <task name="Winsock_Statusereignis" message="$(string.task_Winsock_Statusereignis)" value="5">
+      <opcodes>
+       <opcode name="FehlerbeimÖffnendesSockets." message="$(string.opcode_Winsock_StatusereignisFehlerbeimÖffnendesSockets.)" value="60"/>
+       <opcode name="FehlerbeimSchließendesSockets." message="$(string.opcode_Winsock_StatusereignisFehlerbeimSchließendesSockets.)" value="61"/>
+      </opcodes>
+     </task>
+     <task name="DNS_Statusereignis" message="$(string.task_DNS_Statusereignis)" value="6">
+      <opcodes>
+       <opcode name="DieDNS_Registrierungistabgeschlossen." message="$(string.opcode_DNS_StatusereignisDieDNS_Registrierungistabgeschlossen.)" value="65"/>
+       <opcode name="DieAufhebungderDNS_Registrierungistabgeschlossen." message="$(string.opcode_DNS_StatusereignisDieAufhebungderDNS_Registrierungistabgeschlossen.)" value="66"/>
+      </opcodes>
+     </task>
+     <task name="NetworkParameterStateEvent" message="$(string.task_NetworkParameterStateEvent)" value="7">
+      <opcodes>
+       <opcode name="NotifyCSEntry" message="$(string.opcode_NetworkParameterStateEventNotifyCSEntry)" value="89"/>
+       <opcode name="NotifyCSExit" message="$(string.opcode_NetworkParameterStateEventNotifyCSExit)" value="90"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1000" symbol="Adressenkonfigurations_StatusereignisKeineIP_Adresse." version="0" task="Adressenkonfigurations_Statusereignis" opcode="KeineIP_Adresse." level="win:Error" template="Adressenkonfigurations_StatusereignisKeineIP_Adresse.Args"/>
+     <event value="1003" symbol="Adressenkonfigurations_StatusereignisFehlerbeiderErneuerungderLease." version="0" task="Adressenkonfigurations_Statusereignis" opcode="FehlerbeiderErneuerungderLease." level="win:Error" keywords="DHCPV6_AOAC" template="Adressenkonfigurations_StatusereignisFehlerbeiderErneuerungderLease.Args"/>
+     <event value="1004" symbol="DienststatusereignisFehlerbeimBeendendesDiensts." version="0" task="Dienststatusereignis" opcode="FehlerbeimBeendendesDiensts." level="win:Error" template="DienststatusereignisFehlerbeimBeendendesDiensts.Args"/>
+     <event value="1005" symbol="Adressenkonfigurations_StatusereignisIP_Konflikt" version="0" task="Adressenkonfigurations_Statusereignis" opcode="IP_Konflikt" level="win:Warning" template="Adressenkonfigurations_StatusereignisKeineIP_Adresse.Args"/>
+     <event value="1006" symbol="MedienstatusereignisRouterankündigungwurdegeändert." version="0" task="Medienstatusereignis" opcode="Routerankündigungwurdegeändert." level="win:Informational" template="MedienstatusereignisRouterankündigungwurdegeändert.Args"/>
+     <event value="1008" symbol="Adressenkonfigurations_StatusereignisFehlerbeimInitialisierenderNetzwerkschnittstelle." version="0" task="Adressenkonfigurations_Statusereignis" opcode="FehlerbeimInitialisierenderNetzwerkschnittstelle." level="win:Error" template="Adressenkonfigurations_StatusereignisFehlerbeimInitialisierenderNetzwerkschnittstelle.Args"/>
+     <event value="1009" symbol="DienststatusereignisFehlerbeiderDHCPv6DUID_Validierung" version="0" task="Dienststatusereignis" opcode="FehlerbeiderDHCPv6DUID_Validierung" level="win:Informational" template="DienststatusereignisFehlerbeiderDHCPv6DUID_ValidierungArgs"/>
+     <event value="1010" symbol="Adressenkonfigurations_StatusereignisDHCPv6NetworkHintMatch" version="0" task="Adressenkonfigurations_Statusereignis" opcode="DHCPv6NetworkHintMatch" level="win:Informational" template="Adressenkonfigurations_StatusereignisDHCPv6NetworkHintMatchArgs"/>
+     <event value="1011" symbol="Adressenkonfigurations_StatusereignisDHCPv6NetworkHintStatefullConfig" version="0" task="Adressenkonfigurations_Statusereignis" opcode="DHCPv6NetworkHintStatefullConfig" level="win:Informational" template="Adressenkonfigurations_StatusereignisDHCPv6NetworkHintStatefullConfigArgs"/>
+     <event value="1012" symbol="Adressenkonfigurations_StatusereignisDHCPv6NetworkHintStatelessConfig" version="0" task="Adressenkonfigurations_Statusereignis" opcode="DHCPv6NetworkHintStatelessConfig" level="win:Informational" template="Adressenkonfigurations_StatusereignisDHCPv6NetworkHintMatchArgs"/>
+     <event value="1013" symbol="Adressenkonfigurations_StatusereignisDHCPv6NetworkHintConfigExpired" version="0" task="Adressenkonfigurations_Statusereignis" opcode="DHCPv6NetworkHintConfigExpired" level="win:Informational" template="Adressenkonfigurations_StatusereignisDHCPv6NetworkHintMatchArgs"/>
+     <event value="50057" symbol="ProtokollstatusereignisNetzwerkfehler" version="0" task="Protokollstatusereignis" opcode="Netzwerkfehler" level="win:Error" template="Adressenkonfigurations_StatusereignisFehlerbeimInitialisierenderNetzwerkschnittstelle.Args"/>
+     <event value="50071" symbol="MedienstatusereignisAcquireNICReference" version="0" task="Medienstatusereignis" opcode="AcquireNICReference" level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="50072" symbol="MedienstatusereignisReleaseNICReference" version="0" task="Medienstatusereignis" opcode="ReleaseNICReference" level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51001" symbol="MedienstatusereignisMedia_Verbindung" version="0" task="Medienstatusereignis" opcode="Media_Verbindung" level="win:Informational" template="MedienstatusereignisMedia_VerbindungArgs"/>
+     <event value="51002" symbol="MedienstatusereignisMedia_Verbindungtrennen" version="0" task="Medienstatusereignis" opcode="Media_Verbindungtrennen" level="win:Informational" template="MedienstatusereignisMedia_VerbindungArgs"/>
+     <event value="51004" symbol="ProtokollstatusereignisInitialisierung:Antwortbestätigen." version="0" task="Protokollstatusereignis" opcode="Initialisierung:Antwortbestätigen." level="win:Informational" keywords="DHCPV6_AOAC" template="MedienstatusereignisMedia_VerbindungArgs"/>
+     <event value="51005" symbol="ProtokollstatusereignisSARRwurdeinitialisiert." version="0" task="Protokollstatusereignis" opcode="SARRwurdeinitialisiert." level="win:Informational" keywords="DHCPV6_AOAC" template="ProtokollstatusereignisSARRwurdeinitialisiert.Args"/>
+     <event value="51006" symbol="ProtokollstatusereignisDieAnfragewurdegesendet." version="0" task="Protokollstatusereignis" opcode="DieAnfragewurdegesendet." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51007" symbol="ProtokollstatusereignisDieAnkündigungwurdeempfangen." version="0" task="Protokollstatusereignis" opcode="DieAnkündigungwurdeempfangen." level="win:Informational" template="ProtokollstatusereignisDieAnkündigungwurdeempfangen.Args"/>
+     <event value="51008" symbol="ProtokollstatusereignisDieAnkündigungwurdeverworfen." version="0" task="Protokollstatusereignis" opcode="DieAnkündigungwurdeverworfen." level="win:Error" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51009" symbol="ProtokollstatusereignisDieAnforderungwurdegesendet." version="0" task="Protokollstatusereignis" opcode="DieAnforderungwurdegesendet." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51010" symbol="ProtokollstatusereignisDieAntwortfürdieAnforderungwurdeempfangen." version="0" task="Protokollstatusereignis" opcode="DieAntwortfürdieAnforderungwurdeempfangen." level="win:Informational" template="ProtokollstatusereignisDieAnkündigungwurdeempfangen.Args"/>
+     <event value="51011" symbol="ProtokollstatusereignisFürdieAnforderungwurdeeineungültigeAntwortempfangen." version="0" task="Protokollstatusereignis" opcode="FürdieAnforderungwurdeeineungültigeAntwortempfangen." level="win:Error" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51012" symbol="ProtokollstatusereignisDieErneuerungwurdegesendet." version="0" task="Protokollstatusereignis" opcode="DieErneuerungwurdegesendet." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51013" symbol="ProtokollstatusereignisDieAntwortfürdieErneuerungwurdeempfangen." version="0" task="Protokollstatusereignis" opcode="DieAntwortfürdieErneuerungwurdeempfangen." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51014" symbol="ProtokollstatusereignisFürdieErneuerungwurdeeineungültigeAntwortempfangen." version="0" task="Protokollstatusereignis" opcode="FürdieErneuerungwurdeeineungültigeAntwortempfangen." level="win:Error" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51015" symbol="ProtokollstatusereignisDieNeubindungwurdegesendet." version="0" task="Protokollstatusereignis" opcode="DieNeubindungwurdegesendet." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51016" symbol="ProtokollstatusereignisDieAntwortfürdieNeubindungwurdeempfangen." version="0" task="Protokollstatusereignis" opcode="DieAntwortfürdieNeubindungwurdeempfangen." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51017" symbol="ProtokollstatusereignisFürdieNeubindungwurdeeineungültigeAntwortempfangen." version="0" task="Protokollstatusereignis" opcode="FürdieNeubindungwurdeeineungültigeAntwortempfangen." level="win:Error" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51018" symbol="ProtokollstatusereignisDieFreigabewurdegesendet." version="0" task="Protokollstatusereignis" opcode="DieFreigabewurdegesendet." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51019" symbol="ProtokollstatusereignisDieAblehnungwurdegesendet." version="0" task="Protokollstatusereignis" opcode="DieAblehnungwurdegesendet." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51020" symbol="ProtokollstatusereignisDieAntwortfürdieAblehnungwurdeempfangen." version="0" task="Protokollstatusereignis" opcode="DieAntwortfürdieAblehnungwurdeempfangen." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51021" symbol="ProtokollstatusereignisFürdieAblehnungwurdeeineungültigeAntwortempfangen." version="0" task="Protokollstatusereignis" opcode="FürdieAblehnungwurdeeineungültigeAntwortempfangen." level="win:Error" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51022" symbol="ProtokollstatusereignisDieBestätigungwurdegesendet." version="0" task="Protokollstatusereignis" opcode="DieBestätigungwurdegesendet." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51023" symbol="ProtokollstatusereignisDieAntwortfürdieBestätigungwurdeempfangen." version="0" task="Protokollstatusereignis" opcode="DieAntwortfürdieBestätigungwurdeempfangen." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51024" symbol="ProtokollstatusereignisFürdieBestätigungwurdeeineungültigeAntwortempfangen." version="0" task="Protokollstatusereignis" opcode="FürdieBestätigungwurdeeineungültigeAntwortempfangen." level="win:Error" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51025" symbol="ProtokollstatusereignisDieInformationsanforderungwurdegesendet." version="0" task="Protokollstatusereignis" opcode="DieInformationsanforderungwurdegesendet." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51026" symbol="ProtokollstatusereignisDieAntwortfürdieInformationsanforderungwurdeempfangen." version="0" task="Protokollstatusereignis" opcode="DieAntwortfürdieInformationsanforderungwurdeempfangen." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51027" symbol="ProtokollstatusereignisFürdieInformationsanforderungwurdeeineungültigeAntwortempfangen." version="0" task="Protokollstatusereignis" opcode="FürdieInformationsanforderungwurdeeineungültigeAntwortempfangen." level="win:Error" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51029" symbol="ProtokollstatusereignisFehlerbeimErstellendesPakets." version="0" task="Protokollstatusereignis" opcode="FehlerbeimErstellendesPakets." level="win:Error" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51030" symbol="ProtokollstatusereignisFehlerbeimExtrahierenvonOptionen." version="0" task="Protokollstatusereignis" opcode="FehlerbeimExtrahierenvonOptionen." level="win:Error" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51031" symbol="Adressenkonfigurations_StatusereignisWechselvonzustandsbehaftetzuzustandslos." version="0" task="Adressenkonfigurations_Statusereignis" opcode="Wechselvonzustandsbehaftetzuzustandslos." level="win:Informational" template="Adressenkonfigurations_StatusereignisWechselvonzustandsbehaftetzuzustandslos.Args"/>
+     <event value="51032" symbol="Adressenkonfigurations_StatusereignisWechselvonzustandsloszuzustandsbehaftet." version="0" task="Adressenkonfigurations_Statusereignis" opcode="Wechselvonzustandsloszuzustandsbehaftet." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51033" symbol="Adressenkonfigurations_StatusereignisWechselvonnichtDHCPzuzustandsbehaftet." version="0" task="Adressenkonfigurations_Statusereignis" opcode="WechselvonnichtDHCPzuzustandsbehaftet." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51034" symbol="Adressenkonfigurations_StatusereignisWechselvonnichtDHCPzuzustandslos." version="0" task="Adressenkonfigurations_Statusereignis" opcode="WechselvonnichtDHCPzuzustandslos." level="win:Informational" template="Adressenkonfigurations_StatusereignisWechselvonzustandsbehaftetzuzustandslos.Args"/>
+     <event value="51035" symbol="Adressenkonfigurations_StatusereignisStatischerModus." version="0" task="Adressenkonfigurations_Statusereignis" opcode="StatischerModus." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51036" symbol="ProtokollstatusereignisParsingfehler" version="0" task="Protokollstatusereignis" opcode="Parsingfehler" level="win:Error" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51037" symbol="ProtokollstatusereignisZeitoptionzurInformationsaktualisierungwurdeempfangen." version="0" task="Protokollstatusereignis" opcode="ZeitoptionzurInformationsaktualisierungwurdeempfangen." level="win:Informational" template="ProtokollstatusereignisZeitoptionzurInformationsaktualisierungwurdeempfangen.Args"/>
+     <event value="51038" symbol="ProtokollstatusereignisDieInformationsaktualisierungszeitistabgelaufen." version="0" task="Protokollstatusereignis" opcode="DieInformationsaktualisierungszeitistabgelaufen." level="win:Informational" template="MedienstatusereignisMedia_VerbindungArgs"/>
+     <event value="51039" symbol="Adressenkonfigurations_StatusereignisDieAdressewurdeangeflanscht." version="0" task="Adressenkonfigurations_Statusereignis" opcode="DieAdressewurdeangeflanscht." level="win:Informational" keywords="DHCPV6_AOAC" template="Adressenkonfigurations_StatusereignisDieAdressewurdeangeflanscht.Args"/>
+     <event value="51040" symbol="Adressenkonfigurations_StatusereignisDasAnflanschenderAdressewurdeaufgehoben." version="0" task="Adressenkonfigurations_Statusereignis" opcode="DasAnflanschenderAdressewurdeaufgehoben." level="win:Informational" keywords="DHCPV6_AOAC" template="Adressenkonfigurations_StatusereignisDieAdressewurdeangeflanscht.Args"/>
+     <event value="51043" symbol="MedienstatusereignisDieSchnittstellewurdehinzugefügt." version="0" task="Medienstatusereignis" opcode="DieSchnittstellewurdehinzugefügt." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51044" symbol="Adressenkonfigurations_StatusereignisFehlerbeimInitialisierenderSchnittstelle." version="0" task="Adressenkonfigurations_Statusereignis" opcode="FehlerbeimInitialisierenderSchnittstelle." level="win:Error" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51045" symbol="Adressenkonfigurations_StatusereignisFehlerbeimAnflanschenderParameter." version="0" task="Adressenkonfigurations_Statusereignis" opcode="FehlerbeimAnflanschenderParameter." level="win:Error" template="Adressenkonfigurations_StatusereignisFehlerbeimInitialisierenderNetzwerkschnittstelle.Args"/>
+     <event value="51046" symbol="DienststatusereignisDerDienstwirdgestartet." version="0" task="Dienststatusereignis" opcode="DerDienstwirdgestartet." level="win:Informational"/>
+     <event value="51047" symbol="DienststatusereignisDerDienstwirdbeendet." version="0" task="Dienststatusereignis" opcode="DerDienstwirdbeendet." level="win:Informational" template="DienststatusereignisDerDienstwirdbeendet.Args"/>
+     <event value="51048" symbol="Winsock_StatusereignisFehlerbeimÖffnendesSockets." version="0" task="Winsock_Statusereignis" opcode="FehlerbeimÖffnendesSockets." level="win:Error" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51049" symbol="Winsock_StatusereignisFehlerbeimSchließendesSockets." version="0" task="Winsock_Statusereignis" opcode="FehlerbeimSchließendesSockets." level="win:Error" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51050" symbol="DNS_StatusereignisDieDNS_Registrierungistabgeschlossen." version="0" task="DNS_Statusereignis" opcode="DieDNS_Registrierungistabgeschlossen." level="win:Informational" template="DNS_StatusereignisDieDNS_Registrierungistabgeschlossen.Args"/>
+     <event value="51051" symbol="DNS_StatusereignisDieAufhebungderDNS_Registrierungistabgeschlossen." version="0" task="DNS_Statusereignis" opcode="DieAufhebungderDNS_Registrierungistabgeschlossen." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51057" symbol="DienststatusereignisServiceStopWithRefCount" version="0" task="Dienststatusereignis" opcode="ServiceStopWithRefCount" level="win:Informational" template="DienststatusereignisDerDienstwirdbeendet.Args"/>
+     <event value="51058" symbol="Adressenkonfigurations_StatusereignisWechselvonzustandsbehaftetzuzustandsbehaftet." version="0" task="Adressenkonfigurations_Statusereignis" opcode="Wechselvonzustandsbehaftetzuzustandsbehaftet." level="win:Informational" template="MedienstatusereignisAcquireNICReferenceArgs"/>
+     <event value="51059" symbol="ProtokollstatusereignisDieunbekannteNachrichtwurdeverworfen." version="0" task="Protokollstatusereignis" opcode="DieunbekannteNachrichtwurdeverworfen." level="win:Error"/>
+     <event value="51060" symbol="Adressenkonfigurations_StatusereignisDieKlassen_IDwirdfestgelegt." version="0" task="Adressenkonfigurations_Statusereignis" opcode="DieKlassen_IDwirdfestgelegt." level="win:Informational" template="Adressenkonfigurations_StatusereignisKeineIP_Adresse.Args"/>
+     <event value="51061" symbol="Adressenkonfigurations_StatusereignisDieAdresseistbereitsvorhanden." version="0" task="Adressenkonfigurations_Statusereignis" opcode="DieAdresseistbereitsvorhanden." level="win:Error" template="Adressenkonfigurations_StatusereignisDieAdresseistbereitsvorhanden.Args"/>
+     <event value="51062" symbol="Adressenkonfigurations_StatusereignisFehlerbeimAbrufenderLease." version="0" task="Adressenkonfigurations_Statusereignis" opcode="FehlerbeimAbrufenderLease." level="win:Error" keywords="DHCPV6_AOAC" template="Adressenkonfigurations_StatusereignisFehlerbeiderErneuerungderLease.Args"/>
+     <event value="51063" symbol="ProtokollstatusereignisFirewallPortExempted" version="0" task="Protokollstatusereignis" opcode="FirewallPortExempted" level="win:Informational" template="ProtokollstatusereignisFirewallPortExemptedArgs"/>
+     <event value="51064" symbol="ProtokollstatusereignisFirewallPortClosed" version="0" task="Protokollstatusereignis" opcode="FirewallPortClosed" level="win:Informational" template="ProtokollstatusereignisFirewallPortExemptedArgs"/>
+     <event value="51065" symbol="Adressenkonfigurations_StatusereignisModusänderung" version="0" task="Adressenkonfigurations_Statusereignis" opcode="Modusänderung" level="win:Informational" template="Adressenkonfigurations_StatusereignisModusänderungArgs"/>
+     <event value="51066" symbol="ProtokollstatusereignisAggressiveRetryOn" version="0" task="Protokollstatusereignis" opcode="AggressiveRetryOn" level="win:Informational" template="MedienstatusereignisMedia_VerbindungArgs"/>
+     <event value="51067" symbol="ProtokollstatusereignisAbandonSolicitInCSSinceDhcp" version="0" task="Protokollstatusereignis" opcode="AbandonSolicitInCSSinceDhcp" level="win:Informational" template="ProtokollstatusereignisAbandonSolicitInCSSinceDhcpArgs"/>
+     <event value="51068" symbol="ProtokollstatusereignisAbandonSolicitInCSSinceStatic" version="0" task="Protokollstatusereignis" opcode="AbandonSolicitInCSSinceStatic" level="win:Informational" template="ProtokollstatusereignisAbandonSolicitInCSSinceDhcpArgs"/>
+     <event value="51069" symbol="ProtokollstatusereignisDontStartSolicitInCSSinceV4Plumbed" version="0" task="Protokollstatusereignis" opcode="DontStartSolicitInCSSinceV4Plumbed" level="win:Informational" template="ProtokollstatusereignisDontStartSolicitInCSSinceV4PlumbedArgs"/>
+     <event value="51070" symbol="ProtokollstatusereignisStartSolicitInCSSinceV4Unplumbed" version="0" task="Protokollstatusereignis" opcode="StartSolicitInCSSinceV4Unplumbed" level="win:Informational" template="ProtokollstatusereignisSARRwurdeinitialisiert.Args"/>
+     <event value="51073" symbol="ProtokollstatusereignisFirewallPortExemptionTriggered" version="0" task="Protokollstatusereignis" opcode="FirewallPortExemptionTriggered" level="win:Informational" template="ProtokollstatusereignisFirewallPortExemptionTriggeredArgs"/>
+     <event value="51074" symbol="ProtokollstatusereignisFirewallPortCloseTriggered" version="0" task="Protokollstatusereignis" opcode="FirewallPortCloseTriggered" level="win:Informational" template="ProtokollstatusereignisFirewallPortExemptionTriggeredArgs"/>
+     <event value="51075" symbol="NetworkParameterStateEventNotifyCSEntry" version="0" task="NetworkParameterStateEvent" opcode="NotifyCSEntry" level="win:Informational"/>
+     <event value="51076" symbol="NetworkParameterStateEventNotifyCSExit" version="0" task="NetworkParameterStateEvent" opcode="NotifyCSExit" level="win:Informational"/>
+     <event value="51077" symbol="ProtokollstatusereignisStartSolicitInCSAtCompulsoryTime" version="0" task="Protokollstatusereignis" opcode="StartSolicitInCSAtCompulsoryTime" level="win:Informational" template="ProtokollstatusereignisSARRwurdeinitialisiert.Args"/>
+     <event value="51078" symbol="ProtokollstatusereignisEnableDhcpV6" version="0" task="Protokollstatusereignis" opcode="EnableDhcpV6" level="win:Informational" template="ProtokollstatusereignisFirewallPortExemptionTriggeredArgs"/>
+     <event value="51079" symbol="ProtokollstatusereignisDisableDhcpV6" version="0" task="Protokollstatusereignis" opcode="DisableDhcpV6" level="win:Informational" template="ProtokollstatusereignisFirewallPortExemptionTriggeredArgs"/>
+     <event value="51080" symbol="ProtokollstatusereignisNoProcessingSinceDhcpV6Disabled" version="0" task="Protokollstatusereignis" opcode="NoProcessingSinceDhcpV6Disabled" level="win:Informational" template="MedienstatusereignisMedia_VerbindungArgs"/>
+     <event value="51081" symbol="ProtokollstatusereignisAbandonSolicitInCSSinceV6Static" version="0" task="Protokollstatusereignis" opcode="AbandonSolicitInCSSinceV6Static" level="win:Informational" template="ProtokollstatusereignisAbandonSolicitInCSSinceV6StaticArgs"/>
+     <event value="51082" symbol="ProtokollstatusereignisAbandonSolicitInCSSinceV6Stateless" version="0" task="Protokollstatusereignis" opcode="AbandonSolicitInCSSinceV6Stateless" level="win:Informational" template="ProtokollstatusereignisAbandonSolicitInCSSinceV6StaticArgs"/>
+     <event value="51083" symbol="ProtokollstatusereignisAbandonSolicitSinceNonMulticast" version="0" task="Protokollstatusereignis" opcode="AbandonSolicitSinceNonMulticast" level="win:Informational" template="MedienstatusereignisMedia_VerbindungArgs"/>
+     <event value="51084" symbol="ProtokollstatusereignisNoteFlagValues" version="0" task="Protokollstatusereignis" opcode="NoteFlagValues" level="win:Informational" template="ProtokollstatusereignisSARRwurdeinitialisiert.Args"/>
+     <event value="60000" symbol="ProtokollstatusereignisPerfTrack:SARR." version="0" task="Protokollstatusereignis" opcode="PerfTrack:SARR." level="win:Informational" template="ProtokollstatusereignisPerfTrack:SARR.Args"/>
+     <event value="60001" symbol="ProtokollstatusereignisPerfTrack:Informationsanforderung." version="0" task="Protokollstatusereignis" opcode="PerfTrack:Informationsanforderung." level="win:Informational" template="ProtokollstatusereignisPerfTrack:Informationsanforderung.Args"/>
+     <event value="60002" symbol="MedienstatusereignisPerfTrack:DieMediensindverbunden." version="0" task="Medienstatusereignis" opcode="PerfTrack:DieMediensindverbunden." level="win:Informational" template="ProtokollstatusereignisPerfTrack:Informationsanforderung.Args"/>
+     <event value="60003" symbol="MedienstatusereignisPerfTrack:EndederMedienverbindung." version="0" task="Medienstatusereignis" opcode="PerfTrack:EndederMedienverbindung." level="win:Informational" template="ProtokollstatusereignisPerfTrack:Informationsanforderung.Args"/>
+    </events>
+    <templates>
+     <template tid="Adressenkonfigurations_StatusereignisKeineIP_Adresse.Args">
+      <data name="InterfaceGUID" inType="win:UnicodeString"/>
+      <data name="HWLength" inType="win:UInt32"/>
+      <data name="HWAddress" inType="win:Binary" length="HWLength"/>
+     </template>
+     <template tid="Adressenkonfigurations_StatusereignisFehlerbeiderErneuerungderLease.Args">
+      <data name="HWLength" inType="win:UInt32"/>
+      <data name="HWAddress" inType="win:Binary" length="HWLength"/>
+      <data name="StatusCode" inType="win:UInt32"/>
+     </template>
+     <template tid="DienststatusereignisFehlerbeimBeendendesDiensts.Args">
+      <data name="StatusCode" inType="win:UInt32"/>
+      <data name="DwordVal" inType="win:UInt32"/>
+     </template>
+     <template tid="MedienstatusereignisRouterankündigungwurdegeändert.Args">
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="Flag1" inType="win:Boolean"/>
+      <data name="Flag2" inType="win:Boolean"/>
+     </template>
+     <template tid="Adressenkonfigurations_StatusereignisFehlerbeimInitialisierenderNetzwerkschnittstelle.Args">
+      <data name="StatusCode" inType="win:UInt32"/>
+     </template>
+     <template tid="DienststatusereignisFehlerbeiderDHCPv6DUID_ValidierungArgs">
+      <data name="HWLength" inType="win:UInt32"/>
+      <data name="HWAddress" inType="win:Binary" length="HWLength"/>
+      <data name="DUIDLength" inType="win:UInt32"/>
+      <data name="DUID" inType="win:Binary" length="DUIDLength"/>
+      <data name="NewHWLength" inType="win:UInt32"/>
+      <data name="NewHWAddress" inType="win:Binary" length="NewHWLength"/>
+      <data name="NewDUIDLength" inType="win:UInt32"/>
+      <data name="NewDUID" inType="win:Binary" length="NewDUIDLength"/>
+     </template>
+     <template tid="Adressenkonfigurations_StatusereignisDHCPv6NetworkHintMatchArgs">
+      <data name="NetworkHintString" inType="win:UnicodeString"/>
+      <data name="NetworkHint" inType="win:UnicodeString"/>
+      <data name="HWLength" inType="win:UInt32"/>
+      <data name="HWAddress" inType="win:Binary" length="HWLength"/>
+     </template>
+     <template tid="Adressenkonfigurations_StatusereignisDHCPv6NetworkHintStatefullConfigArgs">
+      <data name="Address1" inType="win:Binary"/>
+      <data name="NetworkHintString" inType="win:UnicodeString"/>
+      <data name="NetworkHint" inType="win:UnicodeString"/>
+      <data name="HWLength" inType="win:UInt32"/>
+      <data name="HWAddress" inType="win:Binary" length="HWLength"/>
+     </template>
+     <template tid="MedienstatusereignisAcquireNICReferenceArgs">
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="StatusCode" inType="win:UInt32"/>
+     </template>
+     <template tid="MedienstatusereignisMedia_VerbindungArgs">
+      <data name="InterfaceId" inType="win:UInt32"/>
+     </template>
+     <template tid="ProtokollstatusereignisSARRwurdeinitialisiert.Args">
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="DwordVal1" inType="win:UInt32"/>
+      <data name="DwordVal2" inType="win:UInt32"/>
+     </template>
+     <template tid="ProtokollstatusereignisDieAnkündigungwurdeempfangen.Args">
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="StatusCode" inType="win:UInt32"/>
+      <data name="Address" inType="win:Binary"/>
+     </template>
+     <template tid="Adressenkonfigurations_StatusereignisWechselvonzustandsbehaftetzuzustandslos.Args">
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="StatusCode" inType="win:UInt32"/>
+      <data name="Dword1" inType="win:UInt32"/>
+      <data name="Dword2" inType="win:UInt32"/>
+     </template>
+     <template tid="ProtokollstatusereignisZeitoptionzurInformationsaktualisierungwurdeempfangen.Args">
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="RefreshTime" inType="win:UInt32"/>
+     </template>
+     <template tid="Adressenkonfigurations_StatusereignisDieAdressewurdeangeflanscht.Args">
+      <data name="Address" inType="win:Binary"/>
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="StatusCode" inType="win:UInt32"/>
+     </template>
+     <template tid="DienststatusereignisDerDienstwirdbeendet.Args">
+      <data name="DwordVal" inType="win:UInt32"/>
+     </template>
+     <template tid="DNS_StatusereignisDieDNS_Registrierungistabgeschlossen.Args">
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="StatusCode" inType="win:UInt32"/>
+      <data name="Dword" inType="win:UInt32"/>
+     </template>
+     <template tid="Adressenkonfigurations_StatusereignisDieAdresseistbereitsvorhanden.Args">
+      <data name="Address" inType="win:Binary"/>
+      <data name="InterfaceId" inType="win:UInt32"/>
+     </template>
+     <template tid="ProtokollstatusereignisFirewallPortExemptedArgs">
+      <data name="DwordVal" inType="win:UInt32"/>
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="DwordVal1" inType="win:UInt32"/>
+     </template>
+     <template tid="Adressenkonfigurations_StatusereignisModusänderungArgs">
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="NewMode" inType="win:UInt32"/>
+     </template>
+     <template tid="ProtokollstatusereignisAbandonSolicitInCSSinceDhcpArgs">
+      <data name="DwordVal1" inType="win:UInt32"/>
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="Address1" inType="win:UInt32"/>
+      <data name="DwordVal2" inType="win:UInt32"/>
+      <data name="DwordVal3" inType="win:UInt32"/>
+     </template>
+     <template tid="ProtokollstatusereignisDontStartSolicitInCSSinceV4PlumbedArgs">
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="Address1" inType="win:UInt32"/>
+      <data name="DwordVal1" inType="win:UInt32"/>
+      <data name="DwordVal2" inType="win:UInt32"/>
+     </template>
+     <template tid="ProtokollstatusereignisFirewallPortExemptionTriggeredArgs">
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="DwordVal1" inType="win:UInt32"/>
+     </template>
+     <template tid="ProtokollstatusereignisAbandonSolicitInCSSinceV6StaticArgs">
+      <data name="DwordVal1" inType="win:UInt32"/>
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="Address" inType="win:Binary"/>
+      <data name="DwordVal2" inType="win:UInt32"/>
+      <data name="DwordVal3" inType="win:UInt32"/>
+     </template>
+     <template tid="ProtokollstatusereignisPerfTrack:SARR.Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceId" inType="win:UInt32"/>
+      <data name="Address1" inType="win:Binary"/>
+     </template>
+     <template tid="ProtokollstatusereignisPerfTrack:Informationsanforderung.Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="InterfaceId" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_DHCPV6_AOAC" value="DHCPV6_AOAC"/>
+    <string id="task_Medienstatusereignis" value="Medienstatusereignis"/>
+    <string id="opcode_MedienstatusereignisMedia_Verbindung" value="Media_Verbindung"/>
+    <string id="opcode_MedienstatusereignisMedia_Verbindungtrennen" value="Media_Verbindungtrennen"/>
+    <string id="opcode_MedienstatusereignisRouterankündigungwurdegeändert." value="Routerankündigungwurdegeändert."/>
+    <string id="opcode_MedienstatusereignisPerfTrack:DieMediensindverbunden." value="PerfTrack:DieMediensindverbunden."/>
+    <string id="opcode_MedienstatusereignisPerfTrack:EndederMedienverbindung." value="PerfTrack:EndederMedienverbindung."/>
+    <string id="opcode_MedienstatusereignisDieSchnittstellewurdehinzugefügt." value="DieSchnittstellewurdehinzugefügt."/>
+    <string id="opcode_MedienstatusereignisAcquireNICReference" value="AcquireNICReference"/>
+    <string id="opcode_MedienstatusereignisReleaseNICReference" value="ReleaseNICReference"/>
+    <string id="task_Protokollstatusereignis" value="Protokollstatusereignis"/>
+    <string id="opcode_ProtokollstatusereignisSARRwurdeinitialisiert." value="SARRwurdeinitialisiert."/>
+    <string id="opcode_ProtokollstatusereignisInitialisierung:Antwortbestätigen." value="Initialisierung:Antwortbestätigen."/>
+    <string id="opcode_ProtokollstatusereignisDieAnfragewurdegesendet." value="DieAnfragewurdegesendet."/>
+    <string id="opcode_ProtokollstatusereignisDieAnkündigungwurdeempfangen." value="DieAnkündigungwurdeempfangen."/>
+    <string id="opcode_ProtokollstatusereignisDieAnkündigungwurdeverworfen." value="DieAnkündigungwurdeverworfen."/>
+    <string id="opcode_ProtokollstatusereignisDieAnforderungwurdegesendet." value="DieAnforderungwurdegesendet."/>
+    <string id="opcode_ProtokollstatusereignisDieAntwortfürdieAnforderungwurdeempfangen." value="DieAntwortfürdieAnforderungwurdeempfangen."/>
+    <string id="opcode_ProtokollstatusereignisFürdieAnforderungwurdeeineungültigeAntwortempfangen." value="FürdieAnforderungwurdeeineungültigeAntwortempfangen."/>
+    <string id="opcode_ProtokollstatusereignisDieErneuerungwurdegesendet." value="DieErneuerungwurdegesendet."/>
+    <string id="opcode_ProtokollstatusereignisDieAntwortfürdieErneuerungwurdeempfangen." value="DieAntwortfürdieErneuerungwurdeempfangen."/>
+    <string id="opcode_ProtokollstatusereignisFürdieErneuerungwurdeeineungültigeAntwortempfangen." value="FürdieErneuerungwurdeeineungültigeAntwortempfangen."/>
+    <string id="opcode_ProtokollstatusereignisDieNeubindungwurdegesendet." value="DieNeubindungwurdegesendet."/>
+    <string id="opcode_ProtokollstatusereignisDieAntwortfürdieNeubindungwurdeempfangen." value="DieAntwortfürdieNeubindungwurdeempfangen."/>
+    <string id="opcode_ProtokollstatusereignisFürdieNeubindungwurdeeineungültigeAntwortempfangen." value="FürdieNeubindungwurdeeineungültigeAntwortempfangen."/>
+    <string id="opcode_ProtokollstatusereignisDieBestätigungwurdegesendet." value="DieBestätigungwurdegesendet."/>
+    <string id="opcode_ProtokollstatusereignisDieAntwortfürdieBestätigungwurdeempfangen." value="DieAntwortfürdieBestätigungwurdeempfangen."/>
+    <string id="opcode_ProtokollstatusereignisFürdieBestätigungwurdeeineungültigeAntwortempfangen." value="FürdieBestätigungwurdeeineungültigeAntwortempfangen."/>
+    <string id="opcode_ProtokollstatusereignisDieAblehnungwurdegesendet." value="DieAblehnungwurdegesendet."/>
+    <string id="opcode_ProtokollstatusereignisDieAntwortfürdieAblehnungwurdeempfangen." value="DieAntwortfürdieAblehnungwurdeempfangen."/>
+    <string id="opcode_ProtokollstatusereignisFürdieAblehnungwurdeeineungültigeAntwortempfangen." value="FürdieAblehnungwurdeeineungültigeAntwortempfangen."/>
+    <string id="opcode_ProtokollstatusereignisDieFreigabewurdegesendet." value="DieFreigabewurdegesendet."/>
+    <string id="opcode_ProtokollstatusereignisDieInformationsanforderungwurdegesendet." value="DieInformationsanforderungwurdegesendet."/>
+    <string id="opcode_ProtokollstatusereignisDieAntwortfürdieInformationsanforderungwurdeempfangen." value="DieAntwortfürdieInformationsanforderungwurdeempfangen."/>
+    <string id="opcode_ProtokollstatusereignisFürdieInformationsanforderungwurdeeineungültigeAntwortempfangen." value="FürdieInformationsanforderungwurdeeineungültigeAntwortempfangen."/>
+    <string id="opcode_ProtokollstatusereignisFehlerbeimErstellendesPakets." value="FehlerbeimErstellendesPakets."/>
+    <string id="opcode_ProtokollstatusereignisFehlerbeimExtrahierenvonOptionen." value="FehlerbeimExtrahierenvonOptionen."/>
+    <string id="opcode_ProtokollstatusereignisParsingfehler" value="Parsingfehler"/>
+    <string id="opcode_ProtokollstatusereignisZeitoptionzurInformationsaktualisierungwurdeempfangen." value="ZeitoptionzurInformationsaktualisierungwurdeempfangen."/>
+    <string id="opcode_ProtokollstatusereignisDieInformationsaktualisierungszeitistabgelaufen." value="DieInformationsaktualisierungszeitistabgelaufen."/>
+    <string id="opcode_ProtokollstatusereignisPerfTrack:SARR." value="PerfTrack:SARR."/>
+    <string id="opcode_ProtokollstatusereignisPerfTrack:Informationsanforderung." value="PerfTrack:Informationsanforderung."/>
+    <string id="opcode_ProtokollstatusereignisNetzwerkfehler" value="Netzwerkfehler"/>
+    <string id="opcode_ProtokollstatusereignisDieunbekannteNachrichtwurdeverworfen." value="DieunbekannteNachrichtwurdeverworfen."/>
+    <string id="opcode_ProtokollstatusereignisFirewallPortExempted" value="FirewallPortExempted"/>
+    <string id="opcode_ProtokollstatusereignisFirewallPortClosed" value="FirewallPortClosed"/>
+    <string id="opcode_ProtokollstatusereignisAggressiveRetryOn" value="AggressiveRetryOn"/>
+    <string id="opcode_ProtokollstatusereignisDontStartSolicitInCSSinceV4Plumbed" value="DontStartSolicitInCSSinceV4Plumbed"/>
+    <string id="opcode_ProtokollstatusereignisStartSolicitInCSSinceV4Unplumbed" value="StartSolicitInCSSinceV4Unplumbed"/>
+    <string id="opcode_ProtokollstatusereignisAbandonSolicitInCSSinceDhcp" value="AbandonSolicitInCSSinceDhcp"/>
+    <string id="opcode_ProtokollstatusereignisStartSolicitInCSAtCompulsoryTime" value="StartSolicitInCSAtCompulsoryTime"/>
+    <string id="opcode_ProtokollstatusereignisFirewallPortExemptionTriggered" value="FirewallPortExemptionTriggered"/>
+    <string id="opcode_ProtokollstatusereignisFirewallPortCloseTriggered" value="FirewallPortCloseTriggered"/>
+    <string id="opcode_ProtokollstatusereignisAbandonSolicitInCSSinceStatic" value="AbandonSolicitInCSSinceStatic"/>
+    <string id="opcode_ProtokollstatusereignisEnableDhcpV6" value="EnableDhcpV6"/>
+    <string id="opcode_ProtokollstatusereignisDisableDhcpV6" value="DisableDhcpV6"/>
+    <string id="opcode_ProtokollstatusereignisNoProcessingSinceDhcpV6Disabled" value="NoProcessingSinceDhcpV6Disabled"/>
+    <string id="opcode_ProtokollstatusereignisAbandonSolicitInCSSinceV6Static" value="AbandonSolicitInCSSinceV6Static"/>
+    <string id="opcode_ProtokollstatusereignisAbandonSolicitInCSSinceV6Stateless" value="AbandonSolicitInCSSinceV6Stateless"/>
+    <string id="opcode_ProtokollstatusereignisAbandonSolicitSinceNonMulticast" value="AbandonSolicitSinceNonMulticast"/>
+    <string id="opcode_ProtokollstatusereignisNoteFlagValues" value="NoteFlagValues"/>
+    <string id="task_Adressenkonfigurations_Statusereignis" value="Adressenkonfigurations_Statusereignis"/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisWechselvonzustandsbehaftetzuzustandslos." value="Wechselvonzustandsbehaftetzuzustandslos."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisWechselvonzustandsloszuzustandsbehaftet." value="Wechselvonzustandsloszuzustandsbehaftet."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisWechselvonnichtDHCPzuzustandsbehaftet." value="WechselvonnichtDHCPzuzustandsbehaftet."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisWechselvonnichtDHCPzuzustandslos." value="WechselvonnichtDHCPzuzustandslos."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisStatischerModus." value="StatischerModus."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisDieAdressewurdeangeflanscht." value="DieAdressewurdeangeflanscht."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisDasAnflanschenderAdressewurdeaufgehoben." value="DasAnflanschenderAdressewurdeaufgehoben."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisIP_Konflikt" value="IP_Konflikt"/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisFehlerbeimInitialisierenderNetzwerkschnittstelle." value="FehlerbeimInitialisierenderNetzwerkschnittstelle."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisFehlerbeimAnflanschenderParameter." value="FehlerbeimAnflanschenderParameter."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisFehlerbeimInitialisierenderSchnittstelle." value="FehlerbeimInitialisierenderSchnittstelle."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisWechselvonzustandsbehaftetzuzustandsbehaftet." value="Wechselvonzustandsbehaftetzuzustandsbehaftet."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisDieAdresseistbereitsvorhanden." value="DieAdresseistbereitsvorhanden."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisKeineIP_Adresse." value="KeineIP_Adresse."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisDieKlassen_IDwirdfestgelegt." value="DieKlassen_IDwirdfestgelegt."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisFehlerbeimAbrufenderLease." value="FehlerbeimAbrufenderLease."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisFehlerbeiderErneuerungderLease." value="FehlerbeiderErneuerungderLease."/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisModusänderung" value="Modusänderung"/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisDHCPv6NetworkHintMatch" value="DHCPv6NetworkHintMatch"/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisDHCPv6NetworkHintStatefullConfig" value="DHCPv6NetworkHintStatefullConfig"/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisDHCPv6NetworkHintStatelessConfig" value="DHCPv6NetworkHintStatelessConfig"/>
+    <string id="opcode_Adressenkonfigurations_StatusereignisDHCPv6NetworkHintConfigExpired" value="DHCPv6NetworkHintConfigExpired"/>
+    <string id="task_Dienststatusereignis" value="Dienststatusereignis"/>
+    <string id="opcode_DienststatusereignisDerDienstwirdgestartet." value="DerDienstwirdgestartet."/>
+    <string id="opcode_DienststatusereignisDerDienstwirdbeendet." value="DerDienstwirdbeendet."/>
+    <string id="opcode_DienststatusereignisFehlerbeimBeendendesDiensts." value="FehlerbeimBeendendesDiensts."/>
+    <string id="opcode_DienststatusereignisFehlerbeiderDHCPv6DUID_Validierung" value="FehlerbeiderDHCPv6DUID_Validierung"/>
+    <string id="opcode_DienststatusereignisServiceStopWithRefCount" value="ServiceStopWithRefCount"/>
+    <string id="task_Winsock_Statusereignis" value="Winsock_Statusereignis"/>
+    <string id="opcode_Winsock_StatusereignisFehlerbeimÖffnendesSockets." value="FehlerbeimÖffnendesSockets."/>
+    <string id="opcode_Winsock_StatusereignisFehlerbeimSchließendesSockets." value="FehlerbeimSchließendesSockets."/>
+    <string id="task_DNS_Statusereignis" value="DNS_Statusereignis"/>
+    <string id="opcode_DNS_StatusereignisDieDNS_Registrierungistabgeschlossen." value="DieDNS_Registrierungistabgeschlossen."/>
+    <string id="opcode_DNS_StatusereignisDieAufhebungderDNS_Registrierungistabgeschlossen." value="DieAufhebungderDNS_Registrierungistabgeschlossen."/>
+    <string id="task_NetworkParameterStateEvent" value="NetworkParameterStateEvent"/>
+    <string id="opcode_NetworkParameterStateEventNotifyCSEntry" value="NotifyCSEntry"/>
+    <string id="opcode_NetworkParameterStateEventNotifyCSExit" value="NotifyCSExit"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

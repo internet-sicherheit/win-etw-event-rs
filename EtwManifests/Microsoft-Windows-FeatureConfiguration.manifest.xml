@@ -1,0 +1,90 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-FeatureConfiguration" guid="{c2f36562-a1e4-4bc3-a6f6-01a7adb643e8}" resourceFileName="Microsoft-Windows-FeatureConfiguration" messageFileName="Microsoft-Windows-FeatureConfiguration" symbol="MicrosoftWindowsFeatureConfiguration" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="FeatureConfiguration_Ereignisse" message="$(string.task_FeatureConfiguration_Ereignisse)" value="1001">
+      <opcodes>
+       <opcode name="OpCodezumFestlegendesFeaturezustands" message="$(string.opcode_FeatureConfiguration_EreignisseOpCodezumFestlegendesFeaturezustands)" value="11"/>
+       <opcode name="OpCodezumZurücksetzendesFeaturezustands" message="$(string.opcode_FeatureConfiguration_EreignisseOpCodezumZurücksetzendesFeaturezustands)" value="12"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <maps>
+     <valueMap name="ValueTypeMap">
+      <map value="0x0" message="$(string.map_ValueTypeMapREG_NONE)"/>
+      <map value="0x1" message="$(string.map_ValueTypeMapREG_SZ)"/>
+      <map value="0x2" message="$(string.map_ValueTypeMapREG_EXPAND_SZ)"/>
+      <map value="0x3" message="$(string.map_ValueTypeMapREG_BINARY)"/>
+      <map value="0x4" message="$(string.map_ValueTypeMapREG_DWORD)"/>
+      <map value="0x5" message="$(string.map_ValueTypeMapREG_DWORD_BIG_ENDIAN)"/>
+      <map value="0x6" message="$(string.map_ValueTypeMapREG_LINK)"/>
+      <map value="0x7" message="$(string.map_ValueTypeMapREG_MULTI_SZ)"/>
+      <map value="0x8" message="$(string.map_ValueTypeMapREG_RESOURCE_LIST)"/>
+      <map value="0x9" message="$(string.map_ValueTypeMapREG_FULL_RESOURCE_DESCRIPTOR)"/>
+      <map value="0xa" message="$(string.map_ValueTypeMapREG_RESOURCE_REQUIREMENTS_LIST)"/>
+      <map value="0xb" message="$(string.map_ValueTypeMapREG_QWORD)"/>
+     </valueMap>
+     <valueMap name="FeatureStateMap">
+      <map value="0x0" message="$(string.map_FeatureStateMapStandard)"/>
+      <map value="0x1" message="$(string.map_FeatureStateMapDeaktiviert)"/>
+      <map value="0x2" message="$(string.map_FeatureStateMapAktiviert)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1001" symbol="FeatureConfiguration_Ereignisse" version="0" task="FeatureConfiguration_Ereignisse" level="win:Error" template="FeatureConfiguration_EreignisseArgs"/>
+     <event value="1002" symbol="FeatureConfiguration_Ereignisse1002" version="0" task="FeatureConfiguration_Ereignisse" level="win:Error" template="FeatureConfiguration_Ereignisse1002Args"/>
+     <event value="1004" symbol="FeatureConfiguration_Ereignisse1004" version="0" task="FeatureConfiguration_Ereignisse" level="win:Error" template="FeatureConfiguration_EreignisseArgs"/>
+     <event value="1005" symbol="FeatureConfiguration_EreignisseOpCodezumFestlegendesFeaturezustands" version="0" task="FeatureConfiguration_Ereignisse" opcode="OpCodezumFestlegendesFeaturezustands" level="win:Informational" template="FeatureConfiguration_EreignisseOpCodezumFestlegendesFeaturezustandsArgs"/>
+     <event value="1006" symbol="FeatureConfiguration_EreignisseOpCodezumZurücksetzendesFeaturezustands" version="0" task="FeatureConfiguration_Ereignisse" opcode="OpCodezumZurücksetzendesFeaturezustands" level="win:Informational" template="FeatureConfiguration_EreignisseOpCodezumZurücksetzendesFeaturezustandsArgs"/>
+     <event value="5001" symbol="FeatureConfiguration_EreignisseStarten" version="0" task="FeatureConfiguration_Ereignisse" opcode="win:Starten" level="win:Informational"/>
+     <event value="5002" symbol="FeatureConfiguration_EreignisseBeenden" version="0" task="FeatureConfiguration_Ereignisse" opcode="win:Beenden" level="win:Informational"/>
+    </events>
+    <templates>
+     <template tid="FeatureConfiguration_EreignisseArgs">
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="FeatureConfiguration_Ereignisse1002Args">
+      <data name="RegKeyName" inType="win:UnicodeString"/>
+      <data name="ValueName" inType="win:UnicodeString"/>
+      <data name="ValueType" inType="win:UInt32" map="ValueTypeMap"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="FeatureConfiguration_EreignisseOpCodezumFestlegendesFeaturezustandsArgs">
+      <data name="FeatureId" inType="win:UInt32"/>
+      <data name="FeatureState" inType="win:UInt32" map="FeatureStateMap"/>
+     </template>
+     <template tid="FeatureConfiguration_EreignisseOpCodezumZurücksetzendesFeaturezustandsArgs">
+      <data name="FeatureId" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_FeatureConfiguration_Ereignisse" value="FeatureConfiguration_Ereignisse"/>
+    <string id="opcode_FeatureConfiguration_EreignisseOpCodezumFestlegendesFeaturezustands" value="OpCodezumFestlegendesFeaturezustands"/>
+    <string id="opcode_FeatureConfiguration_EreignisseOpCodezumZurücksetzendesFeaturezustands" value="OpCodezumZurücksetzendesFeaturezustands"/>
+    <string id="map_ValueTypeMapREG_NONE" value="REG_NONE"/>
+    <string id="map_ValueTypeMapREG_SZ" value="REG_SZ"/>
+    <string id="map_ValueTypeMapREG_EXPAND_SZ" value="REG_EXPAND_SZ"/>
+    <string id="map_ValueTypeMapREG_BINARY" value="REG_BINARY"/>
+    <string id="map_ValueTypeMapREG_DWORD" value="REG_DWORD"/>
+    <string id="map_ValueTypeMapREG_DWORD_BIG_ENDIAN" value="REG_DWORD_BIG_ENDIAN"/>
+    <string id="map_ValueTypeMapREG_LINK" value="REG_LINK"/>
+    <string id="map_ValueTypeMapREG_MULTI_SZ" value="REG_MULTI_SZ"/>
+    <string id="map_ValueTypeMapREG_RESOURCE_LIST" value="REG_RESOURCE_LIST"/>
+    <string id="map_ValueTypeMapREG_FULL_RESOURCE_DESCRIPTOR" value="REG_FULL_RESOURCE_DESCRIPTOR"/>
+    <string id="map_ValueTypeMapREG_RESOURCE_REQUIREMENTS_LIST" value="REG_RESOURCE_REQUIREMENTS_LIST"/>
+    <string id="map_ValueTypeMapREG_QWORD" value="REG_QWORD"/>
+    <string id="map_FeatureStateMapStandard" value="Standard"/>
+    <string id="map_FeatureStateMapDeaktiviert" value="Deaktiviert"/>
+    <string id="map_FeatureStateMapAktiviert" value="Aktiviert"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

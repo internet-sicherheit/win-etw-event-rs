@@ -1,0 +1,56 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-NetworkStatus" guid="{7868b0d4-1423-4681-afdf-27913575441e}" resourceFileName="Microsoft-Windows-NetworkStatus" messageFileName="Microsoft-Windows-NetworkStatus" symbol="MicrosoftWindowsNetworkStatus" source="Xml" >
+    <keywords>
+     <keyword name="Aoac" message="$(string.keyword_Aoac)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="Status" message="$(string.task_Status)" value="101"/>
+    </tasks>
+    <maps>
+     <valueMap name="StatusMap">
+      <map value="0x0" message="$(string.map_StatusMapDer Netzwerkstatus ist nicht verfügbar.)"/>
+      <map value="0x1" message="$(string.map_StatusMapKabel - Internet)"/>
+      <map value="0x2" message="$(string.map_StatusMapKabel - kein Internet)"/>
+      <map value="0x3" message="$(string.map_StatusMapKabel - getrennt)"/>
+      <map value="0x10" message="$(string.map_StatusMapWiFi - Internet)"/>
+      <map value="0x11" message="$(string.map_StatusMapMobiles Breitband - Internet)"/>
+      <map value="0x12" message="$(string.map_StatusMapMobiles Breitband - Internet (Roaming))"/>
+      <map value="0x20" message="$(string.map_StatusMapDrahtlos - kein Internet)"/>
+      <map value="0x21" message="$(string.map_StatusMapDrahtlos - Verbindung verfügbar)"/>
+      <map value="0x22" message="$(string.map_StatusMapDrahtlos - getrennt)"/>
+      <map value="0x30" message="$(string.map_StatusMapFlugzeugmodus)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="8001" symbol="Status" version="0" task="Status" level="win:Informational" keywords="Aoac" template="StatusArgs"/>
+    </events>
+    <templates>
+     <template tid="StatusArgs">
+      <data name="NetworkStatus" inType="win:UInt32" map="StatusMap"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Aoac" value="Aoac"/>
+    <string id="task_Status" value="Status"/>
+    <string id="map_StatusMapDer Netzwerkstatus ist nicht verfügbar." value="Der Netzwerkstatus ist nicht verfügbar."/>
+    <string id="map_StatusMapKabel - Internet" value="Kabel - Internet"/>
+    <string id="map_StatusMapKabel - kein Internet" value="Kabel - kein Internet"/>
+    <string id="map_StatusMapKabel - getrennt" value="Kabel - getrennt"/>
+    <string id="map_StatusMapWiFi - Internet" value="WiFi - Internet"/>
+    <string id="map_StatusMapMobiles Breitband - Internet" value="Mobiles Breitband - Internet"/>
+    <string id="map_StatusMapMobiles Breitband - Internet (Roaming)" value="Mobiles Breitband - Internet (Roaming)"/>
+    <string id="map_StatusMapDrahtlos - kein Internet" value="Drahtlos - kein Internet"/>
+    <string id="map_StatusMapDrahtlos - Verbindung verfügbar" value="Drahtlos - Verbindung verfügbar"/>
+    <string id="map_StatusMapDrahtlos - getrennt" value="Drahtlos - getrennt"/>
+    <string id="map_StatusMapFlugzeugmodus" value="Flugzeugmodus"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

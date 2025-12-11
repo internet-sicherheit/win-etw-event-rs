@@ -1,0 +1,28 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-FirstUX-PerfInstrumentation" guid="{fbef8096-2ca3-4082-acde-dcfb47e96b72}" resourceFileName="Microsoft-Windows-FirstUX-PerfInstrumentation" messageFileName="Microsoft-Windows-FirstUX-PerfInstrumentation" symbol="MicrosoftWindowsFirstUXPerfInstrumentation" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="InitialisierungdesSetup_Begrüßungsfensters" message="$(string.task_InitialisierungdesSetup_Begrüßungsfensters)" value="1"/>
+    </tasks>
+    <events>
+     <event value="0" symbol="InitialisierungdesSetup_BegrüßungsfenstersStarten" version="0" task="InitialisierungdesSetup_Begrüßungsfensters" opcode="win:Starten" level="win:Informational"/>
+     <event value="1" symbol="InitialisierungdesSetup_BegrüßungsfenstersBeenden" version="0" task="InitialisierungdesSetup_Begrüßungsfensters" opcode="win:Beenden" level="win:Informational"/>
+     <event value="2" symbol="InitialisierungdesSetup_BegrüßungsfenstersStarten2" version="0" task="InitialisierungdesSetup_Begrüßungsfensters" opcode="win:Starten" level="win:Informational"/>
+     <event value="3" symbol="InitialisierungdesSetup_BegrüßungsfenstersBeenden3" version="0" task="InitialisierungdesSetup_Begrüßungsfensters" opcode="win:Beenden" level="win:Informational"/>
+    </events>
+    <templates>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_InitialisierungdesSetup_Begrüßungsfensters" value="InitialisierungdesSetup_Begrüßungsfensters"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

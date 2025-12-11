@@ -1,0 +1,71 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-PowerCpl" guid="{b1f90b27-4551-49d6-b2bd-dfc6453762a6}" resourceFileName="Microsoft-Windows-PowerCpl" messageFileName="Microsoft-Windows-PowerCpl" symbol="MicrosoftWindowsPowerCpl" source="Xml" >
+    <keywords>
+     <keyword name="PowerCpl" message="$(string.keyword_PowerCpl)" mask="0x10000"/>
+    </keywords>
+    <tasks>
+     <task name="PowerCpl_InitializePage" message="$(string.task_PowerCpl_InitializePage)" value="101"/>
+     <task name="PowerCpl_Initialize" message="$(string.task_PowerCpl_Initialize)" value="103"/>
+     <task name="PowerCpl_InitPlanList" message="$(string.task_PowerCpl_InitPlanList)" value="113"/>
+     <task name="PowerCpl_InitBrightness" message="$(string.task_PowerCpl_InitBrightness)" value="115"/>
+     <task name="PowerCpl_UpdatePage" message="$(string.task_PowerCpl_UpdatePage)" value="117"/>
+     <task name="PowerCpl_Launch" message="$(string.task_PowerCpl_Launch)" value="118"/>
+     <task name="PowerCpl_InitializeCreateNewPlanPage" message="$(string.task_PowerCpl_InitializeCreateNewPlanPage)" value="119"/>
+     <task name="PowerCpl_InitializeGlobalSettingsPage" message="$(string.task_PowerCpl_InitializeGlobalSettingsPage)" value="120"/>
+     <task name="PowerCpl_InitializePlanSettingsPage" message="$(string.task_PowerCpl_InitializePlanSettingsPage)" value="121"/>
+     <task name="PowerCpl_InitializePowerPlansPage" message="$(string.task_PowerCpl_InitializePowerPlansPage)" value="122"/>
+    </tasks>
+    <events>
+     <event value="101" symbol="PowerCpl_InitializePageStarten" version="0" task="PowerCpl_InitializePage" opcode="win:Starten" level="win:Informational" keywords="PowerCpl"/>
+     <event value="102" symbol="PowerCpl_InitializePageBeenden" version="0" task="PowerCpl_InitializePage" opcode="win:Beenden" level="win:Informational" keywords="PowerCpl"/>
+     <event value="103" symbol="PowerCpl_InitializeStarten" version="0" task="PowerCpl_Initialize" opcode="win:Starten" level="win:Informational" keywords="PowerCpl"/>
+     <event value="104" symbol="PowerCpl_InitializeBeenden" version="0" task="PowerCpl_Initialize" opcode="win:Beenden" level="win:Informational" keywords="PowerCpl"/>
+     <event value="105" symbol="PowerCpl_InitializePageStarten105" version="0" task="PowerCpl_InitializePage" opcode="win:Starten" level="win:Informational" keywords="PowerCpl"/>
+     <event value="106" symbol="PowerCpl_InitializePageBeenden106" version="0" task="PowerCpl_InitializePage" opcode="win:Beenden" level="win:Informational" keywords="PowerCpl"/>
+     <event value="107" symbol="PowerCpl_InitializePageStarten107" version="0" task="PowerCpl_InitializePage" opcode="win:Starten" level="win:Informational" keywords="PowerCpl"/>
+     <event value="108" symbol="PowerCpl_InitializePageBeenden108" version="0" task="PowerCpl_InitializePage" opcode="win:Beenden" level="win:Informational" keywords="PowerCpl"/>
+     <event value="109" symbol="PowerCpl_InitializePageStarten109" version="0" task="PowerCpl_InitializePage" opcode="win:Starten" level="win:Informational" keywords="PowerCpl"/>
+     <event value="110" symbol="PowerCpl_InitializePageBeenden110" version="0" task="PowerCpl_InitializePage" opcode="win:Beenden" level="win:Informational" keywords="PowerCpl"/>
+     <event value="111" symbol="PowerCpl_InitializePageStarten111" version="0" task="PowerCpl_InitializePage" opcode="win:Starten" level="win:Informational" keywords="PowerCpl"/>
+     <event value="112" symbol="PowerCpl_InitializePageBeenden112" version="0" task="PowerCpl_InitializePage" opcode="win:Beenden" level="win:Informational" keywords="PowerCpl"/>
+     <event value="113" symbol="PowerCpl_InitPlanListStarten" version="0" task="PowerCpl_InitPlanList" opcode="win:Starten" level="win:Informational" keywords="PowerCpl"/>
+     <event value="114" symbol="PowerCpl_InitPlanListBeenden" version="0" task="PowerCpl_InitPlanList" opcode="win:Beenden" level="win:Informational" keywords="PowerCpl"/>
+     <event value="115" symbol="PowerCpl_InitBrightnessStarten" version="0" task="PowerCpl_InitBrightness" opcode="win:Starten" level="win:Informational" keywords="PowerCpl"/>
+     <event value="116" symbol="PowerCpl_InitBrightnessBeenden" version="0" task="PowerCpl_InitBrightness" opcode="win:Beenden" level="win:Informational" keywords="PowerCpl"/>
+     <event value="117" symbol="PowerCpl_UpdatePageStarten" version="0" task="PowerCpl_UpdatePage" opcode="win:Starten" level="win:Informational" keywords="PowerCpl"/>
+     <event value="118" symbol="PowerCpl_UpdatePageBeenden" version="0" task="PowerCpl_UpdatePage" opcode="win:Beenden" level="win:Informational" keywords="PowerCpl"/>
+     <event value="119" symbol="PowerCpl_LaunchBeenden" version="0" task="PowerCpl_Launch" opcode="win:Beenden" level="win:Informational" keywords="PowerCpl"/>
+     <event value="120" symbol="PowerCpl_InitializeCreateNewPlanPageStarten" version="0" task="PowerCpl_InitializeCreateNewPlanPage" opcode="win:Starten" level="win:Informational" keywords="PowerCpl"/>
+     <event value="121" symbol="PowerCpl_InitializeCreateNewPlanPageBeenden" version="0" task="PowerCpl_InitializeCreateNewPlanPage" opcode="win:Beenden" level="win:Informational" keywords="PowerCpl"/>
+     <event value="122" symbol="PowerCpl_InitializeGlobalSettingsPageStarten" version="0" task="PowerCpl_InitializeGlobalSettingsPage" opcode="win:Starten" level="win:Informational" keywords="PowerCpl"/>
+     <event value="123" symbol="PowerCpl_InitializeGlobalSettingsPageBeenden" version="0" task="PowerCpl_InitializeGlobalSettingsPage" opcode="win:Beenden" level="win:Informational" keywords="PowerCpl"/>
+     <event value="124" symbol="PowerCpl_InitializePlanSettingsPageStarten" version="0" task="PowerCpl_InitializePlanSettingsPage" opcode="win:Starten" level="win:Informational" keywords="PowerCpl"/>
+     <event value="125" symbol="PowerCpl_InitializePlanSettingsPageBeenden" version="0" task="PowerCpl_InitializePlanSettingsPage" opcode="win:Beenden" level="win:Informational" keywords="PowerCpl"/>
+     <event value="126" symbol="PowerCpl_InitializePowerPlansPageStarten" version="0" task="PowerCpl_InitializePowerPlansPage" opcode="win:Starten" level="win:Informational" keywords="PowerCpl"/>
+     <event value="127" symbol="PowerCpl_InitializePowerPlansPageBeenden" version="0" task="PowerCpl_InitializePowerPlansPage" opcode="win:Beenden" level="win:Informational" keywords="PowerCpl"/>
+    </events>
+    <templates>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_PowerCpl" value="PowerCpl"/>
+    <string id="task_PowerCpl_InitializePage" value="PowerCpl_InitializePage"/>
+    <string id="task_PowerCpl_Initialize" value="PowerCpl_Initialize"/>
+    <string id="task_PowerCpl_InitPlanList" value="PowerCpl_InitPlanList"/>
+    <string id="task_PowerCpl_InitBrightness" value="PowerCpl_InitBrightness"/>
+    <string id="task_PowerCpl_UpdatePage" value="PowerCpl_UpdatePage"/>
+    <string id="task_PowerCpl_Launch" value="PowerCpl_Launch"/>
+    <string id="task_PowerCpl_InitializeCreateNewPlanPage" value="PowerCpl_InitializeCreateNewPlanPage"/>
+    <string id="task_PowerCpl_InitializeGlobalSettingsPage" value="PowerCpl_InitializeGlobalSettingsPage"/>
+    <string id="task_PowerCpl_InitializePlanSettingsPage" value="PowerCpl_InitializePlanSettingsPage"/>
+    <string id="task_PowerCpl_InitializePowerPlansPage" value="PowerCpl_InitializePowerPlansPage"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

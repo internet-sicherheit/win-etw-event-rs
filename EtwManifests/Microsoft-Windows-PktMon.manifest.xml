@@ -1,0 +1,985 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-PktMon" guid="{4d4f80d9-c8bd-4d73-bb5b-19c90402c5ac}" resourceFileName="Microsoft-Windows-PktMon" messageFileName="Microsoft-Windows-PktMon" symbol="MicrosoftWindowsPktMon" source="Xml" >
+    <keywords>
+     <keyword name="Config" message="$(string.keyword_Config)" mask="0x1"/>
+     <keyword name="Rundown" message="$(string.keyword_Rundown)" mask="0x2"/>
+     <keyword name="NblParsed" message="$(string.keyword_NblParsed)" mask="0x4"/>
+     <keyword name="NblInfo" message="$(string.keyword_NblInfo)" mask="0x8"/>
+     <keyword name="Payload" message="$(string.keyword_Payload)" mask="0x10"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="ComponentType">
+      <map value="0x1" message="$(string.map_ComponentTypeNDIS)"/>
+      <map value="0x2" message="$(string.map_ComponentTypeMiniport)"/>
+      <map value="0x3" message="$(string.map_ComponentTypeFilter)"/>
+      <map value="0x4" message="$(string.map_ComponentTypeProtocol)"/>
+      <map value="0x5" message="$(string.map_ComponentTypeVmsVmNic)"/>
+      <map value="0x6" message="$(string.map_ComponentTypeVmsMiniport)"/>
+      <map value="0x7" message="$(string.map_ComponentTypeVmsExtMiniport)"/>
+      <map value="0x8" message="$(string.map_ComponentTypeVmsProtocolNic)"/>
+      <map value="0x9" message="$(string.map_ComponentTypeNetVsc Miniport)"/>
+      <map value="0xa" message="$(string.map_ComponentTypeHTTP Protocol)"/>
+      <map value="0xc" message="$(string.map_ComponentTypeSlbmux)"/>
+      <map value="0xd" message="$(string.map_ComponentTypeIPSec)"/>
+      <map value="0xe" message="$(string.map_ComponentTypeNetCx)"/>
+     </valueMap>
+     <valueMap name="PropertyType">
+      <map value="0x1" message="$(string.map_PropertyTypeIfIndex)"/>
+      <map value="0x2" message="$(string.map_PropertyTypeMiniportIfIndex)"/>
+      <map value="0x3" message="$(string.map_PropertyTypeLowerIfIndex)"/>
+      <map value="0x4" message="$(string.map_PropertyTypeIfGuid)"/>
+      <map value="0x5" message="$(string.map_PropertyTypeNdisMedium)"/>
+      <map value="0x6" message="$(string.map_PropertyTypePhysAddress)"/>
+      <map value="0x7" message="$(string.map_PropertyTypeEtherType)"/>
+      <map value="0x8" message="$(string.map_PropertyTypeOptDataPath)"/>
+      <map value="0x9" message="$(string.map_PropertyTypeNdisObject)"/>
+      <map value="0xa" message="$(string.map_PropertyTypeVMSwitchName)"/>
+      <map value="0xb" message="$(string.map_PropertyTypeVmsExtIfIndex)"/>
+      <map value="0xc" message="$(string.map_PropertyTypeLowestIfIndex)"/>
+      <map value="0xd" message="$(string.map_PropertyTypeIP Address)"/>
+      <map value="0xe" message="$(string.map_PropertyTypeIpIfIndex)"/>
+      <map value="0xf" message="$(string.map_PropertyTypeVSID)"/>
+      <map value="0x10" message="$(string.map_PropertyTypeVLAN)"/>
+      <map value="0x11" message="$(string.map_PropertyTypeCompartment ID)"/>
+     </valueMap>
+     <valueMap name="NdisMedium">
+      <map value="0x0" message="$(string.map_NdisMediumEthernet)"/>
+      <map value="0x10" message="$(string.map_NdisMediumWiFi)"/>
+      <map value="0x13" message="$(string.map_NdisMediumMBB)"/>
+     </valueMap>
+     <valueMap name="PacketDirectionTag">
+      <map value="0x0" message="$(string.map_PacketDirectionTagNone)"/>
+      <map value="0x1" message="$(string.map_PacketDirectionTagIn)"/>
+      <map value="0x2" message="$(string.map_PacketDirectionTagOut)"/>
+      <map value="0x3" message="$(string.map_PacketDirectionTagRx)"/>
+      <map value="0x4" message="$(string.map_PacketDirectionTagTx)"/>
+      <map value="0x5" message="$(string.map_PacketDirectionTagIngress)"/>
+      <map value="0x6" message="$(string.map_PacketDirectionTagEgress)"/>
+     </valueMap>
+     <valueMap name="EtherType">
+      <map value="0x800" message="$(string.map_EtherTypeIPv4)"/>
+      <map value="0x806" message="$(string.map_EtherTypeARP)"/>
+      <map value="0x8100" message="$(string.map_EtherTypeVLAN)"/>
+      <map value="0x86dd" message="$(string.map_EtherTypeIPv6)"/>
+      <map value="0x88cc" message="$(string.map_EtherTypeLLDP)"/>
+      <map value="0x88d9" message="$(string.map_EtherTypeLLTD)"/>
+     </valueMap>
+     <valueMap name="IPProtocol">
+      <map value="0x1" message="$(string.map_IPProtocolICMP)"/>
+      <map value="0x6" message="$(string.map_IPProtocolTCP)"/>
+      <map value="0x11" message="$(string.map_IPProtocolUDP)"/>
+      <map value="0x3a" message="$(string.map_IPProtocolICMPv6)"/>
+     </valueMap>
+     <bitMap name="TCPFlags">
+      <map value="0x1" message="$(string.map_TCPFlagsFIN)"/>
+      <map value="0x2" message="$(string.map_TCPFlagsSYN)"/>
+      <map value="0x4" message="$(string.map_TCPFlagsRST)"/>
+      <map value="0x8" message="$(string.map_TCPFlagsPSH)"/>
+      <map value="0x10" message="$(string.map_TCPFlagsACK)"/>
+      <map value="0x20" message="$(string.map_TCPFlagsURG)"/>
+      <map value="0x40" message="$(string.map_TCPFlagsECE)"/>
+      <map value="0x80" message="$(string.map_TCPFlagsCWR)"/>
+     </bitMap>
+     <valueMap name="PacketType">
+      <map value="0x0" message="$(string.map_PacketTypeUnknown)"/>
+      <map value="0x1" message="$(string.map_PacketTypeEthernet)"/>
+      <map value="0x2" message="$(string.map_PacketTypeWiFi)"/>
+      <map value="0x3" message="$(string.map_PacketTypeIP)"/>
+      <map value="0x4" message="$(string.map_PacketTypeHTTP)"/>
+     </valueMap>
+     <valueMap name="DropReason">
+      <map value="0x0" message="$(string.map_DropReasonUnspecified)"/>
+      <map value="0x1" message="$(string.map_DropReasonInvalid Data)"/>
+      <map value="0x2" message="$(string.map_DropReasonInvalid Packet)"/>
+      <map value="0x3" message="$(string.map_DropReasonInsufficient resources)"/>
+      <map value="0x4" message="$(string.map_DropReasonAdapter not ready)"/>
+      <map value="0x5" message="$(string.map_DropReasonMedia Disconnected)"/>
+      <map value="0x6" message="$(string.map_DropReasonNot accepted)"/>
+      <map value="0x7" message="$(string.map_DropReasonDevice busy)"/>
+      <map value="0x8" message="$(string.map_DropReasonFiltered)"/>
+      <map value="0x9" message="$(string.map_DropReasonFiltered VLAN)"/>
+      <map value="0xa" message="$(string.map_DropReasonUnauthorized VLAN)"/>
+      <map value="0xb" message="$(string.map_DropReasonUnauthorized MAC)"/>
+      <map value="0xc" message="$(string.map_DropReasonFailed security policy)"/>
+      <map value="0xd" message="$(string.map_DropReasonFailed pVlan setting)"/>
+      <map value="0xe" message="$(string.map_DropReasonQoS drop)"/>
+      <map value="0xf" message="$(string.map_DropReasonIPSec drop)"/>
+      <map value="0x10" message="$(string.map_DropReasonSpoofed MAC address is not allowed)"/>
+      <map value="0x11" message="$(string.map_DropReasonFailed DHCP guard)"/>
+      <map value="0x12" message="$(string.map_DropReasonFailed Router Guard)"/>
+      <map value="0x13" message="$(string.map_DropReasonBridge is not allowed inside VM)"/>
+      <map value="0x14" message="$(string.map_DropReasonVirtual Subnet ID does not match)"/>
+      <map value="0x15" message="$(string.map_DropReasonRequired vSwitch extension is missing)"/>
+      <map value="0x16" message="$(string.map_DropReasonCreating vSwitch over another vSwitch is not allowed)"/>
+      <map value="0x17" message="$(string.map_DropReasonMTU mismatch)"/>
+      <map value="0x18" message="$(string.map_DropReasonNative forwarding required)"/>
+      <map value="0x19" message="$(string.map_DropReasonInvalid VLAN format)"/>
+      <map value="0x1a" message="$(string.map_DropReasonInvalid destination MAC)"/>
+      <map value="0x1b" message="$(string.map_DropReasonInvalid source MAC)"/>
+      <map value="0x1c" message="$(string.map_DropReasonFirst NB too small)"/>
+      <map value="0x1e" message="$(string.map_DropReasonStorm limit exceeded)"/>
+      <map value="0x1f" message="$(string.map_DropReasonICMP request injected by switch)"/>
+      <map value="0x20" message="$(string.map_DropReasonFailed to update destination list)"/>
+      <map value="0x21" message="$(string.map_DropReasonDestination NIC is disabled)"/>
+      <map value="0x22" message="$(string.map_DropReasonPacket does not match destination NIC packet filter)"/>
+      <map value="0x23" message="$(string.map_DropReasonvSwitch data flow is disabled)"/>
+      <map value="0x24" message="$(string.map_DropReasonPort isolation setting does not allow untagged traffic)"/>
+      <map value="0x25" message="$(string.map_DropReasonInvalid PD queue)"/>
+      <map value="0x26" message="$(string.map_DropReasonAdapter is in low power state)"/>
+      <map value="0xc9" message="$(string.map_DropReasonAdapter paused)"/>
+      <map value="0xca" message="$(string.map_DropReasonAdapter reset in progress)"/>
+      <map value="0xcb" message="$(string.map_DropReasonSend aborted)"/>
+      <map value="0xcc" message="$(string.map_DropReasonUnsupported EtherType)"/>
+      <map value="0x191" message="$(string.map_DropReasonMicroport error)"/>
+      <map value="0x192" message="$(string.map_DropReasonVF not ready)"/>
+      <map value="0x193" message="$(string.map_DropReasonMicroport not ready)"/>
+      <map value="0x194" message="$(string.map_DropReasonVMBus error)"/>
+      <map value="0x259" message="$(string.map_DropReasonLoopback Ethernet packet)"/>
+      <map value="0x25a" message="$(string.map_DropReasonInvalid SNAP header)"/>
+      <map value="0x25b" message="$(string.map_DropReasonInvalid Ethernet type)"/>
+      <map value="0x25c" message="$(string.map_DropReasonInvalid packet length)"/>
+      <map value="0x25d" message="$(string.map_DropReasonHeader not contiguous)"/>
+      <map value="0x25e" message="$(string.map_DropReasonInvalid destination type)"/>
+      <map value="0x25f" message="$(string.map_DropReasonInterface not ready)"/>
+      <map value="0x260" message="$(string.map_DropReasonProvider not ready)"/>
+      <map value="0x261" message="$(string.map_DropReasonInvalid LSO information)"/>
+      <map value="0x262" message="$(string.map_DropReasonInvalid USO information)"/>
+      <map value="0x263" message="$(string.map_DropReasonInvalid medium type)"/>
+      <map value="0x264" message="$(string.map_DropReasonInvalid ARP header)"/>
+      <map value="0x265" message="$(string.map_DropReasonNo interface available to receive packets for an isolation ID)"/>
+      <map value="0x2bd" message="$(string.map_DropReasonFailed ARP Guard)"/>
+      <map value="0x2be" message="$(string.map_DropReasonInvalid ARP Pkt Limiter)"/>
+      <map value="0x2bf" message="$(string.map_DropReasonInvalid DHCP Pkt Limiter)"/>
+      <map value="0x2c0" message="$(string.map_DropReasonBroadcast Blocked)"/>
+      <map value="0x2c1" message="$(string.map_DropReasonBlock Non-IP Pkt)"/>
+      <map value="0x2c2" message="$(string.map_DropReasonInvalid ARP Filter)"/>
+      <map value="0x2c3" message="$(string.map_DropReasonFailed IPv4 Guard)"/>
+      <map value="0x2c4" message="$(string.map_DropReasonFailed IPv6 Guard)"/>
+      <map value="0x2c5" message="$(string.map_DropReasonFailed MAC Guard)"/>
+      <map value="0x2c6" message="$(string.map_DropReasonNo Broadcast destination ports available)"/>
+      <map value="0x2c7" message="$(string.map_DropReasonNo Unicast destination ports available)"/>
+      <map value="0x2c8" message="$(string.map_DropReasonUnicast port not ready)"/>
+      <map value="0x2c9" message="$(string.map_DropReasonSwitch callback failed)"/>
+      <map value="0x2ca" message="$(string.map_DropReasonInvalid ICMPV6 limiter)"/>
+      <map value="0x2cb" message="$(string.map_DropReasonIntercept Pkt Drop)"/>
+      <map value="0x2cc" message="$(string.map_DropReasonIntercept Blocked)"/>
+      <map value="0x2cd" message="$(string.map_DropReasonFailed NDP Guard)"/>
+      <map value="0x2ce" message="$(string.map_DropReasonPort Blocked)"/>
+      <map value="0x2cf" message="$(string.map_DropReasonNIC Suspended)"/>
+      <map value="0x385" message="$(string.map_DropReasonBad source address)"/>
+      <map value="0x386" message="$(string.map_DropReasonNot locally destined)"/>
+      <map value="0x387" message="$(string.map_DropReasonProtocol unreachable)"/>
+      <map value="0x388" message="$(string.map_DropReasonPort unreachable)"/>
+      <map value="0x389" message="$(string.map_DropReasonBad length)"/>
+      <map value="0x38a" message="$(string.map_DropReasonMalformed header)"/>
+      <map value="0x38b" message="$(string.map_DropReasonNo route available)"/>
+      <map value="0x38c" message="$(string.map_DropReasonBeyond scope)"/>
+      <map value="0x38d" message="$(string.map_DropReasonInspection drop)"/>
+      <map value="0x38e" message="$(string.map_DropReasonToo many decapsulations)"/>
+      <map value="0x38f" message="$(string.map_DropReasonAdministratively prohibited)"/>
+      <map value="0x390" message="$(string.map_DropReasonBad checksum)"/>
+      <map value="0x391" message="$(string.map_DropReasonMax receive path discard reason)"/>
+      <map value="0x392" message="$(string.map_DropReasonHop limit exceeded)"/>
+      <map value="0x393" message="$(string.map_DropReasonAddress unreachable)"/>
+      <map value="0x394" message="$(string.map_DropReasonRSC packet)"/>
+      <map value="0x395" message="$(string.map_DropReasonMax forward path discard reason)"/>
+      <map value="0x396" message="$(string.map_DropReasonArbitration unhandled)"/>
+      <map value="0x397" message="$(string.map_DropReasonInspection absorb)"/>
+      <map value="0x398" message="$(string.map_DropReasonFragment MTU exceeded)"/>
+      <map value="0x399" message="$(string.map_DropReasonBuffer length exceeded)"/>
+      <map value="0x39a" message="$(string.map_DropReasonAddress resolution timeout)"/>
+      <map value="0x39b" message="$(string.map_DropReasonAddress resolution failure)"/>
+      <map value="0x39c" message="$(string.map_DropReasonIPsec failure)"/>
+      <map value="0x39d" message="$(string.map_DropReasonExtension headers failure)"/>
+      <map value="0x39e" message="$(string.map_DropReasonIPSNPI client drop)"/>
+      <map value="0x39f" message="$(string.map_DropReasonUnsupported offload)"/>
+      <map value="0x3a0" message="$(string.map_DropReasonRouting failure)"/>
+      <map value="0x3a1" message="$(string.map_DropReasonAncillary data failure)"/>
+      <map value="0x3a2" message="$(string.map_DropReasonRaw data failure)"/>
+      <map value="0x3a3" message="$(string.map_DropReasonSession state failure)"/>
+      <map value="0x3a4" message="$(string.map_DropReasonIPSNPI: modified but not forwarded)"/>
+      <map value="0x3a5" message="$(string.map_DropReasonIPSNPI: no next hop specified)"/>
+      <map value="0x3a6" message="$(string.map_DropReasonIPSNPI: compartment not found)"/>
+      <map value="0x3a7" message="$(string.map_DropReasonIPSNPI: interface not found)"/>
+      <map value="0x3a8" message="$(string.map_DropReasonIPSNPI: subinterface not found)"/>
+      <map value="0x3a9" message="$(string.map_DropReasonIPSNPI: disabled interface)"/>
+      <map value="0x3aa" message="$(string.map_DropReasonIPSNPI: segmentation failed)"/>
+      <map value="0x3ab" message="$(string.map_DropReasonIPSNPI: No Ethernet header)"/>
+      <map value="0x3ac" message="$(string.map_DropReasonIPSNPI: unexpected fragment)"/>
+      <map value="0x3ad" message="$(string.map_DropReasonIPSNPI: unsupported interface type)"/>
+      <map value="0x3ae" message="$(string.map_DropReasonIPSNPI: invalid LSO info)"/>
+      <map value="0x3af" message="$(string.map_DropReasonIPSNPI: invalid USO info)"/>
+      <map value="0x3b0" message="$(string.map_DropReasonUnexpected internal error)"/>
+      <map value="0x3b1" message="$(string.map_DropReasonAdministratively configured setting)"/>
+      <map value="0x3b2" message="$(string.map_DropReasonBad option)"/>
+      <map value="0x3b3" message="$(string.map_DropReasonThis type of packet is not accepted over loopback)"/>
+      <map value="0x3b4" message="$(string.map_DropReasonScope of address is too limited)"/>
+      <map value="0x3b5" message="$(string.map_DropReasonFull queue)"/>
+      <map value="0x3b6" message="$(string.map_DropReasonDisabled interface)"/>
+      <map value="0x3b7" message="$(string.map_DropReasonICMP: general failure)"/>
+      <map value="0x3b8" message="$(string.map_DropReasonICMP: truncated header)"/>
+      <map value="0x3b9" message="$(string.map_DropReasonICMP: invalid checksum)"/>
+      <map value="0x3ba" message="$(string.map_DropReasonICMP: inspection drop)"/>
+      <map value="0x3bb" message="$(string.map_DropReasonICMP: rejecting loopback neighbor discovery)"/>
+      <map value="0x3bc" message="$(string.map_DropReasonICMP: unknown type/code)"/>
+      <map value="0x3bd" message="$(string.map_DropReasonICMP: truncated IP header)"/>
+      <map value="0x3be" message="$(string.map_DropReasonICMP: oversized IP header)"/>
+      <map value="0x3bf" message="$(string.map_DropReasonICMP: no handler)"/>
+      <map value="0x3c0" message="$(string.map_DropReasonICMP: not responding with error for error)"/>
+      <map value="0x3c1" message="$(string.map_DropReasonICMP: invalid source)"/>
+      <map value="0x3c2" message="$(string.map_DropReasonICMP: interface rate limit)"/>
+      <map value="0x3c3" message="$(string.map_DropReasonICMP: path rate limit)"/>
+      <map value="0x3c4" message="$(string.map_DropReasonICMP: no route)"/>
+      <map value="0x3c5" message="$(string.map_DropReasonICMP: no matching request)"/>
+      <map value="0x3c6" message="$(string.map_DropReasonICMP: buffer too small)"/>
+      <map value="0x3c7" message="$(string.map_DropReasonICMP: failed to obtain ancillary data)"/>
+      <map value="0x3c8" message="$(string.map_DropReasonICMP: incorrect hop limit)"/>
+      <map value="0x3c9" message="$(string.map_DropReasonICMP: unknown code)"/>
+      <map value="0x3ca" message="$(string.map_DropReasonICMP: source not linklocal)"/>
+      <map value="0x3cb" message="$(string.map_DropReasonICMP: truncated ND header)"/>
+      <map value="0x3cc" message="$(string.map_DropReasonICMP: invalid ND option SourceLinkAddr)"/>
+      <map value="0x3cd" message="$(string.map_DropReasonICMP: invalid ND option MTU)"/>
+      <map value="0x3ce" message="$(string.map_DropReasonICMP: invalid ND option PrefixInformation)"/>
+      <map value="0x3cf" message="$(string.map_DropReasonICMP: invalid ND option RouteInformation)"/>
+      <map value="0x3d0" message="$(string.map_DropReasonICMP: invalid ND option RDNSS)"/>
+      <map value="0x3d1" message="$(string.map_DropReasonICMP: invalid ND option DNSSL)"/>
+      <map value="0x3d2" message="$(string.map_DropReasonICMP: packet parsing failure)"/>
+      <map value="0x3d3" message="$(string.map_DropReasonICMP: disallowed by the current configuration)"/>
+      <map value="0x3d4" message="$(string.map_DropReasonICMP: invalid router advertisement)"/>
+      <map value="0x3d5" message="$(string.map_DropReasonICMP: source address is not on the same link as this interface)"/>
+      <map value="0x3d6" message="$(string.map_DropReasonICMP: invalid destination or target address for redirect message)"/>
+      <map value="0x3d7" message="$(string.map_DropReasonICMP: invalid neighbor discovery target)"/>
+      <map value="0x3d8" message="$(string.map_DropReasonICMP: invalid neighbor advertisement - the solicited flag cannot be set if the destination address is multicast)"/>
+      <map value="0x3d9" message="$(string.map_DropReasonICMP: the link layer address belongs to this interface)"/>
+      <map value="0x3da" message="$(string.map_DropReasonICMP: duplicate echo request)"/>
+      <map value="0x3db" message="$(string.map_DropReasonICMP: router advertisement came from a router that is not part of the potential router list)"/>
+      <map value="0x3dc" message="$(string.map_DropReasonICMP: router advertisement came from a router that is not part of the potential router list)"/>
+      <map value="0x3dd" message="$(string.map_DropReasonICMP: router advertisement came from a router that is not part of the potential router list)"/>
+      <map value="0x3de" message="$(string.map_DropReasonICMP: router advertisement came from a router that is not part of the potential router list)"/>
+      <map value="0x3df" message="$(string.map_DropReasonICMP: not locally destined)"/>
+      <map value="0x3e0" message="$(string.map_DropReasonARP: invalid source)"/>
+      <map value="0x3e1" message="$(string.map_DropReasonARP: invalid target)"/>
+      <map value="0x3e2" message="$(string.map_DropReasonARP: the source address in the DL header belongs to the local interface)"/>
+      <map value="0x3e3" message="$(string.map_DropReasonARP: not locally destined)"/>
+      <map value="0x3e5" message="$(string.map_DropReasonIPSNPI: URO segment size exceeds forward interface MTU)"/>
+      <map value="0x4b0" message="$(string.map_DropReasonINET: source unspecified)"/>
+      <map value="0x4b1" message="$(string.map_DropReasonINET: destination is multicast)"/>
+      <map value="0x4b2" message="$(string.map_DropReasonINET: header is invalid)"/>
+      <map value="0x4b3" message="$(string.map_DropReasonINET: checksum is invalid)"/>
+      <map value="0x4b4" message="$(string.map_DropReasonINET: transport endpoint was not found)"/>
+      <map value="0x4b5" message="$(string.map_DropReasonINET: connected path error)"/>
+      <map value="0x4b6" message="$(string.map_DropReasonINET: session state error)"/>
+      <map value="0x4b7" message="$(string.map_DropReasonINET: receive inspection)"/>
+      <map value="0x4b8" message="$(string.map_DropReasonINET: invalid ACK in SYN_SENT state)"/>
+      <map value="0x4b9" message="$(string.map_DropReasonINET: expected SYN)"/>
+      <map value="0x4ba" message="$(string.map_DropReasonINET: received RST)"/>
+      <map value="0x4bb" message="$(string.map_DropReasonINET: received SYN while in SYN_RCVD state)"/>
+      <map value="0x4bc" message="$(string.map_DropReasonINET: simultaneous connect)"/>
+      <map value="0x4bd" message="$(string.map_DropReasonINET: PAWS failed)"/>
+      <map value="0x4be" message="$(string.map_DropReasonINET: land attack)"/>
+      <map value="0x4bf" message="$(string.map_DropReasonINET: missed RST)"/>
+      <map value="0x4c0" message="$(string.map_DropReasonINET: outside receive window)"/>
+      <map value="0x4c1" message="$(string.map_DropReasonINET: duplicate segment)"/>
+      <map value="0x4c2" message="$(string.map_DropReasonINET: closed window)"/>
+      <map value="0x4c3" message="$(string.map_DropReasonINET: TCB removed)"/>
+      <map value="0x4c4" message="$(string.map_DropReasonINET: FIN-WAIT2)"/>
+      <map value="0x4c5" message="$(string.map_DropReasonINET: reassembly conflict)"/>
+      <map value="0x4c6" message="$(string.map_DropReasonINET: FIN received)"/>
+      <map value="0x4c7" message="$(string.map_DropReasonINET: listener received segment with invalid flags)"/>
+      <map value="0x4c8" message="$(string.map_DropReasonINET: TCB was not inserted in TCB table)"/>
+      <map value="0x4c9" message="$(string.map_DropReasonINET: TIME-WAIT TCB received RST outside receive window)"/>
+      <map value="0x4ca" message="$(string.map_DropReasonINET: TIME-WAIT TCB received segment with SYN and other flags set)"/>
+      <map value="0x4cb" message="$(string.map_DropReasonINET: packet dropped by TIME_WAIT TCB)"/>
+      <map value="0x4cc" message="$(string.map_DropReasonINET: SYN+ACK with fastopen cookie request)"/>
+      <map value="0x4cd" message="$(string.map_DropReasonINET: listener dropped SYN because SO_PAUSE_ACCEPT was set)"/>
+      <map value="0x4ce" message="$(string.map_DropReasonINET: listener dropped SYN to reduce memory pressure)"/>
+      <map value="0x4cf" message="$(string.map_DropReasonINET: accept inspection)"/>
+      <map value="0x4d0" message="$(string.map_DropReasonINET: accept redirection)"/>
+      <map value="0x515" message="$(string.map_DropReasonSlbMux: Parsing failure)"/>
+      <map value="0x516" message="$(string.map_DropReasonSluMux: First packet for the fragmented datagram is not at offset 0)"/>
+      <map value="0x517" message="$(string.map_DropReasonSlbMux: Failed to parse or validate the IP packet contained in the ICMP error message payload)"/>
+      <map value="0x518" message="$(string.map_DropReasonSlbMux: IP packet contained in the ICMP error message payload does not match any existing session)"/>
+      <map value="0x519" message="$(string.map_DropReasonSlbMux: Failed to find a nexthop for external hairpinning)"/>
+      <map value="0x51a" message="$(string.map_DropReasonSlbMux: No matching static mapping exists to let the packet in)"/>
+      <map value="0x51b" message="$(string.map_DropReasonSlbMux: Failed to acquire a reference on the nexthop object)"/>
+      <map value="0x51c" message="$(string.map_DropReasonSlbMux: Failed to clone the packet)"/>
+      <map value="0x51d" message="$(string.map_DropReasonSlbMux: Failed to translate the packet)"/>
+      <map value="0x51e" message="$(string.map_DropReasonSlbMux: Hop limit exceeded)"/>
+      <map value="0x51f" message="$(string.map_DropReasonSlbMux: Packet is larger than nexthop MTU and cannot be fragmented)"/>
+      <map value="0x520" message="$(string.map_DropReasonSlbMux: Unexpected route lookup failure)"/>
+      <map value="0x521" message="$(string.map_DropReasonSlbMux: No route to packet destination was found)"/>
+      <map value="0x522" message="$(string.map_DropReasonSlbMux: Failed to create a session object)"/>
+      <map value="0x523" message="$(string.map_DropReasonSlbMux: The interface over which the packet is to be routed is not a SLBMUX external interface)"/>
+      <map value="0x524" message="$(string.map_DropReasonSlbMux: The interface over which the packet is to be routed does not have a matching SLBMUX instancee)"/>
+      <map value="0x525" message="$(string.map_DropReasonSlbMux: SLBMUX device itself is not allowed to be an internal host at the same time)"/>
+      <map value="0x526" message="$(string.map_DropReasonSlbMux: Packet is routable in its own arrival compartment)"/>
+      <map value="0x527" message="$(string.map_DropReasonSlbMux: Packet transport protocol is not supported by SLBMUX)"/>
+      <map value="0x528" message="$(string.map_DropReasonSlbMux: Packet is destined to SLBMUX itself)"/>
+      <map value="0x529" message="$(string.map_DropReasonSlbMux: Packet destination address and port do not fall within any SLBMUX external address port range)"/>
+      <map value="0x52a" message="$(string.map_DropReasonSlbMux: SLBMUX rejected the packet)"/>
+      <map value="0x52b" message="$(string.map_DropReasonSlbMux: SLBMUX failed to find the Vip/Dip configuration)"/>
+      <map value="0x52c" message="$(string.map_DropReasonSlbMux: SLBMUX failed to send the encapsulated packet)"/>
+      <map value="0x52d" message="$(string.map_DropReasonSlbMux: SLBMUX found invalid reachability encap type for diagnostic packet)"/>
+      <map value="0x52e" message="$(string.map_DropReasonSlbMux: SLBMUX received redirect packet as the diagnostic packet)"/>
+      <map value="0x52f" message="$(string.map_DropReasonSlbMux: SLBMUX unable to handle redirect packet)"/>
+      <map value="0x579" message="$(string.map_DropReasonIPSEC: The SPI in the packet does not match a valid IPsec SA)"/>
+      <map value="0x57a" message="$(string.map_DropReasonIPSEC: Packet was received on an IPsec SA whose lifetime has expired)"/>
+      <map value="0x57b" message="$(string.map_DropReasonIPSEC: Packet was received on an IPsec SA that does not match the packet characteristics)"/>
+      <map value="0x57c" message="$(string.map_DropReasonIPSEC: Packet sequence number replay check failed)"/>
+      <map value="0x57d" message="$(string.map_DropReasonIPSEC: IPsec header and/or trailer in the packet is invalid)"/>
+      <map value="0x57e" message="$(string.map_DropReasonIPSEC: IPsec integrity check failed)"/>
+      <map value="0x57f" message="$(string.map_DropReasonIPSEC: IPsec dropped a clear text packet)"/>
+      <map value="0x580" message="$(string.map_DropReasonIPSEC: IPsec dropped an incoming ESP packet in authenticated firewall mode)"/>
+      <map value="0x581" message="$(string.map_DropReasonIPSEC: IPsec dropped a packet due to DoS throttling)"/>
+      <map value="0x582" message="$(string.map_DropReasonIPSEC: IPsec DoS Protection matched an explicit block rule)"/>
+      <map value="0x583" message="$(string.map_DropReasonIPSEC: IPsec DoS Protection received an IPsec specific multicast packet which is not allowed)"/>
+      <map value="0x584" message="$(string.map_DropReasonIPSEC: IPsec DoS Protection received an incorrectly formatted packet)"/>
+      <map value="0x585" message="$(string.map_DropReasonIPSEC: IPsec DoS Protection failed to look up state)"/>
+      <map value="0x586" message="$(string.map_DropReasonIPSEC: IPsec DoS Protection failed to create state because the maximum number of entries allowed by policy has been reached)"/>
+      <map value="0x587" message="$(string.map_DropReasonIPSEC: IPsec DoS Protection received an IPsec negotiation packet for a keying module which is not allowed by policy)"/>
+      <map value="0x588" message="$(string.map_DropReasonIPSEC: IPsec DoS Protection failed to create a per internal IP rate limit queue because the maximum number of queues allowed by policy has been reached)"/>
+      <map value="0x589" message="$(string.map_DropReasonIPSEC: Failed to allocate memory)"/>
+      <map value="0x58a" message="$(string.map_DropReasonIPSEC: Operation was unsuccessful)"/>
+      <map value="0x5dd" message="$(string.map_DropReasonNETCX: Failed to parse NetPacket Layout correctly)"/>
+      <map value="0x5de" message="$(string.map_DropReasonNETCX: Failed to calculate NetBuffer software checksum)"/>
+      <map value="0x5df" message="$(string.map_DropReasonNETCX: Queue is being stopped or destroyed)"/>
+      <map value="0x5e0" message="$(string.map_DropReasonNETCX: Invalid NetBuffer size)"/>
+      <map value="0x5e1" message="$(string.map_DropReasonNETCX: Large Send Offload (LSO) failure)"/>
+      <map value="0x5e2" message="$(string.map_DropReasonNETCX: UDP Segmentation Offload (USO) failure)"/>
+      <map value="0x5e3" message="$(string.map_DropReasonNETCX: NetBuffer bounce operation failed)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="10" symbol="task_0" version="0" task="task_0" level="win:Error" keywords="Config" template="task_0Args"/>
+     <event value="20" symbol="task_020" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_020Args"/>
+     <event value="30" symbol="task_030" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_030Args"/>
+     <event value="40" symbol="task_040" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_040Args"/>
+     <event value="50" symbol="task_050" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_030Args"/>
+     <event value="60" symbol="task_060" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_060Args"/>
+     <event value="65" symbol="task_065" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_065Args"/>
+     <event value="66" symbol="task_066" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_066Args"/>
+     <event value="70" symbol="task_070" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_070Args"/>
+     <event value="73" symbol="task_073" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_073Args"/>
+     <event value="75" symbol="task_075" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_075Args"/>
+     <event value="80" symbol="task_080" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_080Args"/>
+     <event value="90" symbol="task_090" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_090Args"/>
+     <event value="100" symbol="task_0100" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_0100Args"/>
+     <event value="110" symbol="task_0110" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_0110Args"/>
+     <event value="120" symbol="task_0120" version="0" task="task_0" level="win:Informational" keywords="NblParsed" template="task_0120Args"/>
+     <event value="130" symbol="task_0130" version="0" task="task_0" level="win:Informational" keywords="NblParsed" template="task_0130Args"/>
+     <event value="140" symbol="task_0140" version="0" task="task_0" level="win:Informational" keywords="NblParsed" template="task_0140Args"/>
+     <event value="150" symbol="task_0150" version="0" task="task_0" level="win:Informational" keywords="NblParsed" template="task_0150Args"/>
+     <event value="160" symbol="task_0160" version="0" task="task_0" level="win:Informational" keywords="Payload" template="task_0160Args"/>
+     <event value="170" symbol="task_0170" version="0" task="task_0" level="win:Informational" keywords="Payload" template="task_0160Args"/>
+     <event value="180" symbol="task_0180" version="0" task="task_0" level="win:Informational" keywords="NblInfo" template="task_0180Args"/>
+     <event value="190" symbol="task_0190" version="0" task="task_0" level="win:Informational" keywords="NblInfo" template="task_0180Args"/>
+     <event value="200" symbol="task_0200" version="0" task="task_0" level="win:Informational" keywords="Payload" template="task_0200Args"/>
+     <event value="210" symbol="task_0210" version="0" task="task_0" level="win:Informational" keywords="Payload" template="task_0200Args"/>
+     <event value="220" symbol="task_0220" version="0" task="task_0" level="win:Informational" keywords="Payload" template="task_0220Args"/>
+     <event value="230" symbol="task_0230" version="0" task="task_0" level="win:Informational" keywords="Payload" template="task_0220Args"/>
+     <event value="240" symbol="task_0240" version="0" task="task_0" level="win:Informational" keywords="Payload" template="task_0160Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_020Args">
+      <data name="Id" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16" map="ComponentType"/>
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Description" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_030Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="Value" inType="win:UInt32"/>
+     </template>
+     <template tid="task_040Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16" map="PropertyType"/>
+      <data name="Value" inType="win:GUID"/>
+     </template>
+     <template tid="task_060Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="Value" inType="win:UInt16" map="NdisMedium"/>
+     </template>
+     <template tid="task_065Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="IpAddress" inType="win:UInt32"/>
+     </template>
+     <template tid="task_066Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="IpAddress" inType="win:Binary"/>
+     </template>
+     <template tid="task_070Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="Value" inType="win:Binary" length="Size"/>
+     </template>
+     <template tid="task_073Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="Value" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_075Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="EtherType" inType="win:UInt16"/>
+     </template>
+     <template tid="task_080Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="DirTagIn" inType="win:UInt16"/>
+      <data name="PacketsIn" inType="win:UInt64"/>
+      <data name="BytesIn" inType="win:UInt64"/>
+      <data name="DirTagOut" inType="win:UInt16" map="PacketDirectionTag"/>
+      <data name="PacketsOut" inType="win:UInt64"/>
+      <data name="BytesOut" inType="win:UInt64"/>
+     </template>
+     <template tid="task_090Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeName" inType="win:UnicodeString"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="DirTagIn" inType="win:UInt16"/>
+      <data name="PacketsIn" inType="win:UInt64"/>
+      <data name="BytesIn" inType="win:UInt64"/>
+      <data name="DirTagOut" inType="win:UInt16"/>
+      <data name="PacketsOut" inType="win:UInt64"/>
+      <data name="BytesOut" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0100Args">
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="FilterName" inType="win:UnicodeString"/>
+      <data name="MacAddress1" inType="win:Binary"/>
+      <data name="MacAddress2" inType="win:Binary"/>
+      <data name="EtherType" inType="win:UInt16" map="EtherType"/>
+      <data name="VlanId" inType="win:UInt16"/>
+      <data name="IpAddress1" inType="win:UInt32"/>
+      <data name="IpAddress2" inType="win:UInt32"/>
+      <data name="Protocol" inType="win:UInt8" map="IPProtocol"/>
+      <data name="Port1" inType="win:UInt16"/>
+      <data name="Port2" inType="win:UInt16"/>
+      <data name="TCPFlags" inType="win:UInt8"/>
+     </template>
+     <template tid="task_0110Args">
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="FilterName" inType="win:UnicodeString"/>
+      <data name="MacAddress1" inType="win:Binary"/>
+      <data name="MacAddress2" inType="win:Binary"/>
+      <data name="EtherType" inType="win:UInt16"/>
+      <data name="VlanId" inType="win:UInt16"/>
+      <data name="IpAddress1" inType="win:Binary"/>
+      <data name="IpAddress2" inType="win:Binary"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="Port1" inType="win:UInt16"/>
+      <data name="Port2" inType="win:UInt16"/>
+      <data name="TCPFlags" inType="win:UInt8" map="TCPFlags"/>
+     </template>
+     <template tid="task_0120Args">
+      <data name="DestinationMAC" inType="win:Binary"/>
+      <data name="SourceMAC" inType="win:Binary"/>
+      <data name="EtherType" inType="win:UInt16"/>
+      <data name="VlanId" inType="win:UInt16"/>
+      <data name="DestinationIP" inType="win:UInt32"/>
+      <data name="SourceIP" inType="win:UInt32"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="DestinationPort" inType="win:UInt16"/>
+      <data name="SourcePort" inType="win:UInt16"/>
+      <data name="TCPFlags" inType="win:UInt8"/>
+      <data name="PktGroupId" inType="win:UInt64"/>
+      <data name="PktCount" inType="win:UInt16"/>
+      <data name="AppearanceCount" inType="win:UInt16"/>
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16" map="PacketType"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0130Args">
+      <data name="DestinationMAC" inType="win:Binary"/>
+      <data name="SourceMAC" inType="win:Binary"/>
+      <data name="EtherType" inType="win:UInt16"/>
+      <data name="VlanId" inType="win:UInt16"/>
+      <data name="DestinationIP" inType="win:Binary"/>
+      <data name="SourceIP" inType="win:Binary"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="DestinationPort" inType="win:UInt16"/>
+      <data name="SourcePort" inType="win:UInt16"/>
+      <data name="TCPFlags" inType="win:UInt8"/>
+      <data name="PktGroupId" inType="win:UInt64"/>
+      <data name="PktCount" inType="win:UInt16"/>
+      <data name="AppearanceCount" inType="win:UInt16"/>
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32" map="DropReason"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0140Args">
+      <data name="DestinationMAC" inType="win:Binary"/>
+      <data name="SourceMAC" inType="win:Binary"/>
+      <data name="EtherType" inType="win:UInt16"/>
+      <data name="VlanId" inType="win:UInt16"/>
+      <data name="DestinationIP" inType="win:UInt32"/>
+      <data name="SourceIP" inType="win:UInt32"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="DestinationPort" inType="win:UInt16"/>
+      <data name="SourcePort" inType="win:UInt16"/>
+      <data name="TCPFlags" inType="win:UInt8"/>
+      <data name="PktGroupId" inType="win:UInt64"/>
+      <data name="PktCount" inType="win:UInt16"/>
+      <data name="AppearanceCount" inType="win:UInt16"/>
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0150Args">
+      <data name="DestinationMAC" inType="win:Binary"/>
+      <data name="SourceMAC" inType="win:Binary"/>
+      <data name="EtherType" inType="win:UInt16"/>
+      <data name="VlanId" inType="win:UInt16"/>
+      <data name="DestinationIP" inType="win:Binary"/>
+      <data name="SourceIP" inType="win:Binary"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="DestinationPort" inType="win:UInt16"/>
+      <data name="SourcePort" inType="win:UInt16"/>
+      <data name="TCPFlags" inType="win:UInt8"/>
+      <data name="PktGroupId" inType="win:UInt64"/>
+      <data name="PktCount" inType="win:UInt16"/>
+      <data name="AppearanceCount" inType="win:UInt16"/>
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0160Args">
+      <data name="PktGroupId" inType="win:UInt64"/>
+      <data name="PktNumber" inType="win:UInt16"/>
+      <data name="AppearanceCount" inType="win:UInt16"/>
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+      <data name="OriginalPayloadSize" inType="win:UInt16"/>
+      <data name="LoggedPayloadSize" inType="win:UInt16"/>
+      <data name="Payload" inType="win:Binary" length="LoggedPayloadSize"/>
+     </template>
+     <template tid="task_0180Args">
+      <data name="PktGroupId" inType="win:UInt64"/>
+      <data name="PktCount" inType="win:UInt16"/>
+      <data name="AppearanceCount" inType="win:UInt16"/>
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+      <data name="TcpIpChecksum" inType="win:Pointer"/>
+      <data name="TcpLargeSend" inType="win:Pointer"/>
+      <data name="Ieee8021Q" inType="win:Pointer"/>
+      <data name="HashInfo" inType="win:Pointer"/>
+      <data name="HashValue" inType="win:Pointer"/>
+      <data name="VirtualSubnetInfo" inType="win:Pointer"/>
+      <data name="TcpRecvSegCoalesceInfo" inType="win:Pointer"/>
+      <data name="NrtNameResolutionId" inType="win:Pointer"/>
+      <data name="TcpSendOffloadsSupplementalInfo" inType="win:Pointer"/>
+      <data name="SwitchForwardingDetail" inType="win:UInt64"/>
+      <data name="GftOffloadInfo" inType="win:UInt64"/>
+      <data name="GftFlowEntryId" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0200Args">
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+      <data name="DestinationIP" inType="win:UInt32"/>
+      <data name="SourceIP" inType="win:UInt32"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="DestinationPort" inType="win:UInt16"/>
+      <data name="SourcePort" inType="win:UInt16"/>
+      <data name="OriginalPayloadSize" inType="win:UInt16"/>
+      <data name="LoggedPayloadSize" inType="win:UInt16"/>
+      <data name="Payload" inType="win:Binary" length="LoggedPayloadSize"/>
+     </template>
+     <template tid="task_0220Args">
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+      <data name="DestinationIP" inType="win:Binary"/>
+      <data name="SourceIP" inType="win:Binary"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="DestinationPort" inType="win:UInt16"/>
+      <data name="SourcePort" inType="win:UInt16"/>
+      <data name="OriginalPayloadSize" inType="win:UInt16"/>
+      <data name="LoggedPayloadSize" inType="win:UInt16"/>
+      <data name="Payload" inType="win:Binary" length="LoggedPayloadSize"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Config" value="Config"/>
+    <string id="keyword_Rundown" value="Rundown"/>
+    <string id="keyword_NblParsed" value="NblParsed"/>
+    <string id="keyword_NblInfo" value="NblInfo"/>
+    <string id="keyword_Payload" value="Payload"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_ComponentTypeNDIS" value="NDIS"/>
+    <string id="map_ComponentTypeMiniport" value="Miniport"/>
+    <string id="map_ComponentTypeFilter" value="Filter"/>
+    <string id="map_ComponentTypeProtocol" value="Protocol"/>
+    <string id="map_ComponentTypeVmsVmNic" value="VmsVmNic"/>
+    <string id="map_ComponentTypeVmsMiniport" value="VmsMiniport"/>
+    <string id="map_ComponentTypeVmsExtMiniport" value="VmsExtMiniport"/>
+    <string id="map_ComponentTypeVmsProtocolNic" value="VmsProtocolNic"/>
+    <string id="map_ComponentTypeNetVsc Miniport" value="NetVsc Miniport"/>
+    <string id="map_ComponentTypeHTTP Protocol" value="HTTP Protocol"/>
+    <string id="map_ComponentTypeSlbmux" value="Slbmux"/>
+    <string id="map_ComponentTypeIPSec" value="IPSec"/>
+    <string id="map_ComponentTypeNetCx" value="NetCx"/>
+    <string id="map_PropertyTypeIfIndex" value="IfIndex"/>
+    <string id="map_PropertyTypeMiniportIfIndex" value="MiniportIfIndex"/>
+    <string id="map_PropertyTypeLowerIfIndex" value="LowerIfIndex"/>
+    <string id="map_PropertyTypeIfGuid" value="IfGuid"/>
+    <string id="map_PropertyTypeNdisMedium" value="NdisMedium"/>
+    <string id="map_PropertyTypePhysAddress" value="PhysAddress"/>
+    <string id="map_PropertyTypeEtherType" value="EtherType"/>
+    <string id="map_PropertyTypeOptDataPath" value="OptDataPath"/>
+    <string id="map_PropertyTypeNdisObject" value="NdisObject"/>
+    <string id="map_PropertyTypeVMSwitchName" value="VMSwitchName"/>
+    <string id="map_PropertyTypeVmsExtIfIndex" value="VmsExtIfIndex"/>
+    <string id="map_PropertyTypeLowestIfIndex" value="LowestIfIndex"/>
+    <string id="map_PropertyTypeIP Address" value="IP Address"/>
+    <string id="map_PropertyTypeIpIfIndex" value="IpIfIndex"/>
+    <string id="map_PropertyTypeVSID" value="VSID"/>
+    <string id="map_PropertyTypeVLAN" value="VLAN"/>
+    <string id="map_PropertyTypeCompartment ID" value="Compartment ID"/>
+    <string id="map_NdisMediumEthernet" value="Ethernet"/>
+    <string id="map_NdisMediumWiFi" value="WiFi"/>
+    <string id="map_NdisMediumMBB" value="MBB"/>
+    <string id="map_PacketDirectionTagNone" value="None"/>
+    <string id="map_PacketDirectionTagIn" value="In"/>
+    <string id="map_PacketDirectionTagOut" value="Out"/>
+    <string id="map_PacketDirectionTagRx" value="Rx"/>
+    <string id="map_PacketDirectionTagTx" value="Tx"/>
+    <string id="map_PacketDirectionTagIngress" value="Ingress"/>
+    <string id="map_PacketDirectionTagEgress" value="Egress"/>
+    <string id="map_EtherTypeIPv4" value="IPv4"/>
+    <string id="map_EtherTypeARP" value="ARP"/>
+    <string id="map_EtherTypeVLAN" value="VLAN"/>
+    <string id="map_EtherTypeIPv6" value="IPv6"/>
+    <string id="map_EtherTypeLLDP" value="LLDP"/>
+    <string id="map_EtherTypeLLTD" value="LLTD"/>
+    <string id="map_IPProtocolICMP" value="ICMP"/>
+    <string id="map_IPProtocolTCP" value="TCP"/>
+    <string id="map_IPProtocolUDP" value="UDP"/>
+    <string id="map_IPProtocolICMPv6" value="ICMPv6"/>
+    <string id="map_TCPFlagsFIN" value="FIN"/>
+    <string id="map_TCPFlagsSYN" value="SYN"/>
+    <string id="map_TCPFlagsRST" value="RST"/>
+    <string id="map_TCPFlagsPSH" value="PSH"/>
+    <string id="map_TCPFlagsACK" value="ACK"/>
+    <string id="map_TCPFlagsURG" value="URG"/>
+    <string id="map_TCPFlagsECE" value="ECE"/>
+    <string id="map_TCPFlagsCWR" value="CWR"/>
+    <string id="map_PacketTypeUnknown" value="Unknown"/>
+    <string id="map_PacketTypeEthernet" value="Ethernet"/>
+    <string id="map_PacketTypeWiFi" value="WiFi"/>
+    <string id="map_PacketTypeIP" value="IP"/>
+    <string id="map_PacketTypeHTTP" value="HTTP"/>
+    <string id="map_DropReasonUnspecified" value="Unspecified"/>
+    <string id="map_DropReasonInvalid Data" value="Invalid Data"/>
+    <string id="map_DropReasonInvalid Packet" value="Invalid Packet"/>
+    <string id="map_DropReasonInsufficient resources" value="Insufficient resources"/>
+    <string id="map_DropReasonAdapter not ready" value="Adapter not ready"/>
+    <string id="map_DropReasonMedia Disconnected" value="Media Disconnected"/>
+    <string id="map_DropReasonNot accepted" value="Not accepted"/>
+    <string id="map_DropReasonDevice busy" value="Device busy"/>
+    <string id="map_DropReasonFiltered" value="Filtered"/>
+    <string id="map_DropReasonFiltered VLAN" value="Filtered VLAN"/>
+    <string id="map_DropReasonUnauthorized VLAN" value="Unauthorized VLAN"/>
+    <string id="map_DropReasonUnauthorized MAC" value="Unauthorized MAC"/>
+    <string id="map_DropReasonFailed security policy" value="Failed security policy"/>
+    <string id="map_DropReasonFailed pVlan setting" value="Failed pVlan setting"/>
+    <string id="map_DropReasonQoS drop" value="QoS drop"/>
+    <string id="map_DropReasonIPSec drop" value="IPSec drop"/>
+    <string id="map_DropReasonSpoofed MAC address is not allowed" value="Spoofed MAC address is not allowed"/>
+    <string id="map_DropReasonFailed DHCP guard" value="Failed DHCP guard"/>
+    <string id="map_DropReasonFailed Router Guard" value="Failed Router Guard"/>
+    <string id="map_DropReasonBridge is not allowed inside VM" value="Bridge is not allowed inside VM"/>
+    <string id="map_DropReasonVirtual Subnet ID does not match" value="Virtual Subnet ID does not match"/>
+    <string id="map_DropReasonRequired vSwitch extension is missing" value="Required vSwitch extension is missing"/>
+    <string id="map_DropReasonCreating vSwitch over another vSwitch is not allowed" value="Creating vSwitch over another vSwitch is not allowed"/>
+    <string id="map_DropReasonMTU mismatch" value="MTU mismatch"/>
+    <string id="map_DropReasonNative forwarding required" value="Native forwarding required"/>
+    <string id="map_DropReasonInvalid VLAN format" value="Invalid VLAN format"/>
+    <string id="map_DropReasonInvalid destination MAC" value="Invalid destination MAC"/>
+    <string id="map_DropReasonInvalid source MAC" value="Invalid source MAC"/>
+    <string id="map_DropReasonFirst NB too small" value="First NB too small"/>
+    <string id="map_DropReasonStorm limit exceeded" value="Storm limit exceeded"/>
+    <string id="map_DropReasonICMP request injected by switch" value="ICMP request injected by switch"/>
+    <string id="map_DropReasonFailed to update destination list" value="Failed to update destination list"/>
+    <string id="map_DropReasonDestination NIC is disabled" value="Destination NIC is disabled"/>
+    <string id="map_DropReasonPacket does not match destination NIC packet filter" value="Packet does not match destination NIC packet filter"/>
+    <string id="map_DropReasonvSwitch data flow is disabled" value="vSwitch data flow is disabled"/>
+    <string id="map_DropReasonPort isolation setting does not allow untagged traffic" value="Port isolation setting does not allow untagged traffic"/>
+    <string id="map_DropReasonInvalid PD queue" value="Invalid PD queue"/>
+    <string id="map_DropReasonAdapter is in low power state" value="Adapter is in low power state"/>
+    <string id="map_DropReasonAdapter paused" value="Adapter paused"/>
+    <string id="map_DropReasonAdapter reset in progress" value="Adapter reset in progress"/>
+    <string id="map_DropReasonSend aborted" value="Send aborted"/>
+    <string id="map_DropReasonUnsupported EtherType" value="Unsupported EtherType"/>
+    <string id="map_DropReasonMicroport error" value="Microport error"/>
+    <string id="map_DropReasonVF not ready" value="VF not ready"/>
+    <string id="map_DropReasonMicroport not ready" value="Microport not ready"/>
+    <string id="map_DropReasonVMBus error" value="VMBus error"/>
+    <string id="map_DropReasonLoopback Ethernet packet" value="Loopback Ethernet packet"/>
+    <string id="map_DropReasonInvalid SNAP header" value="Invalid SNAP header"/>
+    <string id="map_DropReasonInvalid Ethernet type" value="Invalid Ethernet type"/>
+    <string id="map_DropReasonInvalid packet length" value="Invalid packet length"/>
+    <string id="map_DropReasonHeader not contiguous" value="Header not contiguous"/>
+    <string id="map_DropReasonInvalid destination type" value="Invalid destination type"/>
+    <string id="map_DropReasonInterface not ready" value="Interface not ready"/>
+    <string id="map_DropReasonProvider not ready" value="Provider not ready"/>
+    <string id="map_DropReasonInvalid LSO information" value="Invalid LSO information"/>
+    <string id="map_DropReasonInvalid USO information" value="Invalid USO information"/>
+    <string id="map_DropReasonInvalid medium type" value="Invalid medium type"/>
+    <string id="map_DropReasonInvalid ARP header" value="Invalid ARP header"/>
+    <string id="map_DropReasonNo interface available to receive packets for an isolation ID" value="No interface available to receive packets for an isolation ID"/>
+    <string id="map_DropReasonFailed ARP Guard" value="Failed ARP Guard"/>
+    <string id="map_DropReasonInvalid ARP Pkt Limiter" value="Invalid ARP Pkt Limiter"/>
+    <string id="map_DropReasonInvalid DHCP Pkt Limiter" value="Invalid DHCP Pkt Limiter"/>
+    <string id="map_DropReasonBroadcast Blocked" value="Broadcast Blocked"/>
+    <string id="map_DropReasonBlock Non-IP Pkt" value="Block Non-IP Pkt"/>
+    <string id="map_DropReasonInvalid ARP Filter" value="Invalid ARP Filter"/>
+    <string id="map_DropReasonFailed IPv4 Guard" value="Failed IPv4 Guard"/>
+    <string id="map_DropReasonFailed IPv6 Guard" value="Failed IPv6 Guard"/>
+    <string id="map_DropReasonFailed MAC Guard" value="Failed MAC Guard"/>
+    <string id="map_DropReasonNo Broadcast destination ports available" value="No Broadcast destination ports available"/>
+    <string id="map_DropReasonNo Unicast destination ports available" value="No Unicast destination ports available"/>
+    <string id="map_DropReasonUnicast port not ready" value="Unicast port not ready"/>
+    <string id="map_DropReasonSwitch callback failed" value="Switch callback failed"/>
+    <string id="map_DropReasonInvalid ICMPV6 limiter" value="Invalid ICMPV6 limiter"/>
+    <string id="map_DropReasonIntercept Pkt Drop" value="Intercept Pkt Drop"/>
+    <string id="map_DropReasonIntercept Blocked" value="Intercept Blocked"/>
+    <string id="map_DropReasonFailed NDP Guard" value="Failed NDP Guard"/>
+    <string id="map_DropReasonPort Blocked" value="Port Blocked"/>
+    <string id="map_DropReasonNIC Suspended" value="NIC Suspended"/>
+    <string id="map_DropReasonBad source address" value="Bad source address"/>
+    <string id="map_DropReasonNot locally destined" value="Not locally destined"/>
+    <string id="map_DropReasonProtocol unreachable" value="Protocol unreachable"/>
+    <string id="map_DropReasonPort unreachable" value="Port unreachable"/>
+    <string id="map_DropReasonBad length" value="Bad length"/>
+    <string id="map_DropReasonMalformed header" value="Malformed header"/>
+    <string id="map_DropReasonNo route available" value="No route available"/>
+    <string id="map_DropReasonBeyond scope" value="Beyond scope"/>
+    <string id="map_DropReasonInspection drop" value="Inspection drop"/>
+    <string id="map_DropReasonToo many decapsulations" value="Too many decapsulations"/>
+    <string id="map_DropReasonAdministratively prohibited" value="Administratively prohibited"/>
+    <string id="map_DropReasonBad checksum" value="Bad checksum"/>
+    <string id="map_DropReasonMax receive path discard reason" value="Max receive path discard reason"/>
+    <string id="map_DropReasonHop limit exceeded" value="Hop limit exceeded"/>
+    <string id="map_DropReasonAddress unreachable" value="Address unreachable"/>
+    <string id="map_DropReasonRSC packet" value="RSC packet"/>
+    <string id="map_DropReasonMax forward path discard reason" value="Max forward path discard reason"/>
+    <string id="map_DropReasonArbitration unhandled" value="Arbitration unhandled"/>
+    <string id="map_DropReasonInspection absorb" value="Inspection absorb"/>
+    <string id="map_DropReasonFragment MTU exceeded" value="Fragment MTU exceeded"/>
+    <string id="map_DropReasonBuffer length exceeded" value="Buffer length exceeded"/>
+    <string id="map_DropReasonAddress resolution timeout" value="Address resolution timeout"/>
+    <string id="map_DropReasonAddress resolution failure" value="Address resolution failure"/>
+    <string id="map_DropReasonIPsec failure" value="IPsec failure"/>
+    <string id="map_DropReasonExtension headers failure" value="Extension headers failure"/>
+    <string id="map_DropReasonIPSNPI client drop" value="IPSNPI client drop"/>
+    <string id="map_DropReasonUnsupported offload" value="Unsupported offload"/>
+    <string id="map_DropReasonRouting failure" value="Routing failure"/>
+    <string id="map_DropReasonAncillary data failure" value="Ancillary data failure"/>
+    <string id="map_DropReasonRaw data failure" value="Raw data failure"/>
+    <string id="map_DropReasonSession state failure" value="Session state failure"/>
+    <string id="map_DropReasonIPSNPI: modified but not forwarded" value="IPSNPI: modified but not forwarded"/>
+    <string id="map_DropReasonIPSNPI: no next hop specified" value="IPSNPI: no next hop specified"/>
+    <string id="map_DropReasonIPSNPI: compartment not found" value="IPSNPI: compartment not found"/>
+    <string id="map_DropReasonIPSNPI: interface not found" value="IPSNPI: interface not found"/>
+    <string id="map_DropReasonIPSNPI: subinterface not found" value="IPSNPI: subinterface not found"/>
+    <string id="map_DropReasonIPSNPI: disabled interface" value="IPSNPI: disabled interface"/>
+    <string id="map_DropReasonIPSNPI: segmentation failed" value="IPSNPI: segmentation failed"/>
+    <string id="map_DropReasonIPSNPI: No Ethernet header" value="IPSNPI: No Ethernet header"/>
+    <string id="map_DropReasonIPSNPI: unexpected fragment" value="IPSNPI: unexpected fragment"/>
+    <string id="map_DropReasonIPSNPI: unsupported interface type" value="IPSNPI: unsupported interface type"/>
+    <string id="map_DropReasonIPSNPI: invalid LSO info" value="IPSNPI: invalid LSO info"/>
+    <string id="map_DropReasonIPSNPI: invalid USO info" value="IPSNPI: invalid USO info"/>
+    <string id="map_DropReasonUnexpected internal error" value="Unexpected internal error"/>
+    <string id="map_DropReasonAdministratively configured setting" value="Administratively configured setting"/>
+    <string id="map_DropReasonBad option" value="Bad option"/>
+    <string id="map_DropReasonThis type of packet is not accepted over loopback" value="This type of packet is not accepted over loopback"/>
+    <string id="map_DropReasonScope of address is too limited" value="Scope of address is too limited"/>
+    <string id="map_DropReasonFull queue" value="Full queue"/>
+    <string id="map_DropReasonDisabled interface" value="Disabled interface"/>
+    <string id="map_DropReasonICMP: general failure" value="ICMP: general failure"/>
+    <string id="map_DropReasonICMP: truncated header" value="ICMP: truncated header"/>
+    <string id="map_DropReasonICMP: invalid checksum" value="ICMP: invalid checksum"/>
+    <string id="map_DropReasonICMP: inspection drop" value="ICMP: inspection drop"/>
+    <string id="map_DropReasonICMP: rejecting loopback neighbor discovery" value="ICMP: rejecting loopback neighbor discovery"/>
+    <string id="map_DropReasonICMP: unknown type/code" value="ICMP: unknown type/code"/>
+    <string id="map_DropReasonICMP: truncated IP header" value="ICMP: truncated IP header"/>
+    <string id="map_DropReasonICMP: oversized IP header" value="ICMP: oversized IP header"/>
+    <string id="map_DropReasonICMP: no handler" value="ICMP: no handler"/>
+    <string id="map_DropReasonICMP: not responding with error for error" value="ICMP: not responding with error for error"/>
+    <string id="map_DropReasonICMP: invalid source" value="ICMP: invalid source"/>
+    <string id="map_DropReasonICMP: interface rate limit" value="ICMP: interface rate limit"/>
+    <string id="map_DropReasonICMP: path rate limit" value="ICMP: path rate limit"/>
+    <string id="map_DropReasonICMP: no route" value="ICMP: no route"/>
+    <string id="map_DropReasonICMP: no matching request" value="ICMP: no matching request"/>
+    <string id="map_DropReasonICMP: buffer too small" value="ICMP: buffer too small"/>
+    <string id="map_DropReasonICMP: failed to obtain ancillary data" value="ICMP: failed to obtain ancillary data"/>
+    <string id="map_DropReasonICMP: incorrect hop limit" value="ICMP: incorrect hop limit"/>
+    <string id="map_DropReasonICMP: unknown code" value="ICMP: unknown code"/>
+    <string id="map_DropReasonICMP: source not linklocal" value="ICMP: source not linklocal"/>
+    <string id="map_DropReasonICMP: truncated ND header" value="ICMP: truncated ND header"/>
+    <string id="map_DropReasonICMP: invalid ND option SourceLinkAddr" value="ICMP: invalid ND option SourceLinkAddr"/>
+    <string id="map_DropReasonICMP: invalid ND option MTU" value="ICMP: invalid ND option MTU"/>
+    <string id="map_DropReasonICMP: invalid ND option PrefixInformation" value="ICMP: invalid ND option PrefixInformation"/>
+    <string id="map_DropReasonICMP: invalid ND option RouteInformation" value="ICMP: invalid ND option RouteInformation"/>
+    <string id="map_DropReasonICMP: invalid ND option RDNSS" value="ICMP: invalid ND option RDNSS"/>
+    <string id="map_DropReasonICMP: invalid ND option DNSSL" value="ICMP: invalid ND option DNSSL"/>
+    <string id="map_DropReasonICMP: packet parsing failure" value="ICMP: packet parsing failure"/>
+    <string id="map_DropReasonICMP: disallowed by the current configuration" value="ICMP: disallowed by the current configuration"/>
+    <string id="map_DropReasonICMP: invalid router advertisement" value="ICMP: invalid router advertisement"/>
+    <string id="map_DropReasonICMP: source address is not on the same link as this interface" value="ICMP: source address is not on the same link as this interface"/>
+    <string id="map_DropReasonICMP: invalid destination or target address for redirect message" value="ICMP: invalid destination or target address for redirect message"/>
+    <string id="map_DropReasonICMP: invalid neighbor discovery target" value="ICMP: invalid neighbor discovery target"/>
+    <string id="map_DropReasonICMP: invalid neighbor advertisement - the solicited flag cannot be set if the destination address is multicast" value="ICMP: invalid neighbor advertisement - the solicited flag cannot be set if the destination address is multicast"/>
+    <string id="map_DropReasonICMP: the link layer address belongs to this interface" value="ICMP: the link layer address belongs to this interface"/>
+    <string id="map_DropReasonICMP: duplicate echo request" value="ICMP: duplicate echo request"/>
+    <string id="map_DropReasonICMP: router advertisement came from a router that is not part of the potential router list" value="ICMP: router advertisement came from a router that is not part of the potential router list"/>
+    <string id="map_DropReasonICMP: router advertisement came from a router that is not part of the potential router list" value="ICMP: router advertisement came from a router that is not part of the potential router list"/>
+    <string id="map_DropReasonICMP: router advertisement came from a router that is not part of the potential router list" value="ICMP: router advertisement came from a router that is not part of the potential router list"/>
+    <string id="map_DropReasonICMP: router advertisement came from a router that is not part of the potential router list" value="ICMP: router advertisement came from a router that is not part of the potential router list"/>
+    <string id="map_DropReasonICMP: not locally destined" value="ICMP: not locally destined"/>
+    <string id="map_DropReasonARP: invalid source" value="ARP: invalid source"/>
+    <string id="map_DropReasonARP: invalid target" value="ARP: invalid target"/>
+    <string id="map_DropReasonARP: the source address in the DL header belongs to the local interface" value="ARP: the source address in the DL header belongs to the local interface"/>
+    <string id="map_DropReasonARP: not locally destined" value="ARP: not locally destined"/>
+    <string id="map_DropReasonIPSNPI: URO segment size exceeds forward interface MTU" value="IPSNPI: URO segment size exceeds forward interface MTU"/>
+    <string id="map_DropReasonINET: source unspecified" value="INET: source unspecified"/>
+    <string id="map_DropReasonINET: destination is multicast" value="INET: destination is multicast"/>
+    <string id="map_DropReasonINET: header is invalid" value="INET: header is invalid"/>
+    <string id="map_DropReasonINET: checksum is invalid" value="INET: checksum is invalid"/>
+    <string id="map_DropReasonINET: transport endpoint was not found" value="INET: transport endpoint was not found"/>
+    <string id="map_DropReasonINET: connected path error" value="INET: connected path error"/>
+    <string id="map_DropReasonINET: session state error" value="INET: session state error"/>
+    <string id="map_DropReasonINET: receive inspection" value="INET: receive inspection"/>
+    <string id="map_DropReasonINET: invalid ACK in SYN_SENT state" value="INET: invalid ACK in SYN_SENT state"/>
+    <string id="map_DropReasonINET: expected SYN" value="INET: expected SYN"/>
+    <string id="map_DropReasonINET: received RST" value="INET: received RST"/>
+    <string id="map_DropReasonINET: received SYN while in SYN_RCVD state" value="INET: received SYN while in SYN_RCVD state"/>
+    <string id="map_DropReasonINET: simultaneous connect" value="INET: simultaneous connect"/>
+    <string id="map_DropReasonINET: PAWS failed" value="INET: PAWS failed"/>
+    <string id="map_DropReasonINET: land attack" value="INET: land attack"/>
+    <string id="map_DropReasonINET: missed RST" value="INET: missed RST"/>
+    <string id="map_DropReasonINET: outside receive window" value="INET: outside receive window"/>
+    <string id="map_DropReasonINET: duplicate segment" value="INET: duplicate segment"/>
+    <string id="map_DropReasonINET: closed window" value="INET: closed window"/>
+    <string id="map_DropReasonINET: TCB removed" value="INET: TCB removed"/>
+    <string id="map_DropReasonINET: FIN-WAIT2" value="INET: FIN-WAIT2"/>
+    <string id="map_DropReasonINET: reassembly conflict" value="INET: reassembly conflict"/>
+    <string id="map_DropReasonINET: FIN received" value="INET: FIN received"/>
+    <string id="map_DropReasonINET: listener received segment with invalid flags" value="INET: listener received segment with invalid flags"/>
+    <string id="map_DropReasonINET: TCB was not inserted in TCB table" value="INET: TCB was not inserted in TCB table"/>
+    <string id="map_DropReasonINET: TIME-WAIT TCB received RST outside receive window" value="INET: TIME-WAIT TCB received RST outside receive window"/>
+    <string id="map_DropReasonINET: TIME-WAIT TCB received segment with SYN and other flags set" value="INET: TIME-WAIT TCB received segment with SYN and other flags set"/>
+    <string id="map_DropReasonINET: packet dropped by TIME_WAIT TCB" value="INET: packet dropped by TIME_WAIT TCB"/>
+    <string id="map_DropReasonINET: SYN+ACK with fastopen cookie request" value="INET: SYN+ACK with fastopen cookie request"/>
+    <string id="map_DropReasonINET: listener dropped SYN because SO_PAUSE_ACCEPT was set" value="INET: listener dropped SYN because SO_PAUSE_ACCEPT was set"/>
+    <string id="map_DropReasonINET: listener dropped SYN to reduce memory pressure" value="INET: listener dropped SYN to reduce memory pressure"/>
+    <string id="map_DropReasonINET: accept inspection" value="INET: accept inspection"/>
+    <string id="map_DropReasonINET: accept redirection" value="INET: accept redirection"/>
+    <string id="map_DropReasonSlbMux: Parsing failure" value="SlbMux: Parsing failure"/>
+    <string id="map_DropReasonSluMux: First packet for the fragmented datagram is not at offset 0" value="SluMux: First packet for the fragmented datagram is not at offset 0"/>
+    <string id="map_DropReasonSlbMux: Failed to parse or validate the IP packet contained in the ICMP error message payload" value="SlbMux: Failed to parse or validate the IP packet contained in the ICMP error message payload"/>
+    <string id="map_DropReasonSlbMux: IP packet contained in the ICMP error message payload does not match any existing session" value="SlbMux: IP packet contained in the ICMP error message payload does not match any existing session"/>
+    <string id="map_DropReasonSlbMux: Failed to find a nexthop for external hairpinning" value="SlbMux: Failed to find a nexthop for external hairpinning"/>
+    <string id="map_DropReasonSlbMux: No matching static mapping exists to let the packet in" value="SlbMux: No matching static mapping exists to let the packet in"/>
+    <string id="map_DropReasonSlbMux: Failed to acquire a reference on the nexthop object" value="SlbMux: Failed to acquire a reference on the nexthop object"/>
+    <string id="map_DropReasonSlbMux: Failed to clone the packet" value="SlbMux: Failed to clone the packet"/>
+    <string id="map_DropReasonSlbMux: Failed to translate the packet" value="SlbMux: Failed to translate the packet"/>
+    <string id="map_DropReasonSlbMux: Hop limit exceeded" value="SlbMux: Hop limit exceeded"/>
+    <string id="map_DropReasonSlbMux: Packet is larger than nexthop MTU and cannot be fragmented" value="SlbMux: Packet is larger than nexthop MTU and cannot be fragmented"/>
+    <string id="map_DropReasonSlbMux: Unexpected route lookup failure" value="SlbMux: Unexpected route lookup failure"/>
+    <string id="map_DropReasonSlbMux: No route to packet destination was found" value="SlbMux: No route to packet destination was found"/>
+    <string id="map_DropReasonSlbMux: Failed to create a session object" value="SlbMux: Failed to create a session object"/>
+    <string id="map_DropReasonSlbMux: The interface over which the packet is to be routed is not a SLBMUX external interface" value="SlbMux: The interface over which the packet is to be routed is not a SLBMUX external interface"/>
+    <string id="map_DropReasonSlbMux: The interface over which the packet is to be routed does not have a matching SLBMUX instancee" value="SlbMux: The interface over which the packet is to be routed does not have a matching SLBMUX instancee"/>
+    <string id="map_DropReasonSlbMux: SLBMUX device itself is not allowed to be an internal host at the same time" value="SlbMux: SLBMUX device itself is not allowed to be an internal host at the same time"/>
+    <string id="map_DropReasonSlbMux: Packet is routable in its own arrival compartment" value="SlbMux: Packet is routable in its own arrival compartment"/>
+    <string id="map_DropReasonSlbMux: Packet transport protocol is not supported by SLBMUX" value="SlbMux: Packet transport protocol is not supported by SLBMUX"/>
+    <string id="map_DropReasonSlbMux: Packet is destined to SLBMUX itself" value="SlbMux: Packet is destined to SLBMUX itself"/>
+    <string id="map_DropReasonSlbMux: Packet destination address and port do not fall within any SLBMUX external address port range" value="SlbMux: Packet destination address and port do not fall within any SLBMUX external address port range"/>
+    <string id="map_DropReasonSlbMux: SLBMUX rejected the packet" value="SlbMux: SLBMUX rejected the packet"/>
+    <string id="map_DropReasonSlbMux: SLBMUX failed to find the Vip/Dip configuration" value="SlbMux: SLBMUX failed to find the Vip/Dip configuration"/>
+    <string id="map_DropReasonSlbMux: SLBMUX failed to send the encapsulated packet" value="SlbMux: SLBMUX failed to send the encapsulated packet"/>
+    <string id="map_DropReasonSlbMux: SLBMUX found invalid reachability encap type for diagnostic packet" value="SlbMux: SLBMUX found invalid reachability encap type for diagnostic packet"/>
+    <string id="map_DropReasonSlbMux: SLBMUX received redirect packet as the diagnostic packet" value="SlbMux: SLBMUX received redirect packet as the diagnostic packet"/>
+    <string id="map_DropReasonSlbMux: SLBMUX unable to handle redirect packet" value="SlbMux: SLBMUX unable to handle redirect packet"/>
+    <string id="map_DropReasonIPSEC: The SPI in the packet does not match a valid IPsec SA" value="IPSEC: The SPI in the packet does not match a valid IPsec SA"/>
+    <string id="map_DropReasonIPSEC: Packet was received on an IPsec SA whose lifetime has expired" value="IPSEC: Packet was received on an IPsec SA whose lifetime has expired"/>
+    <string id="map_DropReasonIPSEC: Packet was received on an IPsec SA that does not match the packet characteristics" value="IPSEC: Packet was received on an IPsec SA that does not match the packet characteristics"/>
+    <string id="map_DropReasonIPSEC: Packet sequence number replay check failed" value="IPSEC: Packet sequence number replay check failed"/>
+    <string id="map_DropReasonIPSEC: IPsec header and/or trailer in the packet is invalid" value="IPSEC: IPsec header and/or trailer in the packet is invalid"/>
+    <string id="map_DropReasonIPSEC: IPsec integrity check failed" value="IPSEC: IPsec integrity check failed"/>
+    <string id="map_DropReasonIPSEC: IPsec dropped a clear text packet" value="IPSEC: IPsec dropped a clear text packet"/>
+    <string id="map_DropReasonIPSEC: IPsec dropped an incoming ESP packet in authenticated firewall mode" value="IPSEC: IPsec dropped an incoming ESP packet in authenticated firewall mode"/>
+    <string id="map_DropReasonIPSEC: IPsec dropped a packet due to DoS throttling" value="IPSEC: IPsec dropped a packet due to DoS throttling"/>
+    <string id="map_DropReasonIPSEC: IPsec DoS Protection matched an explicit block rule" value="IPSEC: IPsec DoS Protection matched an explicit block rule"/>
+    <string id="map_DropReasonIPSEC: IPsec DoS Protection received an IPsec specific multicast packet which is not allowed" value="IPSEC: IPsec DoS Protection received an IPsec specific multicast packet which is not allowed"/>
+    <string id="map_DropReasonIPSEC: IPsec DoS Protection received an incorrectly formatted packet" value="IPSEC: IPsec DoS Protection received an incorrectly formatted packet"/>
+    <string id="map_DropReasonIPSEC: IPsec DoS Protection failed to look up state" value="IPSEC: IPsec DoS Protection failed to look up state"/>
+    <string id="map_DropReasonIPSEC: IPsec DoS Protection failed to create state because the maximum number of entries allowed by policy has been reached" value="IPSEC: IPsec DoS Protection failed to create state because the maximum number of entries allowed by policy has been reached"/>
+    <string id="map_DropReasonIPSEC: IPsec DoS Protection received an IPsec negotiation packet for a keying module which is not allowed by policy" value="IPSEC: IPsec DoS Protection received an IPsec negotiation packet for a keying module which is not allowed by policy"/>
+    <string id="map_DropReasonIPSEC: IPsec DoS Protection failed to create a per internal IP rate limit queue because the maximum number of queues allowed by policy has been reached" value="IPSEC: IPsec DoS Protection failed to create a per internal IP rate limit queue because the maximum number of queues allowed by policy has been reached"/>
+    <string id="map_DropReasonIPSEC: Failed to allocate memory" value="IPSEC: Failed to allocate memory"/>
+    <string id="map_DropReasonIPSEC: Operation was unsuccessful" value="IPSEC: Operation was unsuccessful"/>
+    <string id="map_DropReasonNETCX: Failed to parse NetPacket Layout correctly" value="NETCX: Failed to parse NetPacket Layout correctly"/>
+    <string id="map_DropReasonNETCX: Failed to calculate NetBuffer software checksum" value="NETCX: Failed to calculate NetBuffer software checksum"/>
+    <string id="map_DropReasonNETCX: Queue is being stopped or destroyed" value="NETCX: Queue is being stopped or destroyed"/>
+    <string id="map_DropReasonNETCX: Invalid NetBuffer size" value="NETCX: Invalid NetBuffer size"/>
+    <string id="map_DropReasonNETCX: Large Send Offload (LSO) failure" value="NETCX: Large Send Offload (LSO) failure"/>
+    <string id="map_DropReasonNETCX: UDP Segmentation Offload (USO) failure" value="NETCX: UDP Segmentation Offload (USO) failure"/>
+    <string id="map_DropReasonNETCX: NetBuffer bounce operation failed" value="NETCX: NetBuffer bounce operation failed"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

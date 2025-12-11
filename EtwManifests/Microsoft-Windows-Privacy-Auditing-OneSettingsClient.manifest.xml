@@ -1,0 +1,33 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Privacy-Auditing-OneSettingsClient" guid="{23f0f2c7-c77c-51ee-0ac1-5ac7796a85df}" resourceFileName="Microsoft-Windows-Privacy-Auditing-OneSettingsClient" messageFileName="Microsoft-Windows-Privacy-Auditing-OneSettingsClient" symbol="MicrosoftWindowsPrivacyAuditingOneSettingsClient" source="Xml" >
+    <keywords>
+     <keyword name="SettingsDownload" message="$(string.keyword_SettingsDownload)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="HeruntergeladeneEinstellungen" message="$(string.task_HeruntergeladeneEinstellungen)" value="1"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="HeruntergeladeneEinstellungen" version="0" task="HeruntergeladeneEinstellungen" level="win:Informational" keywords="SettingsDownload" template="HeruntergeladeneEinstellungenArgs"/>
+    </events>
+    <templates>
+     <template tid="HeruntergeladeneEinstellungenArgs">
+      <data name="CallerId" inType="win:UnicodeString"/>
+      <data name="Partner" inType="win:UnicodeString"/>
+      <data name="Feature" inType="win:UnicodeString"/>
+      <data name="DownloadResult" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_SettingsDownload" value="SettingsDownload"/>
+    <string id="task_HeruntergeladeneEinstellungen" value="HeruntergeladeneEinstellungen"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

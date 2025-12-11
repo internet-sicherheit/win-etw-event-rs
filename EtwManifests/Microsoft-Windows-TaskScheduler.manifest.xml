@@ -1,0 +1,794 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-TaskScheduler" guid="{de7b24ea-73c8-4a09-985d-5bdadcfa9017}" resourceFileName="Microsoft-Windows-TaskScheduler" messageFileName="Microsoft-Windows-TaskScheduler" symbol="MicrosoftWindowsTaskScheduler" source="Xml" >
+    <keywords>
+     <keyword name="ForcedIdleProcessing" message="$(string.keyword_ForcedIdleProcessing)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="DieAufgabewurdegestartet." message="$(string.task_DieAufgabewurdegestartet.)" value="100"/>
+     <task name="FehlerbeimAufgabenstart" message="$(string.task_FehlerbeimAufgabenstart)" value="101">
+      <opcodes>
+       <opcode name="Startfehler" message="$(string.opcode_FehlerbeimAufgabenstartStartfehler)" value="101"/>
+      </opcodes>
+     </task>
+     <task name="Aufgabeabgeschlossen" message="$(string.task_Aufgabeabgeschlossen)" value="102"/>
+     <task name="FehlerbeimAktionsstart" message="$(string.task_FehlerbeimAktionsstart)" value="103">
+      <opcodes>
+       <opcode name="Ausführungsfehler" message="$(string.opcode_FehlerbeimAktionsstartAusführungsfehler)" value="102"/>
+      </opcodes>
+     </task>
+     <task name="Anmeldefehler" message="$(string.task_Anmeldefehler)" value="104"/>
+     <task name="Identitätswechselfehler" message="$(string.task_Identitätswechselfehler)" value="105"/>
+     <task name="Aufgaberegistriert" message="$(string.task_Aufgaberegistriert)" value="106"/>
+     <task name="AufgabewurdeaufderPlanungausgelöst." message="$(string.task_AufgabewurdeaufderPlanungausgelöst.)" value="107"/>
+     <task name="DieAufgabewurdedurcheinEreignisausgelöst." message="$(string.task_DieAufgabewurdedurcheinEreignisausgelöst.)" value="108"/>
+     <task name="DieAufgabewurdedurchRegistrierungausgelöst." message="$(string.task_DieAufgabewurdedurchRegistrierungausgelöst.)" value="109"/>
+     <task name="DieAufgabewurdevomBenutzerausgelöst." message="$(string.task_DieAufgabewurdevomBenutzerausgelöst.)" value="110"/>
+     <task name="Aufgabebeendet" message="$(string.task_Aufgabebeendet)" value="111">
+      <opcodes>
+       <opcode name="Abbruch" message="$(string.opcode_AufgabebeendetAbbruch)" value="103"/>
+      </opcodes>
+     </task>
+     <task name="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar." message="$(string.task_DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar.)" value="112"/>
+     <task name="DieAufgabewurdeohneeinigeTriggerregistriert." message="$(string.task_DieAufgabewurdeohneeinigeTriggerregistriert.)" value="113"/>
+     <task name="EinefehlendeAufgabewurdegestartet." message="$(string.task_EinefehlendeAufgabewurdegestartet.)" value="114"/>
+     <task name="FehlerbeimAktualisierungoderLöscheneinerAufgabe" message="$(string.task_FehlerbeimAktualisierungoderLöscheneinerAufgabe)" value="115"/>
+     <task name="DieAufgabewurdeohneAnmeldeinformationenregistriert." message="$(string.task_DieAufgabewurdeohneAnmeldeinformationenregistriert.)" value="116"/>
+     <task name="DieAufgabewurdedurchLeerlaufausgelöst." message="$(string.task_DieAufgabewurdedurchLeerlaufausgelöst.)" value="117"/>
+     <task name="DieAufgabewurdedurcheinenComputerstartausgelöst." message="$(string.task_DieAufgabewurdedurcheinenComputerstartausgelöst.)" value="118"/>
+     <task name="DieAufgabewurdedurcheineAnmeldungausgelöst." message="$(string.task_DieAufgabewurdedurcheineAnmeldungausgelöst.)" value="119"/>
+     <task name="DieAufgabewurdedurcheineVerbindungmitderlokalenKonsoleausgelöst." message="$(string.task_DieAufgabewurdedurcheineVerbindungmitderlokalenKonsoleausgelöst.)" value="120"/>
+     <task name="DieAufgabewurdedurchdasTrennenderVerbindungmitderlokalenKonsoleausgelöst." message="$(string.task_DieAufgabewurdedurchdasTrennenderVerbindungmitderlokalenKonsoleausgelöst.)" value="121"/>
+     <task name="DieAufgabewurdedurcheineVerbindungmiteinerRemotekonsoleausgelöst." message="$(string.task_DieAufgabewurdedurcheineVerbindungmiteinerRemotekonsoleausgelöst.)" value="122"/>
+     <task name="DieAufgabewurdedurchdasTrennenderVerbindungmiteinerRemotekonsoleausgelöst." message="$(string.task_DieAufgabewurdedurchdasTrennenderVerbindungmiteinerRemotekonsoleausgelöst.)" value="123"/>
+     <task name="DieAufgabewurdedurchdasSperrenderArbeitsstationausgelöst." message="$(string.task_DieAufgabewurdedurchdasSperrenderArbeitsstationausgelöst.)" value="124"/>
+     <task name="DieAufgabewurdedurchdasEntsperrenderArbeitsstationausgelöst." message="$(string.task_DieAufgabewurdedurchdasEntsperrenderArbeitsstationausgelöst.)" value="125"/>
+     <task name="DieAufgabewurdenacheinemFehlerneugestartet." message="$(string.task_DieAufgabewurdenacheinemFehlerneugestartet.)" value="126"/>
+     <task name="DieAufgabewurdenacheinemFehlerneugestartet._127" message="$(string.task_DieAufgabewurdenacheinemFehlerneugestartet._127)" value="127"/>
+     <task name="DieStartbedingungenwurdennichterfüllt.DieEndzeitliegtvorderaktuellenZeit." message="$(string.task_DieStartbedingungenwurdennichterfüllt.DieEndzeitliegtvorderaktuellenZeit.)" value="128"/>
+     <task name="ProzessfürerstellteAufgabe" message="$(string.task_ProzessfürerstellteAufgabe)" value="129"/>
+     <task name="DieStartbedingungenwurdennichterfüllt.DerDienstistausgelastet." message="$(string.task_DieStartbedingungenwurdennichterfüllt.DerDienstistausgelastet.)" value="130"/>
+     <task name="DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten." message="$(string.task_DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten.)" value="131"/>
+     <task name="Startbedingungswarnung_dasKontingentistfasterreicht." message="$(string.task_Startbedingungswarnung_dasKontingentistfasterreicht.)" value="132"/>
+     <task name="DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten._133" message="$(string.task_DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten._133)" value="133"/>
+     <task name="Startbedingungswarnung_dasKontingentistfasterreicht._134" message="$(string.task_Startbedingungswarnung_dasKontingentistfasterreicht._134)" value="134"/>
+     <task name="DieStartbedingungenwurdennichterfüllt.DerComputeristnichtimLeelauf." message="$(string.task_DieStartbedingungenwurdennichterfüllt.DerComputeristnichtimLeelauf.)" value="135"/>
+     <task name="Aufgabenfertigstellungstehtan" message="$(string.task_Aufgabenfertigstellungstehtan)" value="136"/>
+     <task name="DieAufgabenregistrierungwurdeaktualisiert." message="$(string.task_DieAufgabenregistrierungwurdeaktualisiert.)" value="140"/>
+     <task name="DieAufgabenregistrierungwurdegelöscht." message="$(string.task_DieAufgabenregistrierungwurdegelöscht.)" value="141"/>
+     <task name="DieAufgabewurdedeaktiviert." message="$(string.task_DieAufgabewurdedeaktiviert.)" value="142"/>
+     <task name="DieAufgabewurdedurchBeendendesRuhezustandsausgelöst." message="$(string.task_DieAufgabewurdedurchBeendendesRuhezustandsausgelöst.)" value="145"/>
+     <task name="FehlerbeimLadenvonAufgabenbeimStartdesDiensts." message="$(string.task_FehlerbeimLadenvonAufgabenbeimStartdesDiensts.)" value="146"/>
+     <task name="DasAufgabenabbildwurdenachderBetriebssystemmigrationwiederhergestellt." message="$(string.task_DasAufgabenabbildwurdenachderBetriebssystemmigrationwiederhergestellt.)" value="147"/>
+     <task name="DasAufgabenabbildkonntenachderBetriebssystemmigrationnichtwiederhergestelltwerden." message="$(string.task_DasAufgabenabbildkonntenachderBetriebssystemmigrationnichtwiederhergestelltwerden.)" value="148"/>
+     <task name="VonderAufgabewirdeineKombinationvonEigenschaftenverwendet,diemitdemPlanungsmodulnichtkompatibelist." message="$(string.task_VonderAufgabewirdeineKombinationvonEigenschaftenverwendet,diemitdemPlanungsmodulnichtkompatibelist.)" value="149"/>
+     <task name="FehlerbeiderAufgabenregistrierungbeiEreignis." message="$(string.task_FehlerbeiderAufgabenregistrierungbeiEreignis.)" value="150"/>
+     <task name="VonderAufgabenplanungkonnteeineAufgabebeimDienststartnichtinstanziiertwerden." message="$(string.task_VonderAufgabenplanungkonnteeineAufgabebeimDienststartnichtinstanziiertwerden.)" value="151"/>
+     <task name="DieAufgabewurdeaneinLegacymodulumgeleitet." message="$(string.task_DieAufgabewurdeaneinLegacymodulumgeleitet.)" value="152"/>
+     <task name="StartderverpasstenAufgabeabgelehnt" message="$(string.task_StartderverpasstenAufgabeabgelehnt)" value="153"/>
+     <task name="DieAktionwurdegestartet." message="$(string.task_DieAktionwurdegestartet.)" value="200"/>
+     <task name="Aktionabgeschlossen" message="$(string.task_Aktionabgeschlossen)" value="201"/>
+     <task name="Aktionfehlgeschlagen" message="$(string.task_Aktionfehlgeschlagen)" value="202">
+      <opcodes>
+       <opcode name="Ausführungsfehler" message="$(string.opcode_AktionfehlgeschlagenAusführungsfehler)" value="102"/>
+      </opcodes>
+     </task>
+     <task name="FehlerbeimStartenderAktion" message="$(string.task_FehlerbeimStartenderAktion)" value="203">
+      <opcodes>
+       <opcode name="Startfehler" message="$(string.opcode_FehlerbeimStartenderAktionStartfehler)" value="101"/>
+      </opcodes>
+     </task>
+     <task name="DieAufgabekonntenichtdurchdasEreignisgestartetwerden." message="$(string.task_DieAufgabekonntenichtdurchdasEreignisgestartetwerden.)" value="204"/>
+     <task name="DieAufgabekonntenichtdurchÜbereinstimmungmitdemEreignismustergestartetwerden." message="$(string.task_DieAufgabekonntenichtdurchÜbereinstimmungmitdemEreignismustergestartetwerden.)" value="205"/>
+     <task name="DasAufgabenmodulwurdegestartet." message="$(string.task_DasAufgabenmodulwurdegestartet.)" value="300"/>
+     <task name="DasAufgabenmodulwurderichtigheruntergefahren." message="$(string.task_DasAufgabenmodulwurderichtigheruntergefahren.)" value="301"/>
+     <task name="DasAufgabenmodulwurdeaufgrundeinesFehlersbeendet." message="$(string.task_DasAufgabenmodulwurdeaufgrundeinesFehlersbeendet.)" value="303">
+      <opcodes>
+       <opcode name="Fehler" message="$(string.opcode_DasAufgabenmodulwurdeaufgrundeinesFehlersbeendet.Fehler)" value="104"/>
+      </opcodes>
+     </task>
+     <task name="DieAufgabewurdeandasModulgesendet." message="$(string.task_DieAufgabewurdeandasModulgesendet.)" value="304"/>
+     <task name="DieAufgabekonntenichtandasModulgesendetwerden." message="$(string.task_DieAufgabekonntenichtandasModulgesendetwerden.)" value="305">
+      <opcodes>
+       <opcode name="Fehler" message="$(string.opcode_DieAufgabekonntenichtandasModulgesendetwerden.Fehler)" value="104"/>
+      </opcodes>
+     </task>
+     <task name="DasModulkonntedieAufgabenichtempfangen." message="$(string.task_DasModulkonntedieAufgabenichtempfangen.)" value="306">
+      <opcodes>
+       <opcode name="Fehler" message="$(string.opcode_DasModulkonntedieAufgabenichtempfangen.Fehler)" value="104"/>
+      </opcodes>
+     </task>
+     <task name="VerbindungsfehlerdesDienstmoduls" message="$(string.task_VerbindungsfehlerdesDienstmoduls)" value="307">
+      <opcodes>
+       <opcode name="Fehler" message="$(string.opcode_VerbindungsfehlerdesDienstmodulsFehler)" value="104"/>
+      </opcodes>
+     </task>
+     <task name="VerbindungdesDienstmodulswurdehergestellt." message="$(string.task_VerbindungdesDienstmodulswurdehergestellt.)" value="308"/>
+     <task name="DasModulistverwaist." message="$(string.task_DasModulistverwaist.)" value="309"/>
+     <task name="DasAufgabenmodulwurdegestartet._310" message="$(string.task_DasAufgabenmodulwurdegestartet._310)" value="310"/>
+     <task name="FehlerbeimStartendesAufgabenmoduls" message="$(string.task_FehlerbeimStartendesAufgabenmoduls)" value="311">
+      <opcodes>
+       <opcode name="Startfehler" message="$(string.opcode_FehlerbeimStartendesAufgabenmodulsStartfehler)" value="101"/>
+      </opcodes>
+     </task>
+     <task name="DasAufgabenmodul_Auftragsobjektwurdeerstellt." message="$(string.task_DasAufgabenmodul_Auftragsobjektwurdeerstellt.)" value="312"/>
+     <task name="DerDienstmodulkanalistbereit." message="$(string.task_DerDienstmodulkanalistbereit.)" value="313"/>
+     <task name="LeerlaufdesAufgabenmoduls" message="$(string.task_LeerlaufdesAufgabenmoduls)" value="314"/>
+     <task name="VerbindungsfehlerdesDienstmoduls_315" message="$(string.task_VerbindungsfehlerdesDienstmoduls_315)" value="315">
+      <opcodes>
+       <opcode name="Fehler" message="$(string.opcode_VerbindungsfehlerdesDienstmoduls_315Fehler)" value="104"/>
+      </opcodes>
+     </task>
+     <task name="DasModulkonntedieNachrichtnichtandenDienstsenden." message="$(string.task_DasModulkonntedieNachrichtnichtandenDienstsenden.)" value="316">
+      <opcodes>
+       <opcode name="Fehler" message="$(string.opcode_DasModulkonntedieNachrichtnichtandenDienstsenden.Fehler)" value="104"/>
+      </opcodes>
+     </task>
+     <task name="DasAufgabenmodulwurdegestartet._317" message="$(string.task_DasAufgabenmodulwurdegestartet._317)" value="317"/>
+     <task name="DasAufgabenmodulwurderichtigheruntergefahren._318" message="$(string.task_DasAufgabenmodulwurderichtigheruntergefahren._318)" value="318"/>
+     <task name="DasAufgabenmodulhateineNachrichtzumStartenderAufgabeempfangen." message="$(string.task_DasAufgabenmodulhateineNachrichtzumStartenderAufgabeempfangen.)" value="319"/>
+     <task name="DasAufgabenmodulhateineNachrichtzumBeendenderAufgabeempfangen." message="$(string.task_DasAufgabenmodulhateineNachrichtzumBeendenderAufgabeempfangen.)" value="320"/>
+     <task name="DieStartanforderungwurdeignoriert.DieInstanzwirdbereitsausgeführt." message="$(string.task_DieStartanforderungwurdeignoriert.DieInstanzwirdbereitsausgeführt.)" value="322"/>
+     <task name="DieStartanforderungwurdebestätigt.DieaktuelleInstanzwurdebeendet." message="$(string.task_DieStartanforderungwurdebestätigt.DieaktuelleInstanzwurdebeendet.)" value="323"/>
+     <task name="DieStartanforderungwurdeindieWarteschlangeeingereiht.DieInstanzwirdbereitsausgeführt." message="$(string.task_DieStartanforderungwurdeindieWarteschlangeeingereiht.DieInstanzwirdbereitsausgeführt.)" value="324"/>
+     <task name="StartanforderunginWarteschlangeeingereiht" message="$(string.task_StartanforderunginWarteschlangeeingereiht)" value="325"/>
+     <task name="DieStartbedingungenwurdennichterfüllt.DerComputeristaufAkkubetriebgeschaltet." message="$(string.task_DieStartbedingungenwurdennichterfüllt.DerComputeristaufAkkubetriebgeschaltet.)" value="326"/>
+     <task name="DieAufgabewurdeaufgrundeinesWechselsindenAkkubetriebbeendet." message="$(string.task_DieAufgabewurdeaufgrundeinesWechselsindenAkkubetriebbeendet.)" value="327"/>
+     <task name="Aufgabewirdbeendet,weilderComputersichnichtimLeerlaufbefindet" message="$(string.task_Aufgabewirdbeendet,weilderComputersichnichtimLeerlaufbefindet)" value="328"/>
+     <task name="DieAufgabewirdaufgrundeinerZeitüberschreitungbeendet." message="$(string.task_DieAufgabewirdaufgrundeinerZeitüberschreitungbeendet.)" value="329"/>
+     <task name="DieAufgabewirdaufAnforderungdesBenutzersbeendet." message="$(string.task_DieAufgabewirdaufAnforderungdesBenutzersbeendet.)" value="330"/>
+     <task name="DieAufgabekonntebeiderZeitüberschreitungnichtbeendetwerden." message="$(string.task_DieAufgabekonntebeiderZeitüberschreitungnichtbeendetwerden.)" value="331"/>
+     <task name="DieStartbedingungenwurdennichterfüllt.DerBenutzeristnichtangemeldet." message="$(string.task_DieStartbedingungenwurdennichterfüllt.DerBenutzeristnichtangemeldet.)" value="332"/>
+     <task name="DieStartbedingungenwurdennichterfüllt.DieSitzungisteineRemoteApp_Sitzung." message="$(string.task_DieStartbedingungenwurdennichterfüllt.DieSitzungisteineRemoteApp_Sitzung.)" value="333"/>
+     <task name="DieStartbedingungwurdenichterfüllt.DieSitzungisteineWorker_Sitzung." message="$(string.task_DieStartbedingungwurdenichterfüllt.DieSitzungisteineWorker_Sitzung.)" value="334"/>
+     <task name="DerDienstwurdegestartet." message="$(string.task_DerDienstwurdegestartet.)" value="400"/>
+     <task name="FehlerbeimStartendesDienstes" message="$(string.task_FehlerbeimStartendesDienstes)" value="401">
+      <opcodes>
+       <opcode name="Startfehler" message="$(string.opcode_FehlerbeimStartendesDienstesStartfehler)" value="101"/>
+      </opcodes>
+     </task>
+     <task name="Dienstwirdbeendet" message="$(string.task_Dienstwirdbeendet)" value="402"/>
+     <task name="SchwerwiegenderFehlerdesDienstes" message="$(string.task_SchwerwiegenderFehlerdesDienstes)" value="403">
+      <opcodes>
+       <opcode name="Fehler" message="$(string.opcode_SchwerwiegenderFehlerdesDienstesFehler)" value="104"/>
+      </opcodes>
+     </task>
+     <task name="RPC_FehlerdesDienstes" message="$(string.task_RPC_FehlerdesDienstes)" value="404"/>
+     <task name="COM_FehlerdesDienstes" message="$(string.task_COM_FehlerdesDienstes)" value="405"/>
+     <task name="FehlerbeimInitialisierendesAnmeldeinformationsspeichers" message="$(string.task_FehlerbeimInitialisierendesAnmeldeinformationsspeichers)" value="406"/>
+     <task name="LSA_Initialisierungsfehler" message="$(string.task_LSA_Initialisierungsfehler)" value="407"/>
+     <task name="Leerlauferkennungsfehler" message="$(string.task_Leerlauferkennungsfehler)" value="408"/>
+     <task name="FehlerbeiderBenachrichtigungübereineZeitänderung" message="$(string.task_FehlerbeiderBenachrichtigungübereineZeitänderung)" value="409"/>
+     <task name="FehlerdesReaktivierungszeitgebers" message="$(string.task_FehlerdesReaktivierungszeitgebers)" value="410"/>
+     <task name="DievomDienstsignalisierteZeitwurdegeändert." message="$(string.task_DievomDienstsignalisierteZeitwurdegeändert.)" value="411"/>
+     <task name="FehlerhafteTaskkonfiguration" message="$(string.task_FehlerhafteTaskkonfiguration)" value="414"/>
+     <task name="Leerlaufaufgabenregistrierung" message="$(string.task_Leerlaufaufgabenregistrierung)" value="500"/>
+     <task name="AufhebenderLeerlaufaufgabenregistrierung" message="$(string.task_AufhebenderLeerlaufaufgabenregistrierung)" value="501"/>
+     <task name="Leerlaufaufgabenausführung" message="$(string.task_Leerlaufaufgabenausführung)" value="502"/>
+     <task name="Leerlaufaufgabenbenachrichtigung" message="$(string.task_Leerlaufaufgabenbenachrichtigung)" value="504"/>
+     <task name="AusdrücklicheLeerlaufaufgabenverarbeitung" message="$(string.task_AusdrücklicheLeerlaufaufgabenverarbeitung)" value="506"/>
+     <task name="DieausdrücklicheLeerlaufaufgabenverarbeitungistaktiv." message="$(string.task_DieausdrücklicheLeerlaufaufgabenverarbeitungistaktiv.)" value="508"/>
+     <task name="EnergiebenachrichtigungfürLeerlaufaufgabeempfangen" message="$(string.task_EnergiebenachrichtigungfürLeerlaufaufgabeempfangen)" value="509"/>
+     <task name="PerfTrack_RessourcenbeanspruchungfürdieLeerlaufaufgabe" message="$(string.task_PerfTrack_RessourcenbeanspruchungfürdieLeerlaufaufgabe)" value="510"/>
+     <task name="PerfTrack_LeerlaufbeendigungfürdieLeerlaufaufgabe" message="$(string.task_PerfTrack_LeerlaufbeendigungfürdieLeerlaufaufgabe)" value="511"/>
+     <task name="Leerlaufprüfpunkt" message="$(string.task_Leerlaufprüfpunkt)" value="512"/>
+     <task name="DasKompatibilitätsmodulwurdegestartet." message="$(string.task_DasKompatibilitätsmodulwurdegestartet.)" value="700"/>
+     <task name="FehlerbeimStartendesKompatibilitätsmoduls" message="$(string.task_FehlerbeimStartendesKompatibilitätsmoduls)" value="701"/>
+     <task name="FehlerbeimRPCdesKompatibilitätsmoduls" message="$(string.task_FehlerbeimRPCdesKompatibilitätsmoduls)" value="702"/>
+     <task name="FehlerderNetzplanungs_APIdesKompatibilitätsmoduls" message="$(string.task_FehlerderNetzplanungs_APIdesKompatibilitätsmoduls)" value="703"/>
+     <task name="LSA_FehlerdesKompatibilitätsmoduls" message="$(string.task_LSA_FehlerdesKompatibilitätsmoduls)" value="704"/>
+     <task name="FehlerbeiderVerzeichnisüberwachungdesKompatibilitätsmoduls" message="$(string.task_FehlerbeiderVerzeichnisüberwachungdesKompatibilitätsmoduls)" value="705"/>
+     <task name="FehlerbeiderAufgabenstatusaktualisierungdesKompatibilitätsmoduls" message="$(string.task_FehlerbeiderAufgabenstatusaktualisierungdesKompatibilitätsmoduls)" value="706"/>
+     <task name="FehlerbeiderAufgabenlöschungdesKompatibilitätsmoduls" message="$(string.task_FehlerbeiderAufgabenlöschungdesKompatibilitätsmoduls)" value="707"/>
+     <task name="FehlerderSicherheitsbeschreibungdesKompatibilitätsmoduls" message="$(string.task_FehlerderSicherheitsbeschreibungdesKompatibilitätsmoduls)" value="708"/>
+     <task name="FehlerbeimAufgabenupdatedesKompatibilitätsmoduls" message="$(string.task_FehlerbeimAufgabenupdatedesKompatibilitätsmoduls)" value="709"/>
+     <task name="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls" message="$(string.task_FehlerbeimAufgabenupgradedesKompatibilitätsmoduls)" value="710"/>
+     <task name="DasAufgabenupgradedesKompatibilitätsmodulswurdenichtbestimmt." message="$(string.task_DasAufgabenupgradedesKompatibilitätsmodulswurdenichtbestimmt.)" value="711"/>
+     <task name="FehlerbeimUpgradedesAnmeldeinformationsspeichers" message="$(string.task_FehlerbeimUpgradedesAnmeldeinformationsspeichers)" value="712"/>
+     <task name="DasBetriebsprotokollderAufgabenplanungwurdedeaktiviert." message="$(string.task_DasBetriebsprotokollderAufgabenplanungwurdedeaktiviert.)" value="719"/>
+     <task name="DerWartungszustandhatsichgeändert." message="$(string.task_DerWartungszustandhatsichgeändert.)" value="800"/>
+     <task name="FehlerbeimStartenderWartung." message="$(string.task_FehlerbeimStartenderWartung.)" value="801"/>
+     <task name="FehlerbeimÄndernderWartungskonfiguration." message="$(string.task_FehlerbeimÄndernderWartungskonfiguration.)" value="802"/>
+     <task name="AufgabenfehlerfürdasWartungsplanungsmodul." message="$(string.task_AufgabenfehlerfürdasWartungsplanungsmodul.)" value="803"/>
+     <task name="ZyklischeAbhängigkeiteinerWartungsaufgabeerkannt." message="$(string.task_ZyklischeAbhängigkeiteinerWartungsaufgabeerkannt.)" value="804"/>
+     <task name="FristablaufbeiWartungsaufgabe." message="$(string.task_FristablaufbeiWartungsaufgabe.)" value="805"/>
+     <task name="VerarbeitungsfehlerbeiderWartungsaufgabe." message="$(string.task_VerarbeitungsfehlerbeiderWartungsaufgabe.)" value="806"/>
+     <task name="Wartungabgeschlossen" message="$(string.task_Wartungabgeschlossen)" value="807"/>
+     <task name="ReaktivierungfürWartungangefordert" message="$(string.task_ReaktivierungfürWartungangefordert)" value="808"/>
+     <task name="KonfigurationsfehlerbeiWartungszeitplan" message="$(string.task_KonfigurationsfehlerbeiWartungszeitplan)" value="809"/>
+     <task name="Methodenfehler" message="$(string.task_Methodenfehler)" value="998">
+      <opcodes>
+       <opcode name="Fehler" message="$(string.opcode_MethodenfehlerFehler)" value="104"/>
+      </opcodes>
+     </task>
+     <task name="Debug" message="$(string.task_Debug)" value="999"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="DieAufgabewurdegestartet.Starten" version="0" task="DieAufgabewurdegestartet." opcode="win:Starten" level="win:Informational" keywords="ForcedIdleProcessing" template="DieAufgabewurdegestartet.StartenArgs"/>
+     <event value="101" symbol="FehlerbeimAufgabenstartStartfehler" version="0" task="FehlerbeimAufgabenstart" opcode="Startfehler" level="win:Error" keywords="ForcedIdleProcessing" template="FehlerbeimAufgabenstartStartfehlerArgs"/>
+     <event value="102" symbol="AufgabeabgeschlossenBeenden" version="0" task="Aufgabeabgeschlossen" opcode="win:Beenden" level="win:Informational" keywords="ForcedIdleProcessing" template="DieAufgabewurdegestartet.StartenArgs"/>
+     <event value="103" symbol="FehlerbeimAktionsstartAusführungsfehler" version="0" task="FehlerbeimAktionsstart" opcode="Ausführungsfehler" level="win:Error" keywords="ForcedIdleProcessing" template="FehlerbeimAktionsstartAusführungsfehlerArgs"/>
+     <event value="104" symbol="Anmeldefehler" version="0" task="Anmeldefehler" level="win:Error" template="AnmeldefehlerArgs"/>
+     <event value="105" symbol="Identitätswechselfehler" version="0" task="Identitätswechselfehler" level="win:Error" template="IdentitätswechselfehlerArgs"/>
+     <event value="106" symbol="Aufgaberegistriert" version="0" task="Aufgaberegistriert" level="win:Informational" template="AufgaberegistriertArgs"/>
+     <event value="107" symbol="AufgabewurdeaufderPlanungausgelöst." version="0" task="AufgabewurdeaufderPlanungausgelöst." level="win:Informational" template="AufgabewurdeaufderPlanungausgelöst.Args"/>
+     <event value="108" symbol="DieAufgabewurdedurcheinEreignisausgelöst." version="0" task="DieAufgabewurdedurcheinEreignisausgelöst." level="win:Informational" template="AufgabewurdeaufderPlanungausgelöst.Args"/>
+     <event value="109" symbol="DieAufgabewurdedurchRegistrierungausgelöst." version="0" task="DieAufgabewurdedurchRegistrierungausgelöst." level="win:Informational" template="AufgabewurdeaufderPlanungausgelöst.Args"/>
+     <event value="110" symbol="DieAufgabewurdevomBenutzerausgelöst." version="0" task="DieAufgabewurdevomBenutzerausgelöst." level="win:Informational" template="DieAufgabewurdevomBenutzerausgelöst.Args"/>
+     <event value="111" symbol="AufgabebeendetAbbruch" version="0" task="Aufgabebeendet" opcode="Abbruch" level="win:Informational" keywords="ForcedIdleProcessing" template="AufgabewurdeaufderPlanungausgelöst.Args"/>
+     <event value="112" symbol="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar." version="0" task="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar." level="win:Warning" template="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar.Args"/>
+     <event value="113" symbol="DieAufgabewurdeohneeinigeTriggerregistriert." version="0" task="DieAufgabewurdeohneeinigeTriggerregistriert." level="win:Warning" template="DieAufgabewurdeohneeinigeTriggerregistriert.Args"/>
+     <event value="114" symbol="EinefehlendeAufgabewurdegestartet." version="0" task="EinefehlendeAufgabewurdegestartet." level="win:Warning" template="AufgabewurdeaufderPlanungausgelöst.Args"/>
+     <event value="115" symbol="FehlerbeimAktualisierungoderLöscheneinerAufgabe" version="0" task="FehlerbeimAktualisierungoderLöscheneinerAufgabe" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="116" symbol="DieAufgabewurdeohneAnmeldeinformationenregistriert." version="0" task="DieAufgabewurdeohneAnmeldeinformationenregistriert." level="win:Warning" template="DieAufgabewurdeohneeinigeTriggerregistriert.Args"/>
+     <event value="117" symbol="DieAufgabewurdedurchLeerlaufausgelöst." version="0" task="DieAufgabewurdedurchLeerlaufausgelöst." level="win:Informational" template="AufgabewurdeaufderPlanungausgelöst.Args"/>
+     <event value="118" symbol="DieAufgabewurdedurcheinenComputerstartausgelöst." version="0" task="DieAufgabewurdedurcheinenComputerstartausgelöst." level="win:Informational" template="AufgabewurdeaufderPlanungausgelöst.Args"/>
+     <event value="119" symbol="DieAufgabewurdedurcheineAnmeldungausgelöst." version="0" task="DieAufgabewurdedurcheineAnmeldungausgelöst." level="win:Informational" template="DieAufgabewurdedurcheineAnmeldungausgelöst.Args"/>
+     <event value="120" symbol="DieAufgabewurdedurcheineVerbindungmitderlokalenKonsoleausgelöst." version="0" task="DieAufgabewurdedurcheineVerbindungmitderlokalenKonsoleausgelöst." level="win:Informational" template="DieAufgabewurdedurcheineAnmeldungausgelöst.Args"/>
+     <event value="121" symbol="DieAufgabewurdedurchdasTrennenderVerbindungmitderlokalenKonsoleausgelöst." version="0" task="DieAufgabewurdedurchdasTrennenderVerbindungmitderlokalenKonsoleausgelöst." level="win:Informational" template="DieAufgabewurdedurcheineAnmeldungausgelöst.Args"/>
+     <event value="122" symbol="DieAufgabewurdedurcheineVerbindungmiteinerRemotekonsoleausgelöst." version="0" task="DieAufgabewurdedurcheineVerbindungmiteinerRemotekonsoleausgelöst." level="win:Informational" template="DieAufgabewurdedurcheineAnmeldungausgelöst.Args"/>
+     <event value="123" symbol="DieAufgabewurdedurchdasTrennenderVerbindungmiteinerRemotekonsoleausgelöst." version="0" task="DieAufgabewurdedurchdasTrennenderVerbindungmiteinerRemotekonsoleausgelöst." level="win:Informational" template="DieAufgabewurdedurcheineAnmeldungausgelöst.Args"/>
+     <event value="124" symbol="DieAufgabewurdedurchdasSperrenderArbeitsstationausgelöst." version="0" task="DieAufgabewurdedurchdasSperrenderArbeitsstationausgelöst." level="win:Informational" template="DieAufgabewurdedurcheineAnmeldungausgelöst.Args"/>
+     <event value="125" symbol="DieAufgabewurdedurchdasEntsperrenderArbeitsstationausgelöst." version="0" task="DieAufgabewurdedurchdasEntsperrenderArbeitsstationausgelöst." level="win:Informational" template="DieAufgabewurdedurcheineAnmeldungausgelöst.Args"/>
+     <event value="126" symbol="DieAufgabewurdenacheinemFehlerneugestartet." version="0" task="DieAufgabewurdenacheinemFehlerneugestartet." level="win:Warning" template="DieAufgabewurdeohneeinigeTriggerregistriert.Args"/>
+     <event value="127" symbol="DieAufgabewurdenacheinemFehlerneugestartet._127" version="0" task="DieAufgabewurdenacheinemFehlerneugestartet._127" level="win:Informational" template="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar.Args"/>
+     <event value="128" symbol="DieStartbedingungenwurdennichterfüllt.DieEndzeitliegtvorderaktuellenZeit." version="0" task="DieStartbedingungenwurdennichterfüllt.DieEndzeitliegtvorderaktuellenZeit." level="win:Informational" template="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar.Args"/>
+     <event value="129" symbol="ProzessfürerstellteAufgabe" version="0" task="ProzessfürerstellteAufgabe" level="win:Informational" template="ProzessfürerstellteAufgabeArgs"/>
+     <event value="130" symbol="DieStartbedingungenwurdennichterfüllt.DerDienstistausgelastet." version="0" task="DieStartbedingungenwurdennichterfüllt.DerDienstistausgelastet." level="win:Error" template="DieAufgabewurdeohneeinigeTriggerregistriert.Args"/>
+     <event value="131" symbol="DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten." version="0" task="DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten." level="win:Error" template="DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten.Args"/>
+     <event value="132" symbol="Startbedingungswarnung_dasKontingentistfasterreicht." version="0" task="Startbedingungswarnung_dasKontingentistfasterreicht." level="win:Warning" template="Startbedingungswarnung_dasKontingentistfasterreicht.Args"/>
+     <event value="133" symbol="DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten._133" version="0" task="DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten._133" level="win:Error" template="DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten._133Args"/>
+     <event value="134" symbol="Startbedingungswarnung_dasKontingentistfasterreicht._134" version="0" task="Startbedingungswarnung_dasKontingentistfasterreicht._134" level="win:Warning" template="Startbedingungswarnung_dasKontingentistfasterreicht._134Args"/>
+     <event value="135" symbol="DieStartbedingungenwurdennichterfüllt.DerComputeristnichtimLeelauf." version="0" task="DieStartbedingungenwurdennichterfüllt.DerComputeristnichtimLeelauf." level="win:Warning" template="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar.Args"/>
+     <event value="140" symbol="DieAufgabenregistrierungwurdeaktualisiert." version="0" task="DieAufgabenregistrierungwurdeaktualisiert." level="win:Informational" template="DieAufgabenregistrierungwurdeaktualisiert.Args"/>
+     <event value="141" symbol="DieAufgabenregistrierungwurdegelöscht." version="0" task="DieAufgabenregistrierungwurdegelöscht." level="win:Informational" template="DieAufgabenregistrierungwurdeaktualisiert.Args"/>
+     <event value="142" symbol="DieAufgabewurdedeaktiviert." version="0" task="DieAufgabewurdedeaktiviert." level="win:Informational" template="DieAufgabenregistrierungwurdeaktualisiert.Args"/>
+     <event value="145" symbol="DieAufgabewurdedurchBeendendesRuhezustandsausgelöst." version="0" task="DieAufgabewurdedurchBeendendesRuhezustandsausgelöst." level="win:Informational"/>
+     <event value="146" symbol="FehlerbeimLadenvonAufgabenbeimStartdesDiensts." version="0" task="FehlerbeimLadenvonAufgabenbeimStartdesDiensts." level="win:Error" template="DieAufgabewurdeohneeinigeTriggerregistriert.Args"/>
+     <event value="147" symbol="DasAufgabenabbildwurdenachderBetriebssystemmigrationwiederhergestellt." version="0" task="DasAufgabenabbildwurdenachderBetriebssystemmigrationwiederhergestellt." level="win:Informational" template="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar.Args"/>
+     <event value="148" symbol="DasAufgabenabbildkonntenachderBetriebssystemmigrationnichtwiederhergestelltwerden." version="0" task="DasAufgabenabbildkonntenachderBetriebssystemmigrationnichtwiederhergestelltwerden." level="win:Error" template="DasAufgabenabbildkonntenachderBetriebssystemmigrationnichtwiederhergestelltwerden.Args"/>
+     <event value="149" symbol="VonderAufgabewirdeineKombinationvonEigenschaftenverwendet,diemitdemPlanungsmodulnichtkompatibelist." version="0" task="VonderAufgabewirdeineKombinationvonEigenschaftenverwendet,diemitdemPlanungsmodulnichtkompatibelist." level="win:Warning" template="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar.Args"/>
+     <event value="150" symbol="FehlerbeiderAufgabenregistrierungbeiEreignis." version="0" task="FehlerbeiderAufgabenregistrierungbeiEreignis." level="win:Error" template="DieAufgabewurdeohneeinigeTriggerregistriert.Args"/>
+     <event value="151" symbol="VonderAufgabenplanungkonnteeineAufgabebeimDienststartnichtinstanziiertwerden." version="0" task="VonderAufgabenplanungkonnteeineAufgabebeimDienststartnichtinstanziiertwerden." level="win:Error" template="VonderAufgabenplanungkonnteeineAufgabebeimDienststartnichtinstanziiertwerden.Args"/>
+     <event value="152" symbol="DieAufgabewurdeaneinLegacymodulumgeleitet." version="0" task="DieAufgabewurdeaneinLegacymodulumgeleitet." level="win:Warning" template="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar.Args"/>
+     <event value="153" symbol="StartderverpasstenAufgabeabgelehnt" version="0" task="StartderverpasstenAufgabeabgelehnt" level="win:Warning" template="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar.Args"/>
+     <event value="155" symbol="Aufgabenfertigstellungstehtan" version="0" task="Aufgabenfertigstellungstehtan" level="win:Informational" keywords="ForcedIdleProcessing" template="AufgabenfertigstellungstehtanArgs"/>
+     <event value="200" symbol="DieAktionwurdegestartet.Starten" version="0" task="DieAktionwurdegestartet." opcode="win:Starten" level="win:Informational" template="DieAktionwurdegestartet.StartenArgs"/>
+     <event value="200" symbol="DieAktionwurdegestartet.Starten_V1" version="1" task="DieAktionwurdegestartet." opcode="win:Starten" level="win:Informational" template="DieAktionwurdegestartet.StartenArgs_V1"/>
+     <event value="201" symbol="AktionabgeschlossenBeenden" version="0" task="Aktionabgeschlossen" opcode="win:Beenden" level="win:Informational" template="DieAktionwurdegestartet.StartenArgs"/>
+     <event value="201" symbol="AktionabgeschlossenBeenden_V1" version="1" task="Aktionabgeschlossen" opcode="win:Beenden" level="win:Informational" template="AktionfehlgeschlagenAusführungsfehlerArgs"/>
+     <event value="201" symbol="AktionabgeschlossenBeenden_V2" version="2" task="Aktionabgeschlossen" opcode="win:Beenden" level="win:Informational" template="AktionfehlgeschlagenAusführungsfehlerArgs_V1"/>
+     <event value="202" symbol="AktionfehlgeschlagenAusführungsfehler" version="0" task="Aktionfehlgeschlagen" opcode="Ausführungsfehler" level="win:Error" template="AktionfehlgeschlagenAusführungsfehlerArgs"/>
+     <event value="202" symbol="AktionfehlgeschlagenAusführungsfehler_V1" version="1" task="Aktionfehlgeschlagen" opcode="Ausführungsfehler" level="win:Error" template="AktionfehlgeschlagenAusführungsfehlerArgs_V1"/>
+     <event value="203" symbol="FehlerbeimStartenderAktionStartfehler" version="0" task="FehlerbeimStartenderAktion" opcode="Startfehler" level="win:Error" template="AktionfehlgeschlagenAusführungsfehlerArgs"/>
+     <event value="204" symbol="DieAufgabekonntenichtdurchdasEreignisgestartetwerden." version="0" task="DieAufgabekonntenichtdurchdasEreignisgestartetwerden." level="win:Error" template="DieAufgabewurdeohneeinigeTriggerregistriert.Args"/>
+     <event value="205" symbol="DieAufgabekonntenichtdurchÜbereinstimmungmitdemEreignismustergestartetwerden." version="0" task="DieAufgabekonntenichtdurchÜbereinstimmungmitdemEreignismustergestartetwerden." level="win:Error" template="DieAufgabewurdeohneeinigeTriggerregistriert.Args"/>
+     <event value="300" symbol="DasAufgabenmodulwurdegestartet.Starten" version="0" task="DasAufgabenmodulwurdegestartet." opcode="win:Starten" level="win:Informational" template="DasAufgabenmodulwurdegestartet.StartenArgs"/>
+     <event value="301" symbol="DasAufgabenmodulwurderichtigheruntergefahren.Beenden" version="0" task="DasAufgabenmodulwurderichtigheruntergefahren." opcode="win:Beenden" level="win:Informational" template="DasAufgabenmodulwurderichtigheruntergefahren.BeendenArgs"/>
+     <event value="303" symbol="DasAufgabenmodulwurdeaufgrundeinesFehlersbeendet.Fehler" version="0" task="DasAufgabenmodulwurdeaufgrundeinesFehlersbeendet." opcode="Fehler" level="win:Error" template="DasAufgabenmodulwurdeaufgrundeinesFehlersbeendet.FehlerArgs"/>
+     <event value="304" symbol="DieAufgabewurdeandasModulgesendet." version="0" task="DieAufgabewurdeandasModulgesendet." level="win:Informational" template="DieAufgabewurdeandasModulgesendet.Args"/>
+     <event value="305" symbol="DieAufgabekonntenichtandasModulgesendetwerden.Fehler" version="0" task="DieAufgabekonntenichtandasModulgesendetwerden." opcode="Fehler" level="win:Error" template="DieAufgabekonntenichtandasModulgesendetwerden.FehlerArgs"/>
+     <event value="306" symbol="DasModulkonntedieAufgabenichtempfangen.Fehler" version="0" task="DasModulkonntedieAufgabenichtempfangen." opcode="Fehler" level="win:Error" template="DasModulkonntedieAufgabenichtempfangen.FehlerArgs"/>
+     <event value="307" symbol="VerbindungsfehlerdesDienstmodulsFehler" version="0" task="VerbindungsfehlerdesDienstmoduls" opcode="Fehler" level="win:Error" template="DasModulkonntedieAufgabenichtempfangen.FehlerArgs"/>
+     <event value="308" symbol="VerbindungdesDienstmodulswurdehergestellt." version="0" task="VerbindungdesDienstmodulswurdehergestellt." level="win:Informational" template="DasAufgabenmodulwurderichtigheruntergefahren.BeendenArgs"/>
+     <event value="309" symbol="DasModulistverwaist." version="0" task="DasModulistverwaist." level="win:Error" template="DasModulistverwaist.Args"/>
+     <event value="310" symbol="DasAufgabenmodulwurdegestartet._310" version="0" task="DasAufgabenmodulwurdegestartet._310" level="win:Informational" template="DasAufgabenmodulwurdegestartet._310Args"/>
+     <event value="311" symbol="FehlerbeimStartendesAufgabenmodulsStartfehler" version="0" task="FehlerbeimStartendesAufgabenmoduls" opcode="Startfehler" level="win:Error" template="FehlerbeimStartendesAufgabenmodulsStartfehlerArgs"/>
+     <event value="312" symbol="DasAufgabenmodul_Auftragsobjektwurdeerstellt." version="0" task="DasAufgabenmodul_Auftragsobjektwurdeerstellt." level="win:Informational" template="DasAufgabenmodulwurderichtigheruntergefahren.BeendenArgs"/>
+     <event value="313" symbol="DerDienstmodulkanalistbereit." version="0" task="DerDienstmodulkanalistbereit." level="win:Informational" template="DasAufgabenmodulwurderichtigheruntergefahren.BeendenArgs"/>
+     <event value="314" symbol="LeerlaufdesAufgabenmoduls" version="0" task="LeerlaufdesAufgabenmoduls" level="win:Informational" template="DasAufgabenmodulwurderichtigheruntergefahren.BeendenArgs"/>
+     <event value="315" symbol="VerbindungsfehlerdesDienstmoduls_315Fehler" version="0" task="VerbindungsfehlerdesDienstmoduls_315" opcode="Fehler" level="win:Error" template="DasModulkonntedieAufgabenichtempfangen.FehlerArgs"/>
+     <event value="316" symbol="DasModulkonntedieNachrichtnichtandenDienstsenden.Fehler" version="0" task="DasModulkonntedieNachrichtnichtandenDienstsenden." opcode="Fehler" level="win:Error" template="DasModulkonntedieAufgabenichtempfangen.FehlerArgs"/>
+     <event value="317" symbol="DasAufgabenmodulwurdegestartet._317Starten" version="0" task="DasAufgabenmodulwurdegestartet._317" opcode="win:Starten" level="win:Informational" template="DasAufgabenmodulwurderichtigheruntergefahren.BeendenArgs"/>
+     <event value="318" symbol="DasAufgabenmodulwurderichtigheruntergefahren._318Beenden" version="0" task="DasAufgabenmodulwurderichtigheruntergefahren._318" opcode="win:Beenden" level="win:Informational" template="DasAufgabenmodulwurderichtigheruntergefahren.BeendenArgs"/>
+     <event value="319" symbol="DasAufgabenmodulhateineNachrichtzumStartenderAufgabeempfangen.Starten" version="0" task="DasAufgabenmodulhateineNachrichtzumStartenderAufgabeempfangen." opcode="win:Starten" level="win:Informational" template="DasAufgabenmodulhateineNachrichtzumStartenderAufgabeempfangen.StartenArgs"/>
+     <event value="320" symbol="DasAufgabenmodulhateineNachrichtzumBeendenderAufgabeempfangen.Beenden" version="0" task="DasAufgabenmodulhateineNachrichtzumBeendenderAufgabeempfangen." opcode="win:Beenden" level="win:Informational" template="DasAufgabenmodulhateineNachrichtzumBeendenderAufgabeempfangen.BeendenArgs"/>
+     <event value="322" symbol="DieStartanforderungwurdeignoriert.DieInstanzwirdbereitsausgeführt." version="0" task="DieStartanforderungwurdeignoriert.DieInstanzwirdbereitsausgeführt." level="win:Warning" template="DieStartanforderungwurdeignoriert.DieInstanzwirdbereitsausgeführt.Args"/>
+     <event value="323" symbol="DieStartanforderungwurdebestätigt.DieaktuelleInstanzwurdebeendet." version="0" task="DieStartanforderungwurdebestätigt.DieaktuelleInstanzwurdebeendet." level="win:Warning" template="DieStartanforderungwurdebestätigt.DieaktuelleInstanzwurdebeendet.Args"/>
+     <event value="324" symbol="DieStartanforderungwurdeindieWarteschlangeeingereiht.DieInstanzwirdbereitsausgeführt." version="0" task="DieStartanforderungwurdeindieWarteschlangeeingereiht.DieInstanzwirdbereitsausgeführt." level="win:Warning" template="DieStartanforderungwurdeindieWarteschlangeeingereiht.DieInstanzwirdbereitsausgeführt.Args"/>
+     <event value="325" symbol="StartanforderunginWarteschlangeeingereiht" version="0" task="StartanforderunginWarteschlangeeingereiht" level="win:Warning" template="StartanforderunginWarteschlangeeingereihtArgs"/>
+     <event value="326" symbol="DieStartbedingungenwurdennichterfüllt.DerComputeristaufAkkubetriebgeschaltet." version="0" task="DieStartbedingungenwurdennichterfüllt.DerComputeristaufAkkubetriebgeschaltet." level="win:Warning" template="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar.Args"/>
+     <event value="327" symbol="DieAufgabewurdeaufgrundeinesWechselsindenAkkubetriebbeendet." version="0" task="DieAufgabewurdeaufgrundeinesWechselsindenAkkubetriebbeendet." level="win:Informational" template="DieStartanforderungwurdeignoriert.DieInstanzwirdbereitsausgeführt.Args"/>
+     <event value="328" symbol="Aufgabewirdbeendet,weilderComputersichnichtimLeerlaufbefindet" version="0" task="Aufgabewirdbeendet,weilderComputersichnichtimLeerlaufbefindet" level="win:Informational" template="DieStartanforderungwurdeignoriert.DieInstanzwirdbereitsausgeführt.Args"/>
+     <event value="329" symbol="DieAufgabewirdaufgrundeinerZeitüberschreitungbeendet." version="0" task="DieAufgabewirdaufgrundeinerZeitüberschreitungbeendet." level="win:Informational" template="DieStartanforderungwurdeignoriert.DieInstanzwirdbereitsausgeführt.Args"/>
+     <event value="330" symbol="DieAufgabewirdaufAnforderungdesBenutzersbeendet." version="0" task="DieAufgabewirdaufAnforderungdesBenutzersbeendet." level="win:Informational" template="DieAufgabewirdaufAnforderungdesBenutzersbeendet.Args"/>
+     <event value="331" symbol="DieAufgabekonntebeiderZeitüberschreitungnichtbeendetwerden." version="0" task="DieAufgabekonntebeiderZeitüberschreitungnichtbeendetwerden." level="win:Warning" template="DieAufgabekonntebeiderZeitüberschreitungnichtbeendetwerden.Args"/>
+     <event value="332" symbol="DieStartbedingungenwurdennichterfüllt.DerBenutzeristnichtangemeldet." version="0" task="DieStartbedingungenwurdennichterfüllt.DerBenutzeristnichtangemeldet." level="win:Warning" template="DieAufgabenregistrierungwurdeaktualisiert.Args"/>
+     <event value="333" symbol="DieStartbedingungenwurdennichterfüllt.DieSitzungisteineRemoteApp_Sitzung." version="0" task="DieStartbedingungenwurdennichterfüllt.DieSitzungisteineRemoteApp_Sitzung." level="win:Warning" template="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar.Args"/>
+     <event value="334" symbol="DieStartbedingungwurdenichterfüllt.DieSitzungisteineWorker_Sitzung." version="0" task="DieStartbedingungwurdenichterfüllt.DieSitzungisteineWorker_Sitzung." level="win:Warning" template="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar.Args"/>
+     <event value="400" symbol="DerDienstwurdegestartet.Starten" version="0" task="DerDienstwurdegestartet." opcode="win:Starten" level="win:Informational"/>
+     <event value="401" symbol="FehlerbeimStartendesDienstesStartfehler" version="0" task="FehlerbeimStartendesDienstes" opcode="Startfehler" level="win:Critical" template="FehlerbeimStartendesDienstesStartfehlerArgs"/>
+     <event value="402" symbol="DienstwirdbeendetBeenden" version="0" task="Dienstwirdbeendet" opcode="win:Beenden" level="win:Informational"/>
+     <event value="403" symbol="SchwerwiegenderFehlerdesDienstesFehler" version="0" task="SchwerwiegenderFehlerdesDienstes" opcode="Fehler" level="win:Error" template="FehlerbeimStartendesDienstesStartfehlerArgs"/>
+     <event value="404" symbol="RPC_FehlerdesDienstes" version="0" task="RPC_FehlerdesDienstes" level="win:Warning" template="FehlerbeimStartendesDienstesStartfehlerArgs"/>
+     <event value="405" symbol="COM_FehlerdesDienstes" version="0" task="COM_FehlerdesDienstes" level="win:Critical" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="406" symbol="FehlerbeimInitialisierendesAnmeldeinformationsspeichers" version="0" task="FehlerbeimInitialisierendesAnmeldeinformationsspeichers" level="win:Critical" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="407" symbol="LSA_Initialisierungsfehler" version="0" task="LSA_Initialisierungsfehler" level="win:Critical" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="408" symbol="Leerlauferkennungsfehler" version="0" task="Leerlauferkennungsfehler" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="409" symbol="FehlerbeiderBenachrichtigungübereineZeitänderung" version="0" task="FehlerbeiderBenachrichtigungübereineZeitänderung" level="win:Critical" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="410" symbol="FehlerdesReaktivierungszeitgebers" version="0" task="FehlerdesReaktivierungszeitgebers" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="411" symbol="DievomDienstsignalisierteZeitwurdegeändert." version="0" task="DievomDienstsignalisierteZeitwurdegeändert." level="win:Informational"/>
+     <event value="412" symbol="SchwerwiegenderFehlerdesDienstes" version="0" task="SchwerwiegenderFehlerdesDienstes" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="413" symbol="SchwerwiegenderFehlerdesDienstes413" version="0" task="SchwerwiegenderFehlerdesDienstes" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="414" symbol="FehlerhafteTaskkonfiguration" version="0" task="FehlerhafteTaskkonfiguration" level="win:Warning" template="FehlerhafteTaskkonfigurationArgs"/>
+     <event value="500" symbol="Leerlaufaufgabenregistrierung" version="0" task="Leerlaufaufgabenregistrierung" level="win:Informational" keywords="ForcedIdleProcessing" template="LeerlaufaufgabenregistrierungArgs"/>
+     <event value="501" symbol="AufhebenderLeerlaufaufgabenregistrierung" version="0" task="AufhebenderLeerlaufaufgabenregistrierung" level="win:Informational" keywords="ForcedIdleProcessing" template="LeerlaufaufgabenregistrierungArgs"/>
+     <event value="502" symbol="LeerlaufaufgabenausführungStarten" version="0" task="Leerlaufaufgabenausführung" opcode="win:Starten" level="win:Informational" keywords="ForcedIdleProcessing" template="LeerlaufaufgabenregistrierungArgs"/>
+     <event value="503" symbol="LeerlaufaufgabenausführungBeenden" version="0" task="Leerlaufaufgabenausführung" opcode="win:Beenden" level="win:Informational" keywords="ForcedIdleProcessing" template="LeerlaufaufgabenregistrierungArgs"/>
+     <event value="504" symbol="LeerlaufaufgabenbenachrichtigungStarten" version="0" task="Leerlaufaufgabenbenachrichtigung" opcode="win:Starten" level="win:Informational" keywords="ForcedIdleProcessing" template="LeerlaufaufgabenregistrierungArgs"/>
+     <event value="505" symbol="LeerlaufaufgabenbenachrichtigungBeenden" version="0" task="Leerlaufaufgabenbenachrichtigung" opcode="win:Beenden" level="win:Informational" keywords="ForcedIdleProcessing" template="LeerlaufaufgabenregistrierungArgs"/>
+     <event value="506" symbol="AusdrücklicheLeerlaufaufgabenverarbeitungStarten" version="0" task="AusdrücklicheLeerlaufaufgabenverarbeitung" opcode="win:Starten" level="win:Informational" keywords="ForcedIdleProcessing"/>
+     <event value="507" symbol="AusdrücklicheLeerlaufaufgabenverarbeitungBeenden" version="0" task="AusdrücklicheLeerlaufaufgabenverarbeitung" opcode="win:Beenden" level="win:Informational" keywords="ForcedIdleProcessing"/>
+     <event value="508" symbol="DieausdrücklicheLeerlaufaufgabenverarbeitungistaktiv." version="0" task="DieausdrücklicheLeerlaufaufgabenverarbeitungistaktiv." level="win:Informational" keywords="ForcedIdleProcessing"/>
+     <event value="509" symbol="EnergiebenachrichtigungfürLeerlaufaufgabeempfangen" version="0" task="EnergiebenachrichtigungfürLeerlaufaufgabeempfangen" level="win:Informational" keywords="ForcedIdleProcessing" template="EnergiebenachrichtigungfürLeerlaufaufgabeempfangenArgs"/>
+     <event value="510" symbol="PerfTrack_RessourcenbeanspruchungfürdieLeerlaufaufgabe" version="0" task="PerfTrack_RessourcenbeanspruchungfürdieLeerlaufaufgabe" level="win:Informational" keywords="ForcedIdleProcessing" template="PerfTrack_RessourcenbeanspruchungfürdieLeerlaufaufgabeArgs"/>
+     <event value="511" symbol="PerfTrack_LeerlaufbeendigungfürdieLeerlaufaufgabe" version="0" task="PerfTrack_LeerlaufbeendigungfürdieLeerlaufaufgabe" level="win:Informational" keywords="ForcedIdleProcessing" template="PerfTrack_LeerlaufbeendigungfürdieLeerlaufaufgabeArgs"/>
+     <event value="512" symbol="Leerlaufprüfpunkt" version="0" task="Leerlaufprüfpunkt" level="win:Informational" keywords="ForcedIdleProcessing" template="LeerlaufprüfpunktArgs"/>
+     <event value="700" symbol="DasKompatibilitätsmodulwurdegestartet." version="0" task="DasKompatibilitätsmodulwurdegestartet." level="win:Informational"/>
+     <event value="701" symbol="FehlerbeimStartendesKompatibilitätsmoduls" version="0" task="FehlerbeimStartendesKompatibilitätsmoduls" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="702" symbol="FehlerbeimRPCdesKompatibilitätsmoduls" version="0" task="FehlerbeimRPCdesKompatibilitätsmoduls" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="703" symbol="FehlerderNetzplanungs_APIdesKompatibilitätsmoduls" version="0" task="FehlerderNetzplanungs_APIdesKompatibilitätsmoduls" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="704" symbol="LSA_FehlerdesKompatibilitätsmoduls" version="0" task="LSA_FehlerdesKompatibilitätsmoduls" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="705" symbol="FehlerbeiderVerzeichnisüberwachungdesKompatibilitätsmoduls" version="0" task="FehlerbeiderVerzeichnisüberwachungdesKompatibilitätsmoduls" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="706" symbol="FehlerbeiderAufgabenstatusaktualisierungdesKompatibilitätsmoduls" version="0" task="FehlerbeiderAufgabenstatusaktualisierungdesKompatibilitätsmoduls" level="win:Error" template="FehlerbeiderAufgabenstatusaktualisierungdesKompatibilitätsmodulsArgs"/>
+     <event value="707" symbol="FehlerbeiderAufgabenlöschungdesKompatibilitätsmoduls" version="0" task="FehlerbeiderAufgabenlöschungdesKompatibilitätsmoduls" level="win:Error" template="DieAufgabewurdeohneeinigeTriggerregistriert.Args"/>
+     <event value="708" symbol="FehlerderSicherheitsbeschreibungdesKompatibilitätsmoduls" version="0" task="FehlerderSicherheitsbeschreibungdesKompatibilitätsmoduls" level="win:Error" template="FehlerderSicherheitsbeschreibungdesKompatibilitätsmodulsArgs"/>
+     <event value="709" symbol="FehlerbeimAufgabenupdatedesKompatibilitätsmoduls" version="0" task="FehlerbeimAufgabenupdatedesKompatibilitätsmoduls" level="win:Error" template="DieAufgabewurdeohneeinigeTriggerregistriert.Args"/>
+     <event value="710" symbol="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls" version="0" task="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="711" symbol="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls711" version="0" task="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls" level="win:Error" template="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls711Args"/>
+     <event value="712" symbol="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls712" version="0" task="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="713" symbol="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls713" version="0" task="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls" level="win:Error" template="DieAufgabewurdeohneeinigeTriggerregistriert.Args"/>
+     <event value="714" symbol="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls714" version="0" task="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls" level="win:Error" template="DieAufgabewurdeohneeinigeTriggerregistriert.Args"/>
+     <event value="715" symbol="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls715" version="0" task="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="716" symbol="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls716" version="0" task="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="717" symbol="DasAufgabenupgradedesKompatibilitätsmodulswurdenichtbestimmt." version="0" task="DasAufgabenupgradedesKompatibilitätsmodulswurdenichtbestimmt." level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="718" symbol="FehlerbeimUpgradedesAnmeldeinformationsspeichers" version="0" task="FehlerbeimUpgradedesAnmeldeinformationsspeichers" level="win:Error" template="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs"/>
+     <event value="719" symbol="DasBetriebsprotokollderAufgabenplanungwurdedeaktiviert." version="0" task="DasBetriebsprotokollderAufgabenplanungwurdedeaktiviert." level="win:Informational"/>
+     <event value="800" symbol="DerWartungszustandhatsichgeändert." version="0" task="DerWartungszustandhatsichgeändert." level="win:Informational" template="DerWartungszustandhatsichgeändert.Args"/>
+     <event value="801" symbol="FehlerbeimStartenderWartung." version="0" task="FehlerbeimStartenderWartung." level="win:Error" template="FehlerbeimStartenderWartung.Args"/>
+     <event value="802" symbol="FehlerbeimÄndernderWartungskonfiguration." version="0" task="FehlerbeimÄndernderWartungskonfiguration." level="win:Error" template="FehlerbeimStartenderWartung.Args"/>
+     <event value="803" symbol="AufgabenfehlerfürdasWartungsplanungsmodul." version="0" task="AufgabenfehlerfürdasWartungsplanungsmodul." level="win:Error" template="AufgabenfehlerfürdasWartungsplanungsmodul.Args"/>
+     <event value="804" symbol="ZyklischeAbhängigkeiteinerWartungsaufgabeerkannt." version="0" task="ZyklischeAbhängigkeiteinerWartungsaufgabeerkannt." level="win:Error" template="ZyklischeAbhängigkeiteinerWartungsaufgabeerkannt.Args"/>
+     <event value="805" symbol="FristablaufbeiWartungsaufgabe." version="0" task="FristablaufbeiWartungsaufgabe." level="win:Warning" template="ZyklischeAbhängigkeiteinerWartungsaufgabeerkannt.Args"/>
+     <event value="806" symbol="VerarbeitungsfehlerbeiderWartungsaufgabe." version="0" task="VerarbeitungsfehlerbeiderWartungsaufgabe." level="win:Error" template="VerarbeitungsfehlerbeiderWartungsaufgabe.Args"/>
+     <event value="807" symbol="Wartungabgeschlossen" version="0" task="Wartungabgeschlossen" level="win:Informational" template="WartungabgeschlossenArgs"/>
+     <event value="808" symbol="ReaktivierungfürWartungangefordert" version="0" task="ReaktivierungfürWartungangefordert" level="win:Warning" template="ZyklischeAbhängigkeiteinerWartungsaufgabeerkannt.Args"/>
+     <event value="809" symbol="KonfigurationsfehlerbeiWartungszeitplan" version="0" task="KonfigurationsfehlerbeiWartungszeitplan" level="win:Error" template="KonfigurationsfehlerbeiWartungszeitplanArgs"/>
+     <event value="998" symbol="Methodenfehler" version="0" task="Methodenfehler" opcode="Fehler" level="win:Verbose" template="MethodenfehlerArgs"/>
+     <event value="999" symbol="Debug" version="0" task="Debug" level="win:Verbose" template="DebugArgs"/>
+    </events>
+    <templates>
+     <template tid="DieAufgabewurdegestartet.StartenArgs">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="UserContext" inType="win:UnicodeString"/>
+      <data name="InstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="FehlerbeimAufgabenstartStartfehlerArgs">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="UserContext" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="FehlerbeimAktionsstartAusführungsfehlerArgs">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="InstanceId" inType="win:GUID"/>
+      <data name="UserContext" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="AnmeldefehlerArgs">
+      <data name="UserName" inType="win:UnicodeString"/>
+      <data name="ErrorDescription" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="IdentitätswechselfehlerArgs">
+      <data name="Context" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="AufgaberegistriertArgs">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="UserContext" inType="win:UnicodeString"/>
+     </template>
+     <template tid="AufgabewurdeaufderPlanungausgelöst.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="InstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="DieAufgabewurdevomBenutzerausgelöst.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="InstanceId" inType="win:GUID"/>
+      <data name="UserContext" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DieAufgabewurdeohneeinigeTriggerregistriert.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="FehlerbeimAktualisierungoderLöscheneinerAufgabeArgs">
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="DieAufgabewurdedurcheineAnmeldungausgelöst.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="UserName" inType="win:UnicodeString"/>
+      <data name="InstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="ProzessfürerstellteAufgabeArgs">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="Path" inType="win:UnicodeString"/>
+      <data name="ProcessID" inType="win:UInt32"/>
+      <data name="Priority" inType="win:UInt32"/>
+     </template>
+     <template tid="DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="CurrentQuota" inType="win:UInt32"/>
+     </template>
+     <template tid="Startbedingungswarnung_dasKontingentistfasterreicht.Args">
+      <data name="CurrentQuota" inType="win:UInt32"/>
+     </template>
+     <template tid="DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten._133Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="TaskEngineName" inType="win:UnicodeString"/>
+      <data name="UserName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Startbedingungswarnung_dasKontingentistfasterreicht._134Args">
+      <data name="TaskEngineName" inType="win:UnicodeString"/>
+      <data name="UserName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DieAufgabenregistrierungwurdeaktualisiert.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="UserName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DasAufgabenabbildkonntenachderBetriebssystemmigrationnichtwiederhergestelltwerden.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="VonderAufgabenplanungkonnteeineAufgabebeimDienststartnichtinstanziiertwerden.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="LogPoint" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="AufgabenfertigstellungstehtanArgs">
+      <data name="TaskPath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DieAktionwurdegestartet.StartenArgs">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="ActionName" inType="win:UnicodeString"/>
+      <data name="TaskInstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="AktionfehlgeschlagenAusführungsfehlerArgs">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="TaskInstanceId" inType="win:GUID"/>
+      <data name="ActionName" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="DasAufgabenmodulwurdegestartet.StartenArgs">
+      <data name="TaskEngineName" inType="win:UnicodeString"/>
+      <data name="ProcessID" inType="win:UInt32"/>
+     </template>
+     <template tid="DasAufgabenmodulwurderichtigheruntergefahren.BeendenArgs">
+      <data name="TaskEngineName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DasAufgabenmodulwurdeaufgrundeinesFehlersbeendet.FehlerArgs">
+      <data name="TaskEngineName" inType="win:UnicodeString"/>
+      <data name="ErrorDescription" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="DieAufgabewurdeandasModulgesendet.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="TaskEngineName" inType="win:UnicodeString"/>
+      <data name="TaskInstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="DieAufgabekonntenichtandasModulgesendetwerden.FehlerArgs">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="TaskEngineName" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="DasModulkonntedieAufgabenichtempfangen.FehlerArgs">
+      <data name="TaskEngineName" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="DasModulistverwaist.Args">
+      <data name="TaskCount" inType="win:UInt32"/>
+      <data name="TaskEngineName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DasAufgabenmodulwurdegestartet._310Args">
+      <data name="TaskEngineName" inType="win:UnicodeString"/>
+      <data name="Command" inType="win:UnicodeString"/>
+      <data name="ProcessID" inType="win:UInt32"/>
+      <data name="ThreadID" inType="win:UInt32"/>
+     </template>
+     <template tid="FehlerbeimStartendesAufgabenmodulsStartfehlerArgs">
+      <data name="TaskEngineName" inType="win:UnicodeString"/>
+      <data name="Command" inType="win:UnicodeString"/>
+      <data name="ErrorDescription" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="DasAufgabenmodulhateineNachrichtzumStartenderAufgabeempfangen.StartenArgs">
+      <data name="TaskEngineName" inType="win:UnicodeString"/>
+      <data name="TaskName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DasAufgabenmodulhateineNachrichtzumBeendenderAufgabeempfangen.BeendenArgs">
+      <data name="TaskEngineName" inType="win:UnicodeString"/>
+      <data name="TaskInstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="DieStartanforderungwurdeignoriert.DieInstanzwirdbereitsausgeführt.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="TaskInstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="DieStartanforderungwurdebestätigt.DieaktuelleInstanzwurdebeendet.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="StoppedTaskInstanceId" inType="win:GUID"/>
+      <data name="NewTaskInstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="DieStartanforderungwurdeindieWarteschlangeeingereiht.DieInstanzwirdbereitsausgeführt.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="QueuedTaskInstanceId" inType="win:GUID"/>
+      <data name="RunningTaskInstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="StartanforderunginWarteschlangeeingereihtArgs">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="QueuedTaskInstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="DieAufgabewirdaufAnforderungdesBenutzersbeendet.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="TaskInstanceId" inType="win:GUID"/>
+      <data name="UserContext" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DieAufgabekonntebeiderZeitüberschreitungnichtbeendetwerden.Args">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="TaskInstanceId" inType="win:GUID"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="FehlerbeimStartendesDienstesStartfehlerArgs">
+      <data name="ErrorDescription" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="FehlerhafteTaskkonfigurationArgs">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="Parameter" inType="win:UnicodeString"/>
+     </template>
+     <template tid="LeerlaufaufgabenregistrierungArgs">
+      <data name="IdleTaskId" inType="win:UInt32"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="EnergiebenachrichtigungfürLeerlaufaufgabeempfangenArgs">
+      <data name="NotificationType" inType="win:UnicodeString"/>
+      <data name="State" inType="win:UInt32"/>
+     </template>
+     <template tid="PerfTrack_RessourcenbeanspruchungfürdieLeerlaufaufgabeArgs">
+      <data name="NoIdleReason" inType="win:UInt32"/>
+      <data name="DATA1" inType="win:UInt32"/>
+      <data name="DATA2" inType="win:UInt32"/>
+     </template>
+     <template tid="PerfTrack_LeerlaufbeendigungfürdieLeerlaufaufgabeArgs">
+      <data name="TimeSinceUserNotPresent" inType="win:UInt32"/>
+      <data name="DATA" inType="win:UInt32"/>
+     </template>
+     <template tid="LeerlaufprüfpunktArgs">
+      <data name="DetectionResult" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt32"/>
+     </template>
+     <template tid="FehlerbeiderAufgabenstatusaktualisierungdesKompatibilitätsmodulsArgs">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="TaskStatus" inType="win:UInt32"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="FehlerderSicherheitsbeschreibungdesKompatibilitätsmodulsArgs">
+      <data name="SecurityDescriptor" inType="win:UnicodeString"/>
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls711Args">
+      <data name="Account" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="DerWartungszustandhatsichgeändert.Args">
+      <data name="hc_stateid" inType="win:UInt32"/>
+      <data name="LastRunDateTime" inType="win:UnicodeString"/>
+     </template>
+     <template tid="FehlerbeimStartenderWartung.Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="AufgabenfehlerfürdasWartungsplanungsmodul.Args">
+      <data name="Task" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="ZyklischeAbhängigkeiteinerWartungsaufgabeerkannt.Args">
+      <data name="Task" inType="win:UnicodeString"/>
+     </template>
+     <template tid="VerarbeitungsfehlerbeiderWartungsaufgabe.Args">
+      <data name="Task" inType="win:UnicodeString"/>
+      <data name="InfoCode" inType="win:UInt32"/>
+     </template>
+     <template tid="WartungabgeschlossenArgs">
+      <data name="LauncherId" inType="win:UInt32"/>
+     </template>
+     <template tid="KonfigurationsfehlerbeiWartungszeitplanArgs">
+      <data name="FailureReason" inType="win:UnicodeString"/>
+     </template>
+     <template tid="MethodenfehlerArgs">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="HRESULT" inType="win:UInt32"/>
+      <data name="File" inType="win:UnicodeString"/>
+      <data name="Line" inType="win:UInt32"/>
+     </template>
+     <template tid="DebugArgs">
+      <data name="String" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DieAktionwurdegestartet.StartenArgs_V1">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="ActionName" inType="win:UnicodeString"/>
+      <data name="TaskInstanceId" inType="win:GUID"/>
+      <data name="EnginePID" inType="win:UInt32"/>
+     </template>
+     <template tid="AktionfehlgeschlagenAusführungsfehlerArgs_V1">
+      <data name="TaskName" inType="win:UnicodeString"/>
+      <data name="TaskInstanceId" inType="win:GUID"/>
+      <data name="ActionName" inType="win:UnicodeString"/>
+      <data name="ResultCode" inType="win:UInt32"/>
+      <data name="EnginePID" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_ForcedIdleProcessing" value="ForcedIdleProcessing"/>
+    <string id="task_DieAufgabewurdegestartet." value="DieAufgabewurdegestartet."/>
+    <string id="task_FehlerbeimAufgabenstart" value="FehlerbeimAufgabenstart"/>
+    <string id="opcode_FehlerbeimAufgabenstartStartfehler" value="Startfehler"/>
+    <string id="task_Aufgabeabgeschlossen" value="Aufgabeabgeschlossen"/>
+    <string id="task_FehlerbeimAktionsstart" value="FehlerbeimAktionsstart"/>
+    <string id="opcode_FehlerbeimAktionsstartAusführungsfehler" value="Ausführungsfehler"/>
+    <string id="task_Anmeldefehler" value="Anmeldefehler"/>
+    <string id="task_Identitätswechselfehler" value="Identitätswechselfehler"/>
+    <string id="task_Aufgaberegistriert" value="Aufgaberegistriert"/>
+    <string id="task_AufgabewurdeaufderPlanungausgelöst." value="AufgabewurdeaufderPlanungausgelöst."/>
+    <string id="task_DieAufgabewurdedurcheinEreignisausgelöst." value="DieAufgabewurdedurcheinEreignisausgelöst."/>
+    <string id="task_DieAufgabewurdedurchRegistrierungausgelöst." value="DieAufgabewurdedurchRegistrierungausgelöst."/>
+    <string id="task_DieAufgabewurdevomBenutzerausgelöst." value="DieAufgabewurdevomBenutzerausgelöst."/>
+    <string id="task_Aufgabebeendet" value="Aufgabebeendet"/>
+    <string id="opcode_AufgabebeendetAbbruch" value="Abbruch"/>
+    <string id="task_DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar." value="DieStartbedingungenwurdennichterfüllt..DasNetzwerkistnichtverfügbar."/>
+    <string id="task_DieAufgabewurdeohneeinigeTriggerregistriert." value="DieAufgabewurdeohneeinigeTriggerregistriert."/>
+    <string id="task_EinefehlendeAufgabewurdegestartet." value="EinefehlendeAufgabewurdegestartet."/>
+    <string id="task_FehlerbeimAktualisierungoderLöscheneinerAufgabe" value="FehlerbeimAktualisierungoderLöscheneinerAufgabe"/>
+    <string id="task_DieAufgabewurdeohneAnmeldeinformationenregistriert." value="DieAufgabewurdeohneAnmeldeinformationenregistriert."/>
+    <string id="task_DieAufgabewurdedurchLeerlaufausgelöst." value="DieAufgabewurdedurchLeerlaufausgelöst."/>
+    <string id="task_DieAufgabewurdedurcheinenComputerstartausgelöst." value="DieAufgabewurdedurcheinenComputerstartausgelöst."/>
+    <string id="task_DieAufgabewurdedurcheineAnmeldungausgelöst." value="DieAufgabewurdedurcheineAnmeldungausgelöst."/>
+    <string id="task_DieAufgabewurdedurcheineVerbindungmitderlokalenKonsoleausgelöst." value="DieAufgabewurdedurcheineVerbindungmitderlokalenKonsoleausgelöst."/>
+    <string id="task_DieAufgabewurdedurchdasTrennenderVerbindungmitderlokalenKonsoleausgelöst." value="DieAufgabewurdedurchdasTrennenderVerbindungmitderlokalenKonsoleausgelöst."/>
+    <string id="task_DieAufgabewurdedurcheineVerbindungmiteinerRemotekonsoleausgelöst." value="DieAufgabewurdedurcheineVerbindungmiteinerRemotekonsoleausgelöst."/>
+    <string id="task_DieAufgabewurdedurchdasTrennenderVerbindungmiteinerRemotekonsoleausgelöst." value="DieAufgabewurdedurchdasTrennenderVerbindungmiteinerRemotekonsoleausgelöst."/>
+    <string id="task_DieAufgabewurdedurchdasSperrenderArbeitsstationausgelöst." value="DieAufgabewurdedurchdasSperrenderArbeitsstationausgelöst."/>
+    <string id="task_DieAufgabewurdedurchdasEntsperrenderArbeitsstationausgelöst." value="DieAufgabewurdedurchdasEntsperrenderArbeitsstationausgelöst."/>
+    <string id="task_DieAufgabewurdenacheinemFehlerneugestartet." value="DieAufgabewurdenacheinemFehlerneugestartet."/>
+    <string id="task_DieAufgabewurdenacheinemFehlerneugestartet._127" value="DieAufgabewurdenacheinemFehlerneugestartet._127"/>
+    <string id="task_DieStartbedingungenwurdennichterfüllt.DieEndzeitliegtvorderaktuellenZeit." value="DieStartbedingungenwurdennichterfüllt.DieEndzeitliegtvorderaktuellenZeit."/>
+    <string id="task_ProzessfürerstellteAufgabe" value="ProzessfürerstellteAufgabe"/>
+    <string id="task_DieStartbedingungenwurdennichterfüllt.DerDienstistausgelastet." value="DieStartbedingungenwurdennichterfüllt.DerDienstistausgelastet."/>
+    <string id="task_DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten." value="DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten."/>
+    <string id="task_Startbedingungswarnung_dasKontingentistfasterreicht." value="Startbedingungswarnung_dasKontingentistfasterreicht."/>
+    <string id="task_DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten._133" value="DieStartbedingungenwurdennichterfüllt.DasKontingentwurdeüberschritten._133"/>
+    <string id="task_Startbedingungswarnung_dasKontingentistfasterreicht._134" value="Startbedingungswarnung_dasKontingentistfasterreicht._134"/>
+    <string id="task_DieStartbedingungenwurdennichterfüllt.DerComputeristnichtimLeelauf." value="DieStartbedingungenwurdennichterfüllt.DerComputeristnichtimLeelauf."/>
+    <string id="task_Aufgabenfertigstellungstehtan" value="Aufgabenfertigstellungstehtan"/>
+    <string id="task_DieAufgabenregistrierungwurdeaktualisiert." value="DieAufgabenregistrierungwurdeaktualisiert."/>
+    <string id="task_DieAufgabenregistrierungwurdegelöscht." value="DieAufgabenregistrierungwurdegelöscht."/>
+    <string id="task_DieAufgabewurdedeaktiviert." value="DieAufgabewurdedeaktiviert."/>
+    <string id="task_DieAufgabewurdedurchBeendendesRuhezustandsausgelöst." value="DieAufgabewurdedurchBeendendesRuhezustandsausgelöst."/>
+    <string id="task_FehlerbeimLadenvonAufgabenbeimStartdesDiensts." value="FehlerbeimLadenvonAufgabenbeimStartdesDiensts."/>
+    <string id="task_DasAufgabenabbildwurdenachderBetriebssystemmigrationwiederhergestellt." value="DasAufgabenabbildwurdenachderBetriebssystemmigrationwiederhergestellt."/>
+    <string id="task_DasAufgabenabbildkonntenachderBetriebssystemmigrationnichtwiederhergestelltwerden." value="DasAufgabenabbildkonntenachderBetriebssystemmigrationnichtwiederhergestelltwerden."/>
+    <string id="task_VonderAufgabewirdeineKombinationvonEigenschaftenverwendet,diemitdemPlanungsmodulnichtkompatibelist." value="VonderAufgabewirdeineKombinationvonEigenschaftenverwendet,diemitdemPlanungsmodulnichtkompatibelist."/>
+    <string id="task_FehlerbeiderAufgabenregistrierungbeiEreignis." value="FehlerbeiderAufgabenregistrierungbeiEreignis."/>
+    <string id="task_VonderAufgabenplanungkonnteeineAufgabebeimDienststartnichtinstanziiertwerden." value="VonderAufgabenplanungkonnteeineAufgabebeimDienststartnichtinstanziiertwerden."/>
+    <string id="task_DieAufgabewurdeaneinLegacymodulumgeleitet." value="DieAufgabewurdeaneinLegacymodulumgeleitet."/>
+    <string id="task_StartderverpasstenAufgabeabgelehnt" value="StartderverpasstenAufgabeabgelehnt"/>
+    <string id="task_DieAktionwurdegestartet." value="DieAktionwurdegestartet."/>
+    <string id="task_Aktionabgeschlossen" value="Aktionabgeschlossen"/>
+    <string id="task_Aktionfehlgeschlagen" value="Aktionfehlgeschlagen"/>
+    <string id="opcode_AktionfehlgeschlagenAusführungsfehler" value="Ausführungsfehler"/>
+    <string id="task_FehlerbeimStartenderAktion" value="FehlerbeimStartenderAktion"/>
+    <string id="opcode_FehlerbeimStartenderAktionStartfehler" value="Startfehler"/>
+    <string id="task_DieAufgabekonntenichtdurchdasEreignisgestartetwerden." value="DieAufgabekonntenichtdurchdasEreignisgestartetwerden."/>
+    <string id="task_DieAufgabekonntenichtdurchÜbereinstimmungmitdemEreignismustergestartetwerden." value="DieAufgabekonntenichtdurchÜbereinstimmungmitdemEreignismustergestartetwerden."/>
+    <string id="task_DasAufgabenmodulwurdegestartet." value="DasAufgabenmodulwurdegestartet."/>
+    <string id="task_DasAufgabenmodulwurderichtigheruntergefahren." value="DasAufgabenmodulwurderichtigheruntergefahren."/>
+    <string id="task_DasAufgabenmodulwurdeaufgrundeinesFehlersbeendet." value="DasAufgabenmodulwurdeaufgrundeinesFehlersbeendet."/>
+    <string id="opcode_DasAufgabenmodulwurdeaufgrundeinesFehlersbeendet.Fehler" value="Fehler"/>
+    <string id="task_DieAufgabewurdeandasModulgesendet." value="DieAufgabewurdeandasModulgesendet."/>
+    <string id="task_DieAufgabekonntenichtandasModulgesendetwerden." value="DieAufgabekonntenichtandasModulgesendetwerden."/>
+    <string id="opcode_DieAufgabekonntenichtandasModulgesendetwerden.Fehler" value="Fehler"/>
+    <string id="task_DasModulkonntedieAufgabenichtempfangen." value="DasModulkonntedieAufgabenichtempfangen."/>
+    <string id="opcode_DasModulkonntedieAufgabenichtempfangen.Fehler" value="Fehler"/>
+    <string id="task_VerbindungsfehlerdesDienstmoduls" value="VerbindungsfehlerdesDienstmoduls"/>
+    <string id="opcode_VerbindungsfehlerdesDienstmodulsFehler" value="Fehler"/>
+    <string id="task_VerbindungdesDienstmodulswurdehergestellt." value="VerbindungdesDienstmodulswurdehergestellt."/>
+    <string id="task_DasModulistverwaist." value="DasModulistverwaist."/>
+    <string id="task_DasAufgabenmodulwurdegestartet._310" value="DasAufgabenmodulwurdegestartet._310"/>
+    <string id="task_FehlerbeimStartendesAufgabenmoduls" value="FehlerbeimStartendesAufgabenmoduls"/>
+    <string id="opcode_FehlerbeimStartendesAufgabenmodulsStartfehler" value="Startfehler"/>
+    <string id="task_DasAufgabenmodul_Auftragsobjektwurdeerstellt." value="DasAufgabenmodul_Auftragsobjektwurdeerstellt."/>
+    <string id="task_DerDienstmodulkanalistbereit." value="DerDienstmodulkanalistbereit."/>
+    <string id="task_LeerlaufdesAufgabenmoduls" value="LeerlaufdesAufgabenmoduls"/>
+    <string id="task_VerbindungsfehlerdesDienstmoduls_315" value="VerbindungsfehlerdesDienstmoduls_315"/>
+    <string id="opcode_VerbindungsfehlerdesDienstmoduls_315Fehler" value="Fehler"/>
+    <string id="task_DasModulkonntedieNachrichtnichtandenDienstsenden." value="DasModulkonntedieNachrichtnichtandenDienstsenden."/>
+    <string id="opcode_DasModulkonntedieNachrichtnichtandenDienstsenden.Fehler" value="Fehler"/>
+    <string id="task_DasAufgabenmodulwurdegestartet._317" value="DasAufgabenmodulwurdegestartet._317"/>
+    <string id="task_DasAufgabenmodulwurderichtigheruntergefahren._318" value="DasAufgabenmodulwurderichtigheruntergefahren._318"/>
+    <string id="task_DasAufgabenmodulhateineNachrichtzumStartenderAufgabeempfangen." value="DasAufgabenmodulhateineNachrichtzumStartenderAufgabeempfangen."/>
+    <string id="task_DasAufgabenmodulhateineNachrichtzumBeendenderAufgabeempfangen." value="DasAufgabenmodulhateineNachrichtzumBeendenderAufgabeempfangen."/>
+    <string id="task_DieStartanforderungwurdeignoriert.DieInstanzwirdbereitsausgeführt." value="DieStartanforderungwurdeignoriert.DieInstanzwirdbereitsausgeführt."/>
+    <string id="task_DieStartanforderungwurdebestätigt.DieaktuelleInstanzwurdebeendet." value="DieStartanforderungwurdebestätigt.DieaktuelleInstanzwurdebeendet."/>
+    <string id="task_DieStartanforderungwurdeindieWarteschlangeeingereiht.DieInstanzwirdbereitsausgeführt." value="DieStartanforderungwurdeindieWarteschlangeeingereiht.DieInstanzwirdbereitsausgeführt."/>
+    <string id="task_StartanforderunginWarteschlangeeingereiht" value="StartanforderunginWarteschlangeeingereiht"/>
+    <string id="task_DieStartbedingungenwurdennichterfüllt.DerComputeristaufAkkubetriebgeschaltet." value="DieStartbedingungenwurdennichterfüllt.DerComputeristaufAkkubetriebgeschaltet."/>
+    <string id="task_DieAufgabewurdeaufgrundeinesWechselsindenAkkubetriebbeendet." value="DieAufgabewurdeaufgrundeinesWechselsindenAkkubetriebbeendet."/>
+    <string id="task_Aufgabewirdbeendet,weilderComputersichnichtimLeerlaufbefindet" value="Aufgabewirdbeendet,weilderComputersichnichtimLeerlaufbefindet"/>
+    <string id="task_DieAufgabewirdaufgrundeinerZeitüberschreitungbeendet." value="DieAufgabewirdaufgrundeinerZeitüberschreitungbeendet."/>
+    <string id="task_DieAufgabewirdaufAnforderungdesBenutzersbeendet." value="DieAufgabewirdaufAnforderungdesBenutzersbeendet."/>
+    <string id="task_DieAufgabekonntebeiderZeitüberschreitungnichtbeendetwerden." value="DieAufgabekonntebeiderZeitüberschreitungnichtbeendetwerden."/>
+    <string id="task_DieStartbedingungenwurdennichterfüllt.DerBenutzeristnichtangemeldet." value="DieStartbedingungenwurdennichterfüllt.DerBenutzeristnichtangemeldet."/>
+    <string id="task_DieStartbedingungenwurdennichterfüllt.DieSitzungisteineRemoteApp_Sitzung." value="DieStartbedingungenwurdennichterfüllt.DieSitzungisteineRemoteApp_Sitzung."/>
+    <string id="task_DieStartbedingungwurdenichterfüllt.DieSitzungisteineWorker_Sitzung." value="DieStartbedingungwurdenichterfüllt.DieSitzungisteineWorker_Sitzung."/>
+    <string id="task_DerDienstwurdegestartet." value="DerDienstwurdegestartet."/>
+    <string id="task_FehlerbeimStartendesDienstes" value="FehlerbeimStartendesDienstes"/>
+    <string id="opcode_FehlerbeimStartendesDienstesStartfehler" value="Startfehler"/>
+    <string id="task_Dienstwirdbeendet" value="Dienstwirdbeendet"/>
+    <string id="task_SchwerwiegenderFehlerdesDienstes" value="SchwerwiegenderFehlerdesDienstes"/>
+    <string id="opcode_SchwerwiegenderFehlerdesDienstesFehler" value="Fehler"/>
+    <string id="task_RPC_FehlerdesDienstes" value="RPC_FehlerdesDienstes"/>
+    <string id="task_COM_FehlerdesDienstes" value="COM_FehlerdesDienstes"/>
+    <string id="task_FehlerbeimInitialisierendesAnmeldeinformationsspeichers" value="FehlerbeimInitialisierendesAnmeldeinformationsspeichers"/>
+    <string id="task_LSA_Initialisierungsfehler" value="LSA_Initialisierungsfehler"/>
+    <string id="task_Leerlauferkennungsfehler" value="Leerlauferkennungsfehler"/>
+    <string id="task_FehlerbeiderBenachrichtigungübereineZeitänderung" value="FehlerbeiderBenachrichtigungübereineZeitänderung"/>
+    <string id="task_FehlerdesReaktivierungszeitgebers" value="FehlerdesReaktivierungszeitgebers"/>
+    <string id="task_DievomDienstsignalisierteZeitwurdegeändert." value="DievomDienstsignalisierteZeitwurdegeändert."/>
+    <string id="task_FehlerhafteTaskkonfiguration" value="FehlerhafteTaskkonfiguration"/>
+    <string id="task_Leerlaufaufgabenregistrierung" value="Leerlaufaufgabenregistrierung"/>
+    <string id="task_AufhebenderLeerlaufaufgabenregistrierung" value="AufhebenderLeerlaufaufgabenregistrierung"/>
+    <string id="task_Leerlaufaufgabenausführung" value="Leerlaufaufgabenausführung"/>
+    <string id="task_Leerlaufaufgabenbenachrichtigung" value="Leerlaufaufgabenbenachrichtigung"/>
+    <string id="task_AusdrücklicheLeerlaufaufgabenverarbeitung" value="AusdrücklicheLeerlaufaufgabenverarbeitung"/>
+    <string id="task_DieausdrücklicheLeerlaufaufgabenverarbeitungistaktiv." value="DieausdrücklicheLeerlaufaufgabenverarbeitungistaktiv."/>
+    <string id="task_EnergiebenachrichtigungfürLeerlaufaufgabeempfangen" value="EnergiebenachrichtigungfürLeerlaufaufgabeempfangen"/>
+    <string id="task_PerfTrack_RessourcenbeanspruchungfürdieLeerlaufaufgabe" value="PerfTrack_RessourcenbeanspruchungfürdieLeerlaufaufgabe"/>
+    <string id="task_PerfTrack_LeerlaufbeendigungfürdieLeerlaufaufgabe" value="PerfTrack_LeerlaufbeendigungfürdieLeerlaufaufgabe"/>
+    <string id="task_Leerlaufprüfpunkt" value="Leerlaufprüfpunkt"/>
+    <string id="task_DasKompatibilitätsmodulwurdegestartet." value="DasKompatibilitätsmodulwurdegestartet."/>
+    <string id="task_FehlerbeimStartendesKompatibilitätsmoduls" value="FehlerbeimStartendesKompatibilitätsmoduls"/>
+    <string id="task_FehlerbeimRPCdesKompatibilitätsmoduls" value="FehlerbeimRPCdesKompatibilitätsmoduls"/>
+    <string id="task_FehlerderNetzplanungs_APIdesKompatibilitätsmoduls" value="FehlerderNetzplanungs_APIdesKompatibilitätsmoduls"/>
+    <string id="task_LSA_FehlerdesKompatibilitätsmoduls" value="LSA_FehlerdesKompatibilitätsmoduls"/>
+    <string id="task_FehlerbeiderVerzeichnisüberwachungdesKompatibilitätsmoduls" value="FehlerbeiderVerzeichnisüberwachungdesKompatibilitätsmoduls"/>
+    <string id="task_FehlerbeiderAufgabenstatusaktualisierungdesKompatibilitätsmoduls" value="FehlerbeiderAufgabenstatusaktualisierungdesKompatibilitätsmoduls"/>
+    <string id="task_FehlerbeiderAufgabenlöschungdesKompatibilitätsmoduls" value="FehlerbeiderAufgabenlöschungdesKompatibilitätsmoduls"/>
+    <string id="task_FehlerderSicherheitsbeschreibungdesKompatibilitätsmoduls" value="FehlerderSicherheitsbeschreibungdesKompatibilitätsmoduls"/>
+    <string id="task_FehlerbeimAufgabenupdatedesKompatibilitätsmoduls" value="FehlerbeimAufgabenupdatedesKompatibilitätsmoduls"/>
+    <string id="task_FehlerbeimAufgabenupgradedesKompatibilitätsmoduls" value="FehlerbeimAufgabenupgradedesKompatibilitätsmoduls"/>
+    <string id="task_DasAufgabenupgradedesKompatibilitätsmodulswurdenichtbestimmt." value="DasAufgabenupgradedesKompatibilitätsmodulswurdenichtbestimmt."/>
+    <string id="task_FehlerbeimUpgradedesAnmeldeinformationsspeichers" value="FehlerbeimUpgradedesAnmeldeinformationsspeichers"/>
+    <string id="task_DasBetriebsprotokollderAufgabenplanungwurdedeaktiviert." value="DasBetriebsprotokollderAufgabenplanungwurdedeaktiviert."/>
+    <string id="task_DerWartungszustandhatsichgeändert." value="DerWartungszustandhatsichgeändert."/>
+    <string id="task_FehlerbeimStartenderWartung." value="FehlerbeimStartenderWartung."/>
+    <string id="task_FehlerbeimÄndernderWartungskonfiguration." value="FehlerbeimÄndernderWartungskonfiguration."/>
+    <string id="task_AufgabenfehlerfürdasWartungsplanungsmodul." value="AufgabenfehlerfürdasWartungsplanungsmodul."/>
+    <string id="task_ZyklischeAbhängigkeiteinerWartungsaufgabeerkannt." value="ZyklischeAbhängigkeiteinerWartungsaufgabeerkannt."/>
+    <string id="task_FristablaufbeiWartungsaufgabe." value="FristablaufbeiWartungsaufgabe."/>
+    <string id="task_VerarbeitungsfehlerbeiderWartungsaufgabe." value="VerarbeitungsfehlerbeiderWartungsaufgabe."/>
+    <string id="task_Wartungabgeschlossen" value="Wartungabgeschlossen"/>
+    <string id="task_ReaktivierungfürWartungangefordert" value="ReaktivierungfürWartungangefordert"/>
+    <string id="task_KonfigurationsfehlerbeiWartungszeitplan" value="KonfigurationsfehlerbeiWartungszeitplan"/>
+    <string id="task_Methodenfehler" value="Methodenfehler"/>
+    <string id="opcode_MethodenfehlerFehler" value="Fehler"/>
+    <string id="task_Debug" value="Debug"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

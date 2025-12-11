@@ -1,0 +1,137 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Resource-Exhaustion-Detector" guid="{9988748e-c2e8-4054-85f6-0c3e1cad2470}" resourceFileName="Microsoft-Windows-Resource-Exhaustion-Detector" messageFileName="Microsoft-Windows-Resource-Exhaustion-Detector" symbol="MicrosoftWindowsResourceExhaustionDetector" source="Xml" >
+    <keywords>
+     <keyword name="RDR_DET_KEYWORD_LIFECYCLE" message="$(string.keyword_RDR_DET_KEYWORD_LIFECYCLE)" mask="0x10000000"/>
+     <keyword name="RDR_DET_KEYWORD_MEMORY_EXHAUSTION" message="$(string.keyword_RDR_DET_KEYWORD_MEMORY_EXHAUSTION)" mask="0x20000000"/>
+     <keyword name="RDR_DET_KEYWORD_HEAP_LEAK_DETECTION" message="$(string.keyword_RDR_DET_KEYWORD_HEAP_LEAK_DETECTION)" mask="0x40000000"/>
+    </keywords>
+    <tasks>
+     <task name="Zyklusereignisse" message="$(string.task_Zyklusereignisse)" value="1">
+      <opcodes>
+       <opcode name="Ereignisse,diebeimStartenderRessourcenauslastungserkennungprotokolliertwerden." message="$(string.opcode_ZyklusereignisseEreignisse,diebeimStartenderRessourcenauslastungserkennungprotokolliertwerden.)" value="11"/>
+       <opcode name="Ereignisse,diebeimBeendenderRessourcenauslastungserkennungprotokolliertwerden." message="$(string.opcode_ZyklusereignisseEreignisse,diebeimBeendenderRessourcenauslastungserkennungprotokolliertwerden.)" value="12"/>
+       <opcode name="Ereignisse,dienacheinerSpeicherzuweisungprotokolliertwerden." message="$(string.opcode_ZyklusereignisseEreignisse,dienacheinerSpeicherzuweisungprotokolliertwerden.)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="Ressourcenauslastungserkennungs_Ereignisse" message="$(string.task_Ressourcenauslastungserkennungs_Ereignisse)" value="2">
+      <opcodes>
+       <opcode name="Ereignisse,diebeimErkenneneinesProblemsprotokolliertwerden." message="$(string.opcode_Ressourcenauslastungserkennungs_EreignisseEreignisse,diebeimErkenneneinesProblemsprotokolliertwerden.)" value="22"/>
+      </opcodes>
+     </task>
+     <task name="Ressourcenauslastungsdiagnose_Ereignisse" message="$(string.task_Ressourcenauslastungsdiagnose_Ereignisse)" value="3">
+      <opcodes>
+       <opcode name="EnthältdieErgebnissederDiagnose." message="$(string.opcode_Ressourcenauslastungsdiagnose_EreignisseEnthältdieErgebnissederDiagnose.)" value="33"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1001" symbol="ZyklusereignisseEreignisse,diebeimStartenderRessourcenauslastungserkennungprotokolliertwerden." version="0" task="Zyklusereignisse" opcode="Ereignisse,diebeimStartenderRessourcenauslastungserkennungprotokolliertwerden." level="win:Informational" keywords="RDR_DET_KEYWORD_LIFECYCLE"/>
+     <event value="1002" symbol="ZyklusereignisseEreignisse,diebeimBeendenderRessourcenauslastungserkennungprotokolliertwerden." version="0" task="Zyklusereignisse" opcode="Ereignisse,diebeimBeendenderRessourcenauslastungserkennungprotokolliertwerden." level="win:Informational" keywords="RDR_DET_KEYWORD_LIFECYCLE"/>
+     <event value="1003" symbol="Ressourcenauslastungserkennungs_EreignisseEreignisse,diebeimErkenneneinesProblemsprotokolliertwerden." version="0" task="Ressourcenauslastungserkennungs_Ereignisse" opcode="Ereignisse,diebeimErkenneneinesProblemsprotokolliertwerden." level="win:Warning" keywords="RDR_DET_KEYWORD_MEMORY_EXHAUSTION" template="Ressourcenauslastungserkennungs_EreignisseEreignisse,diebeimErkenneneinesProblemsprotokolliertwerden.Args"/>
+     <event value="1005" symbol="ZyklusereignisseEreignisse,diebeimStartenderRessourcenauslastungserkennungprotokolliertwerden.1005" version="0" task="Zyklusereignisse" opcode="Ereignisse,diebeimStartenderRessourcenauslastungserkennungprotokolliertwerden." level="win:Error" keywords="RDR_DET_KEYWORD_LIFECYCLE" template="ZyklusereignisseEreignisse,diebeimStartenderRessourcenauslastungserkennungprotokolliertwerden.1005Args"/>
+     <event value="1006" symbol="ZyklusereignisseEreignisse,diebeimBeendenderRessourcenauslastungserkennungprotokolliertwerden.1006" version="0" task="Zyklusereignisse" opcode="Ereignisse,diebeimBeendenderRessourcenauslastungserkennungprotokolliertwerden." level="win:Error" keywords="RDR_DET_KEYWORD_LIFECYCLE" template="ZyklusereignisseEreignisse,diebeimStartenderRessourcenauslastungserkennungprotokolliertwerden.1005Args"/>
+     <event value="1007" symbol="ZyklusereignisseEreignisse,dienacheinerSpeicherzuweisungprotokolliertwerden." version="0" task="Zyklusereignisse" opcode="Ereignisse,dienacheinerSpeicherzuweisungprotokolliertwerden." level="win:Error" keywords="RDR_DET_KEYWORD_LIFECYCLE" template="ZyklusereignisseEreignisse,dienacheinerSpeicherzuweisungprotokolliertwerden.Args"/>
+     <event value="1008" symbol="Ressourcenauslastungsdiagnose_EreignisseEnthältdieErgebnissederDiagnose." version="0" task="Ressourcenauslastungsdiagnose_Ereignisse" opcode="EnthältdieErgebnissederDiagnose." level="win:Error" keywords="RDR_DET_KEYWORD_MEMORY_EXHAUSTION" template="ZyklusereignisseEreignisse,diebeimStartenderRessourcenauslastungserkennungprotokolliertwerden.1005Args"/>
+     <event value="2004" symbol="Ressourcenauslastungsdiagnose_EreignisseEnthältdieErgebnissederDiagnose.2004" version="0" task="Ressourcenauslastungsdiagnose_Ereignisse" opcode="EnthältdieErgebnissederDiagnose." level="win:Warning" keywords="RDR_DET_KEYWORD_MEMORY_EXHAUSTION" template="Ressourcenauslastungsdiagnose_EreignisseEnthältdieErgebnissederDiagnose.2004Args"/>
+    </events>
+    <templates>
+     <template tid="Ressourcenauslastungserkennungs_EreignisseEreignisse,diebeimErkenneneinesProblemsprotokolliertwerden.Args">
+      <data name="SystemCommitLimit" inType="win:UInt64"/>
+      <data name="SystemCommitCharge" inType="win:UInt64"/>
+     </template>
+     <template tid="ZyklusereignisseEreignisse,diebeimStartenderRessourcenauslastungserkennungprotokolliertwerden.1005Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="ZyklusereignisseEreignisse,dienacheinerSpeicherzuweisungprotokolliertwerden.Args">
+      <data name="RequestSize" inType="win:UInt64"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="Ressourcenauslastungsdiagnose_EreignisseEnthältdieErgebnissederDiagnose.2004Args">
+      <data name="SystemCommitLimit" inType="win:UInt64"/>
+      <data name="SystemCommitCharge" inType="win:UInt64"/>
+      <data name="ProcessCommitCharge" inType="win:UInt64"/>
+      <data name="PagedPoolUsage" inType="win:UInt64"/>
+      <data name="PhysicalMemorySize" inType="win:UInt64"/>
+      <data name="PhysicalMemoryUsage" inType="win:UInt64"/>
+      <data name="NonPagedPoolUsage" inType="win:UInt64"/>
+      <data name="TotalProcesses" inType="win:UInt32"/>
+      <data name="PagedPoolTag_1" inType="win:UnicodeString"/>
+      <data name="PagedPoolUsed_1" inType="win:UInt64"/>
+      <data name="PagedPoolTag_2" inType="win:UnicodeString"/>
+      <data name="PagedPoolUsed_2" inType="win:UInt64"/>
+      <data name="PagedPoolTag_3" inType="win:UnicodeString"/>
+      <data name="PagedPoolUsed_3" inType="win:UInt64"/>
+      <data name="NonPagedPoolTag_1" inType="win:UnicodeString"/>
+      <data name="NonPagedPoolUsed_1" inType="win:UInt64"/>
+      <data name="NonPagedPoolTag_2" inType="win:UnicodeString"/>
+      <data name="NonPagedPoolUsed_2" inType="win:UInt64"/>
+      <data name="NonPagedPoolTag_3" inType="win:UnicodeString"/>
+      <data name="NonPagedPoolUsed_3" inType="win:UInt64"/>
+      <data name="Process_1_Name" inType="win:UnicodeString"/>
+      <data name="Process_1_ID" inType="win:UInt32"/>
+      <data name="Process_1_CreationTime" inType="win:FILETIME"/>
+      <data name="Process_1_CommitCharge" inType="win:UInt64"/>
+      <data name="Process_1_HandleCount" inType="win:UInt32"/>
+      <data name="Process_1_Version" inType="win:UnicodeString"/>
+      <data name="Process_1_TypeInfo" inType="win:UInt32"/>
+      <data name="Process_2_Name" inType="win:UnicodeString"/>
+      <data name="Process_2_ID" inType="win:UInt32"/>
+      <data name="Process_2_CreationTime" inType="win:FILETIME"/>
+      <data name="Process_2_CommitCharge" inType="win:UInt64"/>
+      <data name="Process_2_HandleCount" inType="win:UInt32"/>
+      <data name="Process_2_Version" inType="win:UnicodeString"/>
+      <data name="Process_2_TypeInfo" inType="win:UInt32"/>
+      <data name="Process_3_Name" inType="win:UnicodeString"/>
+      <data name="Process_3_ID" inType="win:UInt32"/>
+      <data name="Process_3_CreationTime" inType="win:FILETIME"/>
+      <data name="Process_3_CommitCharge" inType="win:UInt64"/>
+      <data name="Process_3_HandleCount" inType="win:UInt32"/>
+      <data name="Process_3_Version" inType="win:UnicodeString"/>
+      <data name="Process_3_TypeInfo" inType="win:UInt32"/>
+      <data name="Process_4_Name" inType="win:UnicodeString"/>
+      <data name="Process_4_ID" inType="win:UInt32"/>
+      <data name="Process_4_CreationTime" inType="win:FILETIME"/>
+      <data name="Process_4_CommitCharge" inType="win:UInt64"/>
+      <data name="Process_4_HandleCount" inType="win:UInt32"/>
+      <data name="Process_4_Version" inType="win:UnicodeString"/>
+      <data name="Process_4_TypeInfo" inType="win:UInt32"/>
+      <data name="Process_5_Name" inType="win:UnicodeString"/>
+      <data name="Process_5_ID" inType="win:UInt32"/>
+      <data name="Process_5_CreationTime" inType="win:FILETIME"/>
+      <data name="Process_5_CommitCharge" inType="win:UInt64"/>
+      <data name="Process_5_HandleCount" inType="win:UInt32"/>
+      <data name="Process_5_Version" inType="win:UnicodeString"/>
+      <data name="Process_5_TypeInfo" inType="win:UInt32"/>
+      <data name="Process_6_Name" inType="win:UnicodeString"/>
+      <data name="Process_6_ID" inType="win:UInt32"/>
+      <data name="Process_6_CreationTime" inType="win:FILETIME"/>
+      <data name="Process_6_CommitCharge" inType="win:UInt64"/>
+      <data name="Process_6_HandleCount" inType="win:UInt32"/>
+      <data name="Process_6_Version" inType="win:UnicodeString"/>
+      <data name="Process_6_TypeInfo" inType="win:UInt32"/>
+      <data name="EventGenerationTime" inType="win:FILETIME"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_RDR_DET_KEYWORD_LIFECYCLE" value="RDR_DET_KEYWORD_LIFECYCLE"/>
+    <string id="keyword_RDR_DET_KEYWORD_MEMORY_EXHAUSTION" value="RDR_DET_KEYWORD_MEMORY_EXHAUSTION"/>
+    <string id="keyword_RDR_DET_KEYWORD_HEAP_LEAK_DETECTION" value="RDR_DET_KEYWORD_HEAP_LEAK_DETECTION"/>
+    <string id="task_Zyklusereignisse" value="Zyklusereignisse"/>
+    <string id="opcode_ZyklusereignisseEreignisse,diebeimStartenderRessourcenauslastungserkennungprotokolliertwerden." value="Ereignisse,diebeimStartenderRessourcenauslastungserkennungprotokolliertwerden."/>
+    <string id="opcode_ZyklusereignisseEreignisse,diebeimBeendenderRessourcenauslastungserkennungprotokolliertwerden." value="Ereignisse,diebeimBeendenderRessourcenauslastungserkennungprotokolliertwerden."/>
+    <string id="opcode_ZyklusereignisseEreignisse,dienacheinerSpeicherzuweisungprotokolliertwerden." value="Ereignisse,dienacheinerSpeicherzuweisungprotokolliertwerden."/>
+    <string id="task_Ressourcenauslastungserkennungs_Ereignisse" value="Ressourcenauslastungserkennungs_Ereignisse"/>
+    <string id="opcode_Ressourcenauslastungserkennungs_EreignisseEreignisse,diebeimErkenneneinesProblemsprotokolliertwerden." value="Ereignisse,diebeimErkenneneinesProblemsprotokolliertwerden."/>
+    <string id="task_Ressourcenauslastungsdiagnose_Ereignisse" value="Ressourcenauslastungsdiagnose_Ereignisse"/>
+    <string id="opcode_Ressourcenauslastungsdiagnose_EreignisseEnthältdieErgebnissederDiagnose." value="EnthältdieErgebnissederDiagnose."/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

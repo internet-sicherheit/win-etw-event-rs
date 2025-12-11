@@ -1,0 +1,190 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Crypto-NCrypt" guid="{e8ed09dc-100c-45e2-9fc8-b53399ec1f70}" resourceFileName="Microsoft-Windows-Crypto-NCrypt" messageFileName="Microsoft-Windows-Crypto-NCrypt" symbol="MicrosoftWindowsCryptoNCrypt" source="Xml" >
+    <keywords>
+     <keyword name="ETW_KEYWORD_NCRYPT_OPERATION" message="$(string.keyword_ETW_KEYWORD_NCRYPT_OPERATION)" mask="0x1"/>
+     <keyword name="ETW_KEYWORD_PROTECT_OPERATION" message="$(string.keyword_ETW_KEYWORD_PROTECT_OPERATION)" mask="0x2"/>
+     <keyword name="ETW_KEYWORD_BCRYPT_ISO_OPERATION_FAILED" message="$(string.keyword_ETW_KEYWORD_BCRYPT_ISO_OPERATION_FAILED)" mask="0x4"/>
+    </keywords>
+    <tasks>
+     <task name="Vorgangsfehler" message="$(string.task_Vorgangsfehler)" value="1"/>
+     <task name="FehlerbeimÖffnendesAnbieters." message="$(string.task_FehlerbeimÖffnendesAnbieters.)" value="2"/>
+     <task name="FehlerbeimÖffnendesSchlüssels." message="$(string.task_FehlerbeimÖffnendesSchlüssels.)" value="3"/>
+     <task name="Schlüsselerstellungsfehler" message="$(string.task_Schlüsselerstellungsfehler)" value="4"/>
+     <task name="Vorgangsfehler_5" message="$(string.task_Vorgangsfehler_5)" value="5"/>
+     <task name="Vorgangsfehler_6" message="$(string.task_Vorgangsfehler_6)" value="6"/>
+     <task name="Vorgangsfehler_7" message="$(string.task_Vorgangsfehler_7)" value="7"/>
+     <task name="Vorgangsfehler_8" message="$(string.task_Vorgangsfehler_8)" value="8"/>
+     <task name="Schlüsselschreibvorgangerfolgreich" message="$(string.task_Schlüsselschreibvorgangerfolgreich)" value="9"/>
+     <task name="Schlüsselschreibvorgangfehlgeschlagen" message="$(string.task_Schlüsselschreibvorgangfehlgeschlagen)" value="10"/>
+     <task name="Schlüssellöschvorgangerfolgreich" message="$(string.task_Schlüssellöschvorgangerfolgreich)" value="11"/>
+     <task name="Schlüssellöschvorgangfehlgeschlagen" message="$(string.task_Schlüssellöschvorgangfehlgeschlagen)" value="12"/>
+     <task name="AufgabenfehlerBCrypt_ISO_Vorgang" message="$(string.task_AufgabenfehlerBCrypt_ISO_Vorgang)" value="13"/>
+    </tasks>
+    <maps>
+     <valueMap name="NCryptOperationType">
+      <map value="0x1" message="$(string.map_NCryptOperationTypeSCHLÜSSEL ERSTELLEN)"/>
+      <map value="0x2" message="$(string.map_NCryptOperationTypeSCHLÜSSEL ÖFFNEN)"/>
+      <map value="0x3" message="$(string.map_NCryptOperationTypeSCHLÜSSEL LÖSCHEN)"/>
+      <map value="0x4" message="$(string.map_NCryptOperationTypeVERSCHLÜSSELN)"/>
+      <map value="0x5" message="$(string.map_NCryptOperationTypeENTSCHLÜSSELN)"/>
+      <map value="0x6" message="$(string.map_NCryptOperationTypeHASH SIGNIEREN)"/>
+      <map value="0x7" message="$(string.map_NCryptOperationTypeSIGNATUR ÜBERPRÜFEN)"/>
+      <map value="0x8" message="$(string.map_NCryptOperationTypeGEHEIMVERTRAG)"/>
+      <map value="0x9" message="$(string.map_NCryptOperationTypeSCHLÜSSEL ABLEITEN)"/>
+      <map value="0xa" message="$(string.map_NCryptOperationTypeSCHLÜSSELABLEITUNG)"/>
+      <map value="0xb" message="$(string.map_NCryptOperationTypeSCHLÜSSEL ABSCHLIESSEN)"/>
+      <map value="0xc" message="$(string.map_NCryptOperationTypeSCHLÜSSEL EXPORTIEREN)"/>
+      <map value="0xd" message="$(string.map_NCryptOperationTypeSCHLÜSSEL IMPORTIEREN)"/>
+     </valueMap>
+     <valueMap name="RecipientType">
+      <map value="0x1" message="$(string.map_RecipientTypeSCHLÜSSELTRANSPORT)"/>
+      <map value="0x2" message="$(string.map_RecipientTypeSCHLÜSSELVEREINBARUNG)"/>
+      <map value="0x3" message="$(string.map_RecipientTypeSYMMETRISCHE SCHLÜSSELVERSCHLÜSSELUNG)"/>
+      <map value="0x4" message="$(string.map_RecipientTypeKENNWORTVERSCHLÜSSELUNG)"/>
+      <map value="0x5" message="$(string.map_RecipientTypeSONSTIGES)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="Vorgangsfehler" version="0" task="Vorgangsfehler" level="win:Error" keywords="ETW_KEYWORD_NCRYPT_OPERATION" template="VorgangsfehlerArgs"/>
+     <event value="2" symbol="FehlerbeimÖffnendesAnbieters." version="0" task="FehlerbeimÖffnendesAnbieters." level="win:Error" keywords="ETW_KEYWORD_NCRYPT_OPERATION" template="FehlerbeimÖffnendesAnbieters.Args"/>
+     <event value="3" symbol="FehlerbeimÖffnendesSchlüssels." version="0" task="FehlerbeimÖffnendesSchlüssels." level="win:Error" keywords="ETW_KEYWORD_NCRYPT_OPERATION" template="FehlerbeimÖffnendesSchlüssels.Args"/>
+     <event value="4" symbol="Schlüsselerstellungsfehler" version="0" task="Schlüsselerstellungsfehler" level="win:Error" keywords="ETW_KEYWORD_NCRYPT_OPERATION" template="SchlüsselerstellungsfehlerArgs"/>
+     <event value="5" symbol="Vorgangsfehler_5" version="0" task="Vorgangsfehler_5" level="win:Error" keywords="ETW_KEYWORD_PROTECT_OPERATION" template="Vorgangsfehler_5Args"/>
+     <event value="6" symbol="Vorgangsfehler_6" version="0" task="Vorgangsfehler_6" level="win:Error" keywords="ETW_KEYWORD_PROTECT_OPERATION" template="Vorgangsfehler_6Args"/>
+     <event value="7" symbol="Vorgangsfehler_7" version="0" task="Vorgangsfehler_7" level="win:Error" keywords="ETW_KEYWORD_PROTECT_OPERATION" template="Vorgangsfehler_7Args"/>
+     <event value="8" symbol="Vorgangsfehler_8" version="0" task="Vorgangsfehler_8" level="win:Error" keywords="ETW_KEYWORD_PROTECT_OPERATION" template="Vorgangsfehler_7Args"/>
+     <event value="9" symbol="Schlüsselschreibvorgangerfolgreich" version="0" task="Schlüsselschreibvorgangerfolgreich" level="win:Verbose" keywords="ETW_KEYWORD_NCRYPT_OPERATION" template="SchlüsselschreibvorgangerfolgreichArgs"/>
+     <event value="10" symbol="Schlüsselschreibvorgangfehlgeschlagen" version="0" task="Schlüsselschreibvorgangfehlgeschlagen" level="win:Error" keywords="ETW_KEYWORD_NCRYPT_OPERATION" template="SchlüsselschreibvorgangerfolgreichArgs"/>
+     <event value="11" symbol="Schlüssellöschvorgangerfolgreich" version="0" task="Schlüssellöschvorgangerfolgreich" level="win:Verbose" keywords="ETW_KEYWORD_NCRYPT_OPERATION" template="SchlüssellöschvorgangerfolgreichArgs"/>
+     <event value="12" symbol="Schlüssellöschvorgangfehlgeschlagen" version="0" task="Schlüssellöschvorgangfehlgeschlagen" level="win:Error" keywords="ETW_KEYWORD_NCRYPT_OPERATION" template="SchlüssellöschvorgangerfolgreichArgs"/>
+     <event value="13" symbol="AufgabenfehlerBCrypt_ISO_Vorgang" version="0" task="AufgabenfehlerBCrypt_ISO_Vorgang" level="win:Error" keywords="ETW_KEYWORD_BCRYPT_ISO_OPERATION_FAILED" template="AufgabenfehlerBCrypt_ISO_VorgangArgs"/>
+    </events>
+    <templates>
+     <template tid="VorgangsfehlerArgs">
+      <data name="OperationType" inType="win:UInt32" map="NCryptOperationType"/>
+      <data name="ProviderName" inType="win:UnicodeString"/>
+      <data name="KeyName" inType="win:UnicodeString"/>
+      <data name="KeyType" inType="win:UnicodeString"/>
+      <data name="AlgorithmName" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="ProcessName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="FehlerbeimÖffnendesAnbieters.Args">
+      <data name="ProviderName" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="ProcessName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="FehlerbeimÖffnendesSchlüssels.Args">
+      <data name="ProviderName" inType="win:UnicodeString"/>
+      <data name="KeyName" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="ProcessName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SchlüsselerstellungsfehlerArgs">
+      <data name="ProviderName" inType="win:UnicodeString"/>
+      <data name="KeyName" inType="win:UnicodeString"/>
+      <data name="AlgorithmName" inType="win:UnicodeString"/>
+      <data name="Flags" inType="win:HexInt32"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="ProcessName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Vorgangsfehler_5Args">
+      <data name="ProtectorName" inType="win:UnicodeString"/>
+      <data name="ProtectorAttributes" inType="win:UnicodeString"/>
+      <data name="Flags" inType="win:HexInt32"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="ProcessName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Vorgangsfehler_6Args">
+      <data name="ProtectorName" inType="win:UnicodeString"/>
+      <data name="RecipientType" inType="win:UInt32" map="RecipientType"/>
+      <data name="Flags" inType="win:HexInt32"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="ProcessName" inType="win:UnicodeString"/>
+      <data name="KeyIdLength" inType="win:UInt32"/>
+      <data name="KeyId" inType="win:Binary" length="KeyIdLength"/>
+     </template>
+     <template tid="Vorgangsfehler_7Args">
+      <data name="Flags" inType="win:HexInt32"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="ProcessName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SchlüsselschreibvorgangerfolgreichArgs">
+      <data name="ProviderName" inType="win:UnicodeString"/>
+      <data name="KeyModificationType" inType="win:HexInt32"/>
+      <data name="Flags" inType="win:HexInt32"/>
+      <data name="KeyName" inType="win:UnicodeString"/>
+      <data name="KeyFileName" inType="win:UnicodeString"/>
+      <data name="ProcessName" inType="win:UnicodeString"/>
+      <data name="ProcessId" inType="win:HexInt32"/>
+      <data name="ThreadId" inType="win:HexInt32"/>
+      <data name="UserId" inType="win:UnicodeString"/>
+      <data name="ServiceTag" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="SchlüssellöschvorgangerfolgreichArgs">
+      <data name="ProviderName" inType="win:UnicodeString"/>
+      <data name="Flags" inType="win:HexInt32"/>
+      <data name="DeletionType" inType="win:HexInt32"/>
+      <data name="KeyName" inType="win:UnicodeString"/>
+      <data name="KeyFileName" inType="win:UnicodeString"/>
+      <data name="ProcessName" inType="win:UnicodeString"/>
+      <data name="ProcessId" inType="win:HexInt32"/>
+      <data name="ThreadId" inType="win:HexInt32"/>
+      <data name="UserId" inType="win:UnicodeString"/>
+      <data name="ServiceTag" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="AufgabenfehlerBCrypt_ISO_VorgangArgs">
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="Info" inType="win:UnicodeString"/>
+      <data name="StatusCode" inType="win:HexInt32"/>
+      <data name="StatusString" inType="win:HexInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_ETW_KEYWORD_NCRYPT_OPERATION" value="ETW_KEYWORD_NCRYPT_OPERATION"/>
+    <string id="keyword_ETW_KEYWORD_PROTECT_OPERATION" value="ETW_KEYWORD_PROTECT_OPERATION"/>
+    <string id="keyword_ETW_KEYWORD_BCRYPT_ISO_OPERATION_FAILED" value="ETW_KEYWORD_BCRYPT_ISO_OPERATION_FAILED"/>
+    <string id="task_Vorgangsfehler" value="Vorgangsfehler"/>
+    <string id="task_FehlerbeimÖffnendesAnbieters." value="FehlerbeimÖffnendesAnbieters."/>
+    <string id="task_FehlerbeimÖffnendesSchlüssels." value="FehlerbeimÖffnendesSchlüssels."/>
+    <string id="task_Schlüsselerstellungsfehler" value="Schlüsselerstellungsfehler"/>
+    <string id="task_Vorgangsfehler_5" value="Vorgangsfehler_5"/>
+    <string id="task_Vorgangsfehler_6" value="Vorgangsfehler_6"/>
+    <string id="task_Vorgangsfehler_7" value="Vorgangsfehler_7"/>
+    <string id="task_Vorgangsfehler_8" value="Vorgangsfehler_8"/>
+    <string id="task_Schlüsselschreibvorgangerfolgreich" value="Schlüsselschreibvorgangerfolgreich"/>
+    <string id="task_Schlüsselschreibvorgangfehlgeschlagen" value="Schlüsselschreibvorgangfehlgeschlagen"/>
+    <string id="task_Schlüssellöschvorgangerfolgreich" value="Schlüssellöschvorgangerfolgreich"/>
+    <string id="task_Schlüssellöschvorgangfehlgeschlagen" value="Schlüssellöschvorgangfehlgeschlagen"/>
+    <string id="task_AufgabenfehlerBCrypt_ISO_Vorgang" value="AufgabenfehlerBCrypt_ISO_Vorgang"/>
+    <string id="map_NCryptOperationTypeSCHLÜSSEL ERSTELLEN" value="SCHLÜSSEL ERSTELLEN"/>
+    <string id="map_NCryptOperationTypeSCHLÜSSEL ÖFFNEN" value="SCHLÜSSEL ÖFFNEN"/>
+    <string id="map_NCryptOperationTypeSCHLÜSSEL LÖSCHEN" value="SCHLÜSSEL LÖSCHEN"/>
+    <string id="map_NCryptOperationTypeVERSCHLÜSSELN" value="VERSCHLÜSSELN"/>
+    <string id="map_NCryptOperationTypeENTSCHLÜSSELN" value="ENTSCHLÜSSELN"/>
+    <string id="map_NCryptOperationTypeHASH SIGNIEREN" value="HASH SIGNIEREN"/>
+    <string id="map_NCryptOperationTypeSIGNATUR ÜBERPRÜFEN" value="SIGNATUR ÜBERPRÜFEN"/>
+    <string id="map_NCryptOperationTypeGEHEIMVERTRAG" value="GEHEIMVERTRAG"/>
+    <string id="map_NCryptOperationTypeSCHLÜSSEL ABLEITEN" value="SCHLÜSSEL ABLEITEN"/>
+    <string id="map_NCryptOperationTypeSCHLÜSSELABLEITUNG" value="SCHLÜSSELABLEITUNG"/>
+    <string id="map_NCryptOperationTypeSCHLÜSSEL ABSCHLIESSEN" value="SCHLÜSSEL ABSCHLIESSEN"/>
+    <string id="map_NCryptOperationTypeSCHLÜSSEL EXPORTIEREN" value="SCHLÜSSEL EXPORTIEREN"/>
+    <string id="map_NCryptOperationTypeSCHLÜSSEL IMPORTIEREN" value="SCHLÜSSEL IMPORTIEREN"/>
+    <string id="map_RecipientTypeSCHLÜSSELTRANSPORT" value="SCHLÜSSELTRANSPORT"/>
+    <string id="map_RecipientTypeSCHLÜSSELVEREINBARUNG" value="SCHLÜSSELVEREINBARUNG"/>
+    <string id="map_RecipientTypeSYMMETRISCHE SCHLÜSSELVERSCHLÜSSELUNG" value="SYMMETRISCHE SCHLÜSSELVERSCHLÜSSELUNG"/>
+    <string id="map_RecipientTypeKENNWORTVERSCHLÜSSELUNG" value="KENNWORTVERSCHLÜSSELUNG"/>
+    <string id="map_RecipientTypeSONSTIGES" value="SONSTIGES"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

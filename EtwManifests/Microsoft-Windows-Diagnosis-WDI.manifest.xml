@@ -1,0 +1,55 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Diagnosis-WDI" guid="{e01b1a7c-c5c9-4e67-99a9-5e85acfb2e10}" resourceFileName="Microsoft-Windows-Diagnosis-WDI" messageFileName="Microsoft-Windows-Diagnosis-WDI" symbol="MicrosoftWindowsDiagnosisWDI" source="Xml" >
+    <keywords>
+     <keyword name="memory" message="$(string.keyword_memory)" mask="0x200"/>
+     <keyword name="debug" message="$(string.keyword_debug)" mask="0x400000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="Debugaufgabe" message="$(string.task_Debugaufgabe)" value="2">
+      <opcodes>
+       <opcode name="Debugereignis" message="$(string.opcode_DebugaufgabeDebugereignis)" value="10"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="140" symbol="DebugaufgabeDebugereignis" version="0" task="Debugaufgabe" opcode="Debugereignis" level="win:Error" keywords="debug" template="DebugaufgabeDebugereignisArgs"/>
+     <event value="5016" symbol="task_0" version="0" task="task_0" level="win:Always" keywords="memory" template="task_0Args"/>
+     <event value="5017" symbol="task_05017" version="0" task="task_0" level="win:Always" keywords="memory" template="task_05017Args"/>
+    </events>
+    <templates>
+     <template tid="DebugaufgabeDebugereignisArgs">
+      <data name="FileName" inType="win:UnicodeString"/>
+      <data name="FunctionName" inType="win:UnicodeString"/>
+      <data name="LineNumber" inType="win:Int32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0Args">
+      <data name="FileName" inType="win:AnsiString"/>
+      <data name="Line" inType="win:UInt32"/>
+      <data name="Address" inType="win:Pointer"/>
+      <data name="Size" inType="win:Pointer"/>
+     </template>
+     <template tid="task_05017Args">
+      <data name="FileName" inType="win:AnsiString"/>
+      <data name="Line" inType="win:UInt32"/>
+      <data name="Address" inType="win:Pointer"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_memory" value="memory"/>
+    <string id="keyword_debug" value="debug"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_Debugaufgabe" value="Debugaufgabe"/>
+    <string id="opcode_DebugaufgabeDebugereignis" value="Debugereignis"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,195 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-NetworkProfile" guid="{fbcfac3f-8459-419f-8e48-1f0b49cdb85e}" resourceFileName="Microsoft-Windows-NetworkProfile" messageFileName="Microsoft-Windows-NetworkProfile" symbol="MicrosoftWindowsNetworkProfile" source="Xml" >
+    <keywords>
+     <keyword name="LwtDiagnostic" message="$(string.keyword_LwtDiagnostic)" mask="0x20"/>
+     <keyword name="ut:SendPath" message="$(string.keyword_ut:SendPath)" mask="0x100000000"/>
+     <keyword name="ut:ReceivePath" message="$(string.keyword_ut:ReceivePath)" mask="0x200000000"/>
+     <keyword name="ut:L3ConnectPath" message="$(string.keyword_ut:L3ConnectPath)" mask="0x400000000"/>
+     <keyword name="ut:L2ConnectPath" message="$(string.keyword_ut:L2ConnectPath)" mask="0x800000000"/>
+     <keyword name="ut:ClosePath" message="$(string.keyword_ut:ClosePath)" mask="0x1000000000"/>
+     <keyword name="ut:Authentication" message="$(string.keyword_ut:Authentication)" mask="0x2000000000"/>
+     <keyword name="ut:Configuration" message="$(string.keyword_ut:Configuration)" mask="0x4000000000"/>
+     <keyword name="ut:Global" message="$(string.keyword_ut:Global)" mask="0x8000000000"/>
+     <keyword name="keyword_200000000000" message="$(string.keyword_keyword_200000000000)" mask="0x200000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="AufdieIdentifikationwarten." message="$(string.task_AufdieIdentifikationwarten.)" value="1"/>
+     <task name="Clientsbenachrichtigen" message="$(string.task_Clientsbenachrichtigen)" value="2"/>
+    </tasks>
+    <maps>
+     <valueMap name="StateMap">
+      <map value="0x0" message="$(string.map_StateMapDas Netzwerk wird identifiziert.)"/>
+      <map value="0x1" message="$(string.map_StateMapDas Netzwerk wurde identifiziert.)"/>
+      <map value="0x2" message="$(string.map_StateMapNicht identifiziertes Netzwerk.)"/>
+     </valueMap>
+     <valueMap name="NetworkTypeMap">
+      <map value="0x0" message="$(string.map_NetworkTypeMapNicht verwaltet)"/>
+      <map value="0x1" message="$(string.map_NetworkTypeMapVerwaltet)"/>
+     </valueMap>
+     <valueMap name="NetworkCategoryMap">
+      <map value="0x0" message="$(string.map_NetworkCategoryMapÖffentlich)"/>
+      <map value="0x1" message="$(string.map_NetworkCategoryMapPrivat)"/>
+      <map value="0x2" message="$(string.map_NetworkCategoryMapDie Domäne ist authentifiziert.)"/>
+     </valueMap>
+     <bitMap name="NetworkStateMap">
+      <map value="0x1" message="$(string.map_NetworkStateMapVerbunden)"/>
+      <map value="0x2" message="$(string.map_NetworkStateMapGetrennt)"/>
+      <map value="0x4" message="$(string.map_NetworkStateMapIPv4 (Lokal))"/>
+      <map value="0x8" message="$(string.map_NetworkStateMapIPv4 (Internet))"/>
+      <map value="0x10" message="$(string.map_NetworkStateMapIPv6 (Lokal))"/>
+      <map value="0x20" message="$(string.map_NetworkStateMapIPv6 (Internet))"/>
+     </bitMap>
+     <valueMap name="NetworkProfileEventStateMap">
+      <map value="0x0" message="$(string.map_NetworkProfileEventStateMapEine Benachrichtigung über das Hinzufügen des Netzwerks erfolgt.)"/>
+      <map value="0x1" message="$(string.map_NetworkProfileEventStateMapEine Benachrichtigung über das Löschen des Netzwerks erfolgt.)"/>
+      <map value="0x2" message="$(string.map_NetworkProfileEventStateMapEine Benachrichtigung über das Verbinden des Netzwerks erfolgt.)"/>
+      <map value="0x3" message="$(string.map_NetworkProfileEventStateMapEine Benachrichtigung über das Trennen der Netzwerkverbindung erfolgt.)"/>
+      <map value="0x4" message="$(string.map_NetworkProfileEventStateMapEine Benachrichtigung über das Netzwerkeigenschaftsereignis erfolgt.)"/>
+      <map value="0x5" message="$(string.map_NetworkProfileEventStateMapEine Benachrichtigung über das Hinzufügen des Netzwerk ist erfolgt.)"/>
+      <map value="0x6" message="$(string.map_NetworkProfileEventStateMapEine Benachrichtigung über das Löschen des Netzwerks ist erfolgt.)"/>
+      <map value="0x7" message="$(string.map_NetworkProfileEventStateMapEine Benachrichtigung über das Verbinden des Netzwerks ist erfolgt.)"/>
+      <map value="0x8" message="$(string.map_NetworkProfileEventStateMapEine Benachrichtigung über das Trennen der Netzwerkverbindung ist erfolgt.)"/>
+      <map value="0x9" message="$(string.map_NetworkProfileEventStateMapEine Benachrichtigung über das Netzwerkeigenschaftsereignis ist erfolgt.)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="4001" symbol="AufdieIdentifikationwarten.Starten" version="0" task="AufdieIdentifikationwarten." opcode="win:Starten" level="win:Informational" keywords="keyword_200000000000" template="AufdieIdentifikationwarten.StartenArgs"/>
+     <event value="4002" symbol="AufdieIdentifikationwarten.Beenden" version="0" task="AufdieIdentifikationwarten." opcode="win:Beenden" level="win:Informational" keywords="keyword_200000000000" template="AufdieIdentifikationwarten.BeendenArgs"/>
+     <event value="4003" symbol="AufdieIdentifikationwarten.Beenden4003" version="0" task="AufdieIdentifikationwarten." opcode="win:Beenden" level="win:Informational" keywords="keyword_200000000000" template="AufdieIdentifikationwarten.BeendenArgs"/>
+     <event value="4004" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="10000" symbol="task_010000" version="0" task="task_0" level="win:Informational" keywords="LwtDiagnostic keyword_200000000000" template="task_010000Args"/>
+     <event value="10001" symbol="task_010001" version="0" task="task_0" level="win:Informational" keywords="LwtDiagnostic keyword_200000000000" template="task_010001Args"/>
+     <event value="10002" symbol="task_010002" version="0" task="task_0" level="win:Informational" keywords="LwtDiagnostic keyword_200000000000" template="task_010002Args"/>
+     <event value="10003" symbol="ClientsbenachrichtigenStarten" version="0" task="Clientsbenachrichtigen" opcode="win:Starten" level="win:Informational" keywords="keyword_200000000000" template="ClientsbenachrichtigenStartenArgs"/>
+     <event value="10004" symbol="ClientsbenachrichtigenBeenden" version="0" task="Clientsbenachrichtigen" opcode="win:Beenden" level="win:Informational" keywords="keyword_200000000000" template="ClientsbenachrichtigenBeendenArgs"/>
+     <event value="10005" symbol="ClientsbenachrichtigenStarten10005" version="0" task="Clientsbenachrichtigen" opcode="win:Starten" level="win:Informational" keywords="keyword_200000000000" template="ClientsbenachrichtigenStartenArgs"/>
+     <event value="10006" symbol="ClientsbenachrichtigenBeenden10006" version="0" task="Clientsbenachrichtigen" opcode="win:Beenden" level="win:Informational" keywords="keyword_200000000000" template="ClientsbenachrichtigenStartenArgs"/>
+     <event value="10007" symbol="ClientsbenachrichtigenStarten10007" version="0" task="Clientsbenachrichtigen" opcode="win:Starten" level="win:Informational" keywords="keyword_200000000000" template="ClientsbenachrichtigenStartenArgs"/>
+     <event value="10008" symbol="ClientsbenachrichtigenBeenden10008" version="0" task="Clientsbenachrichtigen" opcode="win:Beenden" level="win:Informational" keywords="keyword_200000000000" template="ClientsbenachrichtigenStartenArgs"/>
+     <event value="20001" symbol="task_020001" version="0" task="task_0" level="win:Error" keywords="LwtDiagnostic" template="task_020001Args"/>
+     <event value="20002" symbol="task_020002" version="0" task="task_0" level="win:Informational" keywords="LwtDiagnostic" template="task_020002Args"/>
+     <event value="20003" symbol="task_020003" version="0" task="task_0" level="win:Informational" keywords="LwtDiagnostic" template="task_020003Args"/>
+     <event value="20004" symbol="task_020004" version="0" task="task_0" level="win:Informational" keywords="LwtDiagnostic" template="task_020004Args"/>
+    </events>
+    <templates>
+     <template tid="AufdieIdentifikationwarten.StartenArgs">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="CurrentOrNextState" inType="win:UInt8" map="StateMap"/>
+     </template>
+     <template tid="AufdieIdentifikationwarten.BeendenArgs">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="CurrentOrNextState" inType="win:UInt8"/>
+     </template>
+     <template tid="task_0Args">
+      <data name="NewInternetConnectionProfile" inType="win:Boolean"/>
+      <data name="ConnectionCostChanged" inType="win:Boolean"/>
+      <data name="DomainConnectivityLevelChanged" inType="win:Boolean"/>
+      <data name="NetworkConnectivityLevelChanged" inType="win:Boolean"/>
+      <data name="HostNameChanged" inType="win:Boolean"/>
+      <data name="WwanRegistrationStateChanged" inType="win:Boolean"/>
+      <data name="TetheringOperationalStateChanged" inType="win:Boolean"/>
+      <data name="TetheringClientCountChanged" inType="win:Boolean"/>
+     </template>
+     <template tid="task_010000Args">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Description" inType="win:UnicodeString"/>
+      <data name="Guid" inType="win:GUID"/>
+      <data name="Type" inType="win:UInt32" map="NetworkTypeMap"/>
+      <data name="State" inType="win:UInt32"/>
+      <data name="Category" inType="win:UInt32" map="NetworkCategoryMap"/>
+     </template>
+     <template tid="task_010001Args">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Description" inType="win:UnicodeString"/>
+      <data name="Guid" inType="win:GUID"/>
+      <data name="Type" inType="win:UInt32"/>
+      <data name="State" inType="win:UInt32"/>
+      <data name="Category" inType="win:UInt32"/>
+     </template>
+     <template tid="task_010002Args">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Description" inType="win:UnicodeString"/>
+      <data name="Guid" inType="win:GUID"/>
+      <data name="Type" inType="win:UInt32"/>
+      <data name="State" inType="win:UInt32" map="NetworkStateMap"/>
+      <data name="Category" inType="win:UInt32"/>
+     </template>
+     <template tid="ClientsbenachrichtigenStartenArgs">
+      <data name="NetworkProfileEventState" inType="win:UInt32"/>
+      <data name="Guid" inType="win:GUID"/>
+     </template>
+     <template tid="ClientsbenachrichtigenBeendenArgs">
+      <data name="NetworkProfileEventState" inType="win:UInt32" map="NetworkProfileEventStateMap"/>
+      <data name="Guid" inType="win:GUID"/>
+     </template>
+     <template tid="task_020001Args">
+      <data name="ErrorCode" inType="win:Int32"/>
+      <data name="Context" inType="win:UInt32"/>
+     </template>
+     <template tid="task_020002Args">
+      <data name="ProfileGuid" inType="win:GUID"/>
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="Category" inType="win:UInt32"/>
+      <data name="ErrorCodev4" inType="win:Int32"/>
+      <data name="ErrorCodev6" inType="win:Int32"/>
+      <data name="Context" inType="win:UInt32"/>
+     </template>
+     <template tid="task_020003Args">
+      <data name="InternetPresent" inType="win:Boolean"/>
+      <data name="WnfStatusCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_020004Args">
+      <data name="FreeNetworkPresent" inType="win:Boolean"/>
+      <data name="WnfStatusCode" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_LwtDiagnostic" value="LwtDiagnostic"/>
+    <string id="keyword_ut:SendPath" value="ut:SendPath"/>
+    <string id="keyword_ut:ReceivePath" value="ut:ReceivePath"/>
+    <string id="keyword_ut:L3ConnectPath" value="ut:L3ConnectPath"/>
+    <string id="keyword_ut:L2ConnectPath" value="ut:L2ConnectPath"/>
+    <string id="keyword_ut:ClosePath" value="ut:ClosePath"/>
+    <string id="keyword_ut:Authentication" value="ut:Authentication"/>
+    <string id="keyword_ut:Configuration" value="ut:Configuration"/>
+    <string id="keyword_ut:Global" value="ut:Global"/>
+    <string id="keyword_keyword_200000000000" value="keyword_200000000000"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_AufdieIdentifikationwarten." value="AufdieIdentifikationwarten."/>
+    <string id="task_Clientsbenachrichtigen" value="Clientsbenachrichtigen"/>
+    <string id="map_StateMapDas Netzwerk wird identifiziert." value="Das Netzwerk wird identifiziert."/>
+    <string id="map_StateMapDas Netzwerk wurde identifiziert." value="Das Netzwerk wurde identifiziert."/>
+    <string id="map_StateMapNicht identifiziertes Netzwerk." value="Nicht identifiziertes Netzwerk."/>
+    <string id="map_NetworkTypeMapNicht verwaltet" value="Nicht verwaltet"/>
+    <string id="map_NetworkTypeMapVerwaltet" value="Verwaltet"/>
+    <string id="map_NetworkCategoryMapÖffentlich" value="Öffentlich"/>
+    <string id="map_NetworkCategoryMapPrivat" value="Privat"/>
+    <string id="map_NetworkCategoryMapDie Domäne ist authentifiziert." value="Die Domäne ist authentifiziert."/>
+    <string id="map_NetworkStateMapVerbunden" value="Verbunden"/>
+    <string id="map_NetworkStateMapGetrennt" value="Getrennt"/>
+    <string id="map_NetworkStateMapIPv4 (Lokal)" value="IPv4 (Lokal)"/>
+    <string id="map_NetworkStateMapIPv4 (Internet)" value="IPv4 (Internet)"/>
+    <string id="map_NetworkStateMapIPv6 (Lokal)" value="IPv6 (Lokal)"/>
+    <string id="map_NetworkStateMapIPv6 (Internet)" value="IPv6 (Internet)"/>
+    <string id="map_NetworkProfileEventStateMapEine Benachrichtigung über das Hinzufügen des Netzwerks erfolgt." value="Eine Benachrichtigung über das Hinzufügen des Netzwerks erfolgt."/>
+    <string id="map_NetworkProfileEventStateMapEine Benachrichtigung über das Löschen des Netzwerks erfolgt." value="Eine Benachrichtigung über das Löschen des Netzwerks erfolgt."/>
+    <string id="map_NetworkProfileEventStateMapEine Benachrichtigung über das Verbinden des Netzwerks erfolgt." value="Eine Benachrichtigung über das Verbinden des Netzwerks erfolgt."/>
+    <string id="map_NetworkProfileEventStateMapEine Benachrichtigung über das Trennen der Netzwerkverbindung erfolgt." value="Eine Benachrichtigung über das Trennen der Netzwerkverbindung erfolgt."/>
+    <string id="map_NetworkProfileEventStateMapEine Benachrichtigung über das Netzwerkeigenschaftsereignis erfolgt." value="Eine Benachrichtigung über das Netzwerkeigenschaftsereignis erfolgt."/>
+    <string id="map_NetworkProfileEventStateMapEine Benachrichtigung über das Hinzufügen des Netzwerk ist erfolgt." value="Eine Benachrichtigung über das Hinzufügen des Netzwerk ist erfolgt."/>
+    <string id="map_NetworkProfileEventStateMapEine Benachrichtigung über das Löschen des Netzwerks ist erfolgt." value="Eine Benachrichtigung über das Löschen des Netzwerks ist erfolgt."/>
+    <string id="map_NetworkProfileEventStateMapEine Benachrichtigung über das Verbinden des Netzwerks ist erfolgt." value="Eine Benachrichtigung über das Verbinden des Netzwerks ist erfolgt."/>
+    <string id="map_NetworkProfileEventStateMapEine Benachrichtigung über das Trennen der Netzwerkverbindung ist erfolgt." value="Eine Benachrichtigung über das Trennen der Netzwerkverbindung ist erfolgt."/>
+    <string id="map_NetworkProfileEventStateMapEine Benachrichtigung über das Netzwerkeigenschaftsereignis ist erfolgt." value="Eine Benachrichtigung über das Netzwerkeigenschaftsereignis ist erfolgt."/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

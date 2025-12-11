@@ -1,0 +1,50 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Windeploy" guid="{75ebc33e-c8ae-4f93-9ca1-683a53e20cb6}" resourceFileName="Microsoft-Windows-Windeploy" messageFileName="Microsoft-Windows-Windeploy" symbol="MicrosoftWindowsWindeploy" source="Xml" >
+    <keywords>
+     <keyword name="keyPerformance" message="$(string.keyword_keyPerformance)" mask="0x1"/>
+     <keyword name="keyword_200000000000" message="$(string.keyword_keyword_200000000000)" mask="0x200000000000"/>
+    </keywords>
+    <tasks>
+     <task name="Windeployausführen" message="$(string.task_Windeployausführen)" value="1000"/>
+     <task name="StartenundaufexternenProzesswarten" message="$(string.task_StartenundaufexternenProzesswarten)" value="2000"/>
+     <task name="VomBenutzerbereitgestellteSkriptausführen" message="$(string.task_VomBenutzerbereitgestellteSkriptausführen)" value="3000"/>
+    </tasks>
+    <events>
+     <event value="1001" symbol="WindeployausführenStarten" version="0" task="Windeployausführen" opcode="win:Starten" level="win:Informational" keywords="keyPerformance keyword_200000000000" template="WindeployausführenStartenArgs"/>
+     <event value="1002" symbol="WindeployausführenBeenden" version="0" task="Windeployausführen" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance keyword_200000000000" template="WindeployausführenBeendenArgs"/>
+     <event value="2001" symbol="StartenundaufexternenProzesswartenStarten" version="0" task="StartenundaufexternenProzesswarten" opcode="win:Starten" level="win:Informational" keywords="keyPerformance keyword_200000000000" template="WindeployausführenStartenArgs"/>
+     <event value="2002" symbol="StartenundaufexternenProzesswartenBeenden" version="0" task="StartenundaufexternenProzesswarten" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance keyword_200000000000" template="WindeployausführenBeendenArgs"/>
+     <event value="2003" symbol="StartenundaufexternenProzesswartenBeenden2003" version="0" task="StartenundaufexternenProzesswarten" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance keyword_200000000000" template="WindeployausführenBeendenArgs"/>
+     <event value="3001" symbol="VomBenutzerbereitgestellteSkriptausführenStarten" version="0" task="VomBenutzerbereitgestellteSkriptausführen" opcode="win:Starten" level="win:Informational" keywords="keyPerformance" template="WindeployausführenStartenArgs"/>
+     <event value="3002" symbol="VomBenutzerbereitgestellteSkriptausführenBeenden" version="0" task="VomBenutzerbereitgestellteSkriptausführen" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance" template="VomBenutzerbereitgestellteSkriptausführenBeendenArgs"/>
+     <event value="3003" symbol="VomBenutzerbereitgestellteSkriptausführenBeenden3003" version="0" task="VomBenutzerbereitgestellteSkriptausführen" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance" template="VomBenutzerbereitgestellteSkriptausführenBeendenArgs"/>
+    </events>
+    <templates>
+     <template tid="WindeployausführenStartenArgs">
+      <data name="CommandLine" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WindeployausführenBeendenArgs">
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="VomBenutzerbereitgestellteSkriptausführenBeendenArgs">
+      <data name="Command" inType="win:UnicodeString"/>
+      <data name="ExitCode" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_keyPerformance" value="keyPerformance"/>
+    <string id="keyword_keyword_200000000000" value="keyword_200000000000"/>
+    <string id="task_Windeployausführen" value="Windeployausführen"/>
+    <string id="task_StartenundaufexternenProzesswarten" value="StartenundaufexternenProzesswarten"/>
+    <string id="task_VomBenutzerbereitgestellteSkriptausführen" value="VomBenutzerbereitgestellteSkriptausführen"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

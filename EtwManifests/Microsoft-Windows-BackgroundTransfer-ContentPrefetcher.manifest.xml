@@ -1,0 +1,96 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-BackgroundTransfer-ContentPrefetcher" guid="{648a0644-7d62-4fd3-8841-440064762f95}" resourceFileName="Microsoft-Windows-BackgroundTransfer-ContentPrefetcher" messageFileName="Microsoft-Windows-BackgroundTransfer-ContentPrefetcher" symbol="MicrosoftWindowsBackgroundTransferContentPrefetcher" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="AktivitätderAufgabezumVorabruf" message="$(string.task_AktivitätderAufgabezumVorabruf)" value="100"/>
+     <task name="URI_Abruf" message="$(string.task_URI_Abruf)" value="101"/>
+     <task name="URImitindirektemInhalt" message="$(string.task_URImitindirektemInhalt)" value="102"/>
+    </tasks>
+    <events>
+     <event value="0" symbol="AktivitätderAufgabezumVorabruf" version="0" task="AktivitätderAufgabezumVorabruf" level="win:Informational" template="AktivitätderAufgabezumVorabrufArgs"/>
+     <event value="1" symbol="AktivitätderAufgabezumVorabruf1" version="0" task="AktivitätderAufgabezumVorabruf" level="win:Informational" template="AktivitätderAufgabezumVorabrufArgs"/>
+     <event value="2" symbol="URI_Abruf" version="0" task="URI_Abruf" level="win:Informational" template="URI_AbrufArgs"/>
+     <event value="3" symbol="URI_Abruf3" version="0" task="URI_Abruf" level="win:Informational" template="URI_AbrufArgs"/>
+     <event value="4" symbol="URI_Abruf4" version="0" task="URI_Abruf" level="win:Informational" template="URI_Abruf4Args"/>
+     <event value="6" symbol="URI_Abruf6" version="0" task="URI_Abruf" level="win:Error" template="URI_Abruf6Args"/>
+     <event value="7" symbol="URI_Abruf7" version="0" task="URI_Abruf" level="win:Error" template="URI_Abruf7Args"/>
+     <event value="8" symbol="URImitindirektemInhalt" version="0" task="URImitindirektemInhalt" level="win:Informational" template="URImitindirektemInhaltArgs"/>
+     <event value="9" symbol="URImitindirektemInhalt9" version="0" task="URImitindirektemInhalt" level="win:Error" template="URImitindirektemInhalt9Args"/>
+     <event value="10" symbol="URI_Abruf10" version="0" task="URI_Abruf" level="win:Informational" template="URI_Abruf10Args"/>
+     <event value="11" symbol="URI_Abruf11" version="0" task="URI_Abruf" level="win:Warning" template="URI_AbrufArgs"/>
+     <event value="12" symbol="AktivitätderAufgabezumVorabruf12" version="0" task="AktivitätderAufgabezumVorabruf" level="win:Error" template="AktivitätderAufgabezumVorabruf12Args"/>
+     <event value="13" symbol="AktivitätderAufgabezumVorabruf13" version="0" task="AktivitätderAufgabezumVorabruf" level="win:Error" template="AktivitätderAufgabezumVorabruf13Args"/>
+     <event value="14" symbol="AktivitätderAufgabezumVorabruf14" version="0" task="AktivitätderAufgabezumVorabruf" level="win:Error" template="AktivitätderAufgabezumVorabrufArgs"/>
+     <event value="15" symbol="AktivitätderAufgabezumVorabruf15" version="0" task="AktivitätderAufgabezumVorabruf" level="win:Error" template="AktivitätderAufgabezumVorabruf15Args"/>
+     <event value="16" symbol="URI_Abruf16" version="0" task="URI_Abruf" level="win:Error" template="URI_Abruf16Args"/>
+     <event value="17" symbol="URImitindirektemInhalt17" version="0" task="URImitindirektemInhalt" level="win:Informational" template="URI_Abruf10Args"/>
+     <event value="18" symbol="URI_Abruf18" version="0" task="URI_Abruf" level="win:Informational" template="URI_AbrufArgs"/>
+    </events>
+    <templates>
+     <template tid="AktivitätderAufgabezumVorabrufArgs">
+      <data name="appName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="URI_AbrufArgs">
+      <data name="uri" inType="win:UnicodeString"/>
+     </template>
+     <template tid="URI_Abruf4Args">
+      <data name="uri" inType="win:UnicodeString"/>
+      <data name="httpStatusCode" inType="win:UInt32"/>
+      <data name="errorString" inType="win:UnicodeString"/>
+     </template>
+     <template tid="URI_Abruf6Args">
+      <data name="uri" inType="win:UnicodeString"/>
+      <data name="statusCode" inType="win:UInt32"/>
+      <data name="errorString" inType="win:UnicodeString"/>
+     </template>
+     <template tid="URI_Abruf7Args">
+      <data name="uri" inType="win:UnicodeString"/>
+      <data name="errorString" inType="win:AnsiString"/>
+     </template>
+     <template tid="URImitindirektemInhaltArgs">
+      <data name="uri" inType="win:UnicodeString"/>
+      <data name="xmlBlob" inType="win:AnsiString"/>
+     </template>
+     <template tid="URImitindirektemInhalt9Args">
+      <data name="statusCode" inType="win:UInt32"/>
+      <data name="errorReason" inType="win:UnicodeString"/>
+      <data name="sourceText" inType="win:UnicodeString"/>
+      <data name="errorOffset" inType="win:UInt32"/>
+     </template>
+     <template tid="URI_Abruf10Args">
+      <data name="count" inType="win:UInt32"/>
+     </template>
+     <template tid="AktivitätderAufgabezumVorabruf12Args">
+      <data name="appName" inType="win:UnicodeString"/>
+      <data name="httpStatusCode" inType="win:UInt32"/>
+      <data name="errorString" inType="win:UnicodeString"/>
+     </template>
+     <template tid="AktivitätderAufgabezumVorabruf13Args">
+      <data name="appName" inType="win:UnicodeString"/>
+      <data name="errorString" inType="win:AnsiString"/>
+     </template>
+     <template tid="AktivitätderAufgabezumVorabruf15Args">
+      <data name="appName" inType="win:UnicodeString"/>
+      <data name="errorString" inType="win:UInt32"/>
+     </template>
+     <template tid="URI_Abruf16Args">
+      <data name="uri" inType="win:UnicodeString"/>
+      <data name="statusCode" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_AktivitätderAufgabezumVorabruf" value="AktivitätderAufgabezumVorabruf"/>
+    <string id="task_URI_Abruf" value="URI_Abruf"/>
+    <string id="task_URImitindirektemInhalt" value="URImitindirektemInhalt"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

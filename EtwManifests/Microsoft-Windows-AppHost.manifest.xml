@@ -1,0 +1,525 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-AppHost" guid="{98e0765d-8c42-44a3-a57b-760d7f93225a}" resourceFileName="Microsoft-Windows-AppHost" messageFileName="Microsoft-Windows-AppHost" symbol="MicrosoftWindowsAppHost" source="Xml" >
+    <keywords>
+     <keyword name="WWAHOST_KEYWORD" message="$(string.keyword_WWAHOST_KEYWORD)" mask="0x1"/>
+     <keyword name="WWAHOST_APPLICATION_KEYWORD" message="$(string.keyword_WWAHOST_APPLICATION_KEYWORD)" mask="0x2"/>
+     <keyword name="WWAHOST_DIAGNOSTIC_KEYWORD" message="$(string.keyword_WWAHOST_DIAGNOSTIC_KEYWORD)" mask="0x4"/>
+     <keyword name="WwaHost" message="$(string.keyword_WwaHost)" mask="0x10000"/>
+    </keywords>
+    <tasks>
+     <task name="Initialize" message="$(string.task_Initialize)" value="1">
+      <opcodes>
+       <opcode name="FehlerbeimAppHost_Vorgang." message="$(string.opcode_InitializeFehlerbeimAppHost_Vorgang.)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="Navigation.NavigationDomain.Decision" message="$(string.task_Navigation.NavigationDomain.Decision)" value="2"/>
+     <task name="MswwaProtocol.PackageToFileUri" message="$(string.task_MswwaProtocol.PackageToFileUri)" value="3"/>
+     <task name="Activation.ModuleInitialization" message="$(string.task_Activation.ModuleInitialization)" value="4">
+      <opcodes>
+       <opcode name="AppHost_Informationen" message="$(string.opcode_Activation.ModuleInitializationAppHost_Informationen)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="Infrastructure.Host.Setup" message="$(string.task_Infrastructure.Host.Setup)" value="5"/>
+     <task name="Infrastructure.Lifecycle" message="$(string.task_Infrastructure.Lifecycle)" value="6">
+      <opcodes>
+       <opcode name="DerAppHost_Vorgangwarerfolgreich." message="$(string.opcode_Infrastructure.LifecycleDerAppHost_Vorgangwarerfolgreich.)" value="11"/>
+       <opcode name="FehlerbeimAppHost_Vorgang." message="$(string.opcode_Infrastructure.LifecycleFehlerbeimAppHost_Vorgang.)" value="12"/>
+       <opcode name="AppHost_Informationen" message="$(string.opcode_Infrastructure.LifecycleAppHost_Informationen)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="Telemetry.WERReporting" message="$(string.task_Telemetry.WERReporting)" value="8">
+      <opcodes>
+       <opcode name="FehlerbeimAppHost_Vorgang." message="$(string.opcode_Telemetry.WERReportingFehlerbeimAppHost_Vorgang.)" value="12"/>
+       <opcode name="AppHost_Informationen" message="$(string.opcode_Telemetry.WERReportingAppHost_Informationen)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="Infrastructure.Host.Uptime" message="$(string.task_Infrastructure.Host.Uptime)" value="9"/>
+     <task name="Navigation" message="$(string.task_Navigation)" value="12"/>
+     <task name="ApplicationActivateEvent" message="$(string.task_ApplicationActivateEvent)" value="14"/>
+     <task name="ApplicationTermination" message="$(string.task_ApplicationTermination)" value="15"/>
+     <task name="Suspending" message="$(string.task_Suspending)" value="18">
+      <opcodes>
+       <opcode name="AppHost_Informationen" message="$(string.opcode_SuspendingAppHost_Informationen)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="Resuming" message="$(string.task_Resuming)" value="19"/>
+     <task name="Infrastructure.WebInstance.Setup" message="$(string.task_Infrastructure.WebInstance.Setup)" value="20"/>
+     <task name="InputPanelShow" message="$(string.task_InputPanelShow)" value="21"/>
+     <task name="InputPanelHide" message="$(string.task_InputPanelHide)" value="22"/>
+     <task name="WinRTIntegration" message="$(string.task_WinRTIntegration)" value="23">
+      <opcodes>
+       <opcode name="FehlerbeimAppHost_Vorgang." message="$(string.opcode_WinRTIntegrationFehlerbeimAppHost_Vorgang.)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="TerminateApp" message="$(string.task_TerminateApp)" value="24"/>
+     <task name="MswwaProtocol.AppDataToFileUri" message="$(string.task_MswwaProtocol.AppDataToFileUri)" value="25"/>
+     <task name="EvaluatePackage" message="$(string.task_EvaluatePackage)" value="26"/>
+     <task name="ApplicationTracing.Error" message="$(string.task_ApplicationTracing.Error)" value="27">
+      <opcodes>
+       <opcode name="AppHost_Anwendungsfehler" message="$(string.opcode_ApplicationTracing.ErrorAppHost_Anwendungsfehler)" value="15"/>
+      </opcodes>
+     </task>
+     <task name="ApplicationTracing.Warning" message="$(string.task_ApplicationTracing.Warning)" value="28">
+      <opcodes>
+       <opcode name="AppHost_Anwendungswarnung" message="$(string.opcode_ApplicationTracing.WarningAppHost_Anwendungswarnung)" value="16"/>
+      </opcodes>
+     </task>
+     <task name="ApplicationTracing.Informational" message="$(string.task_ApplicationTracing.Informational)" value="29">
+      <opcodes>
+       <opcode name="AppHost_Anwendungsinformationen" message="$(string.opcode_ApplicationTracing.InformationalAppHost_Anwendungsinformationen)" value="17"/>
+      </opcodes>
+     </task>
+     <task name="SuspendingSubDownloads" message="$(string.task_SuspendingSubDownloads)" value="30">
+      <opcodes>
+       <opcode name="AppHost_Informationen" message="$(string.opcode_SuspendingSubDownloadsAppHost_Informationen)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="Resize" message="$(string.task_Resize)" value="31"/>
+     <task name="ViewState" message="$(string.task_ViewState)" value="32"/>
+     <task name="InputPanelResizeViewport" message="$(string.task_InputPanelResizeViewport)" value="33"/>
+     <task name="SuspendingGarbageCollection" message="$(string.task_SuspendingGarbageCollection)" value="34">
+      <opcodes>
+       <opcode name="AppHost_Informationen" message="$(string.opcode_SuspendingGarbageCollectionAppHost_Informationen)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="ThreadMrtInitialization" message="$(string.task_ThreadMrtInitialization)" value="35"/>
+     <task name="Infrastructure.Host.HostModulesInitialization" message="$(string.task_Infrastructure.Host.HostModulesInitialization)" value="36"/>
+     <task name="Infrastructure.Host.HostRun" message="$(string.task_Infrastructure.Host.HostRun)" value="37"/>
+     <task name="Infrastructure.WebInstance.Initialize" message="$(string.task_Infrastructure.WebInstance.Initialize)" value="38"/>
+     <task name="Infrastructure.WebInstance.Dispatch" message="$(string.task_Infrastructure.WebInstance.Dispatch)" value="39"/>
+     <task name="Infrastructure.WebInstance.Run" message="$(string.task_Infrastructure.WebInstance.Run)" value="40"/>
+     <task name="WinRTAsyncCall" message="$(string.task_WinRTAsyncCall)" value="41"/>
+     <task name="MemoryStatsOnSuspend" message="$(string.task_MemoryStatsOnSuspend)" value="42"/>
+     <task name="LayoutChanged" message="$(string.task_LayoutChanged)" value="43"/>
+     <task name="SuspendingInternalPlmTimeoutExpration" message="$(string.task_SuspendingInternalPlmTimeoutExpration)" value="44">
+      <opcodes>
+       <opcode name="AppHost_Informationen" message="$(string.opcode_SuspendingInternalPlmTimeoutExprationAppHost_Informationen)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="ByteCodeSourceMapping" message="$(string.task_ByteCodeSourceMapping)" value="46"/>
+     <task name="Activation.CompleteActivation" message="$(string.task_Activation.CompleteActivation)" value="47"/>
+     <task name="Drawing" message="$(string.task_Drawing)" value="48">
+      <opcodes>
+       <opcode name="AppHost_Informationen" message="$(string.opcode_DrawingAppHost_Informationen)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="LeavingBackground" message="$(string.task_LeavingBackground)" value="49"/>
+     <task name="EnteredBackground" message="$(string.task_EnteredBackground)" value="50"/>
+     <task name="BackgroundActivated" message="$(string.task_BackgroundActivated)" value="51"/>
+    </tasks>
+    <events>
+     <event value="102" symbol="InitializeFehlerbeimAppHost_Vorgang." version="0" task="Initialize" opcode="FehlerbeimAppHost_Vorgang." level="win:Error" keywords="WWAHOST_KEYWORD" template="InitializeFehlerbeimAppHost_Vorgang.Args"/>
+     <event value="112" symbol="Telemetry.WERReportingAppHost_Informationen" version="0" task="Telemetry.WERReporting" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="Telemetry.WERReportingAppHost_InformationenArgs"/>
+     <event value="121" symbol="WinRTIntegrationFehlerbeimAppHost_Vorgang." version="0" task="WinRTIntegration" opcode="FehlerbeimAppHost_Vorgang." level="win:Error" keywords="WWAHOST_KEYWORD" template="WinRTIntegrationFehlerbeimAppHost_Vorgang.Args"/>
+     <event value="122" symbol="WinRTIntegrationFehlerbeimAppHost_Vorgang.122" version="0" task="WinRTIntegration" opcode="FehlerbeimAppHost_Vorgang." level="win:Error" keywords="WWAHOST_KEYWORD" template="WinRTIntegrationFehlerbeimAppHost_Vorgang.Args"/>
+     <event value="126" symbol="Telemetry.WERReportingFehlerbeimAppHost_Vorgang." version="0" task="Telemetry.WERReporting" opcode="FehlerbeimAppHost_Vorgang." level="win:Error" keywords="WWAHOST_KEYWORD" template="Telemetry.WERReportingFehlerbeimAppHost_Vorgang.Args"/>
+     <event value="127" symbol="Telemetry.WERReportingFehlerbeimAppHost_Vorgang.127" version="0" task="Telemetry.WERReporting" opcode="FehlerbeimAppHost_Vorgang." level="win:Error" keywords="WWAHOST_KEYWORD" template="Telemetry.WERReportingFehlerbeimAppHost_Vorgang.127Args"/>
+     <event value="128" symbol="Telemetry.WERReportingAppHost_Informationen128" version="0" task="Telemetry.WERReporting" opcode="AppHost_Informationen" level="win:Error" keywords="WWAHOST_KEYWORD" template="Telemetry.WERReportingAppHost_Informationen128Args"/>
+     <event value="129" symbol="Telemetry.WERReportingAppHost_Informationen129" version="0" task="Telemetry.WERReporting" opcode="AppHost_Informationen" level="win:Error" keywords="WWAHOST_KEYWORD" template="Telemetry.WERReportingAppHost_Informationen128Args"/>
+     <event value="131" symbol="Telemetry.WERReportingFehlerbeimAppHost_Vorgang.131" version="0" task="Telemetry.WERReporting" opcode="FehlerbeimAppHost_Vorgang." level="win:Error" keywords="WWAHOST_KEYWORD" template="Telemetry.WERReportingFehlerbeimAppHost_Vorgang.131Args"/>
+     <event value="132" symbol="Telemetry.WERReportingFehlerbeimAppHost_Vorgang.132" version="0" task="Telemetry.WERReporting" opcode="FehlerbeimAppHost_Vorgang." level="win:Error" keywords="WWAHOST_KEYWORD" template="Telemetry.WERReportingFehlerbeimAppHost_Vorgang.132Args"/>
+     <event value="133" symbol="Infrastructure.LifecycleFehlerbeimAppHost_Vorgang." version="0" task="Infrastructure.Lifecycle" opcode="FehlerbeimAppHost_Vorgang." level="win:Error" keywords="WWAHOST_KEYWORD" template="Infrastructure.LifecycleFehlerbeimAppHost_Vorgang.Args"/>
+     <event value="134" symbol="Infrastructure.LifecycleFehlerbeimAppHost_Vorgang.134" version="0" task="Infrastructure.Lifecycle" opcode="FehlerbeimAppHost_Vorgang." level="win:Error" keywords="WWAHOST_KEYWORD" template="Infrastructure.LifecycleFehlerbeimAppHost_Vorgang.134Args"/>
+     <event value="135" symbol="Infrastructure.LifecycleFehlerbeimAppHost_Vorgang.135" version="0" task="Infrastructure.Lifecycle" opcode="FehlerbeimAppHost_Vorgang." level="win:Error" keywords="WWAHOST_KEYWORD" template="Infrastructure.LifecycleFehlerbeimAppHost_Vorgang.135Args"/>
+     <event value="136" symbol="Infrastructure.LifecycleFehlerbeimAppHost_Vorgang.136" version="0" task="Infrastructure.Lifecycle" opcode="FehlerbeimAppHost_Vorgang." level="win:Error" keywords="WWAHOST_KEYWORD" template="InitializeFehlerbeimAppHost_Vorgang.Args"/>
+     <event value="137" symbol="Infrastructure.LifecycleAppHost_Informationen" version="0" task="Infrastructure.Lifecycle" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="Telemetry.WERReportingAppHost_Informationen128Args"/>
+     <event value="500" symbol="Infrastructure.LifecycleDerAppHost_Vorgangwarerfolgreich." version="0" task="Infrastructure.Lifecycle" opcode="DerAppHost_Vorgangwarerfolgreich." level="win:Informational" keywords="WWAHOST_KEYWORD" template="Infrastructure.LifecycleDerAppHost_Vorgangwarerfolgreich.Args"/>
+     <event value="502" symbol="Infrastructure.LifecycleDerAppHost_Vorgangwarerfolgreich.502" version="0" task="Infrastructure.Lifecycle" opcode="DerAppHost_Vorgangwarerfolgreich." level="win:Informational" keywords="WWAHOST_KEYWORD" template="Infrastructure.LifecycleDerAppHost_Vorgangwarerfolgreich.502Args"/>
+     <event value="504" symbol="Infrastructure.LifecycleDerAppHost_Vorgangwarerfolgreich.504" version="0" task="Infrastructure.Lifecycle" opcode="DerAppHost_Vorgangwarerfolgreich." level="win:Informational" keywords="WWAHOST_KEYWORD" template="Infrastructure.LifecycleDerAppHost_Vorgangwarerfolgreich.504Args"/>
+     <event value="506" symbol="SuspendingAppHost_Informationen" version="0" task="Suspending" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="Telemetry.WERReportingAppHost_Informationen128Args"/>
+     <event value="507" symbol="SuspendingAppHost_Informationen507" version="0" task="Suspending" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="Telemetry.WERReportingAppHost_Informationen128Args"/>
+     <event value="508" symbol="SuspendingAppHost_Informationen508" version="0" task="Suspending" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="Telemetry.WERReportingAppHost_Informationen128Args"/>
+     <event value="509" symbol="SuspendingAppHost_Informationen509" version="0" task="Suspending" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="SuspendingAppHost_Informationen509Args"/>
+     <event value="511" symbol="SuspendingAppHost_Informationen511" version="0" task="Suspending" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="Telemetry.WERReportingAppHost_Informationen128Args"/>
+     <event value="512" symbol="SuspendingAppHost_Informationen512" version="0" task="Suspending" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="Telemetry.WERReportingAppHost_Informationen128Args"/>
+     <event value="513" symbol="SuspendingAppHost_Informationen513" version="0" task="Suspending" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="Telemetry.WERReportingAppHost_Informationen128Args"/>
+     <event value="514" symbol="Activation.ModuleInitializationAppHost_Informationen" version="0" task="Activation.ModuleInitialization" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="Activation.ModuleInitializationAppHost_InformationenArgs"/>
+     <event value="515" symbol="Infrastructure.LifecycleAppHost_Informationen515" version="0" task="Infrastructure.Lifecycle" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="Infrastructure.LifecycleAppHost_Informationen515Args"/>
+     <event value="516" symbol="SuspendingInternalPlmTimeoutExprationAppHost_Informationen" version="0" task="SuspendingInternalPlmTimeoutExpration" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="SuspendingInternalPlmTimeoutExprationAppHost_InformationenArgs"/>
+     <event value="517" symbol="SuspendingSubDownloadsAppHost_Informationen" version="0" task="SuspendingSubDownloads" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="SuspendingSubDownloadsAppHost_InformationenArgs"/>
+     <event value="518" symbol="SuspendingGarbageCollectionAppHost_Informationen" version="0" task="SuspendingGarbageCollection" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="SuspendingSubDownloadsAppHost_InformationenArgs"/>
+     <event value="1001" symbol="Navigation.NavigationDomain.DecisionStarten" version="0" task="Navigation.NavigationDomain.Decision" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1002" symbol="Navigation.NavigationDomain.DecisionBeenden" version="0" task="Navigation.NavigationDomain.Decision" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1003" symbol="MswwaProtocol.PackageToFileUriStarten" version="0" task="MswwaProtocol.PackageToFileUri" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1004" symbol="MswwaProtocol.PackageToFileUriBeenden" version="0" task="MswwaProtocol.PackageToFileUri" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1007" symbol="Activation.ModuleInitializationStarten" version="0" task="Activation.ModuleInitialization" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1008" symbol="Activation.ModuleInitializationBeenden" version="0" task="Activation.ModuleInitialization" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1009" symbol="Infrastructure.Host.SetupStarten" version="0" task="Infrastructure.Host.Setup" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1010" symbol="Infrastructure.Host.SetupBeenden" version="0" task="Infrastructure.Host.Setup" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1011" symbol="NavigationStarten" version="0" task="Navigation" opcode="win:Starten" level="win:Informational" keywords="WwaHost" template="NavigationStartenArgs"/>
+     <event value="1012" symbol="NavigationBeenden" version="0" task="Navigation" opcode="win:Beenden" level="win:Informational" keywords="WwaHost" template="NavigationStartenArgs"/>
+     <event value="1015" symbol="Telemetry.WERReportingStarten" version="0" task="Telemetry.WERReporting" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1016" symbol="Telemetry.WERReportingBeenden" version="0" task="Telemetry.WERReporting" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1017" symbol="Infrastructure.Host.UptimeStarten" version="0" task="Infrastructure.Host.Uptime" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1018" symbol="Infrastructure.Host.UptimeBeenden" version="0" task="Infrastructure.Host.Uptime" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1019" symbol="ApplicationActivateEventStarten" version="0" task="ApplicationActivateEvent" opcode="win:Starten" level="win:Informational" keywords="WwaHost" template="ApplicationActivateEventStartenArgs"/>
+     <event value="1020" symbol="ApplicationActivateEventBeenden" version="0" task="ApplicationActivateEvent" opcode="win:Beenden" level="win:Informational" keywords="WwaHost" template="ApplicationActivateEventStartenArgs"/>
+     <event value="1021" symbol="ApplicationTerminationStarten" version="0" task="ApplicationTermination" opcode="win:Starten" level="win:Informational" keywords="WwaHost" template="ApplicationTerminationStartenArgs"/>
+     <event value="1022" symbol="ApplicationTerminationBeenden" version="0" task="ApplicationTermination" opcode="win:Beenden" level="win:Informational" keywords="WwaHost" template="ApplicationTerminationStartenArgs"/>
+     <event value="1023" symbol="SuspendingStarten" version="0" task="Suspending" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1024" symbol="SuspendingBeenden" version="0" task="Suspending" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1025" symbol="ResumingStarten" version="0" task="Resuming" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1026" symbol="ResumingBeenden" version="0" task="Resuming" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1027" symbol="Infrastructure.WebInstance.SetupStarten" version="0" task="Infrastructure.WebInstance.Setup" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1028" symbol="Infrastructure.WebInstance.SetupBeenden" version="0" task="Infrastructure.WebInstance.Setup" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1029" symbol="InputPanelShowStarten" version="0" task="InputPanelShow" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1030" symbol="InputPanelShowBeenden" version="0" task="InputPanelShow" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1031" symbol="InputPanelHideStarten" version="0" task="InputPanelHide" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1032" symbol="InputPanelHideBeenden" version="0" task="InputPanelHide" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1033" symbol="SuspendingSubDownloadsStarten" version="0" task="SuspendingSubDownloads" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1034" symbol="SuspendingSubDownloadsBeenden" version="0" task="SuspendingSubDownloads" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1035" symbol="TerminateAppStarten" version="0" task="TerminateApp" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1036" symbol="TerminateAppBeenden" version="0" task="TerminateApp" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1037" symbol="MswwaProtocol.AppDataToFileUriStarten" version="0" task="MswwaProtocol.AppDataToFileUri" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1038" symbol="MswwaProtocol.AppDataToFileUriBeenden" version="0" task="MswwaProtocol.AppDataToFileUri" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1039" symbol="EvaluatePackageStarten" version="0" task="EvaluatePackage" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1040" symbol="EvaluatePackageBeenden" version="0" task="EvaluatePackage" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1041" symbol="ResizeStarten" version="0" task="Resize" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1042" symbol="ResizeBeenden" version="0" task="Resize" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1043" symbol="ViewStateStarten" version="0" task="ViewState" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1044" symbol="ViewStateBeenden" version="0" task="ViewState" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1045" symbol="InputPanelResizeViewportStarten" version="0" task="InputPanelResizeViewport" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1046" symbol="InputPanelResizeViewportBeenden" version="0" task="InputPanelResizeViewport" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1047" symbol="SuspendingGarbageCollectionStarten" version="0" task="SuspendingGarbageCollection" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1048" symbol="SuspendingGarbageCollectionBeenden" version="0" task="SuspendingGarbageCollection" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1049" symbol="ThreadMrtInitializationStarten" version="0" task="ThreadMrtInitialization" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1050" symbol="ThreadMrtInitializationBeenden" version="0" task="ThreadMrtInitialization" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1051" symbol="Infrastructure.Host.HostModulesInitializationStarten" version="0" task="Infrastructure.Host.HostModulesInitialization" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1052" symbol="Infrastructure.Host.HostModulesInitializationBeenden" version="0" task="Infrastructure.Host.HostModulesInitialization" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1053" symbol="Infrastructure.Host.HostRunStarten" version="0" task="Infrastructure.Host.HostRun" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1054" symbol="Infrastructure.Host.HostRunBeenden" version="0" task="Infrastructure.Host.HostRun" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1055" symbol="Infrastructure.WebInstance.InitializeStarten" version="0" task="Infrastructure.WebInstance.Initialize" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1056" symbol="Infrastructure.WebInstance.InitializeBeenden" version="0" task="Infrastructure.WebInstance.Initialize" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1057" symbol="Infrastructure.WebInstance.DispatchStarten" version="0" task="Infrastructure.WebInstance.Dispatch" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1058" symbol="Infrastructure.WebInstance.DispatchBeenden" version="0" task="Infrastructure.WebInstance.Dispatch" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1059" symbol="Infrastructure.WebInstance.RunStarten" version="0" task="Infrastructure.WebInstance.Run" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1060" symbol="Infrastructure.WebInstance.RunBeenden" version="0" task="Infrastructure.WebInstance.Run" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1061" symbol="WinRTAsyncCallStarten" version="0" task="WinRTAsyncCall" opcode="win:Starten" level="win:Informational" keywords="WwaHost" template="WinRTAsyncCallStartenArgs"/>
+     <event value="1062" symbol="WinRTAsyncCallBeenden" version="0" task="WinRTAsyncCall" opcode="win:Beenden" level="win:Informational" keywords="WwaHost" template="WinRTAsyncCallStartenArgs"/>
+     <event value="1063" symbol="MemoryStatsOnSuspend" version="0" task="MemoryStatsOnSuspend" level="win:Informational" keywords="WwaHost" template="MemoryStatsOnSuspendArgs"/>
+     <event value="1064" symbol="LayoutChangedStarten" version="0" task="LayoutChanged" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1065" symbol="LayoutChangedBeenden" version="0" task="LayoutChanged" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1066" symbol="ApplicationActivateEvent" version="0" task="ApplicationActivateEvent" level="win:Informational" keywords="WwaHost" template="ApplicationActivateEventArgs"/>
+     <event value="1067" symbol="ByteCodeSourceMapping" version="0" task="ByteCodeSourceMapping" level="win:Informational" keywords="WwaHost" template="ByteCodeSourceMappingArgs"/>
+     <event value="1068" symbol="ByteCodeSourceMapping1068" version="0" task="ByteCodeSourceMapping" level="win:Informational" keywords="WwaHost" template="ByteCodeSourceMappingArgs"/>
+     <event value="1069" symbol="LeavingBackgroundStarten" version="0" task="LeavingBackground" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1070" symbol="LeavingBackgroundBeenden" version="0" task="LeavingBackground" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1071" symbol="EnteredBackgroundStarten" version="0" task="EnteredBackground" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1072" symbol="EnteredBackgroundBeenden" version="0" task="EnteredBackground" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="1073" symbol="BackgroundActivatedStarten" version="0" task="BackgroundActivated" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="1074" symbol="BackgroundActivatedBeenden" version="0" task="BackgroundActivated" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="10000" symbol="ApplicationTracing.ErrorAppHost_Anwendungsfehler" version="0" task="ApplicationTracing.Error" opcode="AppHost_Anwendungsfehler" level="win:Error" keywords="WWAHOST_APPLICATION_KEYWORD" template="ApplicationTracing.ErrorAppHost_AnwendungsfehlerArgs"/>
+     <event value="10001" symbol="ApplicationTracing.WarningAppHost_Anwendungswarnung" version="0" task="ApplicationTracing.Warning" opcode="AppHost_Anwendungswarnung" level="win:Warning" keywords="WWAHOST_APPLICATION_KEYWORD" template="ApplicationTracing.ErrorAppHost_AnwendungsfehlerArgs"/>
+     <event value="10002" symbol="ApplicationTracing.InformationalAppHost_Anwendungsinformationen" version="0" task="ApplicationTracing.Informational" opcode="AppHost_Anwendungsinformationen" level="win:Informational" keywords="WWAHOST_APPLICATION_KEYWORD" template="ApplicationTracing.ErrorAppHost_AnwendungsfehlerArgs"/>
+     <event value="10003" symbol="ApplicationTracing.InformationalAppHost_Anwendungsinformationen10003" version="0" task="ApplicationTracing.Informational" opcode="AppHost_Anwendungsinformationen" level="win:Informational" keywords="WWAHOST_DIAGNOSTIC_KEYWORD" template="ApplicationTracing.InformationalAppHost_Anwendungsinformationen10003Args"/>
+     <event value="10004" symbol="ApplicationTracing.InformationalAppHost_Anwendungsinformationen10004" version="0" task="ApplicationTracing.Informational" opcode="AppHost_Anwendungsinformationen" level="win:Informational" keywords="WWAHOST_DIAGNOSTIC_KEYWORD" template="ApplicationTracing.InformationalAppHost_Anwendungsinformationen10003Args"/>
+     <event value="10005" symbol="Activation.CompleteActivationStarten" version="0" task="Activation.CompleteActivation" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="10006" symbol="Activation.CompleteActivationBeenden" version="0" task="Activation.CompleteActivation" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+     <event value="10007" symbol="DrawingAppHost_Informationen" version="0" task="Drawing" opcode="AppHost_Informationen" level="win:Informational" keywords="WWAHOST_KEYWORD" template="DrawingAppHost_InformationenArgs"/>
+     <event value="10009" symbol="NavigationStarten10009" version="0" task="Navigation" opcode="win:Starten" level="win:Informational" keywords="WwaHost"/>
+     <event value="10010" symbol="NavigationBeenden10010" version="0" task="Navigation" opcode="win:Beenden" level="win:Informational" keywords="WwaHost"/>
+    </events>
+    <templates>
+     <template tid="InitializeFehlerbeimAppHost_Vorgang.Args">
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="PID" inType="win:Int32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Telemetry.WERReportingAppHost_InformationenArgs">
+      <data name="param1" inType="win:UnicodeString"/>
+      <data name="param2" inType="win:UnicodeString"/>
+      <data name="param3" inType="win:UnicodeString"/>
+      <data name="param4" inType="win:UnicodeString"/>
+      <data name="param5" inType="win:UnicodeString"/>
+      <data name="param6" inType="win:UnicodeString"/>
+      <data name="PID" inType="win:Int32"/>
+      <data name="ProcessCreationTime" inType="win:UnicodeString"/>
+      <data name="ApplicationBinaryPath" inType="win:UnicodeString"/>
+      <data name="ReportId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WinRTIntegrationFehlerbeimAppHost_Vorgang.Args">
+      <data name="HResultErrorCode" inType="win:HexInt32"/>
+      <data name="PID" inType="win:Int32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Telemetry.WERReportingFehlerbeimAppHost_Vorgang.Args">
+      <data name="DisplayName" inType="win:UnicodeString"/>
+      <data name="ApplicationName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="ProcessId" inType="win:Int32"/>
+      <data name="ErrorType" inType="win:UnicodeString"/>
+      <data name="ErrorDescription" inType="win:UnicodeString"/>
+      <data name="DocumentFile" inType="win:UnicodeString"/>
+      <data name="SourceFile" inType="win:UnicodeString"/>
+      <data name="SourceLine" inType="win:Int32"/>
+      <data name="SourceColumn" inType="win:Int32"/>
+      <data name="StackTrace" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Telemetry.WERReportingFehlerbeimAppHost_Vorgang.127Args">
+      <data name="DisplayName" inType="win:UnicodeString"/>
+      <data name="ApplicationName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="ProcessId" inType="win:Int32"/>
+      <data name="ErrorDescription" inType="win:UnicodeString"/>
+      <data name="DocumentFile" inType="win:UnicodeString"/>
+      <data name="StackTrace" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Telemetry.WERReportingAppHost_Informationen128Args">
+      <data name="PID" inType="win:Int32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Telemetry.WERReportingFehlerbeimAppHost_Vorgang.131Args">
+      <data name="DisplayName" inType="win:UnicodeString"/>
+      <data name="ApplicationName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="ProcessId" inType="win:Int32"/>
+      <data name="DocumentFile" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Telemetry.WERReportingFehlerbeimAppHost_Vorgang.132Args">
+      <data name="DisplayName" inType="win:UnicodeString"/>
+      <data name="ApplicationName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="ProcessId" inType="win:Int32"/>
+      <data name="DocumentFile" inType="win:UnicodeString"/>
+      <data name="TargetUrl" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Infrastructure.LifecycleFehlerbeimAppHost_Vorgang.Args">
+      <data name="Function" inType="win:UnicodeString"/>
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="PID" inType="win:Int32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Infrastructure.LifecycleFehlerbeimAppHost_Vorgang.134Args">
+      <data name="Function" inType="win:UnicodeString"/>
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="WebInstance" inType="win:Int32"/>
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="PID" inType="win:Int32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Infrastructure.LifecycleFehlerbeimAppHost_Vorgang.135Args">
+      <data name="WebInstance" inType="win:Int32"/>
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="PID" inType="win:Int32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Infrastructure.LifecycleDerAppHost_Vorgangwarerfolgreich.Args">
+      <data name="Function" inType="win:UnicodeString"/>
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="PID" inType="win:Int32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Infrastructure.LifecycleDerAppHost_Vorgangwarerfolgreich.502Args">
+      <data name="Function" inType="win:UnicodeString"/>
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="WebInstance" inType="win:Int32"/>
+      <data name="PID" inType="win:Int32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Infrastructure.LifecycleDerAppHost_Vorgangwarerfolgreich.504Args">
+      <data name="Action" inType="win:UnicodeString"/>
+      <data name="WebInstance" inType="win:Int32"/>
+      <data name="PID" inType="win:Int32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SuspendingAppHost_Informationen509Args">
+      <data name="WindowType" inType="win:Int32"/>
+      <data name="WebPlatformSuspendDownloadPending" inType="win:Boolean"/>
+      <data name="WebPlatformCleanupPending" inType="win:Boolean"/>
+      <data name="WerReportDuringSuspend" inType="win:Boolean"/>
+      <data name="suspendSubdownloadsCount" inType="win:Int32"/>
+      <data name="NewTimeout" inType="win:Int32"/>
+      <data name="CurrentTimeout" inType="win:Int32"/>
+      <data name="PID" inType="win:Int32"/>
+      <data name="TID" inType="win:Int32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Activation.ModuleInitializationAppHost_InformationenArgs">
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="OSVersion" inType="win:HexInt64"/>
+      <data name="WebPlatformVersion" inType="win:HexInt64"/>
+      <data name="ScriptProjectionVersion" inType="win:HexInt32"/>
+     </template>
+     <template tid="Infrastructure.LifecycleAppHost_Informationen515Args">
+      <data name="MainWebInstanceInitializeTime" inType="win:UInt64"/>
+      <data name="AppSuspendHandlerInvoked" inType="win:UInt64"/>
+      <data name="AppSuspendHandlerCompleted" inType="win:UInt64"/>
+      <data name="WebPlatformSuspendDownloadPending" inType="win:Boolean"/>
+      <data name="WebPlatformSuspendDownloadCount" inType="win:Int32"/>
+      <data name="WebPlatformSuspendDownloadWaitStart" inType="win:UInt64"/>
+      <data name="WebPlatformCleanupPending" inType="win:Boolean"/>
+      <data name="WebPlatformCleanupStart" inType="win:UInt64"/>
+      <data name="CurrentSuspendingTimeout" inType="win:Int32"/>
+      <data name="NewSuspendingTimeout" inType="win:Int32"/>
+      <data name="PID" inType="win:Int32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SuspendingInternalPlmTimeoutExprationAppHost_InformationenArgs">
+      <data name="WindowType" inType="win:Int32"/>
+      <data name="WebPlatformSuspendDownloadPending" inType="win:Boolean"/>
+      <data name="WebPlatformCleanupPending" inType="win:Boolean"/>
+      <data name="suspendSubdownloadsCount" inType="win:Int32"/>
+      <data name="PID" inType="win:Int32"/>
+      <data name="TID" inType="win:Int32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SuspendingSubDownloadsAppHost_InformationenArgs">
+      <data name="WindowType" inType="win:Int32"/>
+      <data name="WebPlatformSuspendDownloadPending" inType="win:Boolean"/>
+      <data name="WebPlatformCleanupPending" inType="win:Boolean"/>
+      <data name="PID" inType="win:Int32"/>
+      <data name="TID" inType="win:Int32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="NavigationStartenArgs">
+      <data name="ObjectWWA" inType="win:UInt64"/>
+      <data name="Counter" inType="win:UInt32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppID" inType="win:UnicodeString"/>
+      <data name="NavigationInfo" inType="win:HexInt32"/>
+     </template>
+     <template tid="ApplicationActivateEventStartenArgs">
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppID" inType="win:UnicodeString"/>
+      <data name="ContractID" inType="win:UnicodeString"/>
+      <data name="IsReactivation" inType="win:UInt32"/>
+     </template>
+     <template tid="ApplicationTerminationStartenArgs">
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppID" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WinRTAsyncCallStartenArgs">
+      <data name="Priority" inType="win:Int32"/>
+      <data name="Id" inType="win:Pointer"/>
+     </template>
+     <template tid="MemoryStatsOnSuspendArgs">
+      <data name="JSHeapSizeMB" inType="win:HexInt32"/>
+      <data name="TotalWorkingSetMBandPrivateCommitMB" inType="win:HexInt32"/>
+      <data name="PackageAgeS" inType="win:UInt32"/>
+      <data name="AppID" inType="win:UnicodeString"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ApplicationActivateEventArgs">
+      <data name="ToggleCount" inType="win:UInt32"/>
+      <data name="ToggleDetail" inType="win:UInt32"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="AppID" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ByteCodeSourceMappingArgs">
+      <data name="FilePath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ApplicationTracing.ErrorAppHost_AnwendungsfehlerArgs">
+      <data name="DisplayName" inType="win:UnicodeString"/>
+      <data name="ApplicationName" inType="win:UnicodeString"/>
+      <data name="AppUserModelId" inType="win:UnicodeString"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="ProcessId" inType="win:Int32"/>
+      <data name="Source" inType="win:UnicodeString"/>
+      <data name="DocumentFile" inType="win:UnicodeString"/>
+      <data name="Line" inType="win:Int32"/>
+      <data name="Column" inType="win:Int32"/>
+      <data name="MessageId" inType="win:Int32"/>
+      <data name="Message" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ApplicationTracing.InformationalAppHost_Anwendungsinformationen10003Args">
+      <data name="DeferralCount" inType="win:Int32"/>
+     </template>
+     <template tid="DrawingAppHost_InformationenArgs">
+      <data name="Value" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_WWAHOST_KEYWORD" value="WWAHOST_KEYWORD"/>
+    <string id="keyword_WWAHOST_APPLICATION_KEYWORD" value="WWAHOST_APPLICATION_KEYWORD"/>
+    <string id="keyword_WWAHOST_DIAGNOSTIC_KEYWORD" value="WWAHOST_DIAGNOSTIC_KEYWORD"/>
+    <string id="keyword_WwaHost" value="WwaHost"/>
+    <string id="task_Initialize" value="Initialize"/>
+    <string id="opcode_InitializeFehlerbeimAppHost_Vorgang." value="FehlerbeimAppHost_Vorgang."/>
+    <string id="task_Navigation.NavigationDomain.Decision" value="Navigation.NavigationDomain.Decision"/>
+    <string id="task_MswwaProtocol.PackageToFileUri" value="MswwaProtocol.PackageToFileUri"/>
+    <string id="task_Activation.ModuleInitialization" value="Activation.ModuleInitialization"/>
+    <string id="opcode_Activation.ModuleInitializationAppHost_Informationen" value="AppHost_Informationen"/>
+    <string id="task_Infrastructure.Host.Setup" value="Infrastructure.Host.Setup"/>
+    <string id="task_Infrastructure.Lifecycle" value="Infrastructure.Lifecycle"/>
+    <string id="opcode_Infrastructure.LifecycleDerAppHost_Vorgangwarerfolgreich." value="DerAppHost_Vorgangwarerfolgreich."/>
+    <string id="opcode_Infrastructure.LifecycleFehlerbeimAppHost_Vorgang." value="FehlerbeimAppHost_Vorgang."/>
+    <string id="opcode_Infrastructure.LifecycleAppHost_Informationen" value="AppHost_Informationen"/>
+    <string id="task_Telemetry.WERReporting" value="Telemetry.WERReporting"/>
+    <string id="opcode_Telemetry.WERReportingFehlerbeimAppHost_Vorgang." value="FehlerbeimAppHost_Vorgang."/>
+    <string id="opcode_Telemetry.WERReportingAppHost_Informationen" value="AppHost_Informationen"/>
+    <string id="task_Infrastructure.Host.Uptime" value="Infrastructure.Host.Uptime"/>
+    <string id="task_Navigation" value="Navigation"/>
+    <string id="task_ApplicationActivateEvent" value="ApplicationActivateEvent"/>
+    <string id="task_ApplicationTermination" value="ApplicationTermination"/>
+    <string id="task_Suspending" value="Suspending"/>
+    <string id="opcode_SuspendingAppHost_Informationen" value="AppHost_Informationen"/>
+    <string id="task_Resuming" value="Resuming"/>
+    <string id="task_Infrastructure.WebInstance.Setup" value="Infrastructure.WebInstance.Setup"/>
+    <string id="task_InputPanelShow" value="InputPanelShow"/>
+    <string id="task_InputPanelHide" value="InputPanelHide"/>
+    <string id="task_WinRTIntegration" value="WinRTIntegration"/>
+    <string id="opcode_WinRTIntegrationFehlerbeimAppHost_Vorgang." value="FehlerbeimAppHost_Vorgang."/>
+    <string id="task_TerminateApp" value="TerminateApp"/>
+    <string id="task_MswwaProtocol.AppDataToFileUri" value="MswwaProtocol.AppDataToFileUri"/>
+    <string id="task_EvaluatePackage" value="EvaluatePackage"/>
+    <string id="task_ApplicationTracing.Error" value="ApplicationTracing.Error"/>
+    <string id="opcode_ApplicationTracing.ErrorAppHost_Anwendungsfehler" value="AppHost_Anwendungsfehler"/>
+    <string id="task_ApplicationTracing.Warning" value="ApplicationTracing.Warning"/>
+    <string id="opcode_ApplicationTracing.WarningAppHost_Anwendungswarnung" value="AppHost_Anwendungswarnung"/>
+    <string id="task_ApplicationTracing.Informational" value="ApplicationTracing.Informational"/>
+    <string id="opcode_ApplicationTracing.InformationalAppHost_Anwendungsinformationen" value="AppHost_Anwendungsinformationen"/>
+    <string id="task_SuspendingSubDownloads" value="SuspendingSubDownloads"/>
+    <string id="opcode_SuspendingSubDownloadsAppHost_Informationen" value="AppHost_Informationen"/>
+    <string id="task_Resize" value="Resize"/>
+    <string id="task_ViewState" value="ViewState"/>
+    <string id="task_InputPanelResizeViewport" value="InputPanelResizeViewport"/>
+    <string id="task_SuspendingGarbageCollection" value="SuspendingGarbageCollection"/>
+    <string id="opcode_SuspendingGarbageCollectionAppHost_Informationen" value="AppHost_Informationen"/>
+    <string id="task_ThreadMrtInitialization" value="ThreadMrtInitialization"/>
+    <string id="task_Infrastructure.Host.HostModulesInitialization" value="Infrastructure.Host.HostModulesInitialization"/>
+    <string id="task_Infrastructure.Host.HostRun" value="Infrastructure.Host.HostRun"/>
+    <string id="task_Infrastructure.WebInstance.Initialize" value="Infrastructure.WebInstance.Initialize"/>
+    <string id="task_Infrastructure.WebInstance.Dispatch" value="Infrastructure.WebInstance.Dispatch"/>
+    <string id="task_Infrastructure.WebInstance.Run" value="Infrastructure.WebInstance.Run"/>
+    <string id="task_WinRTAsyncCall" value="WinRTAsyncCall"/>
+    <string id="task_MemoryStatsOnSuspend" value="MemoryStatsOnSuspend"/>
+    <string id="task_LayoutChanged" value="LayoutChanged"/>
+    <string id="task_SuspendingInternalPlmTimeoutExpration" value="SuspendingInternalPlmTimeoutExpration"/>
+    <string id="opcode_SuspendingInternalPlmTimeoutExprationAppHost_Informationen" value="AppHost_Informationen"/>
+    <string id="task_ByteCodeSourceMapping" value="ByteCodeSourceMapping"/>
+    <string id="task_Activation.CompleteActivation" value="Activation.CompleteActivation"/>
+    <string id="task_Drawing" value="Drawing"/>
+    <string id="opcode_DrawingAppHost_Informationen" value="AppHost_Informationen"/>
+    <string id="task_LeavingBackground" value="LeavingBackground"/>
+    <string id="task_EnteredBackground" value="EnteredBackground"/>
+    <string id="task_BackgroundActivated" value="BackgroundActivated"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

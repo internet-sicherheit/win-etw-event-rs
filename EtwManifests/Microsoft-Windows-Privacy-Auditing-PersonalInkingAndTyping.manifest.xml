@@ -1,0 +1,86 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Privacy-Auditing-PersonalInkingAndTyping" guid="{aa018a01-3747-532b-94ec-5d87dc3a5085}" resourceFileName="Microsoft-Windows-Privacy-Auditing-PersonalInkingAndTyping" messageFileName="Microsoft-Windows-Privacy-Auditing-PersonalInkingAndTyping" symbol="MicrosoftWindowsPrivacyAuditingPersonalInkingAndTyping" source="Xml" >
+    <keywords>
+     <keyword name="SystemGlobal" message="$(string.keyword_SystemGlobal)" mask="0x1"/>
+     <keyword name="UserGlobal" message="$(string.keyword_UserGlobal)" mask="0x2"/>
+     <keyword name="Failure" message="$(string.keyword_Failure)" mask="0x40"/>
+    </keywords>
+    <tasks>
+     <task name="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert." message="$(string.task_DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert.)" value="10"/>
+     <task name="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt." message="$(string.task_DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt.)" value="20"/>
+    </tasks>
+    <maps>
+     <valueMap name="ConsentMap">
+      <map value="0x0" message="$(string.map_ConsentMapVerweigern)"/>
+      <map value="0x1" message="$(string.map_ConsentMapZulassen)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1000" symbol="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert." version="0" task="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert." level="win:Informational" keywords="SystemGlobal" template="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert.Args"/>
+     <event value="1001" symbol="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert.1001" version="0" task="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert." level="win:Error" keywords="SystemGlobal Failure" template="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert.1001Args"/>
+     <event value="1002" symbol="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert.1002" version="0" task="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert." level="win:Informational" keywords="UserGlobal" template="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert.1001Args"/>
+     <event value="1003" symbol="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert.1003" version="0" task="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert." level="win:Error" keywords="UserGlobal Failure" template="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert.1001Args"/>
+     <event value="1006" symbol="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt." version="0" task="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt." level="win:Informational" keywords="SystemGlobal" template="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt.Args"/>
+     <event value="1007" symbol="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt.1007" version="0" task="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt." level="win:Error" keywords="SystemGlobal Failure" template="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt.Args"/>
+     <event value="1008" symbol="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt.1008" version="0" task="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt." level="win:Informational" keywords="UserGlobal" template="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt.Args"/>
+     <event value="1009" symbol="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt.1009" version="0" task="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt." level="win:Error" keywords="UserGlobal Failure" template="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt.Args"/>
+    </events>
+    <templates>
+     <template tid="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert.Args">
+      <data name="CallerUserSid" inType="win:UnicodeString"/>
+      <data name="CallerProcessName" inType="win:UnicodeString"/>
+      <data name="CallerAppPackageFamilyName" inType="win:UnicodeString"/>
+      <data name="OldConsentValue" inType="win:UInt32" map="ConsentMap"/>
+      <data name="NewConsentValue" inType="win:UInt32"/>
+      <data name="SetByHigherAuthority" inType="win:Boolean"/>
+      <data name="EffectiveConsentValue" inType="win:UInt32"/>
+      <data name="TargetUserSid" inType="win:UnicodeString"/>
+      <data name="ConsentID" inType="win:UnicodeString"/>
+      <data name="AppPackageFamilyName" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="SettingName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert.1001Args">
+      <data name="CallerUserSid" inType="win:UnicodeString"/>
+      <data name="CallerProcessName" inType="win:UnicodeString"/>
+      <data name="CallerAppPackageFamilyName" inType="win:UnicodeString"/>
+      <data name="OldConsentValue" inType="win:UInt32"/>
+      <data name="NewConsentValue" inType="win:UInt32"/>
+      <data name="SetByHigherAuthority" inType="win:Boolean"/>
+      <data name="EffectiveConsentValue" inType="win:UInt32"/>
+      <data name="TargetUserSid" inType="win:UnicodeString"/>
+      <data name="ConsentID" inType="win:UnicodeString"/>
+      <data name="AppPackageFamilyName" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="SettingName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt.Args">
+      <data name="NewConsentValue" inType="win:UInt32"/>
+      <data name="TargetUserSid" inType="win:UnicodeString"/>
+      <data name="ConsentID" inType="win:UnicodeString"/>
+      <data name="AppPackageFamilyName" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="SettingName" inType="win:UnicodeString"/>
+      <data name="Migrated" inType="win:Boolean"/>
+      <data name="Suppressed" inType="win:Boolean"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_SystemGlobal" value="SystemGlobal"/>
+    <string id="keyword_UserGlobal" value="UserGlobal"/>
+    <string id="keyword_Failure" value="Failure"/>
+    <string id="task_DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert." value="DerWertfür"PersonalisierungvonFreihand_undTastatureingaben"wurdegeändert."/>
+    <string id="task_DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt." value="DieStandardzustimmungfür"PersonalisierungvonFreihand_undTastatureingaben"wurdeerstellt."/>
+    <string id="map_ConsentMapVerweigern" value="Verweigern"/>
+    <string id="map_ConsentMapZulassen" value="Zulassen"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

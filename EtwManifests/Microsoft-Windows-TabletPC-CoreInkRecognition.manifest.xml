@@ -1,0 +1,178 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-TabletPC-CoreInkRecognition" guid="{c2fa0899-8a10-412b-a42e-9e5b284a2437}" resourceFileName="Microsoft-Windows-TabletPC-CoreInkRecognition" messageFileName="Microsoft-Windows-TabletPC-CoreInkRecognition" symbol="MicrosoftWindowsTabletPCCoreInkRecognition" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="RECO_API_AddStroke" message="$(string.task_RECO_API_AddStroke)" value="1"/>
+     <task name="RECO_API_AddWordsToWordList" message="$(string.task_RECO_API_AddWordsToWordList)" value="2"/>
+     <task name="RECO_API_AdviseInkChange" message="$(string.task_RECO_API_AdviseInkChange)" value="3"/>
+     <task name="RECO_API_CloneContext" message="$(string.task_RECO_API_CloneContext)" value="4"/>
+     <task name="RECO_API_CreateContext" message="$(string.task_RECO_API_CreateContext)" value="5"/>
+     <task name="RECO_API_CreateRecognizer" message="$(string.task_RECO_API_CreateRecognizer)" value="6"/>
+     <task name="RECO_API_DestroyContext" message="$(string.task_RECO_API_DestroyContext)" value="7"/>
+     <task name="RECO_API_DestroyRecognizer" message="$(string.task_RECO_API_DestroyRecognizer)" value="8"/>
+     <task name="RECO_API_DestroyWordList" message="$(string.task_RECO_API_DestroyWordList)" value="9"/>
+     <task name="RECO_API_EndInkInput" message="$(string.task_RECO_API_EndInkInput)" value="10"/>
+     <task name="RECO_API_GetBestResultString" message="$(string.task_RECO_API_GetBestResultString)" value="11"/>
+     <task name="RECO_API_GetEnabledUnicodeRanges" message="$(string.task_RECO_API_GetEnabledUnicodeRanges)" value="12"/>
+     <task name="RECO_API_GetGuide" message="$(string.task_RECO_API_GetGuide)" value="13"/>
+     <task name="RECO_API_GetLatticePtr" message="$(string.task_RECO_API_GetLatticePtr)" value="14"/>
+     <task name="RECO_API_GetPreferredPacketDescription" message="$(string.task_RECO_API_GetPreferredPacketDescription)" value="15"/>
+     <task name="RECO_API_GetRecoAttributes" message="$(string.task_RECO_API_GetRecoAttributes)" value="16"/>
+     <task name="RECO_API_GetResultPropertyList" message="$(string.task_RECO_API_GetResultPropertyList)" value="17"/>
+     <task name="RECO_API_GetUnicodeRanges" message="$(string.task_RECO_API_GetUnicodeRanges)" value="18"/>
+     <task name="RECO_API_IsStringSupported" message="$(string.task_RECO_API_IsStringSupported)" value="19"/>
+     <task name="RECO_API_MakeWordList" message="$(string.task_RECO_API_MakeWordList)" value="20"/>
+     <task name="RECO_API_Process" message="$(string.task_RECO_API_Process)" value="21"/>
+     <task name="RECO_API_ResetContext" message="$(string.task_RECO_API_ResetContext)" value="22"/>
+     <task name="RECO_API_SetCACMode" message="$(string.task_RECO_API_SetCACMode)" value="23"/>
+     <task name="RECO_API_SetEnabledUnicodeRanges" message="$(string.task_RECO_API_SetEnabledUnicodeRanges)" value="24"/>
+     <task name="RECO_API_SetFactoid" message="$(string.task_RECO_API_SetFactoid)" value="25"/>
+     <task name="RECO_API_SetFlags" message="$(string.task_RECO_API_SetFlags)" value="26"/>
+     <task name="RECO_API_SetGuide" message="$(string.task_RECO_API_SetGuide)" value="27"/>
+     <task name="RECO_API_SetPersonalizationData" message="$(string.task_RECO_API_SetPersonalizationData)" value="28"/>
+     <task name="RECO_API_SetTextContext" message="$(string.task_RECO_API_SetTextContext)" value="29"/>
+     <task name="RECO_API_SetWordList" message="$(string.task_RECO_API_SetWordList)" value="30"/>
+     <task name="RECO_DLL_Attach" message="$(string.task_RECO_DLL_Attach)" value="31"/>
+     <task name="RECO_DLL_Detach" message="$(string.task_RECO_DLL_Detach)" value="32"/>
+     <task name="RECO_TRAINER_AbortTrainer" message="$(string.task_RECO_TRAINER_AbortTrainer)" value="33"/>
+     <task name="RECO_TRAINER_CreateTrainer" message="$(string.task_RECO_TRAINER_CreateTrainer)" value="34"/>
+     <task name="RECO_TRAINER_DestroyTrainer" message="$(string.task_RECO_TRAINER_DestroyTrainer)" value="35"/>
+     <task name="RECO_TRAINER_RecoTransferLayer" message="$(string.task_RECO_TRAINER_RecoTransferLayer)" value="36"/>
+     <task name="RECO_TRAINER_ShapeTrain" message="$(string.task_RECO_TRAINER_ShapeTrain)" value="37"/>
+     <task name="RECO_TRAINER_TextTrain" message="$(string.task_RECO_TRAINER_TextTrain)" value="38"/>
+     <task name="RECO_API_GetPredictionText" message="$(string.task_RECO_API_GetPredictionText)" value="39"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="RECO_API_AddStrokeStarten" version="0" task="RECO_API_AddStroke" opcode="win:Starten" level="win:Informational"/>
+     <event value="2" symbol="RECO_API_AddStrokeBeenden" version="0" task="RECO_API_AddStroke" opcode="win:Beenden" level="win:Informational"/>
+     <event value="3" symbol="RECO_API_AddWordsToWordListStarten" version="0" task="RECO_API_AddWordsToWordList" opcode="win:Starten" level="win:Informational"/>
+     <event value="4" symbol="RECO_API_AddWordsToWordListBeenden" version="0" task="RECO_API_AddWordsToWordList" opcode="win:Beenden" level="win:Informational"/>
+     <event value="5" symbol="RECO_API_AdviseInkChangeStarten" version="0" task="RECO_API_AdviseInkChange" opcode="win:Starten" level="win:Informational"/>
+     <event value="6" symbol="RECO_API_AdviseInkChangeBeenden" version="0" task="RECO_API_AdviseInkChange" opcode="win:Beenden" level="win:Informational"/>
+     <event value="7" symbol="RECO_API_CloneContextStarten" version="0" task="RECO_API_CloneContext" opcode="win:Starten" level="win:Informational"/>
+     <event value="8" symbol="RECO_API_CloneContextBeenden" version="0" task="RECO_API_CloneContext" opcode="win:Beenden" level="win:Informational"/>
+     <event value="9" symbol="RECO_API_CreateContextStarten" version="0" task="RECO_API_CreateContext" opcode="win:Starten" level="win:Informational"/>
+     <event value="10" symbol="RECO_API_CreateContextBeenden" version="0" task="RECO_API_CreateContext" opcode="win:Beenden" level="win:Informational"/>
+     <event value="11" symbol="RECO_API_CreateRecognizerStarten" version="0" task="RECO_API_CreateRecognizer" opcode="win:Starten" level="win:Informational"/>
+     <event value="12" symbol="RECO_API_CreateRecognizerBeenden" version="0" task="RECO_API_CreateRecognizer" opcode="win:Beenden" level="win:Informational"/>
+     <event value="13" symbol="RECO_API_DestroyContextStarten" version="0" task="RECO_API_DestroyContext" opcode="win:Starten" level="win:Informational"/>
+     <event value="14" symbol="RECO_API_DestroyContextBeenden" version="0" task="RECO_API_DestroyContext" opcode="win:Beenden" level="win:Informational"/>
+     <event value="15" symbol="RECO_API_DestroyRecognizerStarten" version="0" task="RECO_API_DestroyRecognizer" opcode="win:Starten" level="win:Informational"/>
+     <event value="16" symbol="RECO_API_DestroyRecognizerBeenden" version="0" task="RECO_API_DestroyRecognizer" opcode="win:Beenden" level="win:Informational"/>
+     <event value="17" symbol="RECO_API_DestroyWordListStarten" version="0" task="RECO_API_DestroyWordList" opcode="win:Starten" level="win:Informational"/>
+     <event value="18" symbol="RECO_API_DestroyWordListBeenden" version="0" task="RECO_API_DestroyWordList" opcode="win:Beenden" level="win:Informational"/>
+     <event value="19" symbol="RECO_API_EndInkInputStarten" version="0" task="RECO_API_EndInkInput" opcode="win:Starten" level="win:Informational"/>
+     <event value="20" symbol="RECO_API_EndInkInputBeenden" version="0" task="RECO_API_EndInkInput" opcode="win:Beenden" level="win:Informational"/>
+     <event value="21" symbol="RECO_API_GetBestResultStringStarten" version="0" task="RECO_API_GetBestResultString" opcode="win:Starten" level="win:Informational"/>
+     <event value="22" symbol="RECO_API_GetBestResultStringBeenden" version="0" task="RECO_API_GetBestResultString" opcode="win:Beenden" level="win:Informational"/>
+     <event value="23" symbol="RECO_API_GetEnabledUnicodeRangesStarten" version="0" task="RECO_API_GetEnabledUnicodeRanges" opcode="win:Starten" level="win:Informational"/>
+     <event value="24" symbol="RECO_API_GetEnabledUnicodeRangesBeenden" version="0" task="RECO_API_GetEnabledUnicodeRanges" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25" symbol="RECO_API_GetGuideStarten" version="0" task="RECO_API_GetGuide" opcode="win:Starten" level="win:Informational"/>
+     <event value="26" symbol="RECO_API_GetGuideBeenden" version="0" task="RECO_API_GetGuide" opcode="win:Beenden" level="win:Informational"/>
+     <event value="27" symbol="RECO_API_GetLatticePtrStarten" version="0" task="RECO_API_GetLatticePtr" opcode="win:Starten" level="win:Informational"/>
+     <event value="28" symbol="RECO_API_GetLatticePtrBeenden" version="0" task="RECO_API_GetLatticePtr" opcode="win:Beenden" level="win:Informational"/>
+     <event value="29" symbol="RECO_API_GetPreferredPacketDescriptionStarten" version="0" task="RECO_API_GetPreferredPacketDescription" opcode="win:Starten" level="win:Informational"/>
+     <event value="30" symbol="RECO_API_GetPreferredPacketDescriptionBeenden" version="0" task="RECO_API_GetPreferredPacketDescription" opcode="win:Beenden" level="win:Informational"/>
+     <event value="31" symbol="RECO_API_GetRecoAttributesStarten" version="0" task="RECO_API_GetRecoAttributes" opcode="win:Starten" level="win:Informational"/>
+     <event value="32" symbol="RECO_API_GetRecoAttributesBeenden" version="0" task="RECO_API_GetRecoAttributes" opcode="win:Beenden" level="win:Informational"/>
+     <event value="33" symbol="RECO_API_GetResultPropertyListStarten" version="0" task="RECO_API_GetResultPropertyList" opcode="win:Starten" level="win:Informational"/>
+     <event value="34" symbol="RECO_API_GetResultPropertyListBeenden" version="0" task="RECO_API_GetResultPropertyList" opcode="win:Beenden" level="win:Informational"/>
+     <event value="35" symbol="RECO_API_GetUnicodeRangesStarten" version="0" task="RECO_API_GetUnicodeRanges" opcode="win:Starten" level="win:Informational"/>
+     <event value="36" symbol="RECO_API_GetUnicodeRangesBeenden" version="0" task="RECO_API_GetUnicodeRanges" opcode="win:Beenden" level="win:Informational"/>
+     <event value="37" symbol="RECO_API_IsStringSupportedStarten" version="0" task="RECO_API_IsStringSupported" opcode="win:Starten" level="win:Informational"/>
+     <event value="38" symbol="RECO_API_IsStringSupportedBeenden" version="0" task="RECO_API_IsStringSupported" opcode="win:Beenden" level="win:Informational"/>
+     <event value="39" symbol="RECO_API_MakeWordListStarten" version="0" task="RECO_API_MakeWordList" opcode="win:Starten" level="win:Informational"/>
+     <event value="40" symbol="RECO_API_MakeWordListBeenden" version="0" task="RECO_API_MakeWordList" opcode="win:Beenden" level="win:Informational"/>
+     <event value="41" symbol="RECO_API_ProcessStarten" version="0" task="RECO_API_Process" opcode="win:Starten" level="win:Informational"/>
+     <event value="42" symbol="RECO_API_ProcessBeenden" version="0" task="RECO_API_Process" opcode="win:Beenden" level="win:Informational"/>
+     <event value="43" symbol="RECO_API_ResetContextStarten" version="0" task="RECO_API_ResetContext" opcode="win:Starten" level="win:Informational"/>
+     <event value="44" symbol="RECO_API_ResetContextBeenden" version="0" task="RECO_API_ResetContext" opcode="win:Beenden" level="win:Informational"/>
+     <event value="45" symbol="RECO_API_SetCACModeStarten" version="0" task="RECO_API_SetCACMode" opcode="win:Starten" level="win:Informational"/>
+     <event value="46" symbol="RECO_API_SetCACModeBeenden" version="0" task="RECO_API_SetCACMode" opcode="win:Beenden" level="win:Informational"/>
+     <event value="47" symbol="RECO_API_SetEnabledUnicodeRangesStarten" version="0" task="RECO_API_SetEnabledUnicodeRanges" opcode="win:Starten" level="win:Informational"/>
+     <event value="48" symbol="RECO_API_SetEnabledUnicodeRangesBeenden" version="0" task="RECO_API_SetEnabledUnicodeRanges" opcode="win:Beenden" level="win:Informational"/>
+     <event value="49" symbol="RECO_API_SetFactoidStarten" version="0" task="RECO_API_SetFactoid" opcode="win:Starten" level="win:Informational"/>
+     <event value="50" symbol="RECO_API_SetFactoidBeenden" version="0" task="RECO_API_SetFactoid" opcode="win:Beenden" level="win:Informational"/>
+     <event value="51" symbol="RECO_API_SetFlagsStarten" version="0" task="RECO_API_SetFlags" opcode="win:Starten" level="win:Informational"/>
+     <event value="52" symbol="RECO_API_SetFlagsBeenden" version="0" task="RECO_API_SetFlags" opcode="win:Beenden" level="win:Informational"/>
+     <event value="53" symbol="RECO_API_SetGuideStarten" version="0" task="RECO_API_SetGuide" opcode="win:Starten" level="win:Informational"/>
+     <event value="54" symbol="RECO_API_SetGuideBeenden" version="0" task="RECO_API_SetGuide" opcode="win:Beenden" level="win:Informational"/>
+     <event value="55" symbol="RECO_API_SetPersonalizationDataStarten" version="0" task="RECO_API_SetPersonalizationData" opcode="win:Starten" level="win:Informational"/>
+     <event value="56" symbol="RECO_API_SetPersonalizationDataBeenden" version="0" task="RECO_API_SetPersonalizationData" opcode="win:Beenden" level="win:Informational"/>
+     <event value="57" symbol="RECO_API_SetTextContextStarten" version="0" task="RECO_API_SetTextContext" opcode="win:Starten" level="win:Informational"/>
+     <event value="58" symbol="RECO_API_SetTextContextBeenden" version="0" task="RECO_API_SetTextContext" opcode="win:Beenden" level="win:Informational"/>
+     <event value="59" symbol="RECO_API_SetWordListStarten" version="0" task="RECO_API_SetWordList" opcode="win:Starten" level="win:Informational"/>
+     <event value="60" symbol="RECO_API_SetWordListBeenden" version="0" task="RECO_API_SetWordList" opcode="win:Beenden" level="win:Informational"/>
+     <event value="61" symbol="RECO_DLL_AttachStarten" version="0" task="RECO_DLL_Attach" opcode="win:Starten" level="win:Informational"/>
+     <event value="62" symbol="RECO_DLL_AttachBeenden" version="0" task="RECO_DLL_Attach" opcode="win:Beenden" level="win:Informational"/>
+     <event value="63" symbol="RECO_DLL_DetachStarten" version="0" task="RECO_DLL_Detach" opcode="win:Starten" level="win:Informational"/>
+     <event value="64" symbol="RECO_DLL_DetachBeenden" version="0" task="RECO_DLL_Detach" opcode="win:Beenden" level="win:Informational"/>
+     <event value="65" symbol="RECO_TRAINER_AbortTrainerStarten" version="0" task="RECO_TRAINER_AbortTrainer" opcode="win:Starten" level="win:Informational"/>
+     <event value="66" symbol="RECO_TRAINER_AbortTrainerBeenden" version="0" task="RECO_TRAINER_AbortTrainer" opcode="win:Beenden" level="win:Informational"/>
+     <event value="67" symbol="RECO_TRAINER_CreateTrainerStarten" version="0" task="RECO_TRAINER_CreateTrainer" opcode="win:Starten" level="win:Informational"/>
+     <event value="68" symbol="RECO_TRAINER_CreateTrainerBeenden" version="0" task="RECO_TRAINER_CreateTrainer" opcode="win:Beenden" level="win:Informational"/>
+     <event value="69" symbol="RECO_TRAINER_DestroyTrainerStarten" version="0" task="RECO_TRAINER_DestroyTrainer" opcode="win:Starten" level="win:Informational"/>
+     <event value="70" symbol="RECO_TRAINER_DestroyTrainerBeenden" version="0" task="RECO_TRAINER_DestroyTrainer" opcode="win:Beenden" level="win:Informational"/>
+     <event value="71" symbol="RECO_TRAINER_RecoTransferLayerStarten" version="0" task="RECO_TRAINER_RecoTransferLayer" opcode="win:Starten" level="win:Informational"/>
+     <event value="72" symbol="RECO_TRAINER_RecoTransferLayerBeenden" version="0" task="RECO_TRAINER_RecoTransferLayer" opcode="win:Beenden" level="win:Informational"/>
+     <event value="73" symbol="RECO_TRAINER_ShapeTrainStarten" version="0" task="RECO_TRAINER_ShapeTrain" opcode="win:Starten" level="win:Informational"/>
+     <event value="74" symbol="RECO_TRAINER_ShapeTrainBeenden" version="0" task="RECO_TRAINER_ShapeTrain" opcode="win:Beenden" level="win:Informational"/>
+     <event value="75" symbol="RECO_TRAINER_TextTrainStarten" version="0" task="RECO_TRAINER_TextTrain" opcode="win:Starten" level="win:Informational"/>
+     <event value="76" symbol="RECO_TRAINER_TextTrainBeenden" version="0" task="RECO_TRAINER_TextTrain" opcode="win:Beenden" level="win:Informational"/>
+     <event value="77" symbol="RECO_API_GetPredictionTextStarten" version="0" task="RECO_API_GetPredictionText" opcode="win:Starten" level="win:Informational"/>
+     <event value="78" symbol="RECO_API_GetPredictionTextBeenden" version="0" task="RECO_API_GetPredictionText" opcode="win:Beenden" level="win:Informational"/>
+    </events>
+    <templates>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_RECO_API_AddStroke" value="RECO_API_AddStroke"/>
+    <string id="task_RECO_API_AddWordsToWordList" value="RECO_API_AddWordsToWordList"/>
+    <string id="task_RECO_API_AdviseInkChange" value="RECO_API_AdviseInkChange"/>
+    <string id="task_RECO_API_CloneContext" value="RECO_API_CloneContext"/>
+    <string id="task_RECO_API_CreateContext" value="RECO_API_CreateContext"/>
+    <string id="task_RECO_API_CreateRecognizer" value="RECO_API_CreateRecognizer"/>
+    <string id="task_RECO_API_DestroyContext" value="RECO_API_DestroyContext"/>
+    <string id="task_RECO_API_DestroyRecognizer" value="RECO_API_DestroyRecognizer"/>
+    <string id="task_RECO_API_DestroyWordList" value="RECO_API_DestroyWordList"/>
+    <string id="task_RECO_API_EndInkInput" value="RECO_API_EndInkInput"/>
+    <string id="task_RECO_API_GetBestResultString" value="RECO_API_GetBestResultString"/>
+    <string id="task_RECO_API_GetEnabledUnicodeRanges" value="RECO_API_GetEnabledUnicodeRanges"/>
+    <string id="task_RECO_API_GetGuide" value="RECO_API_GetGuide"/>
+    <string id="task_RECO_API_GetLatticePtr" value="RECO_API_GetLatticePtr"/>
+    <string id="task_RECO_API_GetPreferredPacketDescription" value="RECO_API_GetPreferredPacketDescription"/>
+    <string id="task_RECO_API_GetRecoAttributes" value="RECO_API_GetRecoAttributes"/>
+    <string id="task_RECO_API_GetResultPropertyList" value="RECO_API_GetResultPropertyList"/>
+    <string id="task_RECO_API_GetUnicodeRanges" value="RECO_API_GetUnicodeRanges"/>
+    <string id="task_RECO_API_IsStringSupported" value="RECO_API_IsStringSupported"/>
+    <string id="task_RECO_API_MakeWordList" value="RECO_API_MakeWordList"/>
+    <string id="task_RECO_API_Process" value="RECO_API_Process"/>
+    <string id="task_RECO_API_ResetContext" value="RECO_API_ResetContext"/>
+    <string id="task_RECO_API_SetCACMode" value="RECO_API_SetCACMode"/>
+    <string id="task_RECO_API_SetEnabledUnicodeRanges" value="RECO_API_SetEnabledUnicodeRanges"/>
+    <string id="task_RECO_API_SetFactoid" value="RECO_API_SetFactoid"/>
+    <string id="task_RECO_API_SetFlags" value="RECO_API_SetFlags"/>
+    <string id="task_RECO_API_SetGuide" value="RECO_API_SetGuide"/>
+    <string id="task_RECO_API_SetPersonalizationData" value="RECO_API_SetPersonalizationData"/>
+    <string id="task_RECO_API_SetTextContext" value="RECO_API_SetTextContext"/>
+    <string id="task_RECO_API_SetWordList" value="RECO_API_SetWordList"/>
+    <string id="task_RECO_DLL_Attach" value="RECO_DLL_Attach"/>
+    <string id="task_RECO_DLL_Detach" value="RECO_DLL_Detach"/>
+    <string id="task_RECO_TRAINER_AbortTrainer" value="RECO_TRAINER_AbortTrainer"/>
+    <string id="task_RECO_TRAINER_CreateTrainer" value="RECO_TRAINER_CreateTrainer"/>
+    <string id="task_RECO_TRAINER_DestroyTrainer" value="RECO_TRAINER_DestroyTrainer"/>
+    <string id="task_RECO_TRAINER_RecoTransferLayer" value="RECO_TRAINER_RecoTransferLayer"/>
+    <string id="task_RECO_TRAINER_ShapeTrain" value="RECO_TRAINER_ShapeTrain"/>
+    <string id="task_RECO_TRAINER_TextTrain" value="RECO_TRAINER_TextTrain"/>
+    <string id="task_RECO_API_GetPredictionText" value="RECO_API_GetPredictionText"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

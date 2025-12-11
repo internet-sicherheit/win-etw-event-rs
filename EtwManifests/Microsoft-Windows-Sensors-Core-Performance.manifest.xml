@@ -1,0 +1,143 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Sensors-Core-Performance" guid="{9e051eaa-7fee-4f9f-8897-d86f3692e8af}" resourceFileName="Microsoft-Windows-Sensors-Core-Performance" messageFileName="Microsoft-Windows-Sensors-Core-Performance" symbol="MicrosoftWindowsSensorsCorePerformance" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="SensorsIoctlTask" message="$(string.task_SensorsIoctlTask)" value="101"/>
+     <task name="CollectionListSerializationTask" message="$(string.task_CollectionListSerializationTask)" value="102"/>
+     <task name="CollectionListAllocateAndSerializationTask" message="$(string.task_CollectionListAllocateAndSerializationTask)" value="103"/>
+     <task name="CollectionListDeserializationTask" message="$(string.task_CollectionListDeserializationTask)" value="104"/>
+     <task name="SensorsNativeIoctlTask" message="$(string.task_SensorsNativeIoctlTask)" value="105"/>
+     <task name="SensorsCxReadTask" message="$(string.task_SensorsCxReadTask)" value="106"/>
+     <task name="NativeToCxIoctlTransferTask" message="$(string.task_NativeToCxIoctlTransferTask)" value="107"/>
+     <task name="CxToNativeIoctlTransferTask" message="$(string.task_CxToNativeIoctlTransferTask)" value="108"/>
+     <task name="NativeToCxReadTransferTask" message="$(string.task_NativeToCxReadTransferTask)" value="109"/>
+     <task name="CxToNativeReadTransferTask" message="$(string.task_CxToNativeReadTransferTask)" value="110"/>
+     <task name="SensorSubscription" message="$(string.task_SensorSubscription)" value="111"/>
+    </tasks>
+    <maps>
+     <valueMap name="Ioctl_flags">
+      <map value="0x220004" message="$(string.map_Ioctl_flagsStart)"/>
+      <map value="0x220008" message="$(string.map_Ioctl_flagsStop)"/>
+      <map value="0x22000c" message="$(string.map_Ioctl_flagsGetSupportedDatafields)"/>
+      <map value="0x220010" message="$(string.map_Ioctl_flagsGetProperties)"/>
+      <map value="0x220014" message="$(string.map_Ioctl_flagsGetDatafieldProperties)"/>
+      <map value="0x220018" message="$(string.map_Ioctl_flagsGetDataInterval)"/>
+      <map value="0x22001c" message="$(string.map_Ioctl_flagsSetDataInterval)"/>
+      <map value="0x220020" message="$(string.map_Ioctl_flagsGetDataThresholds)"/>
+      <map value="0x220024" message="$(string.map_Ioctl_flagsSetDataThresholds)"/>
+      <map value="0x220028" message="$(string.map_Ioctl_flagsUpdateDeclination)"/>
+      <map value="0x22002c" message="$(string.map_Ioctl_flagsStartHistory)"/>
+      <map value="0x220030" message="$(string.map_Ioctl_flagsStopHistory)"/>
+      <map value="0x220034" message="$(string.map_Ioctl_flagsClearHistory)"/>
+      <map value="0x220038" message="$(string.map_Ioctl_flagsGetHistory)"/>
+      <map value="0x22003c" message="$(string.map_Ioctl_flagsSetReportLatency)"/>
+      <map value="0x220040" message="$(string.map_Ioctl_flagsGetDataDeliveryMode)"/>
+      <map value="0x220044" message="$(string.map_Ioctl_flagsGetReportLatency)"/>
+      <map value="0x220048" message="$(string.map_Ioctl_flagsGetBatchedSamples)"/>
+      <map value="0x22004c" message="$(string.map_Ioctl_flagsGetDefaultDataThresholds)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1001" symbol="SensorsIoctlTaskStarten" version="0" task="SensorsIoctlTask" opcode="win:Starten" level="win:Always" template="SensorsIoctlTaskStartenArgs"/>
+     <event value="1002" symbol="SensorsIoctlTaskBeenden" version="0" task="SensorsIoctlTask" opcode="win:Beenden" level="win:Always" template="SensorsIoctlTaskBeendenArgs"/>
+     <event value="1003" symbol="CollectionListSerializationTaskStarten" version="0" task="CollectionListSerializationTask" opcode="win:Starten" level="win:Always" template="CollectionListSerializationTaskStartenArgs"/>
+     <event value="1004" symbol="CollectionListSerializationTaskBeenden" version="0" task="CollectionListSerializationTask" opcode="win:Beenden" level="win:Always" template="CollectionListSerializationTaskStartenArgs"/>
+     <event value="1005" symbol="CollectionListAllocateAndSerializationTaskStarten" version="0" task="CollectionListAllocateAndSerializationTask" opcode="win:Starten" level="win:Always" template="CollectionListSerializationTaskStartenArgs"/>
+     <event value="1006" symbol="CollectionListAllocateAndSerializationTaskBeenden" version="0" task="CollectionListAllocateAndSerializationTask" opcode="win:Beenden" level="win:Always" template="CollectionListSerializationTaskStartenArgs"/>
+     <event value="1007" symbol="CollectionListDeserializationTaskStarten" version="0" task="CollectionListDeserializationTask" opcode="win:Starten" level="win:Always" template="CollectionListSerializationTaskStartenArgs"/>
+     <event value="1008" symbol="CollectionListDeserializationTaskBeenden" version="0" task="CollectionListDeserializationTask" opcode="win:Beenden" level="win:Always" template="CollectionListSerializationTaskStartenArgs"/>
+     <event value="1009" symbol="SensorsNativeIoctlTaskStarten" version="0" task="SensorsNativeIoctlTask" opcode="win:Starten" level="win:Always" template="SensorsNativeIoctlTaskStartenArgs"/>
+     <event value="1010" symbol="SensorsNativeIoctlTaskBeenden" version="0" task="SensorsNativeIoctlTask" opcode="win:Beenden" level="win:Always" template="SensorsNativeIoctlTaskStartenArgs"/>
+     <event value="1011" symbol="NativeToCxIoctlTransferTaskStarten" version="0" task="NativeToCxIoctlTransferTask" opcode="win:Starten" level="win:Always" template="SensorsNativeIoctlTaskStartenArgs"/>
+     <event value="1012" symbol="NativeToCxIoctlTransferTaskBeenden" version="0" task="NativeToCxIoctlTransferTask" opcode="win:Beenden" level="win:Always" template="SensorsIoctlTaskBeendenArgs"/>
+     <event value="1013" symbol="CxToNativeIoctlTransferTaskStarten" version="0" task="CxToNativeIoctlTransferTask" opcode="win:Starten" level="win:Always" template="SensorsIoctlTaskBeendenArgs"/>
+     <event value="1014" symbol="CxToNativeIoctlTransferTaskBeenden" version="0" task="CxToNativeIoctlTransferTask" opcode="win:Beenden" level="win:Always" template="SensorsNativeIoctlTaskStartenArgs"/>
+     <event value="1015" symbol="SensorsCxReadTaskStarten" version="0" task="SensorsCxReadTask" opcode="win:Starten" level="win:Always" template="SensorsCxReadTaskStartenArgs"/>
+     <event value="1016" symbol="SensorsCxReadTaskBeenden" version="0" task="SensorsCxReadTask" opcode="win:Beenden" level="win:Always" template="SensorsCxReadTaskStartenArgs"/>
+     <event value="1017" symbol="NativeToCxReadTransferTaskStarten" version="0" task="NativeToCxReadTransferTask" opcode="win:Starten" level="win:Always"/>
+     <event value="1018" symbol="NativeToCxReadTransferTaskBeenden" version="0" task="NativeToCxReadTransferTask" opcode="win:Beenden" level="win:Always" template="SensorsCxReadTaskStartenArgs"/>
+     <event value="1019" symbol="CxToNativeReadTransferTaskStarten" version="0" task="CxToNativeReadTransferTask" opcode="win:Starten" level="win:Always" template="SensorsCxReadTaskStartenArgs"/>
+     <event value="1020" symbol="CxToNativeReadTransferTaskBeenden" version="0" task="CxToNativeReadTransferTask" opcode="win:Beenden" level="win:Always"/>
+     <event value="1021" symbol="SensorSubscription" version="0" task="SensorSubscription" level="win:Always" template="SensorSubscriptionArgs"/>
+     <event value="1022" symbol="SensorsCxReadTask" version="0" task="SensorsCxReadTask" level="win:Always" template="SensorsCxReadTaskArgs"/>
+     <event value="1023" symbol="SensorsCxReadTask1023" version="0" task="SensorsCxReadTask" level="win:Always" template="SensorsCxReadTask1023Args"/>
+    </events>
+    <templates>
+     <template tid="SensorsIoctlTaskStartenArgs">
+      <data name="IoctlType" inType="win:UInt32" map="Ioctl_flags"/>
+      <data name="SensorObj" inType="win:Pointer"/>
+     </template>
+     <template tid="SensorsIoctlTaskBeendenArgs">
+      <data name="IoctlType" inType="win:UInt32"/>
+      <data name="SensorObj" inType="win:Pointer"/>
+     </template>
+     <template tid="CollectionListSerializationTaskStartenArgs">
+      <data name="PayloadSize" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsNativeIoctlTaskStartenArgs">
+      <data name="IoctlType" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxReadTaskStartenArgs">
+      <data name="SensorObj" inType="win:Pointer"/>
+      <data name="CollectionListPtr" inType="win:Pointer"/>
+     </template>
+     <template tid="SensorSubscriptionArgs">
+      <data name="Driver" inType="win:Pointer"/>
+      <data name="Sensor" inType="win:Pointer"/>
+      <data name="ClientPID" inType="win:UInt32"/>
+      <data name="Type" inType="win:GUID"/>
+      <data name="Interval" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxReadTaskArgs">
+      <data name="Sensor" inType="win:Pointer"/>
+      <data name="DriverCollectionList" inType="win:Pointer"/>
+     </template>
+     <template tid="SensorsCxReadTask1023Args">
+      <data name="Sensor" inType="win:Pointer"/>
+      <data name="DriverCollectionList" inType="win:Pointer"/>
+      <data name="BufferCollectionList" inType="win:Pointer"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_SensorsIoctlTask" value="SensorsIoctlTask"/>
+    <string id="task_CollectionListSerializationTask" value="CollectionListSerializationTask"/>
+    <string id="task_CollectionListAllocateAndSerializationTask" value="CollectionListAllocateAndSerializationTask"/>
+    <string id="task_CollectionListDeserializationTask" value="CollectionListDeserializationTask"/>
+    <string id="task_SensorsNativeIoctlTask" value="SensorsNativeIoctlTask"/>
+    <string id="task_SensorsCxReadTask" value="SensorsCxReadTask"/>
+    <string id="task_NativeToCxIoctlTransferTask" value="NativeToCxIoctlTransferTask"/>
+    <string id="task_CxToNativeIoctlTransferTask" value="CxToNativeIoctlTransferTask"/>
+    <string id="task_NativeToCxReadTransferTask" value="NativeToCxReadTransferTask"/>
+    <string id="task_CxToNativeReadTransferTask" value="CxToNativeReadTransferTask"/>
+    <string id="task_SensorSubscription" value="SensorSubscription"/>
+    <string id="map_Ioctl_flagsStart" value="Start"/>
+    <string id="map_Ioctl_flagsStop" value="Stop"/>
+    <string id="map_Ioctl_flagsGetSupportedDatafields" value="GetSupportedDatafields"/>
+    <string id="map_Ioctl_flagsGetProperties" value="GetProperties"/>
+    <string id="map_Ioctl_flagsGetDatafieldProperties" value="GetDatafieldProperties"/>
+    <string id="map_Ioctl_flagsGetDataInterval" value="GetDataInterval"/>
+    <string id="map_Ioctl_flagsSetDataInterval" value="SetDataInterval"/>
+    <string id="map_Ioctl_flagsGetDataThresholds" value="GetDataThresholds"/>
+    <string id="map_Ioctl_flagsSetDataThresholds" value="SetDataThresholds"/>
+    <string id="map_Ioctl_flagsUpdateDeclination" value="UpdateDeclination"/>
+    <string id="map_Ioctl_flagsStartHistory" value="StartHistory"/>
+    <string id="map_Ioctl_flagsStopHistory" value="StopHistory"/>
+    <string id="map_Ioctl_flagsClearHistory" value="ClearHistory"/>
+    <string id="map_Ioctl_flagsGetHistory" value="GetHistory"/>
+    <string id="map_Ioctl_flagsSetReportLatency" value="SetReportLatency"/>
+    <string id="map_Ioctl_flagsGetDataDeliveryMode" value="GetDataDeliveryMode"/>
+    <string id="map_Ioctl_flagsGetReportLatency" value="GetReportLatency"/>
+    <string id="map_Ioctl_flagsGetBatchedSamples" value="GetBatchedSamples"/>
+    <string id="map_Ioctl_flagsGetDefaultDataThresholds" value="GetDefaultDataThresholds"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

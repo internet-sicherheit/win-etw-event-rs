@@ -1,0 +1,576 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-UIAutomationCore" guid="{820a42d8-38c4-465d-b64e-d7d56ea1d612}" resourceFileName="Microsoft-Windows-UIAutomationCore" messageFileName="Microsoft-Windows-UIAutomationCore" symbol="MicrosoftWindowsUIAutomationCore" source="Xml" >
+    <keywords>
+     <keyword name="UiaConnectionTimeout" message="$(string.keyword_UiaConnectionTimeout)" mask="0x1000"/>
+     <keyword name="UiaEventOverflow" message="$(string.keyword_UiaEventOverflow)" mask="0x2000"/>
+     <keyword name="PerfInstrumentation" message="$(string.keyword_PerfInstrumentation)" mask="0x10000"/>
+    </keywords>
+    <tasks>
+     <task name="Error_ProviderErrors" message="$(string.task_Error_ProviderErrors)" value="1"/>
+     <task name="Error_IAccessibleErrors" message="$(string.task_Error_IAccessibleErrors)" value="2"/>
+     <task name="Error_OtherErrors" message="$(string.task_Error_OtherErrors)" value="3"/>
+     <task name="Error_ClientApiErrors" message="$(string.task_Error_ClientApiErrors)" value="4"/>
+     <task name="Error_ProcessErrors" message="$(string.task_Error_ProcessErrors)" value="5"/>
+     <task name="UIAutomationCoreAPI_UiaClientsAreListening" message="$(string.task_UIAutomationCoreAPI_UiaClientsAreListening)" value="101"/>
+     <task name="UIAutomationCoreAPI_UiaDisconnectAllProviders" message="$(string.task_UIAutomationCoreAPI_UiaDisconnectAllProviders)" value="103"/>
+     <task name="UIAutomationCoreAPI_UiaDisconnectProvider" message="$(string.task_UIAutomationCoreAPI_UiaDisconnectProvider)" value="105"/>
+     <task name="UIAutomationCoreAPI_UiaGetReservedMixedAttributeValue" message="$(string.task_UIAutomationCoreAPI_UiaGetReservedMixedAttributeValue)" value="107"/>
+     <task name="UIAutomationCoreAPI_UiaGetReservedNotSupportedValue" message="$(string.task_UIAutomationCoreAPI_UiaGetReservedNotSupportedValue)" value="109"/>
+     <task name="UIAutomationCoreAPI_UiaHostProviderFromHwnd" message="$(string.task_UIAutomationCoreAPI_UiaHostProviderFromHwnd)" value="111"/>
+     <task name="UIAutomationCoreAPI_UiaIAccessibleFromProvider" message="$(string.task_UIAutomationCoreAPI_UiaIAccessibleFromProvider)" value="113"/>
+     <task name="UIAutomationCoreAPI_UiaProviderForNonClient" message="$(string.task_UIAutomationCoreAPI_UiaProviderForNonClient)" value="115"/>
+     <task name="UIAutomationCoreAPI_UiaProviderFromIAccessible" message="$(string.task_UIAutomationCoreAPI_UiaProviderFromIAccessible)" value="117"/>
+     <task name="UIAutomationCoreAPI_UiaRaiseEvent" message="$(string.task_UIAutomationCoreAPI_UiaRaiseEvent)" value="119"/>
+     <task name="UIAutomationCoreAPI_UiaReturnRawElementProvider" message="$(string.task_UIAutomationCoreAPI_UiaReturnRawElementProvider)" value="121"/>
+     <task name="UIAutomationProviderApi_UiaReturnCrossMachineConnectionInfo" message="$(string.task_UIAutomationProviderApi_UiaReturnCrossMachineConnectionInfo)" value="123"/>
+     <task name="UIAutomationCoreAPI_UiaRaiseStructuredMarkupEvent" message="$(string.task_UIAutomationCoreAPI_UiaRaiseStructuredMarkupEvent)" value="125"/>
+     <task name="CUIAutomation_AddEventHandler" message="$(string.task_CUIAutomation_AddEventHandler)" value="201"/>
+     <task name="CUIAutomation_CompareElements" message="$(string.task_CUIAutomation_CompareElements)" value="203"/>
+     <task name="CUIAutomation_CompareRuntimeIds" message="$(string.task_CUIAutomation_CompareRuntimeIds)" value="205"/>
+     <task name="CUIAutomation_CreateCondition" message="$(string.task_CUIAutomation_CreateCondition)" value="207"/>
+     <task name="CUIAutomation_CreateCacheRequest" message="$(string.task_CUIAutomation_CreateCacheRequest)" value="209"/>
+     <task name="CUIAutomation_CreateProxyFactoryEntry" message="$(string.task_CUIAutomation_CreateProxyFactoryEntry)" value="211"/>
+     <task name="CUIAutomation_CreateTreeWalker" message="$(string.task_CUIAutomation_CreateTreeWalker)" value="213"/>
+     <task name="CUIAutomation_ElementFromHandle" message="$(string.task_CUIAutomation_ElementFromHandle)" value="215"/>
+     <task name="CUIAutomation_ElementFromHandleBuildCache" message="$(string.task_CUIAutomation_ElementFromHandleBuildCache)" value="217"/>
+     <task name="CUIAutomation_ElementFromIAccessible" message="$(string.task_CUIAutomation_ElementFromIAccessible)" value="219"/>
+     <task name="CUIAutomation_ElementFromIAccessibleBuildCache" message="$(string.task_CUIAutomation_ElementFromIAccessibleBuildCache)" value="221"/>
+     <task name="CUIAutomation_ElementFromPoint" message="$(string.task_CUIAutomation_ElementFromPoint)" value="223"/>
+     <task name="CUIAutomation_ElementFromPointBuildCache" message="$(string.task_CUIAutomation_ElementFromPointBuildCache)" value="225"/>
+     <task name="CUIAutomation_GetFocusedElement" message="$(string.task_CUIAutomation_GetFocusedElement)" value="227"/>
+     <task name="CUIAutomation_GetFocusedElementBuildCache" message="$(string.task_CUIAutomation_GetFocusedElementBuildCache)" value="229"/>
+     <task name="CUIAutomation_GetPatternProgrammaticName" message="$(string.task_CUIAutomation_GetPatternProgrammaticName)" value="231"/>
+     <task name="CUIAutomation_GetPropertyProgrammaticName" message="$(string.task_CUIAutomation_GetPropertyProgrammaticName)" value="233"/>
+     <task name="CUIAutomation_GetRootElement" message="$(string.task_CUIAutomation_GetRootElement)" value="235"/>
+     <task name="CUIAutomation_GetRootElementBuildCache" message="$(string.task_CUIAutomation_GetRootElementBuildCache)" value="237"/>
+     <task name="CUIAutomation_PollForPotentialSupportedPatterns" message="$(string.task_CUIAutomation_PollForPotentialSupportedPatterns)" value="239"/>
+     <task name="CUIAutomation_PollForPotentialSupportedProperties" message="$(string.task_CUIAutomation_PollForPotentialSupportedProperties)" value="241"/>
+     <task name="CUIAutomation_RemoveEventHandler" message="$(string.task_CUIAutomation_RemoveEventHandler)" value="243"/>
+     <task name="CUIAutomation_CreateEventHandlerGroup" message="$(string.task_CUIAutomation_CreateEventHandlerGroup)" value="245"/>
+     <task name="CUIAutomation_AddEventHandlerGroup" message="$(string.task_CUIAutomation_AddEventHandlerGroup)" value="247"/>
+     <task name="CUIAutomation_RemoveEventHandlerGroup" message="$(string.task_CUIAutomation_RemoveEventHandlerGroup)" value="249"/>
+     <task name="CUIAutomation_AddStructuredMarkupEventHandler" message="$(string.task_CUIAutomation_AddStructuredMarkupEventHandler)" value="251"/>
+     <task name="CUIAutomation_RemoveStructuredMarkupEventHandler" message="$(string.task_CUIAutomation_RemoveStructuredMarkupEventHandler)" value="253"/>
+     <task name="CAutomationElement_BuildUpdatedCache" message="$(string.task_CAutomationElement_BuildUpdatedCache)" value="301"/>
+     <task name="CAutomationElement_FindAll" message="$(string.task_CAutomationElement_FindAll)" value="303"/>
+     <task name="CAutomationElement_FindAllBuildCache" message="$(string.task_CAutomationElement_FindAllBuildCache)" value="305"/>
+     <task name="CAutomationElement_FindFirst" message="$(string.task_CAutomationElement_FindFirst)" value="307"/>
+     <task name="CAutomationElement_FindFirstBuildCache" message="$(string.task_CAutomationElement_FindFirstBuildCache)" value="309"/>
+     <task name="CAutomationElement_GetCachedChildren" message="$(string.task_CAutomationElement_GetCachedChildren)" value="311"/>
+     <task name="CAutomationElement_GetCachedParent" message="$(string.task_CAutomationElement_GetCachedParent)" value="313"/>
+     <task name="CAutomationElement_GetCachedPattern" message="$(string.task_CAutomationElement_GetCachedPattern)" value="315"/>
+     <task name="CAutomationElement_GetCachedPatternAs" message="$(string.task_CAutomationElement_GetCachedPatternAs)" value="317"/>
+     <task name="CAutomationElement_GetCachedPropertyValue" message="$(string.task_CAutomationElement_GetCachedPropertyValue)" value="319"/>
+     <task name="CAutomationElement_GetCachedPropertyValueEx" message="$(string.task_CAutomationElement_GetCachedPropertyValueEx)" value="321"/>
+     <task name="CAutomationElement_GetClickablePoint" message="$(string.task_CAutomationElement_GetClickablePoint)" value="323"/>
+     <task name="CAutomationElement_GetCurrentPattern" message="$(string.task_CAutomationElement_GetCurrentPattern)" value="325"/>
+     <task name="CAutomationElement_GetCurrentPatternAs" message="$(string.task_CAutomationElement_GetCurrentPatternAs)" value="327"/>
+     <task name="CAutomationElement_GetCurrentPropertyValue" message="$(string.task_CAutomationElement_GetCurrentPropertyValue)" value="329"/>
+     <task name="CAutomationElement_GetCurrentPropertyValueEx" message="$(string.task_CAutomationElement_GetCurrentPropertyValueEx)" value="331"/>
+     <task name="CAutomationElement_GetRuntimeId" message="$(string.task_CAutomationElement_GetRuntimeId)" value="333"/>
+     <task name="CAutomationElement_SetFocus" message="$(string.task_CAutomationElement_SetFocus)" value="335"/>
+     <task name="CAutomationElement_ShowContextMenu" message="$(string.task_CAutomationElement_ShowContextMenu)" value="337"/>
+     <task name="CAutomationElement_FindAllWithOptions" message="$(string.task_CAutomationElement_FindAllWithOptions)" value="339"/>
+     <task name="CAutomationElement_FindAllWithOptionsBuildCache" message="$(string.task_CAutomationElement_FindAllWithOptionsBuildCache)" value="341"/>
+     <task name="CAutomationElement_FindFirstWithOptions" message="$(string.task_CAutomationElement_FindFirstWithOptions)" value="343"/>
+     <task name="CAutomationElement_FindFirstWithOptionsBuildCache" message="$(string.task_CAutomationElement_FindFirstWithOptionsBuildCache)" value="345"/>
+     <task name="CTextRange_Clone" message="$(string.task_CTextRange_Clone)" value="403"/>
+     <task name="CTextRange_Compare" message="$(string.task_CTextRange_Compare)" value="405"/>
+     <task name="CTextRange_CompareEndpoints" message="$(string.task_CTextRange_CompareEndpoints)" value="407"/>
+     <task name="CTextRange_ExpandToEnclosingUnit" message="$(string.task_CTextRange_ExpandToEnclosingUnit)" value="409"/>
+     <task name="CTextRange_GetAttributeValue" message="$(string.task_CTextRange_GetAttributeValue)" value="411"/>
+     <task name="CTextRange_GetEnclosingElement" message="$(string.task_CTextRange_GetEnclosingElement)" value="413"/>
+     <task name="CTextRange_GetText" message="$(string.task_CTextRange_GetText)" value="415"/>
+     <task name="CTextRange_Move" message="$(string.task_CTextRange_Move)" value="417"/>
+     <task name="CTextRange_MoveEndpointByUnit" message="$(string.task_CTextRange_MoveEndpointByUnit)" value="419"/>
+     <task name="CTextRange_MoveEndpointByRange" message="$(string.task_CTextRange_MoveEndpointByRange)" value="421"/>
+     <task name="CTextRange_GetChildren" message="$(string.task_CTextRange_GetChildren)" value="423"/>
+     <task name="CTreeWalker_Navigate" message="$(string.task_CTreeWalker_Navigate)" value="501"/>
+     <task name="RichEditProxy_GetText" message="$(string.task_RichEditProxy_GetText)" value="503"/>
+     <task name="RichEditProxy_GetVisibleRange" message="$(string.task_RichEditProxy_GetVisibleRange)" value="505"/>
+     <task name="EditProxy_NextWord" message="$(string.task_EditProxy_NextWord)" value="507"/>
+     <task name="ClientConnection_CallWithReturn" message="$(string.task_ClientConnection_CallWithReturn)" value="509"/>
+     <task name="CSelectionPattern_GetCurrentSelection" message="$(string.task_CSelectionPattern_GetCurrentSelection)" value="511"/>
+     <task name="HandleWinEvent" message="$(string.task_HandleWinEvent)" value="513"/>
+     <task name="CoalesceWinEvent" message="$(string.task_CoalesceWinEvent)" value="515"/>
+     <task name="UiaProviderCallout" message="$(string.task_UiaProviderCallout)" value="517"/>
+     <task name="MsaaProviderCallout" message="$(string.task_MsaaProviderCallout)" value="519"/>
+     <task name="ClientConnection_DispatchToProvider" message="$(string.task_ClientConnection_DispatchToProvider)" value="521"/>
+     <task name="ProcessIncomingRequest" message="$(string.task_ProcessIncomingRequest)" value="523"/>
+     <task name="ProcessIncomingRequest_ContextChange" message="$(string.task_ProcessIncomingRequest_ContextChange)" value="525"/>
+     <task name="ServerConnection_OnData_ForceFlush" message="$(string.task_ServerConnection_OnData_ForceFlush)" value="527"/>
+     <task name="ReleaseCollection_ObjectNotFound" message="$(string.task_ReleaseCollection_ObjectNotFound)" value="528"/>
+     <task name="ReleaseCollection_ReleaseObjects" message="$(string.task_ReleaseCollection_ReleaseObjects)" value="529"/>
+     <task name="ReleaseCollection_IncompatibleContext" message="$(string.task_ReleaseCollection_IncompatibleContext)" value="530"/>
+     <task name="ClientConnection_StateChange" message="$(string.task_ClientConnection_StateChange)" value="531"/>
+     <task name="IsProcessFrozenCheck" message="$(string.task_IsProcessFrozenCheck)" value="532"/>
+     <task name="IA2TextRange_Clone" message="$(string.task_IA2TextRange_Clone)" value="603"/>
+     <task name="IA2TextRange_Compare" message="$(string.task_IA2TextRange_Compare)" value="605"/>
+     <task name="IA2TextRange_CompareEndpoints" message="$(string.task_IA2TextRange_CompareEndpoints)" value="607"/>
+     <task name="IA2TextRange_ExpandToEnclosingUnit" message="$(string.task_IA2TextRange_ExpandToEnclosingUnit)" value="609"/>
+     <task name="IA2TextRange_GetAttributeValue" message="$(string.task_IA2TextRange_GetAttributeValue)" value="611"/>
+     <task name="IA2TextRange_GetEnclosingElement" message="$(string.task_IA2TextRange_GetEnclosingElement)" value="613"/>
+     <task name="IA2TextRange_GetText" message="$(string.task_IA2TextRange_GetText)" value="615"/>
+     <task name="IA2TextRange_Move" message="$(string.task_IA2TextRange_Move)" value="617"/>
+     <task name="IA2TextRange_MoveEndpointByUnit" message="$(string.task_IA2TextRange_MoveEndpointByUnit)" value="619"/>
+     <task name="IA2TextRange_MoveEndpointByRange" message="$(string.task_IA2TextRange_MoveEndpointByRange)" value="621"/>
+     <task name="IA2TextRange_GetChildren" message="$(string.task_IA2TextRange_GetChildren)" value="623"/>
+     <task name="IA2TextRange_FindAttribute" message="$(string.task_IA2TextRange_FindAttribute)" value="625"/>
+     <task name="IA2TextRange_FindText" message="$(string.task_IA2TextRange_FindText)" value="627"/>
+     <task name="IA2TextRange_GetBoundingRectangles" message="$(string.task_IA2TextRange_GetBoundingRectangles)" value="629"/>
+     <task name="IA2TextRange_Select" message="$(string.task_IA2TextRange_Select)" value="631"/>
+     <task name="IA2TextRange_AddToSelection" message="$(string.task_IA2TextRange_AddToSelection)" value="633"/>
+     <task name="IA2TextRange_RemoveFromSelection" message="$(string.task_IA2TextRange_RemoveFromSelection)" value="635"/>
+     <task name="IA2TextRange_ScrollIntoView" message="$(string.task_IA2TextRange_ScrollIntoView)" value="637"/>
+     <task name="ClientConnectionTimeout" message="$(string.task_ClientConnectionTimeout)" value="701"/>
+     <task name="EventOverflow" message="$(string.task_EventOverflow)" value="702"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="Error_ProviderErrors" version="0" task="Error_ProviderErrors" level="win:Informational" template="Error_ProviderErrorsArgs"/>
+     <event value="2" symbol="Error_IAccessibleErrors" version="0" task="Error_IAccessibleErrors" level="win:Informational" template="Error_ProviderErrorsArgs"/>
+     <event value="3" symbol="Error_OtherErrors" version="0" task="Error_OtherErrors" level="win:Informational" template="Error_OtherErrorsArgs"/>
+     <event value="4" symbol="Error_ClientApiErrors" version="0" task="Error_ClientApiErrors" level="win:Informational" template="Error_ClientApiErrorsArgs"/>
+     <event value="5" symbol="Error_ProcessErrors" version="0" task="Error_ProcessErrors" level="win:Informational" template="Error_ProcessErrorsArgs"/>
+     <event value="101" symbol="UIAutomationCoreAPI_UiaClientsAreListeningStarten" version="0" task="UIAutomationCoreAPI_UiaClientsAreListening" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="102" symbol="UIAutomationCoreAPI_UiaClientsAreListeningBeenden" version="0" task="UIAutomationCoreAPI_UiaClientsAreListening" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="103" symbol="UIAutomationCoreAPI_UiaDisconnectAllProvidersStarten" version="0" task="UIAutomationCoreAPI_UiaDisconnectAllProviders" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="104" symbol="UIAutomationCoreAPI_UiaDisconnectAllProvidersBeenden" version="0" task="UIAutomationCoreAPI_UiaDisconnectAllProviders" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="105" symbol="UIAutomationCoreAPI_UiaDisconnectProviderStarten" version="0" task="UIAutomationCoreAPI_UiaDisconnectProvider" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="106" symbol="UIAutomationCoreAPI_UiaDisconnectProviderBeenden" version="0" task="UIAutomationCoreAPI_UiaDisconnectProvider" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="107" symbol="UIAutomationCoreAPI_UiaGetReservedMixedAttributeValueStarten" version="0" task="UIAutomationCoreAPI_UiaGetReservedMixedAttributeValue" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="108" symbol="UIAutomationCoreAPI_UiaGetReservedMixedAttributeValueBeenden" version="0" task="UIAutomationCoreAPI_UiaGetReservedMixedAttributeValue" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="109" symbol="UIAutomationCoreAPI_UiaGetReservedNotSupportedValueStarten" version="0" task="UIAutomationCoreAPI_UiaGetReservedNotSupportedValue" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="110" symbol="UIAutomationCoreAPI_UiaGetReservedNotSupportedValueBeenden" version="0" task="UIAutomationCoreAPI_UiaGetReservedNotSupportedValue" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="111" symbol="UIAutomationCoreAPI_UiaHostProviderFromHwndStarten" version="0" task="UIAutomationCoreAPI_UiaHostProviderFromHwnd" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="112" symbol="UIAutomationCoreAPI_UiaHostProviderFromHwndBeenden" version="0" task="UIAutomationCoreAPI_UiaHostProviderFromHwnd" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="113" symbol="UIAutomationCoreAPI_UiaIAccessibleFromProviderStarten" version="0" task="UIAutomationCoreAPI_UiaIAccessibleFromProvider" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="114" symbol="UIAutomationCoreAPI_UiaIAccessibleFromProviderBeenden" version="0" task="UIAutomationCoreAPI_UiaIAccessibleFromProvider" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="115" symbol="UIAutomationCoreAPI_UiaProviderForNonClientStarten" version="0" task="UIAutomationCoreAPI_UiaProviderForNonClient" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="116" symbol="UIAutomationCoreAPI_UiaProviderForNonClientBeenden" version="0" task="UIAutomationCoreAPI_UiaProviderForNonClient" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="117" symbol="UIAutomationCoreAPI_UiaProviderFromIAccessibleStarten" version="0" task="UIAutomationCoreAPI_UiaProviderFromIAccessible" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="118" symbol="UIAutomationCoreAPI_UiaProviderFromIAccessibleBeenden" version="0" task="UIAutomationCoreAPI_UiaProviderFromIAccessible" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="119" symbol="UIAutomationCoreAPI_UiaRaiseEventStarten" version="0" task="UIAutomationCoreAPI_UiaRaiseEvent" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="120" symbol="UIAutomationCoreAPI_UiaRaiseEventBeenden" version="0" task="UIAutomationCoreAPI_UiaRaiseEvent" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="121" symbol="UIAutomationCoreAPI_UiaReturnRawElementProviderStarten" version="0" task="UIAutomationCoreAPI_UiaReturnRawElementProvider" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="122" symbol="UIAutomationCoreAPI_UiaReturnRawElementProviderBeenden" version="0" task="UIAutomationCoreAPI_UiaReturnRawElementProvider" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="123" symbol="UIAutomationProviderApi_UiaReturnCrossMachineConnectionInfoStarten" version="0" task="UIAutomationProviderApi_UiaReturnCrossMachineConnectionInfo" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="124" symbol="UIAutomationProviderApi_UiaReturnCrossMachineConnectionInfoBeenden" version="0" task="UIAutomationProviderApi_UiaReturnCrossMachineConnectionInfo" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="125" symbol="UIAutomationCoreAPI_UiaRaiseStructuredMarkupEventStarten" version="0" task="UIAutomationCoreAPI_UiaRaiseStructuredMarkupEvent" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="126" symbol="UIAutomationCoreAPI_UiaRaiseStructuredMarkupEventBeenden" version="0" task="UIAutomationCoreAPI_UiaRaiseStructuredMarkupEvent" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="201" symbol="CUIAutomation_AddEventHandlerStarten" version="0" task="CUIAutomation_AddEventHandler" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="202" symbol="CUIAutomation_AddEventHandlerBeenden" version="0" task="CUIAutomation_AddEventHandler" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="203" symbol="CUIAutomation_CompareElementsStarten" version="0" task="CUIAutomation_CompareElements" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="204" symbol="CUIAutomation_CompareElementsBeenden" version="0" task="CUIAutomation_CompareElements" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="205" symbol="CUIAutomation_CompareRuntimeIdsStarten" version="0" task="CUIAutomation_CompareRuntimeIds" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="206" symbol="CUIAutomation_CompareRuntimeIdsBeenden" version="0" task="CUIAutomation_CompareRuntimeIds" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="207" symbol="CUIAutomation_CreateConditionStarten" version="0" task="CUIAutomation_CreateCondition" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="208" symbol="CUIAutomation_CreateConditionBeenden" version="0" task="CUIAutomation_CreateCondition" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="209" symbol="CUIAutomation_CreateCacheRequestStarten" version="0" task="CUIAutomation_CreateCacheRequest" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="210" symbol="CUIAutomation_CreateCacheRequestBeenden" version="0" task="CUIAutomation_CreateCacheRequest" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="211" symbol="CUIAutomation_CreateProxyFactoryEntryStarten" version="0" task="CUIAutomation_CreateProxyFactoryEntry" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="212" symbol="CUIAutomation_CreateProxyFactoryEntryBeenden" version="0" task="CUIAutomation_CreateProxyFactoryEntry" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="213" symbol="CUIAutomation_CreateTreeWalkerStarten" version="0" task="CUIAutomation_CreateTreeWalker" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="214" symbol="CUIAutomation_CreateTreeWalkerBeenden" version="0" task="CUIAutomation_CreateTreeWalker" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="215" symbol="CUIAutomation_ElementFromHandleStarten" version="0" task="CUIAutomation_ElementFromHandle" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="216" symbol="CUIAutomation_ElementFromHandleBeenden" version="0" task="CUIAutomation_ElementFromHandle" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="217" symbol="CUIAutomation_ElementFromHandleBuildCacheStarten" version="0" task="CUIAutomation_ElementFromHandleBuildCache" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="218" symbol="CUIAutomation_ElementFromHandleBuildCacheBeenden" version="0" task="CUIAutomation_ElementFromHandleBuildCache" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="219" symbol="CUIAutomation_ElementFromIAccessibleStarten" version="0" task="CUIAutomation_ElementFromIAccessible" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="220" symbol="CUIAutomation_ElementFromIAccessibleBeenden" version="0" task="CUIAutomation_ElementFromIAccessible" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="221" symbol="CUIAutomation_ElementFromIAccessibleBuildCacheStarten" version="0" task="CUIAutomation_ElementFromIAccessibleBuildCache" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="222" symbol="CUIAutomation_ElementFromIAccessibleBuildCacheBeenden" version="0" task="CUIAutomation_ElementFromIAccessibleBuildCache" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="223" symbol="CUIAutomation_ElementFromPointStarten" version="0" task="CUIAutomation_ElementFromPoint" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="224" symbol="CUIAutomation_ElementFromPointBeenden" version="0" task="CUIAutomation_ElementFromPoint" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="225" symbol="CUIAutomation_ElementFromPointBuildCacheStarten" version="0" task="CUIAutomation_ElementFromPointBuildCache" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="226" symbol="CUIAutomation_ElementFromPointBuildCacheBeenden" version="0" task="CUIAutomation_ElementFromPointBuildCache" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="227" symbol="CUIAutomation_GetFocusedElementStarten" version="0" task="CUIAutomation_GetFocusedElement" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="228" symbol="CUIAutomation_GetFocusedElementBeenden" version="0" task="CUIAutomation_GetFocusedElement" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="229" symbol="CUIAutomation_GetFocusedElementBuildCacheStarten" version="0" task="CUIAutomation_GetFocusedElementBuildCache" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="230" symbol="CUIAutomation_GetFocusedElementBuildCacheBeenden" version="0" task="CUIAutomation_GetFocusedElementBuildCache" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="231" symbol="CUIAutomation_GetPatternProgrammaticNameStarten" version="0" task="CUIAutomation_GetPatternProgrammaticName" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="232" symbol="CUIAutomation_GetPatternProgrammaticNameBeenden" version="0" task="CUIAutomation_GetPatternProgrammaticName" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="233" symbol="CUIAutomation_GetPropertyProgrammaticNameStarten" version="0" task="CUIAutomation_GetPropertyProgrammaticName" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="234" symbol="CUIAutomation_GetPropertyProgrammaticNameBeenden" version="0" task="CUIAutomation_GetPropertyProgrammaticName" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="235" symbol="CUIAutomation_GetRootElementStarten" version="0" task="CUIAutomation_GetRootElement" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="236" symbol="CUIAutomation_GetRootElementBeenden" version="0" task="CUIAutomation_GetRootElement" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="237" symbol="CUIAutomation_GetRootElementBuildCacheStarten" version="0" task="CUIAutomation_GetRootElementBuildCache" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="238" symbol="CUIAutomation_GetRootElementBuildCacheBeenden" version="0" task="CUIAutomation_GetRootElementBuildCache" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="239" symbol="CUIAutomation_PollForPotentialSupportedPatternsStarten" version="0" task="CUIAutomation_PollForPotentialSupportedPatterns" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="240" symbol="CUIAutomation_PollForPotentialSupportedPatternsBeenden" version="0" task="CUIAutomation_PollForPotentialSupportedPatterns" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="241" symbol="CUIAutomation_PollForPotentialSupportedPropertiesStarten" version="0" task="CUIAutomation_PollForPotentialSupportedProperties" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="242" symbol="CUIAutomation_PollForPotentialSupportedPropertiesBeenden" version="0" task="CUIAutomation_PollForPotentialSupportedProperties" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="243" symbol="CUIAutomation_RemoveEventHandlerStarten" version="0" task="CUIAutomation_RemoveEventHandler" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="244" symbol="CUIAutomation_RemoveEventHandlerBeenden" version="0" task="CUIAutomation_RemoveEventHandler" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="245" symbol="CUIAutomation_CreateEventHandlerGroupStarten" version="0" task="CUIAutomation_CreateEventHandlerGroup" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="246" symbol="CUIAutomation_CreateEventHandlerGroupBeenden" version="0" task="CUIAutomation_CreateEventHandlerGroup" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="247" symbol="CUIAutomation_AddEventHandlerGroupStarten" version="0" task="CUIAutomation_AddEventHandlerGroup" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="248" symbol="CUIAutomation_AddEventHandlerGroupBeenden" version="0" task="CUIAutomation_AddEventHandlerGroup" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="249" symbol="CUIAutomation_RemoveEventHandlerGroupStarten" version="0" task="CUIAutomation_RemoveEventHandlerGroup" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="250" symbol="CUIAutomation_RemoveEventHandlerGroupBeenden" version="0" task="CUIAutomation_RemoveEventHandlerGroup" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="251" symbol="CUIAutomation_AddStructuredMarkupEventHandlerStarten" version="0" task="CUIAutomation_AddStructuredMarkupEventHandler" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="252" symbol="CUIAutomation_AddStructuredMarkupEventHandlerBeenden" version="0" task="CUIAutomation_AddStructuredMarkupEventHandler" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="253" symbol="CUIAutomation_RemoveStructuredMarkupEventHandlerStarten" version="0" task="CUIAutomation_RemoveStructuredMarkupEventHandler" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="254" symbol="CUIAutomation_RemoveStructuredMarkupEventHandlerBeenden" version="0" task="CUIAutomation_RemoveStructuredMarkupEventHandler" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="301" symbol="CAutomationElement_BuildUpdatedCacheStarten" version="0" task="CAutomationElement_BuildUpdatedCache" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="302" symbol="CAutomationElement_BuildUpdatedCacheBeenden" version="0" task="CAutomationElement_BuildUpdatedCache" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="303" symbol="CAutomationElement_FindAllStarten" version="0" task="CAutomationElement_FindAll" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="304" symbol="CAutomationElement_FindAllBeenden" version="0" task="CAutomationElement_FindAll" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="305" symbol="CAutomationElement_FindAllBuildCacheStarten" version="0" task="CAutomationElement_FindAllBuildCache" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="306" symbol="CAutomationElement_FindAllBuildCacheBeenden" version="0" task="CAutomationElement_FindAllBuildCache" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="307" symbol="CAutomationElement_FindFirstStarten" version="0" task="CAutomationElement_FindFirst" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="308" symbol="CAutomationElement_FindFirstBeenden" version="0" task="CAutomationElement_FindFirst" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="309" symbol="CAutomationElement_FindFirstBuildCacheStarten" version="0" task="CAutomationElement_FindFirstBuildCache" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="310" symbol="CAutomationElement_FindFirstBuildCacheBeenden" version="0" task="CAutomationElement_FindFirstBuildCache" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="311" symbol="CAutomationElement_GetCachedChildrenStarten" version="0" task="CAutomationElement_GetCachedChildren" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="312" symbol="CAutomationElement_GetCachedChildrenBeenden" version="0" task="CAutomationElement_GetCachedChildren" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="313" symbol="CAutomationElement_GetCachedParentStarten" version="0" task="CAutomationElement_GetCachedParent" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="314" symbol="CAutomationElement_GetCachedParentBeenden" version="0" task="CAutomationElement_GetCachedParent" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="315" symbol="CAutomationElement_GetCachedPatternStarten" version="0" task="CAutomationElement_GetCachedPattern" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="316" symbol="CAutomationElement_GetCachedPatternBeenden" version="0" task="CAutomationElement_GetCachedPattern" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="317" symbol="CAutomationElement_GetCachedPatternAsStarten" version="0" task="CAutomationElement_GetCachedPatternAs" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="318" symbol="CAutomationElement_GetCachedPatternAsBeenden" version="0" task="CAutomationElement_GetCachedPatternAs" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="319" symbol="CAutomationElement_GetCachedPropertyValueStarten" version="0" task="CAutomationElement_GetCachedPropertyValue" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="320" symbol="CAutomationElement_GetCachedPropertyValueBeenden" version="0" task="CAutomationElement_GetCachedPropertyValue" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="321" symbol="CAutomationElement_GetCachedPropertyValueExStarten" version="0" task="CAutomationElement_GetCachedPropertyValueEx" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="322" symbol="CAutomationElement_GetCachedPropertyValueExBeenden" version="0" task="CAutomationElement_GetCachedPropertyValueEx" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="323" symbol="CAutomationElement_GetClickablePointStarten" version="0" task="CAutomationElement_GetClickablePoint" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="324" symbol="CAutomationElement_GetClickablePointBeenden" version="0" task="CAutomationElement_GetClickablePoint" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="325" symbol="CAutomationElement_GetCurrentPatternStarten" version="0" task="CAutomationElement_GetCurrentPattern" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="326" symbol="CAutomationElement_GetCurrentPatternBeenden" version="0" task="CAutomationElement_GetCurrentPattern" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="327" symbol="CAutomationElement_GetCurrentPatternAsStarten" version="0" task="CAutomationElement_GetCurrentPatternAs" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="328" symbol="CAutomationElement_GetCurrentPatternAsBeenden" version="0" task="CAutomationElement_GetCurrentPatternAs" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="329" symbol="CAutomationElement_GetCurrentPropertyValueStarten" version="0" task="CAutomationElement_GetCurrentPropertyValue" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="330" symbol="CAutomationElement_GetCurrentPropertyValueBeenden" version="0" task="CAutomationElement_GetCurrentPropertyValue" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="331" symbol="CAutomationElement_GetCurrentPropertyValueExStarten" version="0" task="CAutomationElement_GetCurrentPropertyValueEx" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="332" symbol="CAutomationElement_GetCurrentPropertyValueExBeenden" version="0" task="CAutomationElement_GetCurrentPropertyValueEx" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="333" symbol="CAutomationElement_GetRuntimeIdStarten" version="0" task="CAutomationElement_GetRuntimeId" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="334" symbol="CAutomationElement_GetRuntimeIdBeenden" version="0" task="CAutomationElement_GetRuntimeId" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="335" symbol="CAutomationElement_SetFocusStarten" version="0" task="CAutomationElement_SetFocus" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="336" symbol="CAutomationElement_SetFocusBeenden" version="0" task="CAutomationElement_SetFocus" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="337" symbol="CAutomationElement_ShowContextMenuStarten" version="0" task="CAutomationElement_ShowContextMenu" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="338" symbol="CAutomationElement_ShowContextMenuBeenden" version="0" task="CAutomationElement_ShowContextMenu" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="339" symbol="CAutomationElement_FindAllWithOptionsStarten" version="0" task="CAutomationElement_FindAllWithOptions" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="340" symbol="CAutomationElement_FindAllWithOptionsBeenden" version="0" task="CAutomationElement_FindAllWithOptions" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="341" symbol="CAutomationElement_FindAllWithOptionsBuildCacheStarten" version="0" task="CAutomationElement_FindAllWithOptionsBuildCache" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="342" symbol="CAutomationElement_FindAllWithOptionsBuildCacheBeenden" version="0" task="CAutomationElement_FindAllWithOptionsBuildCache" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="343" symbol="CAutomationElement_FindFirstWithOptionsStarten" version="0" task="CAutomationElement_FindFirstWithOptions" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="344" symbol="CAutomationElement_FindFirstWithOptionsBeenden" version="0" task="CAutomationElement_FindFirstWithOptions" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="345" symbol="CAutomationElement_FindFirstWithOptionsBuildCacheStarten" version="0" task="CAutomationElement_FindFirstWithOptionsBuildCache" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="346" symbol="CAutomationElement_FindFirstWithOptionsBuildCacheBeenden" version="0" task="CAutomationElement_FindFirstWithOptionsBuildCache" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="403" symbol="CTextRange_CloneStarten" version="0" task="CTextRange_Clone" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="404" symbol="CTextRange_CloneBeenden" version="0" task="CTextRange_Clone" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="405" symbol="CTextRange_CompareStarten" version="0" task="CTextRange_Compare" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="406" symbol="CTextRange_CompareBeenden" version="0" task="CTextRange_Compare" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="407" symbol="CTextRange_CompareEndpointsStarten" version="0" task="CTextRange_CompareEndpoints" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="408" symbol="CTextRange_CompareEndpointsBeenden" version="0" task="CTextRange_CompareEndpoints" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="409" symbol="CTextRange_ExpandToEnclosingUnitStarten" version="0" task="CTextRange_ExpandToEnclosingUnit" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="410" symbol="CTextRange_ExpandToEnclosingUnitBeenden" version="0" task="CTextRange_ExpandToEnclosingUnit" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="411" symbol="CTextRange_GetAttributeValueStarten" version="0" task="CTextRange_GetAttributeValue" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="412" symbol="CTextRange_GetAttributeValueBeenden" version="0" task="CTextRange_GetAttributeValue" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="413" symbol="CTextRange_GetEnclosingElementStarten" version="0" task="CTextRange_GetEnclosingElement" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="414" symbol="CTextRange_GetEnclosingElementBeenden" version="0" task="CTextRange_GetEnclosingElement" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="415" symbol="CTextRange_GetTextStarten" version="0" task="CTextRange_GetText" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="416" symbol="CTextRange_GetTextBeenden" version="0" task="CTextRange_GetText" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="417" symbol="CTextRange_MoveStarten" version="0" task="CTextRange_Move" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="418" symbol="CTextRange_MoveBeenden" version="0" task="CTextRange_Move" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="419" symbol="CTextRange_MoveEndpointByUnitStarten" version="0" task="CTextRange_MoveEndpointByUnit" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="420" symbol="CTextRange_MoveEndpointByUnitBeenden" version="0" task="CTextRange_MoveEndpointByUnit" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="421" symbol="CTextRange_MoveEndpointByRangeStarten" version="0" task="CTextRange_MoveEndpointByRange" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="422" symbol="CTextRange_MoveEndpointByRangeBeenden" version="0" task="CTextRange_MoveEndpointByRange" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="423" symbol="CTextRange_GetChildrenStarten" version="0" task="CTextRange_GetChildren" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="424" symbol="CTextRange_GetChildrenBeenden" version="0" task="CTextRange_GetChildren" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="501" symbol="CTreeWalker_NavigateStarten" version="0" task="CTreeWalker_Navigate" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="502" symbol="CTreeWalker_NavigateBeenden" version="0" task="CTreeWalker_Navigate" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="503" symbol="RichEditProxy_GetTextStarten" version="0" task="RichEditProxy_GetText" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="504" symbol="RichEditProxy_GetTextBeenden" version="0" task="RichEditProxy_GetText" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="505" symbol="RichEditProxy_GetVisibleRangeStarten" version="0" task="RichEditProxy_GetVisibleRange" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="506" symbol="RichEditProxy_GetVisibleRangeBeenden" version="0" task="RichEditProxy_GetVisibleRange" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="507" symbol="EditProxy_NextWordStarten" version="0" task="EditProxy_NextWord" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="508" symbol="EditProxy_NextWordBeenden" version="0" task="EditProxy_NextWord" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="509" symbol="ClientConnection_CallWithReturnStarten" version="0" task="ClientConnection_CallWithReturn" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation" template="ClientConnection_CallWithReturnStartenArgs"/>
+     <event value="510" symbol="ClientConnection_CallWithReturnBeenden" version="0" task="ClientConnection_CallWithReturn" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation" template="ClientConnection_CallWithReturnStartenArgs"/>
+     <event value="511" symbol="CSelectionPattern_GetCurrentSelectionStarten" version="0" task="CSelectionPattern_GetCurrentSelection" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="512" symbol="CSelectionPattern_GetCurrentSelectionBeenden" version="0" task="CSelectionPattern_GetCurrentSelection" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="513" symbol="HandleWinEventStarten" version="0" task="HandleWinEvent" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation" template="HandleWinEventStartenArgs"/>
+     <event value="514" symbol="HandleWinEventBeenden" version="0" task="HandleWinEvent" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation" template="HandleWinEventStartenArgs"/>
+     <event value="515" symbol="CoalesceWinEvent" version="0" task="CoalesceWinEvent" level="win:Informational" keywords="PerfInstrumentation" template="CoalesceWinEventArgs"/>
+     <event value="517" symbol="UiaProviderCalloutStarten" version="0" task="UiaProviderCallout" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation" template="UiaProviderCalloutStartenArgs"/>
+     <event value="518" symbol="UiaProviderCalloutBeenden" version="0" task="UiaProviderCallout" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation" template="UiaProviderCalloutStartenArgs"/>
+     <event value="519" symbol="MsaaProviderCalloutStarten" version="0" task="MsaaProviderCallout" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation" template="MsaaProviderCalloutStartenArgs"/>
+     <event value="520" symbol="MsaaProviderCalloutBeenden" version="0" task="MsaaProviderCallout" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation" template="MsaaProviderCalloutStartenArgs"/>
+     <event value="521" symbol="ClientConnection_DispatchToProviderStarten" version="0" task="ClientConnection_DispatchToProvider" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation" template="ClientConnection_DispatchToProviderStartenArgs"/>
+     <event value="522" symbol="ClientConnection_DispatchToProviderBeenden" version="0" task="ClientConnection_DispatchToProvider" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation" template="ClientConnection_DispatchToProviderStartenArgs"/>
+     <event value="523" symbol="ProcessIncomingRequestStarten" version="0" task="ProcessIncomingRequest" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation" template="ProcessIncomingRequestStartenArgs"/>
+     <event value="524" symbol="ProcessIncomingRequestBeenden" version="0" task="ProcessIncomingRequest" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation" template="ProcessIncomingRequestStartenArgs"/>
+     <event value="525" symbol="ProcessIncomingRequest_ContextChangeStarten" version="0" task="ProcessIncomingRequest_ContextChange" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation" template="ProcessIncomingRequest_ContextChangeStartenArgs"/>
+     <event value="526" symbol="ProcessIncomingRequest_ContextChangeBeenden" version="0" task="ProcessIncomingRequest_ContextChange" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation" template="ProcessIncomingRequest_ContextChangeStartenArgs"/>
+     <event value="527" symbol="ServerConnection_OnData_ForceFlush" version="0" task="ServerConnection_OnData_ForceFlush" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="528" symbol="ReleaseCollection_ObjectNotFound" version="0" task="ReleaseCollection_ObjectNotFound" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="529" symbol="ReleaseCollection_ReleaseObjects" version="0" task="ReleaseCollection_ReleaseObjects" level="win:Informational" keywords="PerfInstrumentation" template="ReleaseCollection_ReleaseObjectsArgs"/>
+     <event value="530" symbol="ReleaseCollection_IncompatibleContext" version="0" task="ReleaseCollection_IncompatibleContext" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="531" symbol="ClientConnection_StateChange" version="0" task="ClientConnection_StateChange" level="win:Informational" keywords="PerfInstrumentation" template="ClientConnection_StateChangeArgs"/>
+     <event value="532" symbol="IsProcessFrozenCheckStarten" version="0" task="IsProcessFrozenCheck" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="533" symbol="IsProcessFrozenCheckBeenden" version="0" task="IsProcessFrozenCheck" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="603" symbol="IA2TextRange_CloneStarten" version="0" task="IA2TextRange_Clone" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="604" symbol="IA2TextRange_CloneBeenden" version="0" task="IA2TextRange_Clone" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="605" symbol="IA2TextRange_CompareStarten" version="0" task="IA2TextRange_Compare" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="606" symbol="IA2TextRange_CompareBeenden" version="0" task="IA2TextRange_Compare" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="607" symbol="IA2TextRange_CompareEndpointsStarten" version="0" task="IA2TextRange_CompareEndpoints" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="608" symbol="IA2TextRange_CompareEndpointsBeenden" version="0" task="IA2TextRange_CompareEndpoints" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="609" symbol="IA2TextRange_ExpandToEnclosingUnitStarten" version="0" task="IA2TextRange_ExpandToEnclosingUnit" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="610" symbol="IA2TextRange_ExpandToEnclosingUnitBeenden" version="0" task="IA2TextRange_ExpandToEnclosingUnit" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="611" symbol="IA2TextRange_GetAttributeValueStarten" version="0" task="IA2TextRange_GetAttributeValue" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="612" symbol="IA2TextRange_GetAttributeValueBeenden" version="0" task="IA2TextRange_GetAttributeValue" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="613" symbol="IA2TextRange_GetEnclosingElementStarten" version="0" task="IA2TextRange_GetEnclosingElement" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="614" symbol="IA2TextRange_GetEnclosingElementBeenden" version="0" task="IA2TextRange_GetEnclosingElement" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="615" symbol="IA2TextRange_GetTextStarten" version="0" task="IA2TextRange_GetText" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="616" symbol="IA2TextRange_GetTextBeenden" version="0" task="IA2TextRange_GetText" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="617" symbol="IA2TextRange_MoveStarten" version="0" task="IA2TextRange_Move" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="618" symbol="IA2TextRange_MoveBeenden" version="0" task="IA2TextRange_Move" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="619" symbol="IA2TextRange_MoveEndpointByUnitStarten" version="0" task="IA2TextRange_MoveEndpointByUnit" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="620" symbol="IA2TextRange_MoveEndpointByUnitBeenden" version="0" task="IA2TextRange_MoveEndpointByUnit" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="621" symbol="IA2TextRange_MoveEndpointByRangeStarten" version="0" task="IA2TextRange_MoveEndpointByRange" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="622" symbol="IA2TextRange_MoveEndpointByRangeBeenden" version="0" task="IA2TextRange_MoveEndpointByRange" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="623" symbol="IA2TextRange_GetChildrenStarten" version="0" task="IA2TextRange_GetChildren" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="624" symbol="IA2TextRange_GetChildrenBeenden" version="0" task="IA2TextRange_GetChildren" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="625" symbol="IA2TextRange_FindAttributeStarten" version="0" task="IA2TextRange_FindAttribute" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="626" symbol="IA2TextRange_FindAttributeBeenden" version="0" task="IA2TextRange_FindAttribute" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="627" symbol="IA2TextRange_FindTextStarten" version="0" task="IA2TextRange_FindText" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="628" symbol="IA2TextRange_FindTextBeenden" version="0" task="IA2TextRange_FindText" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="629" symbol="IA2TextRange_GetBoundingRectanglesStarten" version="0" task="IA2TextRange_GetBoundingRectangles" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="630" symbol="IA2TextRange_GetBoundingRectanglesBeenden" version="0" task="IA2TextRange_GetBoundingRectangles" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="631" symbol="IA2TextRange_SelectStarten" version="0" task="IA2TextRange_Select" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="632" symbol="IA2TextRange_SelectBeenden" version="0" task="IA2TextRange_Select" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="633" symbol="IA2TextRange_AddToSelectionStarten" version="0" task="IA2TextRange_AddToSelection" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="634" symbol="IA2TextRange_AddToSelectionBeenden" version="0" task="IA2TextRange_AddToSelection" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="635" symbol="IA2TextRange_RemoveFromSelectionStarten" version="0" task="IA2TextRange_RemoveFromSelection" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="636" symbol="IA2TextRange_RemoveFromSelectionBeenden" version="0" task="IA2TextRange_RemoveFromSelection" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="637" symbol="IA2TextRange_ScrollIntoViewStarten" version="0" task="IA2TextRange_ScrollIntoView" opcode="win:Starten" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="638" symbol="IA2TextRange_ScrollIntoViewBeenden" version="0" task="IA2TextRange_ScrollIntoView" opcode="win:Beenden" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="701" symbol="ClientConnectionTimeout" version="0" task="ClientConnectionTimeout" level="win:Informational" keywords="UiaConnectionTimeout PerfInstrumentation" template="ClientConnectionTimeoutArgs"/>
+     <event value="702" symbol="EventOverflow" version="0" task="EventOverflow" level="win:Informational" keywords="UiaEventOverflow PerfInstrumentation" template="EventOverflowArgs"/>
+    </events>
+    <templates>
+     <template tid="Error_ProviderErrorsArgs">
+      <data name="Method" inType="win:UnicodeString"/>
+      <data name="Hresult" inType="win:HexInt32"/>
+      <data name="Details" inType="win:UnicodeString"/>
+      <data name="SourceHwnd" inType="win:UnicodeString"/>
+      <data name="Provider" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Error_OtherErrorsArgs">
+      <data name="Method" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Details" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Error_ClientApiErrorsArgs">
+      <data name="Method" inType="win:UnicodeString"/>
+      <data name="Parameter" inType="win:UnicodeString"/>
+      <data name="Details" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Error_ProcessErrorsArgs">
+      <data name="Method" inType="win:UnicodeString"/>
+      <data name="Win32Error" inType="win:UInt32"/>
+      <data name="HRESULT" inType="win:HexInt32"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="Details" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ClientConnection_CallWithReturnStartenArgs">
+      <data name="MethodName" inType="win:UnicodeString"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ObjectReference" inType="win:UInt32"/>
+      <data name="Duration" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt32"/>
+     </template>
+     <template tid="HandleWinEventStartenArgs">
+      <data name="Method" inType="win:UnicodeString"/>
+      <data name="HWND" inType="win:HexInt32"/>
+      <data name="WindowClassName" inType="win:UnicodeString"/>
+      <data name="EventId" inType="win:HexInt32"/>
+      <data name="ObjectId" inType="win:HexInt32"/>
+      <data name="ChildId" inType="win:UInt32"/>
+     </template>
+     <template tid="CoalesceWinEventArgs">
+      <data name="Method" inType="win:UnicodeString"/>
+      <data name="HWND" inType="win:HexInt32"/>
+      <data name="WindowClassName" inType="win:UnicodeString"/>
+      <data name="EventId" inType="win:HexInt32"/>
+      <data name="CoalescedEvents" inType="win:UInt32"/>
+     </template>
+     <template tid="UiaProviderCalloutStartenArgs">
+      <data name="MethodName" inType="win:UnicodeString"/>
+      <data name="Parameter1" inType="win:UInt32"/>
+      <data name="Parameter2" inType="win:UInt32"/>
+     </template>
+     <template tid="MsaaProviderCalloutStartenArgs">
+      <data name="MethodName" inType="win:UnicodeString"/>
+      <data name="HWND" inType="win:HexInt32"/>
+     </template>
+     <template tid="ClientConnection_DispatchToProviderStartenArgs">
+      <data name="IsChannelConnection" inType="win:Boolean"/>
+      <data name="InstanceId" inType="win:UInt32"/>
+     </template>
+     <template tid="ProcessIncomingRequestStartenArgs">
+      <data name="MethodName" inType="win:UnicodeString"/>
+      <data name="ObjectReference" inType="win:UInt32"/>
+      <data name="InstanceId" inType="win:UInt32"/>
+     </template>
+     <template tid="ProcessIncomingRequest_ContextChangeStartenArgs">
+      <data name="InstanceId" inType="win:UInt32"/>
+     </template>
+     <template tid="ReleaseCollection_ReleaseObjectsArgs">
+      <data name="ObjectCount" inType="win:UInt32"/>
+      <data name="IsCombinedWithOtherMethod" inType="win:Boolean"/>
+     </template>
+     <template tid="ClientConnection_StateChangeArgs">
+      <data name="NewState" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ClientConnectionTimeoutArgs">
+      <data name="ProcessName" inType="win:UnicodeString"/>
+      <data name="HWND" inType="win:HexInt32"/>
+      <data name="WindowClassName" inType="win:UnicodeString"/>
+      <data name="RequestedMethod" inType="win:UnicodeString"/>
+      <data name="RequestedTimeout" inType="win:UInt32"/>
+     </template>
+     <template tid="EventOverflowArgs">
+      <data name="ProcessName" inType="win:UnicodeString"/>
+      <data name="HWND" inType="win:HexInt32"/>
+      <data name="WindowClassName" inType="win:UnicodeString"/>
+      <data name="TotalEvents" inType="win:UInt32"/>
+      <data name="EventId" inType="win:HexInt32"/>
+      <data name="EventCount" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_UiaConnectionTimeout" value="UiaConnectionTimeout"/>
+    <string id="keyword_UiaEventOverflow" value="UiaEventOverflow"/>
+    <string id="keyword_PerfInstrumentation" value="PerfInstrumentation"/>
+    <string id="task_Error_ProviderErrors" value="Error_ProviderErrors"/>
+    <string id="task_Error_IAccessibleErrors" value="Error_IAccessibleErrors"/>
+    <string id="task_Error_OtherErrors" value="Error_OtherErrors"/>
+    <string id="task_Error_ClientApiErrors" value="Error_ClientApiErrors"/>
+    <string id="task_Error_ProcessErrors" value="Error_ProcessErrors"/>
+    <string id="task_UIAutomationCoreAPI_UiaClientsAreListening" value="UIAutomationCoreAPI_UiaClientsAreListening"/>
+    <string id="task_UIAutomationCoreAPI_UiaDisconnectAllProviders" value="UIAutomationCoreAPI_UiaDisconnectAllProviders"/>
+    <string id="task_UIAutomationCoreAPI_UiaDisconnectProvider" value="UIAutomationCoreAPI_UiaDisconnectProvider"/>
+    <string id="task_UIAutomationCoreAPI_UiaGetReservedMixedAttributeValue" value="UIAutomationCoreAPI_UiaGetReservedMixedAttributeValue"/>
+    <string id="task_UIAutomationCoreAPI_UiaGetReservedNotSupportedValue" value="UIAutomationCoreAPI_UiaGetReservedNotSupportedValue"/>
+    <string id="task_UIAutomationCoreAPI_UiaHostProviderFromHwnd" value="UIAutomationCoreAPI_UiaHostProviderFromHwnd"/>
+    <string id="task_UIAutomationCoreAPI_UiaIAccessibleFromProvider" value="UIAutomationCoreAPI_UiaIAccessibleFromProvider"/>
+    <string id="task_UIAutomationCoreAPI_UiaProviderForNonClient" value="UIAutomationCoreAPI_UiaProviderForNonClient"/>
+    <string id="task_UIAutomationCoreAPI_UiaProviderFromIAccessible" value="UIAutomationCoreAPI_UiaProviderFromIAccessible"/>
+    <string id="task_UIAutomationCoreAPI_UiaRaiseEvent" value="UIAutomationCoreAPI_UiaRaiseEvent"/>
+    <string id="task_UIAutomationCoreAPI_UiaReturnRawElementProvider" value="UIAutomationCoreAPI_UiaReturnRawElementProvider"/>
+    <string id="task_UIAutomationProviderApi_UiaReturnCrossMachineConnectionInfo" value="UIAutomationProviderApi_UiaReturnCrossMachineConnectionInfo"/>
+    <string id="task_UIAutomationCoreAPI_UiaRaiseStructuredMarkupEvent" value="UIAutomationCoreAPI_UiaRaiseStructuredMarkupEvent"/>
+    <string id="task_CUIAutomation_AddEventHandler" value="CUIAutomation_AddEventHandler"/>
+    <string id="task_CUIAutomation_CompareElements" value="CUIAutomation_CompareElements"/>
+    <string id="task_CUIAutomation_CompareRuntimeIds" value="CUIAutomation_CompareRuntimeIds"/>
+    <string id="task_CUIAutomation_CreateCondition" value="CUIAutomation_CreateCondition"/>
+    <string id="task_CUIAutomation_CreateCacheRequest" value="CUIAutomation_CreateCacheRequest"/>
+    <string id="task_CUIAutomation_CreateProxyFactoryEntry" value="CUIAutomation_CreateProxyFactoryEntry"/>
+    <string id="task_CUIAutomation_CreateTreeWalker" value="CUIAutomation_CreateTreeWalker"/>
+    <string id="task_CUIAutomation_ElementFromHandle" value="CUIAutomation_ElementFromHandle"/>
+    <string id="task_CUIAutomation_ElementFromHandleBuildCache" value="CUIAutomation_ElementFromHandleBuildCache"/>
+    <string id="task_CUIAutomation_ElementFromIAccessible" value="CUIAutomation_ElementFromIAccessible"/>
+    <string id="task_CUIAutomation_ElementFromIAccessibleBuildCache" value="CUIAutomation_ElementFromIAccessibleBuildCache"/>
+    <string id="task_CUIAutomation_ElementFromPoint" value="CUIAutomation_ElementFromPoint"/>
+    <string id="task_CUIAutomation_ElementFromPointBuildCache" value="CUIAutomation_ElementFromPointBuildCache"/>
+    <string id="task_CUIAutomation_GetFocusedElement" value="CUIAutomation_GetFocusedElement"/>
+    <string id="task_CUIAutomation_GetFocusedElementBuildCache" value="CUIAutomation_GetFocusedElementBuildCache"/>
+    <string id="task_CUIAutomation_GetPatternProgrammaticName" value="CUIAutomation_GetPatternProgrammaticName"/>
+    <string id="task_CUIAutomation_GetPropertyProgrammaticName" value="CUIAutomation_GetPropertyProgrammaticName"/>
+    <string id="task_CUIAutomation_GetRootElement" value="CUIAutomation_GetRootElement"/>
+    <string id="task_CUIAutomation_GetRootElementBuildCache" value="CUIAutomation_GetRootElementBuildCache"/>
+    <string id="task_CUIAutomation_PollForPotentialSupportedPatterns" value="CUIAutomation_PollForPotentialSupportedPatterns"/>
+    <string id="task_CUIAutomation_PollForPotentialSupportedProperties" value="CUIAutomation_PollForPotentialSupportedProperties"/>
+    <string id="task_CUIAutomation_RemoveEventHandler" value="CUIAutomation_RemoveEventHandler"/>
+    <string id="task_CUIAutomation_CreateEventHandlerGroup" value="CUIAutomation_CreateEventHandlerGroup"/>
+    <string id="task_CUIAutomation_AddEventHandlerGroup" value="CUIAutomation_AddEventHandlerGroup"/>
+    <string id="task_CUIAutomation_RemoveEventHandlerGroup" value="CUIAutomation_RemoveEventHandlerGroup"/>
+    <string id="task_CUIAutomation_AddStructuredMarkupEventHandler" value="CUIAutomation_AddStructuredMarkupEventHandler"/>
+    <string id="task_CUIAutomation_RemoveStructuredMarkupEventHandler" value="CUIAutomation_RemoveStructuredMarkupEventHandler"/>
+    <string id="task_CAutomationElement_BuildUpdatedCache" value="CAutomationElement_BuildUpdatedCache"/>
+    <string id="task_CAutomationElement_FindAll" value="CAutomationElement_FindAll"/>
+    <string id="task_CAutomationElement_FindAllBuildCache" value="CAutomationElement_FindAllBuildCache"/>
+    <string id="task_CAutomationElement_FindFirst" value="CAutomationElement_FindFirst"/>
+    <string id="task_CAutomationElement_FindFirstBuildCache" value="CAutomationElement_FindFirstBuildCache"/>
+    <string id="task_CAutomationElement_GetCachedChildren" value="CAutomationElement_GetCachedChildren"/>
+    <string id="task_CAutomationElement_GetCachedParent" value="CAutomationElement_GetCachedParent"/>
+    <string id="task_CAutomationElement_GetCachedPattern" value="CAutomationElement_GetCachedPattern"/>
+    <string id="task_CAutomationElement_GetCachedPatternAs" value="CAutomationElement_GetCachedPatternAs"/>
+    <string id="task_CAutomationElement_GetCachedPropertyValue" value="CAutomationElement_GetCachedPropertyValue"/>
+    <string id="task_CAutomationElement_GetCachedPropertyValueEx" value="CAutomationElement_GetCachedPropertyValueEx"/>
+    <string id="task_CAutomationElement_GetClickablePoint" value="CAutomationElement_GetClickablePoint"/>
+    <string id="task_CAutomationElement_GetCurrentPattern" value="CAutomationElement_GetCurrentPattern"/>
+    <string id="task_CAutomationElement_GetCurrentPatternAs" value="CAutomationElement_GetCurrentPatternAs"/>
+    <string id="task_CAutomationElement_GetCurrentPropertyValue" value="CAutomationElement_GetCurrentPropertyValue"/>
+    <string id="task_CAutomationElement_GetCurrentPropertyValueEx" value="CAutomationElement_GetCurrentPropertyValueEx"/>
+    <string id="task_CAutomationElement_GetRuntimeId" value="CAutomationElement_GetRuntimeId"/>
+    <string id="task_CAutomationElement_SetFocus" value="CAutomationElement_SetFocus"/>
+    <string id="task_CAutomationElement_ShowContextMenu" value="CAutomationElement_ShowContextMenu"/>
+    <string id="task_CAutomationElement_FindAllWithOptions" value="CAutomationElement_FindAllWithOptions"/>
+    <string id="task_CAutomationElement_FindAllWithOptionsBuildCache" value="CAutomationElement_FindAllWithOptionsBuildCache"/>
+    <string id="task_CAutomationElement_FindFirstWithOptions" value="CAutomationElement_FindFirstWithOptions"/>
+    <string id="task_CAutomationElement_FindFirstWithOptionsBuildCache" value="CAutomationElement_FindFirstWithOptionsBuildCache"/>
+    <string id="task_CTextRange_Clone" value="CTextRange_Clone"/>
+    <string id="task_CTextRange_Compare" value="CTextRange_Compare"/>
+    <string id="task_CTextRange_CompareEndpoints" value="CTextRange_CompareEndpoints"/>
+    <string id="task_CTextRange_ExpandToEnclosingUnit" value="CTextRange_ExpandToEnclosingUnit"/>
+    <string id="task_CTextRange_GetAttributeValue" value="CTextRange_GetAttributeValue"/>
+    <string id="task_CTextRange_GetEnclosingElement" value="CTextRange_GetEnclosingElement"/>
+    <string id="task_CTextRange_GetText" value="CTextRange_GetText"/>
+    <string id="task_CTextRange_Move" value="CTextRange_Move"/>
+    <string id="task_CTextRange_MoveEndpointByUnit" value="CTextRange_MoveEndpointByUnit"/>
+    <string id="task_CTextRange_MoveEndpointByRange" value="CTextRange_MoveEndpointByRange"/>
+    <string id="task_CTextRange_GetChildren" value="CTextRange_GetChildren"/>
+    <string id="task_CTreeWalker_Navigate" value="CTreeWalker_Navigate"/>
+    <string id="task_RichEditProxy_GetText" value="RichEditProxy_GetText"/>
+    <string id="task_RichEditProxy_GetVisibleRange" value="RichEditProxy_GetVisibleRange"/>
+    <string id="task_EditProxy_NextWord" value="EditProxy_NextWord"/>
+    <string id="task_ClientConnection_CallWithReturn" value="ClientConnection_CallWithReturn"/>
+    <string id="task_CSelectionPattern_GetCurrentSelection" value="CSelectionPattern_GetCurrentSelection"/>
+    <string id="task_HandleWinEvent" value="HandleWinEvent"/>
+    <string id="task_CoalesceWinEvent" value="CoalesceWinEvent"/>
+    <string id="task_UiaProviderCallout" value="UiaProviderCallout"/>
+    <string id="task_MsaaProviderCallout" value="MsaaProviderCallout"/>
+    <string id="task_ClientConnection_DispatchToProvider" value="ClientConnection_DispatchToProvider"/>
+    <string id="task_ProcessIncomingRequest" value="ProcessIncomingRequest"/>
+    <string id="task_ProcessIncomingRequest_ContextChange" value="ProcessIncomingRequest_ContextChange"/>
+    <string id="task_ServerConnection_OnData_ForceFlush" value="ServerConnection_OnData_ForceFlush"/>
+    <string id="task_ReleaseCollection_ObjectNotFound" value="ReleaseCollection_ObjectNotFound"/>
+    <string id="task_ReleaseCollection_ReleaseObjects" value="ReleaseCollection_ReleaseObjects"/>
+    <string id="task_ReleaseCollection_IncompatibleContext" value="ReleaseCollection_IncompatibleContext"/>
+    <string id="task_ClientConnection_StateChange" value="ClientConnection_StateChange"/>
+    <string id="task_IsProcessFrozenCheck" value="IsProcessFrozenCheck"/>
+    <string id="task_IA2TextRange_Clone" value="IA2TextRange_Clone"/>
+    <string id="task_IA2TextRange_Compare" value="IA2TextRange_Compare"/>
+    <string id="task_IA2TextRange_CompareEndpoints" value="IA2TextRange_CompareEndpoints"/>
+    <string id="task_IA2TextRange_ExpandToEnclosingUnit" value="IA2TextRange_ExpandToEnclosingUnit"/>
+    <string id="task_IA2TextRange_GetAttributeValue" value="IA2TextRange_GetAttributeValue"/>
+    <string id="task_IA2TextRange_GetEnclosingElement" value="IA2TextRange_GetEnclosingElement"/>
+    <string id="task_IA2TextRange_GetText" value="IA2TextRange_GetText"/>
+    <string id="task_IA2TextRange_Move" value="IA2TextRange_Move"/>
+    <string id="task_IA2TextRange_MoveEndpointByUnit" value="IA2TextRange_MoveEndpointByUnit"/>
+    <string id="task_IA2TextRange_MoveEndpointByRange" value="IA2TextRange_MoveEndpointByRange"/>
+    <string id="task_IA2TextRange_GetChildren" value="IA2TextRange_GetChildren"/>
+    <string id="task_IA2TextRange_FindAttribute" value="IA2TextRange_FindAttribute"/>
+    <string id="task_IA2TextRange_FindText" value="IA2TextRange_FindText"/>
+    <string id="task_IA2TextRange_GetBoundingRectangles" value="IA2TextRange_GetBoundingRectangles"/>
+    <string id="task_IA2TextRange_Select" value="IA2TextRange_Select"/>
+    <string id="task_IA2TextRange_AddToSelection" value="IA2TextRange_AddToSelection"/>
+    <string id="task_IA2TextRange_RemoveFromSelection" value="IA2TextRange_RemoveFromSelection"/>
+    <string id="task_IA2TextRange_ScrollIntoView" value="IA2TextRange_ScrollIntoView"/>
+    <string id="task_ClientConnectionTimeout" value="ClientConnectionTimeout"/>
+    <string id="task_EventOverflow" value="EventOverflow"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

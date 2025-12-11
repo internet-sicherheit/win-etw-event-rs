@@ -1,0 +1,128 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-WindowsPhone-UfxSynopsys" guid="{49b12c7c-4bd5-4f93-bb75-30fce739600b}" resourceFileName="Microsoft-WindowsPhone-UfxSynopsys" messageFileName="Microsoft-WindowsPhone-UfxSynopsys" symbol="MicrosoftWindowsPhoneUfxSynopsys" source="Xml" >
+    <keywords>
+     <keyword name="Error" message="$(string.keyword_Error)" mask="0x1"/>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x2"/>
+     <keyword name="Debug" message="$(string.keyword_Debug)" mask="0x4"/>
+     <keyword name="Registers" message="$(string.keyword_Registers)" mask="0x8"/>
+     <keyword name="Endpoint" message="$(string.keyword_Endpoint)" mask="0x10"/>
+     <keyword name="Diagnostic" message="$(string.keyword_Diagnostic)" mask="0x80"/>
+    </keywords>
+    <tasks>
+     <task name="FailedNtStatus" message="$(string.task_FailedNtStatus)" value="3"/>
+     <task name="RegisterRead" message="$(string.task_RegisterRead)" value="4"/>
+     <task name="RegisterWrite" message="$(string.task_RegisterWrite)" value="5"/>
+     <task name="Transfer" message="$(string.task_Transfer)" value="6"/>
+     <task name="EndpointInformation" message="$(string.task_EndpointInformation)" value="8"/>
+     <task name="ChargerDetectionError" message="$(string.task_ChargerDetectionError)" value="9"/>
+     <task name="DeterminePortTypeFailed" message="$(string.task_DeterminePortTypeFailed)" value="10"/>
+     <task name="RegisterInformation" message="$(string.task_RegisterInformation)" value="11"/>
+     <task name="ConnectedStandbyInformation" message="$(string.task_ConnectedStandbyInformation)" value="12"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="FailedNtStatus" version="0" task="FailedNtStatus" level="win:Error" keywords="Error" template="FailedNtStatusArgs"/>
+     <event value="101" symbol="RegisterRead" version="0" task="RegisterRead" level="win:Verbose" keywords="Registers" template="RegisterReadArgs"/>
+     <event value="102" symbol="RegisterWrite" version="0" task="RegisterWrite" level="win:Verbose" keywords="Registers" template="RegisterReadArgs"/>
+     <event value="200" symbol="Transfer" version="0" task="Transfer" level="win:Informational" keywords="Endpoint" template="TransferArgs"/>
+     <event value="201" symbol="Transfer201" version="0" task="Transfer" level="win:Verbose" keywords="Endpoint" template="Transfer201Args"/>
+     <event value="202" symbol="Transfer202" version="0" task="Transfer" level="win:Verbose" keywords="Endpoint" template="Transfer202Args"/>
+     <event value="301" symbol="EndpointInformation" version="0" task="EndpointInformation" level="win:Informational" keywords="Diagnostic" template="EndpointInformationArgs"/>
+     <event value="302" symbol="ChargerDetectionError" version="0" task="ChargerDetectionError" level="win:Error" keywords="Diagnostic" template="ChargerDetectionErrorArgs"/>
+     <event value="303" symbol="DeterminePortTypeFailed" version="0" task="DeterminePortTypeFailed" level="win:Error" keywords="Diagnostic" template="DeterminePortTypeFailedArgs"/>
+     <event value="304" symbol="RegisterInformation" version="0" task="RegisterInformation" level="win:Informational" keywords="Diagnostic" template="RegisterInformationArgs"/>
+     <event value="305" symbol="ConnectedStandbyInformation" version="0" task="ConnectedStandbyInformation" level="win:Informational" keywords="Diagnostic" template="ConnectedStandbyInformationArgs"/>
+    </events>
+    <templates>
+     <template tid="FailedNtStatusArgs">
+      <data name="File" inType="win:AnsiString"/>
+      <data name="Line" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="RegisterReadArgs">
+      <data name="Offset" inType="win:UInt32"/>
+      <data name="Value" inType="win:UInt32"/>
+     </template>
+     <template tid="TransferArgs">
+      <data name="Stage" inType="win:AnsiString"/>
+      <data name="Endpoint" inType="win:Pointer"/>
+      <data name="PhysicalEndpoint" inType="win:UInt32"/>
+      <data name="Request" inType="win:Pointer"/>
+      <data name="Transaction" inType="win:Pointer"/>
+      <data name="BytesRequested" inType="win:UInt32"/>
+      <data name="BytesProgrammed" inType="win:UInt32"/>
+      <data name="BytesTransferred" inType="win:UInt32"/>
+      <data name="SgProgrammed" inType="win:UInt32"/>
+      <data name="SgLength" inType="win:UInt32"/>
+      <data name="TrbProgrammed" inType="win:UInt32"/>
+      <data name="TrbLength" inType="win:UInt32"/>
+     </template>
+     <template tid="Transfer201Args">
+      <data name="Endpoint" inType="win:Pointer"/>
+      <data name="PhysicalEndpoint" inType="win:UInt32"/>
+      <data name="Index" inType="win:UInt32"/>
+      <data name="Word1" inType="win:UInt32"/>
+      <data name="Word2" inType="win:UInt32"/>
+      <data name="Word3" inType="win:UInt32"/>
+      <data name="Word4" inType="win:UInt32"/>
+     </template>
+     <template tid="Transfer202Args">
+      <data name="Name" inType="win:AnsiString"/>
+      <data name="Endpoint" inType="win:Pointer"/>
+      <data name="PhysicalEndpoint" inType="win:UInt32"/>
+      <data name="Command" inType="win:UInt32"/>
+      <data name="Parameter0" inType="win:UInt32"/>
+      <data name="Parameter1" inType="win:UInt32"/>
+      <data name="Parameter2" inType="win:UInt32"/>
+     </template>
+     <template tid="EndpointInformationArgs">
+      <data name="fSynopsysEndpoint" inType="win:AnsiString"/>
+      <data name="fSynopsysEndpointDescriptor" inType="win:UInt8"/>
+     </template>
+     <template tid="ChargerDetectionErrorArgs">
+      <data name="fChargerDetectionErrorInfo" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DeterminePortTypeFailedArgs">
+      <data name="fDeterminePortTypeFailed" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RegisterInformationArgs">
+      <data name="Configuration" inType="win:UInt32"/>
+      <data name="Control" inType="win:UInt32"/>
+      <data name="EnabledEvents" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="ConnectedStandbyInformationArgs">
+      <data name="ConnectedStandby" inType="win:Boolean"/>
+      <data name="IdleResidency" inType="win:Boolean"/>
+      <data name="DevicePowerState" inType="win:UInt32"/>
+      <data name="Connected" inType="win:Boolean"/>
+      <data name="UsbPortType" inType="win:UInt32"/>
+      <data name="UsbDeviceState" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Error" value="Error"/>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="keyword_Debug" value="Debug"/>
+    <string id="keyword_Registers" value="Registers"/>
+    <string id="keyword_Endpoint" value="Endpoint"/>
+    <string id="keyword_Diagnostic" value="Diagnostic"/>
+    <string id="task_FailedNtStatus" value="FailedNtStatus"/>
+    <string id="task_RegisterRead" value="RegisterRead"/>
+    <string id="task_RegisterWrite" value="RegisterWrite"/>
+    <string id="task_Transfer" value="Transfer"/>
+    <string id="task_EndpointInformation" value="EndpointInformation"/>
+    <string id="task_ChargerDetectionError" value="ChargerDetectionError"/>
+    <string id="task_DeterminePortTypeFailed" value="DeterminePortTypeFailed"/>
+    <string id="task_RegisterInformation" value="RegisterInformation"/>
+    <string id="task_ConnectedStandbyInformation" value="ConnectedStandbyInformation"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

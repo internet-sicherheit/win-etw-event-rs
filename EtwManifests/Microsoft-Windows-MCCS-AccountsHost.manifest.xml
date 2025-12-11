@@ -1,0 +1,236 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-MCCS-AccountsHost" guid="{04eccf8e-8490-4ad1-8ed5-0ae7750e69e6}" resourceFileName="Microsoft-Windows-MCCS-AccountsHost" messageFileName="Microsoft-Windows-MCCS-AccountsHost" symbol="MicrosoftWindowsMCCSAccountsHost" source="Xml" >
+    <keywords>
+     <keyword name="Error" message="$(string.keyword_Error)" mask="0x1"/>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x2"/>
+     <keyword name="Debug" message="$(string.keyword_Debug)" mask="0x4"/>
+     <keyword name="SNAS" message="$(string.keyword_SNAS)" mask="0x8"/>
+     <keyword name="Contacts" message="$(string.keyword_Contacts)" mask="0x10"/>
+     <keyword name="Photos" message="$(string.keyword_Photos)" mask="0x20"/>
+     <keyword name="Feeds" message="$(string.keyword_Feeds)" mask="0x40"/>
+     <keyword name="Battery" message="$(string.keyword_Battery)" mask="0x80"/>
+     <keyword name="SNService" message="$(string.keyword_SNService)" mask="0x100"/>
+     <keyword name="JobDispatcher" message="$(string.keyword_JobDispatcher)" mask="0x200"/>
+     <keyword name="RequestManager" message="$(string.keyword_RequestManager)" mask="0x400"/>
+     <keyword name="Unused" message="$(string.keyword_Unused)" mask="0x800"/>
+     <keyword name="Room" message="$(string.keyword_Room)" mask="0x1000"/>
+     <keyword name="Extensibility" message="$(string.keyword_Extensibility)" mask="0x2000"/>
+     <keyword name="Warning" message="$(string.keyword_Warning)" mask="0x4000000000"/>
+     <keyword name="StateTransition" message="$(string.keyword_StateTransition)" mask="0x8000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="Comms_APHost_InitProviders" message="$(string.task_Comms_APHost_InitProviders)" value="4"/>
+     <task name="Comms_APHost_UnInitProviders" message="$(string.task_Comms_APHost_UnInitProviders)" value="5"/>
+     <task name="Comms_APHost_OnProvidersLoaded" message="$(string.task_Comms_APHost_OnProvidersLoaded)" value="6"/>
+     <task name="Comms_APHost_OnServiceStarting" message="$(string.task_Comms_APHost_OnServiceStarting)" value="7"/>
+     <task name="Comms_APHost_OnServiceStarted" message="$(string.task_Comms_APHost_OnServiceStarted)" value="8"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="task_0" version="0" task="task_0" level="win:Error" keywords="Error" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0Args"/>
+     <event value="2000" symbol="task_02000" version="0" task="task_0" level="win:Error" keywords="Error SNAS" template="task_02000Args"/>
+     <event value="2004" symbol="task_02004" version="0" task="task_0" level="win:Informational" keywords="SNAS StateTransition"/>
+     <event value="2005" symbol="task_02005" version="0" task="task_0" level="win:Informational" keywords="SNAS StateTransition"/>
+     <event value="2051" symbol="task_02051" version="0" task="task_0" level="win:Error" keywords="Error SNAS" template="task_02051Args"/>
+     <event value="2052" symbol="task_02052" version="0" task="task_0" level="win:Error" keywords="Error SNAS" template="task_02051Args"/>
+     <event value="2053" symbol="task_02053" version="0" task="task_0" level="win:Error" keywords="Error SNAS" template="task_02051Args"/>
+     <event value="2061" symbol="task_02061" version="0" task="task_0" level="win:Informational" keywords="SNAS" template="task_02000Args"/>
+     <event value="4010" symbol="task_04010" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04010Args"/>
+     <event value="4011" symbol="task_04011" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04010Args"/>
+     <event value="4012" symbol="task_04012" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04010Args"/>
+     <event value="4013" symbol="task_04013" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4014" symbol="task_04014" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04014Args"/>
+     <event value="4015" symbol="task_04015" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04014Args"/>
+     <event value="4016" symbol="task_04016" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04014Args"/>
+     <event value="4017" symbol="task_04017" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04017Args"/>
+     <event value="4018" symbol="task_04018" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04017Args"/>
+     <event value="4019" symbol="task_04019" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04019Args"/>
+     <event value="4020" symbol="task_04020" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4021" symbol="task_04021" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4022" symbol="task_04022" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4023" symbol="task_04023" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04010Args"/>
+     <event value="4024" symbol="task_04024" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04010Args"/>
+     <event value="4025" symbol="task_04025" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04025Args"/>
+     <event value="4026" symbol="task_04026" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04026Args"/>
+     <event value="4027" symbol="task_04027" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04017Args"/>
+     <event value="4028" symbol="task_04028" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04017Args"/>
+     <event value="4029" symbol="task_04029" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04017Args"/>
+     <event value="4030" symbol="task_04030" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04017Args"/>
+     <event value="4031" symbol="task_04031" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04017Args"/>
+     <event value="4032" symbol="task_04032" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04017Args"/>
+     <event value="4033" symbol="task_04033" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04017Args"/>
+     <event value="4034" symbol="task_04034" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04017Args"/>
+     <event value="4035" symbol="task_04035" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4036" symbol="task_04036" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04017Args"/>
+     <event value="4037" symbol="task_04037" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4038" symbol="task_04038" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4039" symbol="task_04039" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4040" symbol="task_04040" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4041" symbol="task_04041" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4042" symbol="task_04042" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4043" symbol="task_04043" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4044" symbol="task_04044" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4045" symbol="task_04045" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4046" symbol="task_04046" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4047" symbol="task_04047" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04047Args"/>
+     <event value="4048" symbol="task_04048" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04017Args"/>
+     <event value="4049" symbol="task_04049" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4050" symbol="task_04050" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4051" symbol="task_04051" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4052" symbol="task_04052" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04052Args"/>
+     <event value="4053" symbol="task_04053" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04019Args"/>
+     <event value="4054" symbol="task_04054" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04019Args"/>
+     <event value="4055" symbol="task_04055" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04055Args"/>
+     <event value="4056" symbol="task_04056" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04010Args"/>
+     <event value="4057" symbol="task_04057" version="0" task="task_0" level="win:Verbose" keywords="Debug" template="task_04057Args"/>
+     <event value="4058" symbol="task_04058" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4059" symbol="task_04059" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4060" symbol="task_04060" version="0" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="5000" symbol="task_05000" version="0" task="task_0" level="win:Informational" keywords="SNService StateTransition"/>
+     <event value="5001" symbol="task_05001" version="0" task="task_0" level="win:Error" keywords="Error SNService" template="task_04010Args"/>
+     <event value="5003" symbol="task_05003" version="0" task="task_0" level="win:Error" keywords="Error SNService" template="task_0Args"/>
+     <event value="5004" symbol="task_05004" version="0" task="task_0" level="win:Error" keywords="Error SNService" template="task_04010Args"/>
+     <event value="5005" symbol="task_05005" version="0" task="task_0" level="win:Informational" keywords="SNService StateTransition"/>
+     <event value="5006" symbol="task_05006" version="0" task="task_0" level="win:Informational" keywords="SNService StateTransition" template="task_04010Args"/>
+     <event value="7001" symbol="task_07001" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher" template="task_04017Args"/>
+     <event value="7002" symbol="task_07002" version="0" task="task_0" level="win:Warning" keywords="JobDispatcher Warning" template="task_02000Args"/>
+     <event value="7003" symbol="task_07003" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher" template="task_02000Args"/>
+     <event value="7004" symbol="task_07004" version="0" task="task_0" level="win:Warning" keywords="JobDispatcher Warning"/>
+     <event value="7005" symbol="task_07005" version="0" task="task_0" level="win:Warning" keywords="JobDispatcher Warning" template="task_04017Args"/>
+     <event value="7006" symbol="task_07006" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher" template="task_02000Args"/>
+     <event value="7007" symbol="task_07007" version="0" task="task_0" level="win:Error" keywords="Error JobDispatcher" template="task_07007Args"/>
+     <event value="7008" symbol="task_07008" version="0" task="task_0" level="win:Error" keywords="Error JobDispatcher" template="task_02000Args"/>
+     <event value="7009" symbol="task_07009" version="0" task="task_0" level="win:Verbose" keywords="JobDispatcher" template="task_04057Args"/>
+     <event value="7010" symbol="task_07010" version="0" task="task_0" level="win:Error" keywords="Error JobDispatcher" template="task_02051Args"/>
+     <event value="7011" symbol="task_07011" version="0" task="task_0" level="win:Error" keywords="Error JobDispatcher" template="task_02051Args"/>
+     <event value="7012" symbol="task_07012" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher" template="task_04017Args"/>
+     <event value="7013" symbol="task_07013" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher"/>
+     <event value="7014" symbol="task_07014" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher"/>
+     <event value="7015" symbol="task_07015" version="0" task="task_0" level="win:Error" keywords="Error JobDispatcher" template="task_04010Args"/>
+     <event value="7022" symbol="task_07022" version="0" task="task_0" level="win:Error" keywords="Error JobDispatcher" template="task_0Args"/>
+     <event value="7023" symbol="task_07023" version="0" task="task_0" level="win:Error" keywords="Error JobDispatcher" template="task_04010Args"/>
+     <event value="7024" symbol="task_07024" version="0" task="task_0" level="win:Error" keywords="Error JobDispatcher" template="task_02051Args"/>
+     <event value="7025" symbol="task_07025" version="0" task="task_0" level="win:Warning" keywords="JobDispatcher Warning" template="task_07025Args"/>
+     <event value="7026" symbol="task_07026" version="0" task="task_0" level="win:Error" keywords="Error JobDispatcher" template="task_04017Args"/>
+     <event value="7027" symbol="task_07027" version="0" task="task_0" level="win:Error" keywords="Error JobDispatcher" template="task_04017Args"/>
+     <event value="7028" symbol="task_07028" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher" template="task_07025Args"/>
+     <event value="7029" symbol="task_07029" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher" template="task_02000Args"/>
+     <event value="7030" symbol="task_07030" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher" template="task_07007Args"/>
+     <event value="7031" symbol="task_07031" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher" template="task_07031Args"/>
+     <event value="7032" symbol="task_07032" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher" template="task_07031Args"/>
+     <event value="7033" symbol="task_07033" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher" template="task_07031Args"/>
+     <event value="7034" symbol="task_07034" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher" template="task_07031Args"/>
+     <event value="7035" symbol="task_07035" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher" template="task_07031Args"/>
+     <event value="7036" symbol="task_07036" version="0" task="task_0" level="win:Informational" keywords="JobDispatcher" template="task_04017Args"/>
+     <event value="9001" symbol="Comms_APHost_InitProvidersStarten" version="0" task="Comms_APHost_InitProviders" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="9002" symbol="Comms_APHost_InitProvidersBeenden" version="0" task="Comms_APHost_InitProviders" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="9003" symbol="Comms_APHost_OnProvidersLoadedStarten" version="0" task="Comms_APHost_OnProvidersLoaded" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="9004" symbol="Comms_APHost_OnProvidersLoadedBeenden" version="0" task="Comms_APHost_OnProvidersLoaded" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="9005" symbol="Comms_APHost_UnInitProvidersStarten" version="0" task="Comms_APHost_UnInitProviders" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="9006" symbol="Comms_APHost_UnInitProvidersBeenden" version="0" task="Comms_APHost_UnInitProviders" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="9007" symbol="Comms_APHost_OnServiceStartingStarten" version="0" task="Comms_APHost_OnServiceStarting" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="9008" symbol="Comms_APHost_OnServiceStartingBeenden" version="0" task="Comms_APHost_OnServiceStarting" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="9009" symbol="Comms_APHost_OnServiceStartedStarten" version="0" task="Comms_APHost_OnServiceStarted" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="9010" symbol="Comms_APHost_OnServiceStartedBeenden" version="0" task="Comms_APHost_OnServiceStarted" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="P1_HexInt32" inType="win:Int32"/>
+      <data name="P2_String" inType="win:AnsiString"/>
+      <data name="P3_UInt32" inType="win:UInt32"/>
+     </template>
+     <template tid="task_02000Args">
+      <data name="Prop_String" inType="win:UnicodeString"/>
+      <data name="Prop_UInt32" inType="win:UInt32"/>
+     </template>
+     <template tid="task_02051Args">
+      <data name="Prop_UInt32_1" inType="win:UInt32"/>
+      <data name="Prop_UInt32_2" inType="win:UInt32"/>
+     </template>
+     <template tid="task_04010Args">
+      <data name="Prop_UInt32" inType="win:UInt32"/>
+     </template>
+     <template tid="task_04014Args">
+      <data name="Int32" inType="win:Int32"/>
+     </template>
+     <template tid="task_04017Args">
+      <data name="Prop_String" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04019Args">
+      <data name="Prop_ptr" inType="win:Pointer"/>
+     </template>
+     <template tid="task_04025Args">
+      <data name="Prop_uint" inType="win:UInt32"/>
+      <data name="Prop_hr" inType="win:Int32"/>
+     </template>
+     <template tid="task_04026Args">
+      <data name="Prop_hr" inType="win:Int32"/>
+     </template>
+     <template tid="task_04047Args">
+      <data name="Prop_string" inType="win:UnicodeString"/>
+      <data name="Prop_int" inType="win:Int32"/>
+     </template>
+     <template tid="task_04052Args">
+      <data name="Prop_ptr" inType="win:Pointer"/>
+      <data name="Prop_unit" inType="win:UInt32"/>
+     </template>
+     <template tid="task_04055Args">
+      <data name="Prop_string" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_04057Args">
+      <data name="Prop_UINT_1" inType="win:UInt32"/>
+      <data name="Prop_UINT_2" inType="win:UInt32"/>
+     </template>
+     <template tid="task_07007Args">
+      <data name="Prop_String" inType="win:UnicodeString"/>
+      <data name="Prop_UInt32_1" inType="win:UInt32"/>
+      <data name="Prop_UInt32_2" inType="win:UInt32"/>
+     </template>
+     <template tid="task_07025Args">
+      <data name="Prop_String1" inType="win:UnicodeString"/>
+      <data name="Prop_UInt32_2" inType="win:UInt32"/>
+      <data name="Prop_String3" inType="win:AnsiString"/>
+      <data name="Prop_UInt32_4" inType="win:UInt32"/>
+      <data name="Prop_UInt32_5" inType="win:UInt32"/>
+      <data name="Prop_UInt32_6" inType="win:UInt32"/>
+     </template>
+     <template tid="task_07031Args">
+      <data name="Prop_SubmissionID0" inType="win:Pointer"/>
+      <data name="Prop_SubmissionID1" inType="win:Pointer"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Error" value="Error"/>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="keyword_Debug" value="Debug"/>
+    <string id="keyword_SNAS" value="SNAS"/>
+    <string id="keyword_Contacts" value="Contacts"/>
+    <string id="keyword_Photos" value="Photos"/>
+    <string id="keyword_Feeds" value="Feeds"/>
+    <string id="keyword_Battery" value="Battery"/>
+    <string id="keyword_SNService" value="SNService"/>
+    <string id="keyword_JobDispatcher" value="JobDispatcher"/>
+    <string id="keyword_RequestManager" value="RequestManager"/>
+    <string id="keyword_Unused" value="Unused"/>
+    <string id="keyword_Room" value="Room"/>
+    <string id="keyword_Extensibility" value="Extensibility"/>
+    <string id="keyword_Warning" value="Warning"/>
+    <string id="keyword_StateTransition" value="StateTransition"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_Comms_APHost_InitProviders" value="Comms_APHost_InitProviders"/>
+    <string id="task_Comms_APHost_UnInitProviders" value="Comms_APHost_UnInitProviders"/>
+    <string id="task_Comms_APHost_OnProvidersLoaded" value="Comms_APHost_OnProvidersLoaded"/>
+    <string id="task_Comms_APHost_OnServiceStarting" value="Comms_APHost_OnServiceStarting"/>
+    <string id="task_Comms_APHost_OnServiceStarted" value="Comms_APHost_OnServiceStarted"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

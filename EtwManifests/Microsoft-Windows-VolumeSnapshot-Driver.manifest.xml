@@ -1,0 +1,298 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-VolumeSnapshot-Driver" guid="{67fe2216-727a-40cb-94b2-c02211edb34a}" resourceFileName="Microsoft-Windows-VolumeSnapshot-Driver" messageFileName="Microsoft-Windows-VolumeSnapshot-Driver" symbol="MicrosoftWindowsVolumeSnapshotDriver" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="vs:Prepare" message="$(string.task_vs:Prepare)" value="1"/>
+     <task name="vs:PreExposure" message="$(string.task_vs:PreExposure)" value="2"/>
+     <task name="vs:AdjustBitmap" message="$(string.task_vs:AdjustBitmap)" value="4"/>
+     <task name="vs:EndCommit" message="$(string.task_vs:EndCommit)" value="6"/>
+     <task name="vs:Activate" message="$(string.task_vs:Activate)" value="8"/>
+     <task name="vs:SetIgnorable" message="$(string.task_vs:SetIgnorable)" value="10"/>
+     <task name="vs:IgnorableProduct" message="$(string.task_vs:IgnorableProduct)" value="12"/>
+     <task name="vs:Dismount" message="$(string.task_vs:Dismount)" value="14"/>
+     <task name="vs:Remount" message="$(string.task_vs:Remount)" value="16"/>
+     <task name="vs:DeleteProcess" message="$(string.task_vs:DeleteProcess)" value="18"/>
+     <task name="vs:Revert" message="$(string.task_vs:Revert)" value="20"/>
+     <task name="vs:ProtectedBitmap" message="$(string.task_vs:ProtectedBitmap)" value="22"/>
+     <task name="vs:FlushHoldFs" message="$(string.task_vs:FlushHoldFs)" value="24"/>
+     <task name="vs:ActivateLoop" message="$(string.task_vs:ActivateLoop)" value="26"/>
+     <task name="vs:ValidateFiles" message="$(string.task_vs:ValidateFiles)" value="28"/>
+     <task name="vs:VolumeSafe" message="$(string.task_vs:VolumeSafe)" value="30"/>
+     <task name="vs:DiscoverSnapshots" message="$(string.task_vs:DiscoverSnapshots)" value="32"/>
+    </tasks>
+    <maps>
+     <valueMap name="PersistentDeleteReason">
+      <map value="0x0" message="$(string.map_PersistentDeleteReasonNot applicable.)"/>
+      <map value="0x1" message="$(string.map_PersistentDeleteReasonAn volume offline for cluster failover was expected, but a mount request arrived instead.  A failure occurred attempting to take the volume offline to compensate.)"/>
+      <map value="0x2" message="$(string.map_PersistentDeleteReasonError validating diff area files.)"/>
+      <map value="0x3" message="$(string.map_PersistentDeleteReasonThere were no persistent snapshots on the volume.)"/>
+      <map value="0x4" message="$(string.map_PersistentDeleteReasonError calculating the protected blocks bitmap.)"/>
+      <map value="0x5" message="$(string.map_PersistentDeleteReasonCould not allocate the protected blocks bitmap.)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="0" symbol="vs:PrepareStarten" version="0" task="vs:Prepare" opcode="win:Starten" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="1" symbol="vs:PrepareBeenden" version="0" task="vs:Prepare" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeendenArgs"/>
+     <event value="2" symbol="vs:PreExposureStarten" version="0" task="vs:PreExposure" opcode="win:Starten" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="3" symbol="vs:PreExposureBeenden" version="0" task="vs:PreExposure" opcode="win:Beenden" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="4" symbol="vs:AdjustBitmapStarten" version="0" task="vs:AdjustBitmap" opcode="win:Starten" level="win:Informational" template="vs:PrepareBeendenArgs"/>
+     <event value="5" symbol="vs:AdjustBitmapBeenden" version="0" task="vs:AdjustBitmap" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeendenArgs"/>
+     <event value="6" symbol="vs:EndCommitStarten" version="0" task="vs:EndCommit" opcode="win:Starten" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="7" symbol="vs:EndCommitBeenden" version="0" task="vs:EndCommit" opcode="win:Beenden" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="8" symbol="vs:ActivateStarten" version="0" task="vs:Activate" opcode="win:Starten" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="9" symbol="vs:ActivateBeenden" version="0" task="vs:Activate" opcode="win:Beenden" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="10" symbol="vs:SetIgnorableStarten" version="0" task="vs:SetIgnorable" opcode="win:Starten" level="win:Informational" template="vs:PrepareBeendenArgs"/>
+     <event value="11" symbol="vs:SetIgnorableBeenden" version="0" task="vs:SetIgnorable" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeendenArgs"/>
+     <event value="12" symbol="vs:IgnorableProductStarten" version="0" task="vs:IgnorableProduct" opcode="win:Starten" level="win:Informational" template="vs:PrepareBeendenArgs"/>
+     <event value="13" symbol="vs:IgnorableProductBeenden" version="0" task="vs:IgnorableProduct" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeendenArgs"/>
+     <event value="14" symbol="vs:DismountStarten" version="0" task="vs:Dismount" opcode="win:Starten" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="15" symbol="vs:DismountBeenden" version="0" task="vs:Dismount" opcode="win:Beenden" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="16" symbol="vs:RemountStarten" version="0" task="vs:Remount" opcode="win:Starten" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="17" symbol="vs:RemountBeenden" version="0" task="vs:Remount" opcode="win:Beenden" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="18" symbol="vs:DeleteProcessStarten" version="0" task="vs:DeleteProcess" opcode="win:Starten" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="19" symbol="vs:DeleteProcessBeenden" version="0" task="vs:DeleteProcess" opcode="win:Beenden" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="20" symbol="vs:RevertStarten" version="0" task="vs:Revert" opcode="win:Starten" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="21" symbol="vs:RevertBeenden" version="0" task="vs:Revert" opcode="win:Beenden" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="22" symbol="vs:ProtectedBitmapStarten" version="0" task="vs:ProtectedBitmap" opcode="win:Starten" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="23" symbol="vs:ProtectedBitmapBeenden" version="0" task="vs:ProtectedBitmap" opcode="win:Beenden" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="24" symbol="vs:FlushHoldFsStarten" version="0" task="vs:FlushHoldFs" opcode="win:Starten" level="win:Informational" template="vs:FlushHoldFsStartenArgs"/>
+     <event value="25" symbol="vs:FlushHoldFsBeenden" version="0" task="vs:FlushHoldFs" opcode="win:Beenden" level="win:Informational" template="vs:FlushHoldFsStartenArgs"/>
+     <event value="26" symbol="vs:ActivateLoopStarten" version="0" task="vs:ActivateLoop" opcode="win:Starten" level="win:Informational" template="vs:FlushHoldFsStartenArgs"/>
+     <event value="27" symbol="vs:ActivateLoopBeenden" version="0" task="vs:ActivateLoop" opcode="win:Beenden" level="win:Informational" template="vs:FlushHoldFsStartenArgs"/>
+     <event value="28" symbol="vs:ValidateFilesStarten" version="0" task="vs:ValidateFiles" opcode="win:Starten" level="win:Informational" template="vs:FlushHoldFsStartenArgs"/>
+     <event value="29" symbol="vs:ValidateFilesBeenden" version="0" task="vs:ValidateFiles" opcode="win:Beenden" level="win:Informational" template="vs:FlushHoldFsStartenArgs"/>
+     <event value="30" symbol="vs:VolumeSafeStarten" version="0" task="vs:VolumeSafe" opcode="win:Starten" level="win:Informational" template="vs:FlushHoldFsStartenArgs"/>
+     <event value="31" symbol="vs:VolumeSafeBeenden" version="0" task="vs:VolumeSafe" opcode="win:Beenden" level="win:Informational" template="vs:FlushHoldFsStartenArgs"/>
+     <event value="32" symbol="vs:DiscoverSnapshotsStarten" version="0" task="vs:DiscoverSnapshots" opcode="win:Starten" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="33" symbol="vs:DiscoverSnapshotsBeenden" version="0" task="vs:DiscoverSnapshots" opcode="win:Beenden" level="win:Informational" template="vs:PrepareStartenArgs"/>
+     <event value="100" symbol="task_0Starten" version="0" task="task_0" opcode="win:Starten" level="win:Informational" template="task_0StartenArgs"/>
+     <event value="101" symbol="task_0Beenden" version="0" task="task_0" opcode="win:Beenden" level="win:Informational" template="task_0StartenArgs"/>
+     <event value="102" symbol="task_0Beenden102" version="0" task="task_0" opcode="win:Beenden" level="win:Error" template="task_0Beenden102Args"/>
+     <event value="103" symbol="task_0Starten103" version="0" task="task_0" opcode="win:Starten" level="win:Informational" template="task_0StartenArgs"/>
+     <event value="104" symbol="task_0Beenden104" version="0" task="task_0" opcode="win:Beenden" level="win:Informational" template="task_0Beenden104Args"/>
+     <event value="105" symbol="task_0Beenden105" version="0" task="task_0" opcode="win:Beenden" level="win:Error" template="task_0Beenden102Args"/>
+     <event value="106" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="107" symbol="task_0Starten107" version="0" task="task_0" opcode="win:Starten" level="win:Informational" template="task_0Starten107Args"/>
+     <event value="108" symbol="task_0Beenden108_V2" version="2" task="task_0" opcode="win:Beenden" level="win:Informational" template="task_0Beenden108Args_V2"/>
+     <event value="109" symbol="task_0Beenden109_V2" version="2" task="task_0" opcode="win:Beenden" level="win:Error" template="task_0Beenden109Args_V2"/>
+     <event value="110" symbol="task_0Starten110" version="0" task="task_0" opcode="win:Starten" level="win:Informational" template="task_0StartenArgs"/>
+     <event value="111" symbol="task_0Beenden111" version="0" task="task_0" opcode="win:Beenden" level="win:Informational" template="task_0Beenden111Args"/>
+     <event value="112" symbol="task_0Beenden112" version="0" task="task_0" opcode="win:Beenden" level="win:Error" template="task_0Beenden102Args"/>
+     <event value="113" symbol="task_0113" version="0" task="task_0" level="win:Informational" template="task_0StartenArgs"/>
+     <event value="114" symbol="task_0Starten114" version="0" task="task_0" opcode="win:Starten" level="win:Informational" template="task_0StartenArgs"/>
+     <event value="115" symbol="task_0Beenden115" version="0" task="task_0" opcode="win:Beenden" level="win:Informational" template="task_0StartenArgs"/>
+     <event value="116" symbol="task_0Starten116" version="0" task="task_0" opcode="win:Starten" level="win:Informational" template="task_0StartenArgs"/>
+     <event value="117" symbol="task_0Beenden117" version="0" task="task_0" opcode="win:Beenden" level="win:Informational" template="task_0StartenArgs"/>
+     <event value="118" symbol="task_0Beenden118" version="0" task="task_0" opcode="win:Beenden" level="win:Error" template="task_0Beenden102Args"/>
+     <event value="119" symbol="task_0Beenden119" version="0" task="task_0" opcode="win:Beenden" level="win:Error" template="task_0Beenden119Args"/>
+     <event value="120" symbol="task_0Beenden120" version="0" task="task_0" opcode="win:Beenden" level="win:Error" template="task_0Beenden120Args"/>
+     <event value="121" symbol="task_0121" version="0" task="task_0" level="win:Error" template="task_0121Args"/>
+     <event value="122" symbol="task_0122" version="0" task="task_0" level="win:Warning" template="task_0Beenden102Args"/>
+     <event value="1000" symbol="vs:PrepareStarten1000" version="0" task="vs:Prepare" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1001" symbol="vs:PrepareBeenden1001" version="0" task="vs:Prepare" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1002" symbol="vs:PreExposureStarten1002" version="0" task="vs:PreExposure" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1003" symbol="vs:PreExposureBeenden1003" version="0" task="vs:PreExposure" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1004" symbol="vs:AdjustBitmapStarten1004" version="0" task="vs:AdjustBitmap" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1005" symbol="vs:AdjustBitmapBeenden1005" version="0" task="vs:AdjustBitmap" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1006" symbol="vs:EndCommitStarten1006" version="0" task="vs:EndCommit" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1007" symbol="vs:EndCommitBeenden1007" version="0" task="vs:EndCommit" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1008" symbol="vs:ActivateStarten1008" version="0" task="vs:Activate" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1009" symbol="vs:ActivateBeenden1009" version="0" task="vs:Activate" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1010" symbol="vs:SetIgnorableStarten1010" version="0" task="vs:SetIgnorable" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1011" symbol="vs:SetIgnorableBeenden1011" version="0" task="vs:SetIgnorable" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1012" symbol="vs:IgnorableProductStarten1012" version="0" task="vs:IgnorableProduct" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1013" symbol="vs:IgnorableProductBeenden1013" version="0" task="vs:IgnorableProduct" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1014" symbol="vs:DismountStarten1014" version="0" task="vs:Dismount" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1015" symbol="vs:DismountBeenden1015" version="0" task="vs:Dismount" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1016" symbol="vs:RemountStarten1016" version="0" task="vs:Remount" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1017" symbol="vs:RemountBeenden1017" version="0" task="vs:Remount" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1018" symbol="vs:DeleteProcessStarten1018" version="0" task="vs:DeleteProcess" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1019" symbol="vs:DeleteProcessBeenden1019" version="0" task="vs:DeleteProcess" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1020" symbol="vs:RevertStarten1020" version="0" task="vs:Revert" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1021" symbol="vs:RevertBeenden1021" version="0" task="vs:Revert" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1022" symbol="vs:ProtectedBitmapStarten1022" version="0" task="vs:ProtectedBitmap" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1023" symbol="vs:ProtectedBitmapBeenden1023" version="0" task="vs:ProtectedBitmap" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1024" symbol="vs:FlushHoldFsStarten1024" version="0" task="vs:FlushHoldFs" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1025" symbol="vs:FlushHoldFsBeenden1025" version="0" task="vs:FlushHoldFs" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1026" symbol="vs:ActivateLoopStarten1026" version="0" task="vs:ActivateLoop" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1027" symbol="vs:ActivateLoopBeenden1027" version="0" task="vs:ActivateLoop" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1028" symbol="vs:ValidateFilesStarten1028" version="0" task="vs:ValidateFiles" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1029" symbol="vs:ValidateFilesBeenden1029" version="0" task="vs:ValidateFiles" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1030" symbol="vs:VolumeSafeStarten1030" version="0" task="vs:VolumeSafe" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1031" symbol="vs:VolumeSafeBeenden1031" version="0" task="vs:VolumeSafe" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+     <event value="1032" symbol="vs:DiscoverSnapshotsStarten1032" version="0" task="vs:DiscoverSnapshots" opcode="win:Starten" level="win:Informational" template="vs:PrepareStarten1000Args"/>
+     <event value="1033" symbol="vs:DiscoverSnapshotsBeenden1033" version="0" task="vs:DiscoverSnapshots" opcode="win:Beenden" level="win:Informational" template="vs:PrepareBeenden1001Args"/>
+    </events>
+    <templates>
+     <template tid="vs:PrepareStartenArgs">
+      <data name="RealThreadID" inType="win:UInt32"/>
+      <data name="VolumeGuid" inType="win:GUID"/>
+     </template>
+     <template tid="vs:PrepareBeendenArgs">
+      <data name="RealThreadID" inType="win:UInt32"/>
+      <data name="SnapshotGuid" inType="win:GUID"/>
+     </template>
+     <template tid="vs:FlushHoldFsStartenArgs">
+      <data name="RealThreadID" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0StartenArgs">
+      <data name="TargetVolumeGuid" inType="win:GUID"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0Beenden102Args">
+      <data name="TargetVolumeGuid" inType="win:GUID"/>
+      <data name="Error" inType="win:HexInt32"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0Beenden104Args">
+      <data name="TargetVolumeGuid" inType="win:GUID"/>
+      <data name="SnapshotCount" inType="win:UInt32"/>
+      <data name="CountDeleted" inType="win:UInt32"/>
+      <data name="CountVisible" inType="win:UInt32"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0Args">
+      <data name="TargetVolumeGuid" inType="win:GUID"/>
+      <data name="SnapshotGuid" inType="win:GUID"/>
+      <data name="Deleted" inType="win:Boolean"/>
+      <data name="Visible" inType="win:Boolean"/>
+      <data name="CommitTime" inType="win:SYSTEMTIME"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0Starten107Args">
+      <data name="TargetVolumeGuid" inType="win:GUID"/>
+      <data name="SnapshotGuid" inType="win:GUID"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0Beenden111Args">
+      <data name="TargetVolumeGuid" inType="win:GUID"/>
+      <data name="DiffAreaCount" inType="win:UInt32"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0Beenden119Args">
+      <data name="TargetVolumeGuid" inType="win:GUID"/>
+      <data name="PersistentDeleteReason" inType="win:UInt16" map="PersistentDeleteReason"/>
+      <data name="PersistentDeleteStatus" inType="win:HexInt32"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0Beenden120Args">
+      <data name="TargetVolumeGuid" inType="win:GUID"/>
+      <data name="TimeoutInSeconds" inType="win:UInt32"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0121Args">
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="DiffVolumeNameLength" inType="win:UInt16"/>
+      <data name="DiffVolumeName" inType="win:UnicodeString" length="DiffVolumeNameLength"/>
+      <data name="OriginalErrorLogCode" inType="win:UInt32"/>
+      <data name="OriginalErrorStatus" inType="win:HexInt32"/>
+      <data name="OriginalSourceFile" inType="win:HexInt32"/>
+      <data name="OriginalSourceLine" inType="win:UInt16"/>
+      <data name="OriginalSourceTag" inType="win:UInt32"/>
+      <data name="ErrorStatus" inType="win:HexInt32"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+     </template>
+     <template tid="vs:PrepareStarten1000Args">
+      <data name="DiagPrefixLength" inType="win:UInt16"/>
+      <data name="DiagPrefix" inType="win:UnicodeString" length="DiagPrefixLength"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="TargetVolumeGuid" inType="win:GUID"/>
+      <data name="SnapshotGuid" inType="win:GUID"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+     </template>
+     <template tid="vs:PrepareBeenden1001Args">
+      <data name="DiagPrefixLength" inType="win:UInt16"/>
+      <data name="DiagPrefix" inType="win:UnicodeString" length="DiagPrefixLength"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="TargetVolumeGuid" inType="win:GUID"/>
+      <data name="SnapshotGuid" inType="win:GUID"/>
+      <data name="ExitStatus" inType="win:HexInt32"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0Beenden108Args_V2">
+      <data name="TargetVolumeGuid" inType="win:GUID"/>
+      <data name="SnapshotGuid" inType="win:GUID"/>
+      <data name="LargeReadCount" inType="win:UInt32"/>
+      <data name="SmallReadCount" inType="win:UInt32"/>
+      <data name="TableDataBytes" inType="win:UInt64"/>
+      <data name="TotalBytesRead" inType="win:UInt64"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0Beenden109Args_V2">
+      <data name="TargetVolumeGuid" inType="win:GUID"/>
+      <data name="SnapshotGuid" inType="win:GUID"/>
+      <data name="Error" inType="win:HexInt32"/>
+      <data name="LargeReadCount" inType="win:UInt32"/>
+      <data name="SmallReadCount" inType="win:UInt32"/>
+      <data name="TableDataBytes" inType="win:UInt64"/>
+      <data name="TotalBytesRead" inType="win:UInt64"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_vs:Prepare" value="vs:Prepare"/>
+    <string id="task_vs:PreExposure" value="vs:PreExposure"/>
+    <string id="task_vs:AdjustBitmap" value="vs:AdjustBitmap"/>
+    <string id="task_vs:EndCommit" value="vs:EndCommit"/>
+    <string id="task_vs:Activate" value="vs:Activate"/>
+    <string id="task_vs:SetIgnorable" value="vs:SetIgnorable"/>
+    <string id="task_vs:IgnorableProduct" value="vs:IgnorableProduct"/>
+    <string id="task_vs:Dismount" value="vs:Dismount"/>
+    <string id="task_vs:Remount" value="vs:Remount"/>
+    <string id="task_vs:DeleteProcess" value="vs:DeleteProcess"/>
+    <string id="task_vs:Revert" value="vs:Revert"/>
+    <string id="task_vs:ProtectedBitmap" value="vs:ProtectedBitmap"/>
+    <string id="task_vs:FlushHoldFs" value="vs:FlushHoldFs"/>
+    <string id="task_vs:ActivateLoop" value="vs:ActivateLoop"/>
+    <string id="task_vs:ValidateFiles" value="vs:ValidateFiles"/>
+    <string id="task_vs:VolumeSafe" value="vs:VolumeSafe"/>
+    <string id="task_vs:DiscoverSnapshots" value="vs:DiscoverSnapshots"/>
+    <string id="map_PersistentDeleteReasonNot applicable." value="Not applicable."/>
+    <string id="map_PersistentDeleteReasonAn volume offline for cluster failover was expected, but a mount request arrived instead.  A failure occurred attempting to take the volume offline to compensate." value="An volume offline for cluster failover was expected, but a mount request arrived instead.  A failure occurred attempting to take the volume offline to compensate."/>
+    <string id="map_PersistentDeleteReasonError validating diff area files." value="Error validating diff area files."/>
+    <string id="map_PersistentDeleteReasonThere were no persistent snapshots on the volume." value="There were no persistent snapshots on the volume."/>
+    <string id="map_PersistentDeleteReasonError calculating the protected blocks bitmap." value="Error calculating the protected blocks bitmap."/>
+    <string id="map_PersistentDeleteReasonCould not allocate the protected blocks bitmap." value="Could not allocate the protected blocks bitmap."/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

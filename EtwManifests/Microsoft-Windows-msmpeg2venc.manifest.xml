@@ -1,0 +1,103 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-msmpeg2venc" guid="{d17b213a-c505-49c9-98cc-734253ef65d4}" resourceFileName="Microsoft-Windows-msmpeg2venc" messageFileName="Microsoft-Windows-msmpeg2venc" symbol="MicrosoftWindowsmsmpeg2venc" source="Xml" >
+    <keywords>
+     <keyword name="keyword_400000000000" message="$(string.keyword_keyword_400000000000)" mask="0x400000000000"/>
+     <keyword name="keyword_800000000000" message="$(string.keyword_keyword_800000000000)" mask="0x800000000000"/>
+    </keywords>
+    <tasks>
+     <task name="KonfigurationdesEncoders" message="$(string.task_KonfigurationdesEncoders)" value="1"/>
+     <task name="VomVideoencoderausgeführteAufgabe." message="$(string.task_VomVideoencoderausgeführteAufgabe.)" value="2">
+      <opcodes>
+       <opcode name="Empfangen" message="$(string.opcode_VomVideoencoderausgeführteAufgabe.Empfangen)" value="240"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <maps>
+     <bitMap name="MFTProcessInputFlags">
+      <map value="0x1" message="$(string.map_MFTProcessInputFlagsPlatzhalter für Eingabedatenpuffer - Nicht zur Verwendung)"/>
+     </bitMap>
+     <valueMap name="EncoderCodingMode">
+      <map value="0x0" message="$(string.map_EncoderCodingModeKonstante Bitrate)"/>
+      <map value="0x1" message="$(string.map_EncoderCodingModeVariable Bitrate - Maximum eingeschränkt)"/>
+      <map value="0x2" message="$(string.map_EncoderCodingModeVariable Bitrate - Qualitätsbasiert)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="0" symbol="VomVideoencoderausgeführteAufgabe.Starten" version="0" task="VomVideoencoderausgeführteAufgabe." opcode="win:Starten" level="win:Verbose" keywords="keyword_800000000000" template="VomVideoencoderausgeführteAufgabe.StartenArgs"/>
+     <event value="1" symbol="VomVideoencoderausgeführteAufgabe.Beenden" version="0" task="VomVideoencoderausgeführteAufgabe." opcode="win:Beenden" level="win:Verbose" keywords="keyword_800000000000" template="VomVideoencoderausgeführteAufgabe.BeendenArgs"/>
+     <event value="2" symbol="VomVideoencoderausgeführteAufgabe.Starten2" version="0" task="VomVideoencoderausgeführteAufgabe." opcode="win:Starten" level="win:Verbose" keywords="keyword_400000000000" template="VomVideoencoderausgeführteAufgabe.Starten2Args"/>
+     <event value="3" symbol="KonfigurationdesEncodersBeenden" version="0" task="KonfigurationdesEncoders" opcode="win:Beenden" level="win:Verbose" keywords="keyword_400000000000" template="VomVideoencoderausgeführteAufgabe.BeendenArgs"/>
+     <event value="4" symbol="VomVideoencoderausgeführteAufgabe.Starten4" version="0" task="VomVideoencoderausgeführteAufgabe." opcode="win:Starten" level="win:Verbose" keywords="keyword_400000000000" template="VomVideoencoderausgeführteAufgabe.Starten4Args"/>
+     <event value="5" symbol="VomVideoencoderausgeführteAufgabe.Beenden5" version="0" task="VomVideoencoderausgeführteAufgabe." opcode="win:Beenden" level="win:Verbose" keywords="keyword_400000000000" template="VomVideoencoderausgeführteAufgabe.BeendenArgs"/>
+     <event value="6" symbol="KonfigurationdesEncoders" version="0" task="KonfigurationdesEncoders" level="win:Informational" keywords="keyword_400000000000" template="KonfigurationdesEncodersArgs"/>
+     <event value="7" symbol="VomVideoencoderausgeführteAufgabe.Starten7" version="0" task="VomVideoencoderausgeführteAufgabe." opcode="win:Starten" level="win:Verbose" keywords="keyword_800000000000" template="VomVideoencoderausgeführteAufgabe.Starten7Args"/>
+     <event value="8" symbol="VomVideoencoderausgeführteAufgabe.Beenden8" version="0" task="VomVideoencoderausgeführteAufgabe." opcode="win:Beenden" level="win:Verbose" keywords="keyword_800000000000" template="VomVideoencoderausgeführteAufgabe.BeendenArgs"/>
+     <event value="9" symbol="VomVideoencoderausgeführteAufgabe." version="0" task="VomVideoencoderausgeführteAufgabe." level="win:Informational" keywords="keyword_800000000000" template="VomVideoencoderausgeführteAufgabe.Args"/>
+     <event value="10" symbol="VomVideoencoderausgeführteAufgabe.Senden" version="0" task="VomVideoencoderausgeführteAufgabe." opcode="win:Senden" level="win:Informational" keywords="keyword_800000000000"/>
+     <event value="11" symbol="VomVideoencoderausgeführteAufgabe.Empfangen" version="0" task="VomVideoencoderausgeführteAufgabe." opcode="Empfangen" level="win:Informational" keywords="keyword_800000000000" template="VomVideoencoderausgeführteAufgabe.EmpfangenArgs"/>
+     <event value="12" symbol="KonfigurationdesEncoders12" version="0" task="KonfigurationdesEncoders" level="win:Informational" keywords="keyword_400000000000" template="KonfigurationdesEncoders12Args"/>
+    </events>
+    <templates>
+     <template tid="VomVideoencoderausgeführteAufgabe.StartenArgs">
+      <data name="InputStreamID" inType="win:UInt64"/>
+      <data name="pSample" inType="win:Pointer"/>
+      <data name="dwFlags" inType="win:UInt32" map="MFTProcessInputFlags"/>
+     </template>
+     <template tid="VomVideoencoderausgeführteAufgabe.BeendenArgs">
+      <data name="hr" inType="win:Int32"/>
+     </template>
+     <template tid="VomVideoencoderausgeführteAufgabe.Starten2Args">
+      <data name="InputStreamID" inType="win:UInt64"/>
+      <data name="pEvent" inType="win:Pointer"/>
+     </template>
+     <template tid="VomVideoencoderausgeführteAufgabe.Starten4Args">
+      <data name="MessageType" inType="win:UInt32"/>
+      <data name="Param" inType="win:Pointer"/>
+     </template>
+     <template tid="KonfigurationdesEncodersArgs">
+      <data name="OldBitrate" inType="win:UInt64"/>
+      <data name="NewBitrate" inType="win:UInt64"/>
+     </template>
+     <template tid="VomVideoencoderausgeführteAufgabe.Starten7Args">
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="OutputBufferCount" inType="win:UInt64"/>
+      <data name="pOutputSamples" inType="win:Pointer"/>
+      <data name="pdwStatus" inType="win:Pointer"/>
+     </template>
+     <template tid="VomVideoencoderausgeführteAufgabe.Args">
+      <data name="pSample" inType="win:Pointer"/>
+      <data name="cSampleLength" inType="win:UInt64"/>
+     </template>
+     <template tid="VomVideoencoderausgeführteAufgabe.EmpfangenArgs">
+      <data name="pSample" inType="win:Pointer"/>
+      <data name="cSampleLength" inType="win:UInt64"/>
+      <data name="bEndOfEncoding" inType="win:Boolean"/>
+     </template>
+     <template tid="KonfigurationdesEncoders12Args">
+      <data name="CodingMode" inType="win:UInt32" map="EncoderCodingMode"/>
+      <data name="Bitrate" inType="win:UInt64"/>
+      <data name="Complexity" inType="win:UInt64"/>
+      <data name="pEncoder" inType="win:Pointer"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_keyword_400000000000" value="keyword_400000000000"/>
+    <string id="keyword_keyword_800000000000" value="keyword_800000000000"/>
+    <string id="task_KonfigurationdesEncoders" value="KonfigurationdesEncoders"/>
+    <string id="task_VomVideoencoderausgeführteAufgabe." value="VomVideoencoderausgeführteAufgabe."/>
+    <string id="opcode_VomVideoencoderausgeführteAufgabe.Empfangen" value="Empfangen"/>
+    <string id="map_MFTProcessInputFlagsPlatzhalter für Eingabedatenpuffer - Nicht zur Verwendung" value="Platzhalter für Eingabedatenpuffer - Nicht zur Verwendung"/>
+    <string id="map_EncoderCodingModeKonstante Bitrate" value="Konstante Bitrate"/>
+    <string id="map_EncoderCodingModeVariable Bitrate - Maximum eingeschränkt" value="Variable Bitrate - Maximum eingeschränkt"/>
+    <string id="map_EncoderCodingModeVariable Bitrate - Qualitätsbasiert" value="Variable Bitrate - Qualitätsbasiert"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

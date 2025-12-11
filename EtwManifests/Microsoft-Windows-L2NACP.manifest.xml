@@ -1,0 +1,86 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-L2NACP" guid="{85fe7609-ff4a-48e9-9d50-12918e43e1da}" resourceFileName="Microsoft-Windows-L2NACP" messageFileName="Microsoft-Windows-L2NACP" symbol="MicrosoftWindowsL2NACP" source="Xml" >
+    <keywords>
+     <keyword name="Credential" message="$(string.keyword_Credential)" mask="0x1"/>
+     <keyword name="Filter" message="$(string.keyword_Filter)" mask="0x2"/>
+     <keyword name="ut:Authentication" message="$(string.keyword_ut:Authentication)" mask="0x2000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="tid_L2NACPPrelogon.Result">
+      <map value="0x0" message="$(string.map_tid_L2NACPPrelogon.ResultErfolg)"/>
+      <map value="0x1" message="$(string.map_tid_L2NACPPrelogon.ResultFehler)"/>
+     </valueMap>
+     <valueMap name="tid_L2NACPPrelogon.Reason">
+      <map value="0x0" message="$(string.map_tid_L2NACPPrelogon.ReasonErfolg)"/>
+      <map value="0x1" message="$(string.map_tid_L2NACPPrelogon.ReasonInnerhalb der vorgesehenen Zeit konnte keine Netzwerkverbindung hergestellt werden.)"/>
+      <map value="0x2" message="$(string.map_tid_L2NACPPrelogon.ReasonEs konnte keine Netzwerkverbindung hergestellt werden.)"/>
+      <map value="0x3" message="$(string.map_tid_L2NACPPrelogon.ReasonInnerhalb der vorgesehenen Zeit konnte keine Verbindung mit einem Domänencontroller hergestellt werden.)"/>
+      <map value="0x4" message="$(string.map_tid_L2NACPPrelogon.ReasonInnerhalb der vorgesehenen Zeit konnte keine Verbindung mit einem Domänencontroller hergestellt und keine TCP/IP-Adresse abgerufen werden.)"/>
+      <map value="0x5" message="$(string.map_tid_L2NACPPrelogon.ReasonDer vor der Anmeldung erfolgte Verbindungsversuch wurde vom Benutzer abgebrochen.)"/>
+      <map value="0x6" message="$(string.map_tid_L2NACPPrelogon.ReasonDer Authentifikator konnte an der Schnittstelle nicht gefunden werden.)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="13003" symbol="task_0" version="0" task="task_0" level="win:Informational" keywords="Credential ut:Authentication" template="task_0Args"/>
+     <event value="13004" symbol="task_013004" version="0" task="task_0" level="win:Informational" keywords="Credential ut:Authentication" template="task_013004Args"/>
+     <event value="13023" symbol="task_013023" version="0" task="task_0" level="win:Informational" keywords="Credential ut:Authentication" template="task_013023Args"/>
+     <event value="13024" symbol="task_013024" version="0" task="task_0" level="win:Informational" keywords="Credential ut:Authentication" template="task_013024Args"/>
+     <event value="14000" symbol="task_014000" version="0" task="task_0" level="win:Informational" keywords="Filter ut:Authentication" template="task_014000Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="Result" inType="win:UInt32" map="tid_L2NACPPrelogon.Result"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="ProfileName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_013004Args">
+      <data name="Result" inType="win:UInt32"/>
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="ProfileName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_013023Args">
+      <data name="Result" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt32" map="tid_L2NACPPrelogon.Reason"/>
+      <data name="InterfaceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="task_013024Args">
+      <data name="Result" inType="win:UInt32"/>
+      <data name="InterfaceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="task_014000Args">
+      <data name="Enabled" inType="win:Boolean"/>
+      <data name="Remote" inType="win:Boolean"/>
+      <data name="Dot3Allowed" inType="win:Boolean"/>
+      <data name="WlanAllowed" inType="win:Boolean"/>
+      <data name="CredentialsFound" inType="win:Boolean"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Credential" value="Credential"/>
+    <string id="keyword_Filter" value="Filter"/>
+    <string id="keyword_ut:Authentication" value="ut:Authentication"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_tid_L2NACPPrelogon.ResultErfolg" value="Erfolg"/>
+    <string id="map_tid_L2NACPPrelogon.ResultFehler" value="Fehler"/>
+    <string id="map_tid_L2NACPPrelogon.ReasonErfolg" value="Erfolg"/>
+    <string id="map_tid_L2NACPPrelogon.ReasonInnerhalb der vorgesehenen Zeit konnte keine Netzwerkverbindung hergestellt werden." value="Innerhalb der vorgesehenen Zeit konnte keine Netzwerkverbindung hergestellt werden."/>
+    <string id="map_tid_L2NACPPrelogon.ReasonEs konnte keine Netzwerkverbindung hergestellt werden." value="Es konnte keine Netzwerkverbindung hergestellt werden."/>
+    <string id="map_tid_L2NACPPrelogon.ReasonInnerhalb der vorgesehenen Zeit konnte keine Verbindung mit einem Domänencontroller hergestellt werden." value="Innerhalb der vorgesehenen Zeit konnte keine Verbindung mit einem Domänencontroller hergestellt werden."/>
+    <string id="map_tid_L2NACPPrelogon.ReasonInnerhalb der vorgesehenen Zeit konnte keine Verbindung mit einem Domänencontroller hergestellt und keine TCP/IP-Adresse abgerufen werden." value="Innerhalb der vorgesehenen Zeit konnte keine Verbindung mit einem Domänencontroller hergestellt und keine TCP/IP-Adresse abgerufen werden."/>
+    <string id="map_tid_L2NACPPrelogon.ReasonDer vor der Anmeldung erfolgte Verbindungsversuch wurde vom Benutzer abgebrochen." value="Der vor der Anmeldung erfolgte Verbindungsversuch wurde vom Benutzer abgebrochen."/>
+    <string id="map_tid_L2NACPPrelogon.ReasonDer Authentifikator konnte an der Schnittstelle nicht gefunden werden." value="Der Authentifikator konnte an der Schnittstelle nicht gefunden werden."/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

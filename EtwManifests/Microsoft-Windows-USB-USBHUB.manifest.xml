@@ -1,0 +1,435 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-USB-USBHUB" guid="{7426a56b-e2d5-4b30-bdef-b31815c1a74a}" resourceFileName="Microsoft-Windows-USB-USBHUB" messageFileName="Microsoft-Windows-USB-USBHUB" symbol="MicrosoftWindowsUSBUSBHUB" source="Xml" >
+    <keywords>
+     <keyword name="Diagnostics" message="$(string.keyword_Diagnostics)" mask="0x1"/>
+     <keyword name="keyword_400000000000" message="$(string.keyword_keyword_400000000000)" mask="0x400000000000"/>
+    </keywords>
+    <tasks>
+     <task name="USB_Hub" message="$(string.task_USB_Hub)" value="1">
+      <opcodes>
+       <opcode name="Hinzufügen" message="$(string.opcode_USB_HubHinzufügen)" value="14"/>
+       <opcode name="Entfernen" message="$(string.opcode_USB_HubEntfernen)" value="15"/>
+       <opcode name="Information" message="$(string.opcode_USB_HubInformation)" value="16"/>
+      </opcodes>
+     </task>
+     <task name="EnumerationdesUSB_Hubs" message="$(string.task_EnumerationdesUSB_Hubs)" value="2">
+      <opcodes>
+       <opcode name="Starten" message="$(string.opcode_EnumerationdesUSB_HubsStarten)" value="10"/>
+       <opcode name="Fehler" message="$(string.opcode_EnumerationdesUSB_HubsFehler)" value="11"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_EnumerationdesUSB_HubsAbgeschlossen)" value="12"/>
+       <opcode name="Information" message="$(string.opcode_EnumerationdesUSB_HubsInformation)" value="16"/>
+      </opcodes>
+     </task>
+     <task name="EnergiesparendesUSB_Hubs" message="$(string.task_EnergiesparendesUSB_Hubs)" value="3">
+      <opcodes>
+       <opcode name="Starten" message="$(string.opcode_EnergiesparendesUSB_HubsStarten)" value="10"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_EnergiesparendesUSB_HubsAbgeschlossen)" value="12"/>
+       <opcode name="Information" message="$(string.opcode_EnergiesparendesUSB_HubsInformation)" value="16"/>
+      </opcodes>
+     </task>
+     <task name="ReaktivierendesUSB_Hubs" message="$(string.task_ReaktivierendesUSB_Hubs)" value="4">
+      <opcodes>
+       <opcode name="Starten" message="$(string.opcode_ReaktivierendesUSB_HubsStarten)" value="10"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_ReaktivierendesUSB_HubsAbgeschlossen)" value="12"/>
+       <opcode name="Information" message="$(string.opcode_ReaktivierendesUSB_HubsInformation)" value="16"/>
+      </opcodes>
+     </task>
+     <task name="ZurücksetzenderWiederherstellungdesUSB_Hubs" message="$(string.task_ZurücksetzenderWiederherstellungdesUSB_Hubs)" value="5">
+      <opcodes>
+       <opcode name="Starten" message="$(string.opcode_ZurücksetzenderWiederherstellungdesUSB_HubsStarten)" value="10"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_ZurücksetzenderWiederherstellungdesUSB_HubsAbgeschlossen)" value="12"/>
+       <opcode name="Warteschlange" message="$(string.opcode_ZurücksetzenderWiederherstellungdesUSB_HubsWarteschlange)" value="18"/>
+      </opcodes>
+     </task>
+     <task name="AbfragenderGerätebeziehungs_IRPdesUSB_Hubs_BusRelations" message="$(string.task_AbfragenderGerätebeziehungs_IRPdesUSB_Hubs_BusRelations)" value="6">
+      <opcodes>
+       <opcode name="Abgeschlossen" message="$(string.opcode_AbfragenderGerätebeziehungs_IRPdesUSB_Hubs_BusRelationsAbgeschlossen)" value="12"/>
+       <opcode name="Versenden" message="$(string.opcode_AbfragenderGerätebeziehungs_IRPdesUSB_Hubs_BusRelationsVersenden)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="WartenaufdieAktivierungdesUSB_Geräts_7" message="$(string.task_WartenaufdieAktivierungdesUSB_Geräts_7)" value="7">
+      <opcodes>
+       <opcode name="Starten" message="$(string.opcode_WartenaufdieAktivierungdesUSB_Geräts_7Starten)" value="10"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_WartenaufdieAktivierungdesUSB_Geräts_7Abgeschlossen)" value="12"/>
+       <opcode name="Versenden" message="$(string.opcode_WartenaufdieAktivierungdesUSB_Geräts_7Versenden)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="StromversorgungdesUSB_Hubs" message="$(string.task_StromversorgungdesUSB_Hubs)" value="8">
+      <opcodes>
+       <opcode name="Starten" message="$(string.opcode_StromversorgungdesUSB_HubsStarten)" value="10"/>
+       <opcode name="Fehler" message="$(string.opcode_StromversorgungdesUSB_HubsFehler)" value="11"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_StromversorgungdesUSB_HubsAbgeschlossen)" value="12"/>
+       <opcode name="Versenden" message="$(string.opcode_StromversorgungdesUSB_HubsVersenden)" value="13"/>
+       <opcode name="Information" message="$(string.opcode_StromversorgungdesUSB_HubsInformation)" value="16"/>
+      </opcodes>
+     </task>
+     <task name="PortinformationendesUSB_Hubs" message="$(string.task_PortinformationendesUSB_Hubs)" value="9">
+      <opcodes>
+       <opcode name="Information" message="$(string.opcode_PortinformationendesUSB_HubsInformation)" value="16"/>
+      </opcodes>
+     </task>
+     <task name="USB_Gerät" message="$(string.task_USB_Gerät)" value="20">
+      <opcodes>
+       <opcode name="Hinzufügen" message="$(string.opcode_USB_GerätHinzufügen)" value="14"/>
+       <opcode name="Entfernen" message="$(string.opcode_USB_GerätEntfernen)" value="15"/>
+       <opcode name="Information" message="$(string.opcode_USB_GerätInformation)" value="16"/>
+      </opcodes>
+     </task>
+     <task name="USB_Gerätestart" message="$(string.task_USB_Gerätestart)" value="21">
+      <opcodes>
+       <opcode name="Fehler" message="$(string.opcode_USB_GerätestartFehler)" value="11"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_USB_GerätestartAbgeschlossen)" value="12"/>
+       <opcode name="Versenden" message="$(string.opcode_USB_GerätestartVersenden)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="EnergieeinstellungendesUSB_Geräts" message="$(string.task_EnergieeinstellungendesUSB_Geräts)" value="22">
+      <opcodes>
+       <opcode name="Abgeschlossen" message="$(string.opcode_EnergieeinstellungendesUSB_GerätsAbgeschlossen)" value="12"/>
+       <opcode name="Versenden" message="$(string.opcode_EnergieeinstellungendesUSB_GerätsVersenden)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="BenachrichtigungwegenLeerlaufsdesUSB_Geräts" message="$(string.task_BenachrichtigungwegenLeerlaufsdesUSB_Geräts)" value="23">
+      <opcodes>
+       <opcode name="Abgeschlossen" message="$(string.opcode_BenachrichtigungwegenLeerlaufsdesUSB_GerätsAbgeschlossen)" value="12"/>
+       <opcode name="Versenden" message="$(string.opcode_BenachrichtigungwegenLeerlaufsdesUSB_GerätsVersenden)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="WartenaufdieAktivierungdesUSB_Geräts" message="$(string.task_WartenaufdieAktivierungdesUSB_Geräts)" value="24">
+      <opcodes>
+       <opcode name="Abgeschlossen" message="$(string.opcode_WartenaufdieAktivierungdesUSB_GerätsAbgeschlossen)" value="12"/>
+       <opcode name="Versenden" message="$(string.opcode_WartenaufdieAktivierungdesUSB_GerätsVersenden)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="AusnahmefehlerdesUSB_Hubs" message="$(string.task_AusnahmefehlerdesUSB_Hubs)" value="25">
+      <opcodes>
+       <opcode name="Ausnahme" message="$(string.opcode_AusnahmefehlerdesUSB_HubsAusnahme)" value="17"/>
+      </opcodes>
+     </task>
+     <task name="PortstatusdesUSB_Hubs" message="$(string.task_PortstatusdesUSB_Hubs)" value="26">
+      <opcodes>
+       <opcode name="Information" message="$(string.opcode_PortstatusdesUSB_HubsInformation)" value="16"/>
+      </opcodes>
+     </task>
+     <task name="InterneZurücksetzungdesUSB_Geräts" message="$(string.task_InterneZurücksetzungdesUSB_Geräts)" value="27">
+      <opcodes>
+       <opcode name="Starten" message="$(string.opcode_InterneZurücksetzungdesUSB_GerätsStarten)" value="10"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_InterneZurücksetzungdesUSB_GerätsAbgeschlossen)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="AusnahmefehlerinderVergangenheitbeiUSB_Hub" message="$(string.task_AusnahmefehlerinderVergangenheitbeiUSB_Hub)" value="28">
+      <opcodes>
+       <opcode name="Ausnahme" message="$(string.opcode_AusnahmefehlerinderVergangenheitbeiUSB_HubAusnahme)" value="17"/>
+      </opcodes>
+     </task>
+     <task name="IOCTL_INTERNAL_USB_RESET_PORTdesUSB_Geräts" message="$(string.task_IOCTL_INTERNAL_USB_RESET_PORTdesUSB_Geräts)" value="29">
+      <opcodes>
+       <opcode name="Starten" message="$(string.opcode_IOCTL_INTERNAL_USB_RESET_PORTdesUSB_GerätsStarten)" value="10"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_IOCTL_INTERNAL_USB_RESET_PORTdesUSB_GerätsAbgeschlossen)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="TimerdesUSB_Hubs" message="$(string.task_TimerdesUSB_Hubs)" value="30">
+      <opcodes>
+       <opcode name="Information" message="$(string.opcode_TimerdesUSB_HubsInformation)" value="16"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1" symbol="USB_HubHinzufügen" version="0" task="USB_Hub" opcode="Hinzufügen" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="USB_HubHinzufügenArgs"/>
+     <event value="2" symbol="USB_HubEntfernen" version="0" task="USB_Hub" opcode="Entfernen" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="USB_HubEntfernenArgs"/>
+     <event value="3" symbol="USB_HubInformation" version="0" task="USB_Hub" opcode="Information" level="win:Informational" keywords="Diagnostics" template="USB_HubHinzufügenArgs"/>
+     <event value="10" symbol="EnumerationdesUSB_HubsStarten" version="0" task="EnumerationdesUSB_Hubs" opcode="Starten" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="11" symbol="EnumerationdesUSB_HubsFehler" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="12" symbol="EnumerationdesUSB_HubsFehler12" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="13" symbol="EnumerationdesUSB_HubsFehler13" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="14" symbol="EnumerationdesUSB_HubsFehler14" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="15" symbol="EnumerationdesUSB_HubsInformation" version="0" task="EnumerationdesUSB_Hubs" opcode="Information" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="16" symbol="EnumerationdesUSB_HubsFehler16" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="17" symbol="EnumerationdesUSB_HubsFehler17" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="18" symbol="EnumerationdesUSB_HubsFehler18" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsFehler18Args"/>
+     <event value="19" symbol="EnumerationdesUSB_HubsFehler19" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsFehler19Args"/>
+     <event value="20" symbol="EnumerationdesUSB_HubsFehler20" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="21" symbol="EnumerationdesUSB_HubsStarten21" version="0" task="EnumerationdesUSB_Hubs" opcode="Starten" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="22" symbol="EnumerationdesUSB_HubsFehler22" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="23" symbol="EnumerationdesUSB_HubsFehler23" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="24" symbol="EnumerationdesUSB_HubsFehler24" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="25" symbol="EnumerationdesUSB_HubsFehler25" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="26" symbol="EnumerationdesUSB_HubsFehler26" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="27" symbol="EnumerationdesUSB_HubsFehler27" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="28" symbol="EnumerationdesUSB_HubsFehler28" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="29" symbol="EnumerationdesUSB_HubsInformation29" version="0" task="EnumerationdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="30" symbol="EnumerationdesUSB_HubsFehler30" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Critical" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="31" symbol="EnumerationdesUSB_HubsInformation31" version="0" task="EnumerationdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="32" symbol="EnumerationdesUSB_HubsInformation32" version="0" task="EnumerationdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="33" symbol="EnumerationdesUSB_HubsInformation33" version="0" task="EnumerationdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="34" symbol="EnumerationdesUSB_HubsInformation34" version="0" task="EnumerationdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="35" symbol="EnumerationdesUSB_HubsInformation35" version="0" task="EnumerationdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="36" symbol="EnumerationdesUSB_HubsInformation36" version="0" task="EnumerationdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="37" symbol="EnumerationdesUSB_HubsInformation37" version="0" task="EnumerationdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="39" symbol="EnumerationdesUSB_HubsAbgeschlossen" version="0" task="EnumerationdesUSB_Hubs" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="40" symbol="ZurücksetzenderWiederherstellungdesUSB_HubsStarten" version="0" task="ZurücksetzenderWiederherstellungdesUSB_Hubs" opcode="Starten" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="41" symbol="ZurücksetzenderWiederherstellungdesUSB_HubsWarteschlange" version="0" task="ZurücksetzenderWiederherstellungdesUSB_Hubs" opcode="Warteschlange" level="win:Warning" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="49" symbol="ZurücksetzenderWiederherstellungdesUSB_HubsAbgeschlossen" version="0" task="ZurücksetzenderWiederherstellungdesUSB_Hubs" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="50" symbol="EnergiesparendesUSB_HubsStarten" version="0" task="EnergiesparendesUSB_Hubs" opcode="Starten" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="51" symbol="EnergiesparendesUSB_HubsInformation" version="0" task="EnergiesparendesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="59" symbol="EnergiesparendesUSB_HubsAbgeschlossen" version="0" task="EnergiesparendesUSB_Hubs" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="60" symbol="ReaktivierendesUSB_HubsStarten" version="0" task="ReaktivierendesUSB_Hubs" opcode="Starten" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="61" symbol="ReaktivierendesUSB_HubsAbgeschlossen" version="0" task="ReaktivierendesUSB_Hubs" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="62" symbol="ReaktivierendesUSB_HubsInformation" version="0" task="ReaktivierendesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="63" symbol="ReaktivierendesUSB_HubsInformation63" version="0" task="ReaktivierendesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="64" symbol="ReaktivierendesUSB_HubsInformation64" version="0" task="ReaktivierendesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="70" symbol="AbfragenderGerätebeziehungs_IRPdesUSB_Hubs_BusRelationsVersenden" version="0" task="AbfragenderGerätebeziehungs_IRPdesUSB_Hubs_BusRelations" opcode="Versenden" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="71" symbol="AbfragenderGerätebeziehungs_IRPdesUSB_Hubs_BusRelationsAbgeschlossen" version="0" task="AbfragenderGerätebeziehungs_IRPdesUSB_Hubs_BusRelations" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="80" symbol="PortinformationendesUSB_HubsInformation" version="0" task="PortinformationendesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="PortinformationendesUSB_HubsInformationArgs"/>
+     <event value="81" symbol="PortinformationendesUSB_HubsInformation81" version="0" task="PortinformationendesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="PortinformationendesUSB_HubsInformation81Args"/>
+     <event value="82" symbol="PortinformationendesUSB_HubsInformation82" version="0" task="PortinformationendesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="PortinformationendesUSB_HubsInformation82Args"/>
+     <event value="83" symbol="PortinformationendesUSB_HubsInformation83" version="0" task="PortinformationendesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="84" symbol="PortinformationendesUSB_HubsInformation84" version="0" task="PortinformationendesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="100" symbol="USB_GerätHinzufügen" version="0" task="USB_Gerät" opcode="Hinzufügen" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="USB_GerätHinzufügenArgs"/>
+     <event value="101" symbol="USB_GerätEntfernen" version="0" task="USB_Gerät" opcode="Entfernen" level="win:Informational" keywords="keyword_400000000000" template="USB_GerätEntfernenArgs"/>
+     <event value="102" symbol="USB_GerätInformation" version="0" task="USB_Gerät" opcode="Information" level="win:Informational" keywords="Diagnostics" template="USB_GerätHinzufügenArgs"/>
+     <event value="103" symbol="USB_GerätInformation103" version="0" task="USB_Gerät" opcode="Information" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="USB_GerätInformation103Args"/>
+     <event value="110" symbol="USB_GerätestartVersenden" version="0" task="USB_Gerätestart" opcode="Versenden" level="win:Informational" keywords="Diagnostics" template="USB_GerätestartVersendenArgs"/>
+     <event value="111" symbol="USB_GerätestartFehler" version="0" task="USB_Gerätestart" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="USB_GerätestartVersendenArgs"/>
+     <event value="112" symbol="USB_GerätestartFehler112" version="0" task="USB_Gerätestart" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="USB_GerätestartVersendenArgs"/>
+     <event value="113" symbol="USB_GerätestartFehler113" version="0" task="USB_Gerätestart" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="USB_GerätestartVersendenArgs"/>
+     <event value="114" symbol="USB_GerätInformation114" version="0" task="USB_Gerät" opcode="Information" level="win:Informational" keywords="Diagnostics" template="USB_GerätInformation103Args"/>
+     <event value="119" symbol="USB_GerätestartAbgeschlossen" version="0" task="USB_Gerätestart" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="USB_GerätestartVersendenArgs"/>
+     <event value="120" symbol="EnergieeinstellungendesUSB_GerätsVersenden" version="0" task="EnergieeinstellungendesUSB_Geräts" opcode="Versenden" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="EnergieeinstellungendesUSB_GerätsVersendenArgs"/>
+     <event value="121" symbol="EnergieeinstellungendesUSB_GerätsAbgeschlossen" version="0" task="EnergieeinstellungendesUSB_Geräts" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="EnergieeinstellungendesUSB_GerätsVersendenArgs"/>
+     <event value="122" symbol="EnergieeinstellungendesUSB_GerätsVersenden122" version="0" task="EnergieeinstellungendesUSB_Geräts" opcode="Versenden" level="win:Informational" keywords="Diagnostics" template="EnergieeinstellungendesUSB_GerätsVersendenArgs"/>
+     <event value="123" symbol="EnergieeinstellungendesUSB_GerätsAbgeschlossen123" version="0" task="EnergieeinstellungendesUSB_Geräts" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="EnergieeinstellungendesUSB_GerätsVersendenArgs"/>
+     <event value="130" symbol="BenachrichtigungwegenLeerlaufsdesUSB_GerätsVersenden" version="0" task="BenachrichtigungwegenLeerlaufsdesUSB_Geräts" opcode="Versenden" level="win:Informational" keywords="Diagnostics" template="USB_GerätestartVersendenArgs"/>
+     <event value="139" symbol="BenachrichtigungwegenLeerlaufsdesUSB_GerätsAbgeschlossen" version="0" task="BenachrichtigungwegenLeerlaufsdesUSB_Geräts" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="USB_GerätestartVersendenArgs"/>
+     <event value="140" symbol="WartenaufdieAktivierungdesUSB_GerätsVersenden" version="0" task="WartenaufdieAktivierungdesUSB_Geräts" opcode="Versenden" level="win:Informational" keywords="Diagnostics" template="USB_GerätestartVersendenArgs"/>
+     <event value="149" symbol="WartenaufdieAktivierungdesUSB_GerätsAbgeschlossen" version="0" task="WartenaufdieAktivierungdesUSB_Geräts" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="USB_GerätestartVersendenArgs"/>
+     <event value="150" symbol="WartenaufdieAktivierungdesUSB_Geräts_7Starten" version="0" task="WartenaufdieAktivierungdesUSB_Geräts_7" opcode="Starten" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="151" symbol="WartenaufdieAktivierungdesUSB_Geräts_7Versenden" version="0" task="WartenaufdieAktivierungdesUSB_Geräts_7" opcode="Versenden" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="159" symbol="WartenaufdieAktivierungdesUSB_Geräts_7Abgeschlossen" version="0" task="WartenaufdieAktivierungdesUSB_Geräts_7" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="160" symbol="StromversorgungdesUSB_HubsStarten" version="0" task="StromversorgungdesUSB_Hubs" opcode="Starten" level="win:Informational" keywords="Diagnostics" template="StromversorgungdesUSB_HubsStartenArgs"/>
+     <event value="161" symbol="StromversorgungdesUSB_HubsVersenden" version="0" task="StromversorgungdesUSB_Hubs" opcode="Versenden" level="win:Informational" keywords="Diagnostics" template="StromversorgungdesUSB_HubsStartenArgs"/>
+     <event value="169" symbol="StromversorgungdesUSB_HubsAbgeschlossen" version="0" task="StromversorgungdesUSB_Hubs" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="StromversorgungdesUSB_HubsStartenArgs"/>
+     <event value="170" symbol="StromversorgungdesUSB_HubsStarten170" version="0" task="StromversorgungdesUSB_Hubs" opcode="Starten" level="win:Informational" keywords="Diagnostics" template="StromversorgungdesUSB_HubsStartenArgs"/>
+     <event value="171" symbol="StromversorgungdesUSB_HubsVersenden171" version="0" task="StromversorgungdesUSB_Hubs" opcode="Versenden" level="win:Informational" keywords="Diagnostics" template="StromversorgungdesUSB_HubsStartenArgs"/>
+     <event value="172" symbol="StromversorgungdesUSB_HubsStarten172" version="0" task="StromversorgungdesUSB_Hubs" opcode="Starten" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="173" symbol="StromversorgungdesUSB_HubsInformation" version="0" task="StromversorgungdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="174" symbol="StromversorgungdesUSB_HubsInformation174" version="0" task="StromversorgungdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="175" symbol="StromversorgungdesUSB_HubsInformation175" version="0" task="StromversorgungdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="176" symbol="StromversorgungdesUSB_HubsInformation176" version="0" task="StromversorgungdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="177" symbol="StromversorgungdesUSB_HubsInformation177" version="0" task="StromversorgungdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="178" symbol="StromversorgungdesUSB_HubsAbgeschlossen178" version="0" task="StromversorgungdesUSB_Hubs" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="179" symbol="StromversorgungdesUSB_HubsStarten179" version="0" task="StromversorgungdesUSB_Hubs" opcode="Starten" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="180" symbol="StromversorgungdesUSB_HubsFehler" version="0" task="StromversorgungdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="181" symbol="StromversorgungdesUSB_HubsInformation181" version="0" task="StromversorgungdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="183" symbol="StromversorgungdesUSB_HubsAbgeschlossen183" version="0" task="StromversorgungdesUSB_Hubs" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="184" symbol="StromversorgungdesUSB_HubsFehler184" version="0" task="StromversorgungdesUSB_Hubs" opcode="Fehler" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="185" symbol="StromversorgungdesUSB_HubsInformation185" version="0" task="StromversorgungdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="189" symbol="StromversorgungdesUSB_HubsAbgeschlossen189" version="0" task="StromversorgungdesUSB_Hubs" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="StromversorgungdesUSB_HubsStartenArgs"/>
+     <event value="190" symbol="StromversorgungdesUSB_HubsVersenden190" version="0" task="StromversorgungdesUSB_Hubs" opcode="Versenden" level="win:Informational" keywords="Diagnostics" template="StromversorgungdesUSB_HubsStartenArgs"/>
+     <event value="199" symbol="StromversorgungdesUSB_HubsAbgeschlossen199" version="0" task="StromversorgungdesUSB_Hubs" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="StromversorgungdesUSB_HubsStartenArgs"/>
+     <event value="200" symbol="StromversorgungdesUSB_HubsVersenden200" version="0" task="StromversorgungdesUSB_Hubs" opcode="Versenden" level="win:Informational" keywords="Diagnostics" template="StromversorgungdesUSB_HubsStartenArgs"/>
+     <event value="209" symbol="StromversorgungdesUSB_HubsAbgeschlossen209" version="0" task="StromversorgungdesUSB_Hubs" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="StromversorgungdesUSB_HubsStartenArgs"/>
+     <event value="210" symbol="AusnahmefehlerdesUSB_HubsAusnahme" version="0" task="AusnahmefehlerdesUSB_Hubs" opcode="Ausnahme" level="win:Informational" keywords="Diagnostics keyword_400000000000" template="AusnahmefehlerdesUSB_HubsAusnahmeArgs"/>
+     <event value="211" symbol="PortstatusdesUSB_HubsInformation" version="0" task="PortstatusdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="PortstatusdesUSB_HubsInformationArgs"/>
+     <event value="212" symbol="TimerdesUSB_HubsInformation" version="0" task="TimerdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="TimerdesUSB_HubsInformationArgs"/>
+     <event value="213" symbol="TimerdesUSB_HubsInformation213" version="0" task="TimerdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="TimerdesUSB_HubsInformationArgs"/>
+     <event value="214" symbol="TimerdesUSB_HubsInformation214" version="0" task="TimerdesUSB_Hubs" opcode="Information" level="win:Informational" keywords="Diagnostics" template="TimerdesUSB_HubsInformationArgs"/>
+     <event value="220" symbol="InterneZurücksetzungdesUSB_GerätsStarten" version="0" task="InterneZurücksetzungdesUSB_Geräts" opcode="Starten" level="win:Informational" keywords="Diagnostics" template="USB_GerätestartVersendenArgs"/>
+     <event value="229" symbol="InterneZurücksetzungdesUSB_GerätsAbgeschlossen" version="0" task="InterneZurücksetzungdesUSB_Geräts" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="USB_GerätestartVersendenArgs"/>
+     <event value="230" symbol="AusnahmefehlerinderVergangenheitbeiUSB_HubAusnahme" version="0" task="AusnahmefehlerinderVergangenheitbeiUSB_Hub" opcode="Ausnahme" level="win:Informational" keywords="Diagnostics" template="AusnahmefehlerinderVergangenheitbeiUSB_HubAusnahmeArgs"/>
+     <event value="231" symbol="IOCTL_INTERNAL_USB_RESET_PORTdesUSB_GerätsStarten" version="0" task="IOCTL_INTERNAL_USB_RESET_PORTdesUSB_Geräts" opcode="Starten" level="win:Informational" keywords="Diagnostics" template="USB_GerätestartVersendenArgs"/>
+     <event value="232" symbol="IOCTL_INTERNAL_USB_RESET_PORTdesUSB_GerätsAbgeschlossen" version="0" task="IOCTL_INTERNAL_USB_RESET_PORTdesUSB_Geräts" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostics" template="USB_GerätestartVersendenArgs"/>
+     <event value="233" symbol="EnumerationdesUSB_HubsFehler233" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+     <event value="234" symbol="EnumerationdesUSB_HubsFehler234" version="0" task="EnumerationdesUSB_Hubs" opcode="Fehler" level="win:Error" keywords="Diagnostics keyword_400000000000" template="EnumerationdesUSB_HubsStartenArgs"/>
+    </events>
+    <templates>
+     <template tid="USB_HubHinzufügenArgs">
+      <data name="fid_USBHUB_HC" inType="win:UInt8"/>
+      <data name="fid_USBHUB_Hub" inType="win:Int64"/>
+      <data name="fid_USBHUB_Hub_State" inType="win:Binary"/>
+      <data name="fid_USB_HubDescriptor" inType="win:Pointer"/>
+     </template>
+     <template tid="USB_HubEntfernenArgs">
+      <data name="fid_USBHUB_HC" inType="win:AnsiString"/>
+      <data name="fid_USBHUB_Hub" inType="win:Int32"/>
+     </template>
+     <template tid="EnumerationdesUSB_HubsStartenArgs">
+      <data name="fid_USBHUB_HC" inType="win:UInt8"/>
+      <data name="fid_USBHUB_Hub" inType="win:Int64"/>
+      <data name="fid_PortNumber" inType="win:UInt32"/>
+      <data name="fid_Status" inType="win:UInt32"/>
+     </template>
+     <template tid="EnumerationdesUSB_HubsFehler18Args">
+      <data name="fid_USBHUB_HC" inType="win:UInt8"/>
+      <data name="fid_USBHUB_Hub" inType="win:Int64"/>
+      <data name="fid_PortNumber" inType="win:UInt32"/>
+      <data name="fid_USBHUB_CD_Error_Information" inType="win:Binary"/>
+     </template>
+     <template tid="EnumerationdesUSB_HubsFehler19Args">
+      <data name="fid_USBHUB_HC" inType="win:UInt8"/>
+      <data name="fid_USBHUB_Hub" inType="win:Int64"/>
+      <data name="fid_PortNumber" inType="win:UInt32"/>
+      <data name="fid_USBHUB_ID_Error_Information" inType="win:Binary"/>
+     </template>
+     <template tid="PortinformationendesUSB_HubsInformationArgs">
+      <data name="fid_USBHUB_HC" inType="win:UInt8"/>
+      <data name="fid_USBHUB_Hub" inType="win:Int64"/>
+      <data name="fid_PortNumber" inType="win:UInt32"/>
+      <data name="fid_PortAttributes" inType="win:UInt16"/>
+     </template>
+     <template tid="PortinformationendesUSB_HubsInformation81Args">
+      <data name="fid_USBHUB_HC" inType="win:UInt8"/>
+      <data name="fid_USBHUB_Hub" inType="win:Int64"/>
+      <data name="fid_PortNumber" inType="win:UInt32"/>
+      <data name="fid_USBHUB_Acpi_Upc_Package" inType="win:Binary"/>
+     </template>
+     <template tid="PortinformationendesUSB_HubsInformation82Args">
+      <data name="fid_USBHUB_HC" inType="win:UInt8"/>
+      <data name="fid_USBHUB_Hub" inType="win:Int64"/>
+      <data name="fid_PortNumber" inType="win:UInt32"/>
+      <data name="fid_USBHUB_Acpi_Pld" inType="win:Binary"/>
+     </template>
+     <template tid="USB_GerätHinzufügenArgs">
+      <data name="fid_USBHUB_HC" inType="win:UInt8"/>
+      <data name="fid_USBHUB_Device" inType="win:Int64"/>
+      <data name="fid_USBHUB_Device_State" inType="win:GUID"/>
+      <data name="fid_DeviceDescriptor" inType="win:Pointer"/>
+     </template>
+     <template tid="USB_GerätEntfernenArgs">
+      <data name="fid_USBHUB_HC" inType="win:AnsiString"/>
+      <data name="fid_USBHUB_Device" inType="win:Int32"/>
+     </template>
+     <template tid="USB_GerätInformation103Args">
+      <data name="fid_USBHUB_HC" inType="win:Int8"/>
+      <data name="fid_USBHUB_Device" inType="win:UInt32"/>
+      <data name="fid_DeviceDescription" inType="win:UnicodeString"/>
+     </template>
+     <template tid="USB_GerätestartVersendenArgs">
+      <data name="fid_USBHUB_HC" inType="win:Int8"/>
+      <data name="fid_USBHUB_Device" inType="win:UInt32"/>
+      <data name="fid_Status" inType="win:UInt32"/>
+     </template>
+     <template tid="EnergieeinstellungendesUSB_GerätsVersendenArgs">
+      <data name="fid_USBHUB_HC" inType="win:UInt8"/>
+      <data name="fid_USBHUB_Device" inType="win:Int64"/>
+      <data name="fid_PowerState" inType="win:UInt32"/>
+      <data name="fid_Status" inType="win:UInt32"/>
+     </template>
+     <template tid="StromversorgungdesUSB_HubsStartenArgs">
+      <data name="fid_USBHUB_HC" inType="win:UInt8"/>
+      <data name="fid_USBHUB_Hub" inType="win:Int64"/>
+      <data name="fid_PowerState" inType="win:UInt32"/>
+      <data name="fid_Status" inType="win:UInt32"/>
+     </template>
+     <template tid="AusnahmefehlerdesUSB_HubsAusnahmeArgs">
+      <data name="fid_USBHUB_HC" inType="win:Int32"/>
+      <data name="fid_USBHUB_Hub" inType="win:Double"/>
+      <data name="fid_PortNumber" inType="win:UInt32"/>
+      <data name="fid_Class" inType="win:UInt32"/>
+      <data name="fid_NtStatus" inType="win:UInt32"/>
+      <data name="fid_UsbdStatus" inType="win:UInt32"/>
+      <data name="fid_DebugText" inType="win:AnsiString"/>
+     </template>
+     <template tid="PortstatusdesUSB_HubsInformationArgs">
+      <data name="fid_USBHUB_HC" inType="win:UInt8"/>
+      <data name="fid_USBHUB_Hub" inType="win:Int64"/>
+      <data name="fid_PortNumber" inType="win:UInt32"/>
+      <data name="fid_PortStatusChange" inType="win:UInt16"/>
+     </template>
+     <template tid="TimerdesUSB_HubsInformationArgs">
+      <data name="fid_USBHUB_HC" inType="win:UInt8"/>
+      <data name="fid_USBHUB_Hub" inType="win:Int64"/>
+      <data name="fid_PortNumber" inType="win:UInt32"/>
+      <data name="fid_TimerTag" inType="win:UInt32"/>
+     </template>
+     <template tid="AusnahmefehlerinderVergangenheitbeiUSB_HubAusnahmeArgs">
+      <data name="fid_TimeElapsedBeforeLogStart" inType="win:UInt64"/>
+      <data name="fid_USBHUB_HC" inType="win:UInt32"/>
+      <data name="fid_USBHUB_Hub" inType="win:Boolean"/>
+      <data name="fid_PortNumber" inType="win:UInt32"/>
+      <data name="fid_Class" inType="win:UInt32"/>
+      <data name="fid_NtStatus" inType="win:UInt32"/>
+      <data name="fid_UsbdStatus" inType="win:UInt32"/>
+      <data name="fid_DebugText" inType="win:AnsiString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Diagnostics" value="Diagnostics"/>
+    <string id="keyword_keyword_400000000000" value="keyword_400000000000"/>
+    <string id="task_USB_Hub" value="USB_Hub"/>
+    <string id="opcode_USB_HubHinzufügen" value="Hinzufügen"/>
+    <string id="opcode_USB_HubEntfernen" value="Entfernen"/>
+    <string id="opcode_USB_HubInformation" value="Information"/>
+    <string id="task_EnumerationdesUSB_Hubs" value="EnumerationdesUSB_Hubs"/>
+    <string id="opcode_EnumerationdesUSB_HubsStarten" value="Starten"/>
+    <string id="opcode_EnumerationdesUSB_HubsFehler" value="Fehler"/>
+    <string id="opcode_EnumerationdesUSB_HubsAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_EnumerationdesUSB_HubsInformation" value="Information"/>
+    <string id="task_EnergiesparendesUSB_Hubs" value="EnergiesparendesUSB_Hubs"/>
+    <string id="opcode_EnergiesparendesUSB_HubsStarten" value="Starten"/>
+    <string id="opcode_EnergiesparendesUSB_HubsAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_EnergiesparendesUSB_HubsInformation" value="Information"/>
+    <string id="task_ReaktivierendesUSB_Hubs" value="ReaktivierendesUSB_Hubs"/>
+    <string id="opcode_ReaktivierendesUSB_HubsStarten" value="Starten"/>
+    <string id="opcode_ReaktivierendesUSB_HubsAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_ReaktivierendesUSB_HubsInformation" value="Information"/>
+    <string id="task_ZurücksetzenderWiederherstellungdesUSB_Hubs" value="ZurücksetzenderWiederherstellungdesUSB_Hubs"/>
+    <string id="opcode_ZurücksetzenderWiederherstellungdesUSB_HubsStarten" value="Starten"/>
+    <string id="opcode_ZurücksetzenderWiederherstellungdesUSB_HubsAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_ZurücksetzenderWiederherstellungdesUSB_HubsWarteschlange" value="Warteschlange"/>
+    <string id="task_AbfragenderGerätebeziehungs_IRPdesUSB_Hubs_BusRelations" value="AbfragenderGerätebeziehungs_IRPdesUSB_Hubs_BusRelations"/>
+    <string id="opcode_AbfragenderGerätebeziehungs_IRPdesUSB_Hubs_BusRelationsAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_AbfragenderGerätebeziehungs_IRPdesUSB_Hubs_BusRelationsVersenden" value="Versenden"/>
+    <string id="task_WartenaufdieAktivierungdesUSB_Geräts_7" value="WartenaufdieAktivierungdesUSB_Geräts_7"/>
+    <string id="opcode_WartenaufdieAktivierungdesUSB_Geräts_7Starten" value="Starten"/>
+    <string id="opcode_WartenaufdieAktivierungdesUSB_Geräts_7Abgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_WartenaufdieAktivierungdesUSB_Geräts_7Versenden" value="Versenden"/>
+    <string id="task_StromversorgungdesUSB_Hubs" value="StromversorgungdesUSB_Hubs"/>
+    <string id="opcode_StromversorgungdesUSB_HubsStarten" value="Starten"/>
+    <string id="opcode_StromversorgungdesUSB_HubsFehler" value="Fehler"/>
+    <string id="opcode_StromversorgungdesUSB_HubsAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_StromversorgungdesUSB_HubsVersenden" value="Versenden"/>
+    <string id="opcode_StromversorgungdesUSB_HubsInformation" value="Information"/>
+    <string id="task_PortinformationendesUSB_Hubs" value="PortinformationendesUSB_Hubs"/>
+    <string id="opcode_PortinformationendesUSB_HubsInformation" value="Information"/>
+    <string id="task_USB_Gerät" value="USB_Gerät"/>
+    <string id="opcode_USB_GerätHinzufügen" value="Hinzufügen"/>
+    <string id="opcode_USB_GerätEntfernen" value="Entfernen"/>
+    <string id="opcode_USB_GerätInformation" value="Information"/>
+    <string id="task_USB_Gerätestart" value="USB_Gerätestart"/>
+    <string id="opcode_USB_GerätestartFehler" value="Fehler"/>
+    <string id="opcode_USB_GerätestartAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_USB_GerätestartVersenden" value="Versenden"/>
+    <string id="task_EnergieeinstellungendesUSB_Geräts" value="EnergieeinstellungendesUSB_Geräts"/>
+    <string id="opcode_EnergieeinstellungendesUSB_GerätsAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_EnergieeinstellungendesUSB_GerätsVersenden" value="Versenden"/>
+    <string id="task_BenachrichtigungwegenLeerlaufsdesUSB_Geräts" value="BenachrichtigungwegenLeerlaufsdesUSB_Geräts"/>
+    <string id="opcode_BenachrichtigungwegenLeerlaufsdesUSB_GerätsAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_BenachrichtigungwegenLeerlaufsdesUSB_GerätsVersenden" value="Versenden"/>
+    <string id="task_WartenaufdieAktivierungdesUSB_Geräts" value="WartenaufdieAktivierungdesUSB_Geräts"/>
+    <string id="opcode_WartenaufdieAktivierungdesUSB_GerätsAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_WartenaufdieAktivierungdesUSB_GerätsVersenden" value="Versenden"/>
+    <string id="task_AusnahmefehlerdesUSB_Hubs" value="AusnahmefehlerdesUSB_Hubs"/>
+    <string id="opcode_AusnahmefehlerdesUSB_HubsAusnahme" value="Ausnahme"/>
+    <string id="task_PortstatusdesUSB_Hubs" value="PortstatusdesUSB_Hubs"/>
+    <string id="opcode_PortstatusdesUSB_HubsInformation" value="Information"/>
+    <string id="task_InterneZurücksetzungdesUSB_Geräts" value="InterneZurücksetzungdesUSB_Geräts"/>
+    <string id="opcode_InterneZurücksetzungdesUSB_GerätsStarten" value="Starten"/>
+    <string id="opcode_InterneZurücksetzungdesUSB_GerätsAbgeschlossen" value="Abgeschlossen"/>
+    <string id="task_AusnahmefehlerinderVergangenheitbeiUSB_Hub" value="AusnahmefehlerinderVergangenheitbeiUSB_Hub"/>
+    <string id="opcode_AusnahmefehlerinderVergangenheitbeiUSB_HubAusnahme" value="Ausnahme"/>
+    <string id="task_IOCTL_INTERNAL_USB_RESET_PORTdesUSB_Geräts" value="IOCTL_INTERNAL_USB_RESET_PORTdesUSB_Geräts"/>
+    <string id="opcode_IOCTL_INTERNAL_USB_RESET_PORTdesUSB_GerätsStarten" value="Starten"/>
+    <string id="opcode_IOCTL_INTERNAL_USB_RESET_PORTdesUSB_GerätsAbgeschlossen" value="Abgeschlossen"/>
+    <string id="task_TimerdesUSB_Hubs" value="TimerdesUSB_Hubs"/>
+    <string id="opcode_TimerdesUSB_HubsInformation" value="Information"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

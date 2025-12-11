@@ -1,0 +1,55 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-LanGPA" guid="{cb070027-1534-4cf3-98ea-b9751f508376}" resourceFileName="Microsoft-Windows-LanGPA" messageFileName="Microsoft-Windows-LanGPA" symbol="MicrosoftWindowsLanGPA" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="tid_GPClient.PolicyType">
+      <map value="0x0" message="$(string.map_tid_GPClient.PolicyTypebereits vorhanden)"/>
+      <map value="0x1" message="$(string.map_tid_GPClient.PolicyTypeneu heruntergeladen)"/>
+     </valueMap>
+     <valueMap name="tid_GPClient.BOOL">
+      <map value="0x0" message="$(string.map_tid_GPClient.BOOLJa)"/>
+      <map value="0x1" message="$(string.map_tid_GPClient.BOOLNein)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="14001" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="14002" symbol="task_014002" version="0" task="task_0" level="win:Informational"/>
+     <event value="14003" symbol="task_014003" version="0" task="task_0" level="win:Informational" template="task_014003Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="PolicyType" inType="win:UInt32" map="tid_GPClient.PolicyType"/>
+      <data name="PolicyName" inType="win:UnicodeString"/>
+      <data name="PolicyNamePlaceholder" inType="win:UInt32"/>
+      <data name="AutoConfigEnabled" inType="win:UInt32" map="tid_GPClient.BOOL"/>
+      <data name="Profileapplied" inType="win:UInt32"/>
+      <data name="ReasonCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_014003Args">
+      <data name="PolicyType" inType="win:UInt32"/>
+      <data name="PolicyName" inType="win:UnicodeString"/>
+      <data name="PolicyNamePlaceholder" inType="win:UnicodeString"/>
+      <data name="ReasonCode" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_tid_GPClient.PolicyTypebereits vorhanden" value="bereits vorhanden"/>
+    <string id="map_tid_GPClient.PolicyTypeneu heruntergeladen" value="neu heruntergeladen"/>
+    <string id="map_tid_GPClient.BOOLJa" value="Ja"/>
+    <string id="map_tid_GPClient.BOOLNein" value="Nein"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

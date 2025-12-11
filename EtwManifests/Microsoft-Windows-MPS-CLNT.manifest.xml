@@ -1,0 +1,272 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-MPS-CLNT" guid="{37945dc2-899b-44d1-b79c-dd4a9e57ff98}" resourceFileName="Microsoft-Windows-MPS-CLNT" messageFileName="Microsoft-Windows-MPS-CLNT" symbol="MicrosoftWindowsMPSCLNT" source="Xml" >
+    <keywords>
+     <keyword name="Client" message="$(string.keyword_Client)" mask="0x10000"/>
+    </keywords>
+    <tasks>
+     <task name="MPS_CLNT_API_RestoreDefaults" message="$(string.task_MPS_CLNT_API_RestoreDefaults)" value="101"/>
+     <task name="MPS_CLNT_API_EnumFirewallRules" message="$(string.task_MPS_CLNT_API_EnumFirewallRules)" value="103"/>
+     <task name="MPS_CLNT_API_DeleteFirewallRule" message="$(string.task_MPS_CLNT_API_DeleteFirewallRule)" value="105"/>
+     <task name="MPS_CLNT_API_DeleteAllFirewallRules" message="$(string.task_MPS_CLNT_API_DeleteAllFirewallRules)" value="107"/>
+     <task name="MPS_CLNT_API_AddFirewallRule" message="$(string.task_MPS_CLNT_API_AddFirewallRule)" value="109"/>
+     <task name="MPS_CLNT_API_SetFirewallRule" message="$(string.task_MPS_CLNT_API_SetFirewallRule)" value="111"/>
+     <task name="MPS_CLNT_API_GetConfig" message="$(string.task_MPS_CLNT_API_GetConfig)" value="113"/>
+     <task name="MPS_CLNT_API_SetConfig" message="$(string.task_MPS_CLNT_API_SetConfig)" value="115"/>
+     <task name="MPS_CLNT_API_GetGlobalConfig" message="$(string.task_MPS_CLNT_API_GetGlobalConfig)" value="117"/>
+     <task name="MPS_CLNT_API_SetGlobalConfig" message="$(string.task_MPS_CLNT_API_SetGlobalConfig)" value="119"/>
+     <task name="MPS_CLNT_API_OpenPolicyStore" message="$(string.task_MPS_CLNT_API_OpenPolicyStore)" value="121"/>
+     <task name="MPS_CLNT_API_ClosePolicyStore" message="$(string.task_MPS_CLNT_API_ClosePolicyStore)" value="123"/>
+     <task name="MPS_CLNT_API_AddConnectionSecurityRule" message="$(string.task_MPS_CLNT_API_AddConnectionSecurityRule)" value="125"/>
+     <task name="MPS_CLNT_API_SetConnectionSecurityRule" message="$(string.task_MPS_CLNT_API_SetConnectionSecurityRule)" value="127"/>
+     <task name="MPS_CLNT_API_DeleteConnectionSecurityRule" message="$(string.task_MPS_CLNT_API_DeleteConnectionSecurityRule)" value="129"/>
+     <task name="MPS_CLNT_API_DeleteAllConnectionSecurityRules" message="$(string.task_MPS_CLNT_API_DeleteAllConnectionSecurityRules)" value="131"/>
+     <task name="MPS_CLNT_API_EnumConnectionSecurityRules" message="$(string.task_MPS_CLNT_API_EnumConnectionSecurityRules)" value="133"/>
+     <task name="MPS_CLNT_API_AddAuthenticationSet" message="$(string.task_MPS_CLNT_API_AddAuthenticationSet)" value="135"/>
+     <task name="MPS_CLNT_API_DeleteAuthenticationSet" message="$(string.task_MPS_CLNT_API_DeleteAuthenticationSet)" value="137"/>
+     <task name="MPS_CLNT_API_SetAuthenticationSet" message="$(string.task_MPS_CLNT_API_SetAuthenticationSet)" value="139"/>
+     <task name="MPS_CLNT_API_DeleteAllAuthenticationSets" message="$(string.task_MPS_CLNT_API_DeleteAllAuthenticationSets)" value="141"/>
+     <task name="MPS_CLNT_API_EnumAuthenticationSets" message="$(string.task_MPS_CLNT_API_EnumAuthenticationSets)" value="143"/>
+     <task name="MPS_CLNT_API_AddCryptoSet" message="$(string.task_MPS_CLNT_API_AddCryptoSet)" value="145"/>
+     <task name="MPS_CLNT_API_SetCryptoSet" message="$(string.task_MPS_CLNT_API_SetCryptoSet)" value="147"/>
+     <task name="MPS_CLNT_API_DeleteCryptoSet" message="$(string.task_MPS_CLNT_API_DeleteCryptoSet)" value="149"/>
+     <task name="MPS_CLNT_API_DeleteAllCryptoSets" message="$(string.task_MPS_CLNT_API_DeleteAllCryptoSets)" value="151"/>
+     <task name="MPS_CLNT_API_EnumCryptoSets" message="$(string.task_MPS_CLNT_API_EnumCryptoSets)" value="153"/>
+     <task name="MPS_CLNT_API_EnumPhase1SAs" message="$(string.task_MPS_CLNT_API_EnumPhase1SAs)" value="155"/>
+     <task name="MPS_CLNT_API_DeletePhase1SAs" message="$(string.task_MPS_CLNT_API_DeletePhase1SAs)" value="157"/>
+     <task name="MPS_CLNT_API_EnumPhase2SAs" message="$(string.task_MPS_CLNT_API_EnumPhase2SAs)" value="159"/>
+     <task name="MPS_CLNT_API_VerifyFirewallRule" message="$(string.task_MPS_CLNT_API_VerifyFirewallRule)" value="161"/>
+     <task name="MPS_CLNT_API_VerifyConnectionSecurityRule" message="$(string.task_MPS_CLNT_API_VerifyConnectionSecurityRule)" value="163"/>
+     <task name="MPS_CLNT_API_VerifyAuthenticationSet" message="$(string.task_MPS_CLNT_API_VerifyAuthenticationSet)" value="165"/>
+     <task name="MPS_CLNT_API_VerifyCryptoSet" message="$(string.task_MPS_CLNT_API_VerifyCryptoSet)" value="167"/>
+     <task name="MPS_CLNT_API_ImportPolicy" message="$(string.task_MPS_CLNT_API_ImportPolicy)" value="169"/>
+     <task name="MPS_CLNT_API_ExportPolicy" message="$(string.task_MPS_CLNT_API_ExportPolicy)" value="171"/>
+     <task name="MPS_CLNT_API_DeletePhase2SAs" message="$(string.task_MPS_CLNT_API_DeletePhase2SAs)" value="173"/>
+     <task name="MPS_CLNT_API_FreeFirewallRules" message="$(string.task_MPS_CLNT_API_FreeFirewallRules)" value="175"/>
+     <task name="MPS_CLNT_API_FreeConnectionSecurityRules" message="$(string.task_MPS_CLNT_API_FreeConnectionSecurityRules)" value="177"/>
+     <task name="MPS_CLNT_API_FreeAuthenticationSets" message="$(string.task_MPS_CLNT_API_FreeAuthenticationSets)" value="179"/>
+     <task name="MPS_CLNT_API_FreeCryptoSets" message="$(string.task_MPS_CLNT_API_FreeCryptoSets)" value="181"/>
+     <task name="MPS_CLNT_API_FreePhase1SAs" message="$(string.task_MPS_CLNT_API_FreePhase1SAs)" value="183"/>
+     <task name="MPS_CLNT_API_FreePhase2SAs" message="$(string.task_MPS_CLNT_API_FreePhase2SAs)" value="185"/>
+     <task name="MPS_CLNT_API_StatusMessageFromStatusCode" message="$(string.task_MPS_CLNT_API_StatusMessageFromStatusCode)" value="187"/>
+     <task name="MPS_CLNT_API_AddMainModeRule" message="$(string.task_MPS_CLNT_API_AddMainModeRule)" value="189"/>
+     <task name="MPS_CLNT_API_SetMainModeRule" message="$(string.task_MPS_CLNT_API_SetMainModeRule)" value="191"/>
+     <task name="MPS_CLNT_API_DeleteMainModeRule" message="$(string.task_MPS_CLNT_API_DeleteMainModeRule)" value="193"/>
+     <task name="MPS_CLNT_API_DeleteAllMainModeRules" message="$(string.task_MPS_CLNT_API_DeleteAllMainModeRules)" value="195"/>
+     <task name="MPS_CLNT_API_EnumMainModeRules" message="$(string.task_MPS_CLNT_API_EnumMainModeRules)" value="197"/>
+     <task name="MPS_CLNT_API_FreeMainModeRules" message="$(string.task_MPS_CLNT_API_FreeMainModeRules)" value="199"/>
+     <task name="MPS_CLNT_API_VerifyMainModeRule" message="$(string.task_MPS_CLNT_API_VerifyMainModeRule)" value="201"/>
+     <task name="MPS_CLNT_API_QueryFirewallRules" message="$(string.task_MPS_CLNT_API_QueryFirewallRules)" value="203"/>
+     <task name="MPS_CLNT_API_QueryConnectionSecurityRules" message="$(string.task_MPS_CLNT_API_QueryConnectionSecurityRules)" value="205"/>
+     <task name="MPS_CLNT_API_QueryMainModeRules" message="$(string.task_MPS_CLNT_API_QueryMainModeRules)" value="207"/>
+     <task name="MPS_CLNT_API_QueryAuthenticationSets" message="$(string.task_MPS_CLNT_API_QueryAuthenticationSets)" value="209"/>
+     <task name="MPS_CLNT_API_QueryCryptoSets" message="$(string.task_MPS_CLNT_API_QueryCryptoSets)" value="211"/>
+     <task name="MPS_CLNT_API_FreeQuery" message="$(string.task_MPS_CLNT_API_FreeQuery)" value="213"/>
+     <task name="MPS_CLNT_API_VerifyFirewallRuleQuery" message="$(string.task_MPS_CLNT_API_VerifyFirewallRuleQuery)" value="215"/>
+     <task name="MPS_CLNT_API_VerifyConnectionSecurityRuleQuery" message="$(string.task_MPS_CLNT_API_VerifyConnectionSecurityRuleQuery)" value="217"/>
+     <task name="MPS_CLNT_API_VerifyMainModeRuleQuery" message="$(string.task_MPS_CLNT_API_VerifyMainModeRuleQuery)" value="219"/>
+     <task name="MPS_CLNT_API_VerifyAuthenticationSetQuery" message="$(string.task_MPS_CLNT_API_VerifyAuthenticationSetQuery)" value="221"/>
+     <task name="MPS_CLNT_API_VerifyCryptoSetQuery" message="$(string.task_MPS_CLNT_API_VerifyCryptoSetQuery)" value="223"/>
+    </tasks>
+    <events>
+     <event value="200" symbol="MPS_CLNT_API_RestoreDefaultsStarten" version="0" task="MPS_CLNT_API_RestoreDefaults" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="201" symbol="MPS_CLNT_API_RestoreDefaultsBeenden" version="0" task="MPS_CLNT_API_RestoreDefaults" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="202" symbol="MPS_CLNT_API_EnumFirewallRulesStarten" version="0" task="MPS_CLNT_API_EnumFirewallRules" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="203" symbol="MPS_CLNT_API_EnumFirewallRulesBeenden" version="0" task="MPS_CLNT_API_EnumFirewallRules" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="204" symbol="MPS_CLNT_API_DeleteFirewallRuleStarten" version="0" task="MPS_CLNT_API_DeleteFirewallRule" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="205" symbol="MPS_CLNT_API_DeleteFirewallRuleBeenden" version="0" task="MPS_CLNT_API_DeleteFirewallRule" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="206" symbol="MPS_CLNT_API_DeleteAllFirewallRulesStarten" version="0" task="MPS_CLNT_API_DeleteAllFirewallRules" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="207" symbol="MPS_CLNT_API_DeleteAllFirewallRulesBeenden" version="0" task="MPS_CLNT_API_DeleteAllFirewallRules" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="208" symbol="MPS_CLNT_API_AddFirewallRuleStarten" version="0" task="MPS_CLNT_API_AddFirewallRule" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="209" symbol="MPS_CLNT_API_AddFirewallRuleBeenden" version="0" task="MPS_CLNT_API_AddFirewallRule" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="210" symbol="MPS_CLNT_API_SetFirewallRuleStarten" version="0" task="MPS_CLNT_API_SetFirewallRule" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="211" symbol="MPS_CLNT_API_SetFirewallRuleBeenden" version="0" task="MPS_CLNT_API_SetFirewallRule" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="212" symbol="MPS_CLNT_API_GetConfigStarten" version="0" task="MPS_CLNT_API_GetConfig" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="213" symbol="MPS_CLNT_API_GetConfigBeenden" version="0" task="MPS_CLNT_API_GetConfig" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="214" symbol="MPS_CLNT_API_SetConfigStarten" version="0" task="MPS_CLNT_API_SetConfig" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="215" symbol="MPS_CLNT_API_SetConfigBeenden" version="0" task="MPS_CLNT_API_SetConfig" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="216" symbol="MPS_CLNT_API_GetGlobalConfigStarten" version="0" task="MPS_CLNT_API_GetGlobalConfig" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="217" symbol="MPS_CLNT_API_GetGlobalConfigBeenden" version="0" task="MPS_CLNT_API_GetGlobalConfig" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="218" symbol="MPS_CLNT_API_SetGlobalConfigStarten" version="0" task="MPS_CLNT_API_SetGlobalConfig" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="219" symbol="MPS_CLNT_API_SetGlobalConfigBeenden" version="0" task="MPS_CLNT_API_SetGlobalConfig" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="220" symbol="MPS_CLNT_API_OpenPolicyStoreStarten" version="0" task="MPS_CLNT_API_OpenPolicyStore" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="221" symbol="MPS_CLNT_API_OpenPolicyStoreBeenden" version="0" task="MPS_CLNT_API_OpenPolicyStore" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="222" symbol="MPS_CLNT_API_ClosePolicyStoreStarten" version="0" task="MPS_CLNT_API_ClosePolicyStore" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="223" symbol="MPS_CLNT_API_ClosePolicyStoreBeenden" version="0" task="MPS_CLNT_API_ClosePolicyStore" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="224" symbol="MPS_CLNT_API_AddConnectionSecurityRuleStarten" version="0" task="MPS_CLNT_API_AddConnectionSecurityRule" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="225" symbol="MPS_CLNT_API_AddConnectionSecurityRuleBeenden" version="0" task="MPS_CLNT_API_AddConnectionSecurityRule" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="226" symbol="MPS_CLNT_API_SetConnectionSecurityRuleStarten" version="0" task="MPS_CLNT_API_SetConnectionSecurityRule" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="227" symbol="MPS_CLNT_API_SetConnectionSecurityRuleBeenden" version="0" task="MPS_CLNT_API_SetConnectionSecurityRule" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="228" symbol="MPS_CLNT_API_DeleteConnectionSecurityRuleStarten" version="0" task="MPS_CLNT_API_DeleteConnectionSecurityRule" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="229" symbol="MPS_CLNT_API_DeleteConnectionSecurityRuleBeenden" version="0" task="MPS_CLNT_API_DeleteConnectionSecurityRule" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="230" symbol="MPS_CLNT_API_DeleteAllConnectionSecurityRulesStarten" version="0" task="MPS_CLNT_API_DeleteAllConnectionSecurityRules" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="231" symbol="MPS_CLNT_API_DeleteAllConnectionSecurityRulesBeenden" version="0" task="MPS_CLNT_API_DeleteAllConnectionSecurityRules" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="232" symbol="MPS_CLNT_API_EnumConnectionSecurityRulesStarten" version="0" task="MPS_CLNT_API_EnumConnectionSecurityRules" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="233" symbol="MPS_CLNT_API_EnumConnectionSecurityRulesBeenden" version="0" task="MPS_CLNT_API_EnumConnectionSecurityRules" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="234" symbol="MPS_CLNT_API_AddAuthenticationSetStarten" version="0" task="MPS_CLNT_API_AddAuthenticationSet" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="235" symbol="MPS_CLNT_API_AddAuthenticationSetBeenden" version="0" task="MPS_CLNT_API_AddAuthenticationSet" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="236" symbol="MPS_CLNT_API_DeleteAuthenticationSetStarten" version="0" task="MPS_CLNT_API_DeleteAuthenticationSet" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="237" symbol="MPS_CLNT_API_DeleteAuthenticationSetBeenden" version="0" task="MPS_CLNT_API_DeleteAuthenticationSet" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="238" symbol="MPS_CLNT_API_SetAuthenticationSetStarten" version="0" task="MPS_CLNT_API_SetAuthenticationSet" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="239" symbol="MPS_CLNT_API_SetAuthenticationSetBeenden" version="0" task="MPS_CLNT_API_SetAuthenticationSet" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="240" symbol="MPS_CLNT_API_DeleteAllAuthenticationSetsStarten" version="0" task="MPS_CLNT_API_DeleteAllAuthenticationSets" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="241" symbol="MPS_CLNT_API_DeleteAllAuthenticationSetsBeenden" version="0" task="MPS_CLNT_API_DeleteAllAuthenticationSets" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="242" symbol="MPS_CLNT_API_EnumAuthenticationSetsStarten" version="0" task="MPS_CLNT_API_EnumAuthenticationSets" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="243" symbol="MPS_CLNT_API_EnumAuthenticationSetsBeenden" version="0" task="MPS_CLNT_API_EnumAuthenticationSets" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="244" symbol="MPS_CLNT_API_AddCryptoSetStarten" version="0" task="MPS_CLNT_API_AddCryptoSet" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="245" symbol="MPS_CLNT_API_AddCryptoSetBeenden" version="0" task="MPS_CLNT_API_AddCryptoSet" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="246" symbol="MPS_CLNT_API_SetCryptoSetStarten" version="0" task="MPS_CLNT_API_SetCryptoSet" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="247" symbol="MPS_CLNT_API_SetCryptoSetBeenden" version="0" task="MPS_CLNT_API_SetCryptoSet" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="248" symbol="MPS_CLNT_API_DeleteCryptoSetStarten" version="0" task="MPS_CLNT_API_DeleteCryptoSet" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="249" symbol="MPS_CLNT_API_DeleteCryptoSetBeenden" version="0" task="MPS_CLNT_API_DeleteCryptoSet" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="250" symbol="MPS_CLNT_API_DeleteAllCryptoSetsStarten" version="0" task="MPS_CLNT_API_DeleteAllCryptoSets" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="251" symbol="MPS_CLNT_API_DeleteAllCryptoSetsBeenden" version="0" task="MPS_CLNT_API_DeleteAllCryptoSets" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="252" symbol="MPS_CLNT_API_EnumCryptoSetsStarten" version="0" task="MPS_CLNT_API_EnumCryptoSets" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="253" symbol="MPS_CLNT_API_EnumCryptoSetsBeenden" version="0" task="MPS_CLNT_API_EnumCryptoSets" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="254" symbol="MPS_CLNT_API_EnumPhase1SAsStarten" version="0" task="MPS_CLNT_API_EnumPhase1SAs" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="255" symbol="MPS_CLNT_API_EnumPhase1SAsBeenden" version="0" task="MPS_CLNT_API_EnumPhase1SAs" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="256" symbol="MPS_CLNT_API_DeletePhase1SAsStarten" version="0" task="MPS_CLNT_API_DeletePhase1SAs" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="257" symbol="MPS_CLNT_API_DeletePhase1SAsBeenden" version="0" task="MPS_CLNT_API_DeletePhase1SAs" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="258" symbol="MPS_CLNT_API_EnumPhase2SAsStarten" version="0" task="MPS_CLNT_API_EnumPhase2SAs" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="259" symbol="MPS_CLNT_API_EnumPhase2SAsBeenden" version="0" task="MPS_CLNT_API_EnumPhase2SAs" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="260" symbol="MPS_CLNT_API_VerifyFirewallRuleStarten" version="0" task="MPS_CLNT_API_VerifyFirewallRule" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="261" symbol="MPS_CLNT_API_VerifyFirewallRuleBeenden" version="0" task="MPS_CLNT_API_VerifyFirewallRule" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="262" symbol="MPS_CLNT_API_VerifyConnectionSecurityRuleStarten" version="0" task="MPS_CLNT_API_VerifyConnectionSecurityRule" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="263" symbol="MPS_CLNT_API_VerifyConnectionSecurityRuleBeenden" version="0" task="MPS_CLNT_API_VerifyConnectionSecurityRule" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="264" symbol="MPS_CLNT_API_VerifyAuthenticationSetStarten" version="0" task="MPS_CLNT_API_VerifyAuthenticationSet" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="265" symbol="MPS_CLNT_API_VerifyAuthenticationSetBeenden" version="0" task="MPS_CLNT_API_VerifyAuthenticationSet" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="266" symbol="MPS_CLNT_API_VerifyCryptoSetStarten" version="0" task="MPS_CLNT_API_VerifyCryptoSet" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="267" symbol="MPS_CLNT_API_VerifyCryptoSetBeenden" version="0" task="MPS_CLNT_API_VerifyCryptoSet" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="268" symbol="MPS_CLNT_API_ImportPolicyStarten" version="0" task="MPS_CLNT_API_ImportPolicy" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="269" symbol="MPS_CLNT_API_ImportPolicyBeenden" version="0" task="MPS_CLNT_API_ImportPolicy" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="270" symbol="MPS_CLNT_API_ExportPolicyStarten" version="0" task="MPS_CLNT_API_ExportPolicy" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="271" symbol="MPS_CLNT_API_ExportPolicyBeenden" version="0" task="MPS_CLNT_API_ExportPolicy" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="272" symbol="MPS_CLNT_API_DeletePhase2SAsStarten" version="0" task="MPS_CLNT_API_DeletePhase2SAs" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="273" symbol="MPS_CLNT_API_DeletePhase2SAsBeenden" version="0" task="MPS_CLNT_API_DeletePhase2SAs" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="274" symbol="MPS_CLNT_API_FreeFirewallRulesStarten" version="0" task="MPS_CLNT_API_FreeFirewallRules" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="275" symbol="MPS_CLNT_API_FreeFirewallRulesBeenden" version="0" task="MPS_CLNT_API_FreeFirewallRules" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="276" symbol="MPS_CLNT_API_FreeConnectionSecurityRulesStarten" version="0" task="MPS_CLNT_API_FreeConnectionSecurityRules" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="277" symbol="MPS_CLNT_API_FreeConnectionSecurityRulesBeenden" version="0" task="MPS_CLNT_API_FreeConnectionSecurityRules" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="278" symbol="MPS_CLNT_API_FreeAuthenticationSetsStarten" version="0" task="MPS_CLNT_API_FreeAuthenticationSets" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="279" symbol="MPS_CLNT_API_FreeAuthenticationSetsBeenden" version="0" task="MPS_CLNT_API_FreeAuthenticationSets" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="280" symbol="MPS_CLNT_API_FreeCryptoSetsStarten" version="0" task="MPS_CLNT_API_FreeCryptoSets" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="281" symbol="MPS_CLNT_API_FreeCryptoSetsBeenden" version="0" task="MPS_CLNT_API_FreeCryptoSets" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="282" symbol="MPS_CLNT_API_FreePhase1SAsStarten" version="0" task="MPS_CLNT_API_FreePhase1SAs" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="283" symbol="MPS_CLNT_API_FreePhase1SAsBeenden" version="0" task="MPS_CLNT_API_FreePhase1SAs" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="284" symbol="MPS_CLNT_API_FreePhase2SAsStarten" version="0" task="MPS_CLNT_API_FreePhase2SAs" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="285" symbol="MPS_CLNT_API_FreePhase2SAsBeenden" version="0" task="MPS_CLNT_API_FreePhase2SAs" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="286" symbol="MPS_CLNT_API_StatusMessageFromStatusCodeStarten" version="0" task="MPS_CLNT_API_StatusMessageFromStatusCode" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="287" symbol="MPS_CLNT_API_StatusMessageFromStatusCodeBeenden" version="0" task="MPS_CLNT_API_StatusMessageFromStatusCode" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="288" symbol="MPS_CLNT_API_FreeMainModeRulesStarten" version="0" task="MPS_CLNT_API_FreeMainModeRules" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="289" symbol="MPS_CLNT_API_FreeMainModeRulesBeenden" version="0" task="MPS_CLNT_API_FreeMainModeRules" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="290" symbol="MPS_CLNT_API_EnumMainModeRulesStarten" version="0" task="MPS_CLNT_API_EnumMainModeRules" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="291" symbol="MPS_CLNT_API_EnumMainModeRulesBeenden" version="0" task="MPS_CLNT_API_EnumMainModeRules" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="292" symbol="MPS_CLNT_API_DeleteMainModeRuleStarten" version="0" task="MPS_CLNT_API_DeleteMainModeRule" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="293" symbol="MPS_CLNT_API_DeleteMainModeRuleBeenden" version="0" task="MPS_CLNT_API_DeleteMainModeRule" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="294" symbol="MPS_CLNT_API_DeleteAllMainModeRulesStarten" version="0" task="MPS_CLNT_API_DeleteAllMainModeRules" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="295" symbol="MPS_CLNT_API_DeleteAllMainModeRulesBeenden" version="0" task="MPS_CLNT_API_DeleteAllMainModeRules" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="296" symbol="MPS_CLNT_API_AddMainModeRuleStarten" version="0" task="MPS_CLNT_API_AddMainModeRule" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="297" symbol="MPS_CLNT_API_AddMainModeRuleBeenden" version="0" task="MPS_CLNT_API_AddMainModeRule" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="298" symbol="MPS_CLNT_API_SetMainModeRuleStarten" version="0" task="MPS_CLNT_API_SetMainModeRule" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="299" symbol="MPS_CLNT_API_SetMainModeRuleBeenden" version="0" task="MPS_CLNT_API_SetMainModeRule" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="300" symbol="MPS_CLNT_API_VerifyMainModeRuleStarten" version="0" task="MPS_CLNT_API_VerifyMainModeRule" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="301" symbol="MPS_CLNT_API_VerifyMainModeRuleBeenden" version="0" task="MPS_CLNT_API_VerifyMainModeRule" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="302" symbol="MPS_CLNT_API_QueryFirewallRulesStarten" version="0" task="MPS_CLNT_API_QueryFirewallRules" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="303" symbol="MPS_CLNT_API_QueryFirewallRulesBeenden" version="0" task="MPS_CLNT_API_QueryFirewallRules" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="304" symbol="MPS_CLNT_API_QueryConnectionSecurityRulesStarten" version="0" task="MPS_CLNT_API_QueryConnectionSecurityRules" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="305" symbol="MPS_CLNT_API_QueryConnectionSecurityRulesBeenden" version="0" task="MPS_CLNT_API_QueryConnectionSecurityRules" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="306" symbol="MPS_CLNT_API_QueryMainModeRulesStarten" version="0" task="MPS_CLNT_API_QueryMainModeRules" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="307" symbol="MPS_CLNT_API_QueryMainModeRulesBeenden" version="0" task="MPS_CLNT_API_QueryMainModeRules" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="308" symbol="MPS_CLNT_API_QueryAuthenticationSetsStarten" version="0" task="MPS_CLNT_API_QueryAuthenticationSets" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="309" symbol="MPS_CLNT_API_QueryAuthenticationSetsBeenden" version="0" task="MPS_CLNT_API_QueryAuthenticationSets" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="310" symbol="MPS_CLNT_API_QueryCryptoSetsStarten" version="0" task="MPS_CLNT_API_QueryCryptoSets" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="311" symbol="MPS_CLNT_API_QueryCryptoSetsBeenden" version="0" task="MPS_CLNT_API_QueryCryptoSets" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="312" symbol="MPS_CLNT_API_VerifyFirewallRuleQueryStarten" version="0" task="MPS_CLNT_API_VerifyFirewallRuleQuery" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="313" symbol="MPS_CLNT_API_VerifyFirewallRuleQueryBeenden" version="0" task="MPS_CLNT_API_VerifyFirewallRuleQuery" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="314" symbol="MPS_CLNT_API_VerifyConnectionSecurityRuleQueryStarten" version="0" task="MPS_CLNT_API_VerifyConnectionSecurityRuleQuery" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="315" symbol="MPS_CLNT_API_VerifyConnectionSecurityRuleQueryBeenden" version="0" task="MPS_CLNT_API_VerifyConnectionSecurityRuleQuery" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="316" symbol="MPS_CLNT_API_VerifyMainModeRuleQueryStarten" version="0" task="MPS_CLNT_API_VerifyMainModeRuleQuery" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="317" symbol="MPS_CLNT_API_VerifyMainModeRuleQueryBeenden" version="0" task="MPS_CLNT_API_VerifyMainModeRuleQuery" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="318" symbol="MPS_CLNT_API_VerifyAuthenticationSetQueryStarten" version="0" task="MPS_CLNT_API_VerifyAuthenticationSetQuery" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="319" symbol="MPS_CLNT_API_VerifyAuthenticationSetQueryBeenden" version="0" task="MPS_CLNT_API_VerifyAuthenticationSetQuery" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="320" symbol="MPS_CLNT_API_VerifyCryptoSetQueryStarten" version="0" task="MPS_CLNT_API_VerifyCryptoSetQuery" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="321" symbol="MPS_CLNT_API_VerifyCryptoSetQueryBeenden" version="0" task="MPS_CLNT_API_VerifyCryptoSetQuery" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+     <event value="322" symbol="MPS_CLNT_API_FreeQueryStarten" version="0" task="MPS_CLNT_API_FreeQuery" opcode="win:Starten" level="win:Informational" keywords="Client"/>
+     <event value="323" symbol="MPS_CLNT_API_FreeQueryBeenden" version="0" task="MPS_CLNT_API_FreeQuery" opcode="win:Beenden" level="win:Informational" keywords="Client"/>
+    </events>
+    <templates>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Client" value="Client"/>
+    <string id="task_MPS_CLNT_API_RestoreDefaults" value="MPS_CLNT_API_RestoreDefaults"/>
+    <string id="task_MPS_CLNT_API_EnumFirewallRules" value="MPS_CLNT_API_EnumFirewallRules"/>
+    <string id="task_MPS_CLNT_API_DeleteFirewallRule" value="MPS_CLNT_API_DeleteFirewallRule"/>
+    <string id="task_MPS_CLNT_API_DeleteAllFirewallRules" value="MPS_CLNT_API_DeleteAllFirewallRules"/>
+    <string id="task_MPS_CLNT_API_AddFirewallRule" value="MPS_CLNT_API_AddFirewallRule"/>
+    <string id="task_MPS_CLNT_API_SetFirewallRule" value="MPS_CLNT_API_SetFirewallRule"/>
+    <string id="task_MPS_CLNT_API_GetConfig" value="MPS_CLNT_API_GetConfig"/>
+    <string id="task_MPS_CLNT_API_SetConfig" value="MPS_CLNT_API_SetConfig"/>
+    <string id="task_MPS_CLNT_API_GetGlobalConfig" value="MPS_CLNT_API_GetGlobalConfig"/>
+    <string id="task_MPS_CLNT_API_SetGlobalConfig" value="MPS_CLNT_API_SetGlobalConfig"/>
+    <string id="task_MPS_CLNT_API_OpenPolicyStore" value="MPS_CLNT_API_OpenPolicyStore"/>
+    <string id="task_MPS_CLNT_API_ClosePolicyStore" value="MPS_CLNT_API_ClosePolicyStore"/>
+    <string id="task_MPS_CLNT_API_AddConnectionSecurityRule" value="MPS_CLNT_API_AddConnectionSecurityRule"/>
+    <string id="task_MPS_CLNT_API_SetConnectionSecurityRule" value="MPS_CLNT_API_SetConnectionSecurityRule"/>
+    <string id="task_MPS_CLNT_API_DeleteConnectionSecurityRule" value="MPS_CLNT_API_DeleteConnectionSecurityRule"/>
+    <string id="task_MPS_CLNT_API_DeleteAllConnectionSecurityRules" value="MPS_CLNT_API_DeleteAllConnectionSecurityRules"/>
+    <string id="task_MPS_CLNT_API_EnumConnectionSecurityRules" value="MPS_CLNT_API_EnumConnectionSecurityRules"/>
+    <string id="task_MPS_CLNT_API_AddAuthenticationSet" value="MPS_CLNT_API_AddAuthenticationSet"/>
+    <string id="task_MPS_CLNT_API_DeleteAuthenticationSet" value="MPS_CLNT_API_DeleteAuthenticationSet"/>
+    <string id="task_MPS_CLNT_API_SetAuthenticationSet" value="MPS_CLNT_API_SetAuthenticationSet"/>
+    <string id="task_MPS_CLNT_API_DeleteAllAuthenticationSets" value="MPS_CLNT_API_DeleteAllAuthenticationSets"/>
+    <string id="task_MPS_CLNT_API_EnumAuthenticationSets" value="MPS_CLNT_API_EnumAuthenticationSets"/>
+    <string id="task_MPS_CLNT_API_AddCryptoSet" value="MPS_CLNT_API_AddCryptoSet"/>
+    <string id="task_MPS_CLNT_API_SetCryptoSet" value="MPS_CLNT_API_SetCryptoSet"/>
+    <string id="task_MPS_CLNT_API_DeleteCryptoSet" value="MPS_CLNT_API_DeleteCryptoSet"/>
+    <string id="task_MPS_CLNT_API_DeleteAllCryptoSets" value="MPS_CLNT_API_DeleteAllCryptoSets"/>
+    <string id="task_MPS_CLNT_API_EnumCryptoSets" value="MPS_CLNT_API_EnumCryptoSets"/>
+    <string id="task_MPS_CLNT_API_EnumPhase1SAs" value="MPS_CLNT_API_EnumPhase1SAs"/>
+    <string id="task_MPS_CLNT_API_DeletePhase1SAs" value="MPS_CLNT_API_DeletePhase1SAs"/>
+    <string id="task_MPS_CLNT_API_EnumPhase2SAs" value="MPS_CLNT_API_EnumPhase2SAs"/>
+    <string id="task_MPS_CLNT_API_VerifyFirewallRule" value="MPS_CLNT_API_VerifyFirewallRule"/>
+    <string id="task_MPS_CLNT_API_VerifyConnectionSecurityRule" value="MPS_CLNT_API_VerifyConnectionSecurityRule"/>
+    <string id="task_MPS_CLNT_API_VerifyAuthenticationSet" value="MPS_CLNT_API_VerifyAuthenticationSet"/>
+    <string id="task_MPS_CLNT_API_VerifyCryptoSet" value="MPS_CLNT_API_VerifyCryptoSet"/>
+    <string id="task_MPS_CLNT_API_ImportPolicy" value="MPS_CLNT_API_ImportPolicy"/>
+    <string id="task_MPS_CLNT_API_ExportPolicy" value="MPS_CLNT_API_ExportPolicy"/>
+    <string id="task_MPS_CLNT_API_DeletePhase2SAs" value="MPS_CLNT_API_DeletePhase2SAs"/>
+    <string id="task_MPS_CLNT_API_FreeFirewallRules" value="MPS_CLNT_API_FreeFirewallRules"/>
+    <string id="task_MPS_CLNT_API_FreeConnectionSecurityRules" value="MPS_CLNT_API_FreeConnectionSecurityRules"/>
+    <string id="task_MPS_CLNT_API_FreeAuthenticationSets" value="MPS_CLNT_API_FreeAuthenticationSets"/>
+    <string id="task_MPS_CLNT_API_FreeCryptoSets" value="MPS_CLNT_API_FreeCryptoSets"/>
+    <string id="task_MPS_CLNT_API_FreePhase1SAs" value="MPS_CLNT_API_FreePhase1SAs"/>
+    <string id="task_MPS_CLNT_API_FreePhase2SAs" value="MPS_CLNT_API_FreePhase2SAs"/>
+    <string id="task_MPS_CLNT_API_StatusMessageFromStatusCode" value="MPS_CLNT_API_StatusMessageFromStatusCode"/>
+    <string id="task_MPS_CLNT_API_AddMainModeRule" value="MPS_CLNT_API_AddMainModeRule"/>
+    <string id="task_MPS_CLNT_API_SetMainModeRule" value="MPS_CLNT_API_SetMainModeRule"/>
+    <string id="task_MPS_CLNT_API_DeleteMainModeRule" value="MPS_CLNT_API_DeleteMainModeRule"/>
+    <string id="task_MPS_CLNT_API_DeleteAllMainModeRules" value="MPS_CLNT_API_DeleteAllMainModeRules"/>
+    <string id="task_MPS_CLNT_API_EnumMainModeRules" value="MPS_CLNT_API_EnumMainModeRules"/>
+    <string id="task_MPS_CLNT_API_FreeMainModeRules" value="MPS_CLNT_API_FreeMainModeRules"/>
+    <string id="task_MPS_CLNT_API_VerifyMainModeRule" value="MPS_CLNT_API_VerifyMainModeRule"/>
+    <string id="task_MPS_CLNT_API_QueryFirewallRules" value="MPS_CLNT_API_QueryFirewallRules"/>
+    <string id="task_MPS_CLNT_API_QueryConnectionSecurityRules" value="MPS_CLNT_API_QueryConnectionSecurityRules"/>
+    <string id="task_MPS_CLNT_API_QueryMainModeRules" value="MPS_CLNT_API_QueryMainModeRules"/>
+    <string id="task_MPS_CLNT_API_QueryAuthenticationSets" value="MPS_CLNT_API_QueryAuthenticationSets"/>
+    <string id="task_MPS_CLNT_API_QueryCryptoSets" value="MPS_CLNT_API_QueryCryptoSets"/>
+    <string id="task_MPS_CLNT_API_FreeQuery" value="MPS_CLNT_API_FreeQuery"/>
+    <string id="task_MPS_CLNT_API_VerifyFirewallRuleQuery" value="MPS_CLNT_API_VerifyFirewallRuleQuery"/>
+    <string id="task_MPS_CLNT_API_VerifyConnectionSecurityRuleQuery" value="MPS_CLNT_API_VerifyConnectionSecurityRuleQuery"/>
+    <string id="task_MPS_CLNT_API_VerifyMainModeRuleQuery" value="MPS_CLNT_API_VerifyMainModeRuleQuery"/>
+    <string id="task_MPS_CLNT_API_VerifyAuthenticationSetQuery" value="MPS_CLNT_API_VerifyAuthenticationSetQuery"/>
+    <string id="task_MPS_CLNT_API_VerifyCryptoSetQuery" value="MPS_CLNT_API_VerifyCryptoSetQuery"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

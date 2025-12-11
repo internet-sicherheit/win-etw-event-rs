@@ -1,0 +1,127 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-OverlayFilter" guid="{46c78e5c-a213-46a8-8a6b-622f6916201d}" resourceFileName="Microsoft-Windows-OverlayFilter" messageFileName="Microsoft-Windows-OverlayFilter" symbol="MicrosoftWindowsOverlayFilter" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="WIM_Integritätsüberprüfung" message="$(string.task_WIM_Integritätsüberprüfung)" value="1">
+      <opcodes>
+       <opcode name="IntegrityFileOpen" message="$(string.opcode_WIM_IntegritätsüberprüfungIntegrityFileOpen)" value="100"/>
+       <opcode name="IntegrityBlockVerificationFailure" message="$(string.opcode_WIM_IntegritätsüberprüfungIntegrityBlockVerificationFailure)" value="101"/>
+       <opcode name="IntegrityInvalidBlock" message="$(string.opcode_WIM_IntegritätsüberprüfungIntegrityInvalidBlock)" value="102"/>
+      </opcodes>
+     </task>
+     <task name="DerWindows_Überlappungstask" message="$(string.task_DerWindows_Überlappungstask)" value="2">
+      <opcodes>
+       <opcode name="EnumVolume" message="$(string.opcode_DerWindows_ÜberlappungstaskEnumVolume)" value="100"/>
+       <opcode name="ReportHashGenerationToBitlockerError" message="$(string.opcode_DerWindows_ÜberlappungstaskReportHashGenerationToBitlockerError)" value="101"/>
+       <opcode name="CreateHashFile" message="$(string.opcode_DerWindows_ÜberlappungstaskCreateHashFile)" value="102"/>
+       <opcode name="CompleteHashFile" message="$(string.opcode_DerWindows_ÜberlappungstaskCompleteHashFile)" value="103"/>
+       <opcode name="DeleteHashFile" message="$(string.opcode_DerWindows_ÜberlappungstaskDeleteHashFile)" value="104"/>
+       <opcode name="ResumeHashFile" message="$(string.opcode_DerWindows_ÜberlappungstaskResumeHashFile)" value="105"/>
+       <opcode name="PauseHashFile" message="$(string.opcode_DerWindows_ÜberlappungstaskPauseHashFile)" value="106"/>
+       <opcode name="GenerateHashFileError" message="$(string.opcode_DerWindows_ÜberlappungstaskGenerateHashFileError)" value="107"/>
+       <opcode name="DeleteHashFileError" message="$(string.opcode_DerWindows_ÜberlappungstaskDeleteHashFileError)" value="108"/>
+       <opcode name="FileReadError" message="$(string.opcode_DerWindows_ÜberlappungstaskFileReadError)" value="109"/>
+       <opcode name="FileWriteError" message="$(string.opcode_DerWindows_ÜberlappungstaskFileWriteError)" value="110"/>
+       <opcode name="ActionError" message="$(string.opcode_DerWindows_ÜberlappungstaskActionError)" value="111"/>
+       <opcode name="ActionGenerateHashes" message="$(string.opcode_DerWindows_ÜberlappungstaskActionGenerateHashes)" value="112"/>
+       <opcode name="ActionDeleteHashes" message="$(string.opcode_DerWindows_ÜberlappungstaskActionDeleteHashes)" value="113"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="24832" symbol="WIM_IntegritätsüberprüfungIntegrityFileOpen" version="0" task="WIM_Integritätsüberprüfung" opcode="IntegrityFileOpen" level="win:Critical" template="WIM_IntegritätsüberprüfungIntegrityFileOpenArgs"/>
+     <event value="24833" symbol="WIM_IntegritätsüberprüfungIntegrityBlockVerificationFailure" version="0" task="WIM_Integritätsüberprüfung" opcode="IntegrityBlockVerificationFailure" level="win:Critical" template="WIM_IntegritätsüberprüfungIntegrityBlockVerificationFailureArgs"/>
+     <event value="24834" symbol="WIM_IntegritätsüberprüfungIntegrityInvalidBlock" version="0" task="WIM_Integritätsüberprüfung" opcode="IntegrityInvalidBlock" level="win:Critical" template="WIM_IntegritätsüberprüfungIntegrityInvalidBlockArgs"/>
+     <event value="24835" symbol="DerWindows_ÜberlappungstaskEnumVolume" version="0" task="DerWindows_Überlappungstask" opcode="EnumVolume" level="win:Informational" template="DerWindows_ÜberlappungstaskEnumVolumeArgs"/>
+     <event value="24836" symbol="DerWindows_ÜberlappungstaskReportHashGenerationToBitlockerError" version="0" task="DerWindows_Überlappungstask" opcode="ReportHashGenerationToBitlockerError" level="win:Error" template="DerWindows_ÜberlappungstaskReportHashGenerationToBitlockerErrorArgs"/>
+     <event value="24837" symbol="DerWindows_ÜberlappungstaskCreateHashFile" version="0" task="DerWindows_Überlappungstask" opcode="CreateHashFile" level="win:Informational" template="DerWindows_ÜberlappungstaskCreateHashFileArgs"/>
+     <event value="24838" symbol="DerWindows_ÜberlappungstaskCompleteHashFile" version="0" task="DerWindows_Überlappungstask" opcode="CompleteHashFile" level="win:Informational" template="DerWindows_ÜberlappungstaskCreateHashFileArgs"/>
+     <event value="24839" symbol="DerWindows_ÜberlappungstaskDeleteHashFile" version="0" task="DerWindows_Überlappungstask" opcode="DeleteHashFile" level="win:Informational" template="DerWindows_ÜberlappungstaskCreateHashFileArgs"/>
+     <event value="24840" symbol="DerWindows_ÜberlappungstaskResumeHashFile" version="0" task="DerWindows_Überlappungstask" opcode="ResumeHashFile" level="win:Informational" template="DerWindows_ÜberlappungstaskResumeHashFileArgs"/>
+     <event value="24841" symbol="DerWindows_ÜberlappungstaskPauseHashFile" version="0" task="DerWindows_Überlappungstask" opcode="PauseHashFile" level="win:Informational" template="DerWindows_ÜberlappungstaskResumeHashFileArgs"/>
+     <event value="24842" symbol="DerWindows_ÜberlappungstaskActionError" version="0" task="DerWindows_Überlappungstask" opcode="ActionError" level="win:Error" template="DerWindows_ÜberlappungstaskReportHashGenerationToBitlockerErrorArgs"/>
+     <event value="24843" symbol="DerWindows_ÜberlappungstaskGenerateHashFileError" version="0" task="DerWindows_Überlappungstask" opcode="GenerateHashFileError" level="win:Error" template="DerWindows_ÜberlappungstaskGenerateHashFileErrorArgs"/>
+     <event value="24844" symbol="DerWindows_ÜberlappungstaskDeleteHashFileError" version="0" task="DerWindows_Überlappungstask" opcode="DeleteHashFileError" level="win:Error" template="DerWindows_ÜberlappungstaskGenerateHashFileErrorArgs"/>
+     <event value="24845" symbol="DerWindows_ÜberlappungstaskFileReadError" version="0" task="DerWindows_Überlappungstask" opcode="FileReadError" level="win:Error" template="DerWindows_ÜberlappungstaskGenerateHashFileErrorArgs"/>
+     <event value="24846" symbol="DerWindows_ÜberlappungstaskFileWriteError" version="0" task="DerWindows_Überlappungstask" opcode="FileWriteError" level="win:Error" template="DerWindows_ÜberlappungstaskGenerateHashFileErrorArgs"/>
+     <event value="24847" symbol="WIM_IntegritätsüberprüfungIntegrityFileOpen24847" version="0" task="WIM_Integritätsüberprüfung" opcode="IntegrityFileOpen" level="win:Informational" template="WIM_IntegritätsüberprüfungIntegrityFileOpen24847Args"/>
+     <event value="24848" symbol="WIM_IntegritätsüberprüfungIntegrityFileOpen24848" version="0" task="WIM_Integritätsüberprüfung" opcode="IntegrityFileOpen" level="win:Informational" template="WIM_IntegritätsüberprüfungIntegrityFileOpen24847Args"/>
+     <event value="24849" symbol="DerWindows_ÜberlappungstaskActionGenerateHashes" version="0" task="DerWindows_Überlappungstask" opcode="ActionGenerateHashes" level="win:Informational"/>
+     <event value="24850" symbol="DerWindows_ÜberlappungstaskActionDeleteHashes" version="0" task="DerWindows_Überlappungstask" opcode="ActionDeleteHashes" level="win:Informational"/>
+    </events>
+    <templates>
+     <template tid="WIM_IntegritätsüberprüfungIntegrityFileOpenArgs">
+      <data name="FileNameLength" inType="win:UInt16"/>
+      <data name="FileNameBuffer" inType="win:UnicodeString" length="FileNameLength"/>
+      <data name="DataSourceId" inType="win:Int64"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="WIM_IntegritätsüberprüfungIntegrityBlockVerificationFailureArgs">
+      <data name="FileNameLength" inType="win:UInt16"/>
+      <data name="FileNameBuffer" inType="win:UnicodeString" length="FileNameLength"/>
+      <data name="BlockNumber" inType="win:UInt32"/>
+      <data name="BlockLength" inType="win:UInt32"/>
+     </template>
+     <template tid="WIM_IntegritätsüberprüfungIntegrityInvalidBlockArgs">
+      <data name="FileNameLength" inType="win:UInt16"/>
+      <data name="FileNameBuffer" inType="win:UnicodeString" length="FileNameLength"/>
+      <data name="FileOffset" inType="win:Int64"/>
+      <data name="ReadSize" inType="win:UInt32"/>
+     </template>
+     <template tid="DerWindows_ÜberlappungstaskEnumVolumeArgs">
+      <data name="volume" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DerWindows_ÜberlappungstaskReportHashGenerationToBitlockerErrorArgs">
+      <data name="hr" inType="win:UInt32"/>
+     </template>
+     <template tid="DerWindows_ÜberlappungstaskCreateHashFileArgs">
+      <data name="wimHashFile" inType="win:UnicodeString"/>
+      <data name="wimFile" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DerWindows_ÜberlappungstaskResumeHashFileArgs">
+      <data name="filename" inType="win:UnicodeString"/>
+      <data name="offset" inType="win:UInt64"/>
+     </template>
+     <template tid="DerWindows_ÜberlappungstaskGenerateHashFileErrorArgs">
+      <data name="wimHashFile" inType="win:UnicodeString"/>
+      <data name="wimFile" inType="win:UnicodeString"/>
+      <data name="hr" inType="win:Int32"/>
+     </template>
+     <template tid="WIM_IntegritätsüberprüfungIntegrityFileOpen24847Args">
+      <data name="FileNameLength" inType="win:UInt16"/>
+      <data name="FileNameBuffer" inType="win:UnicodeString" length="FileNameLength"/>
+      <data name="DataSourceId" inType="win:Int64"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_WIM_Integritätsüberprüfung" value="WIM_Integritätsüberprüfung"/>
+    <string id="opcode_WIM_IntegritätsüberprüfungIntegrityFileOpen" value="IntegrityFileOpen"/>
+    <string id="opcode_WIM_IntegritätsüberprüfungIntegrityBlockVerificationFailure" value="IntegrityBlockVerificationFailure"/>
+    <string id="opcode_WIM_IntegritätsüberprüfungIntegrityInvalidBlock" value="IntegrityInvalidBlock"/>
+    <string id="task_DerWindows_Überlappungstask" value="DerWindows_Überlappungstask"/>
+    <string id="opcode_DerWindows_ÜberlappungstaskEnumVolume" value="EnumVolume"/>
+    <string id="opcode_DerWindows_ÜberlappungstaskReportHashGenerationToBitlockerError" value="ReportHashGenerationToBitlockerError"/>
+    <string id="opcode_DerWindows_ÜberlappungstaskCreateHashFile" value="CreateHashFile"/>
+    <string id="opcode_DerWindows_ÜberlappungstaskCompleteHashFile" value="CompleteHashFile"/>
+    <string id="opcode_DerWindows_ÜberlappungstaskDeleteHashFile" value="DeleteHashFile"/>
+    <string id="opcode_DerWindows_ÜberlappungstaskResumeHashFile" value="ResumeHashFile"/>
+    <string id="opcode_DerWindows_ÜberlappungstaskPauseHashFile" value="PauseHashFile"/>
+    <string id="opcode_DerWindows_ÜberlappungstaskGenerateHashFileError" value="GenerateHashFileError"/>
+    <string id="opcode_DerWindows_ÜberlappungstaskDeleteHashFileError" value="DeleteHashFileError"/>
+    <string id="opcode_DerWindows_ÜberlappungstaskFileReadError" value="FileReadError"/>
+    <string id="opcode_DerWindows_ÜberlappungstaskFileWriteError" value="FileWriteError"/>
+    <string id="opcode_DerWindows_ÜberlappungstaskActionError" value="ActionError"/>
+    <string id="opcode_DerWindows_ÜberlappungstaskActionGenerateHashes" value="ActionGenerateHashes"/>
+    <string id="opcode_DerWindows_ÜberlappungstaskActionDeleteHashes" value="ActionDeleteHashes"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

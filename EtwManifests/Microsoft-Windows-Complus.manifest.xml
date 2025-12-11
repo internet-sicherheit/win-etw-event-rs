@@ -1,0 +1,174 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Complus" guid="{0f177893-4a9c-4709-b921-f432d67f43d5}" resourceFileName="Microsoft-Windows-Complus" messageFileName="Microsoft-Windows-Complus" symbol="MicrosoftWindowsComplus" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0">
+      <opcodes>
+       <opcode name="opcode_64" message="$(string.opcode_task_0opcode_64)" value="64"/>
+       <opcode name="opcode_128" message="$(string.opcode_task_0opcode_128)" value="128"/>
+       <opcode name="opcode_192" message="$(string.opcode_task_0opcode_192)" value="192"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="771" symbol="task_0PCODE_64pcode_64771_V2" version="2" task="task_0" opcode="opcode_64" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="772" symbol="task_0PCODE_64pcode_64772_V2" version="2" task="task_0" opcode="opcode_64" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="773" symbol="task_0PCODE_64pcode_64773_V2" version="2" task="task_0" opcode="opcode_64" level="win:Always"/>
+     <event value="774" symbol="task_0PCODE_64pcode_64" version="0" task="task_0" opcode="opcode_64" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="775" symbol="task_0PCODE_64pcode_64775" version="0" task="task_0" opcode="opcode_64" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="776" symbol="task_0PCODE_64pcode_64776" version="0" task="task_0" opcode="opcode_64" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="777" symbol="task_0PCODE_64pcode_64777" version="0" task="task_0" opcode="opcode_64" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="778" symbol="task_0PCODE_64pcode_64778" version="0" task="task_0" opcode="opcode_64" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="779" symbol="task_0PCODE_64pcode_64779" version="0" task="task_0" opcode="opcode_64" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="780" symbol="task_0PCODE_64pcode_64780" version="0" task="task_0" opcode="opcode_64" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="781" symbol="task_0PCODE_64pcode_64781" version="0" task="task_0" opcode="opcode_64" level="win:Always" template="task_0PCODE_64pcode_64781Args"/>
+     <event value="782" symbol="task_0PCODE_64pcode_64782" version="0" task="task_0" opcode="opcode_64" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="783" symbol="task_0PCODE_64pcode_64783" version="0" task="task_0" opcode="opcode_64" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4433" symbol="task_0PCODE_128pcode_128" version="0" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4434" symbol="task_0PCODE_128pcode_1284434" version="0" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4435" symbol="task_0PCODE_128pcode_1284435" version="0" task="task_0" opcode="opcode_128" level="win:Always"/>
+     <event value="4440" symbol="task_0PCODE_128pcode_1284440_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4441" symbol="task_0PCODE_128pcode_1284441_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4442" symbol="task_0PCODE_128pcode_1284442_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4443" symbol="task_0PCODE_128pcode_1284443_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4444" symbol="task_0PCODE_128pcode_1284444_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4445" symbol="task_0PCODE_128pcode_1284445_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4446" symbol="task_0PCODE_128pcode_1284446_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4448" symbol="task_0PCODE_128pcode_1284448_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4449" symbol="task_0PCODE_128pcode_1284449_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4450" symbol="task_0PCODE_128pcode_1284450_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4451" symbol="task_0PCODE_128pcode_1284451_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4452" symbol="task_0PCODE_128pcode_1284452" version="0" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4453" symbol="task_0PCODE_128pcode_1284453_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4454" symbol="task_0PCODE_128pcode_1284454_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4455" symbol="task_0PCODE_128pcode_1284455_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4456" symbol="task_0PCODE_128pcode_1284456_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4457" symbol="task_0PCODE_128pcode_1284457_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4458" symbol="task_0PCODE_128pcode_1284458" version="0" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4459" symbol="task_0PCODE_128pcode_1284459" version="0" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4460" symbol="task_0PCODE_128pcode_1284460" version="0" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4462" symbol="task_0PCODE_128pcode_1284462_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4463" symbol="task_0PCODE_128pcode_1284463_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always"/>
+     <event value="4464" symbol="task_0PCODE_128pcode_1284464" version="0" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4465" symbol="task_0PCODE_128pcode_1284465" version="0" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64781Args"/>
+     <event value="4689" symbol="task_0PCODE_192pcode_1924689_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4690" symbol="task_0PCODE_192pcode_1924690_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4691" symbol="task_0PCODE_192pcode_1924691_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4697" symbol="task_0PCODE_192pcode_1924697_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4698" symbol="task_0PCODE_192pcode_1924698_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4724" symbol="task_0PCODE_192pcode_1924724_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4729" symbol="task_0PCODE_192pcode_1924729_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4741" symbol="task_0PCODE_192pcode_1924741_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4767" symbol="task_0PCODE_192pcode_1924767_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="4769" symbol="task_0PCODE_192pcode_1924769_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4771" symbol="task_0PCODE_192pcode_1924771_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4772" symbol="task_0PCODE_192pcode_1924772_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4773" symbol="task_0PCODE_192pcode_1924773_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4786" symbol="task_0PCODE_192pcode_1924786_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4788" symbol="task_0PCODE_192pcode_1924788_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4789" symbol="task_0PCODE_192pcode_1924789_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4790" symbol="task_0PCODE_192pcode_1924790_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4791" symbol="task_0PCODE_192pcode_1924791_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4792" symbol="task_0PCODE_192pcode_192" version="0" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4794" symbol="task_0PCODE_192pcode_1924794_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4796" symbol="task_0PCODE_128pcode_1284796_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4797" symbol="task_0PCODE_192pcode_1924797_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4798" symbol="task_0PCODE_192pcode_1924798_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4799" symbol="task_0PCODE_192pcode_1924799_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4800" symbol="task_0PCODE_192pcode_1924800_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4801" symbol="task_0PCODE_192pcode_1924801_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4802" symbol="task_0PCODE_192pcode_1924802_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4803" symbol="task_0PCODE_192pcode_1924803_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4804" symbol="task_0PCODE_192pcode_1924804_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4805" symbol="task_0PCODE_192pcode_1924805_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4806" symbol="task_0PCODE_192pcode_1924806_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4808" symbol="task_0PCODE_192pcode_1924808_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4810" symbol="task_0PCODE_192pcode_1924810_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4811" symbol="task_0PCODE_192pcode_1924811_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4816" symbol="task_0PCODE_192pcode_1924816_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4817" symbol="task_0PCODE_192pcode_1924817_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4818" symbol="task_0PCODE_192pcode_1924818_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4819" symbol="task_0PCODE_192pcode_1924819" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="4820" symbol="task_0PCODE_192pcode_1924820" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="4821" symbol="task_0PCODE_192pcode_1924821" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="4822" symbol="task_0PCODE_192pcode_1924822_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4823" symbol="task_0PCODE_192pcode_1924823" version="0" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4825" symbol="task_0PCODE_192pcode_1924825_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4826" symbol="task_0PCODE_192pcode_1924826_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4827" symbol="task_0PCODE_128pcode_1284827_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4828" symbol="task_0PCODE_128pcode_1284828_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4829" symbol="task_0PCODE_192pcode_1924829_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4830" symbol="task_0PCODE_128pcode_1284830_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4831" symbol="task_0PCODE_128pcode_1284831_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4832" symbol="task_0PCODE_192pcode_1924832_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4833" symbol="task_0PCODE_192pcode_1924833_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4834" symbol="task_0PCODE_128pcode_1284834_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4835" symbol="task_0PCODE_192pcode_1924835_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4836" symbol="task_0PCODE_192pcode_1924836_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4837" symbol="task_0PCODE_192pcode_1924837_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4838" symbol="task_0PCODE_192pcode_1924838_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4839" symbol="task_0PCODE_192pcode_1924839_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4840" symbol="task_0PCODE_192pcode_1924840_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4841" symbol="task_0PCODE_192pcode_1924841_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4842" symbol="task_0PCODE_192pcode_1924842_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4843" symbol="task_0PCODE_192pcode_1924843_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4844" symbol="task_0PCODE_192pcode_1924844_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4848" symbol="task_0PCODE_192pcode_1924848_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4849" symbol="task_0PCODE_192pcode_1924849_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4850" symbol="task_0PCODE_192pcode_1924850_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4851" symbol="task_0PCODE_192pcode_1924851_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4852" symbol="task_0PCODE_192pcode_1924852_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4853" symbol="task_0PCODE_192pcode_1924853_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4854" symbol="task_0PCODE_192pcode_1924854_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4855" symbol="task_0PCODE_192pcode_1924855_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4856" symbol="task_0PCODE_192pcode_1924856_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4857" symbol="task_0PCODE_192pcode_1924857_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4858" symbol="task_0PCODE_192pcode_1924858_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4859" symbol="task_0PCODE_192pcode_1924859_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4860" symbol="task_0PCODE_192pcode_1924860_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4861" symbol="task_0PCODE_192pcode_1924861_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4862" symbol="task_0PCODE_192pcode_1924862_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="4863" symbol="task_0PCODE_192pcode_1924863_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4864" symbol="task_0PCODE_192pcode_1924864" version="0" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4865" symbol="task_0PCODE_192pcode_1924865_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4866" symbol="task_0PCODE_192pcode_1924866_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4867" symbol="task_0PCODE_192pcode_1924867_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4868" symbol="task_0PCODE_192pcode_1924868_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="4869" symbol="task_0PCODE_192pcode_1924869_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="5376" symbol="task_0PCODE_192pcode_1925376_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="5377" symbol="task_0PCODE_192pcode_1925377_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="5378" symbol="task_0PCODE_128pcode_1285378_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="5379" symbol="task_0PCODE_128pcode_1285379_V2" version="2" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="5380" symbol="task_0PCODE_192pcode_1925380_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="5381" symbol="task_0PCODE_192pcode_1925381_V2" version="2" task="task_0" opcode="opcode_192" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="5485" symbol="task_0PCODE_128pcode_1285485" version="0" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="5486" symbol="task_0PCODE_128pcode_1285486" version="0" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+     <event value="5488" symbol="task_0PCODE_128pcode_1285488" version="0" task="task_0" opcode="opcode_128" level="win:Always" template="task_0PCODE_64pcode_64Args"/>
+    </events>
+    <templates>
+     <template tid="task_0PCODE_64pcode_64Args">
+      <data name="param1" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0PCODE_64pcode_64781Args">
+      <data name="param1" inType="win:UnicodeString"/>
+      <data name="param2" inType="win:UnicodeString"/>
+      <data name="param3" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="opcode_task_0opcode_64" value="opcode_64"/>
+    <string id="opcode_task_0opcode_128" value="opcode_128"/>
+    <string id="opcode_task_0opcode_192" value="opcode_192"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

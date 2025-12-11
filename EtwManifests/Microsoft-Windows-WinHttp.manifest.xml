@@ -1,0 +1,399 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-WinHttp" guid="{7d44233d-3055-4b9c-ba64-0d47ca40a232}" resourceFileName="Microsoft-Windows-WinHttp" messageFileName="Microsoft-Windows-WinHttp" symbol="MicrosoftWindowsWinHttp" source="Xml" >
+    <keywords>
+     <keyword name="Keyword.API" message="$(string.keyword_Keyword.API)" mask="0x1"/>
+     <keyword name="WINHTTP_KEYWORD_AUTOPROXY" message="$(string.keyword_WINHTTP_KEYWORD_AUTOPROXY)" mask="0x20"/>
+     <keyword name="Keyword.SEND" message="$(string.keyword_Keyword.SEND)" mask="0x100000000"/>
+     <keyword name="Keyword.RECEIVE" message="$(string.keyword_Keyword.RECEIVE)" mask="0x200000000"/>
+     <keyword name="Keyword.L3_CONNECT" message="$(string.keyword_Keyword.L3_CONNECT)" mask="0x400000000"/>
+     <keyword name="Keyword.CLOSE" message="$(string.keyword_Keyword.CLOSE)" mask="0x1000000000"/>
+     <keyword name="Keyword.SECURITY" message="$(string.keyword_Keyword.SECURITY)" mask="0x2000000000"/>
+     <keyword name="Keyword.CONFIGURATION" message="$(string.keyword_Keyword.CONFIGURATION)" mask="0x4000000000"/>
+     <keyword name="Keyword.GLOBAL" message="$(string.keyword_Keyword.GLOBAL)" mask="0x8000000000"/>
+     <keyword name="keyword_20000000000" message="$(string.keyword_keyword_20000000000)" mask="0x20000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="API" message="$(string.task_API)" value="109"/>
+     <task name="Debug" message="$(string.task_Debug)" value="110"/>
+     <task name="WINHTTP_AUTOPROXY_SEARCH" message="$(string.task_WINHTTP_AUTOPROXY_SEARCH)" value="537">
+      <opcodes>
+       <opcode name="Fehlerhaft" message="$(string.opcode_WINHTTP_AUTOPROXY_SEARCHFehlerhaft)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="WINHTTP_AUTOPROXY_DHCP" message="$(string.task_WINHTTP_AUTOPROXY_DHCP)" value="538">
+      <opcodes>
+       <opcode name="Fehlerhaft" message="$(string.opcode_WINHTTP_AUTOPROXY_DHCPFehlerhaft)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="WINHTTP_AUTOPROXY_DNS" message="$(string.task_WINHTTP_AUTOPROXY_DNS)" value="539">
+      <opcodes>
+       <opcode name="Fehlerhaft" message="$(string.opcode_WINHTTP_AUTOPROXY_DNSFehlerhaft)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="WINHTTP_AUTOPROXY_DOWNLOAD" message="$(string.task_WINHTTP_AUTOPROXY_DOWNLOAD)" value="540">
+      <opcodes>
+       <opcode name="Fehlerhaft" message="$(string.opcode_WINHTTP_AUTOPROXY_DOWNLOADFehlerhaft)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URL" message="$(string.task_WINHTTP_AUTOPROXY_FIND_INFO_FOR_URL)" value="541">
+      <opcodes>
+       <opcode name="Fehlerhaft" message="$(string.opcode_WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLFehlerhaft)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="WINHTTP_BLOCKING_AUTOPROXY_DETERMINATION" message="$(string.task_WINHTTP_BLOCKING_AUTOPROXY_DETERMINATION)" value="543"/>
+     <task name="WINHTTP_TRANSFER" message="$(string.task_WINHTTP_TRANSFER)" value="544"/>
+     <task name="WINHTTP_AUTOPROXY_SWPAD" message="$(string.task_WINHTTP_AUTOPROXY_SWPAD)" value="545"/>
+     <task name="WinHTTP_Getaddrinfo" message="$(string.task_WinHTTP_Getaddrinfo)" value="572"/>
+     <task name="WINHTTP_AUTOPROXY_PERFTRACK_HOST_IP_LOOKUP" message="$(string.task_WINHTTP_AUTOPROXY_PERFTRACK_HOST_IP_LOOKUP)" value="580"/>
+     <task name="WINHTTP_AUTOPROXY_PERFTRACK_SWPAD_LOOKUP" message="$(string.task_WINHTTP_AUTOPROXY_PERFTRACK_SWPAD_LOOKUP)" value="581"/>
+     <task name="WINHTTP_AUTOPROXY_PERFTRACK_KNOWN_DETECTION" message="$(string.task_WINHTTP_AUTOPROXY_PERFTRACK_KNOWN_DETECTION)" value="582"/>
+     <task name="WINHTTP_AUTOPROXY_PERFTRACK_UNKNOWN_DETECTION" message="$(string.task_WINHTTP_AUTOPROXY_PERFTRACK_UNKNOWN_DETECTION)" value="583"/>
+     <task name="WINHTTP_AUTOPROXY_PERFTRACK_SCRIPT_DOWNLOAD" message="$(string.task_WINHTTP_AUTOPROXY_PERFTRACK_SCRIPT_DOWNLOAD)" value="584"/>
+     <task name="WINHTTP_AUTOPROXY_PERFTRACK_ALL" message="$(string.task_WINHTTP_AUTOPROXY_PERFTRACK_ALL)" value="587"/>
+    </tasks>
+    <maps>
+     <valueMap name="mapWinHttpAuthTarget">
+      <map value="0x0" message="$(string.map_mapWinHttpAuthTargetWINHTTP_AUTH_TARGET_SERVER)"/>
+      <map value="0x1" message="$(string.map_mapWinHttpAuthTargetWINHTTP_AUTH_TARGET_PROXY)"/>
+     </valueMap>
+     <valueMap name="mapWPADNetworkDecision">
+      <map value="0x0" message="$(string.map_mapWPADNetworkDecisionWPAD_NETWORK_DECISION_OFF)"/>
+      <map value="0x1" message="$(string.map_mapWPADNetworkDecisionWPAD_NETWORK_DECISION_ON)"/>
+      <map value="0x2" message="$(string.map_mapWPADNetworkDecisionWPAD_NETWORK_DECISION_UNKNOWN)"/>
+      <map value="0x3" message="$(string.map_mapWPADNetworkDecisionWPAD_NETWORK_DECISION_UNKNOWN)"/>
+     </valueMap>
+     <valueMap name="mapQueueActionType">
+      <map value="0x1" message="$(string.map_mapQueueActionTypeZeitgeber)"/>
+      <map value="0x2" message="$(string.map_mapQueueActionTypeArbeitselement)"/>
+      <map value="0x3" message="$(string.map_mapQueueActionTypeÜberlappende E/A)"/>
+      <map value="0x4" message="$(string.map_mapQueueActionTypeRückruf abwarten)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="task_0" version="0" task="task_0" level="win:Always" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Always" template="task_0Args"/>
+     <event value="4" symbol="task_04" version="0" task="task_0" level="win:Always" template="task_04Args"/>
+     <event value="9" symbol="APIStarten" version="0" task="API" opcode="win:Starten" level="win:Verbose" keywords="Keyword.API" template="APIStartenArgs"/>
+     <event value="10" symbol="APIBeenden" version="0" task="API" opcode="win:Beenden" level="win:Verbose" keywords="Keyword.API" template="APIBeendenArgs"/>
+     <event value="11" symbol="APIBeenden11" version="0" task="API" opcode="win:Beenden" level="win:Verbose" keywords="Keyword.API" template="APIBeendenArgs"/>
+     <event value="12" symbol="API" version="0" task="API" level="win:Verbose" keywords="Keyword.API" template="APIStartenArgs"/>
+     <event value="13" symbol="APIBeenden13" version="0" task="API" opcode="win:Beenden" level="win:Verbose" keywords="Keyword.API" template="APIBeendenArgs"/>
+     <event value="14" symbol="APIBeenden14" version="0" task="API" opcode="win:Beenden" level="win:Verbose" keywords="Keyword.API" template="APIBeendenArgs"/>
+     <event value="100" symbol="API100" version="0" task="API" level="win:Verbose" keywords="Keyword.API keyword_20000000000" template="API100Args"/>
+     <event value="801" symbol="WINHTTP_AUTOPROXY_SEARCHStarten" version="0" task="WINHTTP_AUTOPROXY_SEARCH" opcode="win:Starten" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_SEARCHStartenArgs"/>
+     <event value="801" symbol="WINHTTP_AUTOPROXY_SEARCHStarten_V1" version="1" task="WINHTTP_AUTOPROXY_SEARCH" opcode="win:Starten" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_SEARCHStartenArgs_V1"/>
+     <event value="802" symbol="WINHTTP_AUTOPROXY_DHCPStarten" version="0" task="WINHTTP_AUTOPROXY_DHCP" opcode="win:Starten" level="win:Verbose" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DHCPStartenArgs"/>
+     <event value="802" symbol="WINHTTP_AUTOPROXY_DHCPStarten_V1" version="1" task="WINHTTP_AUTOPROXY_DHCP" opcode="win:Starten" level="win:Verbose" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DHCPStartenArgs_V1"/>
+     <event value="803" symbol="WINHTTP_AUTOPROXY_DHCPBeenden" version="0" task="WINHTTP_AUTOPROXY_DHCP" opcode="win:Beenden" level="win:Verbose" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DHCPBeendenArgs"/>
+     <event value="803" symbol="WINHTTP_AUTOPROXY_DHCPBeenden_V1" version="1" task="WINHTTP_AUTOPROXY_DHCP" opcode="win:Beenden" level="win:Verbose" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DHCPBeendenArgs_V1"/>
+     <event value="804" symbol="WINHTTP_AUTOPROXY_DHCPFehlerhaft" version="0" task="WINHTTP_AUTOPROXY_DHCP" opcode="Fehlerhaft" level="win:Error" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DHCPFehlerhaftArgs"/>
+     <event value="804" symbol="WINHTTP_AUTOPROXY_DHCPFehlerhaft_V1" version="1" task="WINHTTP_AUTOPROXY_DHCP" opcode="Fehlerhaft" level="win:Error" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DHCPFehlerhaftArgs_V1"/>
+     <event value="805" symbol="WINHTTP_AUTOPROXY_DNSStarten" version="0" task="WINHTTP_AUTOPROXY_DNS" opcode="win:Starten" level="win:Verbose" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DNSStartenArgs"/>
+     <event value="806" symbol="WINHTTP_AUTOPROXY_DNSBeenden" version="0" task="WINHTTP_AUTOPROXY_DNS" opcode="win:Beenden" level="win:Verbose" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DNSBeendenArgs"/>
+     <event value="806" symbol="WINHTTP_AUTOPROXY_DNSBeenden_V1" version="1" task="WINHTTP_AUTOPROXY_DNS" opcode="win:Beenden" level="win:Verbose" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DNSBeendenArgs_V1"/>
+     <event value="807" symbol="WINHTTP_AUTOPROXY_DNSFehlerhaft" version="0" task="WINHTTP_AUTOPROXY_DNS" opcode="Fehlerhaft" level="win:Error" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DNSFehlerhaftArgs"/>
+     <event value="808" symbol="WINHTTP_AUTOPROXY_SEARCHFehlerhaft" version="0" task="WINHTTP_AUTOPROXY_SEARCH" opcode="Fehlerhaft" level="win:Error" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_SEARCHFehlerhaftArgs"/>
+     <event value="809" symbol="WINHTTP_AUTOPROXY_DOWNLOADStarten" version="0" task="WINHTTP_AUTOPROXY_DOWNLOAD" opcode="win:Starten" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DOWNLOADStartenArgs"/>
+     <event value="809" symbol="WINHTTP_AUTOPROXY_DOWNLOADStarten_V1" version="1" task="WINHTTP_AUTOPROXY_DOWNLOAD" opcode="win:Starten" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DOWNLOADStartenArgs_V1"/>
+     <event value="810" symbol="WINHTTP_AUTOPROXY_DOWNLOADBeenden" version="0" task="WINHTTP_AUTOPROXY_DOWNLOAD" opcode="win:Beenden" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DOWNLOADStartenArgs"/>
+     <event value="810" symbol="WINHTTP_AUTOPROXY_DOWNLOADBeenden_V1" version="1" task="WINHTTP_AUTOPROXY_DOWNLOAD" opcode="win:Beenden" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DOWNLOADStartenArgs_V1"/>
+     <event value="811" symbol="WINHTTP_AUTOPROXY_DOWNLOADFehlerhaft" version="0" task="WINHTTP_AUTOPROXY_DOWNLOAD" opcode="Fehlerhaft" level="win:Error" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DOWNLOADFehlerhaftArgs"/>
+     <event value="811" symbol="WINHTTP_AUTOPROXY_DOWNLOADFehlerhaft_V1" version="1" task="WINHTTP_AUTOPROXY_DOWNLOAD" opcode="Fehlerhaft" level="win:Error" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DOWNLOADFehlerhaftArgs_V1"/>
+     <event value="812" symbol="WINHTTP_AUTOPROXY_DOWNLOADFehlerhaft812" version="0" task="WINHTTP_AUTOPROXY_DOWNLOAD" opcode="Fehlerhaft" level="win:Error" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DOWNLOADFehlerhaft812Args"/>
+     <event value="812" symbol="WINHTTP_AUTOPROXY_DOWNLOADFehlerhaft812_V1" version="1" task="WINHTTP_AUTOPROXY_DOWNLOAD" opcode="Fehlerhaft" level="win:Error" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_DOWNLOADFehlerhaft812Args_V1"/>
+     <event value="813" symbol="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLStarten" version="0" task="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URL" opcode="win:Starten" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLStartenArgs"/>
+     <event value="813" symbol="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLStarten_V1" version="1" task="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URL" opcode="win:Starten" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLStartenArgs_V1"/>
+     <event value="814" symbol="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLBeenden" version="0" task="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URL" opcode="win:Beenden" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLBeendenArgs"/>
+     <event value="814" symbol="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLBeenden_V1" version="1" task="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URL" opcode="win:Beenden" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLBeendenArgs_V1"/>
+     <event value="815" symbol="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLFehlerhaft" version="0" task="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URL" opcode="Fehlerhaft" level="win:Error" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLFehlerhaftArgs"/>
+     <event value="815" symbol="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLFehlerhaft_V1" version="1" task="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URL" opcode="Fehlerhaft" level="win:Error" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLFehlerhaftArgs_V1"/>
+     <event value="816" symbol="WINHTTP_BLOCKING_AUTOPROXY_DETERMINATIONStarten" version="0" task="WINHTTP_BLOCKING_AUTOPROXY_DETERMINATION" opcode="win:Starten" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY"/>
+     <event value="817" symbol="WINHTTP_BLOCKING_AUTOPROXY_DETERMINATIONBeenden" version="0" task="WINHTTP_BLOCKING_AUTOPROXY_DETERMINATION" opcode="win:Beenden" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY"/>
+     <event value="818" symbol="WINHTTP_TRANSFER" version="0" task="WINHTTP_TRANSFER" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY"/>
+     <event value="819" symbol="WINHTTP_AUTOPROXY_SWPAD" version="0" task="WINHTTP_AUTOPROXY_SWPAD" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_SWPADArgs"/>
+     <event value="820" symbol="WINHTTP_AUTOPROXY_PERFTRACK_HOST_IP_LOOKUPStarten" version="0" task="WINHTTP_AUTOPROXY_PERFTRACK_HOST_IP_LOOKUP" opcode="win:Starten" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY"/>
+     <event value="821" symbol="WINHTTP_AUTOPROXY_PERFTRACK_HOST_IP_LOOKUPBeenden" version="0" task="WINHTTP_AUTOPROXY_PERFTRACK_HOST_IP_LOOKUP" opcode="win:Beenden" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY"/>
+     <event value="822" symbol="WINHTTP_AUTOPROXY_PERFTRACK_SWPAD_LOOKUPStarten" version="0" task="WINHTTP_AUTOPROXY_PERFTRACK_SWPAD_LOOKUP" opcode="win:Starten" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY"/>
+     <event value="823" symbol="WINHTTP_AUTOPROXY_PERFTRACK_SWPAD_LOOKUPBeenden" version="0" task="WINHTTP_AUTOPROXY_PERFTRACK_SWPAD_LOOKUP" opcode="win:Beenden" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY"/>
+     <event value="824" symbol="WINHTTP_AUTOPROXY_PERFTRACK_KNOWN_DETECTIONStarten" version="0" task="WINHTTP_AUTOPROXY_PERFTRACK_KNOWN_DETECTION" opcode="win:Starten" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY"/>
+     <event value="825" symbol="WINHTTP_AUTOPROXY_PERFTRACK_KNOWN_DETECTIONBeenden" version="0" task="WINHTTP_AUTOPROXY_PERFTRACK_KNOWN_DETECTION" opcode="win:Beenden" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY"/>
+     <event value="826" symbol="WINHTTP_AUTOPROXY_PERFTRACK_UNKNOWN_DETECTIONStarten" version="0" task="WINHTTP_AUTOPROXY_PERFTRACK_UNKNOWN_DETECTION" opcode="win:Starten" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY"/>
+     <event value="827" symbol="WINHTTP_AUTOPROXY_PERFTRACK_UNKNOWN_DETECTIONBeenden" version="0" task="WINHTTP_AUTOPROXY_PERFTRACK_UNKNOWN_DETECTION" opcode="win:Beenden" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY"/>
+     <event value="828" symbol="WINHTTP_AUTOPROXY_PERFTRACK_SCRIPT_DOWNLOADStarten" version="0" task="WINHTTP_AUTOPROXY_PERFTRACK_SCRIPT_DOWNLOAD" opcode="win:Starten" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY"/>
+     <event value="829" symbol="WINHTTP_AUTOPROXY_PERFTRACK_SCRIPT_DOWNLOADBeenden" version="0" task="WINHTTP_AUTOPROXY_PERFTRACK_SCRIPT_DOWNLOAD" opcode="win:Beenden" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY"/>
+     <event value="834" symbol="WINHTTP_AUTOPROXY_PERFTRACK_ALLStarten" version="0" task="WINHTTP_AUTOPROXY_PERFTRACK_ALL" opcode="win:Starten" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_PERFTRACK_ALLStartenArgs"/>
+     <event value="835" symbol="WINHTTP_AUTOPROXY_PERFTRACK_ALLBeenden" version="0" task="WINHTTP_AUTOPROXY_PERFTRACK_ALL" opcode="win:Beenden" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WINHTTP_AUTOPROXY_PERFTRACK_ALLStartenArgs"/>
+     <event value="1051" symbol="WinHTTP_GetaddrinfoStarten" version="0" task="WinHTTP_Getaddrinfo" opcode="win:Starten" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WinHTTP_GetaddrinfoStartenArgs"/>
+     <event value="1052" symbol="WinHTTP_GetaddrinfoBeenden" version="0" task="WinHTTP_Getaddrinfo" opcode="win:Beenden" level="win:Informational" keywords="WINHTTP_KEYWORD_AUTOPROXY" template="WinHTTP_GetaddrinfoBeendenArgs"/>
+     <event value="12501" symbol="task_012501" version="0" task="task_0" level="win:Always"/>
+     <event value="12503" symbol="task_012503" version="0" task="task_0" level="win:Always" template="task_012503Args"/>
+     <event value="12506" symbol="task_012506" version="0" task="task_0" level="win:Always" template="task_012506Args"/>
+     <event value="12507" symbol="task_012507" version="0" task="task_0" level="win:Always"/>
+     <event value="12509" symbol="task_012509" version="0" task="task_0" level="win:Always" template="task_012509Args"/>
+     <event value="12511" symbol="task_012511" version="0" task="task_0" level="win:Always" template="task_0Args"/>
+     <event value="12512" symbol="task_012512" version="0" task="task_0" level="win:Always"/>
+     <event value="12513" symbol="task_012513" version="0" task="task_0" level="win:Always"/>
+     <event value="12514" symbol="task_012514" version="0" task="task_0" level="win:Always" template="task_012514Args"/>
+     <event value="12516" symbol="task_012516" version="0" task="task_0" level="win:Always"/>
+     <event value="12517" symbol="task_012517" version="0" task="task_0" level="win:Always"/>
+     <event value="12518" symbol="task_012518" version="0" task="task_0" level="win:Always"/>
+     <event value="58999" symbol="Debug" version="0" task="Debug" level="win:Verbose" template="DebugArgs"/>
+     <event value="59995" symbol="DebugBeenden" version="0" task="Debug" opcode="win:Beenden" level="win:Verbose" template="DebugBeendenArgs"/>
+     <event value="59996" symbol="DebugStarten" version="0" task="Debug" opcode="win:Starten" level="win:Verbose" template="DebugStartenArgs"/>
+     <event value="59997" symbol="DebugBeenden59997" version="0" task="Debug" opcode="win:Beenden" level="win:Verbose" template="DebugStartenArgs"/>
+     <event value="59998" symbol="DebugStarten59998" version="0" task="Debug" opcode="win:Starten" level="win:Verbose" template="DebugStartenArgs"/>
+     <event value="59999" symbol="Debug59999" version="0" task="Debug" level="win:Verbose" template="Debug59999Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="param1" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04Args">
+      <data name="loadunloadinfo" inType="win:UnicodeString"/>
+     </template>
+     <template tid="APIStartenArgs">
+      <data name="ApiHandle" inType="win:UInt64"/>
+      <data name="Api" inType="win:AnsiString"/>
+     </template>
+     <template tid="APIBeendenArgs">
+      <data name="ApiHandle" inType="win:UInt64"/>
+      <data name="Api" inType="win:AnsiString"/>
+      <data name="Result" inType="win:UInt32"/>
+     </template>
+     <template tid="API100Args">
+      <data name="hRequest" inType="win:Pointer"/>
+      <data name="AuthTargets" inType="win:UInt32" map="mapWinHttpAuthTarget"/>
+      <data name="AuthScheme" inType="win:UInt32"/>
+      <data name="UserName" inType="win:UnicodeString"/>
+      <data name="Password" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_SEARCHStartenArgs">
+      <data name="_ConnectionNameLength" inType="win:UInt16"/>
+      <data name="ConnectionName" inType="win:AnsiString" length="_ConnectionNameLength"/>
+      <data name="DetectFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DHCPStartenArgs">
+      <data name="_InterfaceLength" inType="win:UInt16"/>
+      <data name="Interface" inType="win:AnsiString" length="_InterfaceLength"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DHCPBeendenArgs">
+      <data name="_InterfaceLength" inType="win:UInt16"/>
+      <data name="Interface" inType="win:AnsiString" length="_InterfaceLength"/>
+      <data name="_ConfigurationURLLength" inType="win:UInt16"/>
+      <data name="ConfigurationURL" inType="win:AnsiString" length="_ConfigurationURLLength"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DHCPFehlerhaftArgs">
+      <data name="_InterfaceLength" inType="win:UInt16"/>
+      <data name="Interface" inType="win:AnsiString" length="_InterfaceLength"/>
+      <data name="_ConfigurationURLLength" inType="win:UInt16"/>
+      <data name="ConfigurationURL" inType="win:AnsiString" length="_ConfigurationURLLength"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DNSStartenArgs">
+      <data name="DetectFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DNSBeendenArgs">
+      <data name="_ConfigurationURLLength" inType="win:UInt16"/>
+      <data name="ConfigurationURL" inType="win:AnsiString" length="_ConfigurationURLLength"/>
+      <data name="DetectFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DNSFehlerhaftArgs">
+      <data name="DetectFlags" inType="win:UInt32"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_SEARCHFehlerhaftArgs">
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DOWNLOADStartenArgs">
+      <data name="_ConfigurationURLLength" inType="win:UInt16"/>
+      <data name="ConfigurationURL" inType="win:AnsiString" length="_ConfigurationURLLength"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DOWNLOADFehlerhaftArgs">
+      <data name="_ConfigurationURLLength" inType="win:UInt16"/>
+      <data name="ConfigurationURL" inType="win:AnsiString" length="_ConfigurationURLLength"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DOWNLOADFehlerhaft812Args">
+      <data name="_ConfigurationURLLength" inType="win:UInt16"/>
+      <data name="ConfigurationURL" inType="win:AnsiString" length="_ConfigurationURLLength"/>
+      <data name="_MIMETypeLength" inType="win:UInt16"/>
+      <data name="MIMEType" inType="win:AnsiString" length="_MIMETypeLength"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLStartenArgs">
+      <data name="_URLLength" inType="win:UInt16"/>
+      <data name="URL" inType="win:AnsiString" length="_URLLength"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLBeendenArgs">
+      <data name="_URLLength" inType="win:UInt16"/>
+      <data name="URL" inType="win:AnsiString" length="_URLLength"/>
+      <data name="_ProxyStringLength" inType="win:UInt16"/>
+      <data name="ProxyString" inType="win:AnsiString" length="_ProxyStringLength"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLFehlerhaftArgs">
+      <data name="_URLLength" inType="win:UInt16"/>
+      <data name="URL" inType="win:AnsiString" length="_URLLength"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_SWPADArgs">
+      <data name="WPADNetworkDecision" inType="win:UInt32" map="mapWPADNetworkDecision"/>
+      <data name="NetworkCount" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_PERFTRACK_ALLStartenArgs">
+      <data name="UniqueId" inType="win:UInt32"/>
+     </template>
+     <template tid="WinHTTP_GetaddrinfoStartenArgs">
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="AddressName" inType="win:AnsiString"/>
+     </template>
+     <template tid="WinHTTP_GetaddrinfoBeendenArgs">
+      <data name="error" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="AddressName" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_012503Args">
+      <data name="IdleTime" inType="win:UInt32"/>
+     </template>
+     <template tid="task_012506Args">
+      <data name="Functionname" inType="win:UnicodeString"/>
+      <data name="Errortext" inType="win:UnicodeString"/>
+      <data name="Errorcode" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_012509Args">
+      <data name="Transporttype" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_012514Args">
+      <data name="Exceptioncode" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DebugArgs">
+      <data name="Message" inType="win:AnsiString"/>
+     </template>
+     <template tid="DebugBeendenArgs">
+      <data name="Context" inType="win:Pointer"/>
+      <data name="EtwQueueActionType" inType="win:UInt32" map="mapQueueActionType"/>
+     </template>
+     <template tid="DebugStartenArgs">
+      <data name="Context" inType="win:Pointer"/>
+      <data name="EtwQueueActionType" inType="win:UInt32"/>
+     </template>
+     <template tid="Debug59999Args">
+      <data name="File" inType="win:AnsiString"/>
+      <data name="Line" inType="win:UInt32"/>
+      <data name="Length" inType="win:UInt16"/>
+      <data name="Message" inType="win:AnsiString" length="Length"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_SEARCHStartenArgs_V1">
+      <data name="_ConnectionNameLength" inType="win:UInt16"/>
+      <data name="ConnectionName" inType="win:UnicodeString" length="_ConnectionNameLength"/>
+      <data name="DetectFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DHCPStartenArgs_V1">
+      <data name="_InterfaceLength" inType="win:UInt16"/>
+      <data name="Interface" inType="win:UnicodeString" length="_InterfaceLength"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DHCPBeendenArgs_V1">
+      <data name="_InterfaceLength" inType="win:UInt16"/>
+      <data name="Interface" inType="win:UnicodeString" length="_InterfaceLength"/>
+      <data name="_ConfigurationURLLength" inType="win:UInt16"/>
+      <data name="ConfigurationURL" inType="win:UnicodeString" length="_ConfigurationURLLength"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DHCPFehlerhaftArgs_V1">
+      <data name="_InterfaceLength" inType="win:UInt16"/>
+      <data name="Interface" inType="win:UnicodeString" length="_InterfaceLength"/>
+      <data name="_ConfigurationURLLength" inType="win:UInt16"/>
+      <data name="ConfigurationURL" inType="win:UnicodeString" length="_ConfigurationURLLength"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DNSBeendenArgs_V1">
+      <data name="_ConfigurationURLLength" inType="win:UInt16"/>
+      <data name="ConfigurationURL" inType="win:UnicodeString" length="_ConfigurationURLLength"/>
+      <data name="DetectFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DOWNLOADStartenArgs_V1">
+      <data name="_ConfigurationURLLength" inType="win:UInt16"/>
+      <data name="ConfigurationURL" inType="win:UnicodeString" length="_ConfigurationURLLength"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DOWNLOADFehlerhaftArgs_V1">
+      <data name="_ConfigurationURLLength" inType="win:UInt16"/>
+      <data name="ConfigurationURL" inType="win:UnicodeString" length="_ConfigurationURLLength"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_DOWNLOADFehlerhaft812Args_V1">
+      <data name="_ConfigurationURLLength" inType="win:UInt16"/>
+      <data name="ConfigurationURL" inType="win:UnicodeString" length="_ConfigurationURLLength"/>
+      <data name="_MIMETypeLength" inType="win:UInt16"/>
+      <data name="MIMEType" inType="win:UnicodeString" length="_MIMETypeLength"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLStartenArgs_V1">
+      <data name="_URLLength" inType="win:UInt16"/>
+      <data name="URL" inType="win:UnicodeString" length="_URLLength"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLBeendenArgs_V1">
+      <data name="_URLLength" inType="win:UInt16"/>
+      <data name="URL" inType="win:UnicodeString" length="_URLLength"/>
+      <data name="_ProxyStringLength" inType="win:UInt16"/>
+      <data name="ProxyString" inType="win:UnicodeString" length="_ProxyStringLength"/>
+     </template>
+     <template tid="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLFehlerhaftArgs_V1">
+      <data name="_URLLength" inType="win:UInt16"/>
+      <data name="URL" inType="win:UnicodeString" length="_URLLength"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Keyword.API" value="Keyword.API"/>
+    <string id="keyword_WINHTTP_KEYWORD_AUTOPROXY" value="WINHTTP_KEYWORD_AUTOPROXY"/>
+    <string id="keyword_Keyword.SEND" value="Keyword.SEND"/>
+    <string id="keyword_Keyword.RECEIVE" value="Keyword.RECEIVE"/>
+    <string id="keyword_Keyword.L3_CONNECT" value="Keyword.L3_CONNECT"/>
+    <string id="keyword_Keyword.CLOSE" value="Keyword.CLOSE"/>
+    <string id="keyword_Keyword.SECURITY" value="Keyword.SECURITY"/>
+    <string id="keyword_Keyword.CONFIGURATION" value="Keyword.CONFIGURATION"/>
+    <string id="keyword_Keyword.GLOBAL" value="Keyword.GLOBAL"/>
+    <string id="keyword_keyword_20000000000" value="keyword_20000000000"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_API" value="API"/>
+    <string id="task_Debug" value="Debug"/>
+    <string id="task_WINHTTP_AUTOPROXY_SEARCH" value="WINHTTP_AUTOPROXY_SEARCH"/>
+    <string id="opcode_WINHTTP_AUTOPROXY_SEARCHFehlerhaft" value="Fehlerhaft"/>
+    <string id="task_WINHTTP_AUTOPROXY_DHCP" value="WINHTTP_AUTOPROXY_DHCP"/>
+    <string id="opcode_WINHTTP_AUTOPROXY_DHCPFehlerhaft" value="Fehlerhaft"/>
+    <string id="task_WINHTTP_AUTOPROXY_DNS" value="WINHTTP_AUTOPROXY_DNS"/>
+    <string id="opcode_WINHTTP_AUTOPROXY_DNSFehlerhaft" value="Fehlerhaft"/>
+    <string id="task_WINHTTP_AUTOPROXY_DOWNLOAD" value="WINHTTP_AUTOPROXY_DOWNLOAD"/>
+    <string id="opcode_WINHTTP_AUTOPROXY_DOWNLOADFehlerhaft" value="Fehlerhaft"/>
+    <string id="task_WINHTTP_AUTOPROXY_FIND_INFO_FOR_URL" value="WINHTTP_AUTOPROXY_FIND_INFO_FOR_URL"/>
+    <string id="opcode_WINHTTP_AUTOPROXY_FIND_INFO_FOR_URLFehlerhaft" value="Fehlerhaft"/>
+    <string id="task_WINHTTP_BLOCKING_AUTOPROXY_DETERMINATION" value="WINHTTP_BLOCKING_AUTOPROXY_DETERMINATION"/>
+    <string id="task_WINHTTP_TRANSFER" value="WINHTTP_TRANSFER"/>
+    <string id="task_WINHTTP_AUTOPROXY_SWPAD" value="WINHTTP_AUTOPROXY_SWPAD"/>
+    <string id="task_WinHTTP_Getaddrinfo" value="WinHTTP_Getaddrinfo"/>
+    <string id="task_WINHTTP_AUTOPROXY_PERFTRACK_HOST_IP_LOOKUP" value="WINHTTP_AUTOPROXY_PERFTRACK_HOST_IP_LOOKUP"/>
+    <string id="task_WINHTTP_AUTOPROXY_PERFTRACK_SWPAD_LOOKUP" value="WINHTTP_AUTOPROXY_PERFTRACK_SWPAD_LOOKUP"/>
+    <string id="task_WINHTTP_AUTOPROXY_PERFTRACK_KNOWN_DETECTION" value="WINHTTP_AUTOPROXY_PERFTRACK_KNOWN_DETECTION"/>
+    <string id="task_WINHTTP_AUTOPROXY_PERFTRACK_UNKNOWN_DETECTION" value="WINHTTP_AUTOPROXY_PERFTRACK_UNKNOWN_DETECTION"/>
+    <string id="task_WINHTTP_AUTOPROXY_PERFTRACK_SCRIPT_DOWNLOAD" value="WINHTTP_AUTOPROXY_PERFTRACK_SCRIPT_DOWNLOAD"/>
+    <string id="task_WINHTTP_AUTOPROXY_PERFTRACK_ALL" value="WINHTTP_AUTOPROXY_PERFTRACK_ALL"/>
+    <string id="map_mapWinHttpAuthTargetWINHTTP_AUTH_TARGET_SERVER" value="WINHTTP_AUTH_TARGET_SERVER"/>
+    <string id="map_mapWinHttpAuthTargetWINHTTP_AUTH_TARGET_PROXY" value="WINHTTP_AUTH_TARGET_PROXY"/>
+    <string id="map_mapWPADNetworkDecisionWPAD_NETWORK_DECISION_OFF" value="WPAD_NETWORK_DECISION_OFF"/>
+    <string id="map_mapWPADNetworkDecisionWPAD_NETWORK_DECISION_ON" value="WPAD_NETWORK_DECISION_ON"/>
+    <string id="map_mapWPADNetworkDecisionWPAD_NETWORK_DECISION_UNKNOWN" value="WPAD_NETWORK_DECISION_UNKNOWN"/>
+    <string id="map_mapWPADNetworkDecisionWPAD_NETWORK_DECISION_UNKNOWN" value="WPAD_NETWORK_DECISION_UNKNOWN"/>
+    <string id="map_mapQueueActionTypeZeitgeber" value="Zeitgeber"/>
+    <string id="map_mapQueueActionTypeArbeitselement" value="Arbeitselement"/>
+    <string id="map_mapQueueActionTypeÜberlappende E/A" value="Überlappende E/A"/>
+    <string id="map_mapQueueActionTypeRückruf abwarten" value="Rückruf abwarten"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

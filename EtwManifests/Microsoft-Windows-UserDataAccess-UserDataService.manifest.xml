@@ -1,0 +1,452 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-UserDataAccess-UserDataService" guid="{fb19ee2c-0d22-4a2e-969e-dd41ae0ce1a9}" resourceFileName="Microsoft-Windows-UserDataAccess-UserDataService" messageFileName="Microsoft-Windows-UserDataAccess-UserDataService" symbol="MicrosoftWindowsUserDataAccessUserDataService" source="Xml" >
+    <keywords>
+     <keyword name="Error" message="$(string.keyword_Error)" mask="0x1"/>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x2"/>
+     <keyword name="UserDataService" message="$(string.keyword_UserDataService)" mask="0x4"/>
+     <keyword name="StaleDataCleanup" message="$(string.keyword_StaleDataCleanup)" mask="0x8"/>
+     <keyword name="CalendarSearch" message="$(string.keyword_CalendarSearch)" mask="0x10"/>
+     <keyword name="debug" message="$(string.keyword_debug)" mask="0x100"/>
+     <keyword name="APICall" message="$(string.keyword_APICall)" mask="0x200"/>
+     <keyword name="Warning" message="$(string.keyword_Warning)" mask="0x4000000000"/>
+     <keyword name="StateTransition" message="$(string.keyword_StateTransition)" mask="0x8000000000"/>
+     <keyword name="keyword_200000000000" message="$(string.keyword_keyword_200000000000)" mask="0x200000000000"/>
+     <keyword name="keyword_400000000000" message="$(string.keyword_keyword_400000000000)" mask="0x400000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="Ablaufverfolgung" message="$(string.task_Ablaufverfolgung)" value="1"/>
+     <task name="Udm_IntializedSecurityInfo" message="$(string.task_Udm_IntializedSecurityInfo)" value="100"/>
+     <task name="Udm_OpenSession" message="$(string.task_Udm_OpenSession)" value="101"/>
+     <task name="Udm_OpenCallHistorySession" message="$(string.task_Udm_OpenCallHistorySession)" value="102"/>
+     <task name="Calendar_UpdateCalendarObjects" message="$(string.task_Calendar_UpdateCalendarObjects)" value="200"/>
+     <task name="Calendar_GetConflictInfo" message="$(string.task_Calendar_GetConflictInfo)" value="202"/>
+     <task name="Calendar_RespondMeetingRequest" message="$(string.task_Calendar_RespondMeetingRequest)" value="203"/>
+     <task name="Calendar_ProposeNewTime" message="$(string.task_Calendar_ProposeNewTime)" value="204"/>
+     <task name="Calendar_CreateForwardMessage" message="$(string.task_Calendar_CreateForwardMessage)" value="205"/>
+     <task name="Calendar_GetChangedAppointmentsSince" message="$(string.task_Calendar_GetChangedAppointmentsSince)" value="206"/>
+     <task name="Calendar_GetCalendarStoreEnum" message="$(string.task_Calendar_GetCalendarStoreEnum)" value="207"/>
+     <task name="Calendar_GetCalendarEnum" message="$(string.task_Calendar_GetCalendarEnum)" value="208"/>
+     <task name="Calendar_GetAppointmentEnum" message="$(string.task_Calendar_GetAppointmentEnum)" value="209"/>
+     <task name="Calendar_EnumMultiDay" message="$(string.task_Calendar_EnumMultiDay)" value="210"/>
+     <task name="Calendar_EnumSingleInstance" message="$(string.task_Calendar_EnumSingleInstance)" value="211"/>
+     <task name="Calendar_EnumRecurring" message="$(string.task_Calendar_EnumRecurring)" value="212"/>
+     <task name="Calendar_Search_Open" message="$(string.task_Calendar_Search_Open)" value="213"/>
+     <task name="Calendar_Search_Fetch" message="$(string.task_Calendar_Search_Fetch)" value="214"/>
+     <task name="Meeting_CreateOrModifyAppointment" message="$(string.task_Meeting_CreateOrModifyAppointment)" value="250"/>
+     <task name="Meeting_GetStreamProperty" message="$(string.task_Meeting_GetStreamProperty)" value="251"/>
+     <task name="Chat_GetChatConversationProperties" message="$(string.task_Chat_GetChatConversationProperties)" value="300"/>
+     <task name="Chat_GetMessageAttachments" message="$(string.task_Chat_GetMessageAttachments)" value="301"/>
+     <task name="Chat_GetMessageParticipants" message="$(string.task_Chat_GetMessageParticipants)" value="302"/>
+     <task name="Chat_ChatOperationContext_GetMessageProperties" message="$(string.task_Chat_ChatOperationContext_GetMessageProperties)" value="303"/>
+     <task name="Chat_ChatOperationContext_ModifyConversationItem" message="$(string.task_Chat_ChatOperationContext_ModifyConversationItem)" value="304"/>
+     <task name="Chat_ChatOperationContext_ModifyItem" message="$(string.task_Chat_ChatOperationContext_ModifyItem)" value="305"/>
+     <task name="User_DataModel_Service" message="$(string.task_User_DataModel_Service)" value="306"/>
+     <task name="Chat_DataModel_Service" message="$(string.task_Chat_DataModel_Service)" value="307"/>
+    </tasks>
+    <maps>
+     <valueMap name="RcsServiceActivationStatusType">
+      <map value="0x0" message="$(string.map_RcsServiceActivationStatusTypeDeactivated)"/>
+      <map value="0x1" message="$(string.map_RcsServiceActivationStatusTypeActivating)"/>
+      <map value="0x2" message="$(string.map_RcsServiceActivationStatusTypeActivatedUnregistered)"/>
+      <map value="0x3" message="$(string.map_RcsServiceActivationStatusTypeActivatedRegistered)"/>
+      <map value="0x4" message="$(string.map_RcsServiceActivationStatusTypeDeactivating)"/>
+     </valueMap>
+     <valueMap name="RcsServiceType">
+      <map value="0x0" message="$(string.map_RcsServiceTypeChat)"/>
+      <map value="0x1" message="$(string.map_RcsServiceTypeGroupChat)"/>
+      <map value="0x2" message="$(string.map_RcsServiceTypeFileTransfer)"/>
+      <map value="0x3" message="$(string.map_RcsServiceTypeCapability)"/>
+     </valueMap>
+     <valueMap name="AppDataCleanupReason">
+      <map value="0x1" message="$(string.map_AppDataCleanupReasonStaleData)"/>
+      <map value="0x2" message="$(string.map_AppDataCleanupReasonAppLookupFailed)"/>
+      <map value="0x3" message="$(string.map_AppDataCleanupReasonNotInstalled)"/>
+      <map value="0x4" message="$(string.map_AppDataCleanupReasonInstanceBeforeLastUninstall)"/>
+      <map value="0x5" message="$(string.map_AppDataCleanupReasonBackupAppIdPropSet)"/>
+      <map value="0x6" message="$(string.map_AppDataCleanupReasonMissingInstallTime)"/>
+      <map value="0x7" message="$(string.map_AppDataCleanupReasonStoreDeletePending)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="task_0" version="0" task="task_0" level="win:Error" keywords="Error keyword_200000000000" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Warning" keywords="Warning keyword_400000000000" template="task_0Args"/>
+     <event value="3" symbol="Ablaufverfolgung" version="0" task="Ablaufverfolgung" level="win:Verbose" keywords="debug" template="AblaufverfolgungArgs"/>
+     <event value="101" symbol="task_0101" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0101Args"/>
+     <event value="102" symbol="task_0102" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0102Args"/>
+     <event value="103" symbol="task_0103" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0102Args"/>
+     <event value="104" symbol="task_0104" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0104Args"/>
+     <event value="105" symbol="task_0105" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0105Args"/>
+     <event value="106" symbol="task_0106" version="0" task="task_0" level="win:Warning" keywords="Warning keyword_400000000000" template="task_0106Args"/>
+     <event value="107" symbol="task_0107" version="0" task="task_0" level="win:Warning" keywords="Warning keyword_400000000000" template="task_0107Args"/>
+     <event value="108" symbol="task_0108" version="0" task="task_0" level="win:Warning" keywords="Warning keyword_400000000000" template="task_0107Args"/>
+     <event value="201" symbol="task_0201" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0201Args"/>
+     <event value="202" symbol="task_0202" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0202Args"/>
+     <event value="203" symbol="task_0203" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0203Args"/>
+     <event value="204" symbol="task_0204" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0204Args"/>
+     <event value="205" symbol="task_0205" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0205Args"/>
+     <event value="206" symbol="task_0206" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0202Args"/>
+     <event value="301" symbol="task_0301" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0204Args"/>
+     <event value="302" symbol="task_0302" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0204Args"/>
+     <event value="303" symbol="task_0303" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0204Args"/>
+     <event value="304" symbol="task_0304" version="0" task="task_0" level="win:Verbose" keywords="UserDataService StateTransition" template="task_0102Args"/>
+     <event value="305" symbol="task_0305" version="0" task="task_0" level="win:Verbose" keywords="UserDataService StateTransition" template="task_0102Args"/>
+     <event value="308" symbol="task_0308" version="0" task="task_0" level="win:Error" keywords="Error UserDataService" template="task_0308Args"/>
+     <event value="400" symbol="task_0400" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0102Args"/>
+     <event value="401" symbol="task_0401" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0102Args"/>
+     <event value="402" symbol="task_0402" version="0" task="task_0" level="win:Informational" keywords="UserDataService CalendarSearch StateTransition" template="task_0106Args"/>
+     <event value="403" symbol="task_0403" version="0" task="task_0" level="win:Warning" keywords="UserDataService StateTransition" template="task_0403Args"/>
+     <event value="404" symbol="task_0404" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition keyword_400000000000" template="task_0404Args"/>
+     <event value="405" symbol="task_0405" version="0" task="task_0" level="win:Informational" keywords="UserDataService CalendarSearch" template="task_0308Args"/>
+     <event value="406" symbol="task_0406" version="0" task="task_0" level="win:Informational" keywords="UserDataService CalendarSearch" template="task_0406Args"/>
+     <event value="407" symbol="task_0407" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0407Args"/>
+     <event value="501" symbol="task_0501" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0106Args"/>
+     <event value="502" symbol="task_0502" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0502Args"/>
+     <event value="503" symbol="task_0503" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0503Args"/>
+     <event value="504" symbol="task_0504" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0504Args"/>
+     <event value="505" symbol="task_0505" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0504Args"/>
+     <event value="602" symbol="task_0602" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition"/>
+     <event value="700" symbol="task_0700" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0102Args"/>
+     <event value="701" symbol="task_0701" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0102Args"/>
+     <event value="702" symbol="task_0702" version="0" task="task_0" level="win:Verbose" template="task_0702Args"/>
+     <event value="705" symbol="task_0705" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0705Args"/>
+     <event value="706" symbol="task_0706" version="0" task="task_0" level="win:Error" keywords="Error" template="task_0706Args"/>
+     <event value="707" symbol="task_0707" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0707Args"/>
+     <event value="708" symbol="task_0708" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0708Args"/>
+     <event value="711" symbol="task_0711" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0102Args"/>
+     <event value="712" symbol="task_0712" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0102Args"/>
+     <event value="713" symbol="task_0713" version="0" task="task_0" level="win:Verbose" template="task_0713Args"/>
+     <event value="714" symbol="task_0714" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0102Args"/>
+     <event value="715" symbol="task_0715" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0102Args"/>
+     <event value="716" symbol="task_0716" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0102Args"/>
+     <event value="717" symbol="task_0717" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0102Args"/>
+     <event value="718" symbol="task_0718" version="0" task="task_0" level="win:Verbose" template="task_0718Args"/>
+     <event value="719" symbol="task_0719" version="0" task="task_0" level="win:Warning" keywords="UserDataService" template="task_0719Args"/>
+     <event value="720" symbol="task_0720" version="0" task="task_0" level="win:Informational"/>
+     <event value="721" symbol="task_0721" version="0" task="task_0" level="win:Verbose"/>
+     <event value="722" symbol="task_0722" version="0" task="task_0" level="win:Informational"/>
+     <event value="723" symbol="task_0723" version="0" task="task_0" level="win:Informational"/>
+     <event value="724" symbol="task_0724" version="0" task="task_0" level="win:Informational"/>
+     <event value="725" symbol="task_0725" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="726" symbol="task_0726" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="727" symbol="task_0727" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="728" symbol="task_0728" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="729" symbol="task_0729" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="730" symbol="task_0730" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="731" symbol="task_0731" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="732" symbol="task_0732" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="733" symbol="task_0733" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="735" symbol="task_0735" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0404Args"/>
+     <event value="736" symbol="task_0736" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0404Args"/>
+     <event value="737" symbol="task_0737" version="0" task="task_0" level="win:Warning" keywords="UserDataService"/>
+     <event value="738" symbol="task_0738" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="739" symbol="task_0739" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="740" symbol="task_0740" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="741" symbol="task_0741" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0404Args"/>
+     <event value="742" symbol="task_0742" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="743" symbol="task_0743" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="744" symbol="task_0744" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0406Args"/>
+     <event value="745" symbol="task_0745" version="0" task="task_0" level="win:Warning" keywords="UserDataService" template="task_0107Args"/>
+     <event value="746" symbol="task_0746" version="0" task="task_0" level="win:Warning" keywords="UserDataService" template="task_0107Args"/>
+     <event value="747" symbol="task_0747" version="0" task="task_0" level="win:Warning" keywords="UserDataService" template="task_0107Args"/>
+     <event value="748" symbol="task_0748" version="0" task="task_0" level="win:Warning" keywords="UserDataService" template="task_0107Args"/>
+     <event value="749" symbol="task_0749" version="0" task="task_0" level="win:Warning" keywords="UserDataService" template="task_0749Args"/>
+     <event value="750" symbol="task_0750" version="0" task="task_0" level="win:Warning" keywords="UserDataService" template="task_0749Args"/>
+     <event value="751" symbol="task_0751" version="0" task="task_0" level="win:Warning" keywords="UserDataService" template="task_0107Args"/>
+     <event value="752" symbol="task_0752" version="0" task="task_0" level="win:Warning" keywords="UserDataService" template="task_0404Args"/>
+     <event value="753" symbol="task_0753" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition"/>
+     <event value="754" symbol="task_0754" version="0" task="task_0" level="win:Warning" keywords="UserDataService"/>
+     <event value="755" symbol="task_0755" version="0" task="task_0" level="win:Warning" keywords="UserDataService"/>
+     <event value="756" symbol="task_0756" version="0" task="task_0" level="win:Warning" keywords="UserDataService"/>
+     <event value="757" symbol="task_0757" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="758" symbol="task_0758" version="0" task="task_0" level="win:Warning" keywords="UserDataService"/>
+     <event value="759" symbol="task_0759" version="0" task="task_0" level="win:Informational" keywords="UserDataService" template="task_0759Args"/>
+     <event value="760" symbol="task_0760" version="0" task="task_0" level="win:Warning" keywords="UserDataService"/>
+     <event value="761" symbol="task_0761" version="0" task="task_0" level="win:Informational" keywords="UserDataService"/>
+     <event value="762" symbol="task_0762" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0102Args"/>
+     <event value="763" symbol="task_0763" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition" template="task_0102Args"/>
+     <event value="764" symbol="task_0764" version="0" task="task_0" level="win:Verbose"/>
+     <event value="800" symbol="task_0800" version="0" task="task_0" level="win:Informational" keywords="UserDataService StateTransition"/>
+     <event value="1000" symbol="Udm_IntializedSecurityInfoStarten" version="0" task="Udm_IntializedSecurityInfo" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1001" symbol="Udm_IntializedSecurityInfoBeenden" version="0" task="Udm_IntializedSecurityInfo" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1002" symbol="Udm_OpenSessionStarten" version="0" task="Udm_OpenSession" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1003" symbol="Udm_OpenSessionBeenden" version="0" task="Udm_OpenSession" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1004" symbol="Udm_OpenCallHistorySessionStarten" version="0" task="Udm_OpenCallHistorySession" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1005" symbol="Udm_OpenCallHistorySessionBeenden" version="0" task="Udm_OpenCallHistorySession" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1100" symbol="Calendar_UpdateCalendarObjectsStarten" version="0" task="Calendar_UpdateCalendarObjects" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1101" symbol="Calendar_UpdateCalendarObjectsBeenden" version="0" task="Calendar_UpdateCalendarObjects" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1104" symbol="Calendar_GetConflictInfoStarten" version="0" task="Calendar_GetConflictInfo" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1105" symbol="Calendar_GetConflictInfoBeenden" version="0" task="Calendar_GetConflictInfo" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1106" symbol="Calendar_RespondMeetingRequestStarten" version="0" task="Calendar_RespondMeetingRequest" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1107" symbol="Calendar_RespondMeetingRequestBeenden" version="0" task="Calendar_RespondMeetingRequest" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1108" symbol="Calendar_ProposeNewTimeStarten" version="0" task="Calendar_ProposeNewTime" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1109" symbol="Calendar_ProposeNewTimeBeenden" version="0" task="Calendar_ProposeNewTime" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1110" symbol="Calendar_CreateForwardMessageStarten" version="0" task="Calendar_CreateForwardMessage" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1111" symbol="Calendar_CreateForwardMessageBeenden" version="0" task="Calendar_CreateForwardMessage" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1112" symbol="Calendar_GetChangedAppointmentsSinceStarten" version="0" task="Calendar_GetChangedAppointmentsSince" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1113" symbol="Calendar_GetChangedAppointmentsSinceBeenden" version="0" task="Calendar_GetChangedAppointmentsSince" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1114" symbol="Calendar_GetCalendarStoreEnumStarten" version="0" task="Calendar_GetCalendarStoreEnum" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1115" symbol="Calendar_GetCalendarStoreEnumBeenden" version="0" task="Calendar_GetCalendarStoreEnum" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1116" symbol="Calendar_GetCalendarEnumStarten" version="0" task="Calendar_GetCalendarEnum" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1117" symbol="Calendar_GetCalendarEnumBeenden" version="0" task="Calendar_GetCalendarEnum" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1118" symbol="Calendar_GetAppointmentEnumStarten" version="0" task="Calendar_GetAppointmentEnum" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1119" symbol="Calendar_GetAppointmentEnumBeenden" version="0" task="Calendar_GetAppointmentEnum" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1120" symbol="Calendar_EnumMultiDayStarten" version="0" task="Calendar_EnumMultiDay" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1121" symbol="Calendar_EnumMultiDayBeenden" version="0" task="Calendar_EnumMultiDay" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1122" symbol="Calendar_EnumSingleInstanceStarten" version="0" task="Calendar_EnumSingleInstance" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1123" symbol="Calendar_EnumSingleInstanceBeenden" version="0" task="Calendar_EnumSingleInstance" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1124" symbol="Calendar_EnumRecurringStarten" version="0" task="Calendar_EnumRecurring" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1125" symbol="Calendar_EnumRecurringBeenden" version="0" task="Calendar_EnumRecurring" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1126" symbol="Calendar_Search_OpenStarten" version="0" task="Calendar_Search_Open" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1127" symbol="Calendar_Search_OpenBeenden" version="0" task="Calendar_Search_Open" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1128" symbol="Calendar_Search_FetchStarten" version="0" task="Calendar_Search_Fetch" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1129" symbol="Calendar_Search_FetchBeenden" version="0" task="Calendar_Search_Fetch" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1200" symbol="Meeting_CreateOrModifyAppointmentStarten" version="0" task="Meeting_CreateOrModifyAppointment" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1201" symbol="Meeting_CreateOrModifyAppointmentBeenden" version="0" task="Meeting_CreateOrModifyAppointment" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1202" symbol="Meeting_GetStreamPropertyStarten" version="0" task="Meeting_GetStreamProperty" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1203" symbol="Meeting_GetStreamPropertyBeenden" version="0" task="Meeting_GetStreamProperty" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1204" symbol="task_01204" version="0" task="task_0" level="win:Informational" keywords="APICall" template="task_01204Args"/>
+     <event value="1205" symbol="task_01205" version="0" task="task_0" level="win:Informational" keywords="APICall" template="task_01204Args"/>
+     <event value="1206" symbol="Chat_GetChatConversationPropertiesStarten" version="0" task="Chat_GetChatConversationProperties" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1207" symbol="Chat_GetChatConversationPropertiesBeenden" version="0" task="Chat_GetChatConversationProperties" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1208" symbol="Chat_GetMessageAttachmentsStarten" version="0" task="Chat_GetMessageAttachments" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1209" symbol="Chat_GetMessageAttachmentsBeenden" version="0" task="Chat_GetMessageAttachments" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1210" symbol="Chat_GetMessageParticipantsStarten" version="0" task="Chat_GetMessageParticipants" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1211" symbol="Chat_GetMessageParticipantsBeenden" version="0" task="Chat_GetMessageParticipants" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1212" symbol="Chat_ChatOperationContext_GetMessagePropertiesStarten" version="0" task="Chat_ChatOperationContext_GetMessageProperties" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1213" symbol="Chat_ChatOperationContext_GetMessagePropertiesBeenden" version="0" task="Chat_ChatOperationContext_GetMessageProperties" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1214" symbol="Chat_ChatOperationContext_ModifyConversationItemStarten" version="0" task="Chat_ChatOperationContext_ModifyConversationItem" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1215" symbol="Chat_ChatOperationContext_ModifyConversationItemBeenden" version="0" task="Chat_ChatOperationContext_ModifyConversationItem" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1216" symbol="Chat_ChatOperationContext_ModifyItemStarten" version="0" task="Chat_ChatOperationContext_ModifyItem" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1217" symbol="Chat_ChatOperationContext_ModifyItemBeenden" version="0" task="Chat_ChatOperationContext_ModifyItem" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1218" symbol="User_DataModel_ServiceStarten" version="0" task="User_DataModel_Service" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1219" symbol="User_DataModel_ServiceBeenden" version="0" task="User_DataModel_Service" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="1220" symbol="Chat_DataModel_ServiceStarten" version="0" task="Chat_DataModel_Service" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="1221" symbol="Chat_DataModel_ServiceBeenden" version="0" task="Chat_DataModel_Service" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="2001" symbol="task_02001" version="0" task="task_0" level="win:Informational" keywords="StaleDataCleanup keyword_400000000000" template="task_0407Args"/>
+     <event value="2002" symbol="task_02002" version="0" task="task_0" level="win:Informational" keywords="StaleDataCleanup"/>
+     <event value="2003" symbol="task_02003" version="0" task="task_0" level="win:Informational" keywords="StaleDataCleanup" template="task_02003Args"/>
+     <event value="2004" symbol="task_02004" version="0" task="task_0" level="win:Informational" keywords="StaleDataCleanup" template="task_02004Args"/>
+     <event value="2005" symbol="task_02005" version="0" task="task_0" level="win:Informational" keywords="StaleDataCleanup" template="task_02003Args"/>
+     <event value="2006" symbol="task_02006" version="0" task="task_0" level="win:Error" keywords="Error keyword_400000000000" template="task_02006Args"/>
+     <event value="2007" symbol="task_02007" version="0" task="task_0" level="win:Error" keywords="Error keyword_400000000000" template="task_02007Args"/>
+     <event value="2008" symbol="task_02008" version="0" task="task_0" level="win:Error" keywords="Error keyword_400000000000" template="task_0759Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="P1_HResult" inType="win:Int32"/>
+      <data name="P2_String" inType="win:AnsiString"/>
+      <data name="P3_UInt32" inType="win:UInt32"/>
+     </template>
+     <template tid="AblaufverfolgungArgs">
+      <data name="Message" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0101Args">
+      <data name="path" inType="win:UnicodeString"/>
+      <data name="handle" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0102Args">
+      <data name="handle" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0104Args">
+      <data name="AppOwnershipId" inType="win:GUID"/>
+      <data name="StoreAppOwnershipId" inType="win:GUID"/>
+     </template>
+     <template tid="task_0105Args">
+      <data name="Prop_Boolean_1" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0106Args">
+      <data name="Prop_UInt_1" inType="win:UInt32"/>
+      <data name="Prop_UInt_2" inType="win:UInt32"/>
+      <data name="Prop_UInt_3" inType="win:UInt32"/>
+      <data name="Prop_UInt_4" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0107Args">
+      <data name="P1_HResult" inType="win:Int32"/>
+     </template>
+     <template tid="task_0201Args">
+      <data name="handle" inType="win:Pointer"/>
+      <data name="maxnotify" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0202Args">
+      <data name="handle" inType="win:Pointer"/>
+      <data name="requested" inType="win:UInt32"/>
+      <data name="returned" inType="win:UInt32"/>
+      <data name="remaining" inType="win:UInt32"/>
+      <data name="missed" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0203Args">
+      <data name="handle" inType="win:Pointer"/>
+      <data name="readyCount" inType="win:UInt32"/>
+      <data name="lost" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0204Args">
+      <data name="handle" inType="win:Pointer"/>
+      <data name="type" inType="win:UInt32"/>
+      <data name="id" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0205Args">
+      <data name="id" inType="win:UInt32"/>
+      <data name="starttime" inType="win:FILETIME"/>
+     </template>
+     <template tid="task_0308Args">
+      <data name="Prop_UInt_1" inType="win:UInt32"/>
+      <data name="Prop_UInt_2" inType="win:UInt32"/>
+      <data name="Prop_UInt_3" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0403Args">
+      <data name="Prop_ULong" inType="win:UInt64"/>
+      <data name="Prop_UInt" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0404Args">
+      <data name="Prop_ULong" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0406Args">
+      <data name="Prop_UInt_1" inType="win:UInt32"/>
+      <data name="Prop_UInt_2" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0407Args">
+      <data name="Prop_Boolean_1" inType="win:Boolean"/>
+      <data name="Prop_Boolean_2" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0502Args">
+      <data name="remoteId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0503Args">
+      <data name="remoteId" inType="win:UnicodeString"/>
+      <data name="operationId" inType="win:UInt32"/>
+      <data name="requestAmnt" inType="win:UInt32"/>
+      <data name="providedAmnt" inType="win:UInt32"/>
+      <data name="qualifyingAmnt" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0504Args">
+      <data name="deepLink" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0702Args">
+      <data name="EventType" inType="win:UInt32"/>
+      <data name="ItemType" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0705Args">
+      <data name="ActivationStatus" inType="win:UInt32" map="RcsServiceActivationStatusType"/>
+     </template>
+     <template tid="task_0706Args">
+      <data name="ActivationStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0707Args">
+      <data name="TelString" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0708Args">
+      <data name="TelString" inType="win:UnicodeString"/>
+      <data name="RcsCapabilityBits" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0713Args">
+      <data name="RcsChatId" inType="win:UnicodeString"/>
+      <data name="isGroup" inType="win:Boolean"/>
+      <data name="TelString" inType="win:UnicodeString"/>
+      <data name="isComposing" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0718Args">
+      <data name="serviceType" inType="win:UInt32" map="RcsServiceType"/>
+      <data name="isSupported" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0719Args">
+      <data name="AppPackageFamilyName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0749Args">
+      <data name="P1_HResult" inType="win:Int32"/>
+      <data name="Prop_ULong" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0759Args">
+      <data name="P1_UnicodeString" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01204Args">
+      <data name="AppName" inType="win:AnsiString"/>
+      <data name="AccessedString" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_02003Args">
+      <data name="Prop_UInt_1" inType="win:UInt32"/>
+      <data name="Prop_UInt_2" inType="win:UInt32"/>
+      <data name="Prop_UInt_3" inType="win:UInt32"/>
+      <data name="Prop_UInt_4" inType="win:UInt32"/>
+      <data name="Prop_UInt_5" inType="win:UInt32"/>
+     </template>
+     <template tid="task_02004Args">
+      <data name="Prop_Prop" inType="win:UInt32"/>
+     </template>
+     <template tid="task_02006Args">
+      <data name="AppId" inType="win:UnicodeString"/>
+      <data name="AppDataCleanupReason" inType="win:UInt32"/>
+     </template>
+     <template tid="task_02007Args">
+      <data name="AppId" inType="win:UnicodeString"/>
+      <data name="AppDataCleanupReason" inType="win:UInt32" map="AppDataCleanupReason"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Error" value="Error"/>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="keyword_UserDataService" value="UserDataService"/>
+    <string id="keyword_StaleDataCleanup" value="StaleDataCleanup"/>
+    <string id="keyword_CalendarSearch" value="CalendarSearch"/>
+    <string id="keyword_debug" value="debug"/>
+    <string id="keyword_APICall" value="APICall"/>
+    <string id="keyword_Warning" value="Warning"/>
+    <string id="keyword_StateTransition" value="StateTransition"/>
+    <string id="keyword_keyword_200000000000" value="keyword_200000000000"/>
+    <string id="keyword_keyword_400000000000" value="keyword_400000000000"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_Ablaufverfolgung" value="Ablaufverfolgung"/>
+    <string id="task_Udm_IntializedSecurityInfo" value="Udm_IntializedSecurityInfo"/>
+    <string id="task_Udm_OpenSession" value="Udm_OpenSession"/>
+    <string id="task_Udm_OpenCallHistorySession" value="Udm_OpenCallHistorySession"/>
+    <string id="task_Calendar_UpdateCalendarObjects" value="Calendar_UpdateCalendarObjects"/>
+    <string id="task_Calendar_GetConflictInfo" value="Calendar_GetConflictInfo"/>
+    <string id="task_Calendar_RespondMeetingRequest" value="Calendar_RespondMeetingRequest"/>
+    <string id="task_Calendar_ProposeNewTime" value="Calendar_ProposeNewTime"/>
+    <string id="task_Calendar_CreateForwardMessage" value="Calendar_CreateForwardMessage"/>
+    <string id="task_Calendar_GetChangedAppointmentsSince" value="Calendar_GetChangedAppointmentsSince"/>
+    <string id="task_Calendar_GetCalendarStoreEnum" value="Calendar_GetCalendarStoreEnum"/>
+    <string id="task_Calendar_GetCalendarEnum" value="Calendar_GetCalendarEnum"/>
+    <string id="task_Calendar_GetAppointmentEnum" value="Calendar_GetAppointmentEnum"/>
+    <string id="task_Calendar_EnumMultiDay" value="Calendar_EnumMultiDay"/>
+    <string id="task_Calendar_EnumSingleInstance" value="Calendar_EnumSingleInstance"/>
+    <string id="task_Calendar_EnumRecurring" value="Calendar_EnumRecurring"/>
+    <string id="task_Calendar_Search_Open" value="Calendar_Search_Open"/>
+    <string id="task_Calendar_Search_Fetch" value="Calendar_Search_Fetch"/>
+    <string id="task_Meeting_CreateOrModifyAppointment" value="Meeting_CreateOrModifyAppointment"/>
+    <string id="task_Meeting_GetStreamProperty" value="Meeting_GetStreamProperty"/>
+    <string id="task_Chat_GetChatConversationProperties" value="Chat_GetChatConversationProperties"/>
+    <string id="task_Chat_GetMessageAttachments" value="Chat_GetMessageAttachments"/>
+    <string id="task_Chat_GetMessageParticipants" value="Chat_GetMessageParticipants"/>
+    <string id="task_Chat_ChatOperationContext_GetMessageProperties" value="Chat_ChatOperationContext_GetMessageProperties"/>
+    <string id="task_Chat_ChatOperationContext_ModifyConversationItem" value="Chat_ChatOperationContext_ModifyConversationItem"/>
+    <string id="task_Chat_ChatOperationContext_ModifyItem" value="Chat_ChatOperationContext_ModifyItem"/>
+    <string id="task_User_DataModel_Service" value="User_DataModel_Service"/>
+    <string id="task_Chat_DataModel_Service" value="Chat_DataModel_Service"/>
+    <string id="map_RcsServiceActivationStatusTypeDeactivated" value="Deactivated"/>
+    <string id="map_RcsServiceActivationStatusTypeActivating" value="Activating"/>
+    <string id="map_RcsServiceActivationStatusTypeActivatedUnregistered" value="ActivatedUnregistered"/>
+    <string id="map_RcsServiceActivationStatusTypeActivatedRegistered" value="ActivatedRegistered"/>
+    <string id="map_RcsServiceActivationStatusTypeDeactivating" value="Deactivating"/>
+    <string id="map_RcsServiceTypeChat" value="Chat"/>
+    <string id="map_RcsServiceTypeGroupChat" value="GroupChat"/>
+    <string id="map_RcsServiceTypeFileTransfer" value="FileTransfer"/>
+    <string id="map_RcsServiceTypeCapability" value="Capability"/>
+    <string id="map_AppDataCleanupReasonStaleData" value="StaleData"/>
+    <string id="map_AppDataCleanupReasonAppLookupFailed" value="AppLookupFailed"/>
+    <string id="map_AppDataCleanupReasonNotInstalled" value="NotInstalled"/>
+    <string id="map_AppDataCleanupReasonInstanceBeforeLastUninstall" value="InstanceBeforeLastUninstall"/>
+    <string id="map_AppDataCleanupReasonBackupAppIdPropSet" value="BackupAppIdPropSet"/>
+    <string id="map_AppDataCleanupReasonMissingInstallTime" value="MissingInstallTime"/>
+    <string id="map_AppDataCleanupReasonStoreDeletePending" value="StoreDeletePending"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

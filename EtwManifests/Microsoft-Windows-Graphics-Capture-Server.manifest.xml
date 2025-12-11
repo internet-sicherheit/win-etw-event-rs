@@ -1,0 +1,33 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Graphics-Capture-Server" guid="{7d0cbd25-390e-524d-8c1e-2a8e846055c0}" resourceFileName="Microsoft-Windows-Graphics-Capture-Server" messageFileName="Microsoft-Windows-Graphics-Capture-Server" symbol="MicrosoftWindowsGraphicsCaptureServer" source="Xml" >
+    <keywords>
+     <keyword name="CaptureServer" message="$(string.keyword_CaptureServer)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="CAPTURE_STARTED" message="$(string.task_CAPTURE_STARTED)" value="2"/>
+     <task name="CAPTURE_STOPPED" message="$(string.task_CAPTURE_STOPPED)" value="3"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="CAPTURE_STARTED" version="0" task="CAPTURE_STARTED" level="win:Informational" keywords="CaptureServer" template="CAPTURE_STARTEDArgs"/>
+     <event value="2" symbol="CAPTURE_STOPPED" version="0" task="CAPTURE_STOPPED" level="win:Informational" keywords="CaptureServer" template="CAPTURE_STARTEDArgs"/>
+    </events>
+    <templates>
+     <template tid="CAPTURE_STARTEDArgs">
+      <data name="processId" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_CaptureServer" value="CaptureServer"/>
+    <string id="task_CAPTURE_STARTED" value="CAPTURE_STARTED"/>
+    <string id="task_CAPTURE_STOPPED" value="CAPTURE_STOPPED"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

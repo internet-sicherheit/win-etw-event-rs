@@ -1,0 +1,1211 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Office-Word3" guid="{a1b69d49-2195-4f59-9d33-bdf30c0fe473}" resourceFileName="Microsoft-Office-Word3" messageFileName="Microsoft-Office-Word3" symbol="MicrosoftOfficeWord3" source="Xml" >
+    <keywords>
+     <keyword name="OCSB" message="$(string.keyword_OCSB)" mask="0x1"/>
+     <keyword name="CoauthUndo" message="$(string.keyword_CoauthUndo)" mask="0x2"/>
+     <keyword name="Hashtags" message="$(string.keyword_Hashtags)" mask="0x4"/>
+     <keyword name="Emojis" message="$(string.keyword_Emojis)" mask="0x8"/>
+     <keyword name="AsyncEdit" message="$(string.keyword_AsyncEdit)" mask="0x10"/>
+     <keyword name="Forms" message="$(string.keyword_Forms)" mask="0x20"/>
+     <keyword name="FileNew" message="$(string.keyword_FileNew)" mask="0x40"/>
+     <keyword name="Inval" message="$(string.keyword_Inval)" mask="0x80"/>
+     <keyword name="SuggestionService" message="$(string.keyword_SuggestionService)" mask="0x100"/>
+     <keyword name="DocTiling" message="$(string.keyword_DocTiling)" mask="0x200"/>
+     <keyword name="OLE" message="$(string.keyword_OLE)" mask="0x400"/>
+     <keyword name="MailMerge" message="$(string.keyword_MailMerge)" mask="0x1000"/>
+     <keyword name="Language" message="$(string.keyword_Language)" mask="0x2000"/>
+     <keyword name="FlashEdits" message="$(string.keyword_FlashEdits)" mask="0x8000"/>
+     <keyword name="EasyBib" message="$(string.keyword_EasyBib)" mask="0x10000"/>
+     <keyword name="FastCoauth" message="$(string.keyword_FastCoauth)" mask="0x20000"/>
+     <keyword name="DigitalPrint" message="$(string.keyword_DigitalPrint)" mask="0x40000"/>
+     <keyword name="FocusMode" message="$(string.keyword_FocusMode)" mask="0x80000"/>
+     <keyword name="AsyncCoAuthoring" message="$(string.keyword_AsyncCoAuthoring)" mask="0x200000"/>
+     <keyword name="AddinMonitor" message="$(string.keyword_AddinMonitor)" mask="0x400000"/>
+     <keyword name="Acronyms" message="$(string.keyword_Acronyms)" mask="0x800000"/>
+     <keyword name="Rewrite" message="$(string.keyword_Rewrite)" mask="0x1000000"/>
+     <keyword name="SmartLinks" message="$(string.keyword_SmartLinks)" mask="0x2000000"/>
+     <keyword name="DocumentTasks" message="$(string.keyword_DocumentTasks)" mask="0x4000000"/>
+     <keyword name="Shutdown" message="$(string.keyword_Shutdown)" mask="0x8000000"/>
+     <keyword name="Sidetrack" message="$(string.keyword_Sidetrack)" mask="0x10000000"/>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x20000000"/>
+     <keyword name="InfoProtection" message="$(string.keyword_InfoProtection)" mask="0x40000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0">
+
+      <opcodes>
+       <opcode name="opcodeError" message="$(string.opcode_task_0opcodeError)" value="10"/>
+       <opcode name="opcodeWarning" message="$(string.opcode_task_0opcodeWarning)" value="11"/>
+       <opcode name="opcodeInformational" message="$(string.opcode_task_0opcodeInformational)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="tskVclok" message="$(string.task_tskVclok)" value="1">
+
+      <opcodes>
+       <opcode name="VclokOnDocDisplay" message="$(string.opcode_tskVclokVclokOnDocDisplay)" value="11"/>
+       <opcode name="VclokEntryPacketDelayed" message="$(string.opcode_tskVclokVclokEntryPacketDelayed)" value="12"/>
+       <opcode name="VclokOnUploadComplete" message="$(string.opcode_tskVclokVclokOnUploadComplete)" value="14"/>
+       <opcode name="VclokOnSaveComplete" message="$(string.opcode_tskVclokVclokOnSaveComplete)" value="15"/>
+      </opcodes>
+     </task>
+     <task name="tskHashtags" message="$(string.task_tskHashtags)" value="2">
+
+      <opcodes>
+       <opcode name="HashtagAdded" message="$(string.opcode_tskHashtagsHashtagAdded)" value="10"/>
+       <opcode name="HashtagRemoved" message="$(string.opcode_tskHashtagsHashtagRemoved)" value="11"/>
+       <opcode name="HashtagError" message="$(string.opcode_tskHashtagsHashtagError)" value="12"/>
+       <opcode name="HashtagFlyoutInvoke" message="$(string.opcode_tskHashtagsHashtagFlyoutInvoke)" value="13"/>
+       <opcode name="HashtagFlyoutDismiss" message="$(string.opcode_tskHashtagsHashtagFlyoutDismiss)" value="14"/>
+       <opcode name="HashtagDocOpen" message="$(string.opcode_tskHashtagsHashtagDocOpen)" value="15"/>
+       <opcode name="HashtagNotificationCollectorProcessList" message="$(string.opcode_tskHashtagsHashtagNotificationCollectorProcessList)" value="16"/>
+       <opcode name="HashtagNotificationCollectorResetList" message="$(string.opcode_tskHashtagsHashtagNotificationCollectorResetList)" value="17"/>
+      </opcodes>
+     </task>
+     <task name="tskEmojis" message="$(string.task_tskEmojis)" value="3">
+
+      <opcodes>
+       <opcode name="EmojiFlyoutInvoke" message="$(string.opcode_tskEmojisEmojiFlyoutInvoke)" value="10"/>
+       <opcode name="EmojiFlyoutDismiss" message="$(string.opcode_tskEmojisEmojiFlyoutDismiss)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="tskCoauthUndo" message="$(string.task_tskCoauthUndo)" value="4">
+
+      <opcodes>
+       <opcode name="CoauthUndoAttemptUndoWithConflict" message="$(string.opcode_tskCoauthUndoCoauthUndoAttemptUndoWithConflict)" value="10"/>
+       <opcode name="CoauthUndoDeleteDomoRangeError" message="$(string.opcode_tskCoauthUndoCoauthUndoDeleteDomoRangeError)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="tskFileNew" message="$(string.task_tskFileNew)" value="5">
+
+      <opcodes>
+       <opcode name="AutoCreateEventHandlerStart" message="$(string.opcode_tskFileNewAutoCreateEventHandlerStart)" value="11"/>
+       <opcode name="AutoCreateEventHandlerUpdate" message="$(string.opcode_tskFileNewAutoCreateEventHandlerUpdate)" value="12"/>
+       <opcode name="AutoCreateEventHandlerEnd" message="$(string.opcode_tskFileNewAutoCreateEventHandlerEnd)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="tskInval" message="$(string.task_tskInval)" value="6">
+
+      <opcodes>
+       <opcode name="TrashWwdPages" message="$(string.opcode_tskInvalTrashWwdPages)" value="10"/>
+       <opcode name="InvalDoc" message="$(string.opcode_tskInvalInvalDoc)" value="11"/>
+       <opcode name="InvalCp" message="$(string.opcode_tskInvalInvalCp)" value="12"/>
+       <opcode name="InvalRegion" message="$(string.opcode_tskInvalInvalRegion)" value="13"/>
+       <opcode name="InvalRegionVerbose" message="$(string.opcode_tskInvalInvalRegionVerbose)" value="14"/>
+       <opcode name="InvalCpDisp" message="$(string.opcode_tskInvalInvalCpDisp)" value="15"/>
+       <opcode name="UpdateInvalidWwd" message="$(string.opcode_tskInvalUpdateInvalidWwd)" value="16"/>
+       <opcode name="RequestPprUpdate" message="$(string.opcode_tskInvalRequestPprUpdate)" value="17"/>
+      </opcodes>
+     </task>
+     <task name="tskMailMerge" message="$(string.task_tskMailMerge)" value="8">
+
+      <opcodes>
+       <opcode name="MailMergeStarted" message="$(string.opcode_tskMailMergeMailMergeStarted)" value="10"/>
+       <opcode name="MailMergeFinished" message="$(string.opcode_tskMailMergeMailMergeFinished)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="tskPerformance" message="$(string.task_tskPerformance)" value="9">
+
+      <opcodes>
+       <opcode name="ProfilerJson" message="$(string.opcode_tskPerformanceProfilerJson)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="tskForms" message="$(string.task_tskForms)" value="41">
+
+      <opcodes>
+       <opcode name="DocHasFormsField" message="$(string.opcode_tskFormsDocHasFormsField)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="tskFastCoauth" message="$(string.task_tskFastCoauth)" value="64">
+
+      <opcodes>
+       <opcode name="FastCoauthChangeReceived" message="$(string.opcode_tskFastCoauthFastCoauthChangeReceived)" value="10"/>
+       <opcode name="FastCoauthDocumentReplicated" message="$(string.opcode_tskFastCoauthFastCoauthDocumentReplicated)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="tskEasyBibCallout" message="$(string.task_tskEasyBibCallout)" value="65">
+
+      <opcodes>
+       <opcode name="EasyBibPastedFrom" message="$(string.opcode_tskEasyBibCalloutEasyBibPastedFrom)" value="10"/>
+       <opcode name="EasyBibRibbonOrChunkHidden" message="$(string.opcode_tskEasyBibCalloutEasyBibRibbonOrChunkHidden)" value="11"/>
+       <opcode name="EasyBibAddinBlocked" message="$(string.opcode_tskEasyBibCalloutEasyBibAddinBlocked)" value="12"/>
+       <opcode name="EasyBibCalloutDisplayed" message="$(string.opcode_tskEasyBibCalloutEasyBibCalloutDisplayed)" value="13"/>
+       <opcode name="EasyBibCalloutDismissClicked" message="$(string.opcode_tskEasyBibCalloutEasyBibCalloutDismissClicked)" value="14"/>
+       <opcode name="EasyBibCalloutLaunchClicked" message="$(string.opcode_tskEasyBibCalloutEasyBibCalloutLaunchClicked)" value="15"/>
+       <opcode name="EasyBibCalloutOutsideClicked" message="$(string.opcode_tskEasyBibCalloutEasyBibCalloutOutsideClicked)" value="16"/>
+       <opcode name="EasyBibStoreClicked" message="$(string.opcode_tskEasyBibCalloutEasyBibStoreClicked)" value="17"/>
+       <opcode name="EasyBibAddinInsertedFromCallout" message="$(string.opcode_tskEasyBibCalloutEasyBibAddinInsertedFromCallout)" value="18"/>
+       <opcode name="EasyBibAddinLoadedBefore" message="$(string.opcode_tskEasyBibCalloutEasyBibAddinLoadedBefore)" value="19"/>
+       <opcode name="EasyBibFeatureOff" message="$(string.opcode_tskEasyBibCalloutEasyBibFeatureOff)" value="20"/>
+       <opcode name="EasyBibNotEnglish" message="$(string.opcode_tskEasyBibCalloutEasyBibNotEnglish)" value="21"/>
+       <opcode name="EasyBibDisplayedManyTimes" message="$(string.opcode_tskEasyBibCalloutEasyBibDisplayedManyTimes)" value="22"/>
+       <opcode name="EasyBibSendStatusEvent" message="$(string.opcode_tskEasyBibCalloutEasyBibSendStatusEvent)" value="23"/>
+      </opcodes>
+     </task>
+     <task name="tskFocusModeEntryPoint" message="$(string.task_tskFocusModeEntryPoint)" value="66">
+
+      <opcodes>
+       <opcode name="FocusModeEntryPoint" message="$(string.opcode_tskFocusModeEntryPointFocusModeEntryPoint)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="tskFocusModeExitPoint" message="$(string.task_tskFocusModeExitPoint)" value="67">
+
+      <opcodes>
+       <opcode name="FocusModeExitPoint" message="$(string.opcode_tskFocusModeExitPointFocusModeExitPoint)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="tskAddinMonitor" message="$(string.task_tskAddinMonitor)" value="68">
+
+      <opcodes>
+       <opcode name="AddinMonitorIdleStart" message="$(string.opcode_tskAddinMonitorAddinMonitorIdleStart)" value="10"/>
+       <opcode name="AddinMonitorIdleStop" message="$(string.opcode_tskAddinMonitorAddinMonitorIdleStop)" value="11"/>
+       <opcode name="AddinMonitorNotifyUserResult" message="$(string.opcode_tskAddinMonitorAddinMonitorNotifyUserResult)" value="12"/>
+       <opcode name="AddinMonitorShowNotificationResult" message="$(string.opcode_tskAddinMonitorAddinMonitorShowNotificationResult)" value="13"/>
+       <opcode name="AddinMonitorInit" message="$(string.opcode_tskAddinMonitorAddinMonitorInit)" value="14"/>
+       <opcode name="AddinMonitorInitLoadBoot" message="$(string.opcode_tskAddinMonitorAddinMonitorInitLoadBoot)" value="15"/>
+       <opcode name="AddinMonitorInitLoadConnect" message="$(string.opcode_tskAddinMonitorAddinMonitorInitLoadConnect)" value="16"/>
+       <opcode name="AddinMonitorEnumReg" message="$(string.opcode_tskAddinMonitorAddinMonitorEnumReg)" value="17"/>
+       <opcode name="AddinMonitorDeserializeCValue" message="$(string.opcode_tskAddinMonitorAddinMonitorDeserializeCValue)" value="18"/>
+       <opcode name="AddinMonitorDeserializeValue" message="$(string.opcode_tskAddinMonitorAddinMonitorDeserializeValue)" value="19"/>
+       <opcode name="AddinMonitorGateBizbar" message="$(string.opcode_tskAddinMonitorAddinMonitorGateBizbar)" value="20"/>
+       <opcode name="AddinMonitorGateOM" message="$(string.opcode_tskAddinMonitorAddinMonitorGateOM)" value="21"/>
+       <opcode name="AddinMonitorShouldNotify" message="$(string.opcode_tskAddinMonitorAddinMonitorShouldNotify)" value="22"/>
+       <opcode name="AddinMonitorDisplayBizbar" message="$(string.opcode_tskAddinMonitorAddinMonitorDisplayBizbar)" value="23"/>
+       <opcode name="AddinMonitorSlowest" message="$(string.opcode_tskAddinMonitorAddinMonitorSlowest)" value="24"/>
+       <opcode name="AddinMonitorDialogShow" message="$(string.opcode_tskAddinMonitorAddinMonitorDialogShow)" value="25"/>
+       <opcode name="AddinMonitorDialogAddPadii" message="$(string.opcode_tskAddinMonitorAddinMonitorDialogAddPadii)" value="26"/>
+       <opcode name="AddinMonitorDialogOnEvent" message="$(string.opcode_tskAddinMonitorAddinMonitorDialogOnEvent)" value="27"/>
+       <opcode name="AddinMonitorDwConnect" message="$(string.opcode_tskAddinMonitorAddinMonitorDwConnect)" value="28"/>
+       <opcode name="AddinMonitorDwPolicy" message="$(string.opcode_tskAddinMonitorAddinMonitorDwPolicy)" value="29"/>
+       <opcode name="AddinMonitorGateVBA" message="$(string.opcode_tskAddinMonitorAddinMonitorGateVBA)" value="30"/>
+      </opcodes>
+     </task>
+     <task name="tskDragDrop" message="$(string.task_tskDragDrop)" value="70">
+
+      <opcodes>
+       <opcode name="DragImageSize" message="$(string.opcode_tskDragDropDragImageSize)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="tskOleAutoActivation" message="$(string.task_tskOleAutoActivation)" value="71">
+
+      <opcodes>
+       <opcode name="OleAutoActivatedOnOpen" message="$(string.opcode_tskOleAutoActivationOleAutoActivatedOnOpen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="tskEditAggregationFromSave" message="$(string.task_tskEditAggregationFromSave)" value="72">
+
+      <opcodes>
+       <opcode name="EditAggregationFromSave" message="$(string.opcode_tskEditAggregationFromSaveEditAggregationFromSave)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="tskEditAggregationFromMerge" message="$(string.task_tskEditAggregationFromMerge)" value="73">
+
+      <opcodes>
+       <opcode name="EditAggregationFromMerge" message="$(string.opcode_tskEditAggregationFromMergeEditAggregationFromMerge)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="tskQMUnsafeOpSource" message="$(string.task_tskQMUnsafeOpSource)" value="74">
+
+      <opcodes>
+       <opcode name="QMUnsafeOpSource" message="$(string.opcode_tskQMUnsafeOpSourceQMUnsafeOpSource)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="tskQMUnsafeProperty" message="$(string.task_tskQMUnsafeProperty)" value="75">
+
+      <opcodes>
+       <opcode name="QMUnsafeProperty" message="$(string.opcode_tskQMUnsafePropertyQMUnsafeProperty)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="tskOCSB" message="$(string.task_tskOCSB)" value="1065"/>
+     <task name="tskAsyncEdit" message="$(string.task_tskAsyncEdit)" value="1069"/>
+     <task name="tskSuggestionService" message="$(string.task_tskSuggestionService)" value="1073"/>
+     <task name="tskDocTiling" message="$(string.task_tskDocTiling)" value="1074"/>
+     <task name="tskOLE" message="$(string.task_tskOLE)" value="1075"/>
+     <task name="tskLanguage" message="$(string.task_tskLanguage)" value="1077"/>
+     <task name="tskFlashEdits" message="$(string.task_tskFlashEdits)" value="1078"/>
+     <task name="tskEasyBib" message="$(string.task_tskEasyBib)" value="1079"/>
+     <task name="tskDigitalPrint" message="$(string.task_tskDigitalPrint)" value="1081"/>
+     <task name="tskFocusMode" message="$(string.task_tskFocusMode)" value="1082"/>
+     <task name="tskAsyncCoAuthoring" message="$(string.task_tskAsyncCoAuthoring)" value="1083"/>
+     <task name="tskAcronyms" message="$(string.task_tskAcronyms)" value="1085"/>
+     <task name="tskRewrite" message="$(string.task_tskRewrite)" value="1086"/>
+     <task name="tskSmartLinks" message="$(string.task_tskSmartLinks)" value="1087"/>
+     <task name="tskDocumentTasks" message="$(string.task_tskDocumentTasks)" value="1088"/>
+     <task name="tskShutdown" message="$(string.task_tskShutdown)" value="1089"/>
+     <task name="tskSidetrack" message="$(string.task_tskSidetrack)" value="1090"/>
+     <task name="tskInfoProtection" message="$(string.task_tskInfoProtection)" value="1092"/>
+    </tasks>
+    <maps>
+     <valueMap name="PickerDismissalReasonWord3">
+      <map value="0x0" message="$(string.map_PickerDismissalReasonWord3No Results)"/>
+      <map value="0x1" message="$(string.map_PickerDismissalReasonWord3Breaking Char Entered)"/>
+      <map value="0x2" message="$(string.map_PickerDismissalReasonWord3Escape Key Pressed)"/>
+      <map value="0x3" message="$(string.map_PickerDismissalReasonWord3IME Invoked)"/>
+      <map value="0x4" message="$(string.map_PickerDismissalReasonWord3Gesture Inserted)"/>
+      <map value="0x5" message="$(string.map_PickerDismissalReasonWord3Soft Dismiss or Other)"/>
+      <map value="0x6" message="$(string.map_PickerDismissalReasonWord3Paste)"/>
+      <map value="0x7" message="$(string.map_PickerDismissalReasonWord3Insert failure required explicit dismissal)"/>
+     </valueMap>
+     <bitMap name="Grfef2Low">
+      <map value="0x1" message="$(string.map_Grfef2LowCopyCasaBmks)"/>
+      <map value="0x2" message="$(string.map_Grfef2LowNoDocTabberInval)"/>
+      <map value="0x4" message="$(string.map_Grfef2LowAllowShapesInMath)"/>
+      <map value="0x8" message="$(string.map_Grfef2LowCopyAtnCasaBmks)"/>
+      <map value="0x10" message="$(string.map_Grfef2LowNoE2oTxbxsMark)"/>
+      <map value="0x20" message="$(string.map_Grfef2LowPreserveShapeId)"/>
+      <map value="0x40" message="$(string.map_Grfef2LowDontCopyTxbxs)"/>
+      <map value="0x80" message="$(string.map_Grfef2LowDontDeleteTxbxs)"/>
+      <map value="0x100" message="$(string.map_Grfef2LowInsertCustomXmlTag)"/>
+      <map value="0x200" message="$(string.map_Grfef2LowCopyObjectIds)"/>
+      <map value="0x400" message="$(string.map_Grfef2LowDontAdjustE2oSels)"/>
+      <map value="0x800" message="$(string.map_Grfef2LowNoStoreDeleteOnBkmkDelete)"/>
+      <map value="0x1000" message="$(string.map_Grfef2LowDontCloneArtos)"/>
+      <map value="0x2000" message="$(string.map_Grfef2LowDontFireUiaTextChanged)"/>
+      <map value="0x4000" message="$(string.map_Grfef2LowNoEcmanInval)"/>
+      <map value="0x8000" message="$(string.map_Grfef2LowNoMntrInval)"/>
+      <map value="0x10000" message="$(string.map_Grfef2LowNoPdodHspClone)"/>
+      <map value="0x20000" message="$(string.map_Grfef2LowInsertBufferShift)"/>
+      <map value="0x40000" message="$(string.map_Grfef2LowUimInsert)"/>
+      <map value="0x80000" message="$(string.map_Grfef2LowPreserveFXB)"/>
+     </bitMap>
+     <valueMap name="AddinMonitorNotifyUserResult">
+      <map value="0x0" message="$(string.map_AddinMonitorNotifyUserResultNone)"/>
+      <map value="0x1" message="$(string.map_AddinMonitorNotifyUserResultCantNotify)"/>
+      <map value="0x2" message="$(string.map_AddinMonitorNotifyUserResultNotified)"/>
+     </valueMap>
+     <valueMap name="AddinMonitorScenario">
+      <map value="0x0" message="$(string.map_AddinMonitorScenarioBoot)"/>
+      <map value="0x1" message="$(string.map_AddinMonitorScenarioOM)"/>
+      <map value="0x2" message="$(string.map_AddinMonitorScenarioConnect)"/>
+      <map value="0x3" message="$(string.map_AddinMonitorScenarioShutdown)"/>
+     </valueMap>
+     <valueMap name="OLECallType">
+      <map value="0x0" message="$(string.map_OLECallTypeOleRun)"/>
+      <map value="0x1" message="$(string.map_OLECallTypeLinkBindToSource)"/>
+      <map value="0x2" message="$(string.map_OLECallTypeCreateLink)"/>
+     </valueMap>
+     <valueMap name="UndoConflictReason">
+      <map value="0x0" message="$(string.map_UndoConflictReasonNone)"/>
+      <map value="0x1" message="$(string.map_UndoConflictReasonOut of memory)"/>
+      <map value="0x2" message="$(string.map_UndoConflictReasonIuad invalid)"/>
+      <map value="0x3" message="$(string.map_UndoConflictReasonBad CA)"/>
+      <map value="0x4" message="$(string.map_UndoConflictReasonfciUser unsupported)"/>
+      <map value="0x5" message="$(string.map_UndoConflictReasonfciCoauth unsupported)"/>
+      <map value="0x6" message="$(string.map_UndoConflictReasonCA in header doc)"/>
+      <map value="0x7" message="$(string.map_UndoConflictReasonfSaveAll)"/>
+      <map value="0x8" message="$(string.map_UndoConflictReasonUad and domo conflict)"/>
+      <map value="0x9" message="$(string.map_UndoConflictReasonDomo overlap)"/>
+      <map value="0xa" message="$(string.map_UndoConflictReasonDomo list broken)"/>
+     </valueMap>
+     <bitMap name="Grfrpu">
+      <map value="0x1" message="$(string.map_GrfrpuRebuild)"/>
+      <map value="0x2" message="$(string.map_GrfrpuFull)"/>
+      <map value="0x4" message="$(string.map_GrfrpuDmInvalid)"/>
+      <map value="0x8" message="$(string.map_GrfrpuDmValid)"/>
+      <map value="0x10" message="$(string.map_GrfrpuDgvInvalid)"/>
+      <map value="0x20" message="$(string.map_GrfrpuDgvValid)"/>
+      <map value="0x40" message="$(string.map_GrfrpuDirty)"/>
+      <map value="0x80" message="$(string.map_GrfrpuCheck)"/>
+     </bitMap>
+    </maps>
+    <events>
+     <event value="0" symbol="tskVclok" version="0" task="tskVclok" level="win:Informational" keywords="OCSB"/>
+     <event value="1" symbol="tskVclokVclokOnDocDisplay_V8" version="8" task="tskVclok" opcode="VclokOnDocDisplay" level="win:Informational" keywords="OCSB" template="tskVclokVclokOnDocDisplayArgs_V8"/>
+     <event value="2" symbol="tskVclokVclokEntryPacketDelayed" version="0" task="tskVclok" opcode="VclokEntryPacketDelayed" level="win:Informational" keywords="OCSB" template="tskVclokVclokEntryPacketDelayedArgs"/>
+     <event value="3" symbol="tskVclok3" version="0" task="tskVclok" level="win:Informational" keywords="OCSB"/>
+     <event value="4" symbol="tskVclokVclokOnUploadComplete_V1" version="1" task="tskVclok" opcode="VclokOnUploadComplete" level="win:Informational" keywords="OCSB" template="tskVclokVclokOnUploadCompleteArgs_V1"/>
+     <event value="5" symbol="tskHashtagsHashtagAdded" version="0" task="tskHashtags" opcode="HashtagAdded" level="win:Verbose" keywords="Hashtags"/>
+     <event value="6" symbol="tskHashtagsHashtagRemoved" version="0" task="tskHashtags" opcode="HashtagRemoved" level="win:Verbose" keywords="Hashtags"/>
+     <event value="7" symbol="tskHashtagsHashtagError" version="0" task="tskHashtags" opcode="HashtagError" level="win:Verbose" keywords="Hashtags"/>
+     <event value="8" symbol="tskHashtagsHashtagFlyoutInvoke" version="0" task="tskHashtags" opcode="HashtagFlyoutInvoke" level="win:Verbose" keywords="Hashtags"/>
+     <event value="9" symbol="tskHashtagsHashtagFlyoutDismiss" version="0" task="tskHashtags" opcode="HashtagFlyoutDismiss" level="win:Verbose" keywords="Hashtags"/>
+     <event value="10" symbol="tskHashtagsHashtagDocOpen" version="0" task="tskHashtags" opcode="HashtagDocOpen" level="win:Verbose" keywords="Hashtags"/>
+     <event value="11" symbol="tskHashtagsHashtagDocOpen11" version="0" task="tskHashtags" opcode="HashtagDocOpen" level="win:Verbose" keywords="Hashtags"/>
+     <event value="12" symbol="tskHashtagsHashtagNotificationCollectorProcessList" version="0" task="tskHashtags" opcode="HashtagNotificationCollectorProcessList" level="win:Verbose" keywords="Hashtags"/>
+     <event value="13" symbol="tskHashtagsHashtagNotificationCollectorResetList" version="0" task="tskHashtags" opcode="HashtagNotificationCollectorResetList" level="win:Verbose" keywords="Hashtags"/>
+     <event value="14" symbol="tskEmojisEmojiFlyoutInvoke" version="0" task="tskEmojis" opcode="EmojiFlyoutInvoke" level="win:Verbose" keywords="Emojis"/>
+     <event value="15" symbol="tskEmojisEmojiFlyoutDismiss" version="0" task="tskEmojis" opcode="EmojiFlyoutDismiss" level="win:Verbose" keywords="Emojis" template="tskEmojisEmojiFlyoutDismissArgs"/>
+     <event value="16" symbol="tskVclokVclokOnSaveComplete_V5" version="5" task="tskVclok" opcode="VclokOnSaveComplete" level="win:Informational" keywords="OCSB" template="tskVclokVclokOnSaveCompleteArgs_V5"/>
+     <event value="18" symbol="tskFormsDocHasFormsField" version="0" task="tskForms" opcode="DocHasFormsField" level="win:Informational" keywords="Forms" template="tskFormsDocHasFormsFieldArgs"/>
+     <event value="20" symbol="tskInvalTrashWwdPages_V1" version="1" task="tskInval" opcode="TrashWwdPages" level="win:Verbose" keywords="Inval" template="tskInvalTrashWwdPagesArgs_V1"/>
+     <event value="21" symbol="tskInvalInvalDoc" version="0" task="tskInval" opcode="InvalDoc" level="win:Verbose" keywords="Inval" template="tskInvalInvalDocArgs"/>
+     <event value="22" symbol="tskInvalInvalCp" version="0" task="tskInval" opcode="InvalCp" level="win:Verbose" keywords="Inval" template="tskInvalInvalCpArgs"/>
+     <event value="23" symbol="tskInvalInvalRegion" version="0" task="tskInval" opcode="InvalRegion" level="win:Verbose" keywords="Inval" template="tskInvalInvalRegionArgs"/>
+     <event value="24" symbol="tskInvalInvalRegionVerbose" version="0" task="tskInval" opcode="InvalRegionVerbose" keywords="Inval" template="tskInvalInvalRegionVerboseArgs"/>
+     <event value="25" symbol="tskInvalInvalCpDisp_V1" version="1" task="tskInval" opcode="InvalCpDisp" keywords="Inval" template="tskInvalInvalCpDispArgs_V1"/>
+     <event value="26" symbol="tskFileNewAutoCreateEventHandlerStart_V2" version="2" task="tskFileNew" opcode="AutoCreateEventHandlerStart" level="win:Informational" keywords="FileNew" template="tskFileNewAutoCreateEventHandlerStartArgs_V2"/>
+     <event value="27" symbol="tskFileNewAutoCreateEventHandlerUpdate_V2" version="2" task="tskFileNew" opcode="AutoCreateEventHandlerUpdate" level="win:Informational" keywords="FileNew" template="tskFileNewAutoCreateEventHandlerStartArgs_V2"/>
+     <event value="28" symbol="tskFileNewAutoCreateEventHandlerEnd_V2" version="2" task="tskFileNew" opcode="AutoCreateEventHandlerEnd" level="win:Informational" keywords="FileNew" template="tskFileNewAutoCreateEventHandlerStartArgs_V2"/>
+     <event value="30" symbol="tskCoauthUndoCoauthUndoAttemptUndoWithConflict_V1" version="1" task="tskCoauthUndo" opcode="CoauthUndoAttemptUndoWithConflict" level="win:Informational" keywords="CoauthUndo" template="tskCoauthUndoCoauthUndoAttemptUndoWithConflictArgs_V1"/>
+     <event value="31" symbol="tskCoauthUndoCoauthUndoDeleteDomoRangeError" version="0" task="tskCoauthUndo" opcode="CoauthUndoDeleteDomoRangeError" level="win:Error" keywords="CoauthUndo" template="tskCoauthUndoCoauthUndoDeleteDomoRangeErrorArgs"/>
+     <event value="100" symbol="tskInvalUpdateInvalidWwd_V1" version="1" task="tskInval" opcode="UpdateInvalidWwd" keywords="Inval" template="tskInvalUpdateInvalidWwdArgs_V1"/>
+     <event value="101" symbol="tskInvalRequestPprUpdate_V1" version="1" task="tskInval" opcode="RequestPprUpdate" level="win:Verbose" keywords="Inval" template="tskInvalRequestPprUpdateArgs_V1"/>
+     <event value="104" symbol="tskMailMergeMailMergeStarted" version="0" task="tskMailMerge" opcode="MailMergeStarted" level="win:Informational" keywords="MailMerge"/>
+     <event value="105" symbol="tskMailMergeMailMergeFinished" version="0" task="tskMailMerge" opcode="MailMergeFinished" level="win:Informational" keywords="MailMerge"/>
+     <event value="250" symbol="tskFastCoauthFastCoauthChangeReceived" version="0" task="tskFastCoauth" opcode="FastCoauthChangeReceived" level="win:Informational" keywords="FastCoauth" template="tskFastCoauthFastCoauthChangeReceivedArgs"/>
+     <event value="251" symbol="tskFastCoauthFastCoauthDocumentReplicated" version="0" task="tskFastCoauth" opcode="FastCoauthDocumentReplicated" level="win:Informational" keywords="FastCoauth"/>
+     <event value="300" symbol="tskEasyBibCalloutEasyBibPastedFrom" version="0" task="tskEasyBibCallout" opcode="EasyBibPastedFrom" level="win:Informational" keywords="EasyBib"/>
+     <event value="301" symbol="tskEasyBibCalloutEasyBibRibbonOrChunkHidden" version="0" task="tskEasyBibCallout" opcode="EasyBibRibbonOrChunkHidden" level="win:Informational" keywords="EasyBib"/>
+     <event value="302" symbol="tskEasyBibCalloutEasyBibAddinBlocked" version="0" task="tskEasyBibCallout" opcode="EasyBibAddinBlocked" level="win:Informational" keywords="EasyBib"/>
+     <event value="303" symbol="tskEasyBibCalloutEasyBibCalloutDisplayed" version="0" task="tskEasyBibCallout" opcode="EasyBibCalloutDisplayed" level="win:Informational" keywords="EasyBib"/>
+     <event value="304" symbol="tskEasyBibCalloutEasyBibCalloutDismissClicked" version="0" task="tskEasyBibCallout" opcode="EasyBibCalloutDismissClicked" level="win:Informational" keywords="EasyBib"/>
+     <event value="305" symbol="tskEasyBibCalloutEasyBibCalloutLaunchClicked" version="0" task="tskEasyBibCallout" opcode="EasyBibCalloutLaunchClicked" level="win:Informational" keywords="EasyBib"/>
+     <event value="306" symbol="tskEasyBibCalloutEasyBibCalloutOutsideClicked" version="0" task="tskEasyBibCallout" opcode="EasyBibCalloutOutsideClicked" level="win:Informational" keywords="EasyBib"/>
+     <event value="307" symbol="tskEasyBibCalloutEasyBibStoreClicked" version="0" task="tskEasyBibCallout" opcode="EasyBibStoreClicked" level="win:Informational" keywords="EasyBib"/>
+     <event value="308" symbol="tskEasyBibCalloutEasyBibAddinInsertedFromCallout" version="0" task="tskEasyBibCallout" opcode="EasyBibAddinInsertedFromCallout" level="win:Informational" keywords="EasyBib"/>
+     <event value="309" symbol="tskEasyBibCalloutEasyBibAddinLoadedBefore" version="0" task="tskEasyBibCallout" opcode="EasyBibAddinLoadedBefore" level="win:Informational" keywords="EasyBib"/>
+     <event value="310" symbol="tskEasyBibCalloutEasyBibFeatureOff" version="0" task="tskEasyBibCallout" opcode="EasyBibFeatureOff" level="win:Informational" keywords="EasyBib"/>
+     <event value="311" symbol="tskEasyBibCalloutEasyBibNotEnglish" version="0" task="tskEasyBibCallout" opcode="EasyBibNotEnglish" level="win:Informational" keywords="EasyBib"/>
+     <event value="312" symbol="tskEasyBibCalloutEasyBibDisplayedManyTimes" version="0" task="tskEasyBibCallout" opcode="EasyBibDisplayedManyTimes" level="win:Informational" keywords="EasyBib"/>
+     <event value="313" symbol="tskEasyBibCalloutEasyBibSendStatusEvent" version="0" task="tskEasyBibCallout" opcode="EasyBibSendStatusEvent" level="win:Informational" keywords="EasyBib"/>
+     <event value="351" symbol="tskFocusModeEntryPoint" version="0" task="tskFocusModeEntryPoint" opcode="FocusModeEntryPoint" level="win:Informational" keywords="FocusMode" template="tskFocusModeEntryPointArgs"/>
+     <event value="352" symbol="tskFocusModeExitPoint" version="0" task="tskFocusModeExitPoint" opcode="FocusModeExitPoint" level="win:Informational" keywords="FocusMode" template="tskFocusModeExitPointArgs"/>
+     <event value="361" symbol="tskAddinMonitorAddinMonitorIdleStart" version="0" task="tskAddinMonitor" opcode="AddinMonitorIdleStart" level="win:Verbose" keywords="AddinMonitor"/>
+     <event value="362" symbol="tskAddinMonitorAddinMonitorIdleStop" version="0" task="tskAddinMonitor" opcode="AddinMonitorIdleStop" level="win:Verbose" keywords="AddinMonitor"/>
+     <event value="363" symbol="tskAddinMonitorAddinMonitorNotifyUserResult" version="0" task="tskAddinMonitor" opcode="AddinMonitorNotifyUserResult" level="win:Informational" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorNotifyUserResultArgs"/>
+     <event value="364" symbol="tskAddinMonitorAddinMonitorShowNotificationResult" version="0" task="tskAddinMonitor" opcode="AddinMonitorShowNotificationResult" level="win:Informational" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorShowNotificationResultArgs"/>
+     <event value="365" symbol="tskAddinMonitorAddinMonitorInit" version="0" task="tskAddinMonitor" opcode="AddinMonitorInit" level="win:Informational" keywords="AddinMonitor"/>
+     <event value="366" symbol="tskAddinMonitorAddinMonitorInitLoadBoot" version="0" task="tskAddinMonitor" opcode="AddinMonitorInitLoadBoot" level="win:Verbose" keywords="AddinMonitor"/>
+     <event value="367" symbol="tskAddinMonitorAddinMonitorInitLoadConnect" version="0" task="tskAddinMonitor" opcode="AddinMonitorInitLoadConnect" level="win:Verbose" keywords="AddinMonitor"/>
+     <event value="368" symbol="tskAddinMonitorAddinMonitorEnumReg" version="0" task="tskAddinMonitor" opcode="AddinMonitorEnumReg" level="win:Verbose" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorEnumRegArgs"/>
+     <event value="369" symbol="tskAddinMonitorAddinMonitorDeserializeCValue" version="0" task="tskAddinMonitor" opcode="AddinMonitorDeserializeCValue" level="win:Verbose" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorDeserializeCValueArgs"/>
+     <event value="370" symbol="tskAddinMonitorAddinMonitorDeserializeValue" version="0" task="tskAddinMonitor" opcode="AddinMonitorDeserializeValue" level="win:Verbose" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorDeserializeValueArgs"/>
+     <event value="371" symbol="tskAddinMonitorAddinMonitorGateBizbar" version="0" task="tskAddinMonitor" opcode="AddinMonitorGateBizbar" level="win:Verbose" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorGateBizbarArgs"/>
+     <event value="372" symbol="tskAddinMonitorAddinMonitorGateOM" version="0" task="tskAddinMonitor" opcode="AddinMonitorGateOM" level="win:Verbose" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorGateBizbarArgs"/>
+     <event value="373" symbol="tskAddinMonitorAddinMonitorShouldNotify" version="0" task="tskAddinMonitor" opcode="AddinMonitorShouldNotify" level="win:Informational" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorShouldNotifyArgs"/>
+     <event value="374" symbol="tskAddinMonitorAddinMonitorDisplayBizbar" version="0" task="tskAddinMonitor" opcode="AddinMonitorDisplayBizbar" level="win:Verbose" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorDisplayBizbarArgs"/>
+     <event value="375" symbol="tskAddinMonitorAddinMonitorSlowest" version="0" task="tskAddinMonitor" opcode="AddinMonitorSlowest" level="win:Verbose" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorSlowestArgs"/>
+     <event value="376" symbol="tskAddinMonitorAddinMonitorDialogShow" version="0" task="tskAddinMonitor" opcode="AddinMonitorDialogShow" level="win:Informational" keywords="AddinMonitor"/>
+     <event value="377" symbol="tskAddinMonitorAddinMonitorDialogAddPadii_V1" version="1" task="tskAddinMonitor" opcode="AddinMonitorDialogAddPadii" level="win:Verbose" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorDialogAddPadiiArgs_V1"/>
+     <event value="378" symbol="tskAddinMonitorAddinMonitorDialogOnEvent" version="0" task="tskAddinMonitor" opcode="AddinMonitorDialogOnEvent" level="win:Informational" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorDialogOnEventArgs"/>
+     <event value="379" symbol="tskAddinMonitorAddinMonitorDwConnect" version="0" task="tskAddinMonitor" opcode="AddinMonitorDwConnect" level="win:Verbose" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorDwConnectArgs"/>
+     <event value="380" symbol="tskAddinMonitorAddinMonitorDwPolicy" version="0" task="tskAddinMonitor" opcode="AddinMonitorDwPolicy" level="win:Verbose" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorDwPolicyArgs"/>
+     <event value="381" symbol="tskAddinMonitorAddinMonitorGateVBA" version="0" task="tskAddinMonitor" opcode="AddinMonitorGateVBA" level="win:Verbose" keywords="AddinMonitor" template="tskAddinMonitorAddinMonitorGateBizbarArgs"/>
+     <event value="441" symbol="tskDragDropDragImageSize" version="0" task="tskDragDrop" opcode="DragImageSize" level="win:Informational" keywords="OLE" template="tskDragDropDragImageSizeArgs"/>
+     <event value="451" symbol="tskOleAutoActivationOleAutoActivatedOnOpen" version="0" task="tskOleAutoActivation" opcode="OleAutoActivatedOnOpen" level="win:Informational" keywords="OLE" template="tskOleAutoActivationOleAutoActivatedOnOpenArgs"/>
+     <event value="461" symbol="tskEditAggregationFromSave" version="0" task="tskEditAggregationFromSave" opcode="EditAggregationFromSave" level="win:Informational" keywords="FastCoauth" template="tskEditAggregationFromSaveArgs"/>
+     <event value="462" symbol="tskEditAggregationFromMerge" version="0" task="tskEditAggregationFromMerge" opcode="EditAggregationFromMerge" level="win:Informational" keywords="FastCoauth" template="tskEditAggregationFromSaveArgs"/>
+     <event value="463" symbol="tskQMUnsafeOpSource" version="0" task="tskQMUnsafeOpSource" opcode="QMUnsafeOpSource" level="win:Informational" keywords="FastCoauth" template="tskQMUnsafeOpSourceArgs"/>
+     <event value="464" symbol="tskQMUnsafeProperty" version="0" task="tskQMUnsafeProperty" opcode="QMUnsafeProperty" level="win:Informational" keywords="FastCoauth" template="tskQMUnsafePropertyArgs"/>
+     <event value="471" symbol="task_0" version="0" task="task_0" level="win:Informational" keywords="SmartLinks"/>
+     <event value="472" symbol="task_0472" version="0" task="task_0" level="win:Informational" keywords="SmartLinks" template="task_0472Args"/>
+     <event value="481" symbol="tskPerformanceProfilerJson" version="0" task="tskPerformance" opcode="ProfilerJson" level="win:Verbose" keywords="Performance" template="tskPerformanceProfilerJsonArgs"/>
+     <event value="2000" symbol="task_0PCODEERRORpcodeError_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="OCSB" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2001" symbol="task_0PCODEERRORpcodeError2001_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="CoauthUndo" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2002" symbol="task_0PCODEERRORpcodeError2002_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="Hashtags" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2003" symbol="task_0PCODEERRORpcodeError2003_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="Emojis" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2004" symbol="task_0PCODEERRORpcodeError2004_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="AsyncEdit" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2005" symbol="task_0PCODEERRORpcodeError2005_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="Forms" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2006" symbol="task_0PCODEERRORpcodeError2006_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="FileNew" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2007" symbol="task_0PCODEERRORpcodeError2007_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="Inval" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2008" symbol="task_0PCODEERRORpcodeError2008_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="SuggestionService" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2009" symbol="task_0PCODEERRORpcodeError2009_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="DocTiling" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2010" symbol="task_0PCODEERRORpcodeError2010_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="OLE" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2011" symbol="task_0PCODEERRORpcodeError2011_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="MailMerge" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2012" symbol="task_0PCODEERRORpcodeError2012_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="Language" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2013" symbol="task_0PCODEERRORpcodeError2013_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="FlashEdits" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2014" symbol="task_0PCODEERRORpcodeError2014_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="EasyBib" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2015" symbol="task_0PCODEERRORpcodeError2015_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="FastCoauth" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2016" symbol="task_0PCODEERRORpcodeError2016_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="DigitalPrint" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2017" symbol="task_0PCODEERRORpcodeError2017_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="FocusMode" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2018" symbol="task_0PCODEERRORpcodeError2018_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="AsyncCoAuthoring" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2019" symbol="task_0PCODEERRORpcodeError2019_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="AddinMonitor" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2020" symbol="task_0PCODEERRORpcodeError2020_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="Acronyms" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2021" symbol="task_0PCODEERRORpcodeError2021_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="Rewrite" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2022" symbol="task_0PCODEERRORpcodeError2022_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="SmartLinks" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2023" symbol="task_0PCODEERRORpcodeError2023_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="DocumentTasks" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2024" symbol="task_0PCODEERRORpcodeError2024_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="Shutdown" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2025" symbol="task_0PCODEERRORpcodeError2025_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="Sidetrack" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2026" symbol="task_0PCODEERRORpcodeError2026_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="Performance" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2027" symbol="task_0PCODEERRORpcodeError2027_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="InfoProtection" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2032" symbol="task_0PCODEWARNINGpcodeWarning" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="OCSB" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2033" symbol="task_0PCODEWARNINGpcodeWarning2033" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="CoauthUndo" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2034" symbol="task_0PCODEWARNINGpcodeWarning2034" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="Hashtags" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2035" symbol="task_0PCODEWARNINGpcodeWarning2035" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="Emojis" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2036" symbol="task_0PCODEWARNINGpcodeWarning2036" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="AsyncEdit" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2037" symbol="task_0PCODEWARNINGpcodeWarning2037" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="Forms" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2038" symbol="task_0PCODEWARNINGpcodeWarning2038" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="FileNew" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2039" symbol="task_0PCODEWARNINGpcodeWarning2039" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="Inval" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2040" symbol="task_0PCODEWARNINGpcodeWarning2040" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="SuggestionService" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2041" symbol="task_0PCODEWARNINGpcodeWarning2041" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="DocTiling" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2042" symbol="task_0PCODEWARNINGpcodeWarning2042" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="OLE" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2043" symbol="task_0PCODEWARNINGpcodeWarning2043" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="MailMerge" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2044" symbol="task_0PCODEWARNINGpcodeWarning2044" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="Language" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2045" symbol="task_0PCODEWARNINGpcodeWarning2045" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="FlashEdits" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2046" symbol="task_0PCODEWARNINGpcodeWarning2046" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="EasyBib" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2047" symbol="task_0PCODEWARNINGpcodeWarning2047" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="FastCoauth" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2048" symbol="task_0PCODEWARNINGpcodeWarning2048" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="DigitalPrint" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2049" symbol="task_0PCODEWARNINGpcodeWarning2049" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="FocusMode" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2050" symbol="task_0PCODEWARNINGpcodeWarning2050" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="AsyncCoAuthoring" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2051" symbol="task_0PCODEWARNINGpcodeWarning2051" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="AddinMonitor" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2052" symbol="task_0PCODEWARNINGpcodeWarning2052" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="Acronyms" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2053" symbol="task_0PCODEWARNINGpcodeWarning2053" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="Rewrite" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2054" symbol="task_0PCODEWARNINGpcodeWarning2054" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="SmartLinks" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2055" symbol="task_0PCODEWARNINGpcodeWarning2055" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="DocumentTasks" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2056" symbol="task_0PCODEWARNINGpcodeWarning2056" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="Shutdown" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2057" symbol="task_0PCODEWARNINGpcodeWarning2057" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="Sidetrack" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2058" symbol="task_0PCODEWARNINGpcodeWarning2058" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="Performance" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2059" symbol="task_0PCODEWARNINGpcodeWarning2059" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="InfoProtection" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2064" symbol="task_0PCODEINFORMATIONALpcodeInformational" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="OCSB" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2065" symbol="task_0PCODEINFORMATIONALpcodeInformational2065" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="CoauthUndo" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2066" symbol="task_0PCODEINFORMATIONALpcodeInformational2066" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="Hashtags" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2067" symbol="task_0PCODEINFORMATIONALpcodeInformational2067" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="Emojis" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2068" symbol="task_0PCODEINFORMATIONALpcodeInformational2068" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="AsyncEdit" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2069" symbol="task_0PCODEINFORMATIONALpcodeInformational2069" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="Forms" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2070" symbol="task_0PCODEINFORMATIONALpcodeInformational2070" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="FileNew" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2071" symbol="task_0PCODEINFORMATIONALpcodeInformational2071" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="Inval" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2072" symbol="task_0PCODEINFORMATIONALpcodeInformational2072" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="SuggestionService" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2073" symbol="task_0PCODEINFORMATIONALpcodeInformational2073" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="DocTiling" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2074" symbol="task_0PCODEINFORMATIONALpcodeInformational2074" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="OLE" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2075" symbol="task_0PCODEINFORMATIONALpcodeInformational2075" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="MailMerge" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2076" symbol="task_0PCODEINFORMATIONALpcodeInformational2076" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="Language" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2077" symbol="task_0PCODEINFORMATIONALpcodeInformational2077" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="FlashEdits" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2078" symbol="task_0PCODEINFORMATIONALpcodeInformational2078" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="EasyBib" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2079" symbol="task_0PCODEINFORMATIONALpcodeInformational2079" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="FastCoauth" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2080" symbol="task_0PCODEINFORMATIONALpcodeInformational2080" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="DigitalPrint" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2081" symbol="task_0PCODEINFORMATIONALpcodeInformational2081" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="FocusMode" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2082" symbol="task_0PCODEINFORMATIONALpcodeInformational2082" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="AsyncCoAuthoring" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2083" symbol="task_0PCODEINFORMATIONALpcodeInformational2083" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="AddinMonitor" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2084" symbol="task_0PCODEINFORMATIONALpcodeInformational2084" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="Acronyms" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2085" symbol="task_0PCODEINFORMATIONALpcodeInformational2085" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="Rewrite" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2086" symbol="task_0PCODEINFORMATIONALpcodeInformational2086" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="SmartLinks" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2087" symbol="task_0PCODEINFORMATIONALpcodeInformational2087" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="DocumentTasks" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2088" symbol="task_0PCODEINFORMATIONALpcodeInformational2088" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="Shutdown" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2089" symbol="task_0PCODEINFORMATIONALpcodeInformational2089" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="Sidetrack" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2090" symbol="task_0PCODEINFORMATIONALpcodeInformational2090" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="Performance" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="2091" symbol="task_0PCODEINFORMATIONALpcodeInformational2091" version="0" task="task_0" opcode="opcodeInformational" level="win:Informational" keywords="InfoProtection" template="task_0PCODEINFORMATIONALpcodeInformationalArgs"/>
+     <event value="30579" symbol="tskOCSB_V1" version="1" task="tskOCSB" level="win:Critical" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30580" symbol="tskOCSB30580_V1" version="1" task="tskOCSB" level="win:Error" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30581" symbol="tskOCSB30581_V1" version="1" task="tskOCSB" level="win:Warning" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30582" symbol="tskOCSB30582_V1" version="1" task="tskOCSB" level="win:Informational" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30583" symbol="tskOCSB30583_V1" version="1" task="tskOCSB" level="win:Verbose" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30584" symbol="tskOCSB30584_V1" version="1" task="tskOCSB" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30585" symbol="tskOCSB30585_V1" version="1" task="tskOCSB" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30586" symbol="tskOCSB30586_V1" version="1" task="tskOCSB" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30587" symbol="tskOCSB30587_V1" version="1" task="tskOCSB" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30588" symbol="tskCoauthUndo_V1" version="1" task="tskCoauthUndo" level="win:Critical" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30589" symbol="tskCoauthUndo30589_V1" version="1" task="tskCoauthUndo" level="win:Error" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30590" symbol="tskCoauthUndo30590_V1" version="1" task="tskCoauthUndo" level="win:Warning" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30591" symbol="tskCoauthUndo30591_V1" version="1" task="tskCoauthUndo" level="win:Informational" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30592" symbol="tskCoauthUndo30592_V1" version="1" task="tskCoauthUndo" level="win:Verbose" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30593" symbol="tskCoauthUndo30593_V1" version="1" task="tskCoauthUndo" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30594" symbol="tskCoauthUndo30594_V1" version="1" task="tskCoauthUndo" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30595" symbol="tskCoauthUndo30595_V1" version="1" task="tskCoauthUndo" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30596" symbol="tskCoauthUndo30596_V1" version="1" task="tskCoauthUndo" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30597" symbol="tskHashtags_V1" version="1" task="tskHashtags" level="win:Critical" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30598" symbol="tskHashtags30598_V1" version="1" task="tskHashtags" level="win:Error" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30599" symbol="tskHashtags30599_V1" version="1" task="tskHashtags" level="win:Warning" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30600" symbol="tskHashtags30600_V1" version="1" task="tskHashtags" level="win:Informational" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30601" symbol="tskHashtags30601_V1" version="1" task="tskHashtags" level="win:Verbose" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30602" symbol="tskHashtags30602_V1" version="1" task="tskHashtags" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30603" symbol="tskHashtags30603_V1" version="1" task="tskHashtags" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30604" symbol="tskHashtags30604_V1" version="1" task="tskHashtags" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30605" symbol="tskHashtags30605_V1" version="1" task="tskHashtags" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30606" symbol="tskEmojis_V1" version="1" task="tskEmojis" level="win:Critical" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30607" symbol="tskEmojis30607_V1" version="1" task="tskEmojis" level="win:Error" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30608" symbol="tskEmojis30608_V1" version="1" task="tskEmojis" level="win:Warning" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30609" symbol="tskEmojis30609_V1" version="1" task="tskEmojis" level="win:Informational" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30610" symbol="tskEmojis30610_V1" version="1" task="tskEmojis" level="win:Verbose" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30611" symbol="tskEmojis30611_V1" version="1" task="tskEmojis" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30612" symbol="tskEmojis30612_V1" version="1" task="tskEmojis" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30613" symbol="tskEmojis30613_V1" version="1" task="tskEmojis" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30614" symbol="tskEmojis30614_V1" version="1" task="tskEmojis" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30615" symbol="tskAsyncEdit_V1" version="1" task="tskAsyncEdit" level="win:Critical" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30616" symbol="tskAsyncEdit30616_V1" version="1" task="tskAsyncEdit" level="win:Error" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30617" symbol="tskAsyncEdit30617_V1" version="1" task="tskAsyncEdit" level="win:Warning" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30618" symbol="tskAsyncEdit30618_V1" version="1" task="tskAsyncEdit" level="win:Informational" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30619" symbol="tskAsyncEdit30619_V1" version="1" task="tskAsyncEdit" level="win:Verbose" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30620" symbol="tskAsyncEdit30620_V1" version="1" task="tskAsyncEdit" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30621" symbol="tskAsyncEdit30621_V1" version="1" task="tskAsyncEdit" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30622" symbol="tskAsyncEdit30622_V1" version="1" task="tskAsyncEdit" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30623" symbol="tskAsyncEdit30623_V1" version="1" task="tskAsyncEdit" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30624" symbol="tskForms_V1" version="1" task="tskForms" level="win:Critical" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30625" symbol="tskForms30625_V1" version="1" task="tskForms" level="win:Error" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30626" symbol="tskForms30626_V1" version="1" task="tskForms" level="win:Warning" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30627" symbol="tskForms30627_V1" version="1" task="tskForms" level="win:Informational" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30628" symbol="tskForms30628_V1" version="1" task="tskForms" level="win:Verbose" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30629" symbol="tskForms30629_V1" version="1" task="tskForms" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30630" symbol="tskForms30630_V1" version="1" task="tskForms" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30631" symbol="tskForms30631_V1" version="1" task="tskForms" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30632" symbol="tskForms30632_V1" version="1" task="tskForms" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30633" symbol="tskFileNew_V1" version="1" task="tskFileNew" level="win:Critical" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30634" symbol="tskFileNew30634_V1" version="1" task="tskFileNew" level="win:Error" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30635" symbol="tskFileNew30635_V1" version="1" task="tskFileNew" level="win:Warning" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30636" symbol="tskFileNew30636_V1" version="1" task="tskFileNew" level="win:Informational" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30637" symbol="tskFileNew30637_V1" version="1" task="tskFileNew" level="win:Verbose" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30638" symbol="tskFileNew30638_V1" version="1" task="tskFileNew" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30639" symbol="tskFileNew30639_V1" version="1" task="tskFileNew" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30640" symbol="tskFileNew30640_V1" version="1" task="tskFileNew" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30641" symbol="tskFileNew30641_V1" version="1" task="tskFileNew" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30642" symbol="tskInval_V1" version="1" task="tskInval" level="win:Critical" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30643" symbol="tskInval30643_V1" version="1" task="tskInval" level="win:Error" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30644" symbol="tskInval30644_V1" version="1" task="tskInval" level="win:Warning" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30645" symbol="tskInval30645_V1" version="1" task="tskInval" level="win:Informational" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30646" symbol="tskInval30646_V1" version="1" task="tskInval" level="win:Verbose" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30647" symbol="tskInval30647_V1" version="1" task="tskInval" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30648" symbol="tskInval30648_V1" version="1" task="tskInval" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30649" symbol="tskInval30649_V1" version="1" task="tskInval" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30650" symbol="tskInval30650_V1" version="1" task="tskInval" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30651" symbol="tskSuggestionService_V1" version="1" task="tskSuggestionService" level="win:Critical" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30652" symbol="tskSuggestionService30652_V1" version="1" task="tskSuggestionService" level="win:Error" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30653" symbol="tskSuggestionService30653_V1" version="1" task="tskSuggestionService" level="win:Warning" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30654" symbol="tskSuggestionService30654_V1" version="1" task="tskSuggestionService" level="win:Informational" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30655" symbol="tskSuggestionService30655_V1" version="1" task="tskSuggestionService" level="win:Verbose" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30656" symbol="tskSuggestionService30656_V1" version="1" task="tskSuggestionService" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30657" symbol="tskSuggestionService30657_V1" version="1" task="tskSuggestionService" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30658" symbol="tskSuggestionService30658_V1" version="1" task="tskSuggestionService" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30659" symbol="tskSuggestionService30659_V1" version="1" task="tskSuggestionService" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30660" symbol="tskDocTiling_V1" version="1" task="tskDocTiling" level="win:Critical" keywords="DocTiling" template="tskOCSBArgs_V1"/>
+     <event value="30661" symbol="tskDocTiling30661_V1" version="1" task="tskDocTiling" level="win:Error" keywords="DocTiling" template="tskOCSBArgs_V1"/>
+     <event value="30662" symbol="tskDocTiling30662_V1" version="1" task="tskDocTiling" level="win:Warning" keywords="DocTiling" template="tskOCSBArgs_V1"/>
+     <event value="30663" symbol="tskDocTiling30663_V1" version="1" task="tskDocTiling" level="win:Informational" keywords="DocTiling" template="tskOCSBArgs_V1"/>
+     <event value="30664" symbol="tskDocTiling30664_V1" version="1" task="tskDocTiling" level="win:Verbose" keywords="DocTiling" template="tskOCSBArgs_V1"/>
+     <event value="30665" symbol="tskDocTiling30665_V1" version="1" task="tskDocTiling" keywords="DocTiling" template="tskOCSBArgs_V1"/>
+     <event value="30666" symbol="tskDocTiling30666_V1" version="1" task="tskDocTiling" keywords="DocTiling" template="tskOCSBArgs_V1"/>
+     <event value="30667" symbol="tskDocTiling30667_V1" version="1" task="tskDocTiling" keywords="DocTiling" template="tskOCSBArgs_V1"/>
+     <event value="30668" symbol="tskDocTiling30668_V1" version="1" task="tskDocTiling" keywords="DocTiling" template="tskOCSBArgs_V1"/>
+     <event value="30669" symbol="tskOLE_V1" version="1" task="tskOLE" level="win:Critical" keywords="OLE" template="tskOCSBArgs_V1"/>
+     <event value="30670" symbol="tskOLE30670_V1" version="1" task="tskOLE" level="win:Error" keywords="OLE" template="tskOCSBArgs_V1"/>
+     <event value="30671" symbol="tskOLE30671_V1" version="1" task="tskOLE" level="win:Warning" keywords="OLE" template="tskOCSBArgs_V1"/>
+     <event value="30672" symbol="tskOLE30672_V1" version="1" task="tskOLE" level="win:Informational" keywords="OLE" template="tskOCSBArgs_V1"/>
+     <event value="30673" symbol="tskOLE30673_V1" version="1" task="tskOLE" level="win:Verbose" keywords="OLE" template="tskOCSBArgs_V1"/>
+     <event value="30674" symbol="tskOLE30674_V1" version="1" task="tskOLE" keywords="OLE" template="tskOCSBArgs_V1"/>
+     <event value="30675" symbol="tskOLE30675_V1" version="1" task="tskOLE" keywords="OLE" template="tskOCSBArgs_V1"/>
+     <event value="30676" symbol="tskOLE30676_V1" version="1" task="tskOLE" keywords="OLE" template="tskOCSBArgs_V1"/>
+     <event value="30677" symbol="tskOLE30677_V1" version="1" task="tskOLE" keywords="OLE" template="tskOCSBArgs_V1"/>
+     <event value="30678" symbol="tskMailMerge_V1" version="1" task="tskMailMerge" level="win:Critical" keywords="MailMerge" template="tskOCSBArgs_V1"/>
+     <event value="30679" symbol="tskMailMerge30679_V1" version="1" task="tskMailMerge" level="win:Error" keywords="MailMerge" template="tskOCSBArgs_V1"/>
+     <event value="30680" symbol="tskMailMerge30680_V1" version="1" task="tskMailMerge" level="win:Warning" keywords="MailMerge" template="tskOCSBArgs_V1"/>
+     <event value="30681" symbol="tskMailMerge30681_V1" version="1" task="tskMailMerge" level="win:Informational" keywords="MailMerge" template="tskOCSBArgs_V1"/>
+     <event value="30682" symbol="tskMailMerge30682_V1" version="1" task="tskMailMerge" level="win:Verbose" keywords="MailMerge" template="tskOCSBArgs_V1"/>
+     <event value="30683" symbol="tskMailMerge30683_V1" version="1" task="tskMailMerge" keywords="MailMerge" template="tskOCSBArgs_V1"/>
+     <event value="30684" symbol="tskMailMerge30684_V1" version="1" task="tskMailMerge" keywords="MailMerge" template="tskOCSBArgs_V1"/>
+     <event value="30685" symbol="tskMailMerge30685_V1" version="1" task="tskMailMerge" keywords="MailMerge" template="tskOCSBArgs_V1"/>
+     <event value="30686" symbol="tskMailMerge30686_V1" version="1" task="tskMailMerge" keywords="MailMerge" template="tskOCSBArgs_V1"/>
+     <event value="30687" symbol="tskLanguage_V1" version="1" task="tskLanguage" level="win:Critical" keywords="Language" template="tskOCSBArgs_V1"/>
+     <event value="30688" symbol="tskLanguage30688_V1" version="1" task="tskLanguage" level="win:Error" keywords="Language" template="tskOCSBArgs_V1"/>
+     <event value="30689" symbol="tskLanguage30689_V1" version="1" task="tskLanguage" level="win:Warning" keywords="Language" template="tskOCSBArgs_V1"/>
+     <event value="30690" symbol="tskLanguage30690_V1" version="1" task="tskLanguage" level="win:Informational" keywords="Language" template="tskOCSBArgs_V1"/>
+     <event value="30691" symbol="tskLanguage30691_V1" version="1" task="tskLanguage" level="win:Verbose" keywords="Language" template="tskOCSBArgs_V1"/>
+     <event value="30692" symbol="tskLanguage30692_V1" version="1" task="tskLanguage" keywords="Language" template="tskOCSBArgs_V1"/>
+     <event value="30693" symbol="tskLanguage30693_V1" version="1" task="tskLanguage" keywords="Language" template="tskOCSBArgs_V1"/>
+     <event value="30694" symbol="tskLanguage30694_V1" version="1" task="tskLanguage" keywords="Language" template="tskOCSBArgs_V1"/>
+     <event value="30695" symbol="tskLanguage30695_V1" version="1" task="tskLanguage" keywords="Language" template="tskOCSBArgs_V1"/>
+     <event value="30696" symbol="tskFlashEdits_V1" version="1" task="tskFlashEdits" level="win:Critical" keywords="FlashEdits" template="tskOCSBArgs_V1"/>
+     <event value="30697" symbol="tskFlashEdits30697_V1" version="1" task="tskFlashEdits" level="win:Error" keywords="FlashEdits" template="tskOCSBArgs_V1"/>
+     <event value="30698" symbol="tskFlashEdits30698_V1" version="1" task="tskFlashEdits" level="win:Warning" keywords="FlashEdits" template="tskOCSBArgs_V1"/>
+     <event value="30699" symbol="tskFlashEdits30699_V1" version="1" task="tskFlashEdits" level="win:Informational" keywords="FlashEdits" template="tskOCSBArgs_V1"/>
+     <event value="30700" symbol="tskFlashEdits30700_V1" version="1" task="tskFlashEdits" level="win:Verbose" keywords="FlashEdits" template="tskOCSBArgs_V1"/>
+     <event value="30701" symbol="tskFlashEdits30701_V1" version="1" task="tskFlashEdits" keywords="FlashEdits" template="tskOCSBArgs_V1"/>
+     <event value="30702" symbol="tskFlashEdits30702_V1" version="1" task="tskFlashEdits" keywords="FlashEdits" template="tskOCSBArgs_V1"/>
+     <event value="30703" symbol="tskFlashEdits30703_V1" version="1" task="tskFlashEdits" keywords="FlashEdits" template="tskOCSBArgs_V1"/>
+     <event value="30704" symbol="tskFlashEdits30704_V1" version="1" task="tskFlashEdits" keywords="FlashEdits" template="tskOCSBArgs_V1"/>
+     <event value="30705" symbol="tskEasyBib_V1" version="1" task="tskEasyBib" level="win:Critical" keywords="EasyBib" template="tskOCSBArgs_V1"/>
+     <event value="30706" symbol="tskEasyBib30706_V1" version="1" task="tskEasyBib" level="win:Error" keywords="EasyBib" template="tskOCSBArgs_V1"/>
+     <event value="30707" symbol="tskEasyBib30707_V1" version="1" task="tskEasyBib" level="win:Warning" keywords="EasyBib" template="tskOCSBArgs_V1"/>
+     <event value="30708" symbol="tskEasyBib30708_V1" version="1" task="tskEasyBib" level="win:Informational" keywords="EasyBib" template="tskOCSBArgs_V1"/>
+     <event value="30709" symbol="tskEasyBib30709_V1" version="1" task="tskEasyBib" level="win:Verbose" keywords="EasyBib" template="tskOCSBArgs_V1"/>
+     <event value="30710" symbol="tskEasyBib30710_V1" version="1" task="tskEasyBib" keywords="EasyBib" template="tskOCSBArgs_V1"/>
+     <event value="30711" symbol="tskEasyBib30711_V1" version="1" task="tskEasyBib" keywords="EasyBib" template="tskOCSBArgs_V1"/>
+     <event value="30712" symbol="tskEasyBib30712_V1" version="1" task="tskEasyBib" keywords="EasyBib" template="tskOCSBArgs_V1"/>
+     <event value="30713" symbol="tskEasyBib30713_V1" version="1" task="tskEasyBib" keywords="EasyBib" template="tskOCSBArgs_V1"/>
+     <event value="30714" symbol="tskFastCoauth_V1" version="1" task="tskFastCoauth" level="win:Critical" keywords="FastCoauth" template="tskOCSBArgs_V1"/>
+     <event value="30715" symbol="tskFastCoauth30715_V1" version="1" task="tskFastCoauth" level="win:Error" keywords="FastCoauth" template="tskOCSBArgs_V1"/>
+     <event value="30716" symbol="tskFastCoauth30716_V1" version="1" task="tskFastCoauth" level="win:Warning" keywords="FastCoauth" template="tskOCSBArgs_V1"/>
+     <event value="30717" symbol="tskFastCoauth30717_V1" version="1" task="tskFastCoauth" level="win:Informational" keywords="FastCoauth" template="tskOCSBArgs_V1"/>
+     <event value="30718" symbol="tskFastCoauth30718_V1" version="1" task="tskFastCoauth" level="win:Verbose" keywords="FastCoauth" template="tskOCSBArgs_V1"/>
+     <event value="30719" symbol="tskFastCoauth30719_V1" version="1" task="tskFastCoauth" keywords="FastCoauth" template="tskOCSBArgs_V1"/>
+     <event value="30720" symbol="tskFastCoauth30720_V1" version="1" task="tskFastCoauth" keywords="FastCoauth" template="tskOCSBArgs_V1"/>
+     <event value="30721" symbol="tskFastCoauth30721_V1" version="1" task="tskFastCoauth" keywords="FastCoauth" template="tskOCSBArgs_V1"/>
+     <event value="30722" symbol="tskFastCoauth30722_V1" version="1" task="tskFastCoauth" keywords="FastCoauth" template="tskOCSBArgs_V1"/>
+     <event value="30723" symbol="tskDigitalPrint_V1" version="1" task="tskDigitalPrint" level="win:Critical" keywords="DigitalPrint" template="tskOCSBArgs_V1"/>
+     <event value="30724" symbol="tskDigitalPrint30724_V1" version="1" task="tskDigitalPrint" level="win:Error" keywords="DigitalPrint" template="tskOCSBArgs_V1"/>
+     <event value="30725" symbol="tskDigitalPrint30725_V1" version="1" task="tskDigitalPrint" level="win:Warning" keywords="DigitalPrint" template="tskOCSBArgs_V1"/>
+     <event value="30726" symbol="tskDigitalPrint30726_V1" version="1" task="tskDigitalPrint" level="win:Informational" keywords="DigitalPrint" template="tskOCSBArgs_V1"/>
+     <event value="30727" symbol="tskDigitalPrint30727_V1" version="1" task="tskDigitalPrint" level="win:Verbose" keywords="DigitalPrint" template="tskOCSBArgs_V1"/>
+     <event value="30728" symbol="tskDigitalPrint30728_V1" version="1" task="tskDigitalPrint" keywords="DigitalPrint" template="tskOCSBArgs_V1"/>
+     <event value="30729" symbol="tskDigitalPrint30729_V1" version="1" task="tskDigitalPrint" keywords="DigitalPrint" template="tskOCSBArgs_V1"/>
+     <event value="30730" symbol="tskDigitalPrint30730_V1" version="1" task="tskDigitalPrint" keywords="DigitalPrint" template="tskOCSBArgs_V1"/>
+     <event value="30731" symbol="tskDigitalPrint30731_V1" version="1" task="tskDigitalPrint" keywords="DigitalPrint" template="tskOCSBArgs_V1"/>
+     <event value="30732" symbol="tskFocusMode_V1" version="1" task="tskFocusMode" level="win:Critical" keywords="FocusMode" template="tskOCSBArgs_V1"/>
+     <event value="30733" symbol="tskFocusMode30733_V1" version="1" task="tskFocusMode" level="win:Error" keywords="FocusMode" template="tskOCSBArgs_V1"/>
+     <event value="30734" symbol="tskFocusMode30734_V1" version="1" task="tskFocusMode" level="win:Warning" keywords="FocusMode" template="tskOCSBArgs_V1"/>
+     <event value="30735" symbol="tskFocusMode30735_V1" version="1" task="tskFocusMode" level="win:Informational" keywords="FocusMode" template="tskOCSBArgs_V1"/>
+     <event value="30736" symbol="tskFocusMode30736_V1" version="1" task="tskFocusMode" level="win:Verbose" keywords="FocusMode" template="tskOCSBArgs_V1"/>
+     <event value="30737" symbol="tskFocusMode30737_V1" version="1" task="tskFocusMode" keywords="FocusMode" template="tskOCSBArgs_V1"/>
+     <event value="30738" symbol="tskFocusMode30738_V1" version="1" task="tskFocusMode" keywords="FocusMode" template="tskOCSBArgs_V1"/>
+     <event value="30739" symbol="tskFocusMode30739_V1" version="1" task="tskFocusMode" keywords="FocusMode" template="tskOCSBArgs_V1"/>
+     <event value="30740" symbol="tskFocusMode30740_V1" version="1" task="tskFocusMode" keywords="FocusMode" template="tskOCSBArgs_V1"/>
+     <event value="30741" symbol="tskAsyncCoAuthoring_V1" version="1" task="tskAsyncCoAuthoring" level="win:Critical" keywords="AsyncCoAuthoring" template="tskOCSBArgs_V1"/>
+     <event value="30742" symbol="tskAsyncCoAuthoring30742_V1" version="1" task="tskAsyncCoAuthoring" level="win:Error" keywords="AsyncCoAuthoring" template="tskOCSBArgs_V1"/>
+     <event value="30743" symbol="tskAsyncCoAuthoring30743_V1" version="1" task="tskAsyncCoAuthoring" level="win:Warning" keywords="AsyncCoAuthoring" template="tskOCSBArgs_V1"/>
+     <event value="30744" symbol="tskAsyncCoAuthoring30744_V1" version="1" task="tskAsyncCoAuthoring" level="win:Informational" keywords="AsyncCoAuthoring" template="tskOCSBArgs_V1"/>
+     <event value="30745" symbol="tskAsyncCoAuthoring30745_V1" version="1" task="tskAsyncCoAuthoring" level="win:Verbose" keywords="AsyncCoAuthoring" template="tskOCSBArgs_V1"/>
+     <event value="30746" symbol="tskAsyncCoAuthoring30746_V1" version="1" task="tskAsyncCoAuthoring" keywords="AsyncCoAuthoring" template="tskOCSBArgs_V1"/>
+     <event value="30747" symbol="tskAsyncCoAuthoring30747_V1" version="1" task="tskAsyncCoAuthoring" keywords="AsyncCoAuthoring" template="tskOCSBArgs_V1"/>
+     <event value="30748" symbol="tskAsyncCoAuthoring30748_V1" version="1" task="tskAsyncCoAuthoring" keywords="AsyncCoAuthoring" template="tskOCSBArgs_V1"/>
+     <event value="30749" symbol="tskAsyncCoAuthoring30749_V1" version="1" task="tskAsyncCoAuthoring" keywords="AsyncCoAuthoring" template="tskOCSBArgs_V1"/>
+     <event value="30750" symbol="tskAddinMonitor_V1" version="1" task="tskAddinMonitor" level="win:Critical" keywords="AddinMonitor" template="tskOCSBArgs_V1"/>
+     <event value="30751" symbol="tskAddinMonitor30751_V1" version="1" task="tskAddinMonitor" level="win:Error" keywords="AddinMonitor" template="tskOCSBArgs_V1"/>
+     <event value="30752" symbol="tskAddinMonitor30752_V1" version="1" task="tskAddinMonitor" level="win:Warning" keywords="AddinMonitor" template="tskOCSBArgs_V1"/>
+     <event value="30753" symbol="tskAddinMonitor30753_V1" version="1" task="tskAddinMonitor" level="win:Informational" keywords="AddinMonitor" template="tskOCSBArgs_V1"/>
+     <event value="30754" symbol="tskAddinMonitor30754_V1" version="1" task="tskAddinMonitor" level="win:Verbose" keywords="AddinMonitor" template="tskOCSBArgs_V1"/>
+     <event value="30755" symbol="tskAddinMonitor30755_V1" version="1" task="tskAddinMonitor" keywords="AddinMonitor" template="tskOCSBArgs_V1"/>
+     <event value="30756" symbol="tskAddinMonitor30756_V1" version="1" task="tskAddinMonitor" keywords="AddinMonitor" template="tskOCSBArgs_V1"/>
+     <event value="30757" symbol="tskAddinMonitor30757_V1" version="1" task="tskAddinMonitor" keywords="AddinMonitor" template="tskOCSBArgs_V1"/>
+     <event value="30758" symbol="tskAddinMonitor30758_V1" version="1" task="tskAddinMonitor" keywords="AddinMonitor" template="tskOCSBArgs_V1"/>
+     <event value="30759" symbol="tskAcronyms_V1" version="1" task="tskAcronyms" level="win:Critical" keywords="Acronyms" template="tskOCSBArgs_V1"/>
+     <event value="30760" symbol="tskAcronyms30760_V1" version="1" task="tskAcronyms" level="win:Error" keywords="Acronyms" template="tskOCSBArgs_V1"/>
+     <event value="30761" symbol="tskAcronyms30761_V1" version="1" task="tskAcronyms" level="win:Warning" keywords="Acronyms" template="tskOCSBArgs_V1"/>
+     <event value="30762" symbol="tskAcronyms30762_V1" version="1" task="tskAcronyms" level="win:Informational" keywords="Acronyms" template="tskOCSBArgs_V1"/>
+     <event value="30763" symbol="tskAcronyms30763_V1" version="1" task="tskAcronyms" level="win:Verbose" keywords="Acronyms" template="tskOCSBArgs_V1"/>
+     <event value="30764" symbol="tskAcronyms30764_V1" version="1" task="tskAcronyms" keywords="Acronyms" template="tskOCSBArgs_V1"/>
+     <event value="30765" symbol="tskAcronyms30765_V1" version="1" task="tskAcronyms" keywords="Acronyms" template="tskOCSBArgs_V1"/>
+     <event value="30766" symbol="tskAcronyms30766_V1" version="1" task="tskAcronyms" keywords="Acronyms" template="tskOCSBArgs_V1"/>
+     <event value="30767" symbol="tskAcronyms30767_V1" version="1" task="tskAcronyms" keywords="Acronyms" template="tskOCSBArgs_V1"/>
+     <event value="30768" symbol="tskRewrite_V1" version="1" task="tskRewrite" level="win:Critical" keywords="Rewrite" template="tskOCSBArgs_V1"/>
+     <event value="30769" symbol="tskRewrite30769_V1" version="1" task="tskRewrite" level="win:Error" keywords="Rewrite" template="tskOCSBArgs_V1"/>
+     <event value="30770" symbol="tskRewrite30770_V1" version="1" task="tskRewrite" level="win:Warning" keywords="Rewrite" template="tskOCSBArgs_V1"/>
+     <event value="30771" symbol="tskRewrite30771_V1" version="1" task="tskRewrite" level="win:Informational" keywords="Rewrite" template="tskOCSBArgs_V1"/>
+     <event value="30772" symbol="tskRewrite30772_V1" version="1" task="tskRewrite" level="win:Verbose" keywords="Rewrite" template="tskOCSBArgs_V1"/>
+     <event value="30773" symbol="tskRewrite30773_V1" version="1" task="tskRewrite" keywords="Rewrite" template="tskOCSBArgs_V1"/>
+     <event value="30774" symbol="tskRewrite30774_V1" version="1" task="tskRewrite" keywords="Rewrite" template="tskOCSBArgs_V1"/>
+     <event value="30775" symbol="tskRewrite30775_V1" version="1" task="tskRewrite" keywords="Rewrite" template="tskOCSBArgs_V1"/>
+     <event value="30776" symbol="tskRewrite30776_V1" version="1" task="tskRewrite" keywords="Rewrite" template="tskOCSBArgs_V1"/>
+     <event value="30777" symbol="tskSmartLinks_V1" version="1" task="tskSmartLinks" level="win:Critical" keywords="SmartLinks" template="tskOCSBArgs_V1"/>
+     <event value="30778" symbol="tskSmartLinks30778_V1" version="1" task="tskSmartLinks" level="win:Error" keywords="SmartLinks" template="tskOCSBArgs_V1"/>
+     <event value="30779" symbol="tskSmartLinks30779_V1" version="1" task="tskSmartLinks" level="win:Warning" keywords="SmartLinks" template="tskOCSBArgs_V1"/>
+     <event value="30780" symbol="tskSmartLinks30780_V1" version="1" task="tskSmartLinks" level="win:Informational" keywords="SmartLinks" template="tskOCSBArgs_V1"/>
+     <event value="30781" symbol="tskSmartLinks30781_V1" version="1" task="tskSmartLinks" level="win:Verbose" keywords="SmartLinks" template="tskOCSBArgs_V1"/>
+     <event value="30782" symbol="tskSmartLinks30782_V1" version="1" task="tskSmartLinks" keywords="SmartLinks" template="tskOCSBArgs_V1"/>
+     <event value="30783" symbol="tskSmartLinks30783_V1" version="1" task="tskSmartLinks" keywords="SmartLinks" template="tskOCSBArgs_V1"/>
+     <event value="30784" symbol="tskSmartLinks30784_V1" version="1" task="tskSmartLinks" keywords="SmartLinks" template="tskOCSBArgs_V1"/>
+     <event value="30785" symbol="tskSmartLinks30785_V1" version="1" task="tskSmartLinks" keywords="SmartLinks" template="tskOCSBArgs_V1"/>
+     <event value="30786" symbol="tskDocumentTasks_V1" version="1" task="tskDocumentTasks" level="win:Critical" keywords="DocumentTasks" template="tskOCSBArgs_V1"/>
+     <event value="30787" symbol="tskDocumentTasks30787_V1" version="1" task="tskDocumentTasks" level="win:Error" keywords="DocumentTasks" template="tskOCSBArgs_V1"/>
+     <event value="30788" symbol="tskDocumentTasks30788_V1" version="1" task="tskDocumentTasks" level="win:Warning" keywords="DocumentTasks" template="tskOCSBArgs_V1"/>
+     <event value="30789" symbol="tskDocumentTasks30789_V1" version="1" task="tskDocumentTasks" level="win:Informational" keywords="DocumentTasks" template="tskOCSBArgs_V1"/>
+     <event value="30790" symbol="tskDocumentTasks30790_V1" version="1" task="tskDocumentTasks" level="win:Verbose" keywords="DocumentTasks" template="tskOCSBArgs_V1"/>
+     <event value="30791" symbol="tskDocumentTasks30791_V1" version="1" task="tskDocumentTasks" keywords="DocumentTasks" template="tskOCSBArgs_V1"/>
+     <event value="30792" symbol="tskDocumentTasks30792_V1" version="1" task="tskDocumentTasks" keywords="DocumentTasks" template="tskOCSBArgs_V1"/>
+     <event value="30793" symbol="tskDocumentTasks30793_V1" version="1" task="tskDocumentTasks" keywords="DocumentTasks" template="tskOCSBArgs_V1"/>
+     <event value="30794" symbol="tskDocumentTasks30794_V1" version="1" task="tskDocumentTasks" keywords="DocumentTasks" template="tskOCSBArgs_V1"/>
+     <event value="30795" symbol="tskShutdown_V1" version="1" task="tskShutdown" level="win:Critical" keywords="Shutdown" template="tskOCSBArgs_V1"/>
+     <event value="30796" symbol="tskShutdown30796_V1" version="1" task="tskShutdown" level="win:Error" keywords="Shutdown" template="tskOCSBArgs_V1"/>
+     <event value="30797" symbol="tskShutdown30797_V1" version="1" task="tskShutdown" level="win:Warning" keywords="Shutdown" template="tskOCSBArgs_V1"/>
+     <event value="30798" symbol="tskShutdown30798_V1" version="1" task="tskShutdown" level="win:Informational" keywords="Shutdown" template="tskOCSBArgs_V1"/>
+     <event value="30799" symbol="tskShutdown30799_V1" version="1" task="tskShutdown" level="win:Verbose" keywords="Shutdown" template="tskOCSBArgs_V1"/>
+     <event value="30800" symbol="tskShutdown30800_V1" version="1" task="tskShutdown" keywords="Shutdown" template="tskOCSBArgs_V1"/>
+     <event value="30801" symbol="tskShutdown30801_V1" version="1" task="tskShutdown" keywords="Shutdown" template="tskOCSBArgs_V1"/>
+     <event value="30802" symbol="tskShutdown30802_V1" version="1" task="tskShutdown" keywords="Shutdown" template="tskOCSBArgs_V1"/>
+     <event value="30803" symbol="tskShutdown30803_V1" version="1" task="tskShutdown" keywords="Shutdown" template="tskOCSBArgs_V1"/>
+     <event value="30804" symbol="tskSidetrack_V1" version="1" task="tskSidetrack" level="win:Critical" keywords="Sidetrack" template="tskOCSBArgs_V1"/>
+     <event value="30805" symbol="tskSidetrack30805_V1" version="1" task="tskSidetrack" level="win:Error" keywords="Sidetrack" template="tskOCSBArgs_V1"/>
+     <event value="30806" symbol="tskSidetrack30806_V1" version="1" task="tskSidetrack" level="win:Warning" keywords="Sidetrack" template="tskOCSBArgs_V1"/>
+     <event value="30807" symbol="tskSidetrack30807_V1" version="1" task="tskSidetrack" level="win:Informational" keywords="Sidetrack" template="tskOCSBArgs_V1"/>
+     <event value="30808" symbol="tskSidetrack30808_V1" version="1" task="tskSidetrack" level="win:Verbose" keywords="Sidetrack" template="tskOCSBArgs_V1"/>
+     <event value="30809" symbol="tskSidetrack30809_V1" version="1" task="tskSidetrack" keywords="Sidetrack" template="tskOCSBArgs_V1"/>
+     <event value="30810" symbol="tskSidetrack30810_V1" version="1" task="tskSidetrack" keywords="Sidetrack" template="tskOCSBArgs_V1"/>
+     <event value="30811" symbol="tskSidetrack30811_V1" version="1" task="tskSidetrack" keywords="Sidetrack" template="tskOCSBArgs_V1"/>
+     <event value="30812" symbol="tskSidetrack30812_V1" version="1" task="tskSidetrack" keywords="Sidetrack" template="tskOCSBArgs_V1"/>
+     <event value="30813" symbol="tskPerformance_V1" version="1" task="tskPerformance" level="win:Critical" keywords="Performance" template="tskOCSBArgs_V1"/>
+     <event value="30814" symbol="tskPerformance30814_V1" version="1" task="tskPerformance" level="win:Error" keywords="Performance" template="tskOCSBArgs_V1"/>
+     <event value="30815" symbol="tskPerformance30815_V1" version="1" task="tskPerformance" level="win:Warning" keywords="Performance" template="tskOCSBArgs_V1"/>
+     <event value="30816" symbol="tskPerformance30816_V1" version="1" task="tskPerformance" level="win:Informational" keywords="Performance" template="tskOCSBArgs_V1"/>
+     <event value="30817" symbol="tskPerformance30817_V1" version="1" task="tskPerformance" level="win:Verbose" keywords="Performance" template="tskOCSBArgs_V1"/>
+     <event value="30818" symbol="tskPerformance30818_V1" version="1" task="tskPerformance" keywords="Performance" template="tskOCSBArgs_V1"/>
+     <event value="30819" symbol="tskPerformance30819_V1" version="1" task="tskPerformance" keywords="Performance" template="tskOCSBArgs_V1"/>
+     <event value="30820" symbol="tskPerformance30820_V1" version="1" task="tskPerformance" keywords="Performance" template="tskOCSBArgs_V1"/>
+     <event value="30821" symbol="tskPerformance30821_V1" version="1" task="tskPerformance" keywords="Performance" template="tskOCSBArgs_V1"/>
+     <event value="30822" symbol="tskInfoProtection_V1" version="1" task="tskInfoProtection" level="win:Critical" keywords="InfoProtection" template="tskOCSBArgs_V1"/>
+     <event value="30823" symbol="tskInfoProtection30823_V1" version="1" task="tskInfoProtection" level="win:Error" keywords="InfoProtection" template="tskOCSBArgs_V1"/>
+     <event value="30824" symbol="tskInfoProtection30824_V1" version="1" task="tskInfoProtection" level="win:Warning" keywords="InfoProtection" template="tskOCSBArgs_V1"/>
+     <event value="30825" symbol="tskInfoProtection30825_V1" version="1" task="tskInfoProtection" level="win:Informational" keywords="InfoProtection" template="tskOCSBArgs_V1"/>
+     <event value="30826" symbol="tskInfoProtection30826_V1" version="1" task="tskInfoProtection" level="win:Verbose" keywords="InfoProtection" template="tskOCSBArgs_V1"/>
+     <event value="30827" symbol="tskInfoProtection30827_V1" version="1" task="tskInfoProtection" keywords="InfoProtection" template="tskOCSBArgs_V1"/>
+     <event value="30828" symbol="tskInfoProtection30828_V1" version="1" task="tskInfoProtection" keywords="InfoProtection" template="tskOCSBArgs_V1"/>
+     <event value="30829" symbol="tskInfoProtection30829_V1" version="1" task="tskInfoProtection" keywords="InfoProtection" template="tskOCSBArgs_V1"/>
+     <event value="30830" symbol="tskInfoProtection30830_V1" version="1" task="tskInfoProtection" keywords="InfoProtection" template="tskOCSBArgs_V1"/>
+    </events>
+    <templates>
+     <template tid="tskVclokVclokEntryPacketDelayedArgs">
+      <data name="receivingClientVclokId" inType="win:GUID"/>
+      <data name="sendingClientVclokId" inType="win:GUID"/>
+      <data name="sendingClientVclokValue" inType="win:UInt32"/>
+     </template>
+     <template tid="tskEmojisEmojiFlyoutDismissArgs">
+      <data name="DismissalReason" inType="win:UInt32" map="PickerDismissalReasonWord3"/>
+     </template>
+     <template tid="tskFormsDocHasFormsFieldArgs">
+      <data name="fDocHasFormsField" inType="win:Boolean"/>
+     </template>
+     <template tid="tskInvalInvalDocArgs">
+      <data name="pdod" inType="win:Pointer"/>
+      <data name="dk" inType="win:UnicodeString"/>
+     </template>
+     <template tid="tskInvalInvalCpArgs">
+      <data name="pdod" inType="win:Pointer"/>
+      <data name="dk" inType="win:UnicodeString"/>
+      <data name="cpFirst" inType="win:Int32"/>
+      <data name="dcp" inType="win:Int32"/>
+      <data name="grfef_low" inType="win:UInt32"/>
+      <data name="grfef_high" inType="win:UInt32"/>
+      <data name="grfef2_low" inType="win:UInt32" map="Grfef2Low"/>
+      <data name="grfef2_high" inType="win:UInt32"/>
+     </template>
+     <template tid="tskInvalInvalRegionArgs">
+      <data name="drk" inType="win:UnicodeString"/>
+      <data name="BoundingBox" inType="win:UnicodeString"/>
+     </template>
+     <template tid="tskInvalInvalRegionVerboseArgs">
+      <data name="drk" inType="win:UnicodeString"/>
+      <data name="BoundingBox" inType="win:UnicodeString"/>
+      <data name="Rectangles" inType="win:UnicodeString"/>
+     </template>
+     <template tid="tskCoauthUndoCoauthUndoDeleteDomoRangeErrorArgs">
+      <data name="ETW_TrackbackTag" inType="win:UInt32"/>
+      <data name="IdomoMacUsk" inType="win:UInt32"/>
+      <data name="idomoUndoLim" inType="win:UInt32"/>
+      <data name="idomoRedoLim" inType="win:UInt32"/>
+      <data name="idomoFirst" inType="win:UInt32"/>
+      <data name="cdomo" inType="win:UInt32"/>
+      <data name="UADfci" inType="win:UInt32"/>
+     </template>
+     <template tid="tskFastCoauthFastCoauthChangeReceivedArgs">
+      <data name="xszText" inType="win:UnicodeString"/>
+     </template>
+     <template tid="tskFocusModeEntryPointArgs">
+      <data name="pdod" inType="win:Pointer"/>
+      <data name="EntryType" inType="win:UInt32"/>
+      <data name="ViewType" inType="win:UnicodeString"/>
+     </template>
+     <template tid="tskFocusModeExitPointArgs">
+      <data name="pdod" inType="win:Pointer"/>
+      <data name="ExitType" inType="win:UInt32"/>
+      <data name="BackgroundColor" inType="win:UInt32"/>
+      <data name="BackgroundType" inType="win:UInt32"/>
+     </template>
+     <template tid="tskAddinMonitorAddinMonitorNotifyUserResultArgs">
+      <data name="NotifyUserResult" inType="win:UInt32" map="AddinMonitorNotifyUserResult"/>
+     </template>
+     <template tid="tskAddinMonitorAddinMonitorShowNotificationResultArgs">
+      <data name="ShowNotificationResult" inType="win:UInt32"/>
+     </template>
+     <template tid="tskAddinMonitorAddinMonitorEnumRegArgs">
+      <data name="dwIndex" inType="win:UInt32"/>
+      <data name="name" inType="win:UnicodeString"/>
+      <data name="dwType" inType="win:UInt32"/>
+      <data name="cb" inType="win:UInt32"/>
+     </template>
+     <template tid="tskAddinMonitorAddinMonitorDeserializeCValueArgs">
+      <data name="dwCValue" inType="win:UInt32"/>
+     </template>
+     <template tid="tskAddinMonitorAddinMonitorDeserializeValueArgs">
+      <data name="dwValue" inType="win:UInt32"/>
+     </template>
+     <template tid="tskAddinMonitorAddinMonitorGateBizbarArgs">
+      <data name="GateValue" inType="win:Boolean"/>
+     </template>
+     <template tid="tskAddinMonitorAddinMonitorShouldNotifyArgs">
+      <data name="secBootLengthThreshold" inType="win:UInt32"/>
+      <data name="pctBootPercentageThreshold" inType="win:UInt32"/>
+      <data name="AddinScenario" inType="win:UInt32" map="AddinMonitorScenario"/>
+      <data name="time" inType="win:UInt32"/>
+     </template>
+     <template tid="tskAddinMonitorAddinMonitorDisplayBizbarArgs">
+      <data name="name" inType="win:UnicodeString"/>
+      <data name="fDisplay" inType="win:Boolean"/>
+     </template>
+     <template tid="tskAddinMonitorAddinMonitorSlowestArgs">
+      <data name="name" inType="win:UnicodeString"/>
+     </template>
+     <template tid="tskAddinMonitorAddinMonitorDialogOnEventArgs">
+      <data name="name" inType="win:UnicodeString"/>
+      <data name="SelectedAction" inType="win:UnicodeString"/>
+     </template>
+     <template tid="tskAddinMonitorAddinMonitorDwConnectArgs">
+      <data name="dwConnect" inType="win:UInt32"/>
+     </template>
+     <template tid="tskAddinMonitorAddinMonitorDwPolicyArgs">
+      <data name="dwPolicy" inType="win:UInt32"/>
+     </template>
+     <template tid="tskDragDropDragImageSizeArgs">
+      <data name="areaPoints" inType="win:Float"/>
+     </template>
+     <template tid="tskOleAutoActivationOleAutoActivatedOnOpenArgs">
+      <data name="pdod" inType="win:Pointer"/>
+      <data name="fRTF" inType="win:Boolean"/>
+      <data name="callType" inType="win:UInt32" map="OLECallType"/>
+     </template>
+     <template tid="tskEditAggregationFromSaveArgs">
+      <data name="changes" inType="win:UInt64"/>
+     </template>
+     <template tid="tskQMUnsafeOpSourceArgs">
+      <data name="mrtTag" inType="win:UInt32"/>
+      <data name="source" inType="win:UInt32"/>
+     </template>
+     <template tid="tskQMUnsafePropertyArgs">
+      <data name="property" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0472Args">
+      <data name="CountOfRecipients" inType="win:UInt64"/>
+      <data name="LinkPermissionType" inType="win:UInt32"/>
+      <data name="CountOfRecipientsOptimizedAway" inType="win:UInt64"/>
+     </template>
+     <template tid="tskPerformanceProfilerJsonArgs">
+      <data name="featureDwTag" inType="win:UInt32"/>
+      <data name="ProfilerModules" inType="win:UnicodeString"/>
+      <data name="ProfilerSamples" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0PCODEWARNINGpcodeWarningArgs">
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="InfoString" inType="win:UnicodeString"/>
+      <data name="ErrIdOptional" inType="win:Int32"/>
+      <data name="HROptional" inType="win:Int32"/>
+      <data name="InfoOptDeci" inType="win:UInt64"/>
+      <data name="InfoOptHex" inType="win:UInt64"/>
+      <data name="ETW_TrackbackTag" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0PCODEINFORMATIONALpcodeInformationalArgs">
+      <data name="InfoOptional1" inType="win:UInt64"/>
+      <data name="InfoOptional2" inType="win:UInt64"/>
+      <data name="InfoOptional3" inType="win:UInt64"/>
+      <data name="InfoOptional4" inType="win:UInt64"/>
+      <data name="ETW_TrackbackTag" inType="win:UInt32"/>
+     </template>
+     <template tid="tskVclokVclokOnUploadCompleteArgs_V1">
+      <data name="savingClientVclokId" inType="win:GUID"/>
+      <data name="savingClientVclokValueMin" inType="win:UInt32"/>
+      <data name="savingClientVclokValueMax" inType="win:UInt32"/>
+      <data name="uploadDuration" inType="win:UInt64"/>
+      <data name="editToUploadTimeMicroseconds" inType="win:UInt64"/>
+      <data name="rtcBrkEditToUploadTimeMicroseconds" inType="win:UInt64"/>
+      <data name="saveToUploadInitTimeMicroseconds" inType="win:UInt64"/>
+     </template>
+     <template tid="tskInvalTrashWwdPagesArgs_V1">
+      <data name="pwwd" inType="win:Pointer"/>
+      <data name="pdod" inType="win:Pointer"/>
+      <data name="dk" inType="win:UnicodeString"/>
+      <data name="cpFirst" inType="win:Int32"/>
+      <data name="cpLim" inType="win:Int32"/>
+      <data name="grftr" inType="win:UInt32"/>
+     </template>
+     <template tid="tskInvalInvalCpDispArgs_V1">
+      <data name="pwwd" inType="win:Pointer"/>
+      <data name="pdod" inType="win:Pointer"/>
+      <data name="dk" inType="win:UnicodeString"/>
+      <data name="cpFirst" inType="win:Int32"/>
+      <data name="dcp" inType="win:Int32"/>
+      <data name="fNoLayoutChange" inType="win:Boolean"/>
+      <data name="fSelectionChange" inType="win:Boolean"/>
+      <data name="fUpdateArtvNVersion" inType="win:Boolean"/>
+      <data name="fDirtyMtxi" inType="win:Boolean"/>
+      <data name="grfef_low" inType="win:UInt32"/>
+      <data name="grfef_high" inType="win:UInt32"/>
+     </template>
+     <template tid="tskCoauthUndoCoauthUndoAttemptUndoWithConflictArgs_V1">
+      <data name="ReasonforConflict" inType="win:UInt32" map="UndoConflictReason"/>
+      <data name="fciUser" inType="win:UInt32"/>
+      <data name="fciCoauth" inType="win:UInt32"/>
+      <data name="UserCAtype" inType="win:UInt32"/>
+      <data name="camoUsercp" inType="win:UInt32"/>
+      <data name="camoUserdcpOld" inType="win:UInt32"/>
+      <data name="camoUserdcpNew" inType="win:UInt32"/>
+      <data name="camoCoauthcp" inType="win:UInt32"/>
+      <data name="camoCoauthdcpOld" inType="win:UInt32"/>
+      <data name="camoCoauthdcpNew" inType="win:UInt32"/>
+      <data name="fUndo" inType="win:Boolean"/>
+      <data name="fRepeat" inType="win:Boolean"/>
+     </template>
+     <template tid="tskInvalUpdateInvalidWwdArgs_V1">
+      <data name="pwwd" inType="win:Pointer"/>
+      <data name="fPrivateInvalRgn" inType="win:Boolean"/>
+      <data name="SumofPixelCountforRects" inType="win:UInt32"/>
+      <data name="BoundingBoxPixelCount" inType="win:UInt32"/>
+      <data name="Rectangles" inType="win:UnicodeString"/>
+      <data name="BoundingBox" inType="win:UnicodeString"/>
+     </template>
+     <template tid="tskInvalRequestPprUpdateArgs_V1">
+      <data name="pwwd" inType="win:Pointer"/>
+      <data name="ppr" inType="win:Pointer"/>
+      <data name="grfrpu" inType="win:UInt32" map="Grfrpu"/>
+     </template>
+     <template tid="tskAddinMonitorAddinMonitorDialogAddPadiiArgs_V1">
+      <data name="name" inType="win:UnicodeString"/>
+      <data name="FIsCOMAddin" inType="win:Boolean"/>
+      <data name="FIsGroupPolicyDisabled" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0PCODEERRORpcodeErrorArgs_V1">
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="InfoString" inType="win:UnicodeString"/>
+      <data name="ErrIdOptional" inType="win:Int32"/>
+      <data name="HROptional" inType="win:Int32"/>
+      <data name="InfoOptDeci" inType="win:UInt64"/>
+      <data name="InfoOptHex" inType="win:UInt64"/>
+      <data name="Pdod" inType="win:Pointer"/>
+      <data name="VoidPtr" inType="win:Pointer"/>
+      <data name="ETW_TrackbackTag" inType="win:UInt32"/>
+     </template>
+     <template tid="tskOCSBArgs_V1">
+      <data name="tag" inType="win:UnicodeString"/>
+      <data name="xsz" inType="win:UnicodeString"/>
+     </template>
+     <template tid="tskFileNewAutoCreateEventHandlerStartArgs_V2">
+      <data name="Tag" inType="win:UInt32"/>
+      <data name="pdod" inType="win:Pointer"/>
+      <data name="AutoCreateEventHandler" inType="win:UInt32"/>
+      <data name="tSucceeded" inType="win:Int32"/>
+      <data name="fDocRenamed" inType="win:Boolean"/>
+     </template>
+     <template tid="tskVclokVclokOnSaveCompleteArgs_V5">
+      <data name="savingClientVclokId" inType="win:GUID"/>
+      <data name="savingClientVclokValue" inType="win:UInt32"/>
+      <data name="saveTimeMicroseconds" inType="win:UInt64"/>
+      <data name="rtcBrkEditToSaveTimeMicroseconds" inType="win:UInt64"/>
+      <data name="editToSaveTimeMicroseconds" inType="win:UInt64"/>
+      <data name="firstRtcBrkEditId" inType="win:GUID"/>
+      <data name="firstEditId" inType="win:GUID"/>
+      <data name="minOcsAutoSaveIntervalMicroseconds" inType="win:UInt64"/>
+      <data name="idleAutoSaveDelayTimeMicroseconds" inType="win:UInt64"/>
+      <data name="autoSaveIdleToSaveTimeMicroseconds" inType="win:UInt64"/>
+      <data name="deepSleepDurationMicroseconds" inType="win:UInt64"/>
+      <data name="saveActionGuid" inType="win:GUID"/>
+     </template>
+     <template tid="tskVclokVclokOnDocDisplayArgs_V8">
+      <data name="receivingClientVclokId" inType="win:GUID"/>
+      <data name="sendingClientVclokId" inType="win:GUID"/>
+      <data name="senderSaveActionGuid" inType="win:GUID"/>
+      <data name="sendingClientVclokValueMin" inType="win:UInt32"/>
+      <data name="sendingClientVclokValueMax" inType="win:UInt32"/>
+      <data name="uploadDuration" inType="win:UInt64"/>
+      <data name="rtcPacketArrivalToMergeDuration" inType="win:UInt64"/>
+      <data name="rtcPacketArrivalToDownloadStartDuration" inType="win:UInt64"/>
+      <data name="downloadStartToEndDuration" inType="win:UInt64"/>
+      <data name="downloadEndToMergeDuration" inType="win:UInt64"/>
+      <data name="mergeToDisplayDuration" inType="win:UInt64"/>
+      <data name="e2eDuration" inType="win:UInt64"/>
+      <data name="deepSleepDuration" inType="win:UInt64"/>
+      <data name="mergeStartToEndDuration" inType="win:UInt64"/>
+      <data name="downloadBranchNotificationDuration" inType="win:UInt64"/>
+      <data name="idleDuration" inType="win:UInt64"/>
+      <data name="loadDuration" inType="win:UInt64"/>
+      <data name="fMergedContent" inType="win:Boolean"/>
+      <data name="rtcBrkSenderDuration" inType="win:UInt64"/>
+      <data name="rtcBrkE2EDuration" inType="win:UInt64"/>
+      <data name="idleDocLoadEndToMergeStartDuration" inType="win:UInt64"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_OCSB" value="OCSB"/>
+    <string id="keyword_CoauthUndo" value="CoauthUndo"/>
+    <string id="keyword_Hashtags" value="Hashtags"/>
+    <string id="keyword_Emojis" value="Emojis"/>
+    <string id="keyword_AsyncEdit" value="AsyncEdit"/>
+    <string id="keyword_Forms" value="Forms"/>
+    <string id="keyword_FileNew" value="FileNew"/>
+    <string id="keyword_Inval" value="Inval"/>
+    <string id="keyword_SuggestionService" value="SuggestionService"/>
+    <string id="keyword_DocTiling" value="DocTiling"/>
+    <string id="keyword_OLE" value="OLE"/>
+    <string id="keyword_MailMerge" value="MailMerge"/>
+    <string id="keyword_Language" value="Language"/>
+    <string id="keyword_FlashEdits" value="FlashEdits"/>
+    <string id="keyword_EasyBib" value="EasyBib"/>
+    <string id="keyword_FastCoauth" value="FastCoauth"/>
+    <string id="keyword_DigitalPrint" value="DigitalPrint"/>
+    <string id="keyword_FocusMode" value="FocusMode"/>
+    <string id="keyword_AsyncCoAuthoring" value="AsyncCoAuthoring"/>
+    <string id="keyword_AddinMonitor" value="AddinMonitor"/>
+    <string id="keyword_Acronyms" value="Acronyms"/>
+    <string id="keyword_Rewrite" value="Rewrite"/>
+    <string id="keyword_SmartLinks" value="SmartLinks"/>
+    <string id="keyword_DocumentTasks" value="DocumentTasks"/>
+    <string id="keyword_Shutdown" value="Shutdown"/>
+    <string id="keyword_Sidetrack" value="Sidetrack"/>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="keyword_InfoProtection" value="InfoProtection"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="opcode_task_0opcodeError" value="opcodeError"/>
+    <string id="opcode_task_0opcodeWarning" value="opcodeWarning"/>
+    <string id="opcode_task_0opcodeInformational" value="opcodeInformational"/>
+    <string id="task_tskVclok" value="tskVclok"/>
+    <string id="opcode_tskVclokVclokOnDocDisplay" value="VclokOnDocDisplay"/>
+    <string id="opcode_tskVclokVclokEntryPacketDelayed" value="VclokEntryPacketDelayed"/>
+    <string id="opcode_tskVclokVclokOnUploadComplete" value="VclokOnUploadComplete"/>
+    <string id="opcode_tskVclokVclokOnSaveComplete" value="VclokOnSaveComplete"/>
+    <string id="task_tskHashtags" value="tskHashtags"/>
+    <string id="opcode_tskHashtagsHashtagAdded" value="HashtagAdded"/>
+    <string id="opcode_tskHashtagsHashtagRemoved" value="HashtagRemoved"/>
+    <string id="opcode_tskHashtagsHashtagError" value="HashtagError"/>
+    <string id="opcode_tskHashtagsHashtagFlyoutInvoke" value="HashtagFlyoutInvoke"/>
+    <string id="opcode_tskHashtagsHashtagFlyoutDismiss" value="HashtagFlyoutDismiss"/>
+    <string id="opcode_tskHashtagsHashtagDocOpen" value="HashtagDocOpen"/>
+    <string id="opcode_tskHashtagsHashtagNotificationCollectorProcessList" value="HashtagNotificationCollectorProcessList"/>
+    <string id="opcode_tskHashtagsHashtagNotificationCollectorResetList" value="HashtagNotificationCollectorResetList"/>
+    <string id="task_tskEmojis" value="tskEmojis"/>
+    <string id="opcode_tskEmojisEmojiFlyoutInvoke" value="EmojiFlyoutInvoke"/>
+    <string id="opcode_tskEmojisEmojiFlyoutDismiss" value="EmojiFlyoutDismiss"/>
+    <string id="task_tskCoauthUndo" value="tskCoauthUndo"/>
+    <string id="opcode_tskCoauthUndoCoauthUndoAttemptUndoWithConflict" value="CoauthUndoAttemptUndoWithConflict"/>
+    <string id="opcode_tskCoauthUndoCoauthUndoDeleteDomoRangeError" value="CoauthUndoDeleteDomoRangeError"/>
+    <string id="task_tskFileNew" value="tskFileNew"/>
+    <string id="opcode_tskFileNewAutoCreateEventHandlerStart" value="AutoCreateEventHandlerStart"/>
+    <string id="opcode_tskFileNewAutoCreateEventHandlerUpdate" value="AutoCreateEventHandlerUpdate"/>
+    <string id="opcode_tskFileNewAutoCreateEventHandlerEnd" value="AutoCreateEventHandlerEnd"/>
+    <string id="task_tskInval" value="tskInval"/>
+    <string id="opcode_tskInvalTrashWwdPages" value="TrashWwdPages"/>
+    <string id="opcode_tskInvalInvalDoc" value="InvalDoc"/>
+    <string id="opcode_tskInvalInvalCp" value="InvalCp"/>
+    <string id="opcode_tskInvalInvalRegion" value="InvalRegion"/>
+    <string id="opcode_tskInvalInvalRegionVerbose" value="InvalRegionVerbose"/>
+    <string id="opcode_tskInvalInvalCpDisp" value="InvalCpDisp"/>
+    <string id="opcode_tskInvalUpdateInvalidWwd" value="UpdateInvalidWwd"/>
+    <string id="opcode_tskInvalRequestPprUpdate" value="RequestPprUpdate"/>
+    <string id="task_tskMailMerge" value="tskMailMerge"/>
+    <string id="opcode_tskMailMergeMailMergeStarted" value="MailMergeStarted"/>
+    <string id="opcode_tskMailMergeMailMergeFinished" value="MailMergeFinished"/>
+    <string id="task_tskPerformance" value="tskPerformance"/>
+    <string id="opcode_tskPerformanceProfilerJson" value="ProfilerJson"/>
+    <string id="task_tskForms" value="tskForms"/>
+    <string id="opcode_tskFormsDocHasFormsField" value="DocHasFormsField"/>
+    <string id="task_tskFastCoauth" value="tskFastCoauth"/>
+    <string id="opcode_tskFastCoauthFastCoauthChangeReceived" value="FastCoauthChangeReceived"/>
+    <string id="opcode_tskFastCoauthFastCoauthDocumentReplicated" value="FastCoauthDocumentReplicated"/>
+    <string id="task_tskEasyBibCallout" value="tskEasyBibCallout"/>
+    <string id="opcode_tskEasyBibCalloutEasyBibPastedFrom" value="EasyBibPastedFrom"/>
+    <string id="opcode_tskEasyBibCalloutEasyBibRibbonOrChunkHidden" value="EasyBibRibbonOrChunkHidden"/>
+    <string id="opcode_tskEasyBibCalloutEasyBibAddinBlocked" value="EasyBibAddinBlocked"/>
+    <string id="opcode_tskEasyBibCalloutEasyBibCalloutDisplayed" value="EasyBibCalloutDisplayed"/>
+    <string id="opcode_tskEasyBibCalloutEasyBibCalloutDismissClicked" value="EasyBibCalloutDismissClicked"/>
+    <string id="opcode_tskEasyBibCalloutEasyBibCalloutLaunchClicked" value="EasyBibCalloutLaunchClicked"/>
+    <string id="opcode_tskEasyBibCalloutEasyBibCalloutOutsideClicked" value="EasyBibCalloutOutsideClicked"/>
+    <string id="opcode_tskEasyBibCalloutEasyBibStoreClicked" value="EasyBibStoreClicked"/>
+    <string id="opcode_tskEasyBibCalloutEasyBibAddinInsertedFromCallout" value="EasyBibAddinInsertedFromCallout"/>
+    <string id="opcode_tskEasyBibCalloutEasyBibAddinLoadedBefore" value="EasyBibAddinLoadedBefore"/>
+    <string id="opcode_tskEasyBibCalloutEasyBibFeatureOff" value="EasyBibFeatureOff"/>
+    <string id="opcode_tskEasyBibCalloutEasyBibNotEnglish" value="EasyBibNotEnglish"/>
+    <string id="opcode_tskEasyBibCalloutEasyBibDisplayedManyTimes" value="EasyBibDisplayedManyTimes"/>
+    <string id="opcode_tskEasyBibCalloutEasyBibSendStatusEvent" value="EasyBibSendStatusEvent"/>
+    <string id="task_tskFocusModeEntryPoint" value="tskFocusModeEntryPoint"/>
+    <string id="opcode_tskFocusModeEntryPointFocusModeEntryPoint" value="FocusModeEntryPoint"/>
+    <string id="task_tskFocusModeExitPoint" value="tskFocusModeExitPoint"/>
+    <string id="opcode_tskFocusModeExitPointFocusModeExitPoint" value="FocusModeExitPoint"/>
+    <string id="task_tskAddinMonitor" value="tskAddinMonitor"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorIdleStart" value="AddinMonitorIdleStart"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorIdleStop" value="AddinMonitorIdleStop"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorNotifyUserResult" value="AddinMonitorNotifyUserResult"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorShowNotificationResult" value="AddinMonitorShowNotificationResult"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorInit" value="AddinMonitorInit"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorInitLoadBoot" value="AddinMonitorInitLoadBoot"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorInitLoadConnect" value="AddinMonitorInitLoadConnect"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorEnumReg" value="AddinMonitorEnumReg"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorDeserializeCValue" value="AddinMonitorDeserializeCValue"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorDeserializeValue" value="AddinMonitorDeserializeValue"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorGateBizbar" value="AddinMonitorGateBizbar"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorGateOM" value="AddinMonitorGateOM"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorShouldNotify" value="AddinMonitorShouldNotify"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorDisplayBizbar" value="AddinMonitorDisplayBizbar"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorSlowest" value="AddinMonitorSlowest"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorDialogShow" value="AddinMonitorDialogShow"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorDialogAddPadii" value="AddinMonitorDialogAddPadii"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorDialogOnEvent" value="AddinMonitorDialogOnEvent"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorDwConnect" value="AddinMonitorDwConnect"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorDwPolicy" value="AddinMonitorDwPolicy"/>
+    <string id="opcode_tskAddinMonitorAddinMonitorGateVBA" value="AddinMonitorGateVBA"/>
+    <string id="task_tskDragDrop" value="tskDragDrop"/>
+    <string id="opcode_tskDragDropDragImageSize" value="DragImageSize"/>
+    <string id="task_tskOleAutoActivation" value="tskOleAutoActivation"/>
+    <string id="opcode_tskOleAutoActivationOleAutoActivatedOnOpen" value="OleAutoActivatedOnOpen"/>
+    <string id="task_tskEditAggregationFromSave" value="tskEditAggregationFromSave"/>
+    <string id="opcode_tskEditAggregationFromSaveEditAggregationFromSave" value="EditAggregationFromSave"/>
+    <string id="task_tskEditAggregationFromMerge" value="tskEditAggregationFromMerge"/>
+    <string id="opcode_tskEditAggregationFromMergeEditAggregationFromMerge" value="EditAggregationFromMerge"/>
+    <string id="task_tskQMUnsafeOpSource" value="tskQMUnsafeOpSource"/>
+    <string id="opcode_tskQMUnsafeOpSourceQMUnsafeOpSource" value="QMUnsafeOpSource"/>
+    <string id="task_tskQMUnsafeProperty" value="tskQMUnsafeProperty"/>
+    <string id="opcode_tskQMUnsafePropertyQMUnsafeProperty" value="QMUnsafeProperty"/>
+    <string id="task_tskOCSB" value="tskOCSB"/>
+    <string id="task_tskAsyncEdit" value="tskAsyncEdit"/>
+    <string id="task_tskSuggestionService" value="tskSuggestionService"/>
+    <string id="task_tskDocTiling" value="tskDocTiling"/>
+    <string id="task_tskOLE" value="tskOLE"/>
+    <string id="task_tskLanguage" value="tskLanguage"/>
+    <string id="task_tskFlashEdits" value="tskFlashEdits"/>
+    <string id="task_tskEasyBib" value="tskEasyBib"/>
+    <string id="task_tskDigitalPrint" value="tskDigitalPrint"/>
+    <string id="task_tskFocusMode" value="tskFocusMode"/>
+    <string id="task_tskAsyncCoAuthoring" value="tskAsyncCoAuthoring"/>
+    <string id="task_tskAcronyms" value="tskAcronyms"/>
+    <string id="task_tskRewrite" value="tskRewrite"/>
+    <string id="task_tskSmartLinks" value="tskSmartLinks"/>
+    <string id="task_tskDocumentTasks" value="tskDocumentTasks"/>
+    <string id="task_tskShutdown" value="tskShutdown"/>
+    <string id="task_tskSidetrack" value="tskSidetrack"/>
+    <string id="task_tskInfoProtection" value="tskInfoProtection"/>
+    <string id="map_PickerDismissalReasonWord3No Results" value="No Results"/>
+    <string id="map_PickerDismissalReasonWord3Breaking Char Entered" value="Breaking Char Entered"/>
+    <string id="map_PickerDismissalReasonWord3Escape Key Pressed" value="Escape Key Pressed"/>
+    <string id="map_PickerDismissalReasonWord3IME Invoked" value="IME Invoked"/>
+    <string id="map_PickerDismissalReasonWord3Gesture Inserted" value="Gesture Inserted"/>
+    <string id="map_PickerDismissalReasonWord3Soft Dismiss or Other" value="Soft Dismiss or Other"/>
+    <string id="map_PickerDismissalReasonWord3Paste" value="Paste"/>
+    <string id="map_PickerDismissalReasonWord3Insert failure required explicit dismissal" value="Insert failure required explicit dismissal"/>
+    <string id="map_Grfef2LowCopyCasaBmks" value="CopyCasaBmks"/>
+    <string id="map_Grfef2LowNoDocTabberInval" value="NoDocTabberInval"/>
+    <string id="map_Grfef2LowAllowShapesInMath" value="AllowShapesInMath"/>
+    <string id="map_Grfef2LowCopyAtnCasaBmks" value="CopyAtnCasaBmks"/>
+    <string id="map_Grfef2LowNoE2oTxbxsMark" value="NoE2oTxbxsMark"/>
+    <string id="map_Grfef2LowPreserveShapeId" value="PreserveShapeId"/>
+    <string id="map_Grfef2LowDontCopyTxbxs" value="DontCopyTxbxs"/>
+    <string id="map_Grfef2LowDontDeleteTxbxs" value="DontDeleteTxbxs"/>
+    <string id="map_Grfef2LowInsertCustomXmlTag" value="InsertCustomXmlTag"/>
+    <string id="map_Grfef2LowCopyObjectIds" value="CopyObjectIds"/>
+    <string id="map_Grfef2LowDontAdjustE2oSels" value="DontAdjustE2oSels"/>
+    <string id="map_Grfef2LowNoStoreDeleteOnBkmkDelete" value="NoStoreDeleteOnBkmkDelete"/>
+    <string id="map_Grfef2LowDontCloneArtos" value="DontCloneArtos"/>
+    <string id="map_Grfef2LowDontFireUiaTextChanged" value="DontFireUiaTextChanged"/>
+    <string id="map_Grfef2LowNoEcmanInval" value="NoEcmanInval"/>
+    <string id="map_Grfef2LowNoMntrInval" value="NoMntrInval"/>
+    <string id="map_Grfef2LowNoPdodHspClone" value="NoPdodHspClone"/>
+    <string id="map_Grfef2LowInsertBufferShift" value="InsertBufferShift"/>
+    <string id="map_Grfef2LowUimInsert" value="UimInsert"/>
+    <string id="map_Grfef2LowPreserveFXB" value="PreserveFXB"/>
+    <string id="map_AddinMonitorNotifyUserResultNone" value="None"/>
+    <string id="map_AddinMonitorNotifyUserResultCantNotify" value="CantNotify"/>
+    <string id="map_AddinMonitorNotifyUserResultNotified" value="Notified"/>
+    <string id="map_AddinMonitorScenarioBoot" value="Boot"/>
+    <string id="map_AddinMonitorScenarioOM" value="OM"/>
+    <string id="map_AddinMonitorScenarioConnect" value="Connect"/>
+    <string id="map_AddinMonitorScenarioShutdown" value="Shutdown"/>
+    <string id="map_OLECallTypeOleRun" value="OleRun"/>
+    <string id="map_OLECallTypeLinkBindToSource" value="LinkBindToSource"/>
+    <string id="map_OLECallTypeCreateLink" value="CreateLink"/>
+    <string id="map_UndoConflictReasonNone" value="None"/>
+    <string id="map_UndoConflictReasonOut of memory" value="Out of memory"/>
+    <string id="map_UndoConflictReasonIuad invalid" value="Iuad invalid"/>
+    <string id="map_UndoConflictReasonBad CA" value="Bad CA"/>
+    <string id="map_UndoConflictReasonfciUser unsupported" value="fciUser unsupported"/>
+    <string id="map_UndoConflictReasonfciCoauth unsupported" value="fciCoauth unsupported"/>
+    <string id="map_UndoConflictReasonCA in header doc" value="CA in header doc"/>
+    <string id="map_UndoConflictReasonfSaveAll" value="fSaveAll"/>
+    <string id="map_UndoConflictReasonUad and domo conflict" value="Uad and domo conflict"/>
+    <string id="map_UndoConflictReasonDomo overlap" value="Domo overlap"/>
+    <string id="map_UndoConflictReasonDomo list broken" value="Domo list broken"/>
+    <string id="map_GrfrpuRebuild" value="Rebuild"/>
+    <string id="map_GrfrpuFull" value="Full"/>
+    <string id="map_GrfrpuDmInvalid" value="DmInvalid"/>
+    <string id="map_GrfrpuDmValid" value="DmValid"/>
+    <string id="map_GrfrpuDgvInvalid" value="DgvInvalid"/>
+    <string id="map_GrfrpuDgvValid" value="DgvValid"/>
+    <string id="map_GrfrpuDirty" value="Dirty"/>
+    <string id="map_GrfrpuCheck" value="Check"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

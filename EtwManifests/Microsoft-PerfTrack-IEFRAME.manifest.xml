@@ -1,0 +1,434 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-PerfTrack-IEFRAME" guid="{b2a40f1f-a05a-4dfd-886a-4c4f18c4334c}" resourceFileName="Microsoft-PerfTrack-IEFRAME" messageFileName="Microsoft-PerfTrack-IEFRAME" symbol="MicrosoftPerfTrackIEFRAME" source="Xml" >
+    <keywords>
+     <keyword name="defunct" message="$(string.keyword_defunct)" mask="0x1"/>
+     <keyword name="nonPerfTrack" message="$(string.keyword_nonPerfTrack)" mask="0x2"/>
+    </keywords>
+    <tasks>
+     <task name="TabSwitch_NotAccountingForInputDelay" message="$(string.task_TabSwitch_NotAccountingForInputDelay)" value="101"/>
+     <task name="TabSwitch" message="$(string.task_TabSwitch)" value="102"/>
+     <task name="TabCreate" message="$(string.task_TabCreate)" value="103"/>
+     <task name="FavoritesSwitchView" message="$(string.task_FavoritesSwitchView)" value="105"/>
+     <task name="FeedsSwitchView" message="$(string.task_FeedsSwitchView)" value="107"/>
+     <task name="CreateAndSelectTab" message="$(string.task_CreateAndSelectTab)" value="108"/>
+     <task name="HistorySwitchView" message="$(string.task_HistorySwitchView)" value="109"/>
+     <task name="LaunchFrame" message="$(string.task_LaunchFrame)" value="110"/>
+     <task name="CloseFrame" message="$(string.task_CloseFrame)" value="111"/>
+     <task name="CloseTab" message="$(string.task_CloseTab)" value="112"/>
+     <task name="HistoryByDateSwitchView" message="$(string.task_HistoryByDateSwitchView)" value="201"/>
+     <task name="HistoryBySiteSwitchView" message="$(string.task_HistoryBySiteSwitchView)" value="203"/>
+     <task name="HistoryByMostVisSwitchView" message="$(string.task_HistoryByMostVisSwitchView)" value="205"/>
+     <task name="HistoryByOrderSwitchView" message="$(string.task_HistoryByOrderSwitchView)" value="207"/>
+     <task name="HistorySearchSwitchView" message="$(string.task_HistorySearchSwitchView)" value="209"/>
+     <task name="FavCenterOpen" message="$(string.task_FavCenterOpen)" value="211"/>
+     <task name="FavCenterClose" message="$(string.task_FavCenterClose)" value="213"/>
+     <task name="MenuExpand" message="$(string.task_MenuExpand)" value="301"/>
+     <task name="MenuShrink" message="$(string.task_MenuShrink)" value="303"/>
+     <task name="MenuItemPop" message="$(string.task_MenuItemPop)" value="305"/>
+     <task name="Browseui_Tabs_CloseTab_Perftrack" message="$(string.task_Browseui_Tabs_CloseTab_Perftrack)" value="601"/>
+     <task name="Browseui_CBrowserFrame_CreateInstance_Perftrack" message="$(string.task_Browseui_CBrowserFrame_CreateInstance_Perftrack)" value="603"/>
+     <task name="CreateHTMLPreview_Perftrack" message="$(string.task_CreateHTMLPreview_Perftrack)" value="607"/>
+     <task name="FavoritesBar_PopulateFeedsMenu_Perftrack" message="$(string.task_FavoritesBar_PopulateFeedsMenu_Perftrack)" value="609"/>
+     <task name="CreateThumbnail_Perftrack" message="$(string.task_CreateThumbnail_Perftrack)" value="611"/>
+     <task name="Imaging_CreateWebPagePreview_Perftrack" message="$(string.task_Imaging_CreateWebPagePreview_Perftrack)" value="613"/>
+     <task name="Find_FindHits_Perftrack" message="$(string.task_Find_FindHits_Perftrack)" value="615"/>
+     <task name="Find_HighlightHits_Perftrack" message="$(string.task_Find_HighlightHits_Perftrack)" value="617"/>
+     <task name="Search_SuggestionsProcessing_Perftrack" message="$(string.task_Search_SuggestionsProcessing_Perftrack)" value="619"/>
+     <task name="Search_ImageProcessing_Perftrack" message="$(string.task_Search_ImageProcessing_Perftrack)" value="621"/>
+     <task name="UnifiedListView_Typed_Perftrack" message="$(string.task_UnifiedListView_Typed_Perftrack)" value="623"/>
+     <task name="UnifiedListView_Dropdown_Perftrack" message="$(string.task_UnifiedListView_Dropdown_Perftrack)" value="625"/>
+     <task name="UnifiedListView_Displayed_Perftrack" message="$(string.task_UnifiedListView_Displayed_Perftrack)" value="627"/>
+     <task name="UnifiedListView_Cancelled_Perftrack" message="$(string.task_UnifiedListView_Cancelled_Perftrack)" value="629"/>
+     <task name="UnifiedListView_Displayed_Complete_Perftrack" message="$(string.task_UnifiedListView_Displayed_Complete_Perftrack)" value="631"/>
+     <task name="UnifiedListView_Query_History_Perftrack" message="$(string.task_UnifiedListView_Query_History_Perftrack)" value="633"/>
+     <task name="UnifiedListView_Query_Favorites_Perftrack" message="$(string.task_UnifiedListView_Query_Favorites_Perftrack)" value="635"/>
+     <task name="UnifiedListView_Query_Feeds_Perftrack" message="$(string.task_UnifiedListView_Query_Feeds_Perftrack)" value="637"/>
+     <task name="Print_Dialog_Perftrack" message="$(string.task_Print_Dialog_Perftrack)" value="639"/>
+     <task name="Tab_Fast_Shutdown_Perftrack" message="$(string.task_Tab_Fast_Shutdown_Perftrack)" value="641"/>
+     <task name="Frame_Fast_Shutdown_Perftrack" message="$(string.task_Frame_Fast_Shutdown_Perftrack)" value="644"/>
+     <task name="CreateThumbnail_Immersive_Perftrack" message="$(string.task_CreateThumbnail_Immersive_Perftrack)" value="650"/>
+     <task name="CreateThumbnail_Superbar_Perftrack" message="$(string.task_CreateThumbnail_Superbar_Perftrack)" value="652"/>
+     <task name="Browseui_Tabs_Tearoff_ShowVisual" message="$(string.task_Browseui_Tabs_Tearoff_ShowVisual)" value="700"/>
+     <task name="Browseui_Tabs_Tearoff_NewWindow" message="$(string.task_Browseui_Tabs_Tearoff_NewWindow)" value="702"/>
+     <task name="Browseui_Tabs_Tearoff_BetweenWindows" message="$(string.task_Browseui_Tabs_Tearoff_BetweenWindows)" value="704"/>
+     <task name="Browseui_Tabs_NavToDroppedLink" message="$(string.task_Browseui_Tabs_NavToDroppedLink)" value="706"/>
+     <task name="Browseui_Tabs_Move" message="$(string.task_Browseui_Tabs_Move)" value="708"/>
+     <task name="Browseui_Tabs_Tearoff_Complete_TabProc" message="$(string.task_Browseui_Tabs_Tearoff_Complete_TabProc)" value="710"/>
+     <task name="Browseui_Tabs_Tearoff_NewWindow_TabProc" message="$(string.task_Browseui_Tabs_Tearoff_NewWindow_TabProc)" value="711"/>
+     <task name="Find_FindFirstHit_Perftrack" message="$(string.task_Find_FindFirstHit_Perftrack)" value="712"/>
+     <task name="Find_MatchAndHighlightHits_Perftrack" message="$(string.task_Find_MatchAndHighlightHits_Perftrack)" value="714"/>
+     <task name="Browseui_Tabs_Tearoff_BetweenWindows_TabProc" message="$(string.task_Browseui_Tabs_Tearoff_BetweenWindows_TabProc)" value="717"/>
+     <task name="Browseui_CIMBrowserFrame_CreateInstance_Perftrack" message="$(string.task_Browseui_CIMBrowserFrame_CreateInstance_Perftrack)" value="800"/>
+     <task name="Browseui_CIMTabView_CloseTab_Perftrack" message="$(string.task_Browseui_CIMTabView_CloseTab_Perftrack)" value="806"/>
+     <task name="CIMNavBar_Show_Perftrack" message="$(string.task_CIMNavBar_Show_Perftrack)" value="808"/>
+     <task name="CIMNavBar_Hide_Perftrack" message="$(string.task_CIMNavBar_Hide_Perftrack)" value="810"/>
+     <task name="QSA_PopulateTile_Perftrack" message="$(string.task_QSA_PopulateTile_Perftrack)" value="812"/>
+     <task name="Thumbnail_RemoveGutters" message="$(string.task_Thumbnail_RemoveGutters)" value="814"/>
+     <task name="Immersive_Travellog_Perftrack" message="$(string.task_Immersive_Travellog_Perftrack)" value="815"/>
+     <task name="QSA_CalculateTilesInView_Perftrack" message="$(string.task_QSA_CalculateTilesInView_Perftrack)" value="816"/>
+     <task name="QSA_PopulateTiles_Perftrack" message="$(string.task_QSA_PopulateTiles_Perftrack)" value="818"/>
+     <task name="TabWindowManager_DehydrateTabsOnSuspend_Perftrack" message="$(string.task_TabWindowManager_DehydrateTabsOnSuspend_Perftrack)" value="828"/>
+     <task name="TabWindowManager_UnDehydrateTabsOnResume_Perftrack" message="$(string.task_TabWindowManager_UnDehydrateTabsOnResume_Perftrack)" value="830"/>
+     <task name="ULV_AggregateItems_Perftrack" message="$(string.task_ULV_AggregateItems_Perftrack)" value="832"/>
+     <task name="QSA_UpdateGroup_Perftrack" message="$(string.task_QSA_UpdateGroup_Perftrack)" value="836"/>
+     <task name="Snippet_Aggregate_Perftrack" message="$(string.task_Snippet_Aggregate_Perftrack)" value="838"/>
+     <task name="Snippet_MetaExtraction_Perftrack" message="$(string.task_Snippet_MetaExtraction_Perftrack)" value="840"/>
+     <task name="Snippet_UserSelExtraction_Perftrack" message="$(string.task_Snippet_UserSelExtraction_Perftrack)" value="842"/>
+     <task name="Snippet_BOLLExtraction_Perftrack" message="$(string.task_Snippet_BOLLExtraction_Perftrack)" value="844"/>
+     <task name="DLVA_Animation_Perftrack" message="$(string.task_DLVA_Animation_Perftrack)" value="846"/>
+     <task name="CIMFindBar_Show_Perftrack" message="$(string.task_CIMFindBar_Show_Perftrack)" value="900"/>
+     <task name="CIMFindBar_Hide_Perftrack" message="$(string.task_CIMFindBar_Hide_Perftrack)" value="902"/>
+     <task name="QSA_OpenUnfilteredView_Perftrack" message="$(string.task_QSA_OpenUnfilteredView_Perftrack)" value="908"/>
+     <task name="UnifiedListView_Query_DomainSuggestion_Perftrack" message="$(string.task_UnifiedListView_Query_DomainSuggestion_Perftrack)" value="911"/>
+     <task name="FlipAhead_RulesFileUpdate" message="$(string.task_FlipAhead_RulesFileUpdate)" value="913"/>
+     <task name="IMDownloadWindow_Show_Perftrack" message="$(string.task_IMDownloadWindow_Show_Perftrack)" value="915"/>
+     <task name="IMDownloadWindow_Hide_Perftrack" message="$(string.task_IMDownloadWindow_Hide_Perftrack)" value="917"/>
+     <task name="CIMContextMenuBar_Show_Perftrack" message="$(string.task_CIMContextMenuBar_Show_Perftrack)" value="919"/>
+     <task name="CIMContextMenuBar_Hide_Perftrack" message="$(string.task_CIMContextMenuBar_Hide_Perftrack)" value="921"/>
+     <task name="DownloadWindow_HistoryQuery_Perftrack" message="$(string.task_DownloadWindow_HistoryQuery_Perftrack)" value="923"/>
+     <task name="DownloadWindow_HistoryPopulate_Perftrack" message="$(string.task_DownloadWindow_HistoryPopulate_Perftrack)" value="925"/>
+     <task name="Immersive_Travellog_SwipeStartThresholdMet" message="$(string.task_Immersive_Travellog_SwipeStartThresholdMet)" value="926"/>
+     <task name="JournalEncryption_Init_Perftrack" message="$(string.task_JournalEncryption_Init_Perftrack)" value="927"/>
+     <task name="Browseui_TabWindow_CommitRoamingState_Perftrack" message="$(string.task_Browseui_TabWindow_CommitRoamingState_Perftrack)" value="928"/>
+     <task name="EUPP_HPNavigationTriggerProtection_Perftrack" message="$(string.task_EUPP_HPNavigationTriggerProtection_Perftrack)" value="929"/>
+     <task name="EUPP_DoAsyncOperation_Perftrack" message="$(string.task_EUPP_DoAsyncOperation_Perftrack)" value="930"/>
+     <task name="EUPP_HandleAsyncOperationResult_Perftrack" message="$(string.task_EUPP_HandleAsyncOperationResult_Perftrack)" value="931"/>
+    </tasks>
+    <events>
+     <event value="101" symbol="TabSwitch_NotAccountingForInputDelayStarten" version="0" task="TabSwitch_NotAccountingForInputDelay" opcode="win:Starten" level="win:Informational" template="TabSwitch_NotAccountingForInputDelayStartenArgs"/>
+     <event value="102" symbol="TabSwitch_NotAccountingForInputDelayBeenden" version="0" task="TabSwitch_NotAccountingForInputDelay" opcode="win:Beenden" level="win:Informational" template="TabSwitch_NotAccountingForInputDelayBeendenArgs"/>
+     <event value="103" symbol="TabCreateStarten" version="0" task="TabCreate" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="104" symbol="TabCreateBeenden" version="0" task="TabCreate" opcode="win:Beenden" level="win:Informational" template="TabCreateBeendenArgs"/>
+     <event value="105" symbol="FavoritesSwitchViewStarten" version="0" task="FavoritesSwitchView" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="106" symbol="FavoritesSwitchViewBeenden" version="0" task="FavoritesSwitchView" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="107" symbol="FeedsSwitchViewStarten" version="0" task="FeedsSwitchView" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="108" symbol="FeedsSwitchViewBeenden" version="0" task="FeedsSwitchView" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="109" symbol="HistorySwitchViewStarten" version="0" task="HistorySwitchView" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="110" symbol="HistorySwitchViewBeenden" version="0" task="HistorySwitchView" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="111" symbol="TabCreateBeenden111" version="0" task="TabCreate" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="116" symbol="TabSwitch" version="0" task="TabSwitch" level="win:Informational" template="TabSwitchArgs"/>
+     <event value="119" symbol="CreateAndSelectTab" version="0" task="CreateAndSelectTab" level="win:Informational" template="TabSwitchArgs"/>
+     <event value="120" symbol="LaunchFrame" version="0" task="LaunchFrame" level="win:Informational" template="LaunchFrameArgs"/>
+     <event value="122" symbol="CloseFrame" version="0" task="CloseFrame" level="win:Informational" template="TabSwitchArgs"/>
+     <event value="124" symbol="CloseTab" version="0" task="CloseTab" level="win:Informational" template="TabSwitchArgs"/>
+     <event value="201" symbol="HistoryByDateSwitchViewStarten" version="0" task="HistoryByDateSwitchView" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="202" symbol="HistoryByDateSwitchViewBeenden" version="0" task="HistoryByDateSwitchView" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="203" symbol="HistoryBySiteSwitchViewStarten" version="0" task="HistoryBySiteSwitchView" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="204" symbol="HistoryBySiteSwitchViewBeenden" version="0" task="HistoryBySiteSwitchView" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="205" symbol="HistoryByMostVisSwitchViewStarten" version="0" task="HistoryByMostVisSwitchView" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="206" symbol="HistoryByMostVisSwitchViewBeenden" version="0" task="HistoryByMostVisSwitchView" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="207" symbol="HistoryByOrderSwitchViewStarten" version="0" task="HistoryByOrderSwitchView" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="208" symbol="HistoryByOrderSwitchViewBeenden" version="0" task="HistoryByOrderSwitchView" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="209" symbol="HistorySearchSwitchViewStarten" version="0" task="HistorySearchSwitchView" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="210" symbol="HistorySearchSwitchViewBeenden" version="0" task="HistorySearchSwitchView" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="211" symbol="FavCenterOpenStarten" version="0" task="FavCenterOpen" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="212" symbol="FavCenterOpenBeenden" version="0" task="FavCenterOpen" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="213" symbol="FavCenterCloseStarten" version="0" task="FavCenterClose" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="214" symbol="FavCenterCloseBeenden" version="0" task="FavCenterClose" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="301" symbol="MenuExpandStarten" version="0" task="MenuExpand" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="302" symbol="MenuExpandBeenden" version="0" task="MenuExpand" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="303" symbol="MenuShrinkStarten" version="0" task="MenuShrink" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="304" symbol="MenuShrinkBeenden" version="0" task="MenuShrink" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="305" symbol="MenuItemPopStarten" version="0" task="MenuItemPop" opcode="win:Starten" level="win:Informational" template="MenuItemPopStartenArgs"/>
+     <event value="306" symbol="MenuItemPopBeenden" version="0" task="MenuItemPop" opcode="win:Beenden" level="win:Informational" template="MenuItemPopStartenArgs"/>
+     <event value="601" symbol="Browseui_Tabs_CloseTab_PerftrackStarten" version="0" task="Browseui_Tabs_CloseTab_Perftrack" opcode="win:Starten" level="win:Informational" template="Browseui_Tabs_CloseTab_PerftrackStartenArgs"/>
+     <event value="602" symbol="Browseui_Tabs_CloseTab_PerftrackBeenden" version="0" task="Browseui_Tabs_CloseTab_Perftrack" opcode="win:Beenden" level="win:Informational" template="Browseui_Tabs_CloseTab_PerftrackStartenArgs"/>
+     <event value="603" symbol="Browseui_CBrowserFrame_CreateInstance_PerftrackStarten" version="0" task="Browseui_CBrowserFrame_CreateInstance_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="604" symbol="Browseui_CBrowserFrame_CreateInstance_PerftrackBeenden" version="0" task="Browseui_CBrowserFrame_CreateInstance_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="607" symbol="CreateHTMLPreview_PerftrackStarten" version="0" task="CreateHTMLPreview_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="608" symbol="CreateHTMLPreview_PerftrackBeenden" version="0" task="CreateHTMLPreview_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="609" symbol="FavoritesBar_PopulateFeedsMenu_PerftrackStarten" version="0" task="FavoritesBar_PopulateFeedsMenu_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="610" symbol="FavoritesBar_PopulateFeedsMenu_PerftrackBeenden" version="0" task="FavoritesBar_PopulateFeedsMenu_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="611" symbol="CreateThumbnail_PerftrackStarten" version="0" task="CreateThumbnail_Perftrack" opcode="win:Starten" level="win:Informational" keywords="defunct" template="TabCreateStartenArgs"/>
+     <event value="612" symbol="CreateThumbnail_PerftrackBeenden" version="0" task="CreateThumbnail_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="defunct" template="TabCreateStartenArgs"/>
+     <event value="613" symbol="Imaging_CreateWebPagePreview_PerftrackStarten" version="0" task="Imaging_CreateWebPagePreview_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="614" symbol="Imaging_CreateWebPagePreview_PerftrackBeenden" version="0" task="Imaging_CreateWebPagePreview_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="615" symbol="Find_FindHits_PerftrackStarten" version="0" task="Find_FindHits_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="616" symbol="Find_FindHits_PerftrackBeenden" version="0" task="Find_FindHits_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="617" symbol="Find_HighlightHits_PerftrackStarten" version="0" task="Find_HighlightHits_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="618" symbol="Find_HighlightHits_PerftrackBeenden" version="0" task="Find_HighlightHits_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="619" symbol="Search_SuggestionsProcessing_PerftrackStarten" version="0" task="Search_SuggestionsProcessing_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="620" symbol="Search_SuggestionsProcessing_PerftrackBeenden" version="0" task="Search_SuggestionsProcessing_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="621" symbol="Search_ImageProcessing_PerftrackStarten" version="0" task="Search_ImageProcessing_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="622" symbol="Search_ImageProcessing_PerftrackBeenden" version="0" task="Search_ImageProcessing_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="623" symbol="UnifiedListView_Typed_Perftrack" version="0" task="UnifiedListView_Typed_Perftrack" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="625" symbol="UnifiedListView_Dropdown_Perftrack" version="0" task="UnifiedListView_Dropdown_Perftrack" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="627" symbol="UnifiedListView_Displayed_Perftrack" version="0" task="UnifiedListView_Displayed_Perftrack" level="win:Informational" keywords="defunct" template="TabCreateStartenArgs"/>
+     <event value="629" symbol="UnifiedListView_Cancelled_Perftrack" version="0" task="UnifiedListView_Cancelled_Perftrack" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="631" symbol="UnifiedListView_Displayed_Complete_Perftrack" version="0" task="UnifiedListView_Displayed_Complete_Perftrack" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="633" symbol="UnifiedListView_Query_History_PerftrackStarten" version="0" task="UnifiedListView_Query_History_Perftrack" opcode="win:Starten" level="win:Informational" keywords="defunct" template="TabCreateStartenArgs"/>
+     <event value="634" symbol="UnifiedListView_Query_History_PerftrackBeenden" version="0" task="UnifiedListView_Query_History_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="defunct" template="TabCreateStartenArgs"/>
+     <event value="635" symbol="UnifiedListView_Query_Favorites_PerftrackStarten" version="0" task="UnifiedListView_Query_Favorites_Perftrack" opcode="win:Starten" level="win:Informational" keywords="defunct" template="TabCreateStartenArgs"/>
+     <event value="636" symbol="UnifiedListView_Query_Favorites_PerftrackBeenden" version="0" task="UnifiedListView_Query_Favorites_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="defunct" template="TabCreateStartenArgs"/>
+     <event value="637" symbol="UnifiedListView_Query_Feeds_PerftrackStarten" version="0" task="UnifiedListView_Query_Feeds_Perftrack" opcode="win:Starten" level="win:Informational" keywords="defunct" template="TabCreateStartenArgs"/>
+     <event value="638" symbol="UnifiedListView_Query_Feeds_PerftrackBeenden" version="0" task="UnifiedListView_Query_Feeds_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="defunct" template="TabCreateStartenArgs"/>
+     <event value="639" symbol="Print_Dialog_PerftrackStarten" version="0" task="Print_Dialog_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="640" symbol="Print_Dialog_PerftrackBeenden" version="0" task="Print_Dialog_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="641" symbol="Tab_Fast_Shutdown_PerftrackStarten" version="0" task="Tab_Fast_Shutdown_Perftrack" opcode="win:Starten" level="win:Informational" template="Browseui_Tabs_CloseTab_PerftrackStartenArgs"/>
+     <event value="642" symbol="Tab_Fast_Shutdown_PerftrackBeenden" version="0" task="Tab_Fast_Shutdown_Perftrack" opcode="win:Beenden" level="win:Informational" template="Browseui_Tabs_CloseTab_PerftrackStartenArgs"/>
+     <event value="643" symbol="Tab_Fast_Shutdown_PerftrackBeenden643" version="0" task="Tab_Fast_Shutdown_Perftrack" opcode="win:Beenden" level="win:Informational" template="Browseui_Tabs_CloseTab_PerftrackStartenArgs"/>
+     <event value="644" symbol="Frame_Fast_Shutdown_PerftrackStarten" version="0" task="Frame_Fast_Shutdown_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="645" symbol="Frame_Fast_Shutdown_PerftrackBeenden" version="0" task="Frame_Fast_Shutdown_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="646" symbol="Frame_Fast_Shutdown_PerftrackBeenden646" version="0" task="Frame_Fast_Shutdown_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="647" symbol="Browseui_Tabs_CloseTab_PerftrackBeenden647" version="0" task="Browseui_Tabs_CloseTab_Perftrack" opcode="win:Beenden" level="win:Informational" template="Browseui_Tabs_CloseTab_PerftrackStartenArgs"/>
+     <event value="650" symbol="CreateThumbnail_Immersive_PerftrackStarten" version="0" task="CreateThumbnail_Immersive_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="651" symbol="CreateThumbnail_Immersive_PerftrackBeenden" version="0" task="CreateThumbnail_Immersive_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="652" symbol="CreateThumbnail_Superbar_PerftrackStarten" version="0" task="CreateThumbnail_Superbar_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="653" symbol="CreateThumbnail_Superbar_PerftrackBeenden" version="0" task="CreateThumbnail_Superbar_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="700" symbol="Browseui_Tabs_Tearoff_ShowVisualStarten" version="0" task="Browseui_Tabs_Tearoff_ShowVisual" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="701" symbol="Browseui_Tabs_Tearoff_ShowVisualBeenden" version="0" task="Browseui_Tabs_Tearoff_ShowVisual" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="702" symbol="Browseui_Tabs_Tearoff_NewWindowStarten" version="0" task="Browseui_Tabs_Tearoff_NewWindow" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="703" symbol="Browseui_Tabs_Tearoff_NewWindowBeenden" version="0" task="Browseui_Tabs_Tearoff_NewWindow" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="704" symbol="Browseui_Tabs_Tearoff_BetweenWindowsStarten" version="0" task="Browseui_Tabs_Tearoff_BetweenWindows" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="705" symbol="Browseui_Tabs_Tearoff_BetweenWindowsBeenden" version="0" task="Browseui_Tabs_Tearoff_BetweenWindows" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="706" symbol="Browseui_Tabs_NavToDroppedLinkStarten" version="0" task="Browseui_Tabs_NavToDroppedLink" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="707" symbol="Browseui_Tabs_NavToDroppedLinkBeenden" version="0" task="Browseui_Tabs_NavToDroppedLink" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="708" symbol="Browseui_Tabs_MoveStarten" version="0" task="Browseui_Tabs_Move" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="709" symbol="Browseui_Tabs_MoveBeenden" version="0" task="Browseui_Tabs_Move" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="710" symbol="Browseui_Tabs_Tearoff_Complete_TabProc" version="0" task="Browseui_Tabs_Tearoff_Complete_TabProc" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="711" symbol="Browseui_Tabs_Tearoff_NewWindow_TabProc" version="0" task="Browseui_Tabs_Tearoff_NewWindow_TabProc" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="712" symbol="Find_FindFirstHit_PerftrackStarten" version="0" task="Find_FindFirstHit_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="713" symbol="Find_FindFirstHit_PerftrackBeenden" version="0" task="Find_FindFirstHit_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="714" symbol="Find_MatchAndHighlightHits_PerftrackStarten" version="0" task="Find_MatchAndHighlightHits_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="715" symbol="Find_MatchAndHighlightHits_PerftrackBeenden" version="0" task="Find_MatchAndHighlightHits_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="716" symbol="Find_MatchAndHighlightHits_PerftrackBeenden716" version="0" task="Find_MatchAndHighlightHits_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="717" symbol="Browseui_Tabs_Tearoff_BetweenWindows_TabProc" version="0" task="Browseui_Tabs_Tearoff_BetweenWindows_TabProc" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="800" symbol="Browseui_CIMBrowserFrame_CreateInstance_PerftrackStarten" version="0" task="Browseui_CIMBrowserFrame_CreateInstance_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="801" symbol="Browseui_CIMBrowserFrame_CreateInstance_PerftrackBeenden" version="0" task="Browseui_CIMBrowserFrame_CreateInstance_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="806" symbol="Browseui_CIMTabView_CloseTab_PerftrackStarten" version="0" task="Browseui_CIMTabView_CloseTab_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="807" symbol="Browseui_CIMTabView_CloseTab_PerftrackBeenden" version="0" task="Browseui_CIMTabView_CloseTab_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="808" symbol="CIMNavBar_Show_PerftrackStarten" version="0" task="CIMNavBar_Show_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="809" symbol="CIMNavBar_Show_PerftrackBeenden" version="0" task="CIMNavBar_Show_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="810" symbol="CIMNavBar_Hide_PerftrackStarten" version="0" task="CIMNavBar_Hide_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="811" symbol="CIMNavBar_Hide_PerftrackBeenden" version="0" task="CIMNavBar_Hide_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="812" symbol="QSA_PopulateTile_PerftrackStarten" version="0" task="QSA_PopulateTile_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="813" symbol="QSA_PopulateTile_PerftrackBeenden" version="0" task="QSA_PopulateTile_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="814" symbol="Thumbnail_RemoveGuttersStarten" version="0" task="Thumbnail_RemoveGutters" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="815" symbol="Thumbnail_RemoveGuttersBeenden" version="0" task="Thumbnail_RemoveGutters" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="816" symbol="QSA_CalculateTilesInView_PerftrackStarten" version="0" task="QSA_CalculateTilesInView_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="817" symbol="QSA_CalculateTilesInView_PerftrackBeenden" version="0" task="QSA_CalculateTilesInView_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="MenuItemPopStartenArgs"/>
+     <event value="818" symbol="QSA_PopulateTiles_PerftrackStarten" version="0" task="QSA_PopulateTiles_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="MenuItemPopStartenArgs"/>
+     <event value="819" symbol="QSA_PopulateTiles_PerftrackBeenden" version="0" task="QSA_PopulateTiles_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="MenuItemPopStartenArgs"/>
+     <event value="820" symbol="Immersive_Travellog_PerftrackStarten" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="821" symbol="Immersive_Travellog_PerftrackBeenden" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="822" symbol="Immersive_Travellog_PerftrackStarten822" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="823" symbol="Immersive_Travellog_PerftrackBeenden823" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="824" symbol="Immersive_Travellog_PerftrackStarten824" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="825" symbol="Immersive_Travellog_PerftrackBeenden825" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="826" symbol="Immersive_Travellog_PerftrackStarten826" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="827" symbol="Immersive_Travellog_PerftrackBeenden827" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="828" symbol="TabWindowManager_DehydrateTabsOnSuspend_PerftrackStarten" version="0" task="TabWindowManager_DehydrateTabsOnSuspend_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="829" symbol="TabWindowManager_DehydrateTabsOnSuspend_PerftrackBeenden" version="0" task="TabWindowManager_DehydrateTabsOnSuspend_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="830" symbol="TabWindowManager_UnDehydrateTabsOnResume_PerftrackStarten" version="0" task="TabWindowManager_UnDehydrateTabsOnResume_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="831" symbol="TabWindowManager_UnDehydrateTabsOnResume_PerftrackBeenden" version="0" task="TabWindowManager_UnDehydrateTabsOnResume_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="832" symbol="ULV_AggregateItems_PerftrackStarten" version="0" task="ULV_AggregateItems_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="833" symbol="ULV_AggregateItems_PerftrackBeenden" version="0" task="ULV_AggregateItems_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="836" symbol="QSA_UpdateGroup_PerftrackStarten" version="0" task="QSA_UpdateGroup_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="837" symbol="QSA_UpdateGroup_PerftrackBeenden" version="0" task="QSA_UpdateGroup_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="838" symbol="Snippet_Aggregate_PerftrackStarten" version="0" task="Snippet_Aggregate_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="839" symbol="Snippet_Aggregate_PerftrackBeenden" version="0" task="Snippet_Aggregate_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="840" symbol="Snippet_MetaExtraction_PerftrackStarten" version="0" task="Snippet_MetaExtraction_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="841" symbol="Snippet_MetaExtraction_PerftrackBeenden" version="0" task="Snippet_MetaExtraction_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="842" symbol="Snippet_UserSelExtraction_PerftrackStarten" version="0" task="Snippet_UserSelExtraction_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="843" symbol="Snippet_UserSelExtraction_PerftrackBeenden" version="0" task="Snippet_UserSelExtraction_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="844" symbol="Snippet_BOLLExtraction_PerftrackStarten" version="0" task="Snippet_BOLLExtraction_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="845" symbol="Snippet_BOLLExtraction_PerftrackBeenden" version="0" task="Snippet_BOLLExtraction_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="846" symbol="DLVA_Animation_PerftrackStarten" version="0" task="DLVA_Animation_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="DLVA_Animation_PerftrackStartenArgs"/>
+     <event value="847" symbol="DLVA_Animation_PerftrackBeenden" version="0" task="DLVA_Animation_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="DLVA_Animation_PerftrackStartenArgs"/>
+     <event value="850" symbol="Immersive_Travellog_PerftrackStarten850" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="851" symbol="Immersive_Travellog_PerftrackBeenden851" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="852" symbol="Immersive_Travellog_PerftrackStarten852" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="853" symbol="Immersive_Travellog_PerftrackBeenden853" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="854" symbol="Immersive_Travellog_PerftrackStarten854" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="855" symbol="Immersive_Travellog_PerftrackBeenden855" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="860" symbol="Immersive_Travellog_PerftrackStarten860" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="861" symbol="Immersive_Travellog_PerftrackBeenden861" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="862" symbol="Immersive_Travellog_PerftrackStarten862" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="863" symbol="Immersive_Travellog_PerftrackBeenden863" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="864" symbol="Immersive_Travellog_PerftrackStarten864" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="865" symbol="Immersive_Travellog_PerftrackBeenden865" version="0" task="Immersive_Travellog_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="900" symbol="CIMFindBar_Show_PerftrackStarten" version="0" task="CIMFindBar_Show_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="901" symbol="CIMFindBar_Show_PerftrackBeenden" version="0" task="CIMFindBar_Show_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="902" symbol="CIMFindBar_Hide_PerftrackStarten" version="0" task="CIMFindBar_Hide_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="903" symbol="CIMFindBar_Hide_PerftrackBeenden" version="0" task="CIMFindBar_Hide_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="908" symbol="QSA_OpenUnfilteredView_PerftrackStarten" version="0" task="QSA_OpenUnfilteredView_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="909" symbol="QSA_OpenUnfilteredView_PerftrackBeenden" version="0" task="QSA_OpenUnfilteredView_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="910" symbol="QSA_OpenUnfilteredView_PerftrackBeenden910" version="0" task="QSA_OpenUnfilteredView_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="911" symbol="UnifiedListView_Query_DomainSuggestion_PerftrackStarten" version="0" task="UnifiedListView_Query_DomainSuggestion_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="912" symbol="UnifiedListView_Query_DomainSuggestion_PerftrackBeenden" version="0" task="UnifiedListView_Query_DomainSuggestion_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="913" symbol="FlipAhead_RulesFileUpdateStarten" version="0" task="FlipAhead_RulesFileUpdate" opcode="win:Starten" level="win:Informational"/>
+     <event value="914" symbol="FlipAhead_RulesFileUpdateBeenden" version="0" task="FlipAhead_RulesFileUpdate" opcode="win:Beenden" level="win:Informational" template="FlipAhead_RulesFileUpdateBeendenArgs"/>
+     <event value="915" symbol="IMDownloadWindow_Show_PerftrackStarten" version="0" task="IMDownloadWindow_Show_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="916" symbol="IMDownloadWindow_Show_PerftrackBeenden" version="0" task="IMDownloadWindow_Show_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="917" symbol="IMDownloadWindow_Hide_PerftrackStarten" version="0" task="IMDownloadWindow_Hide_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="918" symbol="IMDownloadWindow_Hide_PerftrackBeenden" version="0" task="IMDownloadWindow_Hide_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="919" symbol="CIMContextMenuBar_Show_PerftrackStarten" version="0" task="CIMContextMenuBar_Show_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="920" symbol="CIMContextMenuBar_Show_PerftrackBeenden" version="0" task="CIMContextMenuBar_Show_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="921" symbol="CIMContextMenuBar_Hide_PerftrackStarten" version="0" task="CIMContextMenuBar_Hide_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="922" symbol="CIMContextMenuBar_Hide_PerftrackBeenden" version="0" task="CIMContextMenuBar_Hide_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="923" symbol="DownloadWindow_HistoryQuery_PerftrackStarten" version="0" task="DownloadWindow_HistoryQuery_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="924" symbol="DownloadWindow_HistoryQuery_PerftrackBeenden" version="0" task="DownloadWindow_HistoryQuery_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="925" symbol="DownloadWindow_HistoryPopulate_PerftrackStarten" version="0" task="DownloadWindow_HistoryPopulate_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="926" symbol="DownloadWindow_HistoryPopulate_PerftrackBeenden" version="0" task="DownloadWindow_HistoryPopulate_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="TabCreateStartenArgs"/>
+     <event value="927" symbol="Immersive_Travellog_SwipeStartThresholdMet" version="0" task="Immersive_Travellog_SwipeStartThresholdMet" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="928" symbol="JournalEncryption_Init_PerftrackStarten" version="0" task="JournalEncryption_Init_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="929" symbol="JournalEncryption_Init_PerftrackBeenden" version="0" task="JournalEncryption_Init_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="930" symbol="Browseui_TabWindow_CommitRoamingState_PerftrackStarten" version="0" task="Browseui_TabWindow_CommitRoamingState_Perftrack" opcode="win:Starten" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="931" symbol="Browseui_TabWindow_CommitRoamingState_PerftrackBeenden" version="0" task="Browseui_TabWindow_CommitRoamingState_Perftrack" opcode="win:Beenden" level="win:Informational" template="TabCreateStartenArgs"/>
+     <event value="932" symbol="EUPP_HPNavigationTriggerProtection_PerftrackStarten" version="0" task="EUPP_HPNavigationTriggerProtection_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack"/>
+     <event value="933" symbol="EUPP_HPNavigationTriggerProtection_PerftrackBeenden" version="0" task="EUPP_HPNavigationTriggerProtection_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="EUPP_HPNavigationTriggerProtection_PerftrackBeendenArgs"/>
+     <event value="934" symbol="EUPP_DoAsyncOperation_PerftrackStarten" version="0" task="EUPP_DoAsyncOperation_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="EUPP_DoAsyncOperation_PerftrackStartenArgs"/>
+     <event value="935" symbol="EUPP_DoAsyncOperation_PerftrackBeenden" version="0" task="EUPP_DoAsyncOperation_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="EUPP_DoAsyncOperation_PerftrackStartenArgs"/>
+     <event value="936" symbol="EUPP_HandleAsyncOperationResult_PerftrackStarten" version="0" task="EUPP_HandleAsyncOperationResult_Perftrack" opcode="win:Starten" level="win:Informational" keywords="nonPerfTrack" template="EUPP_DoAsyncOperation_PerftrackStartenArgs"/>
+     <event value="937" symbol="EUPP_HandleAsyncOperationResult_PerftrackBeenden" version="0" task="EUPP_HandleAsyncOperationResult_Perftrack" opcode="win:Beenden" level="win:Informational" keywords="nonPerfTrack" template="EUPP_DoAsyncOperation_PerftrackStartenArgs"/>
+    </events>
+    <templates>
+     <template tid="TabSwitch_NotAccountingForInputDelayStartenArgs">
+      <data name="HWND" inType="win:UInt64"/>
+     </template>
+     <template tid="TabSwitch_NotAccountingForInputDelayBeendenArgs">
+      <data name="HWND" inType="win:UInt64"/>
+      <data name="NewTID" inType="win:UInt32"/>
+     </template>
+     <template tid="TabCreateStartenArgs">
+      <data name="Object" inType="win:UInt64"/>
+     </template>
+     <template tid="TabCreateBeendenArgs">
+      <data name="Object" inType="win:UInt64"/>
+      <data name="NewTID" inType="win:UInt32"/>
+     </template>
+     <template tid="TabSwitchArgs">
+      <data name="TimespanInMs" inType="win:UInt32"/>
+      <data name="dwTabScenarioFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="LaunchFrameArgs">
+      <data name="TimespanInMs" inType="win:UInt32"/>
+      <data name="dwTabScenarioFlags" inType="win:UInt32"/>
+      <data name="totalTabCount" inType="win:UInt32"/>
+      <data name="halfTabCount" inType="win:UInt32"/>
+     </template>
+     <template tid="MenuItemPopStartenArgs">
+      <data name="Object" inType="win:UInt64"/>
+      <data name="ID" inType="win:UInt32"/>
+     </template>
+     <template tid="Browseui_Tabs_CloseTab_PerftrackStartenArgs">
+      <data name="Object" inType="win:UInt64"/>
+      <data name="TID" inType="win:UInt32"/>
+     </template>
+     <template tid="DLVA_Animation_PerftrackStartenArgs">
+      <data name="Cookie" inType="win:UInt32"/>
+      <data name="AnimationType" inType="win:UInt32"/>
+      <data name="RowCount" inType="win:UInt32"/>
+     </template>
+     <template tid="FlipAhead_RulesFileUpdateBeendenArgs">
+      <data name="FileVersion" inType="win:UInt32"/>
+     </template>
+     <template tid="EUPP_HPNavigationTriggerProtection_PerftrackBeendenArgs">
+      <data name="TriggerProtectionHResult" inType="win:UInt32"/>
+     </template>
+     <template tid="EUPP_DoAsyncOperation_PerftrackStartenArgs">
+      <data name="OpType" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_defunct" value="defunct"/>
+    <string id="keyword_nonPerfTrack" value="nonPerfTrack"/>
+    <string id="task_TabSwitch_NotAccountingForInputDelay" value="TabSwitch_NotAccountingForInputDelay"/>
+    <string id="task_TabSwitch" value="TabSwitch"/>
+    <string id="task_TabCreate" value="TabCreate"/>
+    <string id="task_FavoritesSwitchView" value="FavoritesSwitchView"/>
+    <string id="task_FeedsSwitchView" value="FeedsSwitchView"/>
+    <string id="task_CreateAndSelectTab" value="CreateAndSelectTab"/>
+    <string id="task_HistorySwitchView" value="HistorySwitchView"/>
+    <string id="task_LaunchFrame" value="LaunchFrame"/>
+    <string id="task_CloseFrame" value="CloseFrame"/>
+    <string id="task_CloseTab" value="CloseTab"/>
+    <string id="task_HistoryByDateSwitchView" value="HistoryByDateSwitchView"/>
+    <string id="task_HistoryBySiteSwitchView" value="HistoryBySiteSwitchView"/>
+    <string id="task_HistoryByMostVisSwitchView" value="HistoryByMostVisSwitchView"/>
+    <string id="task_HistoryByOrderSwitchView" value="HistoryByOrderSwitchView"/>
+    <string id="task_HistorySearchSwitchView" value="HistorySearchSwitchView"/>
+    <string id="task_FavCenterOpen" value="FavCenterOpen"/>
+    <string id="task_FavCenterClose" value="FavCenterClose"/>
+    <string id="task_MenuExpand" value="MenuExpand"/>
+    <string id="task_MenuShrink" value="MenuShrink"/>
+    <string id="task_MenuItemPop" value="MenuItemPop"/>
+    <string id="task_Browseui_Tabs_CloseTab_Perftrack" value="Browseui_Tabs_CloseTab_Perftrack"/>
+    <string id="task_Browseui_CBrowserFrame_CreateInstance_Perftrack" value="Browseui_CBrowserFrame_CreateInstance_Perftrack"/>
+    <string id="task_CreateHTMLPreview_Perftrack" value="CreateHTMLPreview_Perftrack"/>
+    <string id="task_FavoritesBar_PopulateFeedsMenu_Perftrack" value="FavoritesBar_PopulateFeedsMenu_Perftrack"/>
+    <string id="task_CreateThumbnail_Perftrack" value="CreateThumbnail_Perftrack"/>
+    <string id="task_Imaging_CreateWebPagePreview_Perftrack" value="Imaging_CreateWebPagePreview_Perftrack"/>
+    <string id="task_Find_FindHits_Perftrack" value="Find_FindHits_Perftrack"/>
+    <string id="task_Find_HighlightHits_Perftrack" value="Find_HighlightHits_Perftrack"/>
+    <string id="task_Search_SuggestionsProcessing_Perftrack" value="Search_SuggestionsProcessing_Perftrack"/>
+    <string id="task_Search_ImageProcessing_Perftrack" value="Search_ImageProcessing_Perftrack"/>
+    <string id="task_UnifiedListView_Typed_Perftrack" value="UnifiedListView_Typed_Perftrack"/>
+    <string id="task_UnifiedListView_Dropdown_Perftrack" value="UnifiedListView_Dropdown_Perftrack"/>
+    <string id="task_UnifiedListView_Displayed_Perftrack" value="UnifiedListView_Displayed_Perftrack"/>
+    <string id="task_UnifiedListView_Cancelled_Perftrack" value="UnifiedListView_Cancelled_Perftrack"/>
+    <string id="task_UnifiedListView_Displayed_Complete_Perftrack" value="UnifiedListView_Displayed_Complete_Perftrack"/>
+    <string id="task_UnifiedListView_Query_History_Perftrack" value="UnifiedListView_Query_History_Perftrack"/>
+    <string id="task_UnifiedListView_Query_Favorites_Perftrack" value="UnifiedListView_Query_Favorites_Perftrack"/>
+    <string id="task_UnifiedListView_Query_Feeds_Perftrack" value="UnifiedListView_Query_Feeds_Perftrack"/>
+    <string id="task_Print_Dialog_Perftrack" value="Print_Dialog_Perftrack"/>
+    <string id="task_Tab_Fast_Shutdown_Perftrack" value="Tab_Fast_Shutdown_Perftrack"/>
+    <string id="task_Frame_Fast_Shutdown_Perftrack" value="Frame_Fast_Shutdown_Perftrack"/>
+    <string id="task_CreateThumbnail_Immersive_Perftrack" value="CreateThumbnail_Immersive_Perftrack"/>
+    <string id="task_CreateThumbnail_Superbar_Perftrack" value="CreateThumbnail_Superbar_Perftrack"/>
+    <string id="task_Browseui_Tabs_Tearoff_ShowVisual" value="Browseui_Tabs_Tearoff_ShowVisual"/>
+    <string id="task_Browseui_Tabs_Tearoff_NewWindow" value="Browseui_Tabs_Tearoff_NewWindow"/>
+    <string id="task_Browseui_Tabs_Tearoff_BetweenWindows" value="Browseui_Tabs_Tearoff_BetweenWindows"/>
+    <string id="task_Browseui_Tabs_NavToDroppedLink" value="Browseui_Tabs_NavToDroppedLink"/>
+    <string id="task_Browseui_Tabs_Move" value="Browseui_Tabs_Move"/>
+    <string id="task_Browseui_Tabs_Tearoff_Complete_TabProc" value="Browseui_Tabs_Tearoff_Complete_TabProc"/>
+    <string id="task_Browseui_Tabs_Tearoff_NewWindow_TabProc" value="Browseui_Tabs_Tearoff_NewWindow_TabProc"/>
+    <string id="task_Find_FindFirstHit_Perftrack" value="Find_FindFirstHit_Perftrack"/>
+    <string id="task_Find_MatchAndHighlightHits_Perftrack" value="Find_MatchAndHighlightHits_Perftrack"/>
+    <string id="task_Browseui_Tabs_Tearoff_BetweenWindows_TabProc" value="Browseui_Tabs_Tearoff_BetweenWindows_TabProc"/>
+    <string id="task_Browseui_CIMBrowserFrame_CreateInstance_Perftrack" value="Browseui_CIMBrowserFrame_CreateInstance_Perftrack"/>
+    <string id="task_Browseui_CIMTabView_CloseTab_Perftrack" value="Browseui_CIMTabView_CloseTab_Perftrack"/>
+    <string id="task_CIMNavBar_Show_Perftrack" value="CIMNavBar_Show_Perftrack"/>
+    <string id="task_CIMNavBar_Hide_Perftrack" value="CIMNavBar_Hide_Perftrack"/>
+    <string id="task_QSA_PopulateTile_Perftrack" value="QSA_PopulateTile_Perftrack"/>
+    <string id="task_Thumbnail_RemoveGutters" value="Thumbnail_RemoveGutters"/>
+    <string id="task_Immersive_Travellog_Perftrack" value="Immersive_Travellog_Perftrack"/>
+    <string id="task_QSA_CalculateTilesInView_Perftrack" value="QSA_CalculateTilesInView_Perftrack"/>
+    <string id="task_QSA_PopulateTiles_Perftrack" value="QSA_PopulateTiles_Perftrack"/>
+    <string id="task_TabWindowManager_DehydrateTabsOnSuspend_Perftrack" value="TabWindowManager_DehydrateTabsOnSuspend_Perftrack"/>
+    <string id="task_TabWindowManager_UnDehydrateTabsOnResume_Perftrack" value="TabWindowManager_UnDehydrateTabsOnResume_Perftrack"/>
+    <string id="task_ULV_AggregateItems_Perftrack" value="ULV_AggregateItems_Perftrack"/>
+    <string id="task_QSA_UpdateGroup_Perftrack" value="QSA_UpdateGroup_Perftrack"/>
+    <string id="task_Snippet_Aggregate_Perftrack" value="Snippet_Aggregate_Perftrack"/>
+    <string id="task_Snippet_MetaExtraction_Perftrack" value="Snippet_MetaExtraction_Perftrack"/>
+    <string id="task_Snippet_UserSelExtraction_Perftrack" value="Snippet_UserSelExtraction_Perftrack"/>
+    <string id="task_Snippet_BOLLExtraction_Perftrack" value="Snippet_BOLLExtraction_Perftrack"/>
+    <string id="task_DLVA_Animation_Perftrack" value="DLVA_Animation_Perftrack"/>
+    <string id="task_CIMFindBar_Show_Perftrack" value="CIMFindBar_Show_Perftrack"/>
+    <string id="task_CIMFindBar_Hide_Perftrack" value="CIMFindBar_Hide_Perftrack"/>
+    <string id="task_QSA_OpenUnfilteredView_Perftrack" value="QSA_OpenUnfilteredView_Perftrack"/>
+    <string id="task_UnifiedListView_Query_DomainSuggestion_Perftrack" value="UnifiedListView_Query_DomainSuggestion_Perftrack"/>
+    <string id="task_FlipAhead_RulesFileUpdate" value="FlipAhead_RulesFileUpdate"/>
+    <string id="task_IMDownloadWindow_Show_Perftrack" value="IMDownloadWindow_Show_Perftrack"/>
+    <string id="task_IMDownloadWindow_Hide_Perftrack" value="IMDownloadWindow_Hide_Perftrack"/>
+    <string id="task_CIMContextMenuBar_Show_Perftrack" value="CIMContextMenuBar_Show_Perftrack"/>
+    <string id="task_CIMContextMenuBar_Hide_Perftrack" value="CIMContextMenuBar_Hide_Perftrack"/>
+    <string id="task_DownloadWindow_HistoryQuery_Perftrack" value="DownloadWindow_HistoryQuery_Perftrack"/>
+    <string id="task_DownloadWindow_HistoryPopulate_Perftrack" value="DownloadWindow_HistoryPopulate_Perftrack"/>
+    <string id="task_Immersive_Travellog_SwipeStartThresholdMet" value="Immersive_Travellog_SwipeStartThresholdMet"/>
+    <string id="task_JournalEncryption_Init_Perftrack" value="JournalEncryption_Init_Perftrack"/>
+    <string id="task_Browseui_TabWindow_CommitRoamingState_Perftrack" value="Browseui_TabWindow_CommitRoamingState_Perftrack"/>
+    <string id="task_EUPP_HPNavigationTriggerProtection_Perftrack" value="EUPP_HPNavigationTriggerProtection_Perftrack"/>
+    <string id="task_EUPP_DoAsyncOperation_Perftrack" value="EUPP_DoAsyncOperation_Perftrack"/>
+    <string id="task_EUPP_HandleAsyncOperationResult_Perftrack" value="EUPP_HandleAsyncOperationResult_Perftrack"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,83 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-SetupCl" guid="{75ebc33e-d017-4d0f-93ab-0b4f86579164}" resourceFileName="Microsoft-Windows-SetupCl" messageFileName="Microsoft-Windows-SetupCl" symbol="MicrosoftWindowsSetupCl" source="Xml" >
+    <keywords>
+     <keyword name="keyPerformance" message="$(string.keyword_keyPerformance)" mask="0x1"/>
+     <keyword name="keyDiagnostic" message="$(string.keyword_keyDiagnostic)" mask="0x2"/>
+     <keyword name="keyTelemetry" message="$(string.keyword_keyTelemetry)" mask="0x4"/>
+    </keywords>
+    <tasks>
+     <task name="SetupCl_Task" message="$(string.task_SetupCl_Task)" value="1000"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="SetupCl_Task" version="0" task="SetupCl_Task" level="win:Informational" keywords="keyDiagnostic" template="SetupCl_TaskArgs"/>
+     <event value="2" symbol="SetupCl_Task2" version="0" task="SetupCl_Task" level="win:Error" keywords="keyDiagnostic" template="SetupCl_Task2Args"/>
+     <event value="3" symbol="SetupCl_Task3" version="0" task="SetupCl_Task" level="win:Informational" keywords="keyDiagnostic" template="SetupCl_Task2Args"/>
+     <event value="4" symbol="SetupCl_TaskStarten" version="0" task="SetupCl_Task" opcode="win:Starten" level="win:Informational" keywords="keyPerformance"/>
+     <event value="5" symbol="SetupCl_TaskBeenden" version="0" task="SetupCl_Task" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance"/>
+     <event value="6" symbol="SetupCl_TaskStarten6" version="0" task="SetupCl_Task" opcode="win:Starten" level="win:Informational" keywords="keyPerformance"/>
+     <event value="7" symbol="SetupCl_TaskBeenden7" version="0" task="SetupCl_Task" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance"/>
+     <event value="8" symbol="SetupCl_TaskStarten8" version="0" task="SetupCl_Task" opcode="win:Starten" level="win:Informational" keywords="keyPerformance"/>
+     <event value="9" symbol="SetupCl_TaskBeenden9" version="0" task="SetupCl_Task" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance"/>
+     <event value="10" symbol="SetupCl_TaskStarten10" version="0" task="SetupCl_Task" opcode="win:Starten" level="win:Informational" keywords="keyPerformance"/>
+     <event value="11" symbol="SetupCl_TaskBeenden11" version="0" task="SetupCl_Task" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance"/>
+     <event value="12" symbol="SetupCl_TaskStarten12" version="0" task="SetupCl_Task" opcode="win:Starten" level="win:Informational" keywords="keyPerformance" template="SetupCl_TaskStarten12Args"/>
+     <event value="13" symbol="SetupCl_TaskBeenden13" version="0" task="SetupCl_Task" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance" template="SetupCl_TaskStarten12Args"/>
+     <event value="14" symbol="SetupCl_TaskStarten14" version="0" task="SetupCl_Task" opcode="win:Starten" level="win:Informational" keywords="keyPerformance"/>
+     <event value="15" symbol="SetupCl_TaskBeenden15" version="0" task="SetupCl_Task" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance"/>
+     <event value="16" symbol="SetupCl_Task16" version="0" task="SetupCl_Task" level="win:Informational" keywords="keyDiagnostic" template="SetupCl_Task16Args"/>
+     <event value="17" symbol="SetupCl_Task17" version="0" task="SetupCl_Task" level="win:Informational" keywords="keyDiagnostic" template="SetupCl_Task16Args"/>
+     <event value="18" symbol="SetupCl_Task18" version="0" task="SetupCl_Task" level="win:Informational" keywords="keyDiagnostic" template="SetupCl_Task18Args"/>
+     <event value="19" symbol="SetupCl_Task19" version="0" task="SetupCl_Task" level="win:Informational" keywords="keyDiagnostic" template="SetupCl_Task18Args"/>
+     <event value="20" symbol="SetupCl_TaskStarten20" version="0" task="SetupCl_Task" opcode="win:Starten" level="win:Informational" keywords="keyPerformance"/>
+     <event value="21" symbol="SetupCl_TaskBeenden21" version="0" task="SetupCl_Task" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance"/>
+     <event value="22" symbol="SetupCl_Task22" version="0" task="SetupCl_Task" level="win:Error" keywords="keyDiagnostic" template="SetupCl_Task22Args"/>
+     <event value="23" symbol="SetupCl_TaskStarten23" version="0" task="SetupCl_Task" opcode="win:Starten" level="win:Informational" keywords="keyPerformance"/>
+     <event value="24" symbol="SetupCl_TaskBeenden24" version="0" task="SetupCl_Task" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance"/>
+     <event value="25" symbol="SetupCl_Task25" version="0" task="SetupCl_Task" level="win:Informational" keywords="keyDiagnostic" template="SetupCl_Task18Args"/>
+     <event value="26" symbol="SetupCl_Task26" version="0" task="SetupCl_Task" level="win:Warning" keywords="keyDiagnostic" template="SetupCl_Task2Args"/>
+     <event value="27" symbol="SetupCl_TaskStarten27" version="0" task="SetupCl_Task" opcode="win:Starten" level="win:Informational" keywords="keyPerformance"/>
+     <event value="28" symbol="SetupCl_TaskBeenden28" version="0" task="SetupCl_Task" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance"/>
+     <event value="29" symbol="SetupCl_TaskStarten29" version="0" task="SetupCl_Task" opcode="win:Starten" level="win:Informational" keywords="keyTelemetry"/>
+     <event value="30" symbol="SetupCl_TaskBeenden30" version="0" task="SetupCl_Task" opcode="win:Beenden" level="win:Informational" keywords="keyTelemetry"/>
+    </events>
+    <templates>
+     <template tid="SetupCl_TaskArgs">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Description" inType="win:UnicodeString"/>
+      <data name="Statistic" inType="win:UInt64"/>
+     </template>
+     <template tid="SetupCl_Task2Args">
+      <data name="SourceLine" inType="win:UInt32"/>
+      <data name="SourceFunction" inType="win:AnsiString"/>
+      <data name="Message" inType="win:AnsiString"/>
+     </template>
+     <template tid="SetupCl_TaskStarten12Args">
+      <data name="HiveName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SetupCl_Task16Args">
+      <data name="SID" inType="win:SID"/>
+     </template>
+     <template tid="SetupCl_Task18Args">
+      <data name="Path" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SetupCl_Task22Args">
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_keyPerformance" value="keyPerformance"/>
+    <string id="keyword_keyDiagnostic" value="keyDiagnostic"/>
+    <string id="keyword_keyTelemetry" value="keyTelemetry"/>
+    <string id="task_SetupCl_Task" value="SetupCl_Task"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

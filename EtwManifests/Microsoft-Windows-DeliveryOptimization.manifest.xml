@@ -1,0 +1,29 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-DeliveryOptimization" guid="{f8ad09ba-419c-5134-1750-270f4d0fb889}" resourceFileName="Microsoft-Windows-DeliveryOptimization" messageFileName="Microsoft-Windows-DeliveryOptimization" symbol="MicrosoftWindowsDeliveryOptimization" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="Keine" message="$(string.task_Keine)" value="0"/>
+    </tasks>
+    <events>
+     <event value="0" symbol="Keine" version="0" task="Keine" level="win:Warning" template="KeineArgs"/>
+    </events>
+    <templates>
+     <template tid="KeineArgs">
+      <data name="policyName" inType="win:UnicodeString"/>
+      <data name="policyValue" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_Keine" value="Keine"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

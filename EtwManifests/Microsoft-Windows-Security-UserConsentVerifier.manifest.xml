@@ -1,0 +1,62 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Security-UserConsentVerifier" guid="{40783728-8921-45d0-b231-919037b4b4fd}" resourceFileName="Microsoft-Windows-Security-UserConsentVerifier" messageFileName="Microsoft-Windows-Security-UserConsentVerifier" symbol="MicrosoftWindowsSecurityUserConsentVerifier" source="Xml" >
+    <keywords>
+     <keyword name="UCV" message="$(string.keyword_UCV)" mask="0x1"/>
+     <keyword name="Biometrics" message="$(string.keyword_Biometrics)" mask="0x2"/>
+     <keyword name="Fingerprint" message="$(string.keyword_Fingerprint)" mask="0x4"/>
+    </keywords>
+    <tasks>
+     <task name="Überprüfung" message="$(string.task_Überprüfung)" value="1">
+      <opcodes>
+       <opcode name="Ergebnis" message="$(string.opcode_ÜberprüfungErgebnis)" value="10"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <maps>
+     <valueMap name="VerificationResultMap">
+      <map value="0x1" message="$(string.map_VerificationResultMapEin für die Zustimmungsüberprüfung benötigtes Gerät ist nicht vorhanden.)"/>
+      <map value="0x2" message="$(string.map_VerificationResultMapDas Konto des Benutzers ist nicht für die Zustimmungsüberprüfung konfiguriert.)"/>
+      <map value="0x3" message="$(string.map_VerificationResultMapDie Zustimmungsüberprüfung ist aufgrund einer Systemrichtlinie deaktiviert.)"/>
+      <map value="0x4" message="$(string.map_VerificationResultMapDas für die Zustimmungsüberprüfung erforderliche Gerät ist momentan ausgelastet.)"/>
+      <map value="0x5" message="$(string.map_VerificationResultMapDie maximal zulässige Anzahl von Überprüfungsversuchen wurde überschritten.)"/>
+      <map value="0x6" message="$(string.map_VerificationResultMapDie Zustimmungsüberprüfung wurde vom Benutzer abgebrochen.)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="100" symbol="ÜberprüfungErgebnis" version="0" task="Überprüfung" opcode="Ergebnis" level="win:Informational" keywords="UCV Biometrics Fingerprint" template="ÜberprüfungErgebnisArgs"/>
+     <event value="101" symbol="ÜberprüfungErgebnis101" version="0" task="Überprüfung" opcode="Ergebnis" level="win:Error" keywords="UCV Biometrics Fingerprint" template="ÜberprüfungErgebnis101Args"/>
+    </events>
+    <templates>
+     <template tid="ÜberprüfungErgebnisArgs">
+      <data name="AppName" inType="win:UnicodeString"/>
+      <data name="AppMessage" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ÜberprüfungErgebnis101Args">
+      <data name="AppName" inType="win:UnicodeString"/>
+      <data name="AppMessage" inType="win:UnicodeString"/>
+      <data name="VerificationResult" inType="win:UInt32" map="VerificationResultMap"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_UCV" value="UCV"/>
+    <string id="keyword_Biometrics" value="Biometrics"/>
+    <string id="keyword_Fingerprint" value="Fingerprint"/>
+    <string id="task_Überprüfung" value="Überprüfung"/>
+    <string id="opcode_ÜberprüfungErgebnis" value="Ergebnis"/>
+    <string id="map_VerificationResultMapEin für die Zustimmungsüberprüfung benötigtes Gerät ist nicht vorhanden." value="Ein für die Zustimmungsüberprüfung benötigtes Gerät ist nicht vorhanden."/>
+    <string id="map_VerificationResultMapDas Konto des Benutzers ist nicht für die Zustimmungsüberprüfung konfiguriert." value="Das Konto des Benutzers ist nicht für die Zustimmungsüberprüfung konfiguriert."/>
+    <string id="map_VerificationResultMapDie Zustimmungsüberprüfung ist aufgrund einer Systemrichtlinie deaktiviert." value="Die Zustimmungsüberprüfung ist aufgrund einer Systemrichtlinie deaktiviert."/>
+    <string id="map_VerificationResultMapDas für die Zustimmungsüberprüfung erforderliche Gerät ist momentan ausgelastet." value="Das für die Zustimmungsüberprüfung erforderliche Gerät ist momentan ausgelastet."/>
+    <string id="map_VerificationResultMapDie maximal zulässige Anzahl von Überprüfungsversuchen wurde überschritten." value="Die maximal zulässige Anzahl von Überprüfungsversuchen wurde überschritten."/>
+    <string id="map_VerificationResultMapDie Zustimmungsüberprüfung wurde vom Benutzer abgebrochen." value="Die Zustimmungsüberprüfung wurde vom Benutzer abgebrochen."/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

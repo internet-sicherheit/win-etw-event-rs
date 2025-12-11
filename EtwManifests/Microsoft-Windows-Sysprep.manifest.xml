@@ -1,0 +1,93 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Sysprep" guid="{75ebc33e-77b8-4ba8-9474-4f4a9db2f5c6}" resourceFileName="Microsoft-Windows-Sysprep" messageFileName="Microsoft-Windows-Sysprep" symbol="MicrosoftWindowsSysprep" source="Xml" >
+    <keywords>
+     <keyword name="keyPerformance" message="$(string.keyword_keyPerformance)" mask="0x1"/>
+     <keyword name="keySysprep" message="$(string.keyword_keySysprep)" mask="0x2"/>
+     <keyword name="keyword_400000000000" message="$(string.keyword_keyword_400000000000)" mask="0x400000000000"/>
+    </keywords>
+    <tasks>
+     <task name="RunRegistryDlls" message="$(string.task_RunRegistryDlls)" value="1000"/>
+     <task name="ExterneAnbieterfunktionaufrufen" message="$(string.task_ExterneAnbieterfunktionaufrufen)" value="2000"/>
+     <task name="DieAktionsmetadatendateiwirdgeladen." message="$(string.task_DieAktionsmetadatendateiwirdgeladen.)" value="3000"/>
+     <task name="ErstellteineListederAktionenfüreineKomponente." message="$(string.task_ErstellteineListederAktionenfüreineKomponente.)" value="4000"/>
+     <task name="DateieneinesMusterswerdengelöscht." message="$(string.task_DateieneinesMusterswerdengelöscht.)" value="5000"/>
+     <task name="LöschteinVerzeichnis." message="$(string.task_LöschteinVerzeichnis.)" value="6000"/>
+     <task name="FührteinegesamtePhaseaus." message="$(string.task_FührteinegesamtePhaseaus.)" value="7000"/>
+    </tasks>
+    <events>
+     <event value="1001" symbol="RunRegistryDllsStarten" version="0" task="RunRegistryDlls" opcode="win:Starten" level="win:Informational" keywords="keyPerformance keySysprep" template="RunRegistryDllsStartenArgs"/>
+     <event value="1002" symbol="RunRegistryDllsBeenden" version="0" task="RunRegistryDlls" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance keySysprep" template="RunRegistryDllsBeendenArgs"/>
+     <event value="2001" symbol="ExterneAnbieterfunktionaufrufenStarten" version="0" task="ExterneAnbieterfunktionaufrufen" opcode="win:Starten" level="win:Informational" keywords="keyPerformance keySysprep keyword_400000000000" template="ExterneAnbieterfunktionaufrufenStartenArgs"/>
+     <event value="2002" symbol="ExterneAnbieterfunktionaufrufenBeenden" version="0" task="ExterneAnbieterfunktionaufrufen" opcode="win:Beenden" level="win:Informational" keywords="keyPerformance keySysprep keyword_400000000000" template="ExterneAnbieterfunktionaufrufenStartenArgs"/>
+     <event value="3001" symbol="DieAktionsmetadatendateiwirdgeladen.Starten" version="0" task="DieAktionsmetadatendateiwirdgeladen." opcode="win:Starten" level="win:Informational" keywords="keyPerformance keySysprep" template="DieAktionsmetadatendateiwirdgeladen.StartenArgs"/>
+     <event value="3002" symbol="DieAktionsmetadatendateiwirdgeladen.Beenden" version="0" task="DieAktionsmetadatendateiwirdgeladen." opcode="win:Beenden" level="win:Informational" keywords="keyPerformance keySysprep" template="DieAktionsmetadatendateiwirdgeladen.StartenArgs"/>
+     <event value="4001" symbol="ErstellteineListederAktionenfüreineKomponente.Starten" version="0" task="ErstellteineListederAktionenfüreineKomponente." opcode="win:Starten" level="win:Informational" keywords="keyPerformance keySysprep" template="ErstellteineListederAktionenfüreineKomponente.StartenArgs"/>
+     <event value="4002" symbol="ErstellteineListederAktionenfüreineKomponente.Beenden" version="0" task="ErstellteineListederAktionenfüreineKomponente." opcode="win:Beenden" level="win:Informational" keywords="keyPerformance keySysprep" template="ErstellteineListederAktionenfüreineKomponente.StartenArgs"/>
+     <event value="5001" symbol="DateieneinesMusterswerdengelöscht.Starten" version="0" task="DateieneinesMusterswerdengelöscht." opcode="win:Starten" level="win:Informational" keywords="keyPerformance keySysprep" template="DateieneinesMusterswerdengelöscht.StartenArgs"/>
+     <event value="5002" symbol="DateieneinesMusterswerdengelöscht.Beenden" version="0" task="DateieneinesMusterswerdengelöscht." opcode="win:Beenden" level="win:Informational" keywords="keyPerformance keySysprep" template="DateieneinesMusterswerdengelöscht.BeendenArgs"/>
+     <event value="6001" symbol="LöschteinVerzeichnis.Starten" version="0" task="LöschteinVerzeichnis." opcode="win:Starten" level="win:Informational" keywords="keyPerformance keySysprep" template="LöschteinVerzeichnis.StartenArgs"/>
+     <event value="6002" symbol="LöschteinVerzeichnis.Beenden" version="0" task="LöschteinVerzeichnis." opcode="win:Beenden" level="win:Informational" keywords="keyPerformance keySysprep" template="LöschteinVerzeichnis.BeendenArgs"/>
+     <event value="7001" symbol="FührteinegesamtePhaseaus.Starten" version="0" task="FührteinegesamtePhaseaus." opcode="win:Starten" level="win:Informational" keywords="keyPerformance keySysprep" template="FührteinegesamtePhaseaus.StartenArgs"/>
+     <event value="7002" symbol="FührteinegesamtePhaseaus.Beenden" version="0" task="FührteinegesamtePhaseaus." opcode="win:Beenden" level="win:Informational" keywords="keyPerformance keySysprep" template="RunRegistryDllsBeendenArgs"/>
+    </events>
+    <templates>
+     <template tid="RunRegistryDllsStartenArgs">
+      <data name="BasePath" inType="win:UnicodeString"/>
+      <data name="Phase" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RunRegistryDllsBeendenArgs">
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="ExterneAnbieterfunktionaufrufenStartenArgs">
+      <data name="DllName" inType="win:UnicodeString"/>
+      <data name="FunctionName" inType="win:AnsiString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="DieAktionsmetadatendateiwirdgeladen.StartenArgs">
+      <data name="ActionFilePath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ErstellteineListederAktionenfüreineKomponente.StartenArgs">
+      <data name="ComponentName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DateieneinesMusterswerdengelöscht.StartenArgs">
+      <data name="DirectoryPath" inType="win:UnicodeString"/>
+      <data name="FilePattern" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DateieneinesMusterswerdengelöscht.BeendenArgs">
+      <data name="DirectoryPath" inType="win:UnicodeString"/>
+      <data name="FilePattern" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="LöschteinVerzeichnis.StartenArgs">
+      <data name="DirectoryPath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="LöschteinVerzeichnis.BeendenArgs">
+      <data name="DirectoryPath" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="FührteinegesamtePhaseaus.StartenArgs">
+      <data name="Phase" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_keyPerformance" value="keyPerformance"/>
+    <string id="keyword_keySysprep" value="keySysprep"/>
+    <string id="keyword_keyword_400000000000" value="keyword_400000000000"/>
+    <string id="task_RunRegistryDlls" value="RunRegistryDlls"/>
+    <string id="task_ExterneAnbieterfunktionaufrufen" value="ExterneAnbieterfunktionaufrufen"/>
+    <string id="task_DieAktionsmetadatendateiwirdgeladen." value="DieAktionsmetadatendateiwirdgeladen."/>
+    <string id="task_ErstellteineListederAktionenfüreineKomponente." value="ErstellteineListederAktionenfüreineKomponente."/>
+    <string id="task_DateieneinesMusterswerdengelöscht." value="DateieneinesMusterswerdengelöscht."/>
+    <string id="task_LöschteinVerzeichnis." value="LöschteinVerzeichnis."/>
+    <string id="task_FührteinegesamtePhaseaus." value="FührteinegesamtePhaseaus."/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

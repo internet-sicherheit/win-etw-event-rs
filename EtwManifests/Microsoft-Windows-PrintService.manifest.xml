@@ -1,0 +1,1113 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-PrintService" guid="{747ef6fd-e535-4d16-b510-42c90f6873a1}" resourceFileName="Microsoft-Windows-PrintService" messageFileName="Microsoft-Windows-PrintService" symbol="MicrosoftWindowsPrintService" source="Xml" >
+    <keywords>
+     <keyword name="SPOOLER_KEYWORD_LOCALSPL" message="$(string.keyword_SPOOLER_KEYWORD_LOCALSPL)" mask="0x1"/>
+     <keyword name="SPOOLER_KEYWORD_WIN32SPL" message="$(string.keyword_SPOOLER_KEYWORD_WIN32SPL)" mask="0x2"/>
+     <keyword name="SPOOLER_KEYWORD_PRINTER" message="$(string.keyword_SPOOLER_KEYWORD_PRINTER)" mask="0x20"/>
+     <keyword name="SPOOLER_KEYWORD_JOB" message="$(string.keyword_SPOOLER_KEYWORD_JOB)" mask="0x40"/>
+     <keyword name="SPOOLER_KEYWORD_CONNECTION" message="$(string.keyword_SPOOLER_KEYWORD_CONNECTION)" mask="0x80"/>
+     <keyword name="SPOOLER_KEYWORD_DRIVER" message="$(string.keyword_SPOOLER_KEYWORD_DRIVER)" mask="0x100"/>
+     <keyword name="SPOOLER_KEYWORD_SETUP" message="$(string.keyword_SPOOLER_KEYWORD_SETUP)" mask="0x200"/>
+     <keyword name="SPOOLER_KEYWORD_TRACE" message="$(string.keyword_SPOOLER_KEYWORD_TRACE)" mask="0x400"/>
+     <keyword name="SPOOLER_KEYWORD_CLASSIC" message="$(string.keyword_SPOOLER_KEYWORD_CLASSIC)" mask="0x800"/>
+     <keyword name="SPOOLER_KEYWORD_ACTIVE_DIR" message="$(string.keyword_SPOOLER_KEYWORD_ACTIVE_DIR)" mask="0x1000"/>
+     <keyword name="SPOOLER_KEYWORD_ROUTER" message="$(string.keyword_SPOOLER_KEYWORD_ROUTER)" mask="0x2000"/>
+     <keyword name="SPOOLER_KEYWORD_CSR" message="$(string.keyword_SPOOLER_KEYWORD_CSR)" mask="0x8000"/>
+     <keyword name="SPOOLER_KEYWORD_PIPELINE" message="$(string.keyword_SPOOLER_KEYWORD_PIPELINE)" mask="0x10000"/>
+     <keyword name="SPOOLER_KEYWORD" message="$(string.keyword_SPOOLER_KEYWORD)" mask="0x20000"/>
+     <keyword name="SPOOLER_KEYWORD_PRINT_DRIVER_SANDBOX" message="$(string.keyword_SPOOLER_KEYWORD_PRINT_DRIVER_SANDBOX)" mask="0x40000"/>
+     <keyword name="XPS_PRINT_API_KEYWORD" message="$(string.keyword_XPS_PRINT_API_KEYWORD)" mask="0x80000"/>
+     <keyword name="XPS_PRINT_API_KEYWORD_PERFORMANCE" message="$(string.keyword_XPS_PRINT_API_KEYWORD_PERFORMANCE)" mask="0x100000"/>
+     <keyword name="SPOOLER_KEYWORD_BRANCH_OFFICE_PRINTING" message="$(string.keyword_SPOOLER_KEYWORD_BRANCH_OFFICE_PRINTING)" mask="0x200000"/>
+     <keyword name="SETUP_WFS_KEYWORD" message="$(string.keyword_SETUP_WFS_KEYWORD)" mask="0x400000"/>
+     <keyword name="SPOOLER_KEYWORD_WSDMON" message="$(string.keyword_SPOOLER_KEYWORD_WSDMON)" mask="0x800000"/>
+    </keywords>
+    <tasks>
+     <task name="EinDruckanbieterwirdinitialisiert" message="$(string.task_EinDruckanbieterwirdinitialisiert)" value="1">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDruckanbieterwirdinitialisiertFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="Druckerhandlewirdgeöffnet" message="$(string.task_Druckerhandlewirdgeöffnet)" value="2">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_DruckerhandlewirdgeöffnetSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_DruckerhandlewirdgeöffnetFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="Druckerhandlewirdgeschlossen" message="$(string.task_Druckerhandlewirdgeschlossen)" value="3">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_DruckerhandlewirdgeschlossenSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_DruckerhandlewirdgeschlossenFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckerwirdhinzugefügt" message="$(string.task_EinDruckerwirdhinzugefügt)" value="4">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDruckerwirdhinzugefügtFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckerwirdgelöscht" message="$(string.task_EinDruckerwirdgelöscht)" value="5">
+      <opcodes>
+       <opcode name="Spoolervorganggestartet" message="$(string.opcode_EinDruckerwirdgelöschtSpoolervorganggestartet)" value="10"/>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDruckerwirdgelöschtSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDruckerwirdgelöschtFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EineDruckerverbindungwirdhinzugefügt" message="$(string.task_EineDruckerverbindungwirdhinzugefügt)" value="6">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EineDruckerverbindungwirdhinzugefügtSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EineDruckerverbindungwirdhinzugefügtFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EineDruckerverbindungwirdgelöscht" message="$(string.task_EineDruckerverbindungwirdgelöscht)" value="7">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EineDruckerverbindungwirdgelöschtSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EineDruckerverbindungwirdgelöschtFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckertreiberwirdhinzugefügt" message="$(string.task_EinDruckertreiberwirdhinzugefügt)" value="8">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang)" value="12"/>
+       <opcode name="Spoolerwarnung" message="$(string.opcode_EinDruckertreiberwirdhinzugefügtSpoolerwarnung)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckertreiberwirdgelöscht" message="$(string.task_EinDruckertreiberwirdgelöscht)" value="9">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDruckertreiberwirdgelöschtSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="Spoolerwarnung" message="$(string.opcode_EinDruckertreiberwirdgelöschtSpoolerwarnung)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="EinDokumentdruckauftragwirdgestartet" message="$(string.task_EinDokumentdruckauftragwirdgestartet)" value="11">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDokumentdruckauftragwirdgestartetSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDokumentdruckauftragwirdgestartetFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EinDokumentdruckauftragwirdbeendet" message="$(string.task_EinDokumentdruckauftragwirdbeendet)" value="12">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDokumentdruckauftragwirdbeendetSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDokumentdruckauftragwirdbeendetFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EineneueDokumentseitewirdgestartet" message="$(string.task_EineneueDokumentseitewirdgestartet)" value="14">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EineneueDokumentseitewirdgestartetSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EineneueDokumentseitewirdgestartetFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EineDokumentseitewirdbeendet" message="$(string.task_EineDokumentseitewirdbeendet)" value="15">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EineDokumentseitewirdbeendetSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EineDokumentseitewirdbeendetFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="Druckerkonfigurationwirdfestgelegt" message="$(string.task_Druckerkonfigurationwirdfestgelegt)" value="17">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_DruckerkonfigurationwirdfestgelegtSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_DruckerkonfigurationwirdfestgelegtFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EineDruckertreiber_INF_Dateiwirdanalysiert" message="$(string.task_EineDruckertreiber_INF_Dateiwirdanalysiert)" value="18">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EineDruckertreiber_INF_DateiwirdanalysiertSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EineDruckertreiber_INF_DateiwirdanalysiertFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckertreiberwirdinstalliert" message="$(string.task_EinDruckertreiberwirdinstalliert)" value="19">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDruckertreiberwirdinstalliertSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang)" value="12"/>
+       <opcode name="Spoolerwarnung" message="$(string.opcode_EinDruckertreiberwirdinstalliertSpoolerwarnung)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckertreiberpaketwirdkopiert" message="$(string.task_EinDruckertreiberpaketwirdkopiert)" value="20">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDruckertreiberpaketwirdkopiertSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDruckertreiberpaketwirdkopiertFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="Druckerwerdenaufgezählt" message="$(string.task_Druckerwerdenaufgezählt)" value="21">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_DruckerwerdenaufgezähltSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_DruckerwerdenaufgezähltFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="DerAblaufeinerSpoolermeldungwirdverfolgt." message="$(string.task_DerAblaufeinerSpoolermeldungwirdverfolgt.)" value="22">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_DerAblaufeinerSpoolermeldungwirdverfolgt.FehlerbeiSpoolervorgang)" value="12"/>
+       <opcode name="Spoolerablaufverfolgung" message="$(string.opcode_DerAblaufeinerSpoolermeldungwirdverfolgt.Spoolerablaufverfolgung)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckerwirdangehalten" message="$(string.task_EinDruckerwirdangehalten)" value="23">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDruckerwirdangehaltenSpoolervorgangerfolgreich)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="DerBetriebeinesDruckerswirdfortgesetzt." message="$(string.task_DerBetriebeinesDruckerswirdfortgesetzt.)" value="24">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_DerBetriebeinesDruckerswirdfortgesetzt.Spoolervorgangerfolgreich)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="AufträgewerdenausderDruckerwarteschlangeentfernt" message="$(string.task_AufträgewerdenausderDruckerwarteschlangeentfernt)" value="25">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_AufträgewerdenausderDruckerwarteschlangeentferntSpoolervorgangerfolgreich)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="EinDokumentwirdgedruckt" message="$(string.task_EinDokumentwirdgedruckt)" value="26">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDokumentwirdgedrucktSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDokumentwirdgedrucktFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EinDokumentwirdgelöscht" message="$(string.task_EinDokumentwirdgelöscht)" value="27">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDokumentwirdgelöschtSpoolervorgangerfolgreich)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckformularwirdhinzugefügt" message="$(string.task_EinDruckformularwirdhinzugefügt)" value="28">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDruckformularwirdhinzugefügtSpoolervorgangerfolgreich)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckformularwirdgelöscht" message="$(string.task_EinDruckformularwirdgelöscht)" value="29">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDruckformularwirdgelöschtSpoolervorgangerfolgreich)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckerwirdfreigegeben" message="$(string.task_EinDruckerwirdfreigegeben)" value="30">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDruckerwirdfreigegebenSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDruckerwirdfreigegebenFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="DieDruckerfreigabewirdaufgehoben." message="$(string.task_DieDruckerfreigabewirdaufgehoben.)" value="31">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_DieDruckerfreigabewirdaufgehoben.Spoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_DieDruckerfreigabewirdaufgehoben.FehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="DerDruckspoolerwirdinitialisiert" message="$(string.task_DerDruckspoolerwirdinitialisiert)" value="32">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_DerDruckspoolerwirdinitialisiertFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckerwirdinActiveDirectoryveröffentlicht" message="$(string.task_EinDruckerwirdinActiveDirectoryveröffentlicht)" value="33">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDruckerwirdinActiveDirectoryveröffentlichtSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDruckerwirdinActiveDirectoryveröffentlichtFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckerwirdausActiveDirectoryentfernt" message="$(string.task_EinDruckerwirdausActiveDirectoryentfernt)" value="34">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDruckerwirdausActiveDirectoryentferntSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDruckerwirdausActiveDirectoryentferntFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckerwirdbereinigt" message="$(string.task_EinDruckerwirdbereinigt)" value="35">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_EinDruckerwirdbereinigtSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDruckerwirdbereinigtFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="Initialisierung" message="$(string.task_Initialisierung)" value="36">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_InitialisierungFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckprozessorwirdinitialisiert" message="$(string.task_EinDruckprozessorwirdinitialisiert)" value="37">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDruckprozessorwirdinitialisiertFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EinDruckertreiberpaketwirdüberprüftoderneugeneriert." message="$(string.task_EinDruckertreiberpaketwirdüberprüftoderneugeneriert.)" value="38">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDruckertreiberpaketwirdüberprüftoderneugeneriert.FehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="Druckspoolerbefehl(e)wird(werden)weitergeleitet" message="$(string.task_Druckspoolerbefehl(e)wird(werden)weitergeleitet)" value="39">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="ClientseitigesRendering" message="$(string.task_ClientseitigesRendering)" value="41">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_ClientseitigesRenderingSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_ClientseitigesRenderingFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="DruckfilterwerdeninderSpoolerpipelineausgeführt" message="$(string.task_DruckfilterwerdeninderSpoolerpipelineausgeführt)" value="42">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="Druckauftragsdiagnose" message="$(string.task_Druckauftragsdiagnose)" value="43"/>
+     <task name="ProzessbeendungaufgrundeinesschwerwiegendenFehlers" message="$(string.task_ProzessbeendungaufgrundeinesschwerwiegendenFehlers)" value="44">
+      <opcodes>
+       <opcode name="UnerwarteteProzessbeendung" message="$(string.opcode_ProzessbeendungaufgrundeinesschwerwiegendenFehlersUnerwarteteProzessbeendung)" value="16"/>
+      </opcodes>
+     </task>
+     <task name="EinVerzeichniswirdgelöscht" message="$(string.task_EinVerzeichniswirdgelöscht)" value="45">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinVerzeichniswirdgelöschtFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EinDateivorgangwirdausgeführt" message="$(string.task_EinDateivorgangwirdausgeführt)" value="46">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinDateivorgangwirdausgeführtFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="Spooler_RPC_Endpunktewerdenaktiviert" message="$(string.task_Spooler_RPC_Endpunktewerdenaktiviert)" value="47">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_Spooler_RPC_EndpunktewerdenaktiviertFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetzt" message="$(string.task_DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetzt)" value="48">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztSpoolervorgangerfolgreich)" value="11"/>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztFehlerbeiSpoolervorgang)" value="12"/>
+       <opcode name="Spoolerablaufverfolgung" message="$(string.opcode_DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztSpoolerablaufverfolgung)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="DerStandarddruckerwirdgeändert" message="$(string.task_DerStandarddruckerwirdgeändert)" value="49">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_DerStandarddruckerwirdgeändertSpoolervorgangerfolgreich)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="DruckertreiberundanderePlug_Inswerdenisoliert" message="$(string.task_DruckertreiberundanderePlug_Inswerdenisoliert)" value="50">
+      <opcodes>
+       <opcode name="Spoolervorgangerfolgreich" message="$(string.opcode_DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="XPS_Druck_API_Aufrufewerdenausgeführt" message="$(string.task_XPS_Druck_API_Aufrufewerdenausgeführt)" value="51">
+      <opcodes>
+       <opcode name="XPS_Druck_API_Fehler" message="$(string.opcode_XPS_Druck_API_AufrufewerdenausgeführtXPS_Druck_API_Fehler)" value="17"/>
+      </opcodes>
+     </task>
+     <task name="LeistungsüberwachungfürXPS_Druck_API" message="$(string.task_LeistungsüberwachungfürXPS_Druck_API)" value="52"/>
+     <task name="LeistungsüberwachungfürallgemeinenDruckspooler" message="$(string.task_LeistungsüberwachungfürallgemeinenDruckspooler)" value="53"/>
+     <task name="Druckertreibervorgang" message="$(string.task_Druckertreibervorgang)" value="54">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_DruckertreibervorgangFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="DieVerbindungwurdeneukonfiguriert." message="$(string.task_DieVerbindungwurdeneukonfiguriert.)" value="55">
+      <opcodes>
+       <opcode name="Spoolerablaufverfolgung" message="$(string.opcode_DieVerbindungwurdeneukonfiguriert.Spoolerablaufverfolgung)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="Windows_Faxund_Scanwirdgewartet..." message="$(string.task_Windows_Faxund_Scanwirdgewartet...)" value="56">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_Windows_Faxund_Scanwirdgewartet...FehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="EinePlug&Play_GeräteobjektinstanzfüreinenDruckerwirderstellt..." message="$(string.task_EinePlug&Play_GeräteobjektinstanzfüreinenDruckerwirderstellt...)" value="57">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_EinePlug&Play_GeräteobjektinstanzfüreinenDruckerwirderstellt...FehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="WS_Print_Portmonitorwirdinitialisiert" message="$(string.task_WS_Print_Portmonitorwirdinitialisiert)" value="58">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_WS_Print_PortmonitorwirdinitialisiertFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="DasOfflinearchivfürBOP_Ereignisseistvoll." message="$(string.task_DasOfflinearchivfürBOP_Ereignisseistvoll.)" value="59">
+      <opcodes>
+       <opcode name="Spoolerablaufverfolgung" message="$(string.opcode_DasOfflinearchivfürBOP_Ereignisseistvoll.Spoolerablaufverfolgung)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="Gerätesteuerungsdruck" message="$(string.task_Gerätesteuerungsdruck)" value="60">
+      <opcodes>
+       <opcode name="FehlerbeiSpoolervorgang" message="$(string.opcode_GerätesteuerungsdruckFehlerbeiSpoolervorgang)" value="12"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="99" symbol="ProzessbeendungaufgrundeinesschwerwiegendenFehlersUnerwarteteProzessbeendung" version="0" task="ProzessbeendungaufgrundeinesschwerwiegendenFehlers" opcode="UnerwarteteProzessbeendung" level="win:Critical" keywords="SPOOLER_KEYWORD" template="ProzessbeendungaufgrundeinesschwerwiegendenFehlersUnerwarteteProzessbeendungArgs"/>
+     <event value="100" symbol="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich" version="0" task="EinDruckerwirdhinzugefügt" opcode="Spoolervorgangerfolgreich" level="win:Verbose" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_PRINTER" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="101" symbol="EinDruckerwirdhinzugefügtFehlerbeiSpoolervorgang" version="0" task="EinDruckerwirdhinzugefügt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_PRINTER" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="104" symbol="EinDruckerwirdgelöschtSpoolervorgangerfolgreich" version="0" task="EinDruckerwirdgelöscht" opcode="Spoolervorgangerfolgreich" level="win:Verbose" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_PRINTER" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="105" symbol="EinDruckerwirdgelöschtFehlerbeiSpoolervorgang" version="0" task="EinDruckerwirdgelöscht" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_PRINTER" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="106" symbol="EinDokumentdruckauftragwirdgestartetSpoolervorgangerfolgreich" version="0" task="EinDokumentdruckauftragwirdgestartet" opcode="Spoolervorgangerfolgreich" level="win:Verbose" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_JOB" template="EinDokumentdruckauftragwirdgestartetSpoolervorgangerfolgreichArgs"/>
+     <event value="107" symbol="EinDokumentdruckauftragwirdgestartetFehlerbeiSpoolervorgang" version="0" task="EinDokumentdruckauftragwirdgestartet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_JOB" template="EinDokumentdruckauftragwirdgestartetSpoolervorgangerfolgreichArgs"/>
+     <event value="110" symbol="EinDokumentdruckauftragwirdbeendetSpoolervorgangerfolgreich" version="0" task="EinDokumentdruckauftragwirdbeendet" opcode="Spoolervorgangerfolgreich" level="win:Verbose" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_JOB" template="EinDokumentdruckauftragwirdgestartetSpoolervorgangerfolgreichArgs"/>
+     <event value="111" symbol="EinDokumentdruckauftragwirdbeendetFehlerbeiSpoolervorgang" version="0" task="EinDokumentdruckauftragwirdbeendet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_JOB" template="EinDokumentdruckauftragwirdgestartetSpoolervorgangerfolgreichArgs"/>
+     <event value="114" symbol="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreich" version="0" task="EinDruckertreiberwirdhinzugefügt" opcode="Spoolervorgangerfolgreich" level="win:Verbose" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_DRIVER" template="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="115" symbol="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang" version="0" task="EinDruckertreiberwirdhinzugefügt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_DRIVER" template="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="118" symbol="DruckerhandlewirdgeöffnetSpoolervorgangerfolgreich" version="0" task="Druckerhandlewirdgeöffnet" opcode="Spoolervorgangerfolgreich" level="win:Verbose" keywords="SPOOLER_KEYWORD_LOCALSPL" template="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="119" symbol="DruckerhandlewirdgeöffnetFehlerbeiSpoolervorgang" version="0" task="Druckerhandlewirdgeöffnet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_LOCALSPL" template="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="122" symbol="EineneueDokumentseitewirdgestartetSpoolervorgangerfolgreich" version="0" task="EineneueDokumentseitewirdgestartet" opcode="Spoolervorgangerfolgreich" level="win:Verbose" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_JOB" template="EinDokumentdruckauftragwirdgestartetSpoolervorgangerfolgreichArgs"/>
+     <event value="123" symbol="EineneueDokumentseitewirdgestartetFehlerbeiSpoolervorgang" version="0" task="EineneueDokumentseitewirdgestartet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_JOB" template="EinDokumentdruckauftragwirdgestartetSpoolervorgangerfolgreichArgs"/>
+     <event value="124" symbol="EineDokumentseitewirdbeendetSpoolervorgangerfolgreich" version="0" task="EineDokumentseitewirdbeendet" opcode="Spoolervorgangerfolgreich" level="win:Verbose" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_JOB" template="EinDokumentdruckauftragwirdgestartetSpoolervorgangerfolgreichArgs"/>
+     <event value="125" symbol="EineDokumentseitewirdbeendetFehlerbeiSpoolervorgang" version="0" task="EineDokumentseitewirdbeendet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_JOB" template="EinDokumentdruckauftragwirdgestartetSpoolervorgangerfolgreichArgs"/>
+     <event value="131" symbol="DruckerkonfigurationwirdfestgelegtFehlerbeiSpoolervorgang" version="0" task="Druckerkonfigurationwirdfestgelegt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_PRINTER" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="200" symbol="EineDruckerverbindungwirdhinzugefügtSpoolervorgangerfolgreich" version="0" task="EineDruckerverbindungwirdhinzugefügt" opcode="Spoolervorgangerfolgreich" level="win:Verbose" keywords="SPOOLER_KEYWORD_WIN32SPL SPOOLER_KEYWORD_CONNECTION" template="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="201" symbol="EineDruckerverbindungwirdhinzugefügtFehlerbeiSpoolervorgang" version="0" task="EineDruckerverbindungwirdhinzugefügt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_WIN32SPL SPOOLER_KEYWORD_CONNECTION" template="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="204" symbol="EineDruckerverbindungwirdgelöschtSpoolervorgangerfolgreich" version="0" task="EineDruckerverbindungwirdgelöscht" opcode="Spoolervorgangerfolgreich" level="win:Verbose" keywords="SPOOLER_KEYWORD_WIN32SPL SPOOLER_KEYWORD_CONNECTION" template="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="205" symbol="EineDruckerverbindungwirdgelöschtFehlerbeiSpoolervorgang" version="0" task="EineDruckerverbindungwirdgelöscht" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_WIN32SPL SPOOLER_KEYWORD_CONNECTION" template="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="207" symbol="DruckerhandlewirdgeöffnetFehlerbeiSpoolervorgang207" version="0" task="Druckerhandlewirdgeöffnet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_WIN32SPL" template="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="210" symbol="DruckerhandlewirdgeschlossenSpoolervorgangerfolgreich" version="0" task="Druckerhandlewirdgeschlossen" opcode="Spoolervorgangerfolgreich" level="win:Verbose" keywords="SPOOLER_KEYWORD_WIN32SPL" template="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="211" symbol="DruckerhandlewirdgeschlossenFehlerbeiSpoolervorgang" version="0" task="Druckerhandlewirdgeschlossen" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_WIN32SPL" template="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="212" symbol="EineDruckertreiber_INF_DateiwirdanalysiertSpoolervorgangerfolgreich" version="0" task="EineDruckertreiber_INF_Dateiwirdanalysiert" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_SETUP" template="EineDruckertreiber_INF_DateiwirdanalysiertSpoolervorgangerfolgreichArgs"/>
+     <event value="213" symbol="EineDruckertreiber_INF_DateiwirdanalysiertFehlerbeiSpoolervorgang" version="0" task="EineDruckertreiber_INF_Dateiwirdanalysiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_SETUP" template="EineDruckertreiber_INF_DateiwirdanalysiertSpoolervorgangerfolgreichArgs"/>
+     <event value="214" symbol="EinDruckertreiberwirdinstalliertSpoolervorgangerfolgreich" version="0" task="EinDruckertreiberwirdinstalliert" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertSpoolervorgangerfolgreichArgs"/>
+     <event value="215" symbol="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang" version="0" task="EinDruckertreiberwirdinstalliert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertSpoolervorgangerfolgreichArgs"/>
+     <event value="216" symbol="EinDruckertreiberwirdinstalliertSpoolervorgangerfolgreich216" version="0" task="EinDruckertreiberwirdinstalliert" opcode="Spoolervorgangerfolgreich" level="win:Verbose" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertSpoolervorgangerfolgreich216Args"/>
+     <event value="217" symbol="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang217" version="0" task="EinDruckertreiberwirdinstalliert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertSpoolervorgangerfolgreich216Args"/>
+     <event value="218" symbol="EinDruckertreiberpaketwirdkopiertSpoolervorgangerfolgreich" version="0" task="EinDruckertreiberpaketwirdkopiert" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberpaketwirdkopiertSpoolervorgangerfolgreichArgs"/>
+     <event value="219" symbol="EinDruckertreiberpaketwirdkopiertFehlerbeiSpoolervorgang" version="0" task="EinDruckertreiberpaketwirdkopiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberpaketwirdkopiertSpoolervorgangerfolgreichArgs"/>
+     <event value="220" symbol="DruckerwerdenaufgezähltSpoolervorgangerfolgreich" version="0" task="Druckerwerdenaufgezählt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_WIN32SPL SPOOLER_KEYWORD_PRINTER" template="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="221" symbol="DruckerwerdenaufgezähltFehlerbeiSpoolervorgang" version="0" task="Druckerwerdenaufgezählt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_WIN32SPL SPOOLER_KEYWORD_PRINTER" template="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="222" symbol="DerAblaufeinerSpoolermeldungwirdverfolgt.Spoolerablaufverfolgung" version="0" task="DerAblaufeinerSpoolermeldungwirdverfolgt." opcode="Spoolerablaufverfolgung" level="win:Informational" keywords="SPOOLER_KEYWORD_TRACE" template="DerAblaufeinerSpoolermeldungwirdverfolgt.SpoolerablaufverfolgungArgs"/>
+     <event value="223" symbol="DerAblaufeinerSpoolermeldungwirdverfolgt.FehlerbeiSpoolervorgang" version="0" task="DerAblaufeinerSpoolermeldungwirdverfolgt." opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_TRACE" template="DerAblaufeinerSpoolermeldungwirdverfolgt.SpoolerablaufverfolgungArgs"/>
+     <event value="224" symbol="ClientseitigesRenderingFehlerbeiSpoolervorgang" version="0" task="ClientseitigesRendering" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CSR" template="ClientseitigesRenderingFehlerbeiSpoolervorgangArgs"/>
+     <event value="225" symbol="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang225" version="0" task="EinDruckertreiberwirdinstalliert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang225Args"/>
+     <event value="226" symbol="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang226" version="0" task="EinDruckertreiberwirdinstalliert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang226Args"/>
+     <event value="227" symbol="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang227" version="0" task="EinDruckertreiberwirdinstalliert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang225Args"/>
+     <event value="228" symbol="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang228" version="0" task="EinDruckertreiberwirdinstalliert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang225Args"/>
+     <event value="229" symbol="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang229" version="0" task="EinDruckertreiberwirdinstalliert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang225Args"/>
+     <event value="230" symbol="EinDruckertreiberwirdinstalliertSpoolerwarnung" version="0" task="EinDruckertreiberwirdinstalliert" opcode="Spoolerwarnung" level="win:Warning" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang225Args"/>
+     <event value="231" symbol="EinDruckertreiberwirdinstalliertSpoolerwarnung231" version="0" task="EinDruckertreiberwirdinstalliert" opcode="Spoolerwarnung" level="win:Warning" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang225Args"/>
+     <event value="232" symbol="EinDruckertreiberwirdinstalliertSpoolerwarnung232" version="0" task="EinDruckertreiberwirdinstalliert" opcode="Spoolerwarnung" level="win:Warning" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang225Args"/>
+     <event value="233" symbol="EinDruckertreiberwirdinstalliertSpoolerwarnung233" version="0" task="EinDruckertreiberwirdinstalliert" opcode="Spoolerwarnung" level="win:Warning" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang225Args"/>
+     <event value="234" symbol="EinDruckertreiberwirdgelöschtSpoolerwarnung" version="0" task="EinDruckertreiberwirdgelöscht" opcode="Spoolerwarnung" level="win:Warning" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang225Args"/>
+     <event value="235" symbol="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang235" version="0" task="EinDruckertreiberwirdinstalliert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang235Args"/>
+     <event value="236" symbol="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang236" version="0" task="EinDruckertreiberwirdinstalliert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang236Args"/>
+     <event value="237" symbol="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang237" version="0" task="EinDruckertreiberwirdinstalliert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang237Args"/>
+     <event value="238" symbol="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang238" version="0" task="EinDruckertreiberwirdinstalliert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang235Args"/>
+     <event value="239" symbol="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang239" version="0" task="EinDruckertreiberwirdinstalliert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang235Args"/>
+     <event value="240" symbol="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang240" version="0" task="EinDruckertreiberwirdinstalliert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang240Args"/>
+     <event value="241" symbol="EinDruckertreiberwirdinstalliertSpoolerwarnung241" version="0" task="EinDruckertreiberwirdinstalliert" opcode="Spoolerwarnung" level="win:Warning" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_SETUP" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang225Args"/>
+     <event value="242" symbol="EinDruckerwirdhinzugefügtFehlerbeiSpoolervorgang242" version="0" task="EinDruckerwirdhinzugefügt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_SETUP" template="EinDruckerwirdhinzugefügtFehlerbeiSpoolervorgang242Args"/>
+     <event value="300" symbol="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300" version="0" task="EinDruckerwirdhinzugefügt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="301" symbol="EinDruckerwirdgelöschtSpoolervorgangerfolgreich301" version="0" task="EinDruckerwirdgelöscht" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="302" symbol="EinDruckerwirdgelöschtSpoolervorganggestartet" version="0" task="EinDruckerwirdgelöscht" opcode="Spoolervorganggestartet" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="303" symbol="EinDruckerwirdangehaltenSpoolervorgangerfolgreich" version="0" task="EinDruckerwirdangehalten" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="304" symbol="DerBetriebeinesDruckerswirdfortgesetzt.Spoolervorgangerfolgreich" version="0" task="DerBetriebeinesDruckerswirdfortgesetzt." opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="305" symbol="AufträgewerdenausderDruckerwarteschlangeentferntSpoolervorgangerfolgreich" version="0" task="AufträgewerdenausderDruckerwarteschlangeentfernt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="306" symbol="DruckerkonfigurationwirdfestgelegtSpoolervorgangerfolgreich" version="0" task="Druckerkonfigurationwirdfestgelegt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="307" symbol="EinDokumentwirdgedrucktSpoolervorgangerfolgreich" version="0" task="EinDokumentwirdgedruckt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_JOB SPOOLER_KEYWORD_CLASSIC" template="EinDokumentwirdgedrucktSpoolervorgangerfolgreichArgs"/>
+     <event value="308" symbol="EinDokumentwirdgedrucktSpoolervorgangerfolgreich308" version="0" task="EinDokumentwirdgedruckt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_JOB SPOOLER_KEYWORD_CLASSIC" template="EinDokumentwirdgedrucktSpoolervorgangerfolgreich308Args"/>
+     <event value="309" symbol="EinDokumentwirdgedrucktSpoolervorgangerfolgreich309" version="0" task="EinDokumentwirdgedruckt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_JOB SPOOLER_KEYWORD_CLASSIC" template="EinDokumentwirdgedrucktSpoolervorgangerfolgreich308Args"/>
+     <event value="310" symbol="EinDokumentwirdgelöschtSpoolervorgangerfolgreich" version="0" task="EinDokumentwirdgelöscht" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_JOB SPOOLER_KEYWORD_CLASSIC" template="EinDokumentwirdgedrucktSpoolervorgangerfolgreich308Args"/>
+     <event value="311" symbol="EinDokumentwirdgedrucktSpoolervorgangerfolgreich311" version="0" task="EinDokumentwirdgedruckt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_JOB SPOOLER_KEYWORD_CLASSIC" template="EinDokumentwirdgedrucktSpoolervorgangerfolgreich311Args"/>
+     <event value="312" symbol="EinDruckformularwirdhinzugefügtSpoolervorgangerfolgreich" version="0" task="EinDruckformularwirdhinzugefügt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_JOB SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="313" symbol="EinDruckformularwirdgelöschtSpoolervorgangerfolgreich" version="0" task="EinDruckformularwirdgelöscht" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_JOB SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="314" symbol="EinDokumentwirdgedrucktFehlerbeiSpoolervorgang" version="0" task="EinDokumentwirdgedruckt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_JOB SPOOLER_KEYWORD_CLASSIC" template="EinDokumentwirdgedrucktSpoolervorgangerfolgreich311Args"/>
+     <event value="315" symbol="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgang" version="0" task="EinDruckerwirdfreigegeben" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgangArgs"/>
+     <event value="316" symbol="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreich316" version="0" task="EinDruckertreiberwirdhinzugefügt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDokumentwirdgedrucktSpoolervorgangerfolgreich308Args"/>
+     <event value="317" symbol="EinDruckertreiberwirdgelöschtSpoolervorgangerfolgreich" version="0" task="EinDruckertreiberwirdgelöscht" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="318" symbol="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang318" version="0" task="EinDruckertreiberwirdhinzugefügt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgangArgs"/>
+     <event value="319" symbol="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319" version="0" task="EinDruckertreiberwirdhinzugefügt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="320" symbol="DerDruckspoolerwirdinitialisiertFehlerbeiSpoolervorgang" version="0" task="DerDruckspoolerwirdinitialisiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_CLASSIC" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="321" symbol="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreich321" version="0" task="EinDruckertreiberwirdhinzugefügt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="322" symbol="EinDruckerwirdinActiveDirectoryveröffentlichtFehlerbeiSpoolervorgang" version="0" task="EinDruckerwirdinActiveDirectoryveröffentlicht" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgangArgs"/>
+     <event value="323" symbol="EinDruckerwirdinActiveDirectoryveröffentlichtFehlerbeiSpoolervorgang323" version="0" task="EinDruckerwirdinActiveDirectoryveröffentlicht" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="325" symbol="EinDruckerwirdausActiveDirectoryentferntFehlerbeiSpoolervorgang" version="0" task="EinDruckerwirdausActiveDirectoryentfernt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgangArgs"/>
+     <event value="326" symbol="EinDruckerwirdinActiveDirectoryveröffentlichtFehlerbeiSpoolervorgang326" version="0" task="EinDruckerwirdinActiveDirectoryveröffentlicht" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="327" symbol="EinDruckerwirdinActiveDirectoryveröffentlichtFehlerbeiSpoolervorgang327" version="0" task="EinDruckerwirdinActiveDirectoryveröffentlicht" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgangArgs"/>
+     <event value="328" symbol="EinDruckerwirdinActiveDirectoryveröffentlichtFehlerbeiSpoolervorgang328" version="0" task="EinDruckerwirdinActiveDirectoryveröffentlicht" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="329" symbol="EinDruckerwirdinActiveDirectoryveröffentlichtFehlerbeiSpoolervorgang329" version="0" task="EinDruckerwirdinActiveDirectoryveröffentlicht" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="331" symbol="EinDruckerwirdinActiveDirectoryveröffentlichtFehlerbeiSpoolervorgang331" version="0" task="EinDruckerwirdinActiveDirectoryveröffentlicht" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="332" symbol="EinDruckerwirdinActiveDirectoryveröffentlichtSpoolervorgangerfolgreich" version="0" task="EinDruckerwirdinActiveDirectoryveröffentlicht" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="333" symbol="EinDruckerwirdinActiveDirectoryveröffentlichtFehlerbeiSpoolervorgang333" version="0" task="EinDruckerwirdinActiveDirectoryveröffentlicht" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgangArgs"/>
+     <event value="334" symbol="EinDruckerwirdinActiveDirectoryveröffentlichtSpoolervorgangerfolgreich334" version="0" task="EinDruckerwirdinActiveDirectoryveröffentlicht" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="335" symbol="EinDruckerwirdausActiveDirectoryentferntFehlerbeiSpoolervorgang335" version="0" task="EinDruckerwirdausActiveDirectoryentfernt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgangArgs"/>
+     <event value="336" symbol="EinDruckerwirdinActiveDirectoryveröffentlichtSpoolervorgangerfolgreich336" version="0" task="EinDruckerwirdinActiveDirectoryveröffentlicht" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="337" symbol="EinDruckerwirdinActiveDirectoryveröffentlichtFehlerbeiSpoolervorgang337" version="0" task="EinDruckerwirdinActiveDirectoryveröffentlicht" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="338" symbol="EinDruckerwirdausActiveDirectoryentferntSpoolervorgangerfolgreich" version="0" task="EinDruckerwirdausActiveDirectoryentfernt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="342" symbol="EinDruckerwirdbereinigtSpoolervorgangerfolgreich" version="0" task="EinDruckerwirdbereinigt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="343" symbol="EinDruckerwirdbereinigtSpoolervorgangerfolgreich343" version="0" task="EinDruckerwirdbereinigt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="344" symbol="EinDruckerwirdbereinigtSpoolervorgangerfolgreich344" version="0" task="EinDruckerwirdbereinigt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="345" symbol="EinDruckerwirdbereinigtSpoolervorgangerfolgreich345" version="0" task="EinDruckerwirdbereinigt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="346" symbol="EinDruckerwirdbereinigtSpoolervorgangerfolgreich346" version="0" task="EinDruckerwirdbereinigt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="347" symbol="EinDruckerwirdbereinigtFehlerbeiSpoolervorgang" version="0" task="EinDruckerwirdbereinigt" opcode="FehlerbeiSpoolervorgang" level="win:Warning" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ACTIVE_DIR" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="348" symbol="EinDruckertreiberwirdhinzugefügtSpoolerwarnung" version="0" task="EinDruckertreiberwirdhinzugefügt" opcode="Spoolerwarnung" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="349" symbol="DerDruckspoolerwirdinitialisiertFehlerbeiSpoolervorgang349" version="0" task="DerDruckspoolerwirdinitialisiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="350" symbol="EinDokumentwirdgedrucktFehlerbeiSpoolervorgang350" version="0" task="EinDokumentwirdgedruckt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_JOB SPOOLER_KEYWORD_CLASSIC" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="351" symbol="EinDruckerwirdhinzugefügtFehlerbeiSpoolervorgang351" version="0" task="EinDruckerwirdhinzugefügt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="352" symbol="EinDokumentwirdgedrucktSpoolervorgangerfolgreich352" version="0" task="EinDokumentwirdgedruckt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_JOB SPOOLER_KEYWORD_CLASSIC" template="EinDokumentwirdgedrucktSpoolervorgangerfolgreich311Args"/>
+     <event value="353" symbol="EinDokumentwirdgedrucktFehlerbeiSpoolervorgang353" version="0" task="EinDokumentwirdgedruckt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_JOB SPOOLER_KEYWORD_CLASSIC"/>
+     <event value="354" symbol="InitialisierungFehlerbeiSpoolervorgang" version="0" task="Initialisierung" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgangArgs"/>
+     <event value="356" symbol="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang356" version="0" task="EinDruckertreiberwirdhinzugefügt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgangArgs"/>
+     <event value="359" symbol="EinDruckerwirdhinzugefügtFehlerbeiSpoolervorgang359" version="0" task="EinDruckerwirdhinzugefügt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="360" symbol="DruckerkonfigurationwirdfestgelegtFehlerbeiSpoolervorgang360" version="0" task="Druckerkonfigurationwirdfestgelegt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_CLASSIC" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="361" symbol="DerDruckspoolerwirdinitialisiertFehlerbeiSpoolervorgang361" version="0" task="DerDruckspoolerwirdinitialisiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_CLASSIC" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="362" symbol="DerDruckspoolerwirdinitialisiertFehlerbeiSpoolervorgang362" version="0" task="DerDruckspoolerwirdinitialisiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CONNECTION SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="363" symbol="DerDruckspoolerwirdinitialisiertFehlerbeiSpoolervorgang363" version="0" task="DerDruckspoolerwirdinitialisiert" opcode="FehlerbeiSpoolervorgang" level="win:Critical" keywords="SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="364" symbol="EinDruckprozessorwirdinitialisiertFehlerbeiSpoolervorgang" version="0" task="EinDruckprozessorwirdinitialisiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="365" symbol="EinDruckprozessorwirdinitialisiertFehlerbeiSpoolervorgang365" version="0" task="EinDruckprozessorwirdinitialisiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgangArgs"/>
+     <event value="366" symbol="DerDruckspoolerwirdinitialisiertFehlerbeiSpoolervorgang366" version="0" task="DerDruckspoolerwirdinitialisiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args"/>
+     <event value="367" symbol="EinDruckprozessorwirdinitialisiertFehlerbeiSpoolervorgang367" version="0" task="EinDruckprozessorwirdinitialisiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="368" symbol="EinDruckertreiberpaketwirdüberprüftoderneugeneriert.FehlerbeiSpoolervorgang" version="0" task="EinDruckertreiberpaketwirdüberprüftoderneugeneriert." opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgangArgs"/>
+     <event value="369" symbol="EinDruckertreiberpaketwirdüberprüftoderneugeneriert.FehlerbeiSpoolervorgang369" version="0" task="EinDruckertreiberpaketwirdüberprüftoderneugeneriert." opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args"/>
+     <event value="370" symbol="EinDruckertreiberpaketwirdüberprüftoderneugeneriert.FehlerbeiSpoolervorgang370" version="0" task="EinDruckertreiberpaketwirdüberprüftoderneugeneriert." opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgangArgs"/>
+     <event value="371" symbol="DieDruckerfreigabewirdaufgehoben.FehlerbeiSpoolervorgang" version="0" task="DieDruckerfreigabewirdaufgehoben." opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_PRINTER SPOOLER_KEYWORD_CLASSIC" template="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgangArgs"/>
+     <event value="372" symbol="EinDokumentwirdgedrucktFehlerbeiSpoolervorgang372" version="0" task="EinDokumentwirdgedruckt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_JOB SPOOLER_KEYWORD_CLASSIC" template="EinDokumentwirdgedrucktFehlerbeiSpoolervorgang372Args"/>
+     <event value="373" symbol="EinDokumentwirdgedrucktFehlerbeiSpoolervorgang373" version="0" task="EinDokumentwirdgedruckt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_JOB SPOOLER_KEYWORD_CLASSIC"/>
+     <event value="502" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="503" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang503" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="504" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang504" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="505" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang505" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="507" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang507" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="508" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang508" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="509" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang509" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="510" symbol="EinDruckanbieterwirdinitialisiertFehlerbeiSpoolervorgang" version="0" task="EinDruckanbieterwirdinitialisiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="511" symbol="EinDruckanbieterwirdinitialisiertFehlerbeiSpoolervorgang511" version="0" task="EinDruckanbieterwirdinitialisiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="512" symbol="EinDruckanbieterwirdinitialisiertFehlerbeiSpoolervorgang512" version="0" task="EinDruckanbieterwirdinitialisiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="513" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang513" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="514" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang514" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="515" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang515" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="516" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang516" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="517" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang517" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="518" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang518" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="519" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang519" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="520" symbol="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang520" version="0" task="Druckspoolerbefehl(e)wird(werden)weitergeleitet" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_ROUTER" template="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs"/>
+     <event value="600" symbol="ClientseitigesRenderingFehlerbeiSpoolervorgang600" version="0" task="ClientseitigesRendering" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_CSR" template="ClientseitigesRenderingFehlerbeiSpoolervorgang600Args"/>
+     <event value="601" symbol="ClientseitigesRenderingFehlerbeiSpoolervorgang601" version="0" task="ClientseitigesRendering" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_CSR" template="ClientseitigesRenderingFehlerbeiSpoolervorgang600Args"/>
+     <event value="602" symbol="ClientseitigesRenderingFehlerbeiSpoolervorgang602" version="0" task="ClientseitigesRendering" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_CSR" template="ClientseitigesRenderingFehlerbeiSpoolervorgang602Args"/>
+     <event value="603" symbol="ClientseitigesRenderingFehlerbeiSpoolervorgang603" version="0" task="ClientseitigesRendering" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_CSR" template="ClientseitigesRenderingFehlerbeiSpoolervorgang603Args"/>
+     <event value="604" symbol="ClientseitigesRenderingFehlerbeiSpoolervorgang604" version="0" task="ClientseitigesRendering" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_CSR" template="ClientseitigesRenderingFehlerbeiSpoolervorgang604Args"/>
+     <event value="701" symbol="DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgang" version="0" task="DruckfilterwerdeninderSpoolerpipelineausgeführt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_PIPELINE" template="DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgangArgs"/>
+     <event value="702" symbol="DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgang702" version="0" task="DruckfilterwerdeninderSpoolerpipelineausgeführt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_PIPELINE" template="DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgangArgs"/>
+     <event value="703" symbol="DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgang703" version="0" task="DruckfilterwerdeninderSpoolerpipelineausgeführt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_PIPELINE" template="DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgangArgs"/>
+     <event value="704" symbol="DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgang704" version="0" task="DruckfilterwerdeninderSpoolerpipelineausgeführt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_PIPELINE" template="DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgangArgs"/>
+     <event value="800" symbol="DruckauftragsdiagnoseStart" version="0" task="Druckauftragsdiagnose" opcode="win:Start" level="win:Informational" template="DruckauftragsdiagnoseStartArgs"/>
+     <event value="801" symbol="Druckauftragsdiagnose" version="0" task="Druckauftragsdiagnose" level="win:Informational" template="DruckauftragsdiagnoseStartArgs"/>
+     <event value="802" symbol="DruckauftragsdiagnoseAnhalten" version="0" task="Druckauftragsdiagnose" opcode="win:Anhalten" level="win:Informational" template="DruckauftragsdiagnoseAnhaltenArgs"/>
+     <event value="805" symbol="Druckauftragsdiagnose805" version="0" task="Druckauftragsdiagnose" level="win:Informational" template="Druckauftragsdiagnose805Args"/>
+     <event value="806" symbol="Druckauftragsdiagnose806" version="0" task="Druckauftragsdiagnose" level="win:Informational" template="DruckauftragsdiagnoseStartArgs"/>
+     <event value="807" symbol="Druckauftragsdiagnose807" version="0" task="Druckauftragsdiagnose" level="win:Informational" template="DruckauftragsdiagnoseStartArgs"/>
+     <event value="808" symbol="InitialisierungFehlerbeiSpoolervorgang808" version="0" task="Initialisierung" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD" template="InitialisierungFehlerbeiSpoolervorgang808Args"/>
+     <event value="809" symbol="EinVerzeichniswirdgelöschtFehlerbeiSpoolervorgang" version="0" task="EinVerzeichniswirdgelöscht" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD" template="EinVerzeichniswirdgelöschtFehlerbeiSpoolervorgangArgs"/>
+     <event value="810" symbol="EinVerzeichniswirdgelöschtFehlerbeiSpoolervorgang810" version="0" task="EinVerzeichniswirdgelöscht" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD" template="EinVerzeichniswirdgelöschtFehlerbeiSpoolervorgangArgs"/>
+     <event value="811" symbol="EinDateivorgangwirdausgeführtFehlerbeiSpoolervorgang" version="0" task="EinDateivorgangwirdausgeführt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD" template="EinDateivorgangwirdausgeführtFehlerbeiSpoolervorgangArgs"/>
+     <event value="812" symbol="EinDateivorgangwirdausgeführtFehlerbeiSpoolervorgang812" version="0" task="EinDateivorgangwirdausgeführt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD" template="EinDateivorgangwirdausgeführtFehlerbeiSpoolervorgangArgs"/>
+     <event value="813" symbol="EinDateivorgangwirdausgeführtFehlerbeiSpoolervorgang813" version="0" task="EinDateivorgangwirdausgeführt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD" template="EinDateivorgangwirdausgeführtFehlerbeiSpoolervorgangArgs"/>
+     <event value="814" symbol="EinDruckprozessorwirdinitialisiertFehlerbeiSpoolervorgang814" version="0" task="EinDruckprozessorwirdinitialisiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_LOCALSPL" template="EinDruckprozessorwirdinitialisiertFehlerbeiSpoolervorgang814Args"/>
+     <event value="815" symbol="Spooler_RPC_EndpunktewerdenaktiviertFehlerbeiSpoolervorgang" version="0" task="Spooler_RPC_Endpunktewerdenaktiviert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_ROUTER" template="Spooler_RPC_EndpunktewerdenaktiviertFehlerbeiSpoolervorgangArgs"/>
+     <event value="816" symbol="Spooler_RPC_EndpunktewerdenaktiviertFehlerbeiSpoolervorgang816" version="0" task="Spooler_RPC_Endpunktewerdenaktiviert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_ROUTER" template="Spooler_RPC_EndpunktewerdenaktiviertFehlerbeiSpoolervorgang816Args"/>
+     <event value="817" symbol="Spooler_RPC_EndpunktewerdenaktiviertFehlerbeiSpoolervorgang817" version="0" task="Spooler_RPC_Endpunktewerdenaktiviert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_ROUTER" template="Spooler_RPC_EndpunktewerdenaktiviertFehlerbeiSpoolervorgang817Args"/>
+     <event value="818" symbol="Spooler_RPC_EndpunktewerdenaktiviertFehlerbeiSpoolervorgang818" version="0" task="Spooler_RPC_Endpunktewerdenaktiviert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_ROUTER" template="Spooler_RPC_EndpunktewerdenaktiviertFehlerbeiSpoolervorgang818Args"/>
+     <event value="819" symbol="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztSpoolerablaufverfolgung" version="0" task="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetzt" opcode="Spoolerablaufverfolgung" level="win:Informational" keywords="SPOOLER_KEYWORD_CSR" template="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztSpoolerablaufverfolgungArgs"/>
+     <event value="820" symbol="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztFehlerbeiSpoolervorgang" version="0" task="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetzt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CSR" template="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztFehlerbeiSpoolervorgangArgs"/>
+     <event value="821" symbol="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztSpoolerablaufverfolgung821" version="0" task="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetzt" opcode="Spoolerablaufverfolgung" level="win:Informational" keywords="SPOOLER_KEYWORD_CSR" template="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztSpoolerablaufverfolgung821Args"/>
+     <event value="822" symbol="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztFehlerbeiSpoolervorgang822" version="0" task="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetzt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CSR" template="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztFehlerbeiSpoolervorgang822Args"/>
+     <event value="823" symbol="DerStandarddruckerwirdgeändertSpoolervorgangerfolgreich" version="0" task="DerStandarddruckerwirdgeändert" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD" template="DerStandarddruckerwirdgeändertSpoolervorgangerfolgreichArgs"/>
+     <event value="824" symbol="DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgang824" version="0" task="DruckfilterwerdeninderSpoolerpipelineausgeführt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_PIPELINE" template="DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgang824Args"/>
+     <event value="825" symbol="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztFehlerbeiSpoolervorgang825" version="0" task="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetzt" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CSR" template="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztFehlerbeiSpoolervorgangArgs"/>
+     <event value="826" symbol="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztSpoolervorgangerfolgreich" version="0" task="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetzt" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_CSR" template="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztSpoolervorgangerfolgreichArgs"/>
+     <event value="827" symbol="XPS_Druck_API_AufrufewerdenausgeführtXPS_Druck_API_Fehler" version="0" task="XPS_Druck_API_Aufrufewerdenausgeführt" opcode="XPS_Druck_API_Fehler" level="win:Error" keywords="XPS_PRINT_API_KEYWORD" template="XPS_Druck_API_AufrufewerdenausgeführtXPS_Druck_API_FehlerArgs"/>
+     <event value="828" symbol="XPS_Druck_API_AufrufewerdenausgeführtXPS_Druck_API_Fehler828" version="0" task="XPS_Druck_API_Aufrufewerdenausgeführt" opcode="XPS_Druck_API_Fehler" level="win:Error" keywords="XPS_PRINT_API_KEYWORD" template="XPS_Druck_API_AufrufewerdenausgeführtXPS_Druck_API_Fehler828Args"/>
+     <event value="829" symbol="LeistungsüberwachungfürXPS_Druck_APIStart" version="0" task="LeistungsüberwachungfürXPS_Druck_API" opcode="win:Start" level="win:Informational" keywords="XPS_PRINT_API_KEYWORD_PERFORMANCE" template="LeistungsüberwachungfürXPS_Druck_APIStartArgs"/>
+     <event value="830" symbol="LeistungsüberwachungfürXPS_Druck_APIAnhalten" version="0" task="LeistungsüberwachungfürXPS_Druck_API" opcode="win:Anhalten" level="win:Informational" keywords="XPS_PRINT_API_KEYWORD_PERFORMANCE" template="LeistungsüberwachungfürXPS_Druck_APIStartArgs"/>
+     <event value="831" symbol="LeistungsüberwachungfürXPS_Druck_APIStart831" version="0" task="LeistungsüberwachungfürXPS_Druck_API" opcode="win:Start" level="win:Informational" keywords="XPS_PRINT_API_KEYWORD_PERFORMANCE" template="LeistungsüberwachungfürXPS_Druck_APIStartArgs"/>
+     <event value="832" symbol="LeistungsüberwachungfürXPS_Druck_APIAnhalten832" version="0" task="LeistungsüberwachungfürXPS_Druck_API" opcode="win:Anhalten" level="win:Informational" keywords="XPS_PRINT_API_KEYWORD_PERFORMANCE" template="LeistungsüberwachungfürXPS_Druck_APIStartArgs"/>
+     <event value="833" symbol="LeistungsüberwachungfürallgemeinenDruckspoolerStart" version="0" task="LeistungsüberwachungfürallgemeinenDruckspooler" opcode="win:Start" level="win:Informational" keywords="SPOOLER_KEYWORD" template="LeistungsüberwachungfürXPS_Druck_APIStartArgs"/>
+     <event value="834" symbol="LeistungsüberwachungfürallgemeinenDruckspoolerAnhalten" version="0" task="LeistungsüberwachungfürallgemeinenDruckspooler" opcode="win:Anhalten" level="win:Informational" keywords="SPOOLER_KEYWORD" template="LeistungsüberwachungfürXPS_Druck_APIStartArgs"/>
+     <event value="842" symbol="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich" version="0" task="DruckertreiberundanderePlug_Inswerdenisoliert" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINT_DRIVER_SANDBOX" template="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreichArgs"/>
+     <event value="843" symbol="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich843" version="0" task="DruckertreiberundanderePlug_Inswerdenisoliert" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINT_DRIVER_SANDBOX" template="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich843Args"/>
+     <event value="844" symbol="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich844" version="0" task="DruckertreiberundanderePlug_Inswerdenisoliert" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINT_DRIVER_SANDBOX" template="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich844Args"/>
+     <event value="845" symbol="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich845" version="0" task="DruckertreiberundanderePlug_Inswerdenisoliert" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINT_DRIVER_SANDBOX" template="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich845Args"/>
+     <event value="846" symbol="ClientseitigesRenderingSpoolervorgangerfolgreich" version="0" task="ClientseitigesRendering" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_CSR" template="ClientseitigesRenderingSpoolervorgangerfolgreichArgs"/>
+     <event value="847" symbol="ClientseitigesRenderingSpoolervorgangerfolgreich847" version="0" task="ClientseitigesRendering" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_CSR" template="ClientseitigesRenderingSpoolervorgangerfolgreich847Args"/>
+     <event value="848" symbol="EinDruckerwirdfreigegebenSpoolervorgangerfolgreich" version="0" task="EinDruckerwirdfreigegeben" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINTER" template="EinDruckerwirdfreigegebenSpoolervorgangerfolgreichArgs"/>
+     <event value="849" symbol="DieDruckerfreigabewirdaufgehoben.Spoolervorgangerfolgreich" version="0" task="DieDruckerfreigabewirdaufgehoben." opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD_PRINTER" template="EinDruckerwirdfreigegebenSpoolervorgangerfolgreichArgs"/>
+     <event value="850" symbol="DruckertreibervorgangFehlerbeiSpoolervorgang" version="0" task="Druckertreibervorgang" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_DRIVER" template="DruckertreibervorgangFehlerbeiSpoolervorgangArgs"/>
+     <event value="851" symbol="EineDruckerverbindungwirdhinzugefügtFehlerbeiSpoolervorgang851" version="0" task="EineDruckerverbindungwirdhinzugefügt" opcode="FehlerbeiSpoolervorgang" level="win:Warning" keywords="SPOOLER_KEYWORD_CONNECTION" template="EineDruckerverbindungwirdhinzugefügtFehlerbeiSpoolervorgang851Args"/>
+     <event value="852" symbol="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang852" version="0" task="EinDruckertreiberwirdinstalliert" opcode="FehlerbeiSpoolervorgang" level="win:Warning" keywords="SPOOLER_KEYWORD_DRIVER" template="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang852Args"/>
+     <event value="853" symbol="ClientseitigesRenderingFehlerbeiSpoolervorgang853" version="0" task="ClientseitigesRendering" opcode="FehlerbeiSpoolervorgang" level="win:Informational" keywords="SPOOLER_KEYWORD_CSR" template="ClientseitigesRenderingFehlerbeiSpoolervorgang853Args"/>
+     <event value="854" symbol="ClientseitigesRenderingFehlerbeiSpoolervorgang854" version="0" task="ClientseitigesRendering" opcode="FehlerbeiSpoolervorgang" level="win:Informational" keywords="SPOOLER_KEYWORD_CSR" template="ClientseitigesRenderingFehlerbeiSpoolervorgang853Args"/>
+     <event value="855" symbol="ClientseitigesRenderingFehlerbeiSpoolervorgang855" version="0" task="ClientseitigesRendering" opcode="FehlerbeiSpoolervorgang" level="win:Informational" keywords="SPOOLER_KEYWORD_CSR" template="ClientseitigesRenderingFehlerbeiSpoolervorgang855Args"/>
+     <event value="856" symbol="DieVerbindungwurdeneukonfiguriert.Spoolerablaufverfolgung" version="0" task="DieVerbindungwurdeneukonfiguriert." opcode="Spoolerablaufverfolgung" level="win:Informational" keywords="SPOOLER_KEYWORD_CONNECTION SPOOLER_KEYWORD_CSR SPOOLER_KEYWORD_BRANCH_OFFICE_PRINTING" template="DieVerbindungwurdeneukonfiguriert.SpoolerablaufverfolgungArgs"/>
+     <event value="857" symbol="DieVerbindungwurdeneukonfiguriert.Spoolerablaufverfolgung857" version="0" task="DieVerbindungwurdeneukonfiguriert." opcode="Spoolerablaufverfolgung" level="win:Informational" keywords="SPOOLER_KEYWORD_CONNECTION SPOOLER_KEYWORD_CSR SPOOLER_KEYWORD_BRANCH_OFFICE_PRINTING" template="DieVerbindungwurdeneukonfiguriert.SpoolerablaufverfolgungArgs"/>
+     <event value="858" symbol="DieVerbindungwurdeneukonfiguriert.Spoolerablaufverfolgung858" version="0" task="DieVerbindungwurdeneukonfiguriert." opcode="Spoolerablaufverfolgung" level="win:Informational" keywords="SPOOLER_KEYWORD_CONNECTION SPOOLER_KEYWORD_CSR SPOOLER_KEYWORD_BRANCH_OFFICE_PRINTING" template="DieVerbindungwurdeneukonfiguriert.SpoolerablaufverfolgungArgs"/>
+     <event value="859" symbol="DieVerbindungwurdeneukonfiguriert.Spoolerablaufverfolgung859" version="0" task="DieVerbindungwurdeneukonfiguriert." opcode="Spoolerablaufverfolgung" level="win:Informational" keywords="SPOOLER_KEYWORD_CONNECTION SPOOLER_KEYWORD_CSR SPOOLER_KEYWORD_BRANCH_OFFICE_PRINTING" template="DieVerbindungwurdeneukonfiguriert.SpoolerablaufverfolgungArgs"/>
+     <event value="860" symbol="DieVerbindungwurdeneukonfiguriert.Spoolerablaufverfolgung860" version="0" task="DieVerbindungwurdeneukonfiguriert." opcode="Spoolerablaufverfolgung" level="win:Informational" keywords="SPOOLER_KEYWORD_CONNECTION SPOOLER_KEYWORD_CSR SPOOLER_KEYWORD_BRANCH_OFFICE_PRINTING" template="DieVerbindungwurdeneukonfiguriert.SpoolerablaufverfolgungArgs"/>
+     <event value="861" symbol="DieVerbindungwurdeneukonfiguriert.Spoolerablaufverfolgung861" version="0" task="DieVerbindungwurdeneukonfiguriert." opcode="Spoolerablaufverfolgung" level="win:Informational" keywords="SPOOLER_KEYWORD_CONNECTION SPOOLER_KEYWORD_CSR SPOOLER_KEYWORD_BRANCH_OFFICE_PRINTING" template="DieVerbindungwurdeneukonfiguriert.SpoolerablaufverfolgungArgs"/>
+     <event value="862" symbol="DieVerbindungwurdeneukonfiguriert.Spoolerablaufverfolgung862" version="0" task="DieVerbindungwurdeneukonfiguriert." opcode="Spoolerablaufverfolgung" level="win:Informational" keywords="SPOOLER_KEYWORD_CONNECTION SPOOLER_KEYWORD_CSR SPOOLER_KEYWORD_BRANCH_OFFICE_PRINTING" template="DieVerbindungwurdeneukonfiguriert.SpoolerablaufverfolgungArgs"/>
+     <event value="863" symbol="DieVerbindungwurdeneukonfiguriert.Spoolerablaufverfolgung863" version="0" task="DieVerbindungwurdeneukonfiguriert." opcode="Spoolerablaufverfolgung" level="win:Informational" keywords="SPOOLER_KEYWORD_CONNECTION SPOOLER_KEYWORD_CSR SPOOLER_KEYWORD_BRANCH_OFFICE_PRINTING" template="DieVerbindungwurdeneukonfiguriert.Spoolerablaufverfolgung863Args"/>
+     <event value="864" symbol="Windows_Faxund_Scanwirdgewartet...FehlerbeiSpoolervorgang" version="0" task="Windows_Faxund_Scanwirdgewartet..." opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD SETUP_WFS_KEYWORD" template="DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgangArgs"/>
+     <event value="865" symbol="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich865" version="0" task="DruckertreiberundanderePlug_Inswerdenisoliert" opcode="Spoolervorgangerfolgreich" level="win:Informational" keywords="SPOOLER_KEYWORD SPOOLER_KEYWORD_PRINT_DRIVER_SANDBOX" template="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich865Args"/>
+     <event value="866" symbol="EinePlug&Play_GeräteobjektinstanzfüreinenDruckerwirderstellt...FehlerbeiSpoolervorgang" version="0" task="EinePlug&Play_GeräteobjektinstanzfüreinenDruckerwirderstellt..." opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_PRINTER" template="EinePlug&Play_GeräteobjektinstanzfüreinenDruckerwirderstellt...FehlerbeiSpoolervorgangArgs"/>
+     <event value="867" symbol="WS_Print_PortmonitorwirdinitialisiertFehlerbeiSpoolervorgang" version="0" task="WS_Print_Portmonitorwirdinitialisiert" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_WSDMON" template="WS_Print_PortmonitorwirdinitialisiertFehlerbeiSpoolervorgangArgs"/>
+     <event value="868" symbol="DasOfflinearchivfürBOP_Ereignisseistvoll.Spoolerablaufverfolgung" version="0" task="DasOfflinearchivfürBOP_Ereignisseistvoll." opcode="Spoolerablaufverfolgung" level="win:Informational" keywords="SPOOLER_KEYWORD_CSR SPOOLER_KEYWORD_BRANCH_OFFICE_PRINTING" template="DasOfflinearchivfürBOP_Ereignisseistvoll.SpoolerablaufverfolgungArgs"/>
+     <event value="869" symbol="EinDruckertreiberpaketwirdüberprüftoderneugeneriert.FehlerbeiSpoolervorgang869" version="0" task="EinDruckertreiberpaketwirdüberprüftoderneugeneriert." opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_DRIVER" template="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs"/>
+     <event value="870" symbol="ClientseitigesRenderingFehlerbeiSpoolervorgang870" version="0" task="ClientseitigesRendering" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_CLASSIC SPOOLER_KEYWORD_CSR" template="ClientseitigesRenderingFehlerbeiSpoolervorgang870Args"/>
+     <event value="871" symbol="GerätesteuerungsdruckFehlerbeiSpoolervorgang" version="0" task="Gerätesteuerungsdruck" opcode="FehlerbeiSpoolervorgang" level="win:Error" keywords="SPOOLER_KEYWORD_LOCALSPL SPOOLER_KEYWORD_JOB" template="GerätesteuerungsdruckFehlerbeiSpoolervorgangArgs"/>
+    </events>
+    <templates>
+     <template tid="ProzessbeendungaufgrundeinesschwerwiegendenFehlersUnerwarteteProzessbeendungArgs">
+      <data name="OperationCode" inType="win:UInt32"/>
+      <data name="Error" inType="win:HexInt32"/>
+     </template>
+     <template tid="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreichArgs">
+      <data name="Label" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+      <data name="PrinterName" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="EinDokumentdruckauftragwirdgestartetSpoolervorgangerfolgreichArgs">
+      <data name="Label" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+      <data name="JobID" inType="win:UInt32"/>
+      <data name="PrinterName" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreichArgs">
+      <data name="Label" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+      <data name="ObjectName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EineDruckertreiber_INF_DateiwirdanalysiertSpoolervorgangerfolgreichArgs">
+      <data name="Label" inType="win:UnicodeString"/>
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="AdditionalInfo" inType="win:UnicodeString"/>
+      <data name="InfPath" inType="win:UnicodeString"/>
+      <data name="DriverName" inType="win:UnicodeString"/>
+      <data name="InstallSection" inType="win:UnicodeString"/>
+      <data name="ProcessorArchitecture" inType="win:UnicodeString"/>
+      <data name="LastError" inType="win:HexInt32"/>
+      <data name="HResult" inType="win:HexInt32"/>
+     </template>
+     <template tid="EinDruckertreiberwirdinstalliertSpoolervorgangerfolgreichArgs">
+      <data name="Label" inType="win:UnicodeString"/>
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="AdditionalInfo" inType="win:UnicodeString"/>
+      <data name="InfPath" inType="win:UnicodeString"/>
+      <data name="DriverName" inType="win:UnicodeString"/>
+      <data name="InstallSection" inType="win:UnicodeString"/>
+      <data name="ProcessorArchitecture" inType="win:UnicodeString"/>
+      <data name="PackageAware" inType="win:UnicodeString"/>
+      <data name="CoreDriverDependencies" inType="win:UnicodeString"/>
+      <data name="LastError" inType="win:HexInt32"/>
+      <data name="HResult" inType="win:HexInt32"/>
+     </template>
+     <template tid="EinDruckertreiberwirdinstalliertSpoolervorgangerfolgreich216Args">
+      <data name="Context" inType="win:UnicodeString"/>
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="AdditionalInfo" inType="win:UnicodeString"/>
+      <data name="ProcessorArchitecture" inType="win:UnicodeString"/>
+      <data name="LastError" inType="win:HexInt32"/>
+      <data name="HResult" inType="win:HexInt32"/>
+     </template>
+     <template tid="EinDruckertreiberpaketwirdkopiertSpoolervorgangerfolgreichArgs">
+      <data name="Label" inType="win:UnicodeString"/>
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="AdditionalInfo" inType="win:UnicodeString"/>
+      <data name="Server" inType="win:UnicodeString"/>
+      <data name="InfPath" inType="win:UnicodeString"/>
+      <data name="DestInfPath" inType="win:UnicodeString"/>
+      <data name="ProcessorArchitecture" inType="win:UnicodeString"/>
+      <data name="LastError" inType="win:HexInt32"/>
+      <data name="HResult" inType="win:HexInt32"/>
+     </template>
+     <template tid="DerAblaufeinerSpoolermeldungwirdverfolgt.SpoolerablaufverfolgungArgs">
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="LastError" inType="win:HexInt32"/>
+     </template>
+     <template tid="ClientseitigesRenderingFehlerbeiSpoolervorgangArgs">
+      <data name="Function" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:HexInt32"/>
+      <data name="Server" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang225Args">
+      <data name="DriverName" inType="win:UnicodeString"/>
+      <data name="InfPath" inType="win:UnicodeString"/>
+      <data name="RequiredClassDriver" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:HexInt32"/>
+     </template>
+     <template tid="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang226Args">
+      <data name="DriverName" inType="win:UnicodeString"/>
+      <data name="InfPath" inType="win:UnicodeString"/>
+      <data name="DriverModelVersion" inType="win:UInt32"/>
+     </template>
+     <template tid="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang235Args">
+      <data name="DriverName" inType="win:UnicodeString"/>
+      <data name="InfPath" inType="win:UnicodeString"/>
+      <data name="RequiredClassDriver" inType="win:UnicodeString"/>
+      <data name="Directive" inType="win:UnicodeString"/>
+      <data name="Value" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang236Args">
+      <data name="DriverName" inType="win:UnicodeString"/>
+      <data name="InfPath" inType="win:UnicodeString"/>
+      <data name="RequiredClassDriver" inType="win:UnicodeString"/>
+      <data name="Directive" inType="win:UnicodeString"/>
+      <data name="ClassDriverOnly" inType="win:Boolean"/>
+      <data name="NonClassDriverOnly" inType="win:Boolean"/>
+     </template>
+     <template tid="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang237Args">
+      <data name="DriverName" inType="win:UnicodeString"/>
+      <data name="InfPath" inType="win:UnicodeString"/>
+      <data name="RequiredClassDriver" inType="win:UnicodeString"/>
+      <data name="Directive" inType="win:UnicodeString"/>
+      <data name="EmptyToken" inType="win:Boolean"/>
+      <data name="IncorrectNumberOfTokens" inType="win:Boolean"/>
+     </template>
+     <template tid="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang240Args">
+      <data name="DriverName" inType="win:UnicodeString"/>
+      <data name="InfPath" inType="win:UnicodeString"/>
+      <data name="MissingManifest" inType="win:Boolean"/>
+      <data name="MultipleManifests" inType="win:Boolean"/>
+     </template>
+     <template tid="EinDruckerwirdhinzugefügtFehlerbeiSpoolervorgang242Args">
+      <data name="PrinterName" inType="win:UnicodeString"/>
+      <data name="DriverName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich300Args">
+      <data name="param1" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EinDokumentwirdgedrucktSpoolervorgangerfolgreichArgs">
+      <data name="param1" inType="win:UnicodeString"/>
+      <data name="param2" inType="win:UnicodeString"/>
+      <data name="param3" inType="win:UnicodeString"/>
+      <data name="param4" inType="win:UnicodeString"/>
+      <data name="param5" inType="win:UnicodeString"/>
+      <data name="param6" inType="win:UnicodeString"/>
+      <data name="param7" inType="win:UnicodeString"/>
+      <data name="param8" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EinDokumentwirdgedrucktSpoolervorgangerfolgreich308Args">
+      <data name="param1" inType="win:UnicodeString"/>
+      <data name="param2" inType="win:UnicodeString"/>
+      <data name="param3" inType="win:UnicodeString"/>
+      <data name="param4" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EinDokumentwirdgedrucktSpoolervorgangerfolgreich311Args">
+      <data name="param1" inType="win:UnicodeString"/>
+      <data name="param2" inType="win:UnicodeString"/>
+      <data name="param3" inType="win:UnicodeString"/>
+      <data name="param4" inType="win:UnicodeString"/>
+      <data name="param5" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EinDruckerwirdfreigegebenFehlerbeiSpoolervorgangArgs">
+      <data name="param1" inType="win:UnicodeString"/>
+      <data name="param2" inType="win:UnicodeString"/>
+      <data name="param3" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang319Args">
+      <data name="param1" inType="win:UnicodeString"/>
+      <data name="param2" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EinDokumentwirdgedrucktFehlerbeiSpoolervorgang372Args">
+      <data name="param1" inType="win:UnicodeString"/>
+      <data name="param2" inType="win:UnicodeString"/>
+      <data name="param3" inType="win:UnicodeString"/>
+      <data name="param4" inType="win:UnicodeString"/>
+      <data name="param5" inType="win:UnicodeString"/>
+      <data name="param6" inType="win:UnicodeString"/>
+      <data name="param7" inType="win:UnicodeString"/>
+      <data name="param8" inType="win:UnicodeString"/>
+      <data name="param9" inType="win:UnicodeString"/>
+      <data name="param10" inType="win:UnicodeString"/>
+      <data name="param11" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgangArgs">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:HexInt32"/>
+     </template>
+     <template tid="ClientseitigesRenderingFehlerbeiSpoolervorgang600Args">
+      <data name="DriverSource" inType="win:UnicodeString"/>
+      <data name="Driver" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ClientseitigesRenderingFehlerbeiSpoolervorgang602Args">
+      <data name="RegistryKey1" inType="win:UnicodeString"/>
+      <data name="RegistryKey2" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ClientseitigesRenderingFehlerbeiSpoolervorgang603Args">
+      <data name="RegistryKey" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ClientseitigesRenderingFehlerbeiSpoolervorgang604Args">
+      <data name="Name" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgangArgs">
+      <data name="HResult" inType="win:HexInt32"/>
+     </template>
+     <template tid="DruckauftragsdiagnoseStartArgs">
+      <data name="JobId" inType="win:UInt32"/>
+     </template>
+     <template tid="DruckauftragsdiagnoseAnhaltenArgs">
+      <data name="JobId" inType="win:UInt32"/>
+      <data name="JobSize" inType="win:UInt32"/>
+      <data name="DataType" inType="win:UInt32"/>
+      <data name="Pages" inType="win:UInt32"/>
+      <data name="PagesPerSide" inType="win:UInt32"/>
+      <data name="FilesOpened" inType="win:Int16"/>
+      <data name="JobSizeHigh" inType="win:UInt32"/>
+     </template>
+     <template tid="Druckauftragsdiagnose805Args">
+      <data name="JobId" inType="win:UInt32"/>
+      <data name="GdiJobSize" inType="win:UInt32"/>
+      <data name="ICMMethod" inType="win:UInt32"/>
+      <data name="Color" inType="win:Int16"/>
+      <data name="XRes" inType="win:Int16"/>
+      <data name="YRes" inType="win:Int16"/>
+      <data name="Quality" inType="win:Int16"/>
+      <data name="Copies" inType="win:Int16"/>
+      <data name="TTOption" inType="win:Int16"/>
+     </template>
+     <template tid="InitialisierungFehlerbeiSpoolervorgang808Args">
+      <data name="PluginDllName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+      <data name="Context" inType="win:Int16"/>
+     </template>
+     <template tid="EinVerzeichniswirdgelöschtFehlerbeiSpoolervorgangArgs">
+      <data name="DirectoryName" inType="win:UnicodeString"/>
+      <data name="WaitForReboot" inType="win:HexInt32"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+      <data name="Context" inType="win:Int16"/>
+     </template>
+     <template tid="EinDateivorgangwirdausgeführtFehlerbeiSpoolervorgangArgs">
+      <data name="Source" inType="win:UnicodeString"/>
+      <data name="Destination" inType="win:UnicodeString"/>
+      <data name="Flags" inType="win:HexInt32"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+      <data name="Context" inType="win:Int16"/>
+     </template>
+     <template tid="EinDruckprozessorwirdinitialisiertFehlerbeiSpoolervorgang814Args">
+      <data name="Processor" inType="win:UnicodeString"/>
+      <data name="Environment" inType="win:UnicodeString"/>
+      <data name="Path" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="Spooler_RPC_EndpunktewerdenaktiviertFehlerbeiSpoolervorgangArgs">
+      <data name="ProtocolSequence" inType="win:UnicodeString"/>
+      <data name="EndPoint" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+      <data name="Context" inType="win:Int16"/>
+     </template>
+     <template tid="Spooler_RPC_EndpunktewerdenaktiviertFehlerbeiSpoolervorgang816Args">
+      <data name="ValidatedProtocolSequence" inType="win:UnicodeString"/>
+      <data name="ExpectedProtocolSequence" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="Spooler_RPC_EndpunktewerdenaktiviertFehlerbeiSpoolervorgang817Args">
+      <data name="WindowsStarterEdition" inType="win:HexInt32"/>
+      <data name="SuiteStorageServer" inType="win:HexInt32"/>
+      <data name="SystemPrintingDisabled" inType="win:HexInt32"/>
+      <data name="SuiteBlade" inType="win:HexInt32"/>
+      <data name="SuiteEmbeddedRestricted" inType="win:HexInt32"/>
+      <data name="SuiteComputerServer" inType="win:HexInt32"/>
+     </template>
+     <template tid="Spooler_RPC_EndpunktewerdenaktiviertFehlerbeiSpoolervorgang818Args">
+      <data name="ErrorCode" inType="win:HexInt32"/>
+      <data name="Context" inType="win:Int16"/>
+     </template>
+     <template tid="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztSpoolerablaufverfolgungArgs">
+      <data name="Policy" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztFehlerbeiSpoolervorgangArgs">
+      <data name="PrintProcessor" inType="win:UnicodeString"/>
+      <data name="Connection" inType="win:UnicodeString"/>
+      <data name="IsXpsPrinter" inType="win:HexInt32"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztSpoolerablaufverfolgung821Args">
+      <data name="JobId" inType="win:UInt32"/>
+      <data name="Level" inType="win:HexInt32"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztFehlerbeiSpoolervorgang822Args">
+      <data name="LocalPrintProcessor" inType="win:UnicodeString"/>
+      <data name="RemotePrintProcessor" inType="win:UnicodeString"/>
+      <data name="DefaultPrintProcessor" inType="win:UnicodeString"/>
+      <data name="LocalDataType" inType="win:UnicodeString"/>
+      <data name="RemoteDataType" inType="win:UnicodeString"/>
+      <data name="DefaultDataType" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="DerStandarddruckerwirdgeändertSpoolervorgangerfolgreichArgs">
+      <data name="DefaultPrinterSelectedBySpooler" inType="win:UInt32"/>
+      <data name="OldDefaultPrinter" inType="win:UnicodeString"/>
+      <data name="NewDefaultPrinter" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="Module" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgang824Args">
+      <data name="DocumentName" inType="win:UnicodeString"/>
+      <data name="JobId" inType="win:UInt32"/>
+      <data name="PrintQueue" inType="win:UnicodeString"/>
+      <data name="ErrorInfo" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztSpoolervorgangerfolgreichArgs">
+      <data name="PrinterName" inType="win:UnicodeString"/>
+      <data name="PrinterPath" inType="win:UnicodeString"/>
+      <data name="PortName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="XPS_Druck_API_AufrufewerdenausgeführtXPS_Druck_API_FehlerArgs">
+      <data name="QueueName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="XPS_Druck_API_AufrufewerdenausgeführtXPS_Druck_API_Fehler828Args">
+      <data name="JobId" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="LeistungsüberwachungfürXPS_Druck_APIStartArgs">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Context" inType="win:UnicodeString"/>
+      <data name="StatusCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreichArgs">
+      <data name="JobId" inType="win:UInt32"/>
+      <data name="Processor" inType="win:UnicodeString"/>
+      <data name="Printer" inType="win:UnicodeString"/>
+      <data name="Driver" inType="win:UnicodeString"/>
+      <data name="IsolationMode" inType="win:UInt32"/>
+      <data name="Error" inType="win:HexInt32"/>
+     </template>
+     <template tid="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich843Args">
+      <data name="SucceededRpcCalls" inType="win:UInt32"/>
+      <data name="FailedRpcCalls" inType="win:UInt32"/>
+     </template>
+     <template tid="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich844Args">
+      <data name="IsolationMode" inType="win:UInt32"/>
+      <data name="Printer" inType="win:UnicodeString"/>
+      <data name="Driver" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich845Args">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Printer" inType="win:UnicodeString"/>
+      <data name="Driver" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:HexInt32"/>
+     </template>
+     <template tid="ClientseitigesRenderingSpoolervorgangerfolgreichArgs">
+      <data name="PrinterName" inType="win:UnicodeString"/>
+      <data name="PrinterAge" inType="win:UInt32"/>
+      <data name="ExpiryAge" inType="win:UInt32"/>
+     </template>
+     <template tid="ClientseitigesRenderingSpoolervorgangerfolgreich847Args">
+      <data name="PrinterName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EinDruckerwirdfreigegebenSpoolervorgangerfolgreichArgs">
+      <data name="PrinterName" inType="win:UnicodeString"/>
+      <data name="ShareName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DruckertreibervorgangFehlerbeiSpoolervorgangArgs">
+      <data name="Driver" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EineDruckerverbindungwirdhinzugefügtFehlerbeiSpoolervorgang851Args">
+      <data name="PrintQueue" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:HexInt32"/>
+     </template>
+     <template tid="EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang852Args">
+      <data name="OriginalDriver" inType="win:UnicodeString"/>
+      <data name="NewDriver" inType="win:UnicodeString"/>
+      <data name="PrinterName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ClientseitigesRenderingFehlerbeiSpoolervorgang853Args">
+      <data name="Error" inType="win:HexInt32"/>
+      <data name="PrinterName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ClientseitigesRenderingFehlerbeiSpoolervorgang855Args">
+      <data name="PrinterName" inType="win:UnicodeString"/>
+      <data name="AccessCode" inType="win:UInt32"/>
+     </template>
+     <template tid="DieVerbindungwurdeneukonfiguriert.SpoolerablaufverfolgungArgs">
+      <data name="ConnectionName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DieVerbindungwurdeneukonfiguriert.Spoolerablaufverfolgung863Args">
+      <data name="ConnectionName" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:HexInt32"/>
+     </template>
+     <template tid="DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich865Args">
+      <data name="Failures" inType="win:UInt32"/>
+      <data name="Jobs" inType="win:UInt32"/>
+      <data name="PrinterName" inType="win:UnicodeString"/>
+      <data name="DriverName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EinePlug&Play_GeräteobjektinstanzfüreinenDruckerwirderstellt...FehlerbeiSpoolervorgangArgs">
+      <data name="PrinterName" inType="win:UnicodeString"/>
+      <data name="DeviceObjectInstanceIdentifier" inType="win:UnicodeString"/>
+      <data name="HResultErrorCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="WS_Print_PortmonitorwirdinitialisiertFehlerbeiSpoolervorgangArgs">
+      <data name="HResultErrorCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="DasOfflinearchivfürBOP_Ereignisseistvoll.SpoolerablaufverfolgungArgs">
+      <data name="MachineName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ClientseitigesRenderingFehlerbeiSpoolervorgang870Args">
+      <data name="Driver" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:UnicodeString"/>
+     </template>
+     <template tid="GerätesteuerungsdruckFehlerbeiSpoolervorgangArgs">
+      <data name="RestrictionReason" inType="win:UnicodeString"/>
+      <data name="PrinterName" inType="win:UnicodeString"/>
+      <data name="JobOrDocumentName" inType="win:UnicodeString"/>
+      <data name="UserName" inType="win:UnicodeString"/>
+      <data name="PortName" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_SPOOLER_KEYWORD_LOCALSPL" value="SPOOLER_KEYWORD_LOCALSPL"/>
+    <string id="keyword_SPOOLER_KEYWORD_WIN32SPL" value="SPOOLER_KEYWORD_WIN32SPL"/>
+    <string id="keyword_SPOOLER_KEYWORD_PRINTER" value="SPOOLER_KEYWORD_PRINTER"/>
+    <string id="keyword_SPOOLER_KEYWORD_JOB" value="SPOOLER_KEYWORD_JOB"/>
+    <string id="keyword_SPOOLER_KEYWORD_CONNECTION" value="SPOOLER_KEYWORD_CONNECTION"/>
+    <string id="keyword_SPOOLER_KEYWORD_DRIVER" value="SPOOLER_KEYWORD_DRIVER"/>
+    <string id="keyword_SPOOLER_KEYWORD_SETUP" value="SPOOLER_KEYWORD_SETUP"/>
+    <string id="keyword_SPOOLER_KEYWORD_TRACE" value="SPOOLER_KEYWORD_TRACE"/>
+    <string id="keyword_SPOOLER_KEYWORD_CLASSIC" value="SPOOLER_KEYWORD_CLASSIC"/>
+    <string id="keyword_SPOOLER_KEYWORD_ACTIVE_DIR" value="SPOOLER_KEYWORD_ACTIVE_DIR"/>
+    <string id="keyword_SPOOLER_KEYWORD_ROUTER" value="SPOOLER_KEYWORD_ROUTER"/>
+    <string id="keyword_SPOOLER_KEYWORD_CSR" value="SPOOLER_KEYWORD_CSR"/>
+    <string id="keyword_SPOOLER_KEYWORD_PIPELINE" value="SPOOLER_KEYWORD_PIPELINE"/>
+    <string id="keyword_SPOOLER_KEYWORD" value="SPOOLER_KEYWORD"/>
+    <string id="keyword_SPOOLER_KEYWORD_PRINT_DRIVER_SANDBOX" value="SPOOLER_KEYWORD_PRINT_DRIVER_SANDBOX"/>
+    <string id="keyword_XPS_PRINT_API_KEYWORD" value="XPS_PRINT_API_KEYWORD"/>
+    <string id="keyword_XPS_PRINT_API_KEYWORD_PERFORMANCE" value="XPS_PRINT_API_KEYWORD_PERFORMANCE"/>
+    <string id="keyword_SPOOLER_KEYWORD_BRANCH_OFFICE_PRINTING" value="SPOOLER_KEYWORD_BRANCH_OFFICE_PRINTING"/>
+    <string id="keyword_SETUP_WFS_KEYWORD" value="SETUP_WFS_KEYWORD"/>
+    <string id="keyword_SPOOLER_KEYWORD_WSDMON" value="SPOOLER_KEYWORD_WSDMON"/>
+    <string id="task_EinDruckanbieterwirdinitialisiert" value="EinDruckanbieterwirdinitialisiert"/>
+    <string id="opcode_EinDruckanbieterwirdinitialisiertFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_Druckerhandlewirdgeöffnet" value="Druckerhandlewirdgeöffnet"/>
+    <string id="opcode_DruckerhandlewirdgeöffnetSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_DruckerhandlewirdgeöffnetFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_Druckerhandlewirdgeschlossen" value="Druckerhandlewirdgeschlossen"/>
+    <string id="opcode_DruckerhandlewirdgeschlossenSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_DruckerhandlewirdgeschlossenFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EinDruckerwirdhinzugefügt" value="EinDruckerwirdhinzugefügt"/>
+    <string id="opcode_EinDruckerwirdhinzugefügtSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EinDruckerwirdhinzugefügtFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EinDruckerwirdgelöscht" value="EinDruckerwirdgelöscht"/>
+    <string id="opcode_EinDruckerwirdgelöschtSpoolervorganggestartet" value="Spoolervorganggestartet"/>
+    <string id="opcode_EinDruckerwirdgelöschtSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EinDruckerwirdgelöschtFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EineDruckerverbindungwirdhinzugefügt" value="EineDruckerverbindungwirdhinzugefügt"/>
+    <string id="opcode_EineDruckerverbindungwirdhinzugefügtSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EineDruckerverbindungwirdhinzugefügtFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EineDruckerverbindungwirdgelöscht" value="EineDruckerverbindungwirdgelöscht"/>
+    <string id="opcode_EineDruckerverbindungwirdgelöschtSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EineDruckerverbindungwirdgelöschtFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EinDruckertreiberwirdhinzugefügt" value="EinDruckertreiberwirdhinzugefügt"/>
+    <string id="opcode_EinDruckertreiberwirdhinzugefügtSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EinDruckertreiberwirdhinzugefügtFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="opcode_EinDruckertreiberwirdhinzugefügtSpoolerwarnung" value="Spoolerwarnung"/>
+    <string id="task_EinDruckertreiberwirdgelöscht" value="EinDruckertreiberwirdgelöscht"/>
+    <string id="opcode_EinDruckertreiberwirdgelöschtSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EinDruckertreiberwirdgelöschtSpoolerwarnung" value="Spoolerwarnung"/>
+    <string id="task_EinDokumentdruckauftragwirdgestartet" value="EinDokumentdruckauftragwirdgestartet"/>
+    <string id="opcode_EinDokumentdruckauftragwirdgestartetSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EinDokumentdruckauftragwirdgestartetFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EinDokumentdruckauftragwirdbeendet" value="EinDokumentdruckauftragwirdbeendet"/>
+    <string id="opcode_EinDokumentdruckauftragwirdbeendetSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EinDokumentdruckauftragwirdbeendetFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EineneueDokumentseitewirdgestartet" value="EineneueDokumentseitewirdgestartet"/>
+    <string id="opcode_EineneueDokumentseitewirdgestartetSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EineneueDokumentseitewirdgestartetFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EineDokumentseitewirdbeendet" value="EineDokumentseitewirdbeendet"/>
+    <string id="opcode_EineDokumentseitewirdbeendetSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EineDokumentseitewirdbeendetFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_Druckerkonfigurationwirdfestgelegt" value="Druckerkonfigurationwirdfestgelegt"/>
+    <string id="opcode_DruckerkonfigurationwirdfestgelegtSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_DruckerkonfigurationwirdfestgelegtFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EineDruckertreiber_INF_Dateiwirdanalysiert" value="EineDruckertreiber_INF_Dateiwirdanalysiert"/>
+    <string id="opcode_EineDruckertreiber_INF_DateiwirdanalysiertSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EineDruckertreiber_INF_DateiwirdanalysiertFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EinDruckertreiberwirdinstalliert" value="EinDruckertreiberwirdinstalliert"/>
+    <string id="opcode_EinDruckertreiberwirdinstalliertSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EinDruckertreiberwirdinstalliertFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="opcode_EinDruckertreiberwirdinstalliertSpoolerwarnung" value="Spoolerwarnung"/>
+    <string id="task_EinDruckertreiberpaketwirdkopiert" value="EinDruckertreiberpaketwirdkopiert"/>
+    <string id="opcode_EinDruckertreiberpaketwirdkopiertSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EinDruckertreiberpaketwirdkopiertFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_Druckerwerdenaufgezählt" value="Druckerwerdenaufgezählt"/>
+    <string id="opcode_DruckerwerdenaufgezähltSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_DruckerwerdenaufgezähltFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_DerAblaufeinerSpoolermeldungwirdverfolgt." value="DerAblaufeinerSpoolermeldungwirdverfolgt."/>
+    <string id="opcode_DerAblaufeinerSpoolermeldungwirdverfolgt.FehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="opcode_DerAblaufeinerSpoolermeldungwirdverfolgt.Spoolerablaufverfolgung" value="Spoolerablaufverfolgung"/>
+    <string id="task_EinDruckerwirdangehalten" value="EinDruckerwirdangehalten"/>
+    <string id="opcode_EinDruckerwirdangehaltenSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="task_DerBetriebeinesDruckerswirdfortgesetzt." value="DerBetriebeinesDruckerswirdfortgesetzt."/>
+    <string id="opcode_DerBetriebeinesDruckerswirdfortgesetzt.Spoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="task_AufträgewerdenausderDruckerwarteschlangeentfernt" value="AufträgewerdenausderDruckerwarteschlangeentfernt"/>
+    <string id="opcode_AufträgewerdenausderDruckerwarteschlangeentferntSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="task_EinDokumentwirdgedruckt" value="EinDokumentwirdgedruckt"/>
+    <string id="opcode_EinDokumentwirdgedrucktSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EinDokumentwirdgedrucktFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EinDokumentwirdgelöscht" value="EinDokumentwirdgelöscht"/>
+    <string id="opcode_EinDokumentwirdgelöschtSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="task_EinDruckformularwirdhinzugefügt" value="EinDruckformularwirdhinzugefügt"/>
+    <string id="opcode_EinDruckformularwirdhinzugefügtSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="task_EinDruckformularwirdgelöscht" value="EinDruckformularwirdgelöscht"/>
+    <string id="opcode_EinDruckformularwirdgelöschtSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="task_EinDruckerwirdfreigegeben" value="EinDruckerwirdfreigegeben"/>
+    <string id="opcode_EinDruckerwirdfreigegebenSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EinDruckerwirdfreigegebenFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_DieDruckerfreigabewirdaufgehoben." value="DieDruckerfreigabewirdaufgehoben."/>
+    <string id="opcode_DieDruckerfreigabewirdaufgehoben.Spoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_DieDruckerfreigabewirdaufgehoben.FehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_DerDruckspoolerwirdinitialisiert" value="DerDruckspoolerwirdinitialisiert"/>
+    <string id="opcode_DerDruckspoolerwirdinitialisiertFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EinDruckerwirdinActiveDirectoryveröffentlicht" value="EinDruckerwirdinActiveDirectoryveröffentlicht"/>
+    <string id="opcode_EinDruckerwirdinActiveDirectoryveröffentlichtSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EinDruckerwirdinActiveDirectoryveröffentlichtFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EinDruckerwirdausActiveDirectoryentfernt" value="EinDruckerwirdausActiveDirectoryentfernt"/>
+    <string id="opcode_EinDruckerwirdausActiveDirectoryentferntSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EinDruckerwirdausActiveDirectoryentferntFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EinDruckerwirdbereinigt" value="EinDruckerwirdbereinigt"/>
+    <string id="opcode_EinDruckerwirdbereinigtSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_EinDruckerwirdbereinigtFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_Initialisierung" value="Initialisierung"/>
+    <string id="opcode_InitialisierungFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EinDruckprozessorwirdinitialisiert" value="EinDruckprozessorwirdinitialisiert"/>
+    <string id="opcode_EinDruckprozessorwirdinitialisiertFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EinDruckertreiberpaketwirdüberprüftoderneugeneriert." value="EinDruckertreiberpaketwirdüberprüftoderneugeneriert."/>
+    <string id="opcode_EinDruckertreiberpaketwirdüberprüftoderneugeneriert.FehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_Druckspoolerbefehl(e)wird(werden)weitergeleitet" value="Druckspoolerbefehl(e)wird(werden)weitergeleitet"/>
+    <string id="opcode_Druckspoolerbefehl(e)wird(werden)weitergeleitetFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_ClientseitigesRendering" value="ClientseitigesRendering"/>
+    <string id="opcode_ClientseitigesRenderingSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_ClientseitigesRenderingFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_DruckfilterwerdeninderSpoolerpipelineausgeführt" value="DruckfilterwerdeninderSpoolerpipelineausgeführt"/>
+    <string id="opcode_DruckfilterwerdeninderSpoolerpipelineausgeführtFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_Druckauftragsdiagnose" value="Druckauftragsdiagnose"/>
+    <string id="task_ProzessbeendungaufgrundeinesschwerwiegendenFehlers" value="ProzessbeendungaufgrundeinesschwerwiegendenFehlers"/>
+    <string id="opcode_ProzessbeendungaufgrundeinesschwerwiegendenFehlersUnerwarteteProzessbeendung" value="UnerwarteteProzessbeendung"/>
+    <string id="task_EinVerzeichniswirdgelöscht" value="EinVerzeichniswirdgelöscht"/>
+    <string id="opcode_EinVerzeichniswirdgelöschtFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EinDateivorgangwirdausgeführt" value="EinDateivorgangwirdausgeführt"/>
+    <string id="opcode_EinDateivorgangwirdausgeführtFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_Spooler_RPC_Endpunktewerdenaktiviert" value="Spooler_RPC_Endpunktewerdenaktiviert"/>
+    <string id="opcode_Spooler_RPC_EndpunktewerdenaktiviertFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetzt" value="DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetzt"/>
+    <string id="opcode_DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="opcode_DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="opcode_DasclientseitigeRenderingwirdaufdasserverseitigeRenderingzurückgesetztSpoolerablaufverfolgung" value="Spoolerablaufverfolgung"/>
+    <string id="task_DerStandarddruckerwirdgeändert" value="DerStandarddruckerwirdgeändert"/>
+    <string id="opcode_DerStandarddruckerwirdgeändertSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="task_DruckertreiberundanderePlug_Inswerdenisoliert" value="DruckertreiberundanderePlug_Inswerdenisoliert"/>
+    <string id="opcode_DruckertreiberundanderePlug_InswerdenisoliertSpoolervorgangerfolgreich" value="Spoolervorgangerfolgreich"/>
+    <string id="task_XPS_Druck_API_Aufrufewerdenausgeführt" value="XPS_Druck_API_Aufrufewerdenausgeführt"/>
+    <string id="opcode_XPS_Druck_API_AufrufewerdenausgeführtXPS_Druck_API_Fehler" value="XPS_Druck_API_Fehler"/>
+    <string id="task_LeistungsüberwachungfürXPS_Druck_API" value="LeistungsüberwachungfürXPS_Druck_API"/>
+    <string id="task_LeistungsüberwachungfürallgemeinenDruckspooler" value="LeistungsüberwachungfürallgemeinenDruckspooler"/>
+    <string id="task_Druckertreibervorgang" value="Druckertreibervorgang"/>
+    <string id="opcode_DruckertreibervorgangFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_DieVerbindungwurdeneukonfiguriert." value="DieVerbindungwurdeneukonfiguriert."/>
+    <string id="opcode_DieVerbindungwurdeneukonfiguriert.Spoolerablaufverfolgung" value="Spoolerablaufverfolgung"/>
+    <string id="task_Windows_Faxund_Scanwirdgewartet..." value="Windows_Faxund_Scanwirdgewartet..."/>
+    <string id="opcode_Windows_Faxund_Scanwirdgewartet...FehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_EinePlug&Play_GeräteobjektinstanzfüreinenDruckerwirderstellt..." value="EinePlug&Play_GeräteobjektinstanzfüreinenDruckerwirderstellt..."/>
+    <string id="opcode_EinePlug&Play_GeräteobjektinstanzfüreinenDruckerwirderstellt...FehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_WS_Print_Portmonitorwirdinitialisiert" value="WS_Print_Portmonitorwirdinitialisiert"/>
+    <string id="opcode_WS_Print_PortmonitorwirdinitialisiertFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+    <string id="task_DasOfflinearchivfürBOP_Ereignisseistvoll." value="DasOfflinearchivfürBOP_Ereignisseistvoll."/>
+    <string id="opcode_DasOfflinearchivfürBOP_Ereignisseistvoll.Spoolerablaufverfolgung" value="Spoolerablaufverfolgung"/>
+    <string id="task_Gerätesteuerungsdruck" value="Gerätesteuerungsdruck"/>
+    <string id="opcode_GerätesteuerungsdruckFehlerbeiSpoolervorgang" value="FehlerbeiSpoolervorgang"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

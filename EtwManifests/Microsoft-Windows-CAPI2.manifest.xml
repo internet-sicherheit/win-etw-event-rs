@@ -1,0 +1,222 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-CAPI2" guid="{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}" resourceFileName="Microsoft-Windows-CAPI2" messageFileName="Microsoft-Windows-CAPI2" symbol="MicrosoftWindowsCAPI2" source="Xml" >
+    <keywords>
+     <keyword name="PathValidation" message="$(string.keyword_PathValidation)" mask="0x1"/>
+     <keyword name="PathDiscovery" message="$(string.keyword_PathDiscovery)" mask="0x2"/>
+     <keyword name="Revocation" message="$(string.keyword_Revocation)" mask="0x4"/>
+     <keyword name="Cache" message="$(string.keyword_Cache)" mask="0x8"/>
+     <keyword name="Retrieval" message="$(string.keyword_Retrieval)" mask="0x10"/>
+     <keyword name="AutoRootUpdate" message="$(string.keyword_AutoRootUpdate)" mask="0x20"/>
+     <keyword name="WinVerifyTrust" message="$(string.keyword_WinVerifyTrust)" mask="0x40"/>
+     <keyword name="PrivateKey" message="$(string.keyword_PrivateKey)" mask="0x80"/>
+     <keyword name="CertificateStore" message="$(string.keyword_CertificateStore)" mask="0x100"/>
+     <keyword name="CertificateDetails" message="$(string.keyword_CertificateDetails)" mask="0x200"/>
+     <keyword name="Catalog" message="$(string.keyword_Catalog)" mask="0x400"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="Buildkette" message="$(string.task_Buildkette)" value="11"/>
+     <task name="AusstellerzertifikatausCacheabrufen" message="$(string.task_AusstellerzertifikatausCacheabrufen)" value="13"/>
+     <task name="AusstellerzertifikatausNetzwerkabrufen" message="$(string.task_AusstellerzertifikatausNetzwerkabrufen)" value="15"/>
+     <task name="Ausstellerzertifikatabrufunterdrücken" message="$(string.task_Ausstellerzertifikatabrufunterdrücken)" value="16"/>
+     <task name="Drittanbieter_StammzertifikatausCacheabrufen" message="$(string.task_Drittanbieter_StammzertifikatausCacheabrufen)" value="18"/>
+     <task name="Drittanbieter_StammzertifikatausNetzwerkabrufen" message="$(string.task_Drittanbieter_StammzertifikatausNetzwerkabrufen)" value="20"/>
+     <task name="ÜbergreifendesZertifikatausCacheabrufen" message="$(string.task_ÜbergreifendesZertifikatausCacheabrufen)" value="22"/>
+     <task name="ÜbergreifendesZertifikatausNetzwerkabrufen" message="$(string.task_ÜbergreifendesZertifikatausNetzwerkabrufen)" value="24"/>
+     <task name="Kettenrichtlinieüberprüfen" message="$(string.task_Kettenrichtlinieüberprüfen)" value="30"/>
+     <task name="Sperrungüberprüfen" message="$(string.task_Sperrungüberprüfen)" value="41"/>
+     <task name="Sperrinformationenablehnen" message="$(string.task_Sperrinformationenablehnen)" value="42"/>
+     <task name="ObjektausCacheabrufen" message="$(string.task_ObjektausCacheabrufen)" value="51"/>
+     <task name="ObjektausNetzwerkabrufen" message="$(string.task_ObjektausNetzwerkabrufen)" value="53"/>
+     <task name="Speicheröffnen" message="$(string.task_Speicheröffnen)" value="60"/>
+     <task name="PrivatenZertifikatschlüsselerwerben" message="$(string.task_PrivatenZertifikatschlüsselerwerben)" value="70"/>
+     <task name="Zertifikatsignieren" message="$(string.task_Zertifikatsignieren)" value="71"/>
+     <task name="Vertrauenswürdigkeitüberprüfen" message="$(string.task_Vertrauenswürdigkeitüberprüfen)" value="80"/>
+     <task name="SicherheitskatalogfürdieDateisuchen" message="$(string.task_SicherheitskatalogfürdieDateisuchen)" value="82"/>
+     <task name="X509_Objekte" message="$(string.task_X509_Objekte)" value="90"/>
+     <task name="SicherheitskatalogderKatalogdatenbankhinzufügen" message="$(string.task_SicherheitskatalogderKatalogdatenbankhinzufügen)" value="500"/>
+     <task name="SicherheitskatalogausderKatalogdatenbankentfernen" message="$(string.task_SicherheitskatalogausderKatalogdatenbankentfernen)" value="501"/>
+     <task name="SicherheitskatalogmitderKatalogdatenbanksynchronisieren" message="$(string.task_SicherheitskatalogmitderKatalogdatenbanksynchronisieren)" value="502"/>
+     <task name="SubsystemderKatalogdatenbankneuerstellen" message="$(string.task_SubsystemderKatalogdatenbankneuerstellen)" value="503"/>
+     <task name="InderKatalogdatenbanknachSicherheitskatalogensuchen,diedenHashenthalten" message="$(string.task_InderKatalogdatenbanknachSicherheitskatalogensuchen,diedenHashenthalten)" value="504"/>
+    </tasks>
+    <events>
+     <event value="10" symbol="BuildketteStarten" version="0" task="Buildkette" opcode="win:Starten" level="win:Informational" keywords="PathValidation PathDiscovery" template="BuildketteStartenArgs"/>
+     <event value="11" symbol="BuildketteBeenden" version="0" task="Buildkette" opcode="win:Beenden" level="win:Informational" keywords="PathValidation PathDiscovery" template="BuildketteStartenArgs"/>
+     <event value="12" symbol="AusstellerzertifikatausCacheabrufenStarten" version="0" task="AusstellerzertifikatausCacheabrufen" opcode="win:Starten" level="win:Informational" keywords="PathDiscovery Cache" template="BuildketteStartenArgs"/>
+     <event value="13" symbol="AusstellerzertifikatausCacheabrufenBeenden" version="0" task="AusstellerzertifikatausCacheabrufen" opcode="win:Beenden" level="win:Informational" keywords="PathDiscovery Cache" template="BuildketteStartenArgs"/>
+     <event value="14" symbol="AusstellerzertifikatausNetzwerkabrufenStarten" version="0" task="AusstellerzertifikatausNetzwerkabrufen" opcode="win:Starten" level="win:Informational" keywords="PathDiscovery Retrieval" template="BuildketteStartenArgs"/>
+     <event value="15" symbol="AusstellerzertifikatausNetzwerkabrufenBeenden" version="0" task="AusstellerzertifikatausNetzwerkabrufen" opcode="win:Beenden" level="win:Informational" keywords="PathDiscovery Retrieval" template="BuildketteStartenArgs"/>
+     <event value="16" symbol="Ausstellerzertifikatabrufunterdrücken" version="0" task="Ausstellerzertifikatabrufunterdrücken" level="win:Error" keywords="PathDiscovery Cache Retrieval" template="BuildketteStartenArgs"/>
+     <event value="17" symbol="Drittanbieter_StammzertifikatausCacheabrufenStarten" version="0" task="Drittanbieter_StammzertifikatausCacheabrufen" opcode="win:Starten" level="win:Informational" keywords="PathDiscovery Cache AutoRootUpdate" template="BuildketteStartenArgs"/>
+     <event value="18" symbol="Drittanbieter_StammzertifikatausCacheabrufenBeenden" version="0" task="Drittanbieter_StammzertifikatausCacheabrufen" opcode="win:Beenden" level="win:Informational" keywords="PathDiscovery Cache AutoRootUpdate" template="BuildketteStartenArgs"/>
+     <event value="19" symbol="Drittanbieter_StammzertifikatausNetzwerkabrufenStarten" version="0" task="Drittanbieter_StammzertifikatausNetzwerkabrufen" opcode="win:Starten" level="win:Informational" keywords="PathDiscovery Retrieval AutoRootUpdate" template="BuildketteStartenArgs"/>
+     <event value="20" symbol="Drittanbieter_StammzertifikatausNetzwerkabrufenBeenden" version="0" task="Drittanbieter_StammzertifikatausNetzwerkabrufen" opcode="win:Beenden" level="win:Informational" keywords="PathDiscovery Retrieval AutoRootUpdate" template="BuildketteStartenArgs"/>
+     <event value="21" symbol="ÜbergreifendesZertifikatausCacheabrufenStarten" version="0" task="ÜbergreifendesZertifikatausCacheabrufen" opcode="win:Starten" level="win:Informational" keywords="PathDiscovery Cache" template="BuildketteStartenArgs"/>
+     <event value="22" symbol="ÜbergreifendesZertifikatausCacheabrufenBeenden" version="0" task="ÜbergreifendesZertifikatausCacheabrufen" opcode="win:Beenden" level="win:Informational" keywords="PathDiscovery Cache" template="BuildketteStartenArgs"/>
+     <event value="23" symbol="ÜbergreifendesZertifikatausNetzwerkabrufenStarten" version="0" task="ÜbergreifendesZertifikatausNetzwerkabrufen" opcode="win:Starten" level="win:Informational" keywords="PathDiscovery Retrieval" template="BuildketteStartenArgs"/>
+     <event value="24" symbol="ÜbergreifendesZertifikatausNetzwerkabrufenBeenden" version="0" task="ÜbergreifendesZertifikatausNetzwerkabrufen" opcode="win:Beenden" level="win:Informational" keywords="PathDiscovery Retrieval" template="BuildketteStartenArgs"/>
+     <event value="30" symbol="Kettenrichtlinieüberprüfen" version="0" task="Kettenrichtlinieüberprüfen" level="win:Informational" keywords="PathValidation" template="BuildketteStartenArgs"/>
+     <event value="40" symbol="SperrungüberprüfenStarten" version="0" task="Sperrungüberprüfen" opcode="win:Starten" level="win:Informational" keywords="PathValidation Revocation" template="BuildketteStartenArgs"/>
+     <event value="41" symbol="SperrungüberprüfenBeenden" version="0" task="Sperrungüberprüfen" opcode="win:Beenden" level="win:Informational" keywords="PathValidation Revocation" template="BuildketteStartenArgs"/>
+     <event value="42" symbol="Sperrinformationenablehnen" version="0" task="Sperrinformationenablehnen" level="win:Error" keywords="PathValidation Revocation" template="BuildketteStartenArgs"/>
+     <event value="50" symbol="ObjektausCacheabrufenStarten" version="0" task="ObjektausCacheabrufen" opcode="win:Starten" level="win:Informational" keywords="PathDiscovery Revocation Cache AutoRootUpdate" template="BuildketteStartenArgs"/>
+     <event value="51" symbol="ObjektausCacheabrufenBeenden" version="0" task="ObjektausCacheabrufen" opcode="win:Beenden" level="win:Informational" keywords="PathDiscovery Revocation Cache AutoRootUpdate" template="BuildketteStartenArgs"/>
+     <event value="52" symbol="ObjektausNetzwerkabrufenStarten" version="0" task="ObjektausNetzwerkabrufen" opcode="win:Starten" level="win:Informational" keywords="PathDiscovery Revocation Retrieval AutoRootUpdate" template="BuildketteStartenArgs"/>
+     <event value="53" symbol="ObjektausNetzwerkabrufenBeenden" version="0" task="ObjektausNetzwerkabrufen" opcode="win:Beenden" level="win:Informational" keywords="PathDiscovery Revocation Retrieval AutoRootUpdate" template="BuildketteStartenArgs"/>
+     <event value="60" symbol="Speicheröffnen" version="0" task="Speicheröffnen" level="win:Verbose" keywords="CertificateStore" template="BuildketteStartenArgs"/>
+     <event value="70" symbol="PrivatenZertifikatschlüsselerwerben" version="0" task="PrivatenZertifikatschlüsselerwerben" level="win:Informational" keywords="PrivateKey" template="BuildketteStartenArgs"/>
+     <event value="71" symbol="Zertifikatsignieren" version="0" task="Zertifikatsignieren" level="win:Informational" keywords="PrivateKey" template="BuildketteStartenArgs"/>
+     <event value="80" symbol="VertrauenswürdigkeitüberprüfenStarten" version="0" task="Vertrauenswürdigkeitüberprüfen" opcode="win:Starten" level="win:Informational" keywords="WinVerifyTrust" template="BuildketteStartenArgs"/>
+     <event value="81" symbol="VertrauenswürdigkeitüberprüfenBeenden" version="0" task="Vertrauenswürdigkeitüberprüfen" opcode="win:Beenden" level="win:Informational" keywords="WinVerifyTrust" template="BuildketteStartenArgs"/>
+     <event value="82" symbol="SicherheitskatalogfürdieDateisuchen" version="0" task="SicherheitskatalogfürdieDateisuchen" level="win:Informational" keywords="Catalog" template="BuildketteStartenArgs"/>
+     <event value="90" symbol="X509_Objekte" version="0" task="X509_Objekte" level="win:Informational" keywords="CertificateDetails" template="BuildketteStartenArgs"/>
+     <event value="256" symbol="task_0" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="257" symbol="task_0257" version="0" task="task_0" level="win:Error" template="task_0257Args"/>
+     <event value="512" symbol="task_0512" version="0" task="task_0" level="win:Critical" template="task_0257Args"/>
+     <event value="513" symbol="task_0513" version="0" task="task_0" level="win:Critical" template="task_0257Args"/>
+     <event value="4097" symbol="task_04097" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="4098" symbol="task_04098" version="0" task="task_0" level="win:Informational" template="task_0257Args"/>
+     <event value="4099" symbol="task_04099" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4100" symbol="task_04100" version="0" task="task_0" level="win:Informational" template="task_0257Args"/>
+     <event value="4101" symbol="task_04101" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4102" symbol="task_04102" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="4103" symbol="task_04103" version="0" task="task_0" level="win:Informational" template="task_0257Args"/>
+     <event value="4104" symbol="task_04104" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4105" symbol="task_04105" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="4106" symbol="task_04106" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="4107" symbol="task_04107" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4108" symbol="task_04108" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="4109" symbol="task_04109" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="4110" symbol="task_04110" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4111" symbol="task_04111" version="0" task="task_0" level="win:Informational" template="task_0257Args"/>
+     <event value="4112" symbol="task_04112" version="0" task="task_0" level="win:Informational" template="task_0257Args"/>
+     <event value="4113" symbol="task_04113" version="0" task="task_0" level="win:Informational" template="task_0257Args"/>
+     <event value="4114" symbol="task_04114" version="0" task="task_0" level="win:Error" template="task_04114Args"/>
+     <event value="4115" symbol="task_04115" version="0" task="task_0" level="win:Informational" template="task_04115Args"/>
+     <event value="4116" symbol="task_04116" version="0" task="task_0" level="win:Error" template="task_04114Args"/>
+     <event value="4117" symbol="task_04117" version="0" task="task_0" level="win:Warning" template="task_04117Args"/>
+     <event value="4128" symbol="task_04128" version="0" task="task_0" level="win:Informational" template="task_0257Args"/>
+     <event value="4129" symbol="task_04129" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4176" symbol="task_04176" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4177" symbol="task_04177" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4178" symbol="task_04178" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="8192" symbol="SicherheitskatalogderKatalogdatenbankhinzufügenStarten" version="0" task="SicherheitskatalogderKatalogdatenbankhinzufügen" opcode="win:Starten" level="win:Informational" keywords="Catalog" template="SicherheitskatalogderKatalogdatenbankhinzufügenStartenArgs"/>
+     <event value="8193" symbol="SicherheitskatalogderKatalogdatenbankhinzufügenBeenden" version="0" task="SicherheitskatalogderKatalogdatenbankhinzufügen" opcode="win:Beenden" level="win:Informational" keywords="Catalog" template="SicherheitskatalogderKatalogdatenbankhinzufügenBeendenArgs"/>
+     <event value="8194" symbol="SicherheitskatalogausderKatalogdatenbankentfernenStarten" version="0" task="SicherheitskatalogausderKatalogdatenbankentfernen" opcode="win:Starten" level="win:Informational" keywords="Catalog" template="SicherheitskatalogderKatalogdatenbankhinzufügenStartenArgs"/>
+     <event value="8195" symbol="SicherheitskatalogausderKatalogdatenbankentfernenBeenden" version="0" task="SicherheitskatalogausderKatalogdatenbankentfernen" opcode="win:Beenden" level="win:Informational" keywords="Catalog" template="SicherheitskatalogderKatalogdatenbankhinzufügenBeendenArgs"/>
+     <event value="8196" symbol="SicherheitskatalogmitderKatalogdatenbanksynchronisierenStarten" version="0" task="SicherheitskatalogmitderKatalogdatenbanksynchronisieren" opcode="win:Starten" level="win:Verbose" keywords="Catalog" template="SicherheitskatalogderKatalogdatenbankhinzufügenStartenArgs"/>
+     <event value="8197" symbol="SicherheitskatalogmitderKatalogdatenbanksynchronisierenBeenden" version="0" task="SicherheitskatalogmitderKatalogdatenbanksynchronisieren" opcode="win:Beenden" level="win:Verbose" keywords="Catalog" template="SicherheitskatalogderKatalogdatenbankhinzufügenBeendenArgs"/>
+     <event value="8198" symbol="SubsystemderKatalogdatenbankneuerstellenStarten" version="0" task="SubsystemderKatalogdatenbankneuerstellen" opcode="win:Starten" level="win:Informational" keywords="Catalog" template="SubsystemderKatalogdatenbankneuerstellenStartenArgs"/>
+     <event value="8199" symbol="SubsystemderKatalogdatenbankneuerstellenBeenden" version="0" task="SubsystemderKatalogdatenbankneuerstellen" opcode="win:Beenden" level="win:Informational" keywords="Catalog" template="SicherheitskatalogderKatalogdatenbankhinzufügenBeendenArgs"/>
+     <event value="8200" symbol="InderKatalogdatenbanknachSicherheitskatalogensuchen,diedenHashenthaltenStarten" version="0" task="InderKatalogdatenbanknachSicherheitskatalogensuchen,diedenHashenthalten" opcode="win:Starten" level="win:Informational" keywords="Catalog" template="InderKatalogdatenbanknachSicherheitskatalogensuchen,diedenHashenthaltenStartenArgs"/>
+     <event value="8201" symbol="InderKatalogdatenbanknachSicherheitskatalogensuchen,diedenHashenthaltenBeenden" version="0" task="InderKatalogdatenbanknachSicherheitskatalogensuchen,diedenHashenthalten" opcode="win:Beenden" level="win:Informational" keywords="Catalog" template="InderKatalogdatenbanknachSicherheitskatalogensuchen,diedenHashenthaltenBeendenArgs"/>
+     <event value="8202" symbol="SicherheitskatalogmitderKatalogdatenbanksynchronisierenStarten8202" version="0" task="SicherheitskatalogmitderKatalogdatenbanksynchronisieren" opcode="win:Starten" level="win:Informational" keywords="Catalog" template="SubsystemderKatalogdatenbankneuerstellenStartenArgs"/>
+     <event value="8203" symbol="SicherheitskatalogmitderKatalogdatenbanksynchronisierenBeenden8203" version="0" task="SicherheitskatalogmitderKatalogdatenbanksynchronisieren" opcode="win:Beenden" level="win:Informational" keywords="Catalog" template="SicherheitskatalogderKatalogdatenbankhinzufügenBeendenArgs"/>
+    </events>
+    <templates>
+     <template tid="BuildketteStartenArgs">
+      <data name="EventWriteData" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0Args">
+      <data name="1" inType="win:UnicodeString"/>
+      <data name="2" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0257Args">
+      <data name="1" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04114Args">
+      <data name="1" inType="win:UnicodeString"/>
+      <data name="2" inType="win:UnicodeString"/>
+      <data name="3" inType="win:UnicodeString"/>
+      <data name="4" inType="win:UnicodeString"/>
+      <data name="5" inType="win:UnicodeString"/>
+      <data name="6" inType="win:UnicodeString"/>
+      <data name="7" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04115Args">
+      <data name="1" inType="win:UnicodeString"/>
+      <data name="2" inType="win:UnicodeString"/>
+      <data name="3" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04117Args">
+      <data name="1" inType="win:UnicodeString"/>
+      <data name="2" inType="win:UnicodeString"/>
+      <data name="3" inType="win:UnicodeString"/>
+      <data name="4" inType="win:UnicodeString"/>
+      <data name="5" inType="win:UnicodeString"/>
+      <data name="6" inType="win:UnicodeString"/>
+      <data name="7" inType="win:UnicodeString"/>
+      <data name="8" inType="win:UnicodeString"/>
+      <data name="9" inType="win:UnicodeString"/>
+      <data name="10" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SicherheitskatalogderKatalogdatenbankhinzufügenStartenArgs">
+      <data name="Subsystem" inType="win:UnicodeString"/>
+      <data name="FileName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SicherheitskatalogderKatalogdatenbankhinzufügenBeendenArgs">
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="SubsystemderKatalogdatenbankneuerstellenStartenArgs">
+      <data name="Subsystem" inType="win:UnicodeString"/>
+     </template>
+     <template tid="InderKatalogdatenbanknachSicherheitskatalogensuchen,diedenHashenthaltenStartenArgs">
+      <data name="Subsystem" inType="win:UnicodeString"/>
+      <data name="Algorithm" inType="win:UnicodeString"/>
+      <data name="Length" inType="win:UInt16"/>
+      <data name="Value" inType="win:Binary" length="Length"/>
+     </template>
+     <template tid="InderKatalogdatenbanknachSicherheitskatalogensuchen,diedenHashenthaltenBeendenArgs">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="Count" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_PathValidation" value="PathValidation"/>
+    <string id="keyword_PathDiscovery" value="PathDiscovery"/>
+    <string id="keyword_Revocation" value="Revocation"/>
+    <string id="keyword_Cache" value="Cache"/>
+    <string id="keyword_Retrieval" value="Retrieval"/>
+    <string id="keyword_AutoRootUpdate" value="AutoRootUpdate"/>
+    <string id="keyword_WinVerifyTrust" value="WinVerifyTrust"/>
+    <string id="keyword_PrivateKey" value="PrivateKey"/>
+    <string id="keyword_CertificateStore" value="CertificateStore"/>
+    <string id="keyword_CertificateDetails" value="CertificateDetails"/>
+    <string id="keyword_Catalog" value="Catalog"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_Buildkette" value="Buildkette"/>
+    <string id="task_AusstellerzertifikatausCacheabrufen" value="AusstellerzertifikatausCacheabrufen"/>
+    <string id="task_AusstellerzertifikatausNetzwerkabrufen" value="AusstellerzertifikatausNetzwerkabrufen"/>
+    <string id="task_Ausstellerzertifikatabrufunterdrücken" value="Ausstellerzertifikatabrufunterdrücken"/>
+    <string id="task_Drittanbieter_StammzertifikatausCacheabrufen" value="Drittanbieter_StammzertifikatausCacheabrufen"/>
+    <string id="task_Drittanbieter_StammzertifikatausNetzwerkabrufen" value="Drittanbieter_StammzertifikatausNetzwerkabrufen"/>
+    <string id="task_ÜbergreifendesZertifikatausCacheabrufen" value="ÜbergreifendesZertifikatausCacheabrufen"/>
+    <string id="task_ÜbergreifendesZertifikatausNetzwerkabrufen" value="ÜbergreifendesZertifikatausNetzwerkabrufen"/>
+    <string id="task_Kettenrichtlinieüberprüfen" value="Kettenrichtlinieüberprüfen"/>
+    <string id="task_Sperrungüberprüfen" value="Sperrungüberprüfen"/>
+    <string id="task_Sperrinformationenablehnen" value="Sperrinformationenablehnen"/>
+    <string id="task_ObjektausCacheabrufen" value="ObjektausCacheabrufen"/>
+    <string id="task_ObjektausNetzwerkabrufen" value="ObjektausNetzwerkabrufen"/>
+    <string id="task_Speicheröffnen" value="Speicheröffnen"/>
+    <string id="task_PrivatenZertifikatschlüsselerwerben" value="PrivatenZertifikatschlüsselerwerben"/>
+    <string id="task_Zertifikatsignieren" value="Zertifikatsignieren"/>
+    <string id="task_Vertrauenswürdigkeitüberprüfen" value="Vertrauenswürdigkeitüberprüfen"/>
+    <string id="task_SicherheitskatalogfürdieDateisuchen" value="SicherheitskatalogfürdieDateisuchen"/>
+    <string id="task_X509_Objekte" value="X509_Objekte"/>
+    <string id="task_SicherheitskatalogderKatalogdatenbankhinzufügen" value="SicherheitskatalogderKatalogdatenbankhinzufügen"/>
+    <string id="task_SicherheitskatalogausderKatalogdatenbankentfernen" value="SicherheitskatalogausderKatalogdatenbankentfernen"/>
+    <string id="task_SicherheitskatalogmitderKatalogdatenbanksynchronisieren" value="SicherheitskatalogmitderKatalogdatenbanksynchronisieren"/>
+    <string id="task_SubsystemderKatalogdatenbankneuerstellen" value="SubsystemderKatalogdatenbankneuerstellen"/>
+    <string id="task_InderKatalogdatenbanknachSicherheitskatalogensuchen,diedenHashenthalten" value="InderKatalogdatenbanknachSicherheitskatalogensuchen,diedenHashenthalten"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

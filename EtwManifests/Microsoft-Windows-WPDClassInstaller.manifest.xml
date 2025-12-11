@@ -1,0 +1,116 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-WPDClassInstaller" guid="{ad5162d8-daf0-4a25-88a7-01cbeb33902e}" resourceFileName="Microsoft-Windows-WPDClassInstaller" messageFileName="Microsoft-Windows-WPDClassInstaller" symbol="MicrosoftWindowsWPDClassInstaller" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0">
+      <opcodes>
+       <opcode name="opcode_64" message="$(string.opcode_task_0opcode_64)" value="64"/>
+       <opcode name="opcode_128" message="$(string.opcode_task_0opcode_128)" value="128"/>
+       <opcode name="opcode_192" message="$(string.opcode_task_0opcode_192)" value="192"/>
+      </opcodes>
+     </task>
+     <task name="Treiberleistung" message="$(string.task_Treiberleistung)" value="1"/>
+     <task name="AbrufvonGerätemetadaten" message="$(string.task_AbrufvonGerätemetadaten)" value="64"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="TreiberleistungStarten" version="0" task="Treiberleistung" opcode="win:Starten" level="win:Informational" template="TreiberleistungStartenArgs"/>
+     <event value="101" symbol="TreiberleistungBeenden" version="0" task="Treiberleistung" opcode="win:Beenden" level="win:Informational" template="TreiberleistungBeendenArgs"/>
+     <event value="102" symbol="TreiberleistungStarten102" version="0" task="Treiberleistung" opcode="win:Starten" level="win:Informational" template="TreiberleistungStarten102Args"/>
+     <event value="103" symbol="TreiberleistungBeenden103" version="0" task="Treiberleistung" opcode="win:Beenden" level="win:Informational" template="TreiberleistungBeenden103Args"/>
+     <event value="104" symbol="TreiberleistungStarten104" version="0" task="Treiberleistung" opcode="win:Starten" level="win:Informational" template="TreiberleistungStarten102Args"/>
+     <event value="105" symbol="TreiberleistungBeenden105" version="0" task="Treiberleistung" opcode="win:Beenden" level="win:Informational" template="TreiberleistungBeenden103Args"/>
+     <event value="200" symbol="Treiberleistung" version="0" task="Treiberleistung" level="win:Informational"/>
+     <event value="201" symbol="AbrufvonGerätemetadaten" version="0" task="AbrufvonGerätemetadaten" level="win:Informational" template="AbrufvonGerätemetadatenArgs"/>
+     <event value="202" symbol="AbrufvonGerätemetadaten202" version="0" task="AbrufvonGerätemetadaten" level="win:Informational" template="AbrufvonGerätemetadaten202Args"/>
+     <event value="203" symbol="AbrufvonGerätemetadaten203" version="0" task="AbrufvonGerätemetadaten" level="win:Informational" template="AbrufvonGerätemetadaten202Args"/>
+     <event value="204" symbol="AbrufvonGerätemetadaten204" version="0" task="AbrufvonGerätemetadaten" level="win:Informational" template="TreiberleistungBeenden103Args"/>
+     <event value="205" symbol="AbrufvonGerätemetadaten205" version="0" task="AbrufvonGerätemetadaten" level="win:Informational" template="AbrufvonGerätemetadaten205Args"/>
+     <event value="206" symbol="AbrufvonGerätemetadaten206" version="0" task="AbrufvonGerätemetadaten" level="win:Informational" template="AbrufvonGerätemetadaten206Args"/>
+     <event value="207" symbol="Treiberleistung207" version="0" task="Treiberleistung" level="win:Informational" template="Treiberleistung207Args"/>
+     <event value="24576" symbol="task_0PCODE_64pcode_64_V1" version="1" task="task_0" opcode="opcode_64" level="win:Always"/>
+     <event value="24577" symbol="task_0PCODE_64pcode_6424577_V1" version="1" task="task_0" opcode="opcode_64" level="win:Always"/>
+     <event value="24578" symbol="task_0PCODE_64pcode_6424578_V1" version="1" task="task_0" opcode="opcode_64" level="win:Always"/>
+     <event value="24579" symbol="task_0PCODE_64pcode_6424579_V1" version="1" task="task_0" opcode="opcode_64" level="win:Always"/>
+     <event value="24580" symbol="task_0PCODE_64pcode_6424580_V1" version="1" task="task_0" opcode="opcode_64" level="win:Always"/>
+     <event value="24581" symbol="task_0PCODE_64pcode_6424581_V1" version="1" task="task_0" opcode="opcode_64" level="win:Always"/>
+     <event value="24582" symbol="task_0PCODE_64pcode_6424582_V1" version="1" task="task_0" opcode="opcode_64" level="win:Always"/>
+     <event value="24583" symbol="task_0PCODE_64pcode_6424583_V1" version="1" task="task_0" opcode="opcode_64" level="win:Always"/>
+     <event value="24584" symbol="task_0PCODE_64pcode_6424584_V1" version="1" task="task_0" opcode="opcode_64" level="win:Always"/>
+     <event value="24585" symbol="task_0PCODE_64pcode_6424585_V1" version="1" task="task_0" opcode="opcode_64" level="win:Always"/>
+     <event value="24832" symbol="task_0PCODE_128pcode_128_V1" version="1" task="task_0" opcode="opcode_128" level="win:Always"/>
+     <event value="25088" symbol="task_0PCODE_192pcode_192_V1" version="1" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="25089" symbol="task_0PCODE_192pcode_19225089_V1" version="1" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="25090" symbol="task_0PCODE_192pcode_19225090_V1" version="1" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="25091" symbol="task_0PCODE_192pcode_19225091_V1" version="1" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="25092" symbol="task_0PCODE_192pcode_19225092_V1" version="1" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="25093" symbol="task_0PCODE_192pcode_19225093_V1" version="1" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="25094" symbol="task_0PCODE_192pcode_19225094_V1" version="1" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="25095" symbol="task_0PCODE_192pcode_19225095_V1" version="1" task="task_0" opcode="opcode_192" level="win:Always"/>
+    </events>
+    <templates>
+     <template tid="TreiberleistungStartenArgs">
+      <data name="InstallFunctionCode" inType="win:UInt32"/>
+      <data name="InstallFunctionName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="TreiberleistungBeendenArgs">
+      <data name="InstallFunctionCode" inType="win:UInt32"/>
+      <data name="InstallFunctionName" inType="win:UnicodeString"/>
+      <data name="ReturnCode" inType="win:UInt32"/>
+     </template>
+     <template tid="TreiberleistungStarten102Args">
+      <data name="DevicePath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="TreiberleistungBeenden103Args">
+      <data name="DevicePath" inType="win:UnicodeString"/>
+      <data name="ReturnCode" inType="win:UInt32"/>
+     </template>
+     <template tid="AbrufvonGerätemetadatenArgs">
+      <data name="DevicePath" inType="win:UnicodeString"/>
+      <data name="MetadataLocaleName" inType="win:UnicodeString"/>
+      <data name="MetadataContentId" inType="win:GUID"/>
+     </template>
+     <template tid="AbrufvonGerätemetadaten202Args">
+      <data name="DevicePath" inType="win:UnicodeString"/>
+      <data name="MetadataLocaleName" inType="win:UnicodeString"/>
+      <data name="MetadataContentId" inType="win:GUID"/>
+      <data name="ReturnCode" inType="win:UInt32"/>
+     </template>
+     <template tid="AbrufvonGerätemetadaten205Args">
+      <data name="DevicePath" inType="win:UnicodeString"/>
+      <data name="ServicePath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="AbrufvonGerätemetadaten206Args">
+      <data name="MetadataLocaleName" inType="win:UnicodeString"/>
+      <data name="MetadataContentId" inType="win:GUID"/>
+     </template>
+     <template tid="Treiberleistung207Args">
+      <data name="PolicyName" inType="win:UnicodeString"/>
+      <data name="UserAccountName" inType="win:UnicodeString"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="ClassName" inType="win:UnicodeString"/>
+      <data name="ClassGuid" inType="win:UnicodeString"/>
+      <data name="HardwareIds" inType="win:UnicodeString"/>
+      <data name="InstanceId" inType="win:UnicodeString"/>
+      <data name="BusTypeGuid" inType="win:UnicodeString"/>
+      <data name="EventSource" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="opcode_task_0opcode_64" value="opcode_64"/>
+    <string id="opcode_task_0opcode_128" value="opcode_128"/>
+    <string id="opcode_task_0opcode_192" value="opcode_192"/>
+    <string id="task_Treiberleistung" value="Treiberleistung"/>
+    <string id="task_AbrufvonGerätemetadaten" value="AbrufvonGerätemetadaten"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

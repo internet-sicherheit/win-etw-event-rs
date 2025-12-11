@@ -1,0 +1,47 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-DriverFrameworks-KernelMode-Performance" guid="{486a5c7c-11cc-46c5-9de7-43dfe0bb57c1}" resourceFileName="Microsoft-Windows-DriverFrameworks-KernelMode-Performance" messageFileName="Microsoft-Windows-DriverFrameworks-KernelMode-Performance" symbol="MicrosoftWindowsDriverFrameworksKernelModePerformance" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="FxRequestTask" message="$(string.task_FxRequestTask)" value="1"/>
+     <task name="FxPowerTask" message="$(string.task_FxPowerTask)" value="2"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="FxRequestTaskStarten" version="0" task="FxRequestTask" opcode="win:Starten" level="win:Always" template="FxRequestTaskStartenArgs"/>
+     <event value="2" symbol="FxRequestTaskStopp" version="0" task="FxRequestTask" opcode="win:Stopp" level="win:Always" template="FxRequestTaskStartenArgs"/>
+     <event value="3" symbol="FxPowerTaskStarten" version="0" task="FxPowerTask" opcode="win:Starten" level="win:Always" template="FxPowerTaskStartenArgs"/>
+     <event value="4" symbol="FxPowerTaskStopp" version="0" task="FxPowerTask" opcode="win:Stopp" level="win:Always" template="FxPowerTaskStartenArgs"/>
+     <event value="5" symbol="FxPowerTaskStarten5" version="0" task="FxPowerTask" opcode="win:Starten" level="win:Always" template="FxPowerTaskStartenArgs"/>
+     <event value="6" symbol="FxPowerTaskStopp6" version="0" task="FxPowerTask" opcode="win:Stopp" level="win:Always" template="FxPowerTaskStartenArgs"/>
+     <event value="7" symbol="FxPowerTaskStarten7" version="0" task="FxPowerTask" opcode="win:Starten" level="win:Always" template="FxPowerTaskStartenArgs"/>
+     <event value="8" symbol="FxPowerTaskStopp8" version="0" task="FxPowerTask" opcode="win:Stopp" level="win:Always" template="FxPowerTaskStartenArgs"/>
+     <event value="9" symbol="FxPowerTaskStarten9" version="0" task="FxPowerTask" opcode="win:Starten" level="win:Always" template="FxPowerTaskStartenArgs"/>
+     <event value="10" symbol="FxPowerTaskStopp10" version="0" task="FxPowerTask" opcode="win:Stopp" level="win:Always" template="FxPowerTaskStartenArgs"/>
+     <event value="11" symbol="FxPowerTaskStarten11" version="0" task="FxPowerTask" opcode="win:Starten" level="win:Always" template="FxPowerTaskStartenArgs"/>
+     <event value="12" symbol="FxPowerTaskStopp12" version="0" task="FxPowerTask" opcode="win:Stopp" level="win:Always" template="FxPowerTaskStartenArgs"/>
+    </events>
+    <templates>
+     <template tid="FxRequestTaskStartenArgs">
+      <data name="Type" inType="win:UInt8"/>
+      <data name="DrvPtr" inType="win:Pointer"/>
+      <data name="DevPtr" inType="win:Pointer"/>
+     </template>
+     <template tid="FxPowerTaskStartenArgs">
+      <data name="DrvPtr" inType="win:Pointer"/>
+      <data name="DevPtr" inType="win:Pointer"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_FxRequestTask" value="FxRequestTask"/>
+    <string id="task_FxPowerTask" value="FxPowerTask"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

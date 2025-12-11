@@ -1,0 +1,329 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-MediaFoundation-MFCaptureEngine" guid="{b8197c10-845f-40ca-82ab-9341e98cfc2b}" resourceFileName="Microsoft-Windows-MediaFoundation-MFCaptureEngine" messageFileName="Microsoft-Windows-MediaFoundation-MFCaptureEngine" symbol="MicrosoftWindowsMediaFoundationMFCaptureEngine" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="MFCaptureEngine_Initialisierungsaufgabe" message="$(string.task_MFCaptureEngine_Initialisierungsaufgabe)" value="100"/>
+     <task name="MFCaptureEngine_AufgabezumHerunterfahren" message="$(string.task_MFCaptureEngine_AufgabezumHerunterfahren)" value="101"/>
+     <task name="MFCaptureEngine_Fotografieraufgabe" message="$(string.task_MFCaptureEngine_Fotografieraufgabe)" value="102"/>
+     <task name="MFCaptureEngine_AufgabezumStartenderVorschau" message="$(string.task_MFCaptureEngine_AufgabezumStartenderVorschau)" value="103"/>
+     <task name="MFCaptureEngine_AufgabezumStartenderAufzeichnung" message="$(string.task_MFCaptureEngine_AufgabezumStartenderAufzeichnung)" value="104"/>
+     <task name="MFCaptureEngine_Quellennachricht" message="$(string.task_MFCaptureEngine_Quellennachricht)" value="105"/>
+     <task name="MFCaptureEngine_Streamingnachricht" message="$(string.task_MFCaptureEngine_Streamingnachricht)" value="106"/>
+     <task name="MFCaptureEngine_Senkenaufgabe" message="$(string.task_MFCaptureEngine_Senkenaufgabe)" value="107"/>
+     <task name="MFCaptureEngine_Sampleanalyse" message="$(string.task_MFCaptureEngine_Sampleanalyse)" value="108"/>
+     <task name="MFCaptureEngine_AufgabezumBeendenderVorschau" message="$(string.task_MFCaptureEngine_AufgabezumBeendenderVorschau)" value="109"/>
+     <task name="MFCaptureEngine_AufgabezumBeendenderAufzeichnung" message="$(string.task_MFCaptureEngine_AufgabezumBeendenderAufzeichnung)" value="110"/>
+     <task name="MFCaptureEngine_Fotocodierung" message="$(string.task_MFCaptureEngine_Fotocodierung)" value="111"/>
+     <task name="MFCaptureEngine_Fotoformatkonvertierung" message="$(string.task_MFCaptureEngine_Fotoformatkonvertierung)" value="112"/>
+     <task name="MFCaptureEngine_Fotospiegelung" message="$(string.task_MFCaptureEngine_Fotospiegelung)" value="113"/>
+     <task name="MFCaptureEngine_Foto_XVP" message="$(string.task_MFCaptureEngine_Foto_XVP)" value="114"/>
+     <task name="MFCaptureEngine_Fotosenkenkonfiguration" message="$(string.task_MFCaptureEngine_Fotosenkenkonfiguration)" value="115"/>
+     <task name="MFCaptureEngineFlushRequiredStreams_Task" message="$(string.task_MFCaptureEngineFlushRequiredStreams_Task)" value="116"/>
+     <task name="MFCaptureEngineSetCurrentDeviceMediaType_Task" message="$(string.task_MFCaptureEngineSetCurrentDeviceMediaType_Task)" value="117"/>
+     <task name="MFCaptureEngineFlushAllStreams_Task" message="$(string.task_MFCaptureEngineFlushAllStreams_Task)" value="118"/>
+     <task name="MFCaptureEngineOnFlushForAllStreams_Task" message="$(string.task_MFCaptureEngineOnFlushForAllStreams_Task)" value="119"/>
+     <task name="MFCaptureEngineSetExtendedPropertyAsync_Task" message="$(string.task_MFCaptureEngineSetExtendedPropertyAsync_Task)" value="120"/>
+     <task name="MFCaptureEngineKSAsynPropertySet_Task" message="$(string.task_MFCaptureEngineKSAsynPropertySet_Task)" value="121"/>
+     <task name="MFCaptureEnginePhotoSinkPrepare_Task" message="$(string.task_MFCaptureEnginePhotoSinkPrepare_Task)" value="122"/>
+     <task name="MFCaptureEngineStartCapturePhotoSequence_Task" message="$(string.task_MFCaptureEngineStartCapturePhotoSequence_Task)" value="123"/>
+     <task name="MFCaptureEngineStopCapturePhotoSequence_Task" message="$(string.task_MFCaptureEngineStopCapturePhotoSequence_Task)" value="124"/>
+     <task name="MFCaptureEngineCaptureSinkAddStream_Task" message="$(string.task_MFCaptureEngineCaptureSinkAddStream_Task)" value="125"/>
+     <task name="MFCaptureEngine_OnEvent_Task" message="$(string.task_MFCaptureEngine_OnEvent_Task)" value="126"/>
+     <task name="MFCaptureEngineGetAvailableDeviceMediaType" message="$(string.task_MFCaptureEngineGetAvailableDeviceMediaType)" value="127"/>
+     <task name="MFCaptureEngine_BridgeSourceSink" message="$(string.task_MFCaptureEngine_BridgeSourceSink)" value="128"/>
+     <task name="MFCaptureEngine_SourceInfo_Aufgabe" message="$(string.task_MFCaptureEngine_SourceInfo_Aufgabe)" value="129"/>
+     <task name="MFCaptureEngine_Camera_Sound_Init_Aufgabe" message="$(string.task_MFCaptureEngine_Camera_Sound_Init_Aufgabe)" value="130"/>
+     <task name="MFCaptureEngine_Camera_Sound_QueuePlayback_Aufgabe" message="$(string.task_MFCaptureEngine_Camera_Sound_QueuePlayback_Aufgabe)" value="131"/>
+     <task name="MFCaptureEngine_Camera_Sound_Playback_Aufgabe" message="$(string.task_MFCaptureEngine_Camera_Sound_Playback_Aufgabe)" value="132"/>
+     <task name="MFCaptureEngine_DiskFull_Condition.TaskMessage" message="$(string.task_MFCaptureEngine_DiskFull_Condition.TaskMessage)" value="133"/>
+    </tasks>
+    <maps>
+     <valueMap name="StreamType">
+      <map value="0x0" message="$(string.map_StreamTypeMF_CAPTURE_ENGINE_STREAM_CATEGORY_VIDEO_PREVIEW)"/>
+      <map value="0x1" message="$(string.map_StreamTypeMF_CAPTURE_ENGINE_STREAM_CATEGORY_VIDEO_CAPTURE)"/>
+      <map value="0x2" message="$(string.map_StreamTypeMF_CAPTURE_ENGINE_STREAM_CATEGORY_PHOTO_INDEPENDENT)"/>
+      <map value="0x3" message="$(string.map_StreamTypeMF_CAPTURE_ENGINE_STREAM_CATEGORY_PHOTO_DEPENDENT)"/>
+      <map value="0x4" message="$(string.map_StreamTypeMF_CAPTURE_ENGINE_STREAM_CATEGORY_AUDIO)"/>
+      <map value="0x5" message="$(string.map_StreamTypeMF_CAPTURE_ENGINE_STREAM_CATEGORY_UNSUPPORTED)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="200" symbol="MFCaptureEngine_InitialisierungsaufgabeStarten" version="0" task="MFCaptureEngine_Initialisierungsaufgabe" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="201" symbol="MFCaptureEngine_InitialisierungsaufgabeBeenden" version="0" task="MFCaptureEngine_Initialisierungsaufgabe" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="202" symbol="MFCaptureEngine_AufgabezumHerunterfahrenStarten" version="0" task="MFCaptureEngine_AufgabezumHerunterfahren" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="203" symbol="MFCaptureEngine_AufgabezumHerunterfahrenBeenden" version="0" task="MFCaptureEngine_AufgabezumHerunterfahren" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="204" symbol="MFCaptureEngine_FotografieraufgabeStarten" version="0" task="MFCaptureEngine_Fotografieraufgabe" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="205" symbol="MFCaptureEngine_FotografieraufgabeBeenden" version="0" task="MFCaptureEngine_Fotografieraufgabe" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="206" symbol="MFCaptureEngine_AufgabezumStartenderVorschauStarten" version="0" task="MFCaptureEngine_AufgabezumStartenderVorschau" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="207" symbol="MFCaptureEngine_AufgabezumStartenderVorschauBeenden" version="0" task="MFCaptureEngine_AufgabezumStartenderVorschau" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="208" symbol="MFCaptureEngine_AufgabezumBeendenderVorschauStarten" version="0" task="MFCaptureEngine_AufgabezumBeendenderVorschau" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="209" symbol="MFCaptureEngine_AufgabezumBeendenderVorschauBeenden" version="0" task="MFCaptureEngine_AufgabezumBeendenderVorschau" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="210" symbol="MFCaptureEngine_AufgabezumStartenderAufzeichnungStarten" version="0" task="MFCaptureEngine_AufgabezumStartenderAufzeichnung" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="211" symbol="MFCaptureEngine_AufgabezumStartenderAufzeichnungBeenden" version="0" task="MFCaptureEngine_AufgabezumStartenderAufzeichnung" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="212" symbol="MFCaptureEngine_AufgabezumBeendenderAufzeichnungStarten" version="0" task="MFCaptureEngine_AufgabezumBeendenderAufzeichnung" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="213" symbol="MFCaptureEngine_AufgabezumBeendenderAufzeichnungBeenden" version="0" task="MFCaptureEngine_AufgabezumBeendenderAufzeichnung" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="214" symbol="MFCaptureEngine_QuellennachrichtStarten" version="0" task="MFCaptureEngine_Quellennachricht" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_QuellennachrichtStartenArgs"/>
+     <event value="215" symbol="MFCaptureEngine_QuellennachrichtBeenden" version="0" task="MFCaptureEngine_Quellennachricht" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_QuellennachrichtBeendenArgs"/>
+     <event value="216" symbol="MFCaptureEngine_Streamingnachricht" version="0" task="MFCaptureEngine_Streamingnachricht" level="win:Informational" template="MFCaptureEngine_StreamingnachrichtArgs"/>
+     <event value="217" symbol="MFCaptureEngine_Streamingnachricht217" version="0" task="MFCaptureEngine_Streamingnachricht" level="win:Informational" template="MFCaptureEngine_StreamingnachrichtArgs"/>
+     <event value="218" symbol="MFCaptureEngine_Streamingnachricht218" version="0" task="MFCaptureEngine_Streamingnachricht" level="win:Informational" template="MFCaptureEngine_StreamingnachrichtArgs"/>
+     <event value="219" symbol="MFCaptureEngine_SenkenaufgabeStarten" version="0" task="MFCaptureEngine_Senkenaufgabe" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_SenkenaufgabeStartenArgs"/>
+     <event value="220" symbol="MFCaptureEngine_SenkenaufgabeBeenden" version="0" task="MFCaptureEngine_Senkenaufgabe" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_SenkenaufgabeStartenArgs"/>
+     <event value="221" symbol="MFCaptureEngine_FotocodierungStarten" version="0" task="MFCaptureEngine_Fotocodierung" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_FotocodierungStartenArgs"/>
+     <event value="222" symbol="MFCaptureEngine_FotocodierungBeenden" version="0" task="MFCaptureEngine_Fotocodierung" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_FotocodierungBeendenArgs"/>
+     <event value="223" symbol="MFCaptureEngine_FotoformatkonvertierungStarten" version="0" task="MFCaptureEngine_Fotoformatkonvertierung" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_FotoformatkonvertierungStartenArgs"/>
+     <event value="224" symbol="MFCaptureEngine_FotoformatkonvertierungBeenden" version="0" task="MFCaptureEngine_Fotoformatkonvertierung" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_FotoformatkonvertierungStartenArgs"/>
+     <event value="225" symbol="MFCaptureEngine_FotospiegelungStarten" version="0" task="MFCaptureEngine_Fotospiegelung" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_FotoformatkonvertierungStartenArgs"/>
+     <event value="226" symbol="MFCaptureEngine_FotospiegelungBeenden" version="0" task="MFCaptureEngine_Fotospiegelung" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_FotoformatkonvertierungStartenArgs"/>
+     <event value="227" symbol="MFCaptureEngine_Foto_XVPStarten" version="0" task="MFCaptureEngine_Foto_XVP" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_FotoformatkonvertierungStartenArgs"/>
+     <event value="228" symbol="MFCaptureEngine_Foto_XVPBeenden" version="0" task="MFCaptureEngine_Foto_XVP" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_FotoformatkonvertierungStartenArgs"/>
+     <event value="229" symbol="MFCaptureEngine_FotosenkenkonfigurationStarten" version="0" task="MFCaptureEngine_Fotosenkenkonfiguration" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_FotoformatkonvertierungStartenArgs"/>
+     <event value="230" symbol="MFCaptureEngine_FotosenkenkonfigurationBeenden" version="0" task="MFCaptureEngine_Fotosenkenkonfiguration" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_FotoformatkonvertierungStartenArgs"/>
+     <event value="231" symbol="MFCaptureEngine_Initialisierungsaufgabe" version="0" task="MFCaptureEngine_Initialisierungsaufgabe" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeArgs"/>
+     <event value="232" symbol="MFCaptureEngine_Sampleanalyse" version="0" task="MFCaptureEngine_Sampleanalyse" level="win:Informational" template="MFCaptureEngine_SampleanalyseArgs"/>
+     <event value="233" symbol="MFCaptureEngine_Sampleanalyse233" version="0" task="MFCaptureEngine_Sampleanalyse" level="win:Informational" template="MFCaptureEngine_SampleanalyseArgs"/>
+     <event value="234" symbol="MFCaptureEngine_Sampleanalyse234" version="0" task="MFCaptureEngine_Sampleanalyse" level="win:Informational" template="MFCaptureEngine_SampleanalyseArgs"/>
+     <event value="235" symbol="MFCaptureEngine_Sampleanalyse235" version="0" task="MFCaptureEngine_Sampleanalyse" level="win:Informational" template="MFCaptureEngine_SampleanalyseArgs"/>
+     <event value="236" symbol="MFCaptureEngine_AufgabezumStartenderAufzeichnung" version="0" task="MFCaptureEngine_AufgabezumStartenderAufzeichnung" level="win:Informational" template="MFCaptureEngine_AufgabezumStartenderAufzeichnungArgs"/>
+     <event value="237" symbol="MFCaptureEngine_AufgabezumStartenderVorschau" version="0" task="MFCaptureEngine_AufgabezumStartenderVorschau" level="win:Informational" template="MFCaptureEngine_AufgabezumStartenderVorschauArgs"/>
+     <event value="238" symbol="MFCaptureEngine_Foto_XVP" version="0" task="MFCaptureEngine_Foto_XVP" level="win:Informational" template="MFCaptureEngine_Foto_XVPArgs"/>
+     <event value="239" symbol="MFCaptureEngine_Senkenaufgabe" version="0" task="MFCaptureEngine_Senkenaufgabe" level="win:Informational" template="MFCaptureEngine_SenkenaufgabeStartenArgs"/>
+     <event value="240" symbol="MFCaptureEngineFlushRequiredStreams_TaskStarten" version="0" task="MFCaptureEngineFlushRequiredStreams_Task" opcode="win:Starten" level="win:Informational" template="MFCaptureEngineFlushRequiredStreams_TaskStartenArgs"/>
+     <event value="241" symbol="MFCaptureEngineFlushRequiredStreams_TaskBeenden" version="0" task="MFCaptureEngineFlushRequiredStreams_Task" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngineFlushRequiredStreams_TaskStartenArgs"/>
+     <event value="242" symbol="MFCaptureEngineSetCurrentDeviceMediaType_TaskStarten" version="0" task="MFCaptureEngineSetCurrentDeviceMediaType_Task" opcode="win:Starten" level="win:Informational" template="MFCaptureEngineSetCurrentDeviceMediaType_TaskStartenArgs"/>
+     <event value="243" symbol="MFCaptureEngineSetCurrentDeviceMediaType_TaskBeenden" version="0" task="MFCaptureEngineSetCurrentDeviceMediaType_Task" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngineSetCurrentDeviceMediaType_TaskStartenArgs"/>
+     <event value="244" symbol="MFCaptureEngineFlushAllStreams_TaskStarten" version="0" task="MFCaptureEngineFlushAllStreams_Task" opcode="win:Starten" level="win:Informational" template="MFCaptureEngineFlushAllStreams_TaskStartenArgs"/>
+     <event value="245" symbol="MFCaptureEngineFlushAllStreams_TaskBeenden" version="0" task="MFCaptureEngineFlushAllStreams_Task" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngineFlushAllStreams_TaskStartenArgs"/>
+     <event value="246" symbol="MFCaptureEngineOnFlushForAllStreams_Task" version="0" task="MFCaptureEngineOnFlushForAllStreams_Task" level="win:Informational" template="MFCaptureEngineFlushAllStreams_TaskStartenArgs"/>
+     <event value="247" symbol="MFCaptureEngineSetExtendedPropertyAsync_TaskStarten" version="0" task="MFCaptureEngineSetExtendedPropertyAsync_Task" opcode="win:Starten" level="win:Informational" template="MFCaptureEngineSetExtendedPropertyAsync_TaskStartenArgs"/>
+     <event value="248" symbol="MFCaptureEngineSetExtendedPropertyAsync_TaskBeenden" version="0" task="MFCaptureEngineSetExtendedPropertyAsync_Task" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngineSetExtendedPropertyAsync_TaskStartenArgs"/>
+     <event value="249" symbol="MFCaptureEngineKSAsynPropertySet_TaskStarten" version="0" task="MFCaptureEngineKSAsynPropertySet_Task" opcode="win:Starten" level="win:Informational" template="MFCaptureEngineSetExtendedPropertyAsync_TaskStartenArgs"/>
+     <event value="250" symbol="MFCaptureEngineKSAsynPropertySet_TaskBeenden" version="0" task="MFCaptureEngineKSAsynPropertySet_Task" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngineSetExtendedPropertyAsync_TaskStartenArgs"/>
+     <event value="251" symbol="MFCaptureEnginePhotoSinkPrepare_TaskStarten" version="0" task="MFCaptureEnginePhotoSinkPrepare_Task" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="252" symbol="MFCaptureEnginePhotoSinkPrepare_TaskBeenden" version="0" task="MFCaptureEnginePhotoSinkPrepare_Task" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="253" symbol="MFCaptureEngineStartCapturePhotoSequence_TaskStarten" version="0" task="MFCaptureEngineStartCapturePhotoSequence_Task" opcode="win:Starten" level="win:Informational" template="MFCaptureEngineFlushAllStreams_TaskStartenArgs"/>
+     <event value="254" symbol="MFCaptureEngineStartCapturePhotoSequence_TaskBeenden" version="0" task="MFCaptureEngineStartCapturePhotoSequence_Task" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngineFlushAllStreams_TaskStartenArgs"/>
+     <event value="255" symbol="MFCaptureEngineStopCapturePhotoSequence_TaskStarten" version="0" task="MFCaptureEngineStopCapturePhotoSequence_Task" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="256" symbol="MFCaptureEngineStopCapturePhotoSequence_TaskBeenden" version="0" task="MFCaptureEngineStopCapturePhotoSequence_Task" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_InitialisierungsaufgabeStartenArgs"/>
+     <event value="257" symbol="MFCaptureEngineCaptureSinkAddStream_Task" version="0" task="MFCaptureEngineCaptureSinkAddStream_Task" level="win:Informational" template="MFCaptureEngineCaptureSinkAddStream_TaskArgs"/>
+     <event value="258" symbol="MFCaptureEngine_OnEvent_Task" version="0" task="MFCaptureEngine_OnEvent_Task" level="win:Informational" template="MFCaptureEngine_OnEvent_TaskArgs"/>
+     <event value="259" symbol="MFCaptureEngineGetAvailableDeviceMediaTypeStarten" version="0" task="MFCaptureEngineGetAvailableDeviceMediaType" opcode="win:Starten" level="win:Verbose" template="MFCaptureEngineGetAvailableDeviceMediaTypeStartenArgs"/>
+     <event value="260" symbol="MFCaptureEngineGetAvailableDeviceMediaTypeBeenden" version="0" task="MFCaptureEngineGetAvailableDeviceMediaType" opcode="win:Beenden" level="win:Verbose" template="MFCaptureEngineGetAvailableDeviceMediaTypeStartenArgs"/>
+     <event value="261" symbol="MFCaptureEngine_BridgeSourceSinkStarten" version="0" task="MFCaptureEngine_BridgeSourceSink" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_BridgeSourceSinkStartenArgs"/>
+     <event value="262" symbol="MFCaptureEngine_BridgeSourceSinkBeenden" version="0" task="MFCaptureEngine_BridgeSourceSink" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_BridgeSourceSinkStartenArgs"/>
+     <event value="263" symbol="MFCaptureEngine_SourceInfo_Aufgabe" version="0" task="MFCaptureEngine_SourceInfo_Aufgabe" level="win:Informational" template="MFCaptureEngine_SourceInfo_AufgabeArgs"/>
+     <event value="264" symbol="MFCaptureEngine_Camera_Sound_Init_AufgabeStarten" version="0" task="MFCaptureEngine_Camera_Sound_Init_Aufgabe" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_Camera_Sound_Init_AufgabeStartenArgs"/>
+     <event value="265" symbol="MFCaptureEngine_Camera_Sound_Init_AufgabeBeenden" version="0" task="MFCaptureEngine_Camera_Sound_Init_Aufgabe" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_Camera_Sound_Init_AufgabeBeendenArgs"/>
+     <event value="266" symbol="MFCaptureEngine_Camera_Sound_QueuePlayback_AufgabeStarten" version="0" task="MFCaptureEngine_Camera_Sound_QueuePlayback_Aufgabe" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_Camera_Sound_QueuePlayback_AufgabeStartenArgs"/>
+     <event value="267" symbol="MFCaptureEngine_Camera_Sound_QueuePlayback_AufgabeBeenden" version="0" task="MFCaptureEngine_Camera_Sound_QueuePlayback_Aufgabe" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_Camera_Sound_QueuePlayback_AufgabeStartenArgs"/>
+     <event value="268" symbol="MFCaptureEngine_Camera_Sound_Playback_AufgabeStarten" version="0" task="MFCaptureEngine_Camera_Sound_Playback_Aufgabe" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_Camera_Sound_Playback_AufgabeStartenArgs"/>
+     <event value="269" symbol="MFCaptureEngine_Camera_Sound_Playback_AufgabeBeenden" version="0" task="MFCaptureEngine_Camera_Sound_Playback_Aufgabe" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_Camera_Sound_Playback_AufgabeStartenArgs"/>
+     <event value="270" symbol="MFCaptureEngine_Senkenaufgabe270" version="0" task="MFCaptureEngine_Senkenaufgabe" level="win:Informational" template="MFCaptureEngine_SenkenaufgabeStartenArgs"/>
+     <event value="271" symbol="MFCaptureEngine_Senkenaufgabe271" version="0" task="MFCaptureEngine_Senkenaufgabe" level="win:Informational" template="MFCaptureEngine_SenkenaufgabeStartenArgs"/>
+     <event value="272" symbol="MFCaptureEngine_DiskFull_Condition.TaskMessageStarten" version="0" task="MFCaptureEngine_DiskFull_Condition.TaskMessage" opcode="win:Starten" level="win:Informational" template="MFCaptureEngine_DiskFull_Condition.TaskMessageStartenArgs"/>
+     <event value="273" symbol="MFCaptureEngine_DiskFull_Condition.TaskMessageBeenden" version="0" task="MFCaptureEngine_DiskFull_Condition.TaskMessage" opcode="win:Beenden" level="win:Informational" template="MFCaptureEngine_DiskFull_Condition.TaskMessageBeendenArgs"/>
+     <event value="274" symbol="MFCaptureEngine_Senkenaufgabe274" version="0" task="MFCaptureEngine_Senkenaufgabe" level="win:Informational" template="MFCaptureEngine_SenkenaufgabeStartenArgs"/>
+    </events>
+    <templates>
+     <template tid="MFCaptureEngine_InitialisierungsaufgabeStartenArgs">
+      <data name="CaptureEnginePointer" inType="win:Pointer"/>
+      <data name="hrStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_QuellennachrichtStartenArgs">
+      <data name="Source" inType="win:Pointer"/>
+      <data name="StreamIndex" inType="win:UInt32"/>
+      <data name="ControlFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_QuellennachrichtBeendenArgs">
+      <data name="Source" inType="win:Pointer"/>
+      <data name="Sample" inType="win:Pointer"/>
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="RefTimestamp" inType="win:UInt64"/>
+      <data name="StreamIndex" inType="win:UInt32"/>
+      <data name="StreamFlags" inType="win:UInt32"/>
+      <data name="hrStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_StreamingnachrichtArgs">
+      <data name="SourceOrSinkPointer" inType="win:Pointer"/>
+      <data name="Sample" inType="win:Pointer"/>
+      <data name="SourceStreamIndex" inType="win:UInt32"/>
+      <data name="SinkStreamIndex" inType="win:UInt32"/>
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="RefTimestamp" inType="win:UInt64"/>
+     </template>
+     <template tid="MFCaptureEngine_SenkenaufgabeStartenArgs">
+      <data name="SinkPointer" inType="win:Pointer"/>
+      <data name="SamplePointer" inType="win:Pointer"/>
+      <data name="SinkStreamIndex" inType="win:UInt32"/>
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="RefTimestamp" inType="win:UInt64"/>
+     </template>
+     <template tid="MFCaptureEngine_FotocodierungStartenArgs">
+      <data name="PhotoSink" inType="win:Pointer"/>
+      <data name="Sample" inType="win:Pointer"/>
+     </template>
+     <template tid="MFCaptureEngine_FotocodierungBeendenArgs">
+      <data name="PhotoSink" inType="win:Pointer"/>
+      <data name="Sample" inType="win:Pointer"/>
+      <data name="hrStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_FotoformatkonvertierungStartenArgs">
+      <data name="PhotoSink" inType="win:Pointer"/>
+      <data name="hrStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_InitialisierungsaufgabeArgs">
+      <data name="CaptureEnginePointer" inType="win:Pointer"/>
+      <data name="Source" inType="win:Pointer"/>
+      <data name="RecordSink" inType="win:Pointer"/>
+      <data name="PreviewSink" inType="win:Pointer"/>
+      <data name="PhotoSink" inType="win:Pointer"/>
+      <data name="FrameReaderSink" inType="win:Pointer"/>
+     </template>
+     <template tid="MFCaptureEngine_SampleanalyseArgs">
+      <data name="Sample" inType="win:Pointer"/>
+      <data name="SampleTimestamp" inType="win:UInt64"/>
+      <data name="RefTimestamp" inType="win:UInt64"/>
+     </template>
+     <template tid="MFCaptureEngine_AufgabezumStartenderAufzeichnungArgs">
+      <data name="RecordSinkWriter" inType="win:Pointer"/>
+      <data name="SinkStreamIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_AufgabezumStartenderVorschauArgs">
+      <data name="PreviewSinkWriter" inType="win:Pointer"/>
+      <data name="SinkStreamIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_Foto_XVPArgs">
+      <data name="PhotoSink" inType="win:Pointer"/>
+      <data name="XVP" inType="win:Pointer"/>
+     </template>
+     <template tid="MFCaptureEngineFlushRequiredStreams_TaskStartenArgs">
+      <data name="Pointer" inType="win:Pointer"/>
+      <data name="dwStreamIndex" inType="win:UInt32"/>
+      <data name="hrStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngineSetCurrentDeviceMediaType_TaskStartenArgs">
+      <data name="Pointer" inType="win:Pointer"/>
+      <data name="dwSourceStreamIndex" inType="win:UInt32"/>
+      <data name="pMediaType" inType="win:AnsiString"/>
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngineFlushAllStreams_TaskStartenArgs">
+      <data name="Pointer" inType="win:Pointer"/>
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngineSetExtendedPropertyAsync_TaskStartenArgs">
+      <data name="Pointer" inType="win:Pointer"/>
+      <data name="dwSourceStreamIndex" inType="win:UInt32"/>
+      <data name="guidPropertySet" inType="win:GUID"/>
+      <data name="propertyID" inType="win:UInt32"/>
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngineCaptureSinkAddStream_TaskArgs">
+      <data name="Pointer" inType="win:Pointer"/>
+      <data name="dwSourceStreamIndex" inType="win:UInt32"/>
+      <data name="pMediaType" inType="win:AnsiString"/>
+      <data name="dwSinkStreamIndex" inType="win:UInt32"/>
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_OnEvent_TaskArgs">
+      <data name="guidExtendedType" inType="win:GUID"/>
+      <data name="HResult" inType="win:Int32"/>
+      <data name="StreamIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngineGetAvailableDeviceMediaTypeStartenArgs">
+      <data name="Pointer" inType="win:Pointer"/>
+      <data name="dwSourceStreamIndex" inType="win:UInt32"/>
+      <data name="dwMediaTypeIndex" inType="win:UInt32"/>
+      <data name="pMediaType" inType="win:AnsiString"/>
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_BridgeSourceSinkStartenArgs">
+      <data name="CaptureSource" inType="win:Pointer"/>
+      <data name="SinkWrapper" inType="win:Pointer"/>
+      <data name="bChangeStreamUsers" inType="win:Boolean"/>
+      <data name="bPrepare" inType="win:Boolean"/>
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_SourceInfo_AufgabeArgs">
+      <data name="SourcePointer" inType="win:Pointer"/>
+      <data name="SourceStreamIndex" inType="win:UInt32"/>
+      <data name="StreamType" inType="win:UInt32" map="StreamType"/>
+     </template>
+     <template tid="MFCaptureEngine_Camera_Sound_Init_AufgabeStartenArgs">
+      <data name="CameraSoundState" inType="win:AnsiString"/>
+      <data name="CameraSoundLevel" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_Camera_Sound_Init_AufgabeBeendenArgs">
+      <data name="CameraSoundObject" inType="win:Pointer"/>
+      <data name="InitResult" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_Camera_Sound_QueuePlayback_AufgabeStartenArgs">
+      <data name="CaptureEngineObject" inType="win:Pointer"/>
+      <data name="QueuingResult" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_Camera_Sound_Playback_AufgabeStartenArgs">
+      <data name="CaptureEngineObject" inType="win:Pointer"/>
+      <data name="PlaybackResult" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_DiskFull_Condition.TaskMessageStartenArgs">
+      <data name="RecordSink" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="MFCaptureEngine_DiskFull_Condition.TaskMessageBeendenArgs">
+      <data name="RecordSink" inType="win:Pointer"/>
+      <data name="CaptureEngineObject" inType="win:Pointer"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_MFCaptureEngine_Initialisierungsaufgabe" value="MFCaptureEngine_Initialisierungsaufgabe"/>
+    <string id="task_MFCaptureEngine_AufgabezumHerunterfahren" value="MFCaptureEngine_AufgabezumHerunterfahren"/>
+    <string id="task_MFCaptureEngine_Fotografieraufgabe" value="MFCaptureEngine_Fotografieraufgabe"/>
+    <string id="task_MFCaptureEngine_AufgabezumStartenderVorschau" value="MFCaptureEngine_AufgabezumStartenderVorschau"/>
+    <string id="task_MFCaptureEngine_AufgabezumStartenderAufzeichnung" value="MFCaptureEngine_AufgabezumStartenderAufzeichnung"/>
+    <string id="task_MFCaptureEngine_Quellennachricht" value="MFCaptureEngine_Quellennachricht"/>
+    <string id="task_MFCaptureEngine_Streamingnachricht" value="MFCaptureEngine_Streamingnachricht"/>
+    <string id="task_MFCaptureEngine_Senkenaufgabe" value="MFCaptureEngine_Senkenaufgabe"/>
+    <string id="task_MFCaptureEngine_Sampleanalyse" value="MFCaptureEngine_Sampleanalyse"/>
+    <string id="task_MFCaptureEngine_AufgabezumBeendenderVorschau" value="MFCaptureEngine_AufgabezumBeendenderVorschau"/>
+    <string id="task_MFCaptureEngine_AufgabezumBeendenderAufzeichnung" value="MFCaptureEngine_AufgabezumBeendenderAufzeichnung"/>
+    <string id="task_MFCaptureEngine_Fotocodierung" value="MFCaptureEngine_Fotocodierung"/>
+    <string id="task_MFCaptureEngine_Fotoformatkonvertierung" value="MFCaptureEngine_Fotoformatkonvertierung"/>
+    <string id="task_MFCaptureEngine_Fotospiegelung" value="MFCaptureEngine_Fotospiegelung"/>
+    <string id="task_MFCaptureEngine_Foto_XVP" value="MFCaptureEngine_Foto_XVP"/>
+    <string id="task_MFCaptureEngine_Fotosenkenkonfiguration" value="MFCaptureEngine_Fotosenkenkonfiguration"/>
+    <string id="task_MFCaptureEngineFlushRequiredStreams_Task" value="MFCaptureEngineFlushRequiredStreams_Task"/>
+    <string id="task_MFCaptureEngineSetCurrentDeviceMediaType_Task" value="MFCaptureEngineSetCurrentDeviceMediaType_Task"/>
+    <string id="task_MFCaptureEngineFlushAllStreams_Task" value="MFCaptureEngineFlushAllStreams_Task"/>
+    <string id="task_MFCaptureEngineOnFlushForAllStreams_Task" value="MFCaptureEngineOnFlushForAllStreams_Task"/>
+    <string id="task_MFCaptureEngineSetExtendedPropertyAsync_Task" value="MFCaptureEngineSetExtendedPropertyAsync_Task"/>
+    <string id="task_MFCaptureEngineKSAsynPropertySet_Task" value="MFCaptureEngineKSAsynPropertySet_Task"/>
+    <string id="task_MFCaptureEnginePhotoSinkPrepare_Task" value="MFCaptureEnginePhotoSinkPrepare_Task"/>
+    <string id="task_MFCaptureEngineStartCapturePhotoSequence_Task" value="MFCaptureEngineStartCapturePhotoSequence_Task"/>
+    <string id="task_MFCaptureEngineStopCapturePhotoSequence_Task" value="MFCaptureEngineStopCapturePhotoSequence_Task"/>
+    <string id="task_MFCaptureEngineCaptureSinkAddStream_Task" value="MFCaptureEngineCaptureSinkAddStream_Task"/>
+    <string id="task_MFCaptureEngine_OnEvent_Task" value="MFCaptureEngine_OnEvent_Task"/>
+    <string id="task_MFCaptureEngineGetAvailableDeviceMediaType" value="MFCaptureEngineGetAvailableDeviceMediaType"/>
+    <string id="task_MFCaptureEngine_BridgeSourceSink" value="MFCaptureEngine_BridgeSourceSink"/>
+    <string id="task_MFCaptureEngine_SourceInfo_Aufgabe" value="MFCaptureEngine_SourceInfo_Aufgabe"/>
+    <string id="task_MFCaptureEngine_Camera_Sound_Init_Aufgabe" value="MFCaptureEngine_Camera_Sound_Init_Aufgabe"/>
+    <string id="task_MFCaptureEngine_Camera_Sound_QueuePlayback_Aufgabe" value="MFCaptureEngine_Camera_Sound_QueuePlayback_Aufgabe"/>
+    <string id="task_MFCaptureEngine_Camera_Sound_Playback_Aufgabe" value="MFCaptureEngine_Camera_Sound_Playback_Aufgabe"/>
+    <string id="task_MFCaptureEngine_DiskFull_Condition.TaskMessage" value="MFCaptureEngine_DiskFull_Condition.TaskMessage"/>
+    <string id="map_StreamTypeMF_CAPTURE_ENGINE_STREAM_CATEGORY_VIDEO_PREVIEW" value="MF_CAPTURE_ENGINE_STREAM_CATEGORY_VIDEO_PREVIEW"/>
+    <string id="map_StreamTypeMF_CAPTURE_ENGINE_STREAM_CATEGORY_VIDEO_CAPTURE" value="MF_CAPTURE_ENGINE_STREAM_CATEGORY_VIDEO_CAPTURE"/>
+    <string id="map_StreamTypeMF_CAPTURE_ENGINE_STREAM_CATEGORY_PHOTO_INDEPENDENT" value="MF_CAPTURE_ENGINE_STREAM_CATEGORY_PHOTO_INDEPENDENT"/>
+    <string id="map_StreamTypeMF_CAPTURE_ENGINE_STREAM_CATEGORY_PHOTO_DEPENDENT" value="MF_CAPTURE_ENGINE_STREAM_CATEGORY_PHOTO_DEPENDENT"/>
+    <string id="map_StreamTypeMF_CAPTURE_ENGINE_STREAM_CATEGORY_AUDIO" value="MF_CAPTURE_ENGINE_STREAM_CATEGORY_AUDIO"/>
+    <string id="map_StreamTypeMF_CAPTURE_ENGINE_STREAM_CATEGORY_UNSUPPORTED" value="MF_CAPTURE_ENGINE_STREAM_CATEGORY_UNSUPPORTED"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

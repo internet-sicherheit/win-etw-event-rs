@@ -1,0 +1,155 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-MF-FrameServer" guid="{9e22a3ed-7b32-4b99-b6c2-21dd6ace01e1}" resourceFileName="Microsoft-Windows-MF-FrameServer" messageFileName="Microsoft-Windows-MF-FrameServer" symbol="MicrosoftWindowsMFFrameServer" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="FrameServerFsProxySetOutputType" message="$(string.task_FrameServerFsProxySetOutputType)" value="1"/>
+     <task name="FrameServerFsProxyD3dManager" message="$(string.task_FrameServerFsProxyD3dManager)" value="2"/>
+     <task name="string.FrameServerFsProxyInitialization" message="$(string.task_string.FrameServerFsProxyInitialization)" value="3"/>
+     <task name="string.FrameServerFsClientCreateSample" message="$(string.task_string.FrameServerFsClientCreateSample)" value="4"/>
+     <task name="FrameServer_Aufnahmestatistik" message="$(string.task_FrameServer_Aufnahmestatistik)" value="5"/>
+     <task name="FrameServerWatchdogTimer_Task" message="$(string.task_FrameServerWatchdogTimer_Task)" value="6"/>
+    </tasks>
+    <maps>
+     <valueMap name="StreamType">
+      <map value="0x0" message="$(string.map_StreamTypeMASTER)"/>
+      <map value="0x1" message="$(string.map_StreamTypeSHARED)"/>
+     </valueMap>
+     <valueMap name="StatSource">
+      <map value="0x0" message="$(string.map_StatSourceKsPin)"/>
+      <map value="0x1" message="$(string.map_StatSourceDMFT)"/>
+      <map value="0x2" message="$(string.map_StatSourceMFT0)"/>
+      <map value="0x3" message="$(string.map_StatSourceDeviceStream)"/>
+      <map value="0x4" message="$(string.map_StatSourceMJPGDecoder)"/>
+      <map value="0x5" message="$(string.map_StatSourceXVP)"/>
+      <map value="0x6" message="$(string.map_StatSourceFSStream)"/>
+     </valueMap>
+     <valueMap name="TimerScope">
+      <map value="0x0" message="$(string.map_TimerScopeFSService)"/>
+      <map value="0x1" message="$(string.map_TimerScopeFSSource)"/>
+      <map value="0x2" message="$(string.map_TimerScopeFSStream)"/>
+     </valueMap>
+     <valueMap name="WatchdogOperation">
+      <map value="0x0" message="$(string.map_WatchdogOperationInitialisieren)"/>
+      <map value="0x1" message="$(string.map_WatchdogOperationAktivieren)"/>
+      <map value="0x2" message="$(string.map_WatchdogOperationStarten)"/>
+      <map value="0x3" message="$(string.map_WatchdogOperationBeenden)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="2" symbol="FrameServerFsProxySetOutputTypeStarten" version="0" task="FrameServerFsProxySetOutputType" opcode="win:Starten" level="win:Informational" template="FrameServerFsProxySetOutputTypeStartenArgs"/>
+     <event value="3" symbol="FrameServerFsProxySetOutputTypeStopp" version="0" task="FrameServerFsProxySetOutputType" opcode="win:Stopp" level="win:Informational" template="FrameServerFsProxySetOutputTypeStoppArgs"/>
+     <event value="4" symbol="FrameServerFsProxyD3dManagerStarten" version="0" task="FrameServerFsProxyD3dManager" opcode="win:Starten" level="win:Informational" template="FrameServerFsProxyD3dManagerStartenArgs"/>
+     <event value="5" symbol="FrameServerFsProxyD3dManagerStopp" version="0" task="FrameServerFsProxyD3dManager" opcode="win:Stopp" level="win:Informational" template="FrameServerFsProxySetOutputTypeStoppArgs"/>
+     <event value="6" symbol="string.FrameServerFsProxyInitializationStarten" version="0" task="string.FrameServerFsProxyInitialization" opcode="win:Starten" level="win:Informational" template="string.FrameServerFsProxyInitializationStartenArgs"/>
+     <event value="7" symbol="string.FrameServerFsProxyInitializationStopp" version="0" task="string.FrameServerFsProxyInitialization" opcode="win:Stopp" level="win:Informational" template="string.FrameServerFsProxyInitializationStoppArgs"/>
+     <event value="8" symbol="string.FrameServerFsClientCreateSampleStarten" version="0" task="string.FrameServerFsClientCreateSample" opcode="win:Starten" level="win:Informational" template="string.FrameServerFsClientCreateSampleStartenArgs"/>
+     <event value="9" symbol="string.FrameServerFsClientCreateSampleStarten9" version="0" task="string.FrameServerFsClientCreateSample" opcode="win:Starten" level="win:Informational" template="FrameServerFsProxySetOutputTypeStoppArgs"/>
+     <event value="10" symbol="FrameServer_AufnahmestatistikStarten" version="0" task="FrameServer_Aufnahmestatistik" opcode="win:Starten" level="win:Informational" template="FrameServer_AufnahmestatistikStartenArgs"/>
+     <event value="11" symbol="FrameServerWatchdogTimer_TaskStarten" version="0" task="FrameServerWatchdogTimer_Task" opcode="win:Starten" level="win:Informational" template="FrameServerWatchdogTimer_TaskStartenArgs"/>
+     <event value="12" symbol="FrameServerWatchdogTimer_TaskStopp" version="0" task="FrameServerWatchdogTimer_Task" opcode="win:Stopp" level="win:Informational" template="FrameServerWatchdogTimer_TaskStoppArgs"/>
+     <event value="13" symbol="FrameServerWatchdogTimer_TaskStopp13" version="0" task="FrameServerWatchdogTimer_Task" opcode="win:Stopp" level="win:Error" template="FrameServerWatchdogTimer_TaskStopp13Args"/>
+    </events>
+    <templates>
+     <template tid="FrameServerFsProxySetOutputTypeStartenArgs">
+      <data name="PinId" inType="win:UInt32"/>
+      <data name="MediaType" inType="win:AnsiString"/>
+     </template>
+     <template tid="FrameServerFsProxySetOutputTypeStoppArgs">
+      <data name="hr" inType="win:HexInt32"/>
+     </template>
+     <template tid="FrameServerFsProxyD3dManagerStartenArgs">
+      <data name="D3dDesc" inType="win:UnicodeString"/>
+      <data name="LUID" inType="win:HexInt64"/>
+      <data name="VendorId" inType="win:UInt32"/>
+      <data name="DeviceId" inType="win:UInt32"/>
+      <data name="SubSysId" inType="win:UInt32"/>
+     </template>
+     <template tid="string.FrameServerFsProxyInitializationStartenArgs">
+      <data name="SymbolicLink" inType="win:UnicodeString"/>
+      <data name="Devices" inType="win:UInt32"/>
+      <data name="Streams" inType="win:UInt32"/>
+      <data name="StreamType" inType="win:UInt32" map="StreamType"/>
+      <data name="hr" inType="win:HexInt32"/>
+     </template>
+     <template tid="string.FrameServerFsProxyInitializationStoppArgs">
+      <data name="SymbolicLink" inType="win:UnicodeString"/>
+      <data name="Devices" inType="win:UInt32"/>
+      <data name="Streams" inType="win:UInt32"/>
+      <data name="StreamType" inType="win:UInt32"/>
+      <data name="hr" inType="win:HexInt32"/>
+     </template>
+     <template tid="string.FrameServerFsClientCreateSampleStartenArgs">
+      <data name="StreamId" inType="win:UInt32"/>
+      <data name="TimeStamp" inType="win:UInt64"/>
+      <data name="Duration" inType="win:UInt32"/>
+      <data name="MemoryType" inType="win:UInt32"/>
+     </template>
+     <template tid="FrameServer_AufnahmestatistikStartenArgs">
+      <data name="StreamId" inType="win:UInt32"/>
+      <data name="StatSource" inType="win:UInt32" map="StatSource"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="Requests" inType="win:UInt64"/>
+      <data name="Input" inType="win:UInt64"/>
+      <data name="Output" inType="win:UInt64"/>
+      <data name="Dropped" inType="win:UInt64"/>
+      <data name="FrameDelayRMSAccumulator" inType="win:Double"/>
+      <data name="FrameDelayRMSCounter" inType="win:UInt32"/>
+      <data name="ExpectedFrameDelay" inType="win:UInt64"/>
+      <data name="hr" inType="win:HexInt32"/>
+      <data name="SymbolicLink" inType="win:UnicodeString"/>
+     </template>
+     <template tid="FrameServerWatchdogTimer_TaskStartenArgs">
+      <data name="TimerScope" inType="win:UInt32" map="TimerScope"/>
+      <data name="TimerScopeId" inType="win:UInt64"/>
+      <data name="WatchdogOperation" inType="win:UInt32"/>
+      <data name="DurationToTriggerInHns" inType="win:UInt64"/>
+      <data name="SymbolicLink" inType="win:UnicodeString"/>
+     </template>
+     <template tid="FrameServerWatchdogTimer_TaskStoppArgs">
+      <data name="TimerScope" inType="win:UInt32"/>
+      <data name="TimerScopeId" inType="win:UInt64"/>
+      <data name="WatchdogOperation" inType="win:UInt32" map="WatchdogOperation"/>
+      <data name="DurationToCompletionInHns" inType="win:UInt64"/>
+     </template>
+     <template tid="FrameServerWatchdogTimer_TaskStopp13Args">
+      <data name="TimerScope" inType="win:UInt32"/>
+      <data name="TimerScopeId" inType="win:UInt64"/>
+      <data name="WatchdogOperation" inType="win:UInt32"/>
+      <data name="hr" inType="win:HexInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_FrameServerFsProxySetOutputType" value="FrameServerFsProxySetOutputType"/>
+    <string id="task_FrameServerFsProxyD3dManager" value="FrameServerFsProxyD3dManager"/>
+    <string id="task_string.FrameServerFsProxyInitialization" value="string.FrameServerFsProxyInitialization"/>
+    <string id="task_string.FrameServerFsClientCreateSample" value="string.FrameServerFsClientCreateSample"/>
+    <string id="task_FrameServer_Aufnahmestatistik" value="FrameServer_Aufnahmestatistik"/>
+    <string id="task_FrameServerWatchdogTimer_Task" value="FrameServerWatchdogTimer_Task"/>
+    <string id="map_StreamTypeMASTER" value="MASTER"/>
+    <string id="map_StreamTypeSHARED" value="SHARED"/>
+    <string id="map_StatSourceKsPin" value="KsPin"/>
+    <string id="map_StatSourceDMFT" value="DMFT"/>
+    <string id="map_StatSourceMFT0" value="MFT0"/>
+    <string id="map_StatSourceDeviceStream" value="DeviceStream"/>
+    <string id="map_StatSourceMJPGDecoder" value="MJPGDecoder"/>
+    <string id="map_StatSourceXVP" value="XVP"/>
+    <string id="map_StatSourceFSStream" value="FSStream"/>
+    <string id="map_TimerScopeFSService" value="FSService"/>
+    <string id="map_TimerScopeFSSource" value="FSSource"/>
+    <string id="map_TimerScopeFSStream" value="FSStream"/>
+    <string id="map_WatchdogOperationInitialisieren" value="Initialisieren"/>
+    <string id="map_WatchdogOperationAktivieren" value="Aktivieren"/>
+    <string id="map_WatchdogOperationStarten" value="Starten"/>
+    <string id="map_WatchdogOperationBeenden" value="Beenden"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

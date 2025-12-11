@@ -1,0 +1,1444 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Deduplication" guid="{f9fe3908-44b8-48d9-9a32-5a763ff5ed79}" resourceFileName="Microsoft-Windows-Deduplication" messageFileName="Microsoft-Windows-Deduplication" symbol="MicrosoftWindowsDeduplication" source="Xml" >
+    <keywords>
+     <keyword name="Reporting" message="$(string.keyword_Reporting)" mask="0x1"/>
+     <keyword name="Filter" message="$(string.keyword_Filter)" mask="0x2"/>
+     <keyword name="KmStreamStore" message="$(string.keyword_KmStreamStore)" mask="0x4"/>
+     <keyword name="KmChunkStore" message="$(string.keyword_KmChunkStore)" mask="0x8"/>
+     <keyword name="KmChunkContainer" message="$(string.keyword_KmChunkContainer)" mask="0x10"/>
+     <keyword name="KmFileCache" message="$(string.keyword_KmFileCache)" mask="0x20"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="OptimierungstaskderDatendeduplizierung" message="$(string.task_OptimierungstaskderDatendeduplizierung)" value="1"/>
+     <task name="TaskfürDatendeduplizierungsbereinigung" message="$(string.task_TaskfürDatendeduplizierungsbereinigung)" value="3"/>
+     <task name="TaskfürDatendeduplizierungsdeoptimierung" message="$(string.task_TaskfürDatendeduplizierungsdeoptimierung)" value="4"/>
+     <task name="ÖffnendesDatenstromsausdemDatenstromspeicher" message="$(string.task_ÖffnendesDatenstromsausdemDatenstromspeicher)" value="5"/>
+     <task name="VorbereitenfürAuslagerungs_E/A" message="$(string.task_VorbereitenfürAuslagerungs_E/A)" value="6"/>
+     <task name="LesenderDatenstromzuordnung" message="$(string.task_LesenderDatenstromzuordnung)" value="7"/>
+     <task name="LesenvonBlöcken" message="$(string.task_LesenvonBlöcken)" value="8"/>
+     <task name="BerechnenderPrüfsumme" message="$(string.task_BerechnenderPrüfsumme)" value="9"/>
+     <task name="AbrufeneinesContainereintrags" message="$(string.task_AbrufeneinesContainereintrags)" value="10"/>
+     <task name="AbrufendermaximalenGenerationfürdenContainer" message="$(string.task_AbrufendermaximalenGenerationfürdenContainer)" value="11"/>
+     <task name="ÖffnendesBlockcontainers" message="$(string.task_ÖffnendesBlockcontainers)" value="12"/>
+     <task name="InitialisierenderUmleitungstabelledesBlockcontainers" message="$(string.task_InitialisierenderUmleitungstabelledesBlockcontainers)" value="13"/>
+     <task name="ÜberprüfenderUmleitungstabelledesBlockcontainers" message="$(string.task_ÜberprüfenderUmleitungstabelledesBlockcontainers)" value="14"/>
+     <task name="AbrufendergültigenDatenlängefürdenBlockcontainer" message="$(string.task_AbrufendergültigenDatenlängefürdenBlockcontainer)" value="15"/>
+     <task name="AbrufendesOffsetsausderUmleitungstabelledesBlockcontainers" message="$(string.task_AbrufendesOffsetsausderUmleitungstabelledesBlockcontainers)" value="16"/>
+     <task name="LeseneinesBlockcontainerblocks" message="$(string.task_LeseneinesBlockcontainerblocks)" value="17"/>
+     <task name="LöschenvonInhaltdesBlockcontainerblocks" message="$(string.task_LöschenvonInhaltdesBlockcontainerblocks)" value="18"/>
+     <task name="KopiereneinesBlocks" message="$(string.task_KopiereneinesBlocks)" value="19"/>
+     <task name="InitialisierendesDateicache" message="$(string.task_InitialisierendesDateicache)" value="20"/>
+     <task name="ZuordnenvonDateicachedaten" message="$(string.task_ZuordnenvonDateicachedaten)" value="21"/>
+     <task name="LoslösenvonDateicachedaten" message="$(string.task_LoslösenvonDateicachedaten)" value="22"/>
+     <task name="KopierenvonDateicachedaten" message="$(string.task_KopierenvonDateicachedaten)" value="23"/>
+     <task name="LesenvonzugrundeliegendenDateicachedaten" message="$(string.task_LesenvonzugrundeliegendenDateicachedaten)" value="24"/>
+     <task name="AbrufenderGrößederBlockcontainerdatei" message="$(string.task_AbrufenderGrößederBlockcontainerdatei)" value="25"/>
+     <task name="AnhefteneinerDatenstromzuordnung" message="$(string.task_AnhefteneinerDatenstromzuordnung)" value="26"/>
+     <task name="AnhefteneinesBlockcontainers" message="$(string.task_AnhefteneinesBlockcontainers)" value="27"/>
+     <task name="AnhefteneinesBlocks" message="$(string.task_AnhefteneinesBlocks)" value="28"/>
+     <task name="ZuordnendesPoolpuffers" message="$(string.task_ZuordnendesPoolpuffers)" value="29"/>
+     <task name="LoslöseneinesBlockcontainers" message="$(string.task_LoslöseneinesBlockcontainers)" value="30"/>
+     <task name="LoslöseneinesBlocks" message="$(string.task_LoslöseneinesBlocks)" value="31"/>
+     <task name="VerarbeiteneinesDeduplizierungslesevorgangs" message="$(string.task_VerarbeiteneinesDeduplizierungslesevorgangs)" value="32"/>
+     <task name="AbrufendeserstenDatenstrom_Zuordnungseintrags" message="$(string.task_AbrufendeserstenDatenstrom_Zuordnungseintrags)" value="33"/>
+     <task name="LesenvonBlockmetadaten" message="$(string.task_LesenvonBlockmetadaten)" value="34"/>
+     <task name="LesenvonBlockdaten" message="$(string.task_LesenvonBlockdaten)" value="35"/>
+     <task name="Verweisenauf"TlCache"_Daten" message="$(string.task_Verweisenauf"TlCache"_Daten)" value="36"/>
+     <task name="LesenvonBlockdatenausdemDatenstromspeicher" message="$(string.task_LesenvonBlockdatenausdemDatenstromspeicher)" value="37"/>
+     <task name="AssemblierenvonBlockdaten" message="$(string.task_AssemblierenvonBlockdaten)" value="38"/>
+     <task name="DekomprimierenvonBlockdaten" message="$(string.task_DekomprimierenvonBlockdaten)" value="39"/>
+     <task name="KopierenvonBlockdatenindenBenutzerpuffer" message="$(string.task_KopierenvonBlockdatenindenBenutzerpuffer)" value="40"/>
+     <task name="EinfügenvonBlockdatenindenTICache" message="$(string.task_EinfügenvonBlockdatenindenTICache)" value="41"/>
+     <task name="LesenvonDatenausderAnalysepunktdateifürDeduplizierung" message="$(string.task_LesenvonDatenausderAnalysepunktdateifürDeduplizierung)" value="42"/>
+     <task name="VorbereitenderDatenstromzuordnung" message="$(string.task_VorbereitenderDatenstromzuordnung)" value="43"/>
+     <task name="PatchenvonunverändertenBereichen" message="$(string.task_PatchenvonunverändertenBereichen)" value="44"/>
+     <task name="SchreibenvonDatenindieDeduplizierungsdatei" message="$(string.task_SchreibenvonDatenindieDeduplizierungsdatei)" value="45"/>
+     <task name="EinreiheneinerSchreibanforderungfürdieDeduplizierungsdateiindieWarteschlange" message="$(string.task_EinreiheneinerSchreibanforderungfürdieDeduplizierungsdateiindieWarteschlange)" value="46"/>
+     <task name="KopierenvonSchreibaufgabenfürdieDeduplizierungsdatei" message="$(string.task_KopierenvonSchreibaufgabenfürdieDeduplizierungsdatei)" value="47"/>
+     <task name="AusführendesvollständigenerneutenAbrufensfürdieDeduplizierungsdatei" message="$(string.task_AusführendesvollständigenerneutenAbrufensfürdieDeduplizierungsdatei)" value="48"/>
+     <task name="AusführeneinesteilweisenerneutenAbrufensfürdieDeduplizierungsdatei" message="$(string.task_AusführeneinesteilweisenerneutenAbrufensfürdieDeduplizierungsdatei)" value="49"/>
+     <task name="AusführenvonScheinauslagerungslesenfürdieDeduplizierungsdatei" message="$(string.task_AusführenvonScheinauslagerungslesenfürdieDeduplizierungsdatei)" value="50"/>
+     <task name="LesenvonordnungsgemäßenDatenzumerneutenAbrufenderDatei" message="$(string.task_LesenvonordnungsgemäßenDatenzumerneutenAbrufenderDatei)" value="51"/>
+     <task name="NormalesSchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdatei" message="$(string.task_NormalesSchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdatei)" value="52"/>
+     <task name="SchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdateiüberAuslagerung" message="$(string.task_SchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdateiüberAuslagerung)" value="53"/>
+     <task name="ErneutesAbrufenderDeduplizierungsdateiüberAuslagerungs_E/A" message="$(string.task_ErneutesAbrufenderDeduplizierungsdateiüberAuslagerungs_E/A)" value="54"/>
+     <task name="LeerenderDeduplizierungsdateiausdemArbeitsspeichernachdemerneutenAbrufen" message="$(string.task_LeerenderDeduplizierungsdateiausdemArbeitsspeichernachdemerneutenAbrufen)" value="55"/>
+     <task name="AktualisierendesBitmustersnachdemerneutenAbrufenderDeduplizierungsdatei" message="$(string.task_AktualisierendesBitmustersnachdemerneutenAbrufenderDeduplizierungsdatei)" value="56"/>
+     <task name="LöscheneinesDeduplizierungsanalysepunkts" message="$(string.task_LöscheneinesDeduplizierungsanalysepunkts)" value="57"/>
+     <task name="ÖffnenderDeduplizierungsdatei" message="$(string.task_ÖffnenderDeduplizierungsdatei)" value="58"/>
+     <task name="SperrendesBenutzerpuffersfüreinenLesevorgang" message="$(string.task_SperrendesBenutzerpuffersfüreinenLesevorgang)" value="59"/>
+     <task name="AbrufenderSystemadressefürdieMDL" message="$(string.task_AbrufenderSystemadressefürdieMDL)" value="60"/>
+     <task name="LesenderunverändertenDeduplizierungsdatei" message="$(string.task_LesenderunverändertenDeduplizierungsdatei)" value="61"/>
+     <task name="AbrufendesBereichszustands" message="$(string.task_AbrufendesBereichszustands)" value="62"/>
+     <task name="AbrufendesBlockkörpers" message="$(string.task_AbrufendesBlockkörpers)" value="63"/>
+     <task name="FreigebendesBlocks" message="$(string.task_FreigebendesBlocks)" value="64"/>
+     <task name="FreigebendesDekomprimierensdesBlockkontexts" message="$(string.task_FreigebendesDekomprimierensdesBlockkontexts)" value="65"/>
+     <task name="VorbereitendesDekomprimierensdesBlockkontexts" message="$(string.task_VorbereitendesDekomprimierensdesBlockkontexts)" value="66"/>
+     <task name="KopierenvonDatenindenkomprimiertenPuffer" message="$(string.task_KopierenvonDatenindenkomprimiertenPuffer)" value="67"/>
+     <task name="FreigebenvonDatenausdemTL_Cache" message="$(string.task_FreigebenvonDatenausdemTL_Cache)" value="68"/>
+     <task name="EinreihenvonasynchronerLeseanforderungindieWarteschlange" message="$(string.task_EinreihenvonasynchronerLeseanforderungindieWarteschlange)" value="69"/>
+    </tasks>
+    <maps>
+     <valueMap name="JobType">
+      <map value="0x1" message="$(string.map_JobTypeOptimierung)"/>
+      <map value="0x2" message="$(string.map_JobTypeAutomatische Speicherbereinigung)"/>
+      <map value="0x3" message="$(string.map_JobTypeBereinigung)"/>
+      <map value="0x4" message="$(string.map_JobTypeDeoptimierung)"/>
+      <map value="0x5" message="$(string.map_JobTypeAnalyse)"/>
+      <map value="0x6" message="$(string.map_JobTypeDataPort)"/>
+      <map value="0x31" message="$(string.map_JobTypeOptimierung)"/>
+      <map value="0x32" message="$(string.map_JobTypeAutomatische Speicherbereinigung)"/>
+      <map value="0x33" message="$(string.map_JobTypeBereinigung)"/>
+      <map value="0x34" message="$(string.map_JobTypeDeoptimierung)"/>
+      <map value="0x35" message="$(string.map_JobTypeAnalyse)"/>
+      <map value="0x36" message="$(string.map_JobTypeDataPort)"/>
+     </valueMap>
+     <valueMap name="JobPriorityType">
+      <map value="0x1" message="$(string.map_JobPriorityTypeNiedrig)"/>
+      <map value="0x2" message="$(string.map_JobPriorityTypeNormal)"/>
+      <map value="0x3" message="$(string.map_JobPriorityTypeHoch)"/>
+     </valueMap>
+     <valueMap name="JobScheduleMode">
+      <map value="0x1" message="$(string.map_JobScheduleModeGeplant)"/>
+      <map value="0x2" message="$(string.map_JobScheduleModeManuell)"/>
+     </valueMap>
+     <valueMap name="OptimizationFilterOperation">
+      <map value="0x1" message="$(string.map_OptimizationFilterOperationBenachrichtigungsoptimierung)"/>
+      <map value="0x2" message="$(string.map_OptimizationFilterOperationAnalysepunkt wird festgelegt...)"/>
+      <map value="0x3" message="$(string.map_OptimizationFilterOperationDie Datei wird gekürzt...)"/>
+     </valueMap>
+     <bitMap name="CorruptionType">
+      <map value="0x0" message="$(string.map_CorruptionTypeKein)"/>
+      <map value="0x1" message="$(string.map_CorruptionTypeUngültige Prüfsumme)"/>
+      <map value="0x2" message="$(string.map_CorruptionTypeInkonsistente Metadaten)"/>
+      <map value="0x4" message="$(string.map_CorruptionTypeUngültige Headermetadaten)"/>
+      <map value="0x8" message="$(string.map_CorruptionTypeDatei fehlt)"/>
+      <map value="0x10" message="$(string.map_CorruptionTypeUngültige Prüfsumme (Speichersubsystem))"/>
+      <map value="0x20" message="$(string.map_CorruptionTypeBeschädigung (Speichersubsystem))"/>
+      <map value="0x40" message="$(string.map_CorruptionTypeBeschädigung (Metadaten fehlen))"/>
+      <map value="0x80" message="$(string.map_CorruptionTypeMöglicher Datenverlust (doppelte Analysedaten))"/>
+     </bitMap>
+     <valueMap name="ChunkStoreType">
+      <map value="0x2" message="$(string.map_ChunkStoreTypeDaten)"/>
+      <map value="0x3" message="$(string.map_ChunkStoreTypeDatenstromzuordnung)"/>
+      <map value="0x4" message="$(string.map_ChunkStoreTypeHotspot)"/>
+      <map value="0x6" message="$(string.map_ChunkStoreTypeRückrufbitmap)"/>
+     </valueMap>
+     <valueMap name="FileName">
+      <map value="0x0" message="$(string.map_FileNameDatei mit primärer Dateiliste)"/>
+      <map value="0x1" message="$(string.map_FileNameDatei mit Sicherungsdateiliste)"/>
+     </valueMap>
+     <valueMap name="ChunkStoreItemType">
+      <map value="0x2" message="$(string.map_ChunkStoreItemTypeBlockheader)"/>
+      <map value="0x3" message="$(string.map_ChunkStoreItemTypeBlockkörper)"/>
+      <map value="0x4" message="$(string.map_ChunkStoreItemTypeContainerheader)"/>
+      <map value="0x5" message="$(string.map_ChunkStoreItemTypeTabelle für Containerumleitung)"/>
+      <map value="0x6" message="$(string.map_ChunkStoreItemTypeHotspottabelle)"/>
+      <map value="0x7" message="$(string.map_ChunkStoreItemTypeLöschungsprotokollheader)"/>
+      <map value="0x8" message="$(string.map_ChunkStoreItemTypeLöschungsprotokolleintrag)"/>
+      <map value="0x9" message="$(string.map_ChunkStoreItemTypeAutomatische Speicherbereinigung - Bitmapheader)"/>
+      <map value="0xa" message="$(string.map_ChunkStoreItemTypeAutomatische Speicherbereinigung - Bitmapeintrag)"/>
+      <map value="0xb" message="$(string.map_ChunkStoreItemTypeHeader des Zusammenführungsprotokolls)"/>
+      <map value="0xc" message="$(string.map_ChunkStoreItemTypeEintrag des Zusammenführungsprotokolls)"/>
+      <map value="0xd" message="$(string.map_ChunkStoreItemTypeContainerdatei)"/>
+      <map value="0xe" message="$(string.map_ChunkStoreItemTypeDatei mit Dateiliste)"/>
+      <map value="0xf" message="$(string.map_ChunkStoreItemTypeDateilistenheader)"/>
+      <map value="0x10" message="$(string.map_ChunkStoreItemTypeDateilisteneintrag)"/>
+      <map value="0x11" message="$(string.map_ChunkStoreItemTypeRückrufbitmapheader)"/>
+      <map value="0x12" message="$(string.map_ChunkStoreItemTypeRückrufbitmaptext)"/>
+      <map value="0x13" message="$(string.map_ChunkStoreItemTypeRückrufbitmap fehlt)"/>
+     </valueMap>
+     <valueMap name="ChunkStoreIoType">
+      <map value="0x0" message="$(string.map_ChunkStoreIoTypeCache)"/>
+      <map value="0x1" message="$(string.map_ChunkStoreIoTypeKein Cache)"/>
+      <map value="0x2" message="$(string.map_ChunkStoreIoTypeAuslagern)"/>
+      <map value="0x3" message="$(string.map_ChunkStoreIoTypeSpeicherzuordnung)"/>
+      <map value="0x4" message="$(string.map_ChunkStoreIoTypeAuslagern der Speicherzuordnung)"/>
+     </valueMap>
+     <valueMap name="ChunkStoreBufferType">
+      <map value="0x0" message="$(string.map_ChunkStoreBufferTypeKein)"/>
+      <map value="0x1" message="$(string.map_ChunkStoreBufferTypePool)"/>
+      <map value="0x2" message="$(string.map_ChunkStoreBufferTypePoolAligned)"/>
+      <map value="0x3" message="$(string.map_ChunkStoreBufferTypeMDL)"/>
+      <map value="0x4" message="$(string.map_ChunkStoreBufferTypeZuordnung)"/>
+     </valueMap>
+     <valueMap name="FltIoType">
+      <map value="0x0" message="$(string.map_FltIoTypeZwischengespeichert)"/>
+      <map value="0x1" message="$(string.map_FltIoTypeNonCached)"/>
+      <map value="0x2" message="$(string.map_FltIoTypeAusgelagert)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="4096" symbol="task_0" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4097" symbol="task_04097" version="0" task="task_0" level="win:Error" template="task_04097Args"/>
+     <event value="4098" symbol="task_04098" version="0" task="task_0" level="win:Error" template="task_04097Args"/>
+     <event value="4099" symbol="task_04099" version="0" task="task_0" level="win:Error" template="task_04097Args"/>
+     <event value="4100" symbol="task_04100" version="0" task="task_0" level="win:Error" template="task_04097Args"/>
+     <event value="4101" symbol="task_04101" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="4102" symbol="task_04102" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="4103" symbol="task_04103" version="0" task="task_0" level="win:Informational" template="task_04103Args"/>
+     <event value="4104" symbol="task_04104" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4105" symbol="task_04105" version="0" task="task_0" level="win:Error" template="task_04101Args"/>
+     <event value="4106" symbol="task_04106" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4107" symbol="task_04107" version="0" task="task_0" level="win:Error" template="task_04107Args"/>
+     <event value="4108" symbol="task_04108" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="4109" symbol="task_04109" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4110" symbol="task_04110" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4111" symbol="task_04111" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4112" symbol="task_04112" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="4113" symbol="task_04113" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4114" symbol="task_04114" version="0" task="task_0" level="win:Error" template="task_04114Args"/>
+     <event value="4115" symbol="task_04115" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4118" symbol="task_04118" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="4119" symbol="task_04119" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4120" symbol="task_04120" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4121" symbol="task_04121" version="0" task="task_0" level="win:Error" template="task_04101Args"/>
+     <event value="4122" symbol="task_04122" version="0" task="task_0" level="win:Error" template="task_04108Args"/>
+     <event value="4123" symbol="task_04123" version="0" task="task_0" level="win:Error" template="task_04101Args"/>
+     <event value="4124" symbol="task_04124" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4125" symbol="task_04125" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4126" symbol="task_04126" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="4127" symbol="task_04127" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="4128" symbol="task_04128" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4129" symbol="task_04129" version="0" task="task_0" level="win:Error" template="task_04108Args"/>
+     <event value="4130" symbol="task_04130" version="0" task="task_0" level="win:Warning" template="task_04101Args"/>
+     <event value="4131" symbol="task_04131" version="0" task="task_0" level="win:Error" template="task_04101Args"/>
+     <event value="4132" symbol="task_04132" version="0" task="task_0" level="win:Error" template="task_04101Args"/>
+     <event value="4133" symbol="task_04133" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4134" symbol="task_04134" version="0" task="task_0" level="win:Warning" template="task_04101Args"/>
+     <event value="4135" symbol="task_04135" version="0" task="task_0" level="win:Error" template="task_04108Args"/>
+     <event value="4136" symbol="task_04136" version="0" task="task_0" level="win:Error" template="task_04136Args"/>
+     <event value="4137" symbol="task_04137" version="0" task="task_0" level="win:Error" template="task_04136Args"/>
+     <event value="4140" symbol="task_04140" version="0" task="task_0" level="win:Warning" template="task_04140Args"/>
+     <event value="4141" symbol="task_04141" version="0" task="task_0" level="win:Informational" template="task_04141Args"/>
+     <event value="4142" symbol="task_04142" version="0" task="task_0" level="win:Warning" template="task_04141Args"/>
+     <event value="4143" symbol="task_04143" version="0" task="task_0" level="win:Informational" template="task_04141Args"/>
+     <event value="4144" symbol="task_04144" version="0" task="task_0" level="win:Error" template="task_04136Args"/>
+     <event value="4145" symbol="task_04145" version="0" task="task_0" level="win:Error" template="task_04101Args"/>
+     <event value="4146" symbol="task_04146" version="0" task="task_0" level="win:Error" template="task_04108Args"/>
+     <event value="4147" symbol="task_04147" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4148" symbol="task_04148" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4149" symbol="task_04149" version="0" task="task_0" level="win:Error" template="task_04108Args"/>
+     <event value="4150" symbol="task_04150" version="0" task="task_0" level="win:Error" template="task_04101Args"/>
+     <event value="4151" symbol="task_04151" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4153" symbol="task_04153" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="4154" symbol="task_04154" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="4155" symbol="task_04155" version="0" task="task_0" level="win:Error" template="task_04107Args"/>
+     <event value="4156" symbol="task_04156" version="0" task="task_0" level="win:Warning" template="task_04101Args"/>
+     <event value="4157" symbol="task_04157" version="0" task="task_0" level="win:Warning" template="task_04101Args"/>
+     <event value="4158" symbol="task_04158" version="0" task="task_0" level="win:Warning" template="task_04101Args"/>
+     <event value="4159" symbol="task_04159" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="4160" symbol="task_04160" version="0" task="task_0" level="win:Warning" template="task_04101Args"/>
+     <event value="4161" symbol="task_04161" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4162" symbol="task_04162" version="0" task="task_0" level="win:Error" template="task_04108Args"/>
+     <event value="4163" symbol="task_04163" version="0" task="task_0" level="win:Error" template="task_04108Args"/>
+     <event value="4164" symbol="task_04164" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4165" symbol="task_04165" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4166" symbol="task_04166" version="0" task="task_0" level="win:Warning" template="task_04101Args"/>
+     <event value="4169" symbol="task_04169" version="0" task="task_0" level="win:Warning" template="task_04101Args"/>
+     <event value="4171" symbol="task_04171" version="0" task="task_0" level="win:Error" template="task_04108Args"/>
+     <event value="4173" symbol="task_04173" version="0" task="task_0" level="win:Error" template="task_04101Args"/>
+     <event value="4174" symbol="task_04174" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="4175" symbol="task_04175" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="4176" symbol="task_04176" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="4177" symbol="task_04177" version="0" task="task_0" level="win:Warning" template="task_04101Args"/>
+     <event value="4178" symbol="task_04178" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4179" symbol="task_04179" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4180" symbol="task_04180" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4181" symbol="task_04181" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4182" symbol="task_04182" version="0" task="task_0" level="win:Warning" template="task_04107Args"/>
+     <event value="4183" symbol="task_04183" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4184" symbol="task_04184" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4185" symbol="task_04185" version="0" task="task_0" level="win:Informational" template="task_04141Args"/>
+     <event value="4186" symbol="task_04186" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4189" symbol="task_04189" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="4190" symbol="task_04190" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="4191" symbol="task_04191" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4192" symbol="task_04192" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="4193" symbol="task_04193" version="0" task="task_0" level="win:Informational" template="task_04141Args"/>
+     <event value="4194" symbol="task_04194" version="0" task="task_0" level="win:Informational" template="task_04141Args"/>
+     <event value="4195" symbol="task_04195" version="0" task="task_0" level="win:Warning" template="task_04101Args"/>
+     <event value="4196" symbol="task_04196" version="0" task="task_0" level="win:Warning" template="task_04101Args"/>
+     <event value="4197" symbol="task_04197" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="6144" symbol="TaskfürDatendeduplizierungsdeoptimierung" version="0" task="TaskfürDatendeduplizierungsdeoptimierung" level="win:Error" keywords="Reporting" template="TaskfürDatendeduplizierungsdeoptimierungArgs"/>
+     <event value="6145" symbol="TaskfürDatendeduplizierungsdeoptimierung6145" version="0" task="TaskfürDatendeduplizierungsdeoptimierung" level="win:Error" keywords="Reporting" template="TaskfürDatendeduplizierungsdeoptimierung6145Args"/>
+     <event value="6146" symbol="TaskfürDatendeduplizierungsdeoptimierung6146" version="0" task="TaskfürDatendeduplizierungsdeoptimierung" level="win:Informational" keywords="Reporting" template="TaskfürDatendeduplizierungsdeoptimierung6146Args"/>
+     <event value="6147" symbol="TaskfürDatendeduplizierungsdeoptimierung6147" version="0" task="TaskfürDatendeduplizierungsdeoptimierung" level="win:Informational" keywords="Reporting" template="TaskfürDatendeduplizierungsdeoptimierung6146Args"/>
+     <event value="6148" symbol="task_06148" version="0" task="task_0" level="win:Informational" template="task_06148Args"/>
+     <event value="6149" symbol="task_06149" version="0" task="task_0" level="win:Informational" template="task_06149Args"/>
+     <event value="6150" symbol="task_06150" version="0" task="task_0" level="win:Informational" template="task_06150Args"/>
+     <event value="6151" symbol="task_06151" version="0" task="task_0" level="win:Informational" template="task_06151Args"/>
+     <event value="6152" symbol="task_06152" version="0" task="task_0" level="win:Informational" template="task_06151Args"/>
+     <event value="6153" symbol="task_06153" version="0" task="task_0" level="win:Informational" template="task_06153Args"/>
+     <event value="6154" symbol="task_06154" version="0" task="task_0" level="win:Informational" template="task_06154Args"/>
+     <event value="6155" symbol="task_06155" version="0" task="task_0" level="win:Informational" template="task_06155Args"/>
+     <event value="6156" symbol="task_06156" version="0" task="task_0" level="win:Informational" template="task_06156Args"/>
+     <event value="6157" symbol="task_06157" version="0" task="task_0" level="win:Informational" template="task_06157Args"/>
+     <event value="6158" symbol="task_06158" version="0" task="task_0" level="win:Informational" template="task_06158Args"/>
+     <event value="6159" symbol="task_06159" version="0" task="task_0" level="win:Informational" template="task_06159Args"/>
+     <event value="6160" symbol="task_06160" version="0" task="task_0" level="win:Informational" template="task_06159Args"/>
+     <event value="6170" symbol="task_06170" version="0" task="task_0" level="win:Informational" template="task_06159Args"/>
+     <event value="6171" symbol="task_06171" version="0" task="task_0" level="win:Informational" template="task_06159Args"/>
+     <event value="6172" symbol="task_06172" version="0" task="task_0" level="win:Error" keywords="Reporting" template="task_06172Args"/>
+     <event value="6173" symbol="task_06173" version="0" task="task_0" level="win:Informational" template="task_06173Args"/>
+     <event value="6174" symbol="task_06174" version="0" task="task_0" level="win:Informational" template="task_06174Args"/>
+     <event value="6175" symbol="task_06175" version="0" task="task_0" level="win:Informational" template="task_06175Args"/>
+     <event value="6176" symbol="task_06176" version="0" task="task_0" level="win:Informational" template="task_06159Args"/>
+     <event value="6177" symbol="OptimierungstaskderDatendeduplizierung" version="0" task="OptimierungstaskderDatendeduplizierung" level="win:Warning" template="TaskfürDatendeduplizierungsdeoptimierung6145Args"/>
+     <event value="6178" symbol="task_06178" version="0" task="task_0" level="win:Informational" template="task_06178Args"/>
+     <event value="8192" symbol="task_08192" version="0" task="task_0" level="win:Informational" template="task_04136Args"/>
+     <event value="8193" symbol="task_08193" version="0" task="task_0" level="win:Informational" template="task_04141Args"/>
+     <event value="8194" symbol="task_08194" version="0" task="task_0" level="win:Informational" template="task_04136Args"/>
+     <event value="8195" symbol="task_08195" version="0" task="task_0" level="win:Informational" template="task_04136Args"/>
+     <event value="8196" symbol="task_08196" version="0" task="task_0" level="win:Informational" template="task_04107Args"/>
+     <event value="8197" symbol="task_08197" version="0" task="task_0" level="win:Informational" template="task_04108Args"/>
+     <event value="8198" symbol="task_08198" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8199" symbol="task_08199" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8200" symbol="task_08200" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8201" symbol="task_08201" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8202" symbol="task_08202" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8203" symbol="task_08203" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8204" symbol="task_08204" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="8205" symbol="task_08205" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8206" symbol="task_08206" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8207" symbol="task_08207" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8208" symbol="task_08208" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8209" symbol="task_08209" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8210" symbol="task_08210" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="8211" symbol="task_08211" version="0" task="task_0" level="win:Informational" template="task_04107Args"/>
+     <event value="8212" symbol="task_08212" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="8213" symbol="task_08213" version="0" task="task_0" level="win:Informational" template="task_04097Args"/>
+     <event value="8214" symbol="task_08214" version="0" task="task_0" level="win:Informational" template="task_04097Args"/>
+     <event value="8215" symbol="task_08215" version="0" task="task_0" level="win:Informational" template="task_04097Args"/>
+     <event value="8216" symbol="task_08216" version="0" task="task_0" level="win:Informational" template="task_04097Args"/>
+     <event value="8217" symbol="task_08217" version="0" task="task_0" level="win:Informational" template="task_04108Args"/>
+     <event value="8218" symbol="task_08218" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8219" symbol="task_08219" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8220" symbol="task_08220" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8221" symbol="task_08221" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="8222" symbol="task_08222" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="8223" symbol="task_08223" version="0" task="task_0" level="win:Informational" template="task_04107Args"/>
+     <event value="8224" symbol="task_08224" version="0" task="task_0" level="win:Informational" template="task_04107Args"/>
+     <event value="8225" symbol="task_08225" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8226" symbol="task_08226" version="0" task="task_0" level="win:Informational" template="task_04108Args"/>
+     <event value="8227" symbol="task_08227" version="0" task="task_0" level="win:Informational" template="task_04108Args"/>
+     <event value="8228" symbol="task_08228" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8230" symbol="task_08230" version="0" task="task_0" level="win:Error" template="task_04114Args"/>
+     <event value="8231" symbol="task_08231" version="0" task="task_0" level="win:Warning" template="task_04101Args"/>
+     <event value="8232" symbol="task_08232" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="8233" symbol="task_08233" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="8234" symbol="task_08234" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="8235" symbol="task_08235" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="8236" symbol="task_08236" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8237" symbol="task_08237" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="8238" symbol="task_08238" version="0" task="task_0" level="win:Informational" template="task_04107Args"/>
+     <event value="8239" symbol="task_08239" version="0" task="task_0" level="win:Informational" template="task_04108Args"/>
+     <event value="8240" symbol="task_08240" version="0" task="task_0" level="win:Warning" template="task_04108Args"/>
+     <event value="8241" symbol="task_08241" version="0" task="task_0" level="win:Informational" template="task_04108Args"/>
+     <event value="8242" symbol="task_08242" version="0" task="task_0" level="win:Warning" template="task_04107Args"/>
+     <event value="8243" symbol="task_08243" version="0" task="task_0" level="win:Warning" template="task_04141Args"/>
+     <event value="8244" symbol="task_08244" version="0" task="task_0" level="win:Warning" template="task_04136Args"/>
+     <event value="8245" symbol="task_08245" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="8246" symbol="task_08246" version="0" task="task_0" level="win:Warning" template="task_04141Args"/>
+     <event value="8247" symbol="task_08247" version="0" task="task_0" level="win:Error" template="task_04141Args"/>
+     <event value="8248" symbol="task_08248" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="8249" symbol="task_08249" version="0" task="task_0" level="win:Warning" template="task_04107Args"/>
+     <event value="8250" symbol="task_08250" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="8251" symbol="task_08251" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="8252" symbol="task_08252" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="8253" symbol="task_08253" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="8254" symbol="task_08254" version="0" task="task_0" level="win:Warning" template="task_04107Args"/>
+     <event value="8255" symbol="task_08255" version="0" task="task_0" level="win:Informational" template="task_04108Args"/>
+     <event value="8256" symbol="task_08256" version="0" task="task_0" level="win:Informational" template="task_04108Args"/>
+     <event value="8257" symbol="task_08257" version="0" task="task_0" level="win:Informational" template="task_04108Args"/>
+     <event value="8258" symbol="task_08258" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="8259" symbol="task_08259" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="8260" symbol="task_08260" version="0" task="task_0" level="win:Informational" template="task_04108Args"/>
+     <event value="8261" symbol="task_08261" version="0" task="task_0" level="win:Informational" template="task_04101Args"/>
+     <event value="10240" symbol="task_010240" version="0" task="task_0" level="win:Informational" template="task_010240Args"/>
+     <event value="10241" symbol="task_010241" version="0" task="task_0" level="win:Informational" template="task_010241Args"/>
+     <event value="10242" symbol="task_010242" version="0" task="task_0" level="win:Informational" template="task_010242Args"/>
+     <event value="10243" symbol="task_010243" version="0" task="task_0" level="win:Warning" template="task_010243Args"/>
+     <event value="10244" symbol="task_010244" version="0" task="task_0" level="win:Informational" template="task_010244Args"/>
+     <event value="10245" symbol="task_010245" version="0" task="task_0" level="win:Informational" template="task_010245Args"/>
+     <event value="10246" symbol="task_010246" version="0" task="task_0" level="win:Informational" template="task_010246Args"/>
+     <event value="10247" symbol="task_010247" version="0" task="task_0" level="win:Informational" template="task_010247Args"/>
+     <event value="10248" symbol="task_010248" version="0" task="task_0" level="win:Informational" template="task_010248Args"/>
+     <event value="10249" symbol="task_010249" version="0" task="task_0" level="win:Informational" template="task_010249Args"/>
+     <event value="10250" symbol="task_010250" version="0" task="task_0" level="win:Informational" template="task_010250Args"/>
+     <event value="10251" symbol="task_010251" version="0" task="task_0" level="win:Informational" template="task_010251Args"/>
+     <event value="10252" symbol="task_010252" version="0" task="task_0" level="win:Informational" template="task_010252Args"/>
+     <event value="10253" symbol="task_010253" version="0" task="task_0" level="win:Warning" template="task_010253Args"/>
+     <event value="10254" symbol="task_010254" version="0" task="task_0" level="win:Warning" template="task_010254Args"/>
+     <event value="10255" symbol="task_010255" version="0" task="task_0" level="win:Warning" template="task_010254Args"/>
+     <event value="12800" symbol="TaskfürDatendeduplizierungsbereinigung" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Error" keywords="Reporting" template="TaskfürDatendeduplizierungsdeoptimierungArgs"/>
+     <event value="12801" symbol="TaskfürDatendeduplizierungsbereinigung12801" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Informational" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12801Args"/>
+     <event value="12802" symbol="TaskfürDatendeduplizierungsbereinigung12802" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Informational" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12802Args"/>
+     <event value="12803" symbol="TaskfürDatendeduplizierungsbereinigung12803" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Informational" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12803Args"/>
+     <event value="12804" symbol="TaskfürDatendeduplizierungsbereinigung12804" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Warning" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12803Args"/>
+     <event value="12805" symbol="TaskfürDatendeduplizierungsbereinigung12805" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Error" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12803Args"/>
+     <event value="12806" symbol="TaskfürDatendeduplizierungsbereinigung12806" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Error" keywords="Reporting" template="TaskfürDatendeduplizierungsdeoptimierung6145Args"/>
+     <event value="12810" symbol="TaskfürDatendeduplizierungsbereinigung12810" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Informational" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12810Args"/>
+     <event value="12817" symbol="TaskfürDatendeduplizierungsbereinigung12817" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Informational" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12817Args"/>
+     <event value="12818" symbol="TaskfürDatendeduplizierungsbereinigung12818" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Warning" keywords="Reporting" template="TaskfürDatendeduplizierungsdeoptimierungArgs"/>
+     <event value="12819" symbol="TaskfürDatendeduplizierungsbereinigung12819" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Warning" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12819Args"/>
+     <event value="12820" symbol="TaskfürDatendeduplizierungsbereinigung12820" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Error" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12820Args"/>
+     <event value="12822" symbol="TaskfürDatendeduplizierungsbereinigung12822" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Warning" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12820Args"/>
+     <event value="12823" symbol="TaskfürDatendeduplizierungsbereinigung12823" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Warning" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12820Args"/>
+     <event value="12824" symbol="TaskfürDatendeduplizierungsbereinigung12824" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Warning" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12820Args"/>
+     <event value="12825" symbol="TaskfürDatendeduplizierungsbereinigung12825" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Warning" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12820Args"/>
+     <event value="12826" symbol="TaskfürDatendeduplizierungsbereinigung12826" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Warning" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12810Args"/>
+     <event value="12827" symbol="TaskfürDatendeduplizierungsbereinigung12827" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Informational" keywords="Reporting" template="TaskfürDatendeduplizierungsdeoptimierungArgs"/>
+     <event value="12828" symbol="TaskfürDatendeduplizierungsbereinigung12828" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Informational" keywords="Reporting" template="TaskfürDatendeduplizierungsdeoptimierungArgs"/>
+     <event value="12829" symbol="TaskfürDatendeduplizierungsbereinigung12829" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Informational" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12829Args"/>
+     <event value="12830" symbol="TaskfürDatendeduplizierungsbereinigung12830" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Error" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12820Args"/>
+     <event value="12831" symbol="TaskfürDatendeduplizierungsbereinigung12831" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Informational" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12831Args"/>
+     <event value="12832" symbol="task_012832" version="0" task="task_0" level="win:Informational" template="task_012832Args"/>
+     <event value="12833" symbol="TaskfürDatendeduplizierungsbereinigung12833" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Error" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12820Args"/>
+     <event value="12834" symbol="TaskfürDatendeduplizierungsbereinigung12834" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Warning" keywords="Reporting" template="TaskfürDatendeduplizierungsdeoptimierungArgs"/>
+     <event value="12835" symbol="TaskfürDatendeduplizierungsbereinigung12835" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Warning" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12819Args"/>
+     <event value="12836" symbol="TaskfürDatendeduplizierungsbereinigung12836" version="0" task="TaskfürDatendeduplizierungsbereinigung" level="win:Informational" keywords="Reporting" template="TaskfürDatendeduplizierungsbereinigung12836Args"/>
+     <event value="12837" symbol="task_012837" version="0" task="task_0" level="win:Error" template="task_012837Args"/>
+     <event value="20480" symbol="ÖffnendesDatenstromsausdemDatenstromspeicherStarten" version="0" task="ÖffnendesDatenstromsausdemDatenstromspeicher" opcode="win:Starten" level="win:Informational" keywords="KmStreamStore" template="ÖffnendesDatenstromsausdemDatenstromspeicherStartenArgs"/>
+     <event value="20481" symbol="ÖffnendesDatenstromsausdemDatenstromspeicherBeenden" version="0" task="ÖffnendesDatenstromsausdemDatenstromspeicher" opcode="win:Beenden" level="win:Informational" keywords="KmStreamStore" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20482" symbol="VorbereitenfürAuslagerungs_E/AStarten" version="0" task="VorbereitenfürAuslagerungs_E/A" opcode="win:Starten" level="win:Informational" keywords="KmStreamStore" template="VorbereitenfürAuslagerungs_E/AStartenArgs"/>
+     <event value="20483" symbol="VorbereitenfürAuslagerungs_E/ABeenden" version="0" task="VorbereitenfürAuslagerungs_E/A" opcode="win:Beenden" level="win:Informational" keywords="KmStreamStore" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20484" symbol="LesenderDatenstromzuordnungStarten_V1" version="1" task="LesenderDatenstromzuordnung" opcode="win:Starten" level="win:Informational" keywords="KmStreamStore" template="AnhefteneinerDatenstromzuordnungStartenArgs"/>
+     <event value="20485" symbol="LesenderDatenstromzuordnungBeenden" version="0" task="LesenderDatenstromzuordnung" opcode="win:Beenden" level="win:Informational" keywords="KmStreamStore" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20486" symbol="LesenvonBlöckenStarten" version="0" task="LesenvonBlöcken" opcode="win:Starten" level="win:Informational" keywords="KmStreamStore" template="LesenvonBlöckenStartenArgs"/>
+     <event value="20487" symbol="LesenvonBlöckenBeenden" version="0" task="LesenvonBlöcken" opcode="win:Beenden" level="win:Informational" keywords="KmStreamStore" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20488" symbol="BerechnenderPrüfsummeStarten" version="0" task="BerechnenderPrüfsumme" opcode="win:Starten" level="win:Informational" keywords="KmChunkStore" template="BerechnenderPrüfsummeStartenArgs"/>
+     <event value="20489" symbol="BerechnenderPrüfsummeBeenden" version="0" task="BerechnenderPrüfsumme" opcode="win:Beenden" level="win:Informational" keywords="KmChunkStore" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20490" symbol="AbrufeneinesContainereintragsStarten" version="0" task="AbrufeneinesContainereintrags" opcode="win:Starten" level="win:Informational" keywords="KmChunkStore" template="AbrufeneinesContainereintragsStartenArgs"/>
+     <event value="20491" symbol="AbrufeneinesContainereintragsBeenden" version="0" task="AbrufeneinesContainereintrags" opcode="win:Beenden" level="win:Informational" keywords="KmChunkStore" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20492" symbol="AbrufendermaximalenGenerationfürdenContainerStarten" version="0" task="AbrufendermaximalenGenerationfürdenContainer" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="AbrufeneinesContainereintragsStartenArgs"/>
+     <event value="20493" symbol="AbrufendermaximalenGenerationfürdenContainerBeenden" version="0" task="AbrufendermaximalenGenerationfürdenContainer" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20494" symbol="ÖffnendesBlockcontainersStarten" version="0" task="ÖffnendesBlockcontainers" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesBlockcontainersStartenArgs"/>
+     <event value="20495" symbol="ÖffnendesBlockcontainersBeenden" version="0" task="ÖffnendesBlockcontainers" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20496" symbol="InitialisierenderUmleitungstabelledesBlockcontainersStarten" version="0" task="InitialisierenderUmleitungstabelledesBlockcontainers" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="AbrufeneinesContainereintragsStartenArgs"/>
+     <event value="20497" symbol="InitialisierenderUmleitungstabelledesBlockcontainersBeenden" version="0" task="InitialisierenderUmleitungstabelledesBlockcontainers" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20498" symbol="ÜberprüfenderUmleitungstabelledesBlockcontainersStarten" version="0" task="ÜberprüfenderUmleitungstabelledesBlockcontainers" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="AbrufeneinesContainereintragsStartenArgs"/>
+     <event value="20499" symbol="ÜberprüfenderUmleitungstabelledesBlockcontainersBeenden" version="0" task="ÜberprüfenderUmleitungstabelledesBlockcontainers" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20500" symbol="AbrufendergültigenDatenlängefürdenBlockcontainerStarten" version="0" task="AbrufendergültigenDatenlängefürdenBlockcontainer" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="AbrufeneinesContainereintragsStartenArgs"/>
+     <event value="20501" symbol="AbrufendergültigenDatenlängefürdenBlockcontainerBeenden" version="0" task="AbrufendergültigenDatenlängefürdenBlockcontainer" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20502" symbol="AbrufendesOffsetsausderUmleitungstabelledesBlockcontainersStarten" version="0" task="AbrufendesOffsetsausderUmleitungstabelledesBlockcontainers" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="AbrufeneinesContainereintragsStartenArgs"/>
+     <event value="20503" symbol="AbrufendesOffsetsausderUmleitungstabelledesBlockcontainersBeenden" version="0" task="AbrufendesOffsetsausderUmleitungstabelledesBlockcontainers" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20504" symbol="LeseneinesBlockcontainerblocksStarten" version="0" task="LeseneinesBlockcontainerblocks" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="LeseneinesBlockcontainerblocksStartenArgs"/>
+     <event value="20505" symbol="LeseneinesBlockcontainerblocksBeenden" version="0" task="LeseneinesBlockcontainerblocks" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20506" symbol="LöschenvonInhaltdesBlockcontainerblocksStarten" version="0" task="LöschenvonInhaltdesBlockcontainerblocks" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="LöschenvonInhaltdesBlockcontainerblocksStartenArgs"/>
+     <event value="20507" symbol="LöschenvonInhaltdesBlockcontainerblocksBeenden" version="0" task="LöschenvonInhaltdesBlockcontainerblocks" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20508" symbol="KopiereneinesBlocksStarten" version="0" task="KopiereneinesBlocks" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="KopiereneinesBlocksStartenArgs"/>
+     <event value="20509" symbol="KopiereneinesBlocksBeenden" version="0" task="KopiereneinesBlocks" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20510" symbol="InitialisierendesDateicacheStarten" version="0" task="InitialisierendesDateicache" opcode="win:Starten" level="win:Informational" keywords="KmFileCache" template="InitialisierendesDateicacheStartenArgs"/>
+     <event value="20511" symbol="InitialisierendesDateicacheBeenden" version="0" task="InitialisierendesDateicache" opcode="win:Beenden" level="win:Informational" keywords="KmFileCache" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20512" symbol="ZuordnenvonDateicachedatenStarten" version="0" task="ZuordnenvonDateicachedaten" opcode="win:Starten" level="win:Informational" keywords="KmFileCache" template="ZuordnenvonDateicachedatenStartenArgs"/>
+     <event value="20513" symbol="ZuordnenvonDateicachedatenBeenden" version="0" task="ZuordnenvonDateicachedaten" opcode="win:Beenden" level="win:Informational" keywords="KmFileCache" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20514" symbol="LoslösenvonDateicachedatenStarten" version="0" task="LoslösenvonDateicachedaten" opcode="win:Starten" level="win:Informational" keywords="KmFileCache" template="LoslösenvonDateicachedatenStartenArgs"/>
+     <event value="20515" symbol="LoslösenvonDateicachedatenBeenden" version="0" task="LoslösenvonDateicachedaten" opcode="win:Beenden" level="win:Informational" keywords="KmFileCache" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20516" symbol="KopierenvonDateicachedatenStarten" version="0" task="KopierenvonDateicachedaten" opcode="win:Starten" level="win:Informational" keywords="KmFileCache" template="ZuordnenvonDateicachedatenStartenArgs"/>
+     <event value="20517" symbol="KopierenvonDateicachedatenBeenden" version="0" task="KopierenvonDateicachedaten" opcode="win:Beenden" level="win:Informational" keywords="KmFileCache" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20518" symbol="LesenvonzugrundeliegendenDateicachedatenStarten" version="0" task="LesenvonzugrundeliegendenDateicachedaten" opcode="win:Starten" level="win:Informational" keywords="KmFileCache" template="LesenvonzugrundeliegendenDateicachedatenStartenArgs"/>
+     <event value="20519" symbol="LesenvonzugrundeliegendenDateicachedatenBeenden" version="0" task="LesenvonzugrundeliegendenDateicachedaten" opcode="win:Beenden" level="win:Informational" keywords="KmFileCache" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20520" symbol="AbrufenderGrößederBlockcontainerdateiStarten" version="0" task="AbrufenderGrößederBlockcontainerdatei" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="AbrufeneinesContainereintragsStartenArgs"/>
+     <event value="20521" symbol="AbrufenderGrößederBlockcontainerdateiBeenden" version="0" task="AbrufenderGrößederBlockcontainerdatei" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20522" symbol="AnhefteneinerDatenstromzuordnungStarten" version="0" task="AnhefteneinerDatenstromzuordnung" opcode="win:Starten" level="win:Informational" keywords="KmStreamStore" template="AnhefteneinerDatenstromzuordnungStartenArgs"/>
+     <event value="20523" symbol="AnhefteneinerDatenstromzuordnungBeenden" version="0" task="AnhefteneinerDatenstromzuordnung" opcode="win:Beenden" level="win:Informational" keywords="KmStreamStore" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20524" symbol="AnhefteneinesBlockcontainersStarten" version="0" task="AnhefteneinesBlockcontainers" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="AbrufeneinesContainereintragsStartenArgs"/>
+     <event value="20525" symbol="AnhefteneinesBlockcontainersBeenden" version="0" task="AnhefteneinesBlockcontainers" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20526" symbol="AnhefteneinesBlocksStarten" version="0" task="AnhefteneinesBlocks" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="AbrufeneinesContainereintragsStartenArgs"/>
+     <event value="20527" symbol="AnhefteneinesBlocksBeenden" version="0" task="AnhefteneinesBlocks" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20528" symbol="ZuordnendesPoolpuffersStarten" version="0" task="ZuordnendesPoolpuffers" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="ZuordnendesPoolpuffersStartenArgs"/>
+     <event value="20529" symbol="ZuordnendesPoolpuffersBeenden" version="0" task="ZuordnendesPoolpuffers" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20530" symbol="LoslöseneinesBlockcontainersStarten" version="0" task="LoslöseneinesBlockcontainers" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="AbrufeneinesContainereintragsStartenArgs"/>
+     <event value="20531" symbol="LoslöseneinesBlockcontainersBeenden" version="0" task="LoslöseneinesBlockcontainers" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="20532" symbol="LoslöseneinesBlocksStarten" version="0" task="LoslöseneinesBlocks" opcode="win:Starten" level="win:Informational" keywords="KmChunkContainer" template="AbrufeneinesContainereintragsStartenArgs"/>
+     <event value="20533" symbol="LoslöseneinesBlocksBeenden" version="0" task="LoslöseneinesBlocks" opcode="win:Beenden" level="win:Informational" keywords="KmChunkContainer" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24616" symbol="VerarbeiteneinesDeduplizierungslesevorgangsStarten" version="0" task="VerarbeiteneinesDeduplizierungslesevorgangs" opcode="win:Starten" level="win:Informational" keywords="Filter" template="VerarbeiteneinesDeduplizierungslesevorgangsStartenArgs"/>
+     <event value="24617" symbol="VerarbeiteneinesDeduplizierungslesevorgangsBeenden" version="0" task="VerarbeiteneinesDeduplizierungslesevorgangs" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24618" symbol="AbrufendeserstenDatenstrom_ZuordnungseintragsStarten" version="0" task="AbrufendeserstenDatenstrom_Zuordnungseintrags" opcode="win:Starten" level="win:Informational" keywords="Filter" template="AbrufendeserstenDatenstrom_ZuordnungseintragsStartenArgs"/>
+     <event value="24619" symbol="AbrufendeserstenDatenstrom_ZuordnungseintragsBeenden" version="0" task="AbrufendeserstenDatenstrom_Zuordnungseintrags" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24620" symbol="LesenvonBlockmetadatenStarten" version="0" task="LesenvonBlockmetadaten" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonBlockmetadatenStartenArgs"/>
+     <event value="24621" symbol="LesenvonBlockmetadatenBeenden" version="0" task="LesenvonBlockmetadaten" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24622" symbol="LesenvonBlockdatenStarten" version="0" task="LesenvonBlockdaten" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonBlockdatenStartenArgs"/>
+     <event value="24623" symbol="LesenvonBlockdatenBeenden" version="0" task="LesenvonBlockdaten" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24624" symbol="Verweisenauf"TlCache"_DatenStarten" version="0" task="Verweisenauf"TlCache"_Daten" opcode="win:Starten" level="win:Informational" keywords="Filter" template="Verweisenauf"TlCache"_DatenStartenArgs"/>
+     <event value="24625" symbol="Verweisenauf"TlCache"_DatenBeenden" version="0" task="Verweisenauf"TlCache"_Daten" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24626" symbol="LesenvonBlockdatenausdemDatenstromspeicherStarten" version="0" task="LesenvonBlockdatenausdemDatenstromspeicher" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonBlockdatenausdemDatenstromspeicherStartenArgs"/>
+     <event value="24627" symbol="LesenvonBlockdatenausdemDatenstromspeicherBeenden" version="0" task="LesenvonBlockdatenausdemDatenstromspeicher" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24628" symbol="AssemblierenvonBlockdatenStarten" version="0" task="AssemblierenvonBlockdaten" opcode="win:Starten" level="win:Informational" keywords="Filter"/>
+     <event value="24629" symbol="AssemblierenvonBlockdatenBeenden" version="0" task="AssemblierenvonBlockdaten" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24630" symbol="DekomprimierenvonBlockdatenStarten" version="0" task="DekomprimierenvonBlockdaten" opcode="win:Starten" level="win:Informational" keywords="Filter"/>
+     <event value="24631" symbol="DekomprimierenvonBlockdatenBeenden" version="0" task="DekomprimierenvonBlockdaten" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24632" symbol="KopierenvonBlockdatenindenBenutzerpufferStarten" version="0" task="KopierenvonBlockdatenindenBenutzerpuffer" opcode="win:Starten" level="win:Informational" keywords="Filter" template="KopierenvonBlockdatenindenBenutzerpufferStartenArgs"/>
+     <event value="24633" symbol="KopierenvonBlockdatenindenBenutzerpufferBeenden" version="0" task="KopierenvonBlockdatenindenBenutzerpuffer" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24634" symbol="EinfügenvonBlockdatenindenTICacheStarten" version="0" task="EinfügenvonBlockdatenindenTICache" opcode="win:Starten" level="win:Informational" keywords="Filter"/>
+     <event value="24635" symbol="EinfügenvonBlockdatenindenTICacheBeenden" version="0" task="EinfügenvonBlockdatenindenTICache" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24636" symbol="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStarten" version="0" task="LesenvonDatenausderAnalysepunktdateifürDeduplizierung" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs"/>
+     <event value="24637" symbol="LesenvonDatenausderAnalysepunktdateifürDeduplizierungBeenden" version="0" task="LesenvonDatenausderAnalysepunktdateifürDeduplizierung" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24638" symbol="VorbereitenderDatenstromzuordnungStarten" version="0" task="VorbereitenderDatenstromzuordnung" opcode="win:Starten" level="win:Informational" keywords="Filter" template="VorbereitenderDatenstromzuordnungStartenArgs"/>
+     <event value="24639" symbol="VorbereitenderDatenstromzuordnungBeenden" version="0" task="VorbereitenderDatenstromzuordnung" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24640" symbol="PatchenvonunverändertenBereichenStarten" version="0" task="PatchenvonunverändertenBereichen" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs"/>
+     <event value="24641" symbol="PatchenvonunverändertenBereichenBeenden" version="0" task="PatchenvonunverändertenBereichen" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24642" symbol="SchreibenvonDatenindieDeduplizierungsdateiStarten" version="0" task="SchreibenvonDatenindieDeduplizierungsdatei" opcode="win:Starten" level="win:Informational" keywords="Filter" template="SchreibenvonDatenindieDeduplizierungsdateiStartenArgs"/>
+     <event value="24643" symbol="SchreibenvonDatenindieDeduplizierungsdateiBeenden" version="0" task="SchreibenvonDatenindieDeduplizierungsdatei" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24644" symbol="EinreiheneinerSchreibanforderungfürdieDeduplizierungsdateiindieWarteschlangeStarten" version="0" task="EinreiheneinerSchreibanforderungfürdieDeduplizierungsdateiindieWarteschlange" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs"/>
+     <event value="24645" symbol="EinreiheneinerSchreibanforderungfürdieDeduplizierungsdateiindieWarteschlangeBeenden" version="0" task="EinreiheneinerSchreibanforderungfürdieDeduplizierungsdateiindieWarteschlange" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24646" symbol="KopierenvonSchreibaufgabenfürdieDeduplizierungsdateiStarten" version="0" task="KopierenvonSchreibaufgabenfürdieDeduplizierungsdatei" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs"/>
+     <event value="24647" symbol="KopierenvonSchreibaufgabenfürdieDeduplizierungsdateiBeenden" version="0" task="KopierenvonSchreibaufgabenfürdieDeduplizierungsdatei" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24648" symbol="AusführendesvollständigenerneutenAbrufensfürdieDeduplizierungsdateiStarten" version="0" task="AusführendesvollständigenerneutenAbrufensfürdieDeduplizierungsdatei" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs"/>
+     <event value="24649" symbol="AusführendesvollständigenerneutenAbrufensfürdieDeduplizierungsdateiBeenden" version="0" task="AusführendesvollständigenerneutenAbrufensfürdieDeduplizierungsdatei" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24650" symbol="AusführeneinesteilweisenerneutenAbrufensfürdieDeduplizierungsdateiStarten" version="0" task="AusführeneinesteilweisenerneutenAbrufensfürdieDeduplizierungsdatei" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs"/>
+     <event value="24651" symbol="AusführeneinesteilweisenerneutenAbrufensfürdieDeduplizierungsdateiBeenden" version="0" task="AusführeneinesteilweisenerneutenAbrufensfürdieDeduplizierungsdatei" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24652" symbol="AusführenvonScheinauslagerungslesenfürdieDeduplizierungsdateiStarten" version="0" task="AusführenvonScheinauslagerungslesenfürdieDeduplizierungsdatei" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs"/>
+     <event value="24653" symbol="AusführenvonScheinauslagerungslesenfürdieDeduplizierungsdateiBeenden" version="0" task="AusführenvonScheinauslagerungslesenfürdieDeduplizierungsdatei" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24654" symbol="LesenvonordnungsgemäßenDatenzumerneutenAbrufenderDateiStarten" version="0" task="LesenvonordnungsgemäßenDatenzumerneutenAbrufenderDatei" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs"/>
+     <event value="24655" symbol="LesenvonordnungsgemäßenDatenzumerneutenAbrufenderDateiBeenden" version="0" task="LesenvonordnungsgemäßenDatenzumerneutenAbrufenderDatei" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24656" symbol="NormalesSchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdateiStarten" version="0" task="NormalesSchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdatei" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs"/>
+     <event value="24657" symbol="NormalesSchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdateiBeenden" version="0" task="NormalesSchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdatei" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24658" symbol="SchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdateiüberAuslagerungStarten" version="0" task="SchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdateiüberAuslagerung" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs"/>
+     <event value="24659" symbol="SchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdateiüberAuslagerungBeenden" version="0" task="SchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdateiüberAuslagerung" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24660" symbol="ErneutesAbrufenderDeduplizierungsdateiüberAuslagerungs_E/AStarten" version="0" task="ErneutesAbrufenderDeduplizierungsdateiüberAuslagerungs_E/A" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs"/>
+     <event value="24661" symbol="ErneutesAbrufenderDeduplizierungsdateiüberAuslagerungs_E/ABeenden" version="0" task="ErneutesAbrufenderDeduplizierungsdateiüberAuslagerungs_E/A" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24662" symbol="LeerenderDeduplizierungsdateiausdemArbeitsspeichernachdemerneutenAbrufenStarten" version="0" task="LeerenderDeduplizierungsdateiausdemArbeitsspeichernachdemerneutenAbrufen" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LeerenderDeduplizierungsdateiausdemArbeitsspeichernachdemerneutenAbrufenStartenArgs"/>
+     <event value="24663" symbol="LeerenderDeduplizierungsdateiausdemArbeitsspeichernachdemerneutenAbrufenBeenden" version="0" task="LeerenderDeduplizierungsdateiausdemArbeitsspeichernachdemerneutenAbrufen" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24664" symbol="AktualisierendesBitmustersnachdemerneutenAbrufenderDeduplizierungsdateiStarten" version="0" task="AktualisierendesBitmustersnachdemerneutenAbrufenderDeduplizierungsdatei" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs"/>
+     <event value="24665" symbol="AktualisierendesBitmustersnachdemerneutenAbrufenderDeduplizierungsdateiBeenden" version="0" task="AktualisierendesBitmustersnachdemerneutenAbrufenderDeduplizierungsdatei" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24666" symbol="LöscheneinesDeduplizierungsanalysepunktsStarten" version="0" task="LöscheneinesDeduplizierungsanalysepunkts" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LeerenderDeduplizierungsdateiausdemArbeitsspeichernachdemerneutenAbrufenStartenArgs"/>
+     <event value="24667" symbol="LöscheneinesDeduplizierungsanalysepunktsBeenden" version="0" task="LöscheneinesDeduplizierungsanalysepunkts" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24668" symbol="ÖffnenderDeduplizierungsdateiStarten" version="0" task="ÖffnenderDeduplizierungsdatei" opcode="win:Starten" level="win:Informational" keywords="Filter" template="ÖffnenderDeduplizierungsdateiStartenArgs"/>
+     <event value="24669" symbol="ÖffnenderDeduplizierungsdateiBeenden" version="0" task="ÖffnenderDeduplizierungsdatei" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24670" symbol="SperrendesBenutzerpuffersfüreinenLesevorgangStarten" version="0" task="SperrendesBenutzerpuffersfüreinenLesevorgang" opcode="win:Starten" level="win:Informational" keywords="Filter"/>
+     <event value="24671" symbol="SperrendesBenutzerpuffersfüreinenLesevorgangBeenden" version="0" task="SperrendesBenutzerpuffersfüreinenLesevorgang" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24672" symbol="AbrufenderSystemadressefürdieMDLStarten" version="0" task="AbrufenderSystemadressefürdieMDL" opcode="win:Starten" level="win:Informational" keywords="Filter"/>
+     <event value="24673" symbol="AbrufenderSystemadressefürdieMDLBeenden" version="0" task="AbrufenderSystemadressefürdieMDL" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24674" symbol="LesenderunverändertenDeduplizierungsdateiStarten" version="0" task="LesenderunverändertenDeduplizierungsdatei" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs"/>
+     <event value="24675" symbol="LesenderunverändertenDeduplizierungsdateiBeenden" version="0" task="LesenderunverändertenDeduplizierungsdatei" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24676" symbol="AbrufendesBereichszustandsStarten" version="0" task="AbrufendesBereichszustands" opcode="win:Starten" level="win:Informational" keywords="Filter" template="AbrufendesBereichszustandsStartenArgs"/>
+     <event value="24677" symbol="AbrufendesBereichszustandsBeenden" version="0" task="AbrufendesBereichszustands" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24678" symbol="AbrufendesBlockkörpersStarten" version="0" task="AbrufendesBlockkörpers" opcode="win:Starten" level="win:Informational" keywords="KmStreamStore"/>
+     <event value="24679" symbol="AbrufendesBlockkörpersBeenden" version="0" task="AbrufendesBlockkörpers" opcode="win:Beenden" level="win:Informational" keywords="KmStreamStore" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24680" symbol="FreigebendesBlocksStarten" version="0" task="FreigebendesBlocks" opcode="win:Starten" level="win:Informational" keywords="KmStreamStore"/>
+     <event value="24681" symbol="FreigebendesBlocksBeenden" version="0" task="FreigebendesBlocks" opcode="win:Beenden" level="win:Informational" keywords="KmStreamStore" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24682" symbol="FreigebendesDekomprimierensdesBlockkontextsStarten" version="0" task="FreigebendesDekomprimierensdesBlockkontexts" opcode="win:Starten" level="win:Informational" keywords="Filter" template="FreigebendesDekomprimierensdesBlockkontextsStartenArgs"/>
+     <event value="24683" symbol="FreigebendesDekomprimierensdesBlockkontextsBeenden" version="0" task="FreigebendesDekomprimierensdesBlockkontexts" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24684" symbol="VorbereitendesDekomprimierensdesBlockkontextsStarten" version="0" task="VorbereitendesDekomprimierensdesBlockkontexts" opcode="win:Starten" level="win:Informational" keywords="Filter" template="FreigebendesDekomprimierensdesBlockkontextsStartenArgs"/>
+     <event value="24685" symbol="VorbereitendesDekomprimierensdesBlockkontextsBeenden" version="0" task="VorbereitendesDekomprimierensdesBlockkontexts" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24686" symbol="KopierenvonDatenindenkomprimiertenPufferStarten" version="0" task="KopierenvonDatenindenkomprimiertenPuffer" opcode="win:Starten" level="win:Informational" keywords="Filter" template="FreigebendesDekomprimierensdesBlockkontextsStartenArgs"/>
+     <event value="24687" symbol="KopierenvonDatenindenkomprimiertenPufferBeenden" version="0" task="KopierenvonDatenindenkomprimiertenPuffer" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24688" symbol="FreigebenvonDatenausdemTL_CacheStarten" version="0" task="FreigebenvonDatenausdemTL_Cache" opcode="win:Starten" level="win:Informational" keywords="Filter"/>
+     <event value="24689" symbol="FreigebenvonDatenausdemTL_CacheBeenden" version="0" task="FreigebenvonDatenausdemTL_Cache" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+     <event value="24690" symbol="EinreihenvonasynchronerLeseanforderungindieWarteschlangeStarten" version="0" task="EinreihenvonasynchronerLeseanforderungindieWarteschlange" opcode="win:Starten" level="win:Informational" keywords="Filter" template="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs"/>
+     <event value="24691" symbol="EinreihenvonasynchronerLeseanforderungindieWarteschlangeBeenden" version="0" task="EinreihenvonasynchronerLeseanforderungindieWarteschlange" opcode="win:Beenden" level="win:Informational" keywords="Filter" template="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="Param1" inType="win:UnicodeString"/>
+      <data name="Param2" inType="win:UnicodeString"/>
+      <data name="Context" inType="win:UnicodeString"/>
+      <data name="DebugInfo" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04097Args">
+      <data name="Param1" inType="win:UnicodeString"/>
+      <data name="Param2" inType="win:UnicodeString"/>
+      <data name="Param3" inType="win:UnicodeString"/>
+      <data name="Param4" inType="win:UnicodeString"/>
+      <data name="Context" inType="win:UnicodeString"/>
+      <data name="DebugInfo" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04101Args">
+      <data name="Context" inType="win:UnicodeString"/>
+      <data name="DebugInfo" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04103Args">
+      <data name="JobType" inType="win:UInt32" map="JobType"/>
+      <data name="Param1" inType="win:UnicodeString"/>
+      <data name="Context" inType="win:UnicodeString"/>
+      <data name="DebugInfo" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04107Args">
+      <data name="Param1" inType="win:UnicodeString"/>
+      <data name="Param2" inType="win:UnicodeString"/>
+      <data name="Param3" inType="win:UnicodeString"/>
+      <data name="Context" inType="win:UnicodeString"/>
+      <data name="DebugInfo" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04108Args">
+      <data name="Param1" inType="win:UnicodeString"/>
+      <data name="Context" inType="win:UnicodeString"/>
+      <data name="DebugInfo" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04114Args">
+      <data name="Param1" inType="win:UnicodeString"/>
+      <data name="Param2" inType="win:UnicodeString"/>
+      <data name="Param3" inType="win:UnicodeString"/>
+      <data name="Param4" inType="win:UnicodeString"/>
+      <data name="Param5" inType="win:UnicodeString"/>
+      <data name="Context" inType="win:UnicodeString"/>
+      <data name="DebugInfo" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04136Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="Param1" inType="win:UnicodeString"/>
+      <data name="Param2" inType="win:UnicodeString"/>
+      <data name="Context" inType="win:UnicodeString"/>
+      <data name="DebugInfo" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04140Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="Param1" inType="win:UnicodeString"/>
+      <data name="Param2" inType="win:UnicodeString"/>
+      <data name="Param3" inType="win:UnicodeString"/>
+      <data name="Context" inType="win:UnicodeString"/>
+      <data name="DebugInfo" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04141Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="Param1" inType="win:UnicodeString"/>
+      <data name="Context" inType="win:UnicodeString"/>
+      <data name="DebugInfo" inType="win:UnicodeString"/>
+     </template>
+     <template tid="TaskfürDatendeduplizierungsdeoptimierungArgs">
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="ParentDirectoryId" inType="win:UInt64"/>
+      <data name="FileId" inType="win:UInt64"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="ParentDirectoryPath" inType="win:UnicodeString"/>
+      <data name="FileName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+     </template>
+     <template tid="TaskfürDatendeduplizierungsdeoptimierung6145Args">
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="TaskfürDatendeduplizierungsdeoptimierung6146Args">
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="ErorrCount" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_06148Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="AvailableMemoryMB" inType="win:UInt32"/>
+      <data name="AvailableCores" inType="win:UInt32"/>
+      <data name="Instances" inType="win:UInt32"/>
+      <data name="ReadersPerInstance" inType="win:UInt32"/>
+      <data name="JobPriorityType" inType="win:UInt32" map="JobPriorityType"/>
+      <data name="IoThrottle" inType="win:UInt32"/>
+     </template>
+     <template tid="task_06149Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="AvailableMemoryMB" inType="win:UInt32"/>
+      <data name="AvailableCores" inType="win:UInt32"/>
+      <data name="JobPriorityType" inType="win:UInt32"/>
+      <data name="Full" inType="win:Boolean"/>
+      <data name="VolumeFreeSpaceMB" inType="win:UInt64"/>
+     </template>
+     <template tid="task_06150Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="AvailableMemoryMB" inType="win:UInt32"/>
+      <data name="JobPriorityType" inType="win:UInt32"/>
+      <data name="Full" inType="win:Boolean"/>
+      <data name="ReadOnly" inType="win:Boolean"/>
+     </template>
+     <template tid="task_06151Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="AvailableMemoryMB" inType="win:UInt32"/>
+      <data name="JobPriorityType" inType="win:UInt32"/>
+     </template>
+     <template tid="task_06153Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="SavingsRate" inType="win:UInt32"/>
+      <data name="SavedSpaceMB" inType="win:UInt64"/>
+      <data name="VolumeUsedSpaceMB" inType="win:UInt64"/>
+      <data name="VolumeFreeSpaceMB" inType="win:UInt64"/>
+      <data name="OptimizedFileCount" inType="win:UInt64"/>
+      <data name="InPolicyFileCount" inType="win:UInt64"/>
+      <data name="JobProcessedSpaceMB" inType="win:UInt64"/>
+      <data name="JobOptimizedBytesMB" inType="win:UInt64"/>
+      <data name="JobChurnBytesMB" inType="win:UInt64"/>
+      <data name="JobSkippedBytesMB" inType="win:UInt64"/>
+      <data name="PriorityMode" inType="win:Boolean"/>
+      <data name="JobElapsedTime" inType="win:UInt32"/>
+      <data name="JobThroughput" inType="win:Float"/>
+      <data name="ChurnThroughput" inType="win:Float"/>
+      <data name="FinalJobStage" inType="win:UInt32"/>
+      <data name="FileSystem" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_06154Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="Full" inType="win:Boolean"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="FreedupSpaceMB" inType="win:UInt64"/>
+      <data name="VolumeFreeSpaceMB" inType="win:UInt64"/>
+      <data name="JobElapsedTime" inType="win:UInt64"/>
+      <data name="JobThroughput" inType="win:Float"/>
+      <data name="CompactedDataContainerCount" inType="win:UInt64"/>
+      <data name="CompactedStreamContainerCount" inType="win:UInt64"/>
+      <data name="ReclaimedFileLeakCount" inType="win:UInt64"/>
+      <data name="FileSystem" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_06155Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_06156Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="Full" inType="win:Boolean"/>
+      <data name="ReadOnly" inType="win:Boolean"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="TotalCorruptionCount" inType="win:UInt64"/>
+      <data name="FixableCorruptionCount" inType="win:UInt64"/>
+      <data name="FileSystem" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_06157Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="UnOptimizedFiles" inType="win:UInt64"/>
+      <data name="ProcessedSizeMB" inType="win:UInt64"/>
+      <data name="JobElapsedTime" inType="win:UInt64"/>
+      <data name="JobThroughput" inType="win:Float"/>
+      <data name="SkippedFiles" inType="win:UInt64"/>
+      <data name="FailedFiles" inType="win:UInt64"/>
+      <data name="FileSystem" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_06158Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="SystemMemoryPercent" inType="win:UInt32"/>
+      <data name="JobPriorityType" inType="win:UInt32"/>
+      <data name="JobScheduleMode" inType="win:UInt32" map="JobScheduleMode"/>
+     </template>
+     <template tid="task_06159Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="SystemMemoryPercent" inType="win:UInt32"/>
+      <data name="JobPriorityType" inType="win:UInt32"/>
+      <data name="JobScheduleMode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_06172Args">
+      <data name="FilePath" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_06173Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="AvailableMemoryMB" inType="win:UInt32"/>
+      <data name="AvailableCores" inType="win:UInt32"/>
+      <data name="Instances" inType="win:UInt32"/>
+      <data name="ReadersPerInstance" inType="win:UInt32"/>
+      <data name="JobPriorityType" inType="win:UInt32"/>
+      <data name="IoThrottle" inType="win:UInt32"/>
+      <data name="FileId" inType="win:UInt64"/>
+     </template>
+     <template tid="task_06174Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="AvailableMemoryMb" inType="win:UInt32"/>
+      <data name="AvailableThreads" inType="win:UInt32"/>
+      <data name="JobPriorityType" inType="win:UInt32"/>
+     </template>
+     <template tid="task_06175Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="SavingsRate" inType="win:UInt32"/>
+      <data name="SavedSpaceMb" inType="win:UInt64"/>
+      <data name="VolumeUsedSpaceMb" inType="win:UInt64"/>
+      <data name="VolumeFreeSpaceMb" inType="win:UInt64"/>
+      <data name="OptimizedFileCount" inType="win:UInt64"/>
+      <data name="ChunkLookups" inType="win:UInt64"/>
+      <data name="InsertedChunks" inType="win:UInt64"/>
+      <data name="InsertedChunksLogicalMb" inType="win:UInt64"/>
+      <data name="InsertedChunksPhysicalMb" inType="win:UInt64"/>
+      <data name="CommittedStreamMaps" inType="win:UInt64"/>
+      <data name="CommittedStreamMapEntries" inType="win:UInt64"/>
+      <data name="CommittedStreamBytesLogicalMb" inType="win:UInt64"/>
+      <data name="RetrievedChunkBytesPhysicalMb" inType="win:UInt64"/>
+      <data name="RetrievedStreamBytesLogicalMb" inType="win:UInt64"/>
+      <data name="DataPortTime" inType="win:UInt32"/>
+      <data name="JobElapsedTime" inType="win:UInt32"/>
+      <data name="IngressThroughput" inType="win:Float"/>
+      <data name="EgressThroughput" inType="win:Float"/>
+      <data name="FinalJobStage" inType="win:UInt32"/>
+      <data name="FileSystem" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_06178Args">
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="SavingsRate" inType="win:UInt32"/>
+      <data name="SavedSpaceMb" inType="win:UInt64"/>
+      <data name="VolumeUsedSpaceMb" inType="win:UInt64"/>
+      <data name="VolumeFreeSpaceMb" inType="win:UInt64"/>
+      <data name="OptimizedFileCount" inType="win:UInt64"/>
+      <data name="ChunkLookups" inType="win:UInt64"/>
+      <data name="InsertedChunks" inType="win:UInt64"/>
+      <data name="InsertedChunksLogicalMb" inType="win:UInt64"/>
+      <data name="InsertedChunksPhysicalMb" inType="win:UInt64"/>
+      <data name="CommittedStreamMaps" inType="win:UInt64"/>
+      <data name="CommittedStreamMapEntries" inType="win:UInt64"/>
+      <data name="CommittedStreamBytesLogicalMb" inType="win:UInt64"/>
+      <data name="RetrievedChunkBytesPhysicalMb" inType="win:UInt64"/>
+      <data name="RetrievedStreamBytesLogicalMb" inType="win:UInt64"/>
+      <data name="DataPortTime" inType="win:UInt32"/>
+      <data name="JobElapsedTime" inType="win:UInt32"/>
+      <data name="IngressThroughput" inType="win:Float"/>
+      <data name="EgressThroughput" inType="win:Float"/>
+      <data name="FileSystem" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_010240Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="MinimumMemoryMB" inType="win:UInt32"/>
+      <data name="MaximumMemoryMB" inType="win:UInt32"/>
+      <data name="MinimumDiskMB" inType="win:UInt32"/>
+      <data name="MaximumCores" inType="win:UInt32"/>
+     </template>
+     <template tid="task_010241Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_010242Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="ReconciledContainerCount" inType="win:UInt32"/>
+      <data name="UnreconciledContainerCount" inType="win:UInt32"/>
+      <data name="CatchUpReferences" inType="win:UInt32"/>
+      <data name="CatchUpMergedContainerCount" inType="win:UInt32"/>
+      <data name="ReconciledReferences" inType="win:UInt32"/>
+      <data name="ReconciledMergedContainerCount" inType="win:UInt32"/>
+      <data name="CrossReconciledReferences" inType="win:UInt32"/>
+      <data name="CrossReconciledMergedContainerCount" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="SkippedContainerCount" inType="win:UInt32"/>
+     </template>
+     <template tid="task_010243Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="SystemMemoryPercent" inType="win:UInt32"/>
+      <data name="MinimumMemoryMB" inType="win:UInt32"/>
+      <data name="MaximumMemoryMB" inType="win:UInt32"/>
+      <data name="AvailableMemoryMB" inType="win:UInt32"/>
+     </template>
+     <template tid="task_010244Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="UnoptimizedBytes" inType="win:UInt64"/>
+      <data name="MftCacheSizeMB" inType="win:UInt64"/>
+      <data name="GrovelerLogBufferMB" inType="win:UInt64"/>
+      <data name="DirectoryTableMB" inType="win:UInt64"/>
+      <data name="DirectoryNamesMB" inType="win:UInt64"/>
+      <data name="IndexMinEntries" inType="win:UInt64"/>
+      <data name="IndexMaxEntries" inType="win:UInt64"/>
+      <data name="IndexMinRequiredMB" inType="win:UInt32"/>
+      <data name="IndexMaxRequiredMB" inType="win:UInt32"/>
+      <data name="PipelineMinMB" inType="win:UInt32"/>
+      <data name="PipelineMaxMB" inType="win:UInt32"/>
+      <data name="ChunkStoreBatchBufferMemoryMB" inType="win:UInt32"/>
+      <data name="ChunkStoreContainerListMB" inType="win:UInt32"/>
+      <data name="CorruptionTableMemoryMB" inType="win:UInt32"/>
+      <data name="HotspotRequiredMB" inType="win:UInt32"/>
+     </template>
+     <template tid="task_010245Args">
+      <data name="SkipReason" inType="win:UInt32"/>
+      <data name="FileId" inType="win:UInt64"/>
+      <data name="FileOffset" inType="win:UInt64"/>
+     </template>
+     <template tid="task_010246Args">
+      <data name="Operation" inType="win:UInt32" map="OptimizationFilterOperation"/>
+      <data name="NumberOfRetries" inType="win:UInt32"/>
+      <data name="FileId" inType="win:UInt64"/>
+     </template>
+     <template tid="task_010247Args">
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="Description" inType="win:UnicodeString"/>
+      <data name="SourceFile" inType="win:UnicodeString"/>
+      <data name="LineNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="task_010248Args">
+      <data name="FileId" inType="win:UInt64"/>
+      <data name="FilePath" inType="win:UnicodeString"/>
+      <data name="FileSize" inType="win:UInt64"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="TotalRanges" inType="win:UInt32"/>
+      <data name="SkippedRanges" inType="win:UInt32"/>
+      <data name="AbortedRanges" inType="win:UInt32"/>
+      <data name="CommittedRanges" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="Description" inType="win:UnicodeString"/>
+      <data name="SourceFile" inType="win:UnicodeString"/>
+      <data name="LineNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="task_010249Args">
+      <data name="FileId" inType="win:UInt64"/>
+      <data name="FilePath" inType="win:UnicodeString"/>
+      <data name="RangeOffset" inType="win:UInt64"/>
+      <data name="RangeLength" inType="win:UInt64"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="Description" inType="win:UnicodeString"/>
+      <data name="SourceFile" inType="win:UnicodeString"/>
+      <data name="LineNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="task_010250Args">
+      <data name="MaxSize" inType="win:UInt64"/>
+      <data name="CurrentSize" inType="win:UInt64"/>
+      <data name="RemainingRanges" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="Description" inType="win:UnicodeString"/>
+      <data name="SourceFile" inType="win:UnicodeString"/>
+      <data name="LineNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="task_010251Args">
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="MaximumSizeMB" inType="win:UInt32"/>
+      <data name="AllocationSizeMB" inType="win:UInt32"/>
+     </template>
+     <template tid="task_010252Args">
+      <data name="JobType" inType="win:UInt32"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="UnoptimizedBytes" inType="win:UInt64"/>
+      <data name="IndexMinEntries" inType="win:UInt64"/>
+      <data name="IndexMaxEntries" inType="win:UInt64"/>
+      <data name="IndexMinRequiredMb" inType="win:UInt32"/>
+      <data name="IndexMaxRequiredMb" inType="win:UInt32"/>
+      <data name="PipelineMinMb" inType="win:UInt32"/>
+      <data name="PipelineMaxMb" inType="win:UInt32"/>
+      <data name="ChunkStoreBatchBufferMemoryMb" inType="win:UInt32"/>
+      <data name="ChunkStoreContainerListMb" inType="win:UInt32"/>
+      <data name="CorruptionTableMemoryMb" inType="win:UInt32"/>
+      <data name="HotspotRequiredMb" inType="win:UInt32"/>
+     </template>
+     <template tid="task_010253Args">
+      <data name="FileName" inType="win:UnicodeString"/>
+      <data name="FileId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_010254Args">
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="ReconciliationMemoryPercentage" inType="win:UInt32"/>
+     </template>
+     <template tid="TaskfürDatendeduplizierungsbereinigung12801Args">
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="DetectionTime" inType="win:FILETIME"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="Fixed" inType="win:Boolean"/>
+      <data name="FileId" inType="win:UInt64"/>
+      <data name="FilePath" inType="win:UnicodeString"/>
+      <data name="CorruptionType" inType="win:UInt32"/>
+     </template>
+     <template tid="TaskfürDatendeduplizierungsbereinigung12802Args">
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="DetectionTime" inType="win:FILETIME"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="Fixed" inType="win:Boolean"/>
+      <data name="FileId" inType="win:UInt64"/>
+      <data name="FilePath" inType="win:UnicodeString"/>
+      <data name="ContainerId" inType="win:UInt32"/>
+      <data name="FileLocator" inType="win:UInt32"/>
+      <data name="RecordLocator" inType="win:UInt32"/>
+      <data name="CorruptionType" inType="win:UInt32" map="CorruptionType"/>
+      <data name="ItemType" inType="win:UInt32"/>
+      <data name="ChunkStoreType" inType="win:UInt32" map="ChunkStoreType"/>
+      <data name="HasRedundantCopy" inType="win:Boolean"/>
+     </template>
+     <template tid="TaskfürDatendeduplizierungsbereinigung12803Args">
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="DetectedCorruptionCount" inType="win:UInt32"/>
+      <data name="FixedCorruptionCount" inType="win:UInt32"/>
+      <data name="CorruptedUserFileCount" inType="win:UInt32"/>
+      <data name="FixedUserFileCount" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="ReadOnlyMode" inType="win:Boolean"/>
+     </template>
+     <template tid="TaskfürDatendeduplizierungsbereinigung12810Args">
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="DetectedCorruptionCount" inType="win:UInt32"/>
+      <data name="FixableCorruptionCount" inType="win:UInt32"/>
+      <data name="CorruptedUserFileCount" inType="win:UInt32"/>
+      <data name="FixableUserFileCount" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="ReadOnlyMode" inType="win:Boolean"/>
+     </template>
+     <template tid="TaskfürDatendeduplizierungsbereinigung12817Args">
+      <data name="Full" inType="win:Boolean"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="TotalChunkStoreCorruptedItemCount" inType="win:UInt32"/>
+      <data name="DataChunkStoreCorruptedItemCount" inType="win:UInt32"/>
+      <data name="DataChunkStoreCorruptedContainerCount" inType="win:UInt32"/>
+      <data name="DataChunkStoreFixedItemCount" inType="win:UInt32"/>
+      <data name="StreamMapChunkStoreCorruptedItemCount" inType="win:UInt32"/>
+      <data name="StreamMapChunkStoreCorruptedContainerCount" inType="win:UInt32"/>
+      <data name="StreamMapChunkStoreFixedItemCount" inType="win:UInt32"/>
+      <data name="HotspotChunkStoreCorruptedItemCount" inType="win:UInt32"/>
+      <data name="HotspotChunkStoreCorruptedContainerCount" inType="win:UInt32"/>
+      <data name="HotspotChunkStoreFixedItemCount" inType="win:UInt32"/>
+      <data name="CorruptedReparsePointCount" inType="win:UInt32"/>
+      <data name="RecallBitmapCorruptedItemCount" inType="win:UInt32"/>
+      <data name="RecallBitmapFixedItemCount" inType="win:UInt32"/>
+      <data name="TotalCorruptedItemCount" inType="win:UInt32"/>
+      <data name="CorruptedUserFileCount" inType="win:UInt32"/>
+      <data name="FixedUserFileCount" inType="win:UInt32"/>
+     </template>
+     <template tid="TaskfürDatendeduplizierungsbereinigung12819Args">
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="Threshold" inType="win:UInt32"/>
+     </template>
+     <template tid="TaskfürDatendeduplizierungsbereinigung12820Args">
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+     </template>
+     <template tid="TaskfürDatendeduplizierungsbereinigung12829Args">
+      <data name="Full" inType="win:Boolean"/>
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="TotalChunkStoreCorruptedItemCount" inType="win:UInt32"/>
+      <data name="DataChunkStoreCorruptedItemCount" inType="win:UInt32"/>
+      <data name="DataChunkStoreCorruptedContainerCount" inType="win:UInt32"/>
+      <data name="DataChunkStoreFixableItemCount" inType="win:UInt32"/>
+      <data name="StreamMapChunkStoreCorruptedItemCount" inType="win:UInt32"/>
+      <data name="StreamMapChunkStoreCorruptedContainerCount" inType="win:UInt32"/>
+      <data name="StreamMapChunkStoreFixableItemCount" inType="win:UInt32"/>
+      <data name="HotspotChunkStoreCorruptedItemCount" inType="win:UInt32"/>
+      <data name="HotspotChunkStoreCorruptedContainerCount" inType="win:UInt32"/>
+      <data name="HotspotChunkStoreFixableItemCount" inType="win:UInt32"/>
+      <data name="CorruptedReparsePointCount" inType="win:UInt32"/>
+      <data name="RecallBitmapCorruptedItemCount" inType="win:UInt32"/>
+      <data name="RecallBitmapFixedItemCount" inType="win:UInt32"/>
+      <data name="TotalCorruptedItemCount" inType="win:UInt32"/>
+      <data name="CorruptedUserFileCount" inType="win:UInt32"/>
+      <data name="FixableUserFileCount" inType="win:UInt32"/>
+     </template>
+     <template tid="TaskfürDatendeduplizierungsbereinigung12831Args">
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="DetectionTime" inType="win:FILETIME"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="Fixed" inType="win:Boolean"/>
+      <data name="ContainerId" inType="win:UInt32" map="FileName"/>
+      <data name="CorruptionType" inType="win:UInt32"/>
+      <data name="ItemType" inType="win:UInt32"/>
+      <data name="HasRedundantCopy" inType="win:Boolean"/>
+     </template>
+     <template tid="task_012832Args">
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="DetectionTime" inType="win:FILETIME"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="Fixed" inType="win:Boolean"/>
+      <data name="FileId" inType="win:UInt64"/>
+      <data name="FilePath" inType="win:UnicodeString"/>
+      <data name="ContainerId" inType="win:UInt32"/>
+      <data name="FileLocator" inType="win:UInt32"/>
+      <data name="RecordLocator" inType="win:UInt32"/>
+      <data name="CorruptionType" inType="win:UInt32"/>
+      <data name="ItemType" inType="win:UInt32" map="ChunkStoreItemType"/>
+      <data name="ChunkStoreType" inType="win:UInt32"/>
+      <data name="HasRedundantCopy" inType="win:Boolean"/>
+     </template>
+     <template tid="TaskfürDatendeduplizierungsbereinigung12836Args">
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="DetectionTime" inType="win:FILETIME"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="Fixed" inType="win:Boolean"/>
+      <data name="FileId" inType="win:UInt64"/>
+      <data name="FilePath" inType="win:UnicodeString"/>
+      <data name="TargetFileId" inType="win:UInt64"/>
+      <data name="TargetFilePath" inType="win:UnicodeString"/>
+      <data name="CorruptionType" inType="win:UInt32"/>
+     </template>
+     <template tid="task_012837Args">
+      <data name="JobInstanceId" inType="win:GUID"/>
+      <data name="DetectionTime" inType="win:FILETIME"/>
+      <data name="VolumeGuidPath" inType="win:UnicodeString"/>
+      <data name="VolumeDisplayName" inType="win:UnicodeString"/>
+      <data name="Fixed" inType="win:Boolean"/>
+      <data name="FileId" inType="win:UInt64"/>
+      <data name="FilePath" inType="win:UnicodeString"/>
+      <data name="ContainerId" inType="win:UInt32"/>
+      <data name="FileLocator" inType="win:UInt32"/>
+      <data name="RecordLocator" inType="win:UInt32"/>
+      <data name="CorruptionType" inType="win:UInt32"/>
+      <data name="ItemType" inType="win:UInt32"/>
+      <data name="ChunkStoreType" inType="win:UInt32"/>
+      <data name="HasRedundantCopy" inType="win:Boolean"/>
+     </template>
+     <template tid="ÖffnendesDatenstromsausdemDatenstromspeicherStartenArgs">
+      <data name="StartingChunkId" inType="win:Binary"/>
+      <data name="FileId" inType="win:UInt64"/>
+     </template>
+     <template tid="ÖffnendesDatenstromsausdemDatenstromspeicherBeendenArgs">
+      <data name="CompletionStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="VorbereitenfürAuslagerungs_E/AStartenArgs">
+      <data name="Stream" inType="win:Pointer"/>
+      <data name="FileId" inType="win:UInt64"/>
+     </template>
+     <template tid="LesenvonBlöckenStartenArgs">
+      <data name="Stream" inType="win:Pointer"/>
+      <data name="FileId" inType="win:UInt64"/>
+      <data name="IoType" inType="win:UInt32" map="ChunkStoreIoType"/>
+      <data name="FirstRequestChunkId" inType="win:Binary"/>
+      <data name="NextRequest" inType="win:Pointer"/>
+     </template>
+     <template tid="BerechnenderPrüfsummeStartenArgs">
+      <data name="ItemType" inType="win:UInt32"/>
+      <data name="DataSize" inType="win:UInt32"/>
+     </template>
+     <template tid="AbrufeneinesContainereintragsStartenArgs">
+      <data name="ContainerId" inType="win:UInt32"/>
+      <data name="Generation" inType="win:UInt32"/>
+     </template>
+     <template tid="ÖffnendesBlockcontainersStartenArgs">
+      <data name="ContainerId" inType="win:UInt32"/>
+      <data name="Generation" inType="win:UInt32"/>
+      <data name="RootPathLength" inType="win:UInt16"/>
+      <data name="RootPath" inType="win:UnicodeString" length="RootPathLength"/>
+     </template>
+     <template tid="LeseneinesBlockcontainerblocksStartenArgs">
+      <data name="ContainerId" inType="win:UInt32"/>
+      <data name="Generation" inType="win:UInt32"/>
+      <data name="Buffer" inType="win:Pointer"/>
+      <data name="Offset" inType="win:UInt32"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="IoType" inType="win:UInt32"/>
+      <data name="Synchronous" inType="win:Boolean"/>
+     </template>
+     <template tid="LöschenvonInhaltdesBlockcontainerblocksStartenArgs">
+      <data name="Block" inType="win:Pointer"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="BufferType" inType="win:UInt32" map="ChunkStoreBufferType"/>
+     </template>
+     <template tid="KopiereneinesBlocksStartenArgs">
+      <data name="Block" inType="win:Pointer"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="BufferType" inType="win:UInt32"/>
+      <data name="BufferOffset" inType="win:UInt32"/>
+      <data name="OutputCapacity" inType="win:UInt32"/>
+     </template>
+     <template tid="InitialisierendesDateicacheStartenArgs">
+      <data name="UnderlyingFileObject" inType="win:Pointer"/>
+      <data name="CacheFileSize" inType="win:UInt64"/>
+     </template>
+     <template tid="ZuordnenvonDateicachedatenStartenArgs">
+      <data name="CacheFileObject" inType="win:Pointer"/>
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+     </template>
+     <template tid="LoslösenvonDateicachedatenStartenArgs">
+      <data name="Bcb" inType="win:Pointer"/>
+     </template>
+     <template tid="LesenvonzugrundeliegendenDateicachedatenStartenArgs">
+      <data name="CacheFileObject" inType="win:Pointer"/>
+      <data name="UnderlyingFileObject" inType="win:Pointer"/>
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+     </template>
+     <template tid="AnhefteneinerDatenstromzuordnungStartenArgs">
+      <data name="Stream" inType="win:Pointer"/>
+      <data name="FileId" inType="win:UInt64"/>
+      <data name="StartIndex" inType="win:UInt32"/>
+      <data name="EntryCount" inType="win:UInt32"/>
+     </template>
+     <template tid="ZuordnendesPoolpuffersStartenArgs">
+      <data name="ReadLength" inType="win:UInt32"/>
+      <data name="PagingIo" inType="win:Boolean"/>
+     </template>
+     <template tid="VerarbeiteneinesDeduplizierungslesevorgangsStartenArgs">
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="IoType" inType="win:UInt32" map="FltIoType"/>
+     </template>
+     <template tid="AbrufendeserstenDatenstrom_ZuordnungseintragsStartenArgs">
+      <data name="TlCache" inType="win:Pointer"/>
+      <data name="Stream" inType="win:Pointer"/>
+      <data name="RequestStartOffset" inType="win:UInt64"/>
+      <data name="RequestEndOffset" inType="win:UInt64"/>
+     </template>
+     <template tid="LesenvonBlockmetadatenStartenArgs">
+      <data name="Stream" inType="win:Pointer"/>
+      <data name="CurrentOffset" inType="win:UInt64"/>
+      <data name="AdjFinalOffset" inType="win:UInt64"/>
+      <data name="FirstChunkByteOffset" inType="win:UInt64"/>
+      <data name="ChunkRequestsEndOffset" inType="win:UInt64"/>
+      <data name="TlCache" inType="win:Pointer"/>
+     </template>
+     <template tid="LesenvonBlockdatenStartenArgs">
+      <data name="TlCache" inType="win:Pointer"/>
+      <data name="Stream" inType="win:Pointer"/>
+      <data name="StreamMapEntryCount" inType="win:UInt32"/>
+      <data name="RequestStartOffset" inType="win:UInt64"/>
+      <data name="RequestEndOffset" inType="win:UInt64"/>
+     </template>
+     <template tid="VerweisenaufTlCache_DatenStartenArgs">
+      <data name="TlCache" inType="win:Pointer"/>
+      <data name="Stream" inType="win:Pointer"/>
+     </template>
+     <template tid="LesenvonBlockdatenausdemDatenstromspeicherStartenArgs">
+      <data name="Stream" inType="win:Pointer"/>
+     </template>
+     <template tid="KopierenvonBlockdatenindenBenutzerpufferStartenArgs">
+      <data name="BytesCopied" inType="win:UInt32"/>
+     </template>
+     <template tid="LesenvonDatenausderAnalysepunktdateifürDeduplizierungStartenArgs">
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+     </template>
+     <template tid="VorbereitenderDatenstromzuordnungStartenArgs">
+      <data name="StreamContext" inType="win:Pointer"/>
+     </template>
+     <template tid="SchreibenvonDatenindieDeduplizierungsdateiStartenArgs">
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="IoType" inType="win:UInt32"/>
+     </template>
+     <template tid="LeerenderDeduplizierungsdateiausdemArbeitsspeichernachdemerneutenAbrufenStartenArgs">
+      <data name="FileObject" inType="win:Pointer"/>
+     </template>
+     <template tid="ÖffnenderDeduplizierungsdateiStartenArgs">
+      <data name="FilePath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="AbrufendesBereichszustandsStartenArgs">
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt64"/>
+     </template>
+     <template tid="FreigebendesDekomprimierensdesBlockkontextsStartenArgs">
+      <data name="BufferSize" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Reporting" value="Reporting"/>
+    <string id="keyword_Filter" value="Filter"/>
+    <string id="keyword_KmStreamStore" value="KmStreamStore"/>
+    <string id="keyword_KmChunkStore" value="KmChunkStore"/>
+    <string id="keyword_KmChunkContainer" value="KmChunkContainer"/>
+    <string id="keyword_KmFileCache" value="KmFileCache"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_OptimierungstaskderDatendeduplizierung" value="OptimierungstaskderDatendeduplizierung"/>
+    <string id="task_TaskfürDatendeduplizierungsbereinigung" value="TaskfürDatendeduplizierungsbereinigung"/>
+    <string id="task_TaskfürDatendeduplizierungsdeoptimierung" value="TaskfürDatendeduplizierungsdeoptimierung"/>
+    <string id="task_ÖffnendesDatenstromsausdemDatenstromspeicher" value="ÖffnendesDatenstromsausdemDatenstromspeicher"/>
+    <string id="task_VorbereitenfürAuslagerungs_E/A" value="VorbereitenfürAuslagerungs_E/A"/>
+    <string id="task_LesenderDatenstromzuordnung" value="LesenderDatenstromzuordnung"/>
+    <string id="task_LesenvonBlöcken" value="LesenvonBlöcken"/>
+    <string id="task_BerechnenderPrüfsumme" value="BerechnenderPrüfsumme"/>
+    <string id="task_AbrufeneinesContainereintrags" value="AbrufeneinesContainereintrags"/>
+    <string id="task_AbrufendermaximalenGenerationfürdenContainer" value="AbrufendermaximalenGenerationfürdenContainer"/>
+    <string id="task_ÖffnendesBlockcontainers" value="ÖffnendesBlockcontainers"/>
+    <string id="task_InitialisierenderUmleitungstabelledesBlockcontainers" value="InitialisierenderUmleitungstabelledesBlockcontainers"/>
+    <string id="task_ÜberprüfenderUmleitungstabelledesBlockcontainers" value="ÜberprüfenderUmleitungstabelledesBlockcontainers"/>
+    <string id="task_AbrufendergültigenDatenlängefürdenBlockcontainer" value="AbrufendergültigenDatenlängefürdenBlockcontainer"/>
+    <string id="task_AbrufendesOffsetsausderUmleitungstabelledesBlockcontainers" value="AbrufendesOffsetsausderUmleitungstabelledesBlockcontainers"/>
+    <string id="task_LeseneinesBlockcontainerblocks" value="LeseneinesBlockcontainerblocks"/>
+    <string id="task_LöschenvonInhaltdesBlockcontainerblocks" value="LöschenvonInhaltdesBlockcontainerblocks"/>
+    <string id="task_KopiereneinesBlocks" value="KopiereneinesBlocks"/>
+    <string id="task_InitialisierendesDateicache" value="InitialisierendesDateicache"/>
+    <string id="task_ZuordnenvonDateicachedaten" value="ZuordnenvonDateicachedaten"/>
+    <string id="task_LoslösenvonDateicachedaten" value="LoslösenvonDateicachedaten"/>
+    <string id="task_KopierenvonDateicachedaten" value="KopierenvonDateicachedaten"/>
+    <string id="task_LesenvonzugrundeliegendenDateicachedaten" value="LesenvonzugrundeliegendenDateicachedaten"/>
+    <string id="task_AbrufenderGrößederBlockcontainerdatei" value="AbrufenderGrößederBlockcontainerdatei"/>
+    <string id="task_AnhefteneinerDatenstromzuordnung" value="AnhefteneinerDatenstromzuordnung"/>
+    <string id="task_AnhefteneinesBlockcontainers" value="AnhefteneinesBlockcontainers"/>
+    <string id="task_AnhefteneinesBlocks" value="AnhefteneinesBlocks"/>
+    <string id="task_ZuordnendesPoolpuffers" value="ZuordnendesPoolpuffers"/>
+    <string id="task_LoslöseneinesBlockcontainers" value="LoslöseneinesBlockcontainers"/>
+    <string id="task_LoslöseneinesBlocks" value="LoslöseneinesBlocks"/>
+    <string id="task_VerarbeiteneinesDeduplizierungslesevorgangs" value="VerarbeiteneinesDeduplizierungslesevorgangs"/>
+    <string id="task_AbrufendeserstenDatenstrom_Zuordnungseintrags" value="AbrufendeserstenDatenstrom_Zuordnungseintrags"/>
+    <string id="task_LesenvonBlockmetadaten" value="LesenvonBlockmetadaten"/>
+    <string id="task_LesenvonBlockdaten" value="LesenvonBlockdaten"/>
+    <string id="task_Verweisenauf"TlCache"_Daten" value="Verweisenauf"TlCache"_Daten"/>
+    <string id="task_LesenvonBlockdatenausdemDatenstromspeicher" value="LesenvonBlockdatenausdemDatenstromspeicher"/>
+    <string id="task_AssemblierenvonBlockdaten" value="AssemblierenvonBlockdaten"/>
+    <string id="task_DekomprimierenvonBlockdaten" value="DekomprimierenvonBlockdaten"/>
+    <string id="task_KopierenvonBlockdatenindenBenutzerpuffer" value="KopierenvonBlockdatenindenBenutzerpuffer"/>
+    <string id="task_EinfügenvonBlockdatenindenTICache" value="EinfügenvonBlockdatenindenTICache"/>
+    <string id="task_LesenvonDatenausderAnalysepunktdateifürDeduplizierung" value="LesenvonDatenausderAnalysepunktdateifürDeduplizierung"/>
+    <string id="task_VorbereitenderDatenstromzuordnung" value="VorbereitenderDatenstromzuordnung"/>
+    <string id="task_PatchenvonunverändertenBereichen" value="PatchenvonunverändertenBereichen"/>
+    <string id="task_SchreibenvonDatenindieDeduplizierungsdatei" value="SchreibenvonDatenindieDeduplizierungsdatei"/>
+    <string id="task_EinreiheneinerSchreibanforderungfürdieDeduplizierungsdateiindieWarteschlange" value="EinreiheneinerSchreibanforderungfürdieDeduplizierungsdateiindieWarteschlange"/>
+    <string id="task_KopierenvonSchreibaufgabenfürdieDeduplizierungsdatei" value="KopierenvonSchreibaufgabenfürdieDeduplizierungsdatei"/>
+    <string id="task_AusführendesvollständigenerneutenAbrufensfürdieDeduplizierungsdatei" value="AusführendesvollständigenerneutenAbrufensfürdieDeduplizierungsdatei"/>
+    <string id="task_AusführeneinesteilweisenerneutenAbrufensfürdieDeduplizierungsdatei" value="AusführeneinesteilweisenerneutenAbrufensfürdieDeduplizierungsdatei"/>
+    <string id="task_AusführenvonScheinauslagerungslesenfürdieDeduplizierungsdatei" value="AusführenvonScheinauslagerungslesenfürdieDeduplizierungsdatei"/>
+    <string id="task_LesenvonordnungsgemäßenDatenzumerneutenAbrufenderDatei" value="LesenvonordnungsgemäßenDatenzumerneutenAbrufenderDatei"/>
+    <string id="task_NormalesSchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdatei" value="NormalesSchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdatei"/>
+    <string id="task_SchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdateiüberAuslagerung" value="SchreibenvonordnungsgemäßenDatenindieDatendeduplizierungsdateiüberAuslagerung"/>
+    <string id="task_ErneutesAbrufenderDeduplizierungsdateiüberAuslagerungs_E/A" value="ErneutesAbrufenderDeduplizierungsdateiüberAuslagerungs_E/A"/>
+    <string id="task_LeerenderDeduplizierungsdateiausdemArbeitsspeichernachdemerneutenAbrufen" value="LeerenderDeduplizierungsdateiausdemArbeitsspeichernachdemerneutenAbrufen"/>
+    <string id="task_AktualisierendesBitmustersnachdemerneutenAbrufenderDeduplizierungsdatei" value="AktualisierendesBitmustersnachdemerneutenAbrufenderDeduplizierungsdatei"/>
+    <string id="task_LöscheneinesDeduplizierungsanalysepunkts" value="LöscheneinesDeduplizierungsanalysepunkts"/>
+    <string id="task_ÖffnenderDeduplizierungsdatei" value="ÖffnenderDeduplizierungsdatei"/>
+    <string id="task_SperrendesBenutzerpuffersfüreinenLesevorgang" value="SperrendesBenutzerpuffersfüreinenLesevorgang"/>
+    <string id="task_AbrufenderSystemadressefürdieMDL" value="AbrufenderSystemadressefürdieMDL"/>
+    <string id="task_LesenderunverändertenDeduplizierungsdatei" value="LesenderunverändertenDeduplizierungsdatei"/>
+    <string id="task_AbrufendesBereichszustands" value="AbrufendesBereichszustands"/>
+    <string id="task_AbrufendesBlockkörpers" value="AbrufendesBlockkörpers"/>
+    <string id="task_FreigebendesBlocks" value="FreigebendesBlocks"/>
+    <string id="task_FreigebendesDekomprimierensdesBlockkontexts" value="FreigebendesDekomprimierensdesBlockkontexts"/>
+    <string id="task_VorbereitendesDekomprimierensdesBlockkontexts" value="VorbereitendesDekomprimierensdesBlockkontexts"/>
+    <string id="task_KopierenvonDatenindenkomprimiertenPuffer" value="KopierenvonDatenindenkomprimiertenPuffer"/>
+    <string id="task_FreigebenvonDatenausdemTL_Cache" value="FreigebenvonDatenausdemTL_Cache"/>
+    <string id="task_EinreihenvonasynchronerLeseanforderungindieWarteschlange" value="EinreihenvonasynchronerLeseanforderungindieWarteschlange"/>
+    <string id="map_JobTypeOptimierung" value="Optimierung"/>
+    <string id="map_JobTypeAutomatische Speicherbereinigung" value="Automatische Speicherbereinigung"/>
+    <string id="map_JobTypeBereinigung" value="Bereinigung"/>
+    <string id="map_JobTypeDeoptimierung" value="Deoptimierung"/>
+    <string id="map_JobTypeAnalyse" value="Analyse"/>
+    <string id="map_JobTypeDataPort" value="DataPort"/>
+    <string id="map_JobTypeOptimierung" value="Optimierung"/>
+    <string id="map_JobTypeAutomatische Speicherbereinigung" value="Automatische Speicherbereinigung"/>
+    <string id="map_JobTypeBereinigung" value="Bereinigung"/>
+    <string id="map_JobTypeDeoptimierung" value="Deoptimierung"/>
+    <string id="map_JobTypeAnalyse" value="Analyse"/>
+    <string id="map_JobTypeDataPort" value="DataPort"/>
+    <string id="map_JobPriorityTypeNiedrig" value="Niedrig"/>
+    <string id="map_JobPriorityTypeNormal" value="Normal"/>
+    <string id="map_JobPriorityTypeHoch" value="Hoch"/>
+    <string id="map_JobScheduleModeGeplant" value="Geplant"/>
+    <string id="map_JobScheduleModeManuell" value="Manuell"/>
+    <string id="map_OptimizationFilterOperationBenachrichtigungsoptimierung" value="Benachrichtigungsoptimierung"/>
+    <string id="map_OptimizationFilterOperationAnalysepunkt wird festgelegt..." value="Analysepunkt wird festgelegt..."/>
+    <string id="map_OptimizationFilterOperationDie Datei wird gekürzt..." value="Die Datei wird gekürzt..."/>
+    <string id="map_CorruptionTypeKein" value="Kein"/>
+    <string id="map_CorruptionTypeUngültige Prüfsumme" value="Ungültige Prüfsumme"/>
+    <string id="map_CorruptionTypeInkonsistente Metadaten" value="Inkonsistente Metadaten"/>
+    <string id="map_CorruptionTypeUngültige Headermetadaten" value="Ungültige Headermetadaten"/>
+    <string id="map_CorruptionTypeDatei fehlt" value="Datei fehlt"/>
+    <string id="map_CorruptionTypeUngültige Prüfsumme (Speichersubsystem)" value="Ungültige Prüfsumme (Speichersubsystem)"/>
+    <string id="map_CorruptionTypeBeschädigung (Speichersubsystem)" value="Beschädigung (Speichersubsystem)"/>
+    <string id="map_CorruptionTypeBeschädigung (Metadaten fehlen)" value="Beschädigung (Metadaten fehlen)"/>
+    <string id="map_CorruptionTypeMöglicher Datenverlust (doppelte Analysedaten)" value="Möglicher Datenverlust (doppelte Analysedaten)"/>
+    <string id="map_ChunkStoreTypeDaten" value="Daten"/>
+    <string id="map_ChunkStoreTypeDatenstromzuordnung" value="Datenstromzuordnung"/>
+    <string id="map_ChunkStoreTypeHotspot" value="Hotspot"/>
+    <string id="map_ChunkStoreTypeRückrufbitmap" value="Rückrufbitmap"/>
+    <string id="map_FileNameDatei mit primärer Dateiliste" value="Datei mit primärer Dateiliste"/>
+    <string id="map_FileNameDatei mit Sicherungsdateiliste" value="Datei mit Sicherungsdateiliste"/>
+    <string id="map_ChunkStoreItemTypeBlockheader" value="Blockheader"/>
+    <string id="map_ChunkStoreItemTypeBlockkörper" value="Blockkörper"/>
+    <string id="map_ChunkStoreItemTypeContainerheader" value="Containerheader"/>
+    <string id="map_ChunkStoreItemTypeTabelle für Containerumleitung" value="Tabelle für Containerumleitung"/>
+    <string id="map_ChunkStoreItemTypeHotspottabelle" value="Hotspottabelle"/>
+    <string id="map_ChunkStoreItemTypeLöschungsprotokollheader" value="Löschungsprotokollheader"/>
+    <string id="map_ChunkStoreItemTypeLöschungsprotokolleintrag" value="Löschungsprotokolleintrag"/>
+    <string id="map_ChunkStoreItemTypeAutomatische Speicherbereinigung - Bitmapheader" value="Automatische Speicherbereinigung - Bitmapheader"/>
+    <string id="map_ChunkStoreItemTypeAutomatische Speicherbereinigung - Bitmapeintrag" value="Automatische Speicherbereinigung - Bitmapeintrag"/>
+    <string id="map_ChunkStoreItemTypeHeader des Zusammenführungsprotokolls" value="Header des Zusammenführungsprotokolls"/>
+    <string id="map_ChunkStoreItemTypeEintrag des Zusammenführungsprotokolls" value="Eintrag des Zusammenführungsprotokolls"/>
+    <string id="map_ChunkStoreItemTypeContainerdatei" value="Containerdatei"/>
+    <string id="map_ChunkStoreItemTypeDatei mit Dateiliste" value="Datei mit Dateiliste"/>
+    <string id="map_ChunkStoreItemTypeDateilistenheader" value="Dateilistenheader"/>
+    <string id="map_ChunkStoreItemTypeDateilisteneintrag" value="Dateilisteneintrag"/>
+    <string id="map_ChunkStoreItemTypeRückrufbitmapheader" value="Rückrufbitmapheader"/>
+    <string id="map_ChunkStoreItemTypeRückrufbitmaptext" value="Rückrufbitmaptext"/>
+    <string id="map_ChunkStoreItemTypeRückrufbitmap fehlt" value="Rückrufbitmap fehlt"/>
+    <string id="map_ChunkStoreIoTypeCache" value="Cache"/>
+    <string id="map_ChunkStoreIoTypeKein Cache" value="Kein Cache"/>
+    <string id="map_ChunkStoreIoTypeAuslagern" value="Auslagern"/>
+    <string id="map_ChunkStoreIoTypeSpeicherzuordnung" value="Speicherzuordnung"/>
+    <string id="map_ChunkStoreIoTypeAuslagern der Speicherzuordnung" value="Auslagern der Speicherzuordnung"/>
+    <string id="map_ChunkStoreBufferTypeKein" value="Kein"/>
+    <string id="map_ChunkStoreBufferTypePool" value="Pool"/>
+    <string id="map_ChunkStoreBufferTypePoolAligned" value="PoolAligned"/>
+    <string id="map_ChunkStoreBufferTypeMDL" value="MDL"/>
+    <string id="map_ChunkStoreBufferTypeZuordnung" value="Zuordnung"/>
+    <string id="map_FltIoTypeZwischengespeichert" value="Zwischengespeichert"/>
+    <string id="map_FltIoTypeNonCached" value="NonCached"/>
+    <string id="map_FltIoTypeAusgelagert" value="Ausgelagert"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

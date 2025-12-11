@@ -1,0 +1,314 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-WindowsUpdateClient" guid="{945a8954-c147-4acd-923f-40c45405a658}" resourceFileName="Microsoft-Windows-WindowsUpdateClient" messageFileName="Microsoft-Windows-WindowsUpdateClient" symbol="MicrosoftWindowsWindowsUpdateClient" source="Xml" >
+    <keywords>
+     <keyword name="connection" message="$(string.keyword_connection)" mask="0x1"/>
+     <keyword name="detect" message="$(string.keyword_detect)" mask="0x2"/>
+     <keyword name="download" message="$(string.keyword_download)" mask="0x4"/>
+     <keyword name="install" message="$(string.keyword_install)" mask="0x8"/>
+     <keyword name="success" message="$(string.keyword_success)" mask="0x10"/>
+     <keyword name="failure" message="$(string.keyword_failure)" mask="0x20"/>
+     <keyword name="reboot" message="$(string.keyword_reboot)" mask="0x40"/>
+     <keyword name="state" message="$(string.keyword_state)" mask="0x80"/>
+     <keyword name="selfupdate" message="$(string.keyword_selfupdate)" mask="0x100"/>
+     <keyword name="service" message="$(string.keyword_service)" mask="0x200"/>
+     <keyword name="health" message="$(string.keyword_health)" mask="0x400"/>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x800"/>
+     <keyword name="sleepstudy" message="$(string.keyword_sleepstudy)" mask="0x1000"/>
+     <keyword name="started" message="$(string.keyword_started)" mask="0x2000"/>
+     <keyword name="Revert" message="$(string.keyword_Revert)" mask="0x4000"/>
+     <keyword name="uninstall" message="$(string.keyword_uninstall)" mask="0x8000"/>
+     <keyword name="Commit" message="$(string.keyword_Commit)" mask="0x10000"/>
+    </keywords>
+    <tasks>
+     <task name="WindowsUpdate_Agent" message="$(string.task_WindowsUpdate_Agent)" value="1">
+      <opcodes>
+       <opcode name="SelfUpdate" message="$(string.opcode_WindowsUpdate_AgentSelfUpdate)" value="10"/>
+       <opcode name="NachUpdatessuchen" message="$(string.opcode_WindowsUpdate_AgentNachUpdatessuchen)" value="11"/>
+       <opcode name="Download" message="$(string.opcode_WindowsUpdate_AgentDownload)" value="12"/>
+       <opcode name="Installation" message="$(string.opcode_WindowsUpdate_AgentInstallation)" value="13"/>
+       <opcode name="Deinstallation" message="$(string.opcode_WindowsUpdate_AgentDeinstallation)" value="14"/>
+       <opcode name="Statusänderung" message="$(string.opcode_WindowsUpdate_AgentStatusänderung)" value="16"/>
+       <opcode name="Statusänderung_1_17" message="$(string.opcode_WindowsUpdate_AgentStatusänderung_1_17)" value="17"/>
+       <opcode name="Zurücksetzen" message="$(string.opcode_WindowsUpdate_AgentZurücksetzen)" value="19"/>
+       <opcode name="Bestätigung" message="$(string.opcode_WindowsUpdate_AgentBestätigung)" value="20"/>
+      </opcodes>
+     </task>
+     <task name="AutomatischeUpdates" message="$(string.task_AutomatischeUpdates)" value="2">
+      <opcodes>
+       <opcode name="NachUpdatessuchen" message="$(string.opcode_AutomatischeUpdatesNachUpdatessuchen)" value="11"/>
+       <opcode name="Download" message="$(string.opcode_AutomatischeUpdatesDownload)" value="12"/>
+       <opcode name="Neustart" message="$(string.opcode_AutomatischeUpdatesNeustart)" value="15"/>
+       <opcode name="Andere" message="$(string.opcode_AutomatischeUpdatesAndere)" value="18"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="16" symbol="AutomatischeUpdatesNachUpdatessuchen" version="0" task="AutomatischeUpdates" opcode="NachUpdatessuchen" level="win:Warning" keywords="connection"/>
+     <event value="17" symbol="AutomatischeUpdatesDownload" version="0" task="AutomatischeUpdates" opcode="Download" level="win:Informational" keywords="download success" template="AutomatischeUpdatesDownloadArgs"/>
+     <event value="18" symbol="AutomatischeUpdatesDownload18" version="0" task="AutomatischeUpdates" opcode="Download" level="win:Informational" keywords="download success" template="AutomatischeUpdatesDownload18Args"/>
+     <event value="19" symbol="WindowsUpdate_AgentInstallation" version="0" task="WindowsUpdate_Agent" opcode="Installation" level="win:Informational" keywords="install success" template="WindowsUpdate_AgentInstallationArgs"/>
+     <event value="19" symbol="WindowsUpdate_AgentInstallation_V1" version="1" task="WindowsUpdate_Agent" opcode="Installation" level="win:Informational" keywords="install success" template="WindowsUpdate_AgentInstallationArgs_V1"/>
+     <event value="20" symbol="WindowsUpdate_AgentInstallation20" version="0" task="WindowsUpdate_Agent" opcode="Installation" level="win:Error" keywords="install failure" template="WindowsUpdate_AgentInstallation20Args"/>
+     <event value="20" symbol="WindowsUpdate_AgentInstallation20_V1" version="1" task="WindowsUpdate_Agent" opcode="Installation" level="win:Error" keywords="install failure" template="WindowsUpdate_AgentInstallation20Args_V1"/>
+     <event value="21" symbol="AutomatischeUpdatesNeustart" version="0" task="AutomatischeUpdates" opcode="Neustart" level="win:Informational" keywords="reboot" template="AutomatischeUpdatesDownloadArgs"/>
+     <event value="22" symbol="AutomatischeUpdatesNeustart22" version="0" task="AutomatischeUpdates" opcode="Neustart" level="win:Informational" keywords="reboot" template="AutomatischeUpdatesNeustart22Args"/>
+     <event value="23" symbol="WindowsUpdate_AgentDeinstallation" version="0" task="WindowsUpdate_Agent" opcode="Deinstallation" level="win:Informational" keywords="success uninstall" template="WindowsUpdate_AgentInstallationArgs"/>
+     <event value="23" symbol="WindowsUpdate_AgentDeinstallation_V1" version="1" task="WindowsUpdate_Agent" opcode="Deinstallation" level="win:Informational" keywords="success uninstall" template="WindowsUpdate_AgentInstallationArgs_V1"/>
+     <event value="24" symbol="WindowsUpdate_AgentDeinstallation24" version="0" task="WindowsUpdate_Agent" opcode="Deinstallation" level="win:Error" keywords="failure uninstall" template="WindowsUpdate_AgentDeinstallation24Args"/>
+     <event value="24" symbol="WindowsUpdate_AgentDeinstallation24_V1" version="1" task="WindowsUpdate_Agent" opcode="Deinstallation" level="win:Error" keywords="failure uninstall" template="WindowsUpdate_AgentDeinstallation24Args_V1"/>
+     <event value="25" symbol="WindowsUpdate_AgentNachUpdatessuchen" version="0" task="WindowsUpdate_Agent" opcode="NachUpdatessuchen" level="win:Error" keywords="detect failure" template="WindowsUpdate_AgentNachUpdatessuchenArgs"/>
+     <event value="25" symbol="WindowsUpdate_AgentNachUpdatessuchen_V1" version="1" task="WindowsUpdate_Agent" opcode="NachUpdatessuchen" level="win:Error" keywords="detect failure" template="WindowsUpdate_AgentNachUpdatessuchenArgs_V1"/>
+     <event value="26" symbol="WindowsUpdate_AgentNachUpdatessuchen26" version="0" task="WindowsUpdate_Agent" opcode="NachUpdatessuchen" level="win:Informational" keywords="detect success" template="WindowsUpdate_AgentNachUpdatessuchen26Args"/>
+     <event value="26" symbol="WindowsUpdate_AgentNachUpdatessuchen26_V1" version="1" task="WindowsUpdate_Agent" opcode="NachUpdatessuchen" level="win:Informational" keywords="detect success" template="WindowsUpdate_AgentNachUpdatessuchen26Args_V1"/>
+     <event value="27" symbol="WindowsUpdate_AgentStatusänderung" version="0" task="WindowsUpdate_Agent" opcode="Statusänderung" level="win:Informational" keywords="state"/>
+     <event value="28" symbol="WindowsUpdate_AgentStatusänderung28" version="0" task="WindowsUpdate_Agent" opcode="Statusänderung" level="win:Informational" keywords="state"/>
+     <event value="29" symbol="WindowsUpdate_AgentStatusänderung_1_17" version="0" task="WindowsUpdate_Agent" opcode="Statusänderung_1_17" level="win:Warning" keywords="connection"/>
+     <event value="30" symbol="WindowsUpdate_AgentStatusänderung_1_1730" version="0" task="WindowsUpdate_Agent" opcode="Statusänderung_1_17" level="win:Informational" keywords="connection"/>
+     <event value="31" symbol="WindowsUpdate_AgentDownload" version="0" task="WindowsUpdate_Agent" opcode="Download" level="win:Error" keywords="download failure" template="WindowsUpdate_AgentDownloadArgs"/>
+     <event value="31" symbol="WindowsUpdate_AgentDownload_V1" version="1" task="WindowsUpdate_Agent" opcode="Download" level="win:Error" keywords="download failure" template="WindowsUpdate_AgentDownloadArgs_V1"/>
+     <event value="32" symbol="WindowsUpdate_AgentStatusänderung_1_1732" version="0" task="WindowsUpdate_Agent" opcode="Statusänderung_1_17" level="win:Informational" keywords="connection" template="WindowsUpdate_AgentStatusänderung_1_1732Args"/>
+     <event value="33" symbol="WindowsUpdate_AgentStatusänderung_1_1733" version="0" task="WindowsUpdate_Agent" opcode="Statusänderung_1_17" level="win:Informational" keywords="connection" template="WindowsUpdate_AgentStatusänderung_1_1732Args"/>
+     <event value="34" symbol="WindowsUpdate_AgentSelfUpdate" version="0" task="WindowsUpdate_Agent" opcode="SelfUpdate" level="win:Warning" keywords="failure selfupdate" template="WindowsUpdate_AgentNachUpdatessuchenArgs"/>
+     <event value="35" symbol="WindowsUpdate_AgentSelfUpdate35" version="0" task="WindowsUpdate_Agent" opcode="SelfUpdate" level="win:Warning" keywords="failure selfupdate" template="WindowsUpdate_AgentNachUpdatessuchenArgs"/>
+     <event value="36" symbol="WindowsUpdate_AgentSelfUpdate36" version="0" task="WindowsUpdate_Agent" opcode="SelfUpdate" level="win:Informational" keywords="success selfupdate" template="WindowsUpdate_AgentSelfUpdate36Args"/>
+     <event value="37" symbol="WindowsUpdate_AgentSelfUpdate37" version="0" task="WindowsUpdate_Agent" opcode="SelfUpdate" level="win:Informational" keywords="success selfupdate" template="WindowsUpdate_AgentSelfUpdate36Args"/>
+     <event value="38" symbol="WindowsUpdate_AgentStatusänderung_1_1738" version="0" task="WindowsUpdate_Agent" opcode="Statusänderung_1_17" level="win:Informational" keywords="state service"/>
+     <event value="39" symbol="WindowsUpdate_AgentStatusänderung_1_1739" version="0" task="WindowsUpdate_Agent" opcode="Statusänderung_1_17" level="win:Informational" keywords="state service"/>
+     <event value="40" symbol="WindowsUpdate_AgentStatusänderung_1_1740" version="0" task="WindowsUpdate_Agent" opcode="Statusänderung_1_17" level="win:Informational" keywords="detect" template="WindowsUpdate_AgentStatusänderung_1_1740Args"/>
+     <event value="40" symbol="WindowsUpdate_AgentStatusänderung_1_1740_V1" version="1" task="WindowsUpdate_Agent" opcode="Statusänderung_1_17" level="win:Informational" keywords="detect" template="WindowsUpdate_AgentStatusänderung_1_1740Args_V1"/>
+     <event value="41" symbol="WindowsUpdate_AgentDownload41" version="0" task="WindowsUpdate_Agent" opcode="Download" level="win:Informational" keywords="download success" template="WindowsUpdate_AgentStatusänderung_1_1740Args"/>
+     <event value="41" symbol="WindowsUpdate_AgentDownload41_V1" version="1" task="WindowsUpdate_Agent" opcode="Download" level="win:Informational" keywords="download success" template="WindowsUpdate_AgentInstallationArgs"/>
+     <event value="42" symbol="AutomatischeUpdatesAndere" version="0" task="AutomatischeUpdates" opcode="Andere" level="win:Informational" keywords="state health" template="AutomatischeUpdatesAndereArgs"/>
+     <event value="43" symbol="WindowsUpdate_AgentInstallation43" version="0" task="WindowsUpdate_Agent" opcode="Installation" level="win:Informational" keywords="install started" template="WindowsUpdate_AgentInstallationArgs"/>
+     <event value="43" symbol="WindowsUpdate_AgentInstallation43_V1" version="1" task="WindowsUpdate_Agent" opcode="Installation" level="win:Informational" keywords="install started" template="WindowsUpdate_AgentInstallationArgs"/>
+     <event value="44" symbol="WindowsUpdate_AgentDownload44" version="0" task="WindowsUpdate_Agent" opcode="Download" level="win:Informational" keywords="download started" template="WindowsUpdate_AgentStatusänderung_1_1740Args"/>
+     <event value="44" symbol="WindowsUpdate_AgentDownload44_V1" version="1" task="WindowsUpdate_Agent" opcode="Download" level="win:Informational" keywords="download started" template="WindowsUpdate_AgentInstallationArgs"/>
+     <event value="101" symbol="WindowsUpdate_AgentStarten101_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Starten" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentStarten101Args_V4"/>
+     <event value="102" symbol="WindowsUpdate_AgentBeenden102_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden102Args_V4"/>
+     <event value="103" symbol="WindowsUpdate_AgentStarten103_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Starten" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentStarten103Args_V4"/>
+     <event value="104" symbol="WindowsUpdate_AgentBeenden104_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden104Args_V4"/>
+     <event value="105" symbol="WindowsUpdate_AgentStarten105_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Starten" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentStarten103Args_V4"/>
+     <event value="106" symbol="WindowsUpdate_AgentBeenden106_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden106Args_V4"/>
+     <event value="107" symbol="WindowsUpdate_AgentBeenden107_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden107Args_V4"/>
+     <event value="108" symbol="WindowsUpdate_AgentBeenden108_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden102Args_V4"/>
+     <event value="109" symbol="WindowsUpdate_AgentBeenden109_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden109Args_V4"/>
+     <event value="110" symbol="WindowsUpdate_AgentBeenden110_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden104Args_V4"/>
+     <event value="111" symbol="WindowsUpdate_AgentBeenden111_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden106Args_V4"/>
+     <event value="112" symbol="WindowsUpdate_AgentBeenden112_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden106Args_V4"/>
+     <event value="113" symbol="WindowsUpdate_AgentStarten113_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="114" symbol="WindowsUpdate_AgentBeenden114_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="115" symbol="WindowsUpdate_AgentStarten115_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="116" symbol="WindowsUpdate_AgentBeenden116_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="118" symbol="WindowsUpdate_AgentBeenden118_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden104Args_V4"/>
+     <event value="119" symbol="WindowsUpdate_AgentStarten119_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Starten" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentStarten101Args_V4"/>
+     <event value="120" symbol="WindowsUpdate_AgentBeenden120_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden102Args_V4"/>
+     <event value="121" symbol="WindowsUpdate_AgentBeenden121_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden107Args_V4"/>
+     <event value="122" symbol="WindowsUpdate_AgentStarten122_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Starten" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentStarten103Args_V4"/>
+     <event value="123" symbol="WindowsUpdate_AgentBeenden123_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden106Args_V4"/>
+     <event value="124" symbol="WindowsUpdate_AgentBeenden124_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden106Args_V4"/>
+     <event value="125" symbol="WindowsUpdate_AgentStarten125_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Starten" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentStarten101Args_V4"/>
+     <event value="126" symbol="WindowsUpdate_AgentBeenden126_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden102Args_V4"/>
+     <event value="127" symbol="WindowsUpdate_AgentBeenden127_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentBeenden107Args_V4"/>
+     <event value="128" symbol="WindowsUpdate_AgentStarten128_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Starten" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentStarten101Args_V4"/>
+     <event value="129" symbol="WindowsUpdate_AgentBeenden129_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentStarten101Args_V4"/>
+     <event value="130" symbol="WindowsUpdate_AgentStarten130_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Starten" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentStarten101Args_V4"/>
+     <event value="131" symbol="WindowsUpdate_AgentBeenden131_V4" version="4" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="WindowsUpdate_AgentStarten101Args_V4"/>
+     <event value="209" symbol="WindowsUpdate_AgentStarten" version="0" task="WindowsUpdate_Agent" opcode="win:Starten" level="win:Informational" template="WindowsUpdate_AgentStartenArgs"/>
+     <event value="210" symbol="WindowsUpdate_Agent" version="0" task="WindowsUpdate_Agent" level="win:Informational" template="WindowsUpdate_AgentStartenArgs"/>
+     <event value="211" symbol="WindowsUpdate_AgentBeenden" version="0" task="WindowsUpdate_Agent" opcode="win:Beenden" level="win:Informational" template="WindowsUpdate_AgentStartenArgs"/>
+     <event value="212" symbol="WindowsUpdate_AgentZurücksetzen212_V1" version="1" task="WindowsUpdate_Agent" opcode="Zurücksetzen" level="win:Informational" keywords="success Revert" template="WindowsUpdate_AgentInstallationArgs_V1"/>
+     <event value="213" symbol="WindowsUpdate_AgentZurücksetzen" version="0" task="WindowsUpdate_Agent" opcode="Zurücksetzen" level="win:Error" keywords="failure Revert" template="WindowsUpdate_AgentDeinstallation24Args"/>
+     <event value="214" symbol="WindowsUpdate_AgentZurücksetzen214" version="0" task="WindowsUpdate_Agent" opcode="Zurücksetzen" level="win:Informational" keywords="started Revert" template="WindowsUpdate_AgentInstallationArgs"/>
+     <event value="215" symbol="WindowsUpdate_AgentDeinstallation215" version="0" task="WindowsUpdate_Agent" opcode="Deinstallation" level="win:Informational" keywords="started uninstall" template="WindowsUpdate_AgentInstallationArgs"/>
+     <event value="216" symbol="WindowsUpdate_AgentBestätigung216_V1" version="1" task="WindowsUpdate_Agent" opcode="Bestätigung" level="win:Informational" keywords="success Commit" template="WindowsUpdate_AgentInstallationArgs_V1"/>
+     <event value="217" symbol="WindowsUpdate_AgentBestätigung" version="0" task="WindowsUpdate_Agent" opcode="Bestätigung" level="win:Error" keywords="failure Commit" template="WindowsUpdate_AgentDeinstallation24Args"/>
+     <event value="218" symbol="WindowsUpdate_AgentBestätigung218" version="0" task="WindowsUpdate_Agent" opcode="Bestätigung" level="win:Informational" keywords="started Commit" template="WindowsUpdate_AgentInstallationArgs"/>
+    </events>
+    <templates>
+     <template tid="AutomatischeUpdatesDownloadArgs">
+      <data name="updatelist" inType="win:UnicodeString"/>
+     </template>
+     <template tid="AutomatischeUpdatesDownload18Args">
+      <data name="schedinstalldate" inType="win:UnicodeString"/>
+      <data name="schedinstalltime" inType="win:UnicodeString"/>
+      <data name="updatelist" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WindowsUpdate_AgentInstallationArgs">
+      <data name="updateTitle" inType="win:UnicodeString"/>
+      <data name="updateGuid" inType="win:GUID"/>
+      <data name="updateRevisionNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="WindowsUpdate_AgentInstallation20Args">
+      <data name="errorCode" inType="win:HexInt32"/>
+      <data name="updateTitle" inType="win:UnicodeString"/>
+      <data name="updateGuid" inType="win:GUID"/>
+      <data name="updateRevisionNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="AutomatischeUpdatesNeustart22Args">
+      <data name="restarttime" inType="win:UnicodeString"/>
+      <data name="updatelist" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WindowsUpdate_AgentDeinstallation24Args">
+      <data name="errorCode" inType="win:HexInt32"/>
+      <data name="updatelist" inType="win:UnicodeString"/>
+      <data name="updateGuid" inType="win:GUID"/>
+      <data name="updateRevisionNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="WindowsUpdate_AgentNachUpdatessuchenArgs">
+      <data name="errorCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="WindowsUpdate_AgentNachUpdatessuchen26Args">
+      <data name="updateCount" inType="win:UInt32"/>
+     </template>
+     <template tid="WindowsUpdate_AgentDownloadArgs">
+      <data name="errorCode" inType="win:HexInt32"/>
+      <data name="updateGuid" inType="win:GUID"/>
+      <data name="updateRevisionNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="WindowsUpdate_AgentStatusänderung_1_1732Args">
+      <data name="serverName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WindowsUpdate_AgentSelfUpdate36Args">
+      <data name="version1" inType="win:UnicodeString"/>
+      <data name="version2" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WindowsUpdate_AgentStatusänderung_1_1740Args">
+      <data name="updateGuid" inType="win:GUID"/>
+      <data name="updateRevisionNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="AutomatischeUpdatesAndereArgs">
+      <data name="hc_stateid" inType="win:UInt32"/>
+      <data name="restartDate" inType="win:UnicodeString"/>
+      <data name="restartTime" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WindowsUpdate_AgentStartenArgs">
+      <data name="pdcActivationId" inType="win:UInt32"/>
+      <data name="description" inType="win:UnicodeString"/>
+      <data name="accessType" inType="win:UInt8"/>
+      <data name="isInteractiveOrAPIDriven" inType="win:Boolean"/>
+      <data name="stopIdleTimer" inType="win:Boolean"/>
+      <data name="networkRefCount" inType="win:UInt32"/>
+      <data name="systemRefCount" inType="win:UInt32"/>
+     </template>
+     <template tid="WindowsUpdate_AgentInstallationArgs_V1">
+      <data name="updateTitle" inType="win:UnicodeString"/>
+      <data name="updateGuid" inType="win:GUID"/>
+      <data name="updateRevisionNumber" inType="win:UInt32"/>
+      <data name="serviceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="WindowsUpdate_AgentInstallation20Args_V1">
+      <data name="errorCode" inType="win:HexInt32"/>
+      <data name="updateTitle" inType="win:UnicodeString"/>
+      <data name="updateGuid" inType="win:GUID"/>
+      <data name="updateRevisionNumber" inType="win:UInt32"/>
+      <data name="serviceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="WindowsUpdate_AgentDeinstallation24Args_V1">
+      <data name="errorCode" inType="win:HexInt32"/>
+      <data name="updatelist" inType="win:UnicodeString"/>
+      <data name="updateGuid" inType="win:GUID"/>
+      <data name="updateRevisionNumber" inType="win:UInt32"/>
+      <data name="serviceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="WindowsUpdate_AgentNachUpdatessuchenArgs_V1">
+      <data name="errorCode" inType="win:HexInt32"/>
+      <data name="serviceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="WindowsUpdate_AgentNachUpdatessuchen26Args_V1">
+      <data name="updateCount" inType="win:UInt32"/>
+      <data name="serviceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="WindowsUpdate_AgentDownloadArgs_V1">
+      <data name="updateTitle" inType="win:UnicodeString"/>
+      <data name="errorCode" inType="win:HexInt32"/>
+      <data name="updateGuid" inType="win:GUID"/>
+      <data name="updateRevisionNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="WindowsUpdate_AgentStatusänderung_1_1740Args_V1">
+      <data name="updateGuid" inType="win:GUID"/>
+      <data name="updateRevisionNumber" inType="win:UInt32"/>
+      <data name="serviceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="WindowsUpdate_AgentStarten101Args_V4">
+      <data name="CallInternalId" inType="win:UInt32"/>
+     </template>
+     <template tid="WindowsUpdate_AgentBeenden102Args_V4">
+      <data name="CallInternalId" inType="win:UInt32"/>
+      <data name="callerAppName" inType="win:UnicodeString"/>
+      <data name="searchCriteria" inType="win:UnicodeString"/>
+      <data name="packedScanData" inType="win:UInt32"/>
+      <data name="clientVersion" inType="win:UInt32"/>
+     </template>
+     <template tid="WindowsUpdate_AgentStarten103Args_V4">
+      <data name="updateGuid" inType="win:GUID"/>
+     </template>
+     <template tid="WindowsUpdate_AgentBeenden104Args_V4">
+      <data name="updateGuid" inType="win:GUID"/>
+      <data name="updateId" inType="win:UnicodeString"/>
+      <data name="bytesTransferred" inType="win:UInt32"/>
+     </template>
+     <template tid="WindowsUpdate_AgentBeenden106Args_V4">
+      <data name="updateGuid" inType="win:GUID"/>
+      <data name="callerAppName" inType="win:UnicodeString"/>
+      <data name="updateId" inType="win:UnicodeString"/>
+      <data name="packedInstallData" inType="win:UInt32"/>
+      <data name="handlerResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="WindowsUpdate_AgentBeenden107Args_V4">
+      <data name="CallInternalId" inType="win:UInt32"/>
+      <data name="callerAppName" inType="win:UnicodeString"/>
+      <data name="searchCriteria" inType="win:UnicodeString"/>
+      <data name="packedScanData" inType="win:UInt32"/>
+      <data name="resultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="WindowsUpdate_AgentBeenden109Args_V4">
+      <data name="updateGuid" inType="win:GUID"/>
+      <data name="updateId" inType="win:UnicodeString"/>
+      <data name="bytesTransferred" inType="win:UInt32"/>
+      <data name="resultCode" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_connection" value="connection"/>
+    <string id="keyword_detect" value="detect"/>
+    <string id="keyword_download" value="download"/>
+    <string id="keyword_install" value="install"/>
+    <string id="keyword_success" value="success"/>
+    <string id="keyword_failure" value="failure"/>
+    <string id="keyword_reboot" value="reboot"/>
+    <string id="keyword_state" value="state"/>
+    <string id="keyword_selfupdate" value="selfupdate"/>
+    <string id="keyword_service" value="service"/>
+    <string id="keyword_health" value="health"/>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="keyword_sleepstudy" value="sleepstudy"/>
+    <string id="keyword_started" value="started"/>
+    <string id="keyword_Revert" value="Revert"/>
+    <string id="keyword_uninstall" value="uninstall"/>
+    <string id="keyword_Commit" value="Commit"/>
+    <string id="task_WindowsUpdate_Agent" value="WindowsUpdate_Agent"/>
+    <string id="opcode_WindowsUpdate_AgentSelfUpdate" value="SelfUpdate"/>
+    <string id="opcode_WindowsUpdate_AgentNachUpdatessuchen" value="NachUpdatessuchen"/>
+    <string id="opcode_WindowsUpdate_AgentDownload" value="Download"/>
+    <string id="opcode_WindowsUpdate_AgentInstallation" value="Installation"/>
+    <string id="opcode_WindowsUpdate_AgentDeinstallation" value="Deinstallation"/>
+    <string id="opcode_WindowsUpdate_AgentStatusänderung" value="Statusänderung"/>
+    <string id="opcode_WindowsUpdate_AgentStatusänderung_1_17" value="Statusänderung_1_17"/>
+    <string id="opcode_WindowsUpdate_AgentZurücksetzen" value="Zurücksetzen"/>
+    <string id="opcode_WindowsUpdate_AgentBestätigung" value="Bestätigung"/>
+    <string id="task_AutomatischeUpdates" value="AutomatischeUpdates"/>
+    <string id="opcode_AutomatischeUpdatesNachUpdatessuchen" value="NachUpdatessuchen"/>
+    <string id="opcode_AutomatischeUpdatesDownload" value="Download"/>
+    <string id="opcode_AutomatischeUpdatesNeustart" value="Neustart"/>
+    <string id="opcode_AutomatischeUpdatesAndere" value="Andere"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

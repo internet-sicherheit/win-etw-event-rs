@@ -1,0 +1,256 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-WPD-MTPClassDriver" guid="{21b7c16e-c5af-4a69-a74a-7245481c1b97}" resourceFileName="Microsoft-Windows-WPD-MTPClassDriver" messageFileName="Microsoft-Windows-WPD-MTPClassDriver" symbol="MicrosoftWindowsWPDMTPClassDriver" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="Treiberinitialisierung" message="$(string.task_Treiberinitialisierung)" value="16"/>
+     <task name="Treibervorgang" message="$(string.task_Treibervorgang)" value="32"/>
+     <task name="Gerätefehler" message="$(string.task_Gerätefehler)" value="64"/>
+    </tasks>
+    <events>
+     <event value="1000" symbol="Treiberinitialisierung" version="0" task="Treiberinitialisierung" level="win:Informational"/>
+     <event value="1001" symbol="Treiberinitialisierung1001" version="0" task="Treiberinitialisierung" level="win:Informational" template="Treiberinitialisierung1001Args"/>
+     <event value="1002" symbol="Treibervorgang" version="0" task="Treibervorgang" level="win:Informational" template="TreibervorgangArgs"/>
+     <event value="1003" symbol="Treibervorgang1003" version="0" task="Treibervorgang" level="win:Informational" template="TreibervorgangArgs"/>
+     <event value="1004" symbol="Treibervorgang1004" version="0" task="Treibervorgang" level="win:Warning" template="Treibervorgang1004Args"/>
+     <event value="1005" symbol="Treiberinitialisierung1005" version="0" task="Treiberinitialisierung" level="win:Informational" template="Treiberinitialisierung1005Args"/>
+     <event value="1006" symbol="Treiberinitialisierung1006" version="0" task="Treiberinitialisierung" level="win:Critical" template="Treiberinitialisierung1006Args"/>
+     <event value="1007" symbol="Treibervorgang1007" version="0" task="Treibervorgang" level="win:Critical" template="Treibervorgang1007Args"/>
+     <event value="1008" symbol="Treibervorgang1008" version="0" task="Treibervorgang" level="win:Critical" template="Treibervorgang1004Args"/>
+     <event value="1009" symbol="Treibervorgang1009" version="0" task="Treibervorgang" level="win:Critical" template="Treibervorgang1009Args"/>
+     <event value="1010" symbol="Treibervorgang1010" version="0" task="Treibervorgang" level="win:Critical" template="Treibervorgang1009Args"/>
+     <event value="1011" symbol="Gerätefehler" version="0" task="Gerätefehler" level="win:Error" template="GerätefehlerArgs"/>
+     <event value="1012" symbol="Gerätefehler1012" version="0" task="Gerätefehler" level="win:Error"/>
+     <event value="1013" symbol="Gerätefehler1013" version="0" task="Gerätefehler" level="win:Error"/>
+     <event value="1014" symbol="Gerätefehler1014" version="0" task="Gerätefehler" level="win:Error"/>
+     <event value="1015" symbol="Gerätefehler1015" version="0" task="Gerätefehler" level="win:Error" template="GerätefehlerArgs"/>
+     <event value="1016" symbol="Gerätefehler1016" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1016Args"/>
+     <event value="1017" symbol="Gerätefehler1017" version="0" task="Gerätefehler" level="win:Error" template="GerätefehlerArgs"/>
+     <event value="1018" symbol="Gerätefehler1018" version="0" task="Gerätefehler" level="win:Error"/>
+     <event value="1019" symbol="Gerätefehler1019" version="0" task="Gerätefehler" level="win:Error"/>
+     <event value="1020" symbol="Gerätefehler1020" version="0" task="Gerätefehler" level="win:Error"/>
+     <event value="1021" symbol="Gerätefehler1021" version="0" task="Gerätefehler" level="win:Error"/>
+     <event value="1022" symbol="Gerätefehler1022" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1022Args"/>
+     <event value="1023" symbol="Gerätefehler1023" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1023Args"/>
+     <event value="1024" symbol="Gerätefehler1024" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1023Args"/>
+     <event value="1025" symbol="Gerätefehler1025" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1023Args"/>
+     <event value="1026" symbol="Gerätefehler1026" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1023Args"/>
+     <event value="1027" symbol="Gerätefehler1027" version="0" task="Gerätefehler" level="win:Error"/>
+     <event value="1028" symbol="Gerätefehler1028" version="0" task="Gerätefehler" level="win:Error" template="Treibervorgang1004Args"/>
+     <event value="1029" symbol="Gerätefehler1029" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1029Args"/>
+     <event value="1030" symbol="Gerätefehler1030" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1029Args"/>
+     <event value="1031" symbol="Gerätefehler1031" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1022Args"/>
+     <event value="1032" symbol="Gerätefehler1032" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1029Args"/>
+     <event value="1033" symbol="Gerätefehler1033" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1029Args"/>
+     <event value="1034" symbol="Gerätefehler1034" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1022Args"/>
+     <event value="1035" symbol="Gerätefehler1035" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1029Args"/>
+     <event value="1036" symbol="Gerätefehler1036" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1029Args"/>
+     <event value="1037" symbol="Gerätefehler1037" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1022Args"/>
+     <event value="1038" symbol="Gerätefehler1038" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1029Args"/>
+     <event value="1039" symbol="Gerätefehler1039" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1029Args"/>
+     <event value="1040" symbol="Gerätefehler1040" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1022Args"/>
+     <event value="1041" symbol="Gerätefehler1041" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1041Args"/>
+     <event value="1042" symbol="Gerätefehler1042" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1042Args"/>
+     <event value="1043" symbol="Gerätefehler1043" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1042Args"/>
+     <event value="1044" symbol="Gerätefehler1044" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1042Args"/>
+     <event value="1045" symbol="Gerätefehler1045" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1045Args"/>
+     <event value="1046" symbol="Gerätefehler1046" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1046Args"/>
+     <event value="1047" symbol="Gerätefehler1047" version="0" task="Gerätefehler" level="win:Warning"/>
+     <event value="1048" symbol="Gerätefehler1048" version="0" task="Gerätefehler" level="win:Warning"/>
+     <event value="1049" symbol="Gerätefehler1049" version="0" task="Gerätefehler" level="win:Error" template="Treibervorgang1004Args"/>
+     <event value="1050" symbol="Gerätefehler1050" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1022Args"/>
+     <event value="1051" symbol="Gerätefehler1051" version="0" task="Gerätefehler" level="win:Error" template="Treibervorgang1004Args"/>
+     <event value="1052" symbol="Gerätefehler1052" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1052Args"/>
+     <event value="1053" symbol="Gerätefehler1053" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1053Args"/>
+     <event value="1054" symbol="Gerätefehler1054" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1053Args"/>
+     <event value="1055" symbol="Gerätefehler1055" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1053Args"/>
+     <event value="1056" symbol="Gerätefehler1056" version="0" task="Gerätefehler" level="win:Warning" template="Treibervorgang1004Args"/>
+     <event value="1057" symbol="Gerätefehler1057" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1053Args"/>
+     <event value="1058" symbol="Gerätefehler1058" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1053Args"/>
+     <event value="1059" symbol="Gerätefehler1059" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1059Args"/>
+     <event value="1060" symbol="Gerätefehler1060" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1022Args"/>
+     <event value="1061" symbol="Gerätefehler1061" version="0" task="Gerätefehler" level="win:Warning"/>
+     <event value="1062" symbol="Gerätefehler1062" version="0" task="Gerätefehler" level="win:Warning"/>
+     <event value="1063" symbol="Gerätefehler1063" version="0" task="Gerätefehler" level="win:Warning" template="Gerätefehler1053Args"/>
+     <event value="1064" symbol="Gerätefehler1064" version="0" task="Gerätefehler" level="win:Warning"/>
+     <event value="1065" symbol="Gerätefehler1065" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1016Args"/>
+     <event value="1066" symbol="Treibervorgang1066" version="0" task="Treibervorgang" level="win:Critical" template="Treibervorgang1004Args"/>
+     <event value="1067" symbol="Gerätefehler1067" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1022Args"/>
+     <event value="1068" symbol="Gerätefehler1068" version="0" task="Gerätefehler" level="win:Error" template="Gerätefehler1022Args"/>
+     <event value="2000" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="2001" symbol="task_02001" version="0" task="task_0" level="win:Informational" template="task_02001Args"/>
+     <event value="2002" symbol="task_02002" version="0" task="task_0" level="win:Informational" template="task_02002Args"/>
+     <event value="2003" symbol="task_02003" version="0" task="task_0" level="win:Informational" template="task_02003Args"/>
+     <event value="2004" symbol="task_02004" version="0" task="task_0" level="win:Informational" template="task_02004Args"/>
+     <event value="2005" symbol="task_02005" version="0" task="task_0" level="win:Informational" template="task_02005Args"/>
+     <event value="2006" symbol="task_02006" version="0" task="task_0" level="win:Informational" template="task_02006Args"/>
+     <event value="2007" symbol="task_02007" version="0" task="task_0" level="win:Informational" template="task_02007Args"/>
+    </events>
+    <templates>
+     <template tid="Treiberinitialisierung1001Args">
+      <data name="Seconds" inType="win:UInt32"/>
+     </template>
+     <template tid="TreibervorgangArgs">
+      <data name="State" inType="win:UInt32"/>
+      <data name="hr" inType="win:UInt32"/>
+     </template>
+     <template tid="Treibervorgang1004Args">
+      <data name="Code" inType="win:UInt32"/>
+     </template>
+     <template tid="Treiberinitialisierung1005Args">
+      <data name="Manufacturer" inType="win:UnicodeString"/>
+      <data name="Model" inType="win:UnicodeString"/>
+      <data name="Version" inType="win:UnicodeString"/>
+      <data name="HackModel" inType="win:UInt32"/>
+     </template>
+     <template tid="Treiberinitialisierung1006Args">
+      <data name="hr" inType="win:UInt32"/>
+     </template>
+     <template tid="Treibervorgang1007Args">
+      <data name="Code" inType="win:UInt32"/>
+      <data name="hr" inType="win:UInt32"/>
+     </template>
+     <template tid="Treibervorgang1009Args">
+      <data name="ExpectedValue" inType="win:UInt32"/>
+      <data name="ActualValue" inType="win:UInt32"/>
+     </template>
+     <template tid="GerätefehlerArgs">
+      <data name="Code" inType="win:UInt32"/>
+      <data name="Prop" inType="win:UInt32"/>
+      <data name="Offset" inType="win:UInt32"/>
+     </template>
+     <template tid="Gerätefehler1016Args">
+      <data name="Code" inType="win:UInt32"/>
+      <data name="Offset" inType="win:UInt32"/>
+     </template>
+     <template tid="Gerätefehler1022Args">
+      <data name="Offset" inType="win:UInt32"/>
+     </template>
+     <template tid="Gerätefehler1023Args">
+      <data name="ID" inType="win:UInt32"/>
+      <data name="Offset" inType="win:UInt32"/>
+     </template>
+     <template tid="Gerätefehler1029Args">
+      <data name="Expected" inType="win:UInt32"/>
+      <data name="Actual" inType="win:UInt32"/>
+     </template>
+     <template tid="Gerätefehler1041Args">
+      <data name="PKeyGuid" inType="win:UnicodeString"/>
+      <data name="PKeyId" inType="win:UInt32"/>
+     </template>
+     <template tid="Gerätefehler1042Args">
+      <data name="Guid" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Gerätefehler1045Args">
+      <data name="Code" inType="win:UInt32"/>
+      <data name="Prop" inType="win:UInt32"/>
+     </template>
+     <template tid="Gerätefehler1046Args">
+      <data name="PKeyGuid" inType="win:UnicodeString"/>
+      <data name="PKeyId" inType="win:UInt32"/>
+      <data name="CurrentCode" inType="win:UInt32"/>
+      <data name="OriginalCode" inType="win:UInt32"/>
+     </template>
+     <template tid="Gerätefehler1052Args">
+      <data name="PKeyGuid" inType="win:UnicodeString"/>
+      <data name="PKeyId" inType="win:UInt32"/>
+      <data name="ID" inType="win:UInt32"/>
+     </template>
+     <template tid="Gerätefehler1053Args">
+      <data name="PKeyGuid" inType="win:UnicodeString"/>
+      <data name="ID" inType="win:UInt32"/>
+     </template>
+     <template tid="Gerätefehler1059Args">
+      <data name="ID" inType="win:UInt32"/>
+      <data name="Code" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0Args">
+      <data name="SessionID" inType="win:UInt32"/>
+      <data name="TransactionID" inType="win:UInt32"/>
+      <data name="MTP_Opcode" inType="win:UInt16"/>
+      <data name="MTP_Command_Param_count" inType="win:UInt32"/>
+      <data name="MTP_Command_Params" inType="win:UInt32" count="MTP_Command_Param_count"/>
+     </template>
+     <template tid="task_02001Args">
+      <data name="SessionID" inType="win:UInt32"/>
+      <data name="TransactionID" inType="win:UInt32"/>
+      <data name="MTP_Opcode" inType="win:UInt16"/>
+      <data name="MTP_Command_Param_count" inType="win:UInt32"/>
+      <data name="MTP_Command_Params" inType="win:UInt32" count="MTP_Command_Param_count"/>
+      <data name="MTP_Response_Retrieval_HR_From_Transport" inType="win:UInt32"/>
+      <data name="MTP_Response_Code" inType="win:UInt16"/>
+      <data name="MTP_Response_Param_count" inType="win:UInt32"/>
+      <data name="MTP_Response_Params" inType="win:UInt32" count="MTP_Response_Param_count"/>
+      <data name="MTP_Data_Length" inType="win:UInt32"/>
+      <data name="MTP_Data_Buffer" inType="win:Binary" length="MTP_Data_Length"/>
+     </template>
+     <template tid="task_02002Args">
+      <data name="SessionID" inType="win:UInt32"/>
+      <data name="TransactionID" inType="win:UInt32"/>
+      <data name="MTP_Opcode" inType="win:UInt16"/>
+      <data name="MTP_Command_Param_count" inType="win:UInt32"/>
+      <data name="MTP_Command_Params" inType="win:UInt32" count="MTP_Command_Param_count"/>
+      <data name="MTP_Response_Code" inType="win:UInt16"/>
+      <data name="MTP_Response_Param_count" inType="win:UInt32"/>
+      <data name="MTP_Response_Params" inType="win:UInt32" count="MTP_Response_Param_count"/>
+      <data name="MTP_DatatypeOfPropValue" inType="win:UInt16"/>
+      <data name="MTP_Data_Length" inType="win:UInt32"/>
+      <data name="MTP_Data_Buffer" inType="win:Binary" length="MTP_Data_Length"/>
+     </template>
+     <template tid="task_02003Args">
+      <data name="SessionID" inType="win:UInt32"/>
+      <data name="TransactionID" inType="win:UInt32"/>
+      <data name="MTP_Response_Retrieval_HR_From_Transport" inType="win:UInt32"/>
+      <data name="MTP_Response_Code" inType="win:UInt16"/>
+      <data name="MTP_Response_Param_count" inType="win:UInt32"/>
+      <data name="MTP_Response_Params" inType="win:UInt32" count="MTP_Response_Param_count"/>
+     </template>
+     <template tid="task_02004Args">
+      <data name="SessionID" inType="win:UInt32"/>
+      <data name="TransactionID" inType="win:UInt32"/>
+      <data name="MTP_Event_Retrieval_HR_From_Transport" inType="win:UInt32"/>
+      <data name="MTP_Event_Code" inType="win:UInt16"/>
+      <data name="MTP_Event_Param_count" inType="win:UInt32"/>
+      <data name="MTP_Event_Params" inType="win:UInt32" count="MTP_Event_Param_count"/>
+     </template>
+     <template tid="task_02005Args">
+      <data name="MTPBulkGetObjProps_size" inType="win:UInt32"/>
+      <data name="MTPBulkGetObjProps_buffer" inType="win:Binary" length="MTPBulkGetObjProps_size"/>
+     </template>
+     <template tid="task_02006Args">
+      <data name="SessionID" inType="win:UInt32"/>
+      <data name="TransactionID" inType="win:UInt32"/>
+      <data name="MTP_Opcode" inType="win:UInt16"/>
+      <data name="MTP_Command_Param_count" inType="win:UInt32"/>
+      <data name="MTP_Command_Params" inType="win:UInt32" count="MTP_Command_Param_count"/>
+      <data name="MTP_Data_Length" inType="win:UInt32"/>
+      <data name="MTP_Data_Buffer" inType="win:Binary" length="MTP_Data_Length"/>
+     </template>
+     <template tid="task_02007Args">
+      <data name="SessionID" inType="win:UInt32"/>
+      <data name="TransactionID" inType="win:UInt32"/>
+      <data name="MTP_Opcode" inType="win:UInt16"/>
+      <data name="MTP_Command_Param_count" inType="win:UInt32"/>
+      <data name="MTP_Command_Params" inType="win:UInt32" count="MTP_Command_Param_count"/>
+      <data name="MTP_DatatypeOfPropValue" inType="win:UInt16"/>
+      <data name="MTP_Data_Length" inType="win:UInt32"/>
+      <data name="MTP_Data_Buffer" inType="win:Binary" length="MTP_Data_Length"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_Treiberinitialisierung" value="Treiberinitialisierung"/>
+    <string id="task_Treibervorgang" value="Treibervorgang"/>
+    <string id="task_Gerätefehler" value="Gerätefehler"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,226 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Runtime-Web-Http" guid="{41877cb4-11fc-4188-b590-712c143c881d}" resourceFileName="Microsoft-Windows-Runtime-Web-Http" messageFileName="Microsoft-Windows-Runtime-Web-Http" symbol="MicrosoftWindowsRuntimeWebHttp" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="HTTP_E/A(asynchron)" message="$(string.task_HTTP_E/A(asynchron))" value="1"/>
+     <task name="HTTP_Vorgang" message="$(string.task_HTTP_Vorgang)" value="2"/>
+     <task name="HTTP_CCT" message="$(string.task_HTTP_CCT)" value="3"/>
+    </tasks>
+    <maps>
+     <valueMap name="HttpProgressStageMap">
+      <map value="0x0" message="$(string.map_HttpProgressStageMapNone)"/>
+      <map value="0xa" message="$(string.map_HttpProgressStageMapDetectingProxy)"/>
+      <map value="0x14" message="$(string.map_HttpProgressStageMapResolvingName)"/>
+      <map value="0x1e" message="$(string.map_HttpProgressStageMapConnectingToServer)"/>
+      <map value="0x28" message="$(string.map_HttpProgressStageMapNegotiatingSsl)"/>
+      <map value="0x32" message="$(string.map_HttpProgressStageMapSendingHeaders)"/>
+      <map value="0x3c" message="$(string.map_HttpProgressStageMapSendingContent)"/>
+      <map value="0x46" message="$(string.map_HttpProgressStageMapWaitingForResponse)"/>
+      <map value="0x50" message="$(string.map_HttpProgressStageMapReceivingHeaders)"/>
+      <map value="0x5a" message="$(string.map_HttpProgressStageMapReceivingContent)"/>
+     </valueMap>
+     <valueMap name="AsyncOperationMap">
+      <map value="0x1" message="$(string.map_AsyncOperationMapBufferAllOperation)"/>
+      <map value="0x2" message="$(string.map_AsyncOperationMapBufferResponseOperation)"/>
+      <map value="0x3" message="$(string.map_AsyncOperationMapMultipartBufferAllOperation)"/>
+      <map value="0x4" message="$(string.map_AsyncOperationMapMultipartWriteToStreamOperation)"/>
+      <map value="0x5" message="$(string.map_AsyncOperationMapReadAsBufferOperation)"/>
+      <map value="0x6" message="$(string.map_AsyncOperationMapReadAsStreamOperation)"/>
+      <map value="0x7" message="$(string.map_AsyncOperationMapReadAsStringOperation)"/>
+      <map value="0x8" message="$(string.map_AsyncOperationMapSendRequestOperation)"/>
+      <map value="0x9" message="$(string.map_AsyncOperationMapWriteToStreamOperation)"/>
+     </valueMap>
+     <valueMap name="HttpResponseStateMap">
+      <map value="0x0" message="$(string.map_HttpResponseStateMapIncompleteAndReceiving)"/>
+      <map value="0x1" message="$(string.map_HttpResponseStateMapIncompleteAndPending)"/>
+      <map value="0x2" message="$(string.map_HttpResponseStateMapAbgeschlossen)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="HTTP_E/A(asynchron)" version="0" task="HTTP_E/A(asynchron)" level="win:Warning" template="HTTP_E/A(asynchron)Args"/>
+     <event value="2" symbol="HTTP_E/A(asynchron)2" version="0" task="HTTP_E/A(asynchron)" level="win:Warning" template="HTTP_E/A(asynchron)2Args"/>
+     <event value="3" symbol="HTTP_E/A(asynchron)3" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)2Args"/>
+     <event value="4" symbol="HTTP_E/A(asynchron)4" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)2Args"/>
+     <event value="5" symbol="HTTP_E/A(asynchron)5" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)Args"/>
+     <event value="6" symbol="HTTP_E/A(asynchron)6" version="0" task="HTTP_E/A(asynchron)" level="win:Error" template="HTTP_E/A(asynchron)6Args"/>
+     <event value="7" symbol="HTTP_E/A(asynchron)7" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)7Args"/>
+     <event value="8" symbol="HTTP_E/A(asynchron)8" version="0" task="HTTP_E/A(asynchron)" level="win:Error" template="HTTP_E/A(asynchron)6Args"/>
+     <event value="9" symbol="HTTP_E/A(asynchron)9" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)9Args"/>
+     <event value="10" symbol="HTTP_E/A(asynchron)10" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)10Args"/>
+     <event value="11" symbol="HTTP_E/A(asynchron)11" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)10Args"/>
+     <event value="12" symbol="HTTP_E/A(asynchron)12" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)12Args"/>
+     <event value="13" symbol="HTTP_E/A(asynchron)13" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)12Args"/>
+     <event value="14" symbol="HTTP_E/A(asynchron)14" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)10Args"/>
+     <event value="15" symbol="HTTP_E/A(asynchron)15" version="0" task="HTTP_E/A(asynchron)" level="win:Error" template="HTTP_E/A(asynchron)15Args"/>
+     <event value="16" symbol="HTTP_E/A(asynchron)16" version="0" task="HTTP_E/A(asynchron)" level="win:Verbose" template="HTTP_E/A(asynchron)16Args"/>
+     <event value="17" symbol="HTTP_E/A(asynchron)17" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)12Args"/>
+     <event value="18" symbol="HTTP_E/A(asynchron)18" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)18Args"/>
+     <event value="19" symbol="HTTP_E/A(asynchron)19" version="0" task="HTTP_E/A(asynchron)" level="win:Verbose" template="HTTP_E/A(asynchron)16Args"/>
+     <event value="20" symbol="HTTP_E/A(asynchron)20" version="0" task="HTTP_E/A(asynchron)" level="win:Error" template="HTTP_E/A(asynchron)15Args"/>
+     <event value="21" symbol="HTTP_E/A(asynchron)21" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)21Args"/>
+     <event value="22" symbol="HTTP_E/A(asynchron)22" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)12Args"/>
+     <event value="23" symbol="HTTP_E/A(asynchron)23" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)16Args"/>
+     <event value="24" symbol="HTTP_E/A(asynchron)24" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)12Args"/>
+     <event value="25" symbol="HTTP_E/A(asynchron)25" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)25Args"/>
+     <event value="26" symbol="HTTP_E/A(asynchron)26" version="0" task="HTTP_E/A(asynchron)" level="win:Error" template="HTTP_E/A(asynchron)26Args"/>
+     <event value="27" symbol="HTTP_E/A(asynchron)27" version="0" task="HTTP_E/A(asynchron)" level="win:Error" template="HTTP_E/A(asynchron)27Args"/>
+     <event value="28" symbol="HTTP_Vorgang" version="0" task="HTTP_Vorgang" level="win:Informational" template="HTTP_VorgangArgs"/>
+     <event value="29" symbol="HTTP_Vorgang29" version="0" task="HTTP_Vorgang" level="win:Error" template="HTTP_Vorgang29Args"/>
+     <event value="30" symbol="HTTP_Vorgang30" version="0" task="HTTP_Vorgang" level="win:Informational" template="HTTP_Vorgang30Args"/>
+     <event value="31" symbol="HTTP_Vorgang31" version="0" task="HTTP_Vorgang" level="win:Error" template="HTTP_Vorgang29Args"/>
+     <event value="32" symbol="HTTP_Vorgang32" version="0" task="HTTP_Vorgang" level="win:Informational" template="HTTP_Vorgang30Args"/>
+     <event value="33" symbol="HTTP_Vorgang33" version="0" task="HTTP_Vorgang" level="win:Informational" template="HTTP_Vorgang30Args"/>
+     <event value="34" symbol="HTTP_Vorgang34" version="0" task="HTTP_Vorgang" level="win:Informational" template="HTTP_Vorgang30Args"/>
+     <event value="35" symbol="HTTP_CCT" version="0" task="HTTP_CCT" level="win:Informational" template="HTTP_CCTArgs"/>
+     <event value="36" symbol="HTTP_CCT36" version="0" task="HTTP_CCT" level="win:Informational"/>
+     <event value="37" symbol="HTTP_CCT37" version="0" task="HTTP_CCT" level="win:Informational" template="HTTP_CCT37Args"/>
+     <event value="38" symbol="HTTP_CCT38" version="0" task="HTTP_CCT" level="win:Informational"/>
+     <event value="39" symbol="HTTP_CCT39" version="0" task="HTTP_CCT" level="win:Informational" template="HTTP_CCT37Args"/>
+     <event value="40" symbol="HTTP_CCT40" version="0" task="HTTP_CCT" level="win:Informational" template="HTTP_CCT40Args"/>
+     <event value="41" symbol="HTTP_CCT41" version="0" task="HTTP_CCT" level="win:Informational" template="HTTP_CCT40Args"/>
+     <event value="42" symbol="HTTP_CCT42" version="0" task="HTTP_CCT" level="win:Informational" template="HTTP_CCT42Args"/>
+     <event value="43" symbol="HTTP_E/A(asynchron)43" version="0" task="HTTP_E/A(asynchron)" level="win:Informational" template="HTTP_E/A(asynchron)12Args"/>
+     <event value="44" symbol="HTTP_Vorgang44" version="0" task="HTTP_Vorgang" level="win:Informational" template="HTTP_Vorgang30Args"/>
+     <event value="45" symbol="HTTP_Vorgang45" version="0" task="HTTP_Vorgang" level="win:Informational" template="HTTP_Vorgang30Args"/>
+     <event value="46" symbol="HTTP_Vorgang46" version="0" task="HTTP_Vorgang" level="win:Error" template="HTTP_Vorgang30Args"/>
+     <event value="47" symbol="HTTP_Vorgang47" version="0" task="HTTP_Vorgang" level="win:Informational" template="HTTP_Vorgang30Args"/>
+     <event value="48" symbol="HTTP_E/A(asynchron)48" version="0" task="HTTP_E/A(asynchron)" level="win:Warning"/>
+    </events>
+    <templates>
+     <template tid="HTTP_E/A(asynchron)Args">
+      <data name="uri" inType="win:UnicodeString"/>
+     </template>
+     <template tid="HTTP_E/A(asynchron)2Args">
+      <data name="str1" inType="win:UnicodeString"/>
+      <data name="str2" inType="win:UnicodeString"/>
+     </template>
+     <template tid="HTTP_E/A(asynchron)6Args">
+      <data name="uri" inType="win:UnicodeString"/>
+      <data name="port" inType="win:UInt32"/>
+      <data name="errorCode" inType="win:UInt32"/>
+      <data name="errorMessage" inType="win:UInt32"/>
+     </template>
+     <template tid="HTTP_E/A(asynchron)7Args">
+      <data name="str1" inType="win:UnicodeString"/>
+      <data name="str2" inType="win:UnicodeString"/>
+      <data name="flags" inType="win:HexInt32"/>
+     </template>
+     <template tid="HTTP_E/A(asynchron)9Args">
+      <data name="obj1" inType="win:Pointer"/>
+      <data name="obj2" inType="win:Pointer"/>
+      <data name="uri" inType="win:UnicodeString"/>
+     </template>
+     <template tid="HTTP_E/A(asynchron)10Args">
+      <data name="obj" inType="win:Pointer"/>
+      <data name="length" inType="win:UInt32"/>
+     </template>
+     <template tid="HTTP_E/A(asynchron)12Args">
+      <data name="obj" inType="win:Pointer"/>
+     </template>
+     <template tid="HTTP_E/A(asynchron)15Args">
+      <data name="obj" inType="win:Pointer"/>
+      <data name="errorCode" inType="win:UInt32"/>
+      <data name="errorMessage" inType="win:UInt32"/>
+     </template>
+     <template tid="HTTP_E/A(asynchron)16Args">
+      <data name="obj" inType="win:Pointer"/>
+      <data name="statusDescription" inType="win:UnicodeString"/>
+     </template>
+     <template tid="HTTP_E/A(asynchron)18Args">
+      <data name="obj" inType="win:Pointer"/>
+      <data name="statusCode" inType="win:UInt32"/>
+      <data name="statusDescription" inType="win:UnicodeString"/>
+     </template>
+     <template tid="HTTP_E/A(asynchron)21Args">
+      <data name="obj" inType="win:Pointer"/>
+      <data name="length" inType="win:UInt32"/>
+      <data name="limit" inType="win:UInt32"/>
+     </template>
+     <template tid="HTTP_E/A(asynchron)25Args">
+      <data name="statusDescription" inType="win:UnicodeString"/>
+      <data name="stage" inType="win:UInt32" map="HttpProgressStageMap"/>
+      <data name="retries" inType="win:UInt32"/>
+      <data name="bytesSent" inType="win:UInt64"/>
+      <data name="totalBytesToSend" inType="win:UInt64"/>
+      <data name="bytesReceived" inType="win:UInt64"/>
+      <data name="totalBytesToReceive" inType="win:UInt64"/>
+     </template>
+     <template tid="HTTP_E/A(asynchron)26Args">
+      <data name="uri" inType="win:UnicodeString"/>
+      <data name="hresult" inType="win:UInt32"/>
+      <data name="errorMessage" inType="win:Int32"/>
+     </template>
+     <template tid="HTTP_E/A(asynchron)27Args">
+      <data name="asyncOperation" inType="win:UInt32"/>
+      <data name="asyncObject" inType="win:Pointer"/>
+      <data name="response" inType="win:UnicodeString"/>
+      <data name="hresult" inType="win:UInt32"/>
+      <data name="errorMessage" inType="win:Int32"/>
+     </template>
+     <template tid="HTTP_VorgangArgs">
+      <data name="asyncOperation" inType="win:UInt32" map="AsyncOperationMap"/>
+      <data name="asyncObject" inType="win:Pointer"/>
+     </template>
+     <template tid="HTTP_Vorgang29Args">
+      <data name="asyncOperation" inType="win:UInt32"/>
+      <data name="asyncObject" inType="win:Pointer"/>
+      <data name="hresult" inType="win:UInt32"/>
+      <data name="errorMessage" inType="win:Int32"/>
+     </template>
+     <template tid="HTTP_Vorgang30Args">
+      <data name="asyncOperation" inType="win:UInt32"/>
+      <data name="asyncObject" inType="win:Pointer"/>
+     </template>
+     <template tid="HTTP_CCTArgs">
+      <data name="responseState" inType="win:UInt32" map="HttpResponseStateMap"/>
+      <data name="pendingReceiveOperations" inType="win:Int32"/>
+     </template>
+     <template tid="HTTP_CCT37Args">
+      <data name="hresult" inType="win:UInt32"/>
+      <data name="errorMessage" inType="win:Int32"/>
+     </template>
+     <template tid="HTTP_CCT40Args">
+      <data name="pendingOperations" inType="win:UInt32"/>
+     </template>
+     <template tid="HTTP_CCT42Args">
+      <data name="responseState" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_HTTP_E/A(asynchron)" value="HTTP_E/A(asynchron)"/>
+    <string id="task_HTTP_Vorgang" value="HTTP_Vorgang"/>
+    <string id="task_HTTP_CCT" value="HTTP_CCT"/>
+    <string id="map_HttpProgressStageMapNone" value="None"/>
+    <string id="map_HttpProgressStageMapDetectingProxy" value="DetectingProxy"/>
+    <string id="map_HttpProgressStageMapResolvingName" value="ResolvingName"/>
+    <string id="map_HttpProgressStageMapConnectingToServer" value="ConnectingToServer"/>
+    <string id="map_HttpProgressStageMapNegotiatingSsl" value="NegotiatingSsl"/>
+    <string id="map_HttpProgressStageMapSendingHeaders" value="SendingHeaders"/>
+    <string id="map_HttpProgressStageMapSendingContent" value="SendingContent"/>
+    <string id="map_HttpProgressStageMapWaitingForResponse" value="WaitingForResponse"/>
+    <string id="map_HttpProgressStageMapReceivingHeaders" value="ReceivingHeaders"/>
+    <string id="map_HttpProgressStageMapReceivingContent" value="ReceivingContent"/>
+    <string id="map_AsyncOperationMapBufferAllOperation" value="BufferAllOperation"/>
+    <string id="map_AsyncOperationMapBufferResponseOperation" value="BufferResponseOperation"/>
+    <string id="map_AsyncOperationMapMultipartBufferAllOperation" value="MultipartBufferAllOperation"/>
+    <string id="map_AsyncOperationMapMultipartWriteToStreamOperation" value="MultipartWriteToStreamOperation"/>
+    <string id="map_AsyncOperationMapReadAsBufferOperation" value="ReadAsBufferOperation"/>
+    <string id="map_AsyncOperationMapReadAsStreamOperation" value="ReadAsStreamOperation"/>
+    <string id="map_AsyncOperationMapReadAsStringOperation" value="ReadAsStringOperation"/>
+    <string id="map_AsyncOperationMapSendRequestOperation" value="SendRequestOperation"/>
+    <string id="map_AsyncOperationMapWriteToStreamOperation" value="WriteToStreamOperation"/>
+    <string id="map_HttpResponseStateMapIncompleteAndReceiving" value="IncompleteAndReceiving"/>
+    <string id="map_HttpResponseStateMapIncompleteAndPending" value="IncompleteAndPending"/>
+    <string id="map_HttpResponseStateMapAbgeschlossen" value="Abgeschlossen"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

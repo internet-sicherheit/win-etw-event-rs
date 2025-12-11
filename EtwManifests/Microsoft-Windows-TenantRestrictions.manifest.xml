@@ -1,0 +1,73 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-TenantRestrictions" guid="{4053fada-178b-5aa8-746b-7cf8538b5118}" resourceFileName="Microsoft-Windows-TenantRestrictions" messageFileName="Microsoft-Windows-TenantRestrictions" symbol="MicrosoftWindowsTenantRestrictions" source="Xml" >
+    <keywords>
+     <keyword name="TrPlugin" message="$(string.keyword_TrPlugin)" mask="0x1"/>
+     <keyword name="CloudIdSvc" message="$(string.keyword_CloudIdSvc)" mask="0x2"/>
+    </keywords>
+    <tasks>
+     <task name="NetworkingPlugin" message="$(string.task_NetworkingPlugin)" value="101"/>
+     <task name="SyncService" message="$(string.task_SyncService)" value="102"/>
+    </tasks>
+    <events>
+     <event value="1001" symbol="NetworkingPlugin" version="0" task="NetworkingPlugin" level="win:Error" keywords="TrPlugin" template="NetworkingPluginArgs"/>
+     <event value="1002" symbol="NetworkingPlugin1002" version="0" task="NetworkingPlugin" level="win:Warning" keywords="TrPlugin" template="NetworkingPlugin1002Args"/>
+     <event value="1003" symbol="NetworkingPlugin1003" version="0" task="NetworkingPlugin" level="win:Warning" keywords="TrPlugin" template="NetworkingPlugin1003Args"/>
+     <event value="1004" symbol="SyncService" version="0" task="SyncService" level="win:Informational" keywords="CloudIdSvc"/>
+     <event value="1005" symbol="SyncService1005" version="0" task="SyncService" level="win:Informational" keywords="CloudIdSvc"/>
+     <event value="1006" symbol="NetworkingPlugin1006" version="0" task="NetworkingPlugin" level="win:Error" keywords="TrPlugin" template="NetworkingPluginArgs"/>
+     <event value="1007" symbol="SyncService1007" version="0" task="SyncService" level="win:Warning" keywords="CloudIdSvc" template="SyncService1007Args"/>
+     <event value="1008" symbol="NetworkingPlugin1008" version="0" task="NetworkingPlugin" level="win:Error" keywords="TrPlugin" template="NetworkingPlugin1002Args"/>
+     <event value="1009" symbol="NetworkingPlugin1009" version="0" task="NetworkingPlugin" level="win:Error" keywords="TrPlugin" template="NetworkingPlugin1002Args"/>
+     <event value="1010" symbol="NetworkingPlugin1010" version="0" task="NetworkingPlugin" level="win:Error" keywords="TrPlugin" template="NetworkingPlugin1002Args"/>
+     <event value="1011" symbol="SyncService1011" version="0" task="SyncService" level="win:Error" keywords="CloudIdSvc" template="SyncService1011Args"/>
+     <event value="1012" symbol="SyncService1012" version="0" task="SyncService" level="win:Error" keywords="CloudIdSvc"/>
+     <event value="1013" symbol="SyncService1013" version="0" task="SyncService" level="win:Error" keywords="CloudIdSvc" template="SyncService1013Args"/>
+    </events>
+    <templates>
+     <template tid="NetworkingPluginArgs">
+      <data name="NetworkingStack" inType="win:AnsiString"/>
+      <data name="ImageName" inType="win:UnicodeString"/>
+      <data name="ModuleName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="NetworkingPlugin1002Args">
+      <data name="ImageName" inType="win:UnicodeString"/>
+      <data name="ModuleName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="NetworkingPlugin1003Args">
+      <data name="ExistingHeader" inType="win:UnicodeString"/>
+      <data name="ConfiguredHeader" inType="win:UnicodeString"/>
+      <data name="ImageName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SyncService1007Args">
+      <data name="LastSuccessfulSync" inType="win:UnicodeString"/>
+      <data name="TimeInHours" inType="win:Int32"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="SyncService1011Args">
+      <data name="InvalidGuid" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SyncService1013Args">
+      <data name="RequestPath" inType="win:UnicodeString"/>
+      <data name="HttpErrorCode" inType="win:Int32"/>
+      <data name="ResponseHeaders" inType="win:UnicodeString"/>
+      <data name="NetworkingErrorCode" inType="win:Int32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_TrPlugin" value="TrPlugin"/>
+    <string id="keyword_CloudIdSvc" value="CloudIdSvc"/>
+    <string id="task_NetworkingPlugin" value="NetworkingPlugin"/>
+    <string id="task_SyncService" value="SyncService"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

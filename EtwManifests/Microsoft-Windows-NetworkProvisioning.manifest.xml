@@ -1,0 +1,239 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-NetworkProvisioning" guid="{93a19ab3-fb2c-46eb-91ef-56b0a318b983}" resourceFileName="Microsoft-Windows-NetworkProvisioning" messageFileName="Microsoft-Windows-NetworkProvisioning" symbol="MicrosoftWindowsNetworkProvisioning" source="Xml" >
+    <keywords>
+     <keyword name="XmlValidation" message="$(string.keyword_XmlValidation)" mask="0x1"/>
+     <keyword name="XmlProcessing" message="$(string.keyword_XmlProcessing)" mask="0x2"/>
+     <keyword name="Purge" message="$(string.keyword_Purge)" mask="0x4"/>
+     <keyword name="Diagnostics" message="$(string.keyword_Diagnostics)" mask="0x8"/>
+     <keyword name="Service" message="$(string.keyword_Service)" mask="0x10"/>
+     <keyword name="Profile" message="$(string.keyword_Profile)" mask="0x20"/>
+     <keyword name="Metadata" message="$(string.keyword_Metadata)" mask="0x40"/>
+     <keyword name="ActivationTask" message="$(string.keyword_ActivationTask)" mask="0x80"/>
+     <keyword name="ProvisioningAgent" message="$(string.keyword_ProvisioningAgent)" mask="0x100"/>
+     <keyword name="Notifications" message="$(string.keyword_Notifications)" mask="0x200"/>
+     <keyword name="PurgeTask" message="$(string.keyword_PurgeTask)" mask="0x400"/>
+     <keyword name="ut:Configuration" message="$(string.keyword_ut:Configuration)" mask="0x4000000000"/>
+     <keyword name="ut:Global" message="$(string.keyword_ut:Global)" mask="0x8000000000"/>
+    </keywords>
+    <tasks>
+     <task name="Dokumenterstellen" message="$(string.task_Dokumenterstellen)" value="1"/>
+     <task name="Dokumentwirdbereitgestellt..." message="$(string.task_Dokumentwirdbereitgestellt...)" value="2"/>
+     <task name="Handleraufrufen" message="$(string.task_Handleraufrufen)" value="4"/>
+     <task name="Aufgabeaktualisieren" message="$(string.task_Aufgabeaktualisieren)" value="5"/>
+     <task name="Profileanwenden" message="$(string.task_Profileanwenden)" value="6"/>
+     <task name="Aktivierungsaufgabe" message="$(string.task_Aktivierungsaufgabe)" value="7"/>
+     <task name="Bereitstellungs_Agent" message="$(string.task_Bereitstellungs_Agent)" value="8"/>
+     <task name="Benachrichtigungen" message="$(string.task_Benachrichtigungen)" value="9"/>
+     <task name="Löschaufgabe" message="$(string.task_Löschaufgabe)" value="10"/>
+    </tasks>
+    <maps>
+     <valueMap name="ActivationMethodMap">
+      <map value="0x1" message="$(string.map_ActivationMethodMapDienstaktivierung)"/>
+      <map value="0x2" message="$(string.map_ActivationMethodMapRegistrierung beim Netzwerk erneuern)"/>
+      <map value="0x3" message="$(string.map_ActivationMethodMapVerbindung mit dem Netzwerk erneuern)"/>
+     </valueMap>
+     <valueMap name="RadioStateMap">
+      <map value="0x1" message="$(string.map_RadioStateMapein)"/>
+      <map value="0x2" message="$(string.map_RadioStateMapaus)"/>
+     </valueMap>
+     <valueMap name="ProfileTypeMap">
+      <map value="0x1" message="$(string.map_ProfileTypeMapStandard)"/>
+      <map value="0x2" message="$(string.map_ProfileTypeMapKaufen)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1000" symbol="DokumenterstellenStarten" version="0" task="Dokumenterstellen" opcode="win:Starten" level="win:Informational" keywords="XmlValidation ut:Configuration" template="DokumenterstellenStartenArgs"/>
+     <event value="1001" symbol="DokumenterstellenBeenden" version="0" task="Dokumenterstellen" opcode="win:Beenden" level="win:Informational" keywords="XmlValidation ut:Configuration" template="DokumenterstellenBeendenArgs"/>
+     <event value="1002" symbol="Dokumenterstellen" version="0" task="Dokumenterstellen" level="win:Informational" keywords="XmlValidation ut:Configuration" template="DokumenterstellenArgs"/>
+     <event value="1003" symbol="Dokumenterstellen1003" version="0" task="Dokumenterstellen" level="win:Informational" keywords="XmlValidation ut:Configuration" template="DokumenterstellenArgs"/>
+     <event value="1004" symbol="Dokumenterstellen1004" version="0" task="Dokumenterstellen" level="win:Informational" keywords="XmlValidation ut:Configuration" template="Dokumenterstellen1004Args"/>
+     <event value="1005" symbol="Dokumenterstellen1005" version="0" task="Dokumenterstellen" level="win:Error" keywords="XmlValidation ut:Configuration" template="Dokumenterstellen1005Args"/>
+     <event value="1006" symbol="Dokumenterstellen1006" version="0" task="Dokumenterstellen" level="win:Error" keywords="XmlValidation ut:Configuration" template="Dokumenterstellen1006Args"/>
+     <event value="1007" symbol="Dokumenterstellen1007" version="0" task="Dokumenterstellen" level="win:Error" keywords="XmlValidation ut:Configuration" template="Dokumenterstellen1007Args"/>
+     <event value="1008" symbol="Dokumenterstellen1008" version="0" task="Dokumenterstellen" level="win:Error" keywords="XmlValidation ut:Configuration" template="DokumenterstellenArgs"/>
+     <event value="2000" symbol="Dokumentwirdbereitgestellt...Starten" version="0" task="Dokumentwirdbereitgestellt..." opcode="win:Starten" level="win:Informational" keywords="XmlProcessing ut:Configuration"/>
+     <event value="2001" symbol="Dokumentwirdbereitgestellt...Beenden" version="0" task="Dokumentwirdbereitgestellt..." opcode="win:Beenden" level="win:Informational" keywords="XmlProcessing ut:Configuration" template="Dokumentwirdbereitgestellt...BeendenArgs"/>
+     <event value="2002" symbol="Dokumentwirdbereitgestellt..." version="0" task="Dokumentwirdbereitgestellt..." level="win:Informational" keywords="XmlProcessing ut:Configuration" template="Dokumentwirdbereitgestellt...Args"/>
+     <event value="4001" symbol="Aufgabeaktualisieren" version="0" task="Aufgabeaktualisieren" level="win:Informational" keywords="XmlProcessing ut:Configuration" template="DokumenterstellenArgs"/>
+     <event value="5000" symbol="Aktivierungsaufgabe" version="0" task="Aktivierungsaufgabe" level="win:Informational" keywords="ActivationTask ut:Configuration" template="AktivierungsaufgabeArgs"/>
+     <event value="5001" symbol="Aktivierungsaufgabe5001" version="0" task="Aktivierungsaufgabe" level="win:Informational" keywords="ActivationTask ut:Configuration" template="Aktivierungsaufgabe5001Args"/>
+     <event value="5002" symbol="Aktivierungsaufgabe5002" version="0" task="Aktivierungsaufgabe" level="win:Warning" keywords="ActivationTask ut:Configuration" template="Aktivierungsaufgabe5002Args"/>
+     <event value="5003" symbol="Aktivierungsaufgabe5003" version="0" task="Aktivierungsaufgabe" level="win:Error" keywords="ActivationTask ut:Configuration" template="Aktivierungsaufgabe5003Args"/>
+     <event value="5004" symbol="Aktivierungsaufgabe5004" version="0" task="Aktivierungsaufgabe" level="win:Error" keywords="ActivationTask ut:Configuration" template="Aktivierungsaufgabe5004Args"/>
+     <event value="5005" symbol="Aktivierungsaufgabe5005" version="0" task="Aktivierungsaufgabe" level="win:Error" keywords="ActivationTask ut:Configuration" template="Aktivierungsaufgabe5005Args"/>
+     <event value="5006" symbol="Aktivierungsaufgabe5006" version="0" task="Aktivierungsaufgabe" level="win:Error" keywords="ActivationTask ut:Configuration" template="Aktivierungsaufgabe5006Args"/>
+     <event value="5007" symbol="Aktivierungsaufgabe5007" version="0" task="Aktivierungsaufgabe" level="win:Error" keywords="ActivationTask ut:Configuration" template="Aktivierungsaufgabe5007Args"/>
+     <event value="6000" symbol="Löschaufgabe" version="0" task="Löschaufgabe" level="win:Informational" keywords="PurgeTask ut:Configuration"/>
+     <event value="6001" symbol="Löschaufgabe6001" version="0" task="Löschaufgabe" level="win:Informational" keywords="PurgeTask ut:Configuration" template="DokumenterstellenBeendenArgs"/>
+     <event value="6002" symbol="Löschaufgabe6002" version="0" task="Löschaufgabe" level="win:Informational" keywords="PurgeTask ut:Configuration" template="Löschaufgabe6002Args"/>
+     <event value="9000" symbol="HandleraufrufenStarten" version="0" task="Handleraufrufen" opcode="win:Starten" level="win:Informational" keywords="XmlProcessing ut:Configuration" template="HandleraufrufenStartenArgs"/>
+     <event value="9001" symbol="HandleraufrufenBeenden" version="0" task="Handleraufrufen" opcode="win:Beenden" level="win:Informational" keywords="XmlProcessing ut:Configuration" template="HandleraufrufenBeendenArgs"/>
+     <event value="9100" symbol="HandleraufrufenStarten9100" version="0" task="Handleraufrufen" opcode="win:Starten" level="win:Informational" keywords="Purge ut:Configuration" template="HandleraufrufenStartenArgs"/>
+     <event value="9101" symbol="HandleraufrufenBeenden9101" version="0" task="Handleraufrufen" opcode="win:Beenden" level="win:Informational" keywords="Purge ut:Configuration" template="HandleraufrufenStartenArgs"/>
+     <event value="10000" symbol="Profileanwenden" version="0" task="Profileanwenden" level="win:Warning" keywords="Diagnostics Service ut:Configuration" template="ProfileanwendenArgs"/>
+     <event value="10001" symbol="Profileanwenden10001" version="0" task="Profileanwenden" level="win:Warning" keywords="ut:Configuration" template="Profileanwenden10001Args"/>
+     <event value="10002" symbol="Profileanwenden10002" version="0" task="Profileanwenden" level="win:Warning" keywords="Diagnostics Profile ut:Configuration" template="Profileanwenden10001Args"/>
+     <event value="10003" symbol="Profileanwenden10003" version="0" task="Profileanwenden" level="win:Warning" keywords="Diagnostics Profile Metadata ut:Configuration" template="Profileanwenden10003Args"/>
+     <event value="11000" symbol="Benachrichtigungen" version="0" task="Benachrichtigungen" level="win:Warning" keywords="Diagnostics Notifications ut:Configuration" template="BenachrichtigungenArgs"/>
+     <event value="20000" symbol="Bereitstellungs_Agent" version="0" task="Bereitstellungs_Agent" level="win:Informational" keywords="Diagnostics ProvisioningAgent ut:Configuration" template="Bereitstellungs_AgentArgs"/>
+    </events>
+    <templates>
+     <template tid="DokumenterstellenStartenArgs">
+      <data name="SizeOfXMLInBytes" inType="win:UInt64"/>
+     </template>
+     <template tid="DokumenterstellenBeendenArgs">
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="DokumenterstellenArgs">
+      <data name="Result" inType="win:Int32"/>
+     </template>
+     <template tid="Dokumenterstellen1004Args">
+      <data name="ErrorCode" inType="win:Int32"/>
+      <data name="CarrierId" inType="win:UnicodeString"/>
+      <data name="SubscriberId" inType="win:UnicodeString"/>
+      <data name="DeviceId" inType="win:UnicodeString"/>
+      <data name="Signer" inType="win:UnicodeString"/>
+      <data name="CertificateIssuer" inType="win:UnicodeString"/>
+      <data name="CertificateSubject" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Dokumenterstellen1005Args">
+      <data name="StreamSize" inType="win:UInt64"/>
+      <data name="StreamSizeLimit" inType="win:UInt64"/>
+     </template>
+     <template tid="Dokumenterstellen1006Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="Description" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Dokumenterstellen1007Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Line" inType="win:Int32"/>
+      <data name="LinePos" inType="win:Int32"/>
+      <data name="Reason" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Dokumentwirdbereitgestellt...BeendenArgs">
+      <data name="ErrorCode" inType="win:Int32"/>
+      <data name="ErrorOccurred" inType="win:Boolean"/>
+     </template>
+     <template tid="Dokumentwirdbereitgestellt...Args">
+      <data name="BoolResult" inType="win:Boolean"/>
+     </template>
+     <template tid="AktivierungsaufgabeArgs">
+      <data name="ActivationMethod" inType="win:UInt32" map="ActivationMethodMap"/>
+      <data name="CarrierId" inType="win:UnicodeString"/>
+      <data name="SubscriberId" inType="win:UnicodeString"/>
+      <data name="Params" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Aktivierungsaufgabe5001Args">
+      <data name="ActivationMethod" inType="win:UInt32"/>
+      <data name="CarrierId" inType="win:UnicodeString"/>
+      <data name="SubscriberId" inType="win:UnicodeString"/>
+      <data name="Params" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="Aktivierungsaufgabe5002Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="Aktivierungsaufgabe5003Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="RadioState" inType="win:UInt32" map="RadioStateMap"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="Aktivierungsaufgabe5004Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="RegisterState" inType="win:UInt32"/>
+     </template>
+     <template tid="Aktivierungsaufgabe5005Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="ProfileType" inType="win:UInt32" map="ProfileTypeMap"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="Aktivierungsaufgabe5006Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="ProfileName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="Aktivierungsaufgabe5007Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="Löschaufgabe6002Args">
+      <data name="CarrierId" inType="win:UnicodeString"/>
+      <data name="SubscriberId" inType="win:UnicodeString"/>
+      <data name="AppId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="HandleraufrufenStartenArgs">
+      <data name="HandlerName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="HandleraufrufenBeendenArgs">
+      <data name="HandlerName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+      <data name="HasResults" inType="win:Boolean"/>
+     </template>
+     <template tid="ProfileanwendenArgs">
+      <data name="ServiceName" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="Profileanwenden10001Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="ProfileName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+      <data name="ReasonCode" inType="win:UInt32"/>
+     </template>
+     <template tid="Profileanwenden10003Args">
+      <data name="InterfaceGuid" inType="win:GUID"/>
+      <data name="ProfileName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+      <data name="Parameter" inType="win:UInt32"/>
+     </template>
+     <template tid="BenachrichtigungenArgs">
+      <data name="Position" inType="win:UInt64"/>
+      <data name="RulesXml" inType="win:UnicodeString"/>
+      <data name="Reason" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Bereitstellungs_AgentArgs">
+      <data name="CallerAppId" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_XmlValidation" value="XmlValidation"/>
+    <string id="keyword_XmlProcessing" value="XmlProcessing"/>
+    <string id="keyword_Purge" value="Purge"/>
+    <string id="keyword_Diagnostics" value="Diagnostics"/>
+    <string id="keyword_Service" value="Service"/>
+    <string id="keyword_Profile" value="Profile"/>
+    <string id="keyword_Metadata" value="Metadata"/>
+    <string id="keyword_ActivationTask" value="ActivationTask"/>
+    <string id="keyword_ProvisioningAgent" value="ProvisioningAgent"/>
+    <string id="keyword_Notifications" value="Notifications"/>
+    <string id="keyword_PurgeTask" value="PurgeTask"/>
+    <string id="keyword_ut:Configuration" value="ut:Configuration"/>
+    <string id="keyword_ut:Global" value="ut:Global"/>
+    <string id="task_Dokumenterstellen" value="Dokumenterstellen"/>
+    <string id="task_Dokumentwirdbereitgestellt..." value="Dokumentwirdbereitgestellt..."/>
+    <string id="task_Handleraufrufen" value="Handleraufrufen"/>
+    <string id="task_Aufgabeaktualisieren" value="Aufgabeaktualisieren"/>
+    <string id="task_Profileanwenden" value="Profileanwenden"/>
+    <string id="task_Aktivierungsaufgabe" value="Aktivierungsaufgabe"/>
+    <string id="task_Bereitstellungs_Agent" value="Bereitstellungs_Agent"/>
+    <string id="task_Benachrichtigungen" value="Benachrichtigungen"/>
+    <string id="task_Löschaufgabe" value="Löschaufgabe"/>
+    <string id="map_ActivationMethodMapDienstaktivierung" value="Dienstaktivierung"/>
+    <string id="map_ActivationMethodMapRegistrierung beim Netzwerk erneuern" value="Registrierung beim Netzwerk erneuern"/>
+    <string id="map_ActivationMethodMapVerbindung mit dem Netzwerk erneuern" value="Verbindung mit dem Netzwerk erneuern"/>
+    <string id="map_RadioStateMapein" value="ein"/>
+    <string id="map_RadioStateMapaus" value="aus"/>
+    <string id="map_ProfileTypeMapStandard" value="Standard"/>
+    <string id="map_ProfileTypeMapKaufen" value="Kaufen"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

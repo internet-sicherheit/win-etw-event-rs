@@ -1,0 +1,321 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Dwm-Api" guid="{292a52c4-fa27-4461-b526-54a46430bd54}" resourceFileName="Microsoft-Windows-Dwm-Api" messageFileName="Microsoft-Windows-Dwm-Api" symbol="MicrosoftWindowsDwmApi" source="Xml" >
+    <keywords>
+     <keyword name="DwmApi" message="$(string.keyword_DwmApi)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="ApiEnableBlurBehindWindow" message="$(string.task_ApiEnableBlurBehindWindow)" value="1"/>
+     <task name="ApiExtendFrameIntoClientArea" message="$(string.task_ApiExtendFrameIntoClientArea)" value="2"/>
+     <task name="ApiGetColorizationColor" message="$(string.task_ApiGetColorizationColor)" value="3"/>
+     <task name="ApiGetCompositionTimingInfo" message="$(string.task_ApiGetCompositionTimingInfo)" value="4"/>
+     <task name="ApiGetWindowAttribute" message="$(string.task_ApiGetWindowAttribute)" value="5"/>
+     <task name="ApiSetWindowAttribute" message="$(string.task_ApiSetWindowAttribute)" value="6"/>
+     <task name="ApiIsCompositionEnabled" message="$(string.task_ApiIsCompositionEnabled)" value="7"/>
+     <task name="ApiRegisterThumbnail" message="$(string.task_ApiRegisterThumbnail)" value="8"/>
+     <task name="ApiUnregisterThumbnail" message="$(string.task_ApiUnregisterThumbnail)" value="9"/>
+     <task name="ApiUpdateThumbnailProperties" message="$(string.task_ApiUpdateThumbnailProperties)" value="10"/>
+     <task name="ApiEnableMMCSS" message="$(string.task_ApiEnableMMCSS)" value="12"/>
+     <task name="ApiFlush" message="$(string.task_ApiFlush)" value="13"/>
+     <task name="ApiSetIconicThumbnail" message="$(string.task_ApiSetIconicThumbnail)" value="14"/>
+     <task name="ApipAttachMilContent" message="$(string.task_ApipAttachMilContent)" value="15"/>
+     <task name="ApipDetachMilContent" message="$(string.task_ApipDetachMilContent)" value="16"/>
+     <task name="ApipOpenGraphicsStream" message="$(string.task_ApipOpenGraphicsStream)" value="17"/>
+     <task name="ApipCloseGraphicsStream" message="$(string.task_ApipCloseGraphicsStream)" value="18"/>
+     <task name="ApipEnumGraphicsStreamClients" message="$(string.task_ApipEnumGraphicsStreamClients)" value="19"/>
+     <task name="ApipQueryGraphicsStream" message="$(string.task_ApipQueryGraphicsStream)" value="20"/>
+     <task name="ApipSetColorizationColor" message="$(string.task_ApipSetColorizationColor)" value="21"/>
+     <task name="ApipStartupViaUserInit" message="$(string.task_ApipStartupViaUserInit)" value="22"/>
+     <task name="ApipDxGetWindowSharedSurface" message="$(string.task_ApipDxGetWindowSharedSurface)" value="23"/>
+     <task name="ApipDxUpdateWindowSharedSurface" message="$(string.task_ApipDxUpdateWindowSharedSurface)" value="24"/>
+     <task name="ApipEnableComposition" message="$(string.task_ApipEnableComposition)" value="25"/>
+     <task name="ApipQueryThumbnailSourceSize" message="$(string.task_ApipQueryThumbnailSourceSize)" value="26"/>
+     <task name="ApipGetSpecialWindow" message="$(string.task_ApipGetSpecialWindow)" value="27"/>
+     <task name="ApipRestartComposition" message="$(string.task_ApipRestartComposition)" value="28"/>
+     <task name="ApipIsCompositionCapable" message="$(string.task_ApipIsCompositionCapable)" value="29"/>
+     <task name="ApipSetGraphicsStreamTransformHInt" message="$(string.task_ApipSetGraphicsStreamTransformHInt)" value="33"/>
+     <task name="ApipEnumGraphicsStreamTransformHInts" message="$(string.task_ApipEnumGraphicsStreamTransformHInts)" value="34"/>
+     <task name="ApipGetGlobalState" message="$(string.task_ApipGetGlobalState)" value="35"/>
+     <task name="ApiSnapshotIconicThumbnail" message="$(string.task_ApiSnapshotIconicThumbnail)" value="36"/>
+     <task name="ApipActivateLivePreview" message="$(string.task_ApipActivateLivePreview)" value="37"/>
+     <task name="ApiSetIconicLivePreviewBitmap" message="$(string.task_ApiSetIconicLivePreviewBitmap)" value="38"/>
+     <task name="ApiInvalidateIconicBitmaps" message="$(string.task_ApiInvalidateIconicBitmaps)" value="39"/>
+     <task name="ApipDxUpdateWindowRedirectionBltSurface" message="$(string.task_ApipDxUpdateWindowRedirectionBltSurface)" value="40"/>
+     <task name="ApipDxSetContentHostingInformation" message="$(string.task_ApipDxSetContentHostingInformation)" value="41"/>
+     <task name="ApipRenderFlick" message="$(string.task_ApipRenderFlick)" value="42"/>
+     <task name="ApiRenderGesture" message="$(string.task_ApiRenderGesture)" value="43"/>
+     <task name="ApiShowContact" message="$(string.task_ApiShowContact)" value="44"/>
+     <task name="ApiTetherContact" message="$(string.task_ApiTetherContact)" value="45"/>
+     <task name="ApiRegisterTransitionRegionSource" message="$(string.task_ApiRegisterTransitionRegionSource)" value="46"/>
+     <task name="ApiRegisterTransitionRegionDestination" message="$(string.task_ApiRegisterTransitionRegionDestination)" value="47"/>
+     <task name="ApiStartTransitionRegion" message="$(string.task_ApiStartTransitionRegion)" value="48"/>
+     <task name="ApiUnregisterTransitionRegion" message="$(string.task_ApiUnregisterTransitionRegion)" value="49"/>
+     <task name="ApipStartTransition" message="$(string.task_ApipStartTransition)" value="50"/>
+     <task name="ApipEndTransition" message="$(string.task_ApipEndTransition)" value="51"/>
+     <task name="ApipTransitionWindow" message="$(string.task_ApipTransitionWindow)" value="52"/>
+     <task name="ApiTransitionOwnedWindow" message="$(string.task_ApiTransitionOwnedWindow)" value="53"/>
+     <task name="ApipUpdateDesktopThumbnail" message="$(string.task_ApipUpdateDesktopThumbnail)" value="54"/>
+     <task name="ApipActivateHardwareExpression" message="$(string.task_ApipActivateHardwareExpression)" value="55"/>
+     <task name="ApiTetherTextContact" message="$(string.task_ApiTetherTextContact)" value="56"/>
+    </tasks>
+    <maps>
+     <bitMap name="DxgiRedirectionFlags">
+      <map value="0x1" message="$(string.map_DxgiRedirectionFlagsMapped form INTERVAL_ONE. Will wait for LPC to return with a surface)"/>
+      <map value="0x2" message="$(string.map_DxgiRedirectionFlagsInstruct the API to wait on behaf of the runtime)"/>
+      <map value="0x4" message="$(string.map_DxgiRedirectionFlagsClip to the output. Used for content protection)"/>
+      <map value="0x8" message="$(string.map_DxgiRedirectionFlagsrespect per-output content protection)"/>
+      <map value="0x10" message="$(string.map_DxgiRedirectionFlagsUse Same-Surface-Present if available)"/>
+      <map value="0x20" message="$(string.map_DxgiRedirectionFlagsThe desktop compositor will not expect present-history-tokens)"/>
+      <map value="0x40" message="$(string.map_DxgiRedirectionFlagsDo not use the Dx-Accumulation-Region for the FlipChain, thus disabling Vista-Blt based DX-GDI mixing)"/>
+      <map value="0x80" message="$(string.map_DxgiRedirectionFlagsAdapterübergreifende Konfiguration ist aktiv.)"/>
+     </bitMap>
+    </maps>
+    <events>
+     <event value="1" symbol="ApiEnableBlurBehindWindowStarten" version="0" task="ApiEnableBlurBehindWindow" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="2" symbol="ApiEnableBlurBehindWindowBeenden" version="0" task="ApiEnableBlurBehindWindow" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="3" symbol="ApiExtendFrameIntoClientAreaStarten" version="0" task="ApiExtendFrameIntoClientArea" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="4" symbol="ApiExtendFrameIntoClientAreaBeenden" version="0" task="ApiExtendFrameIntoClientArea" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="5" symbol="ApiGetColorizationColorStarten" version="0" task="ApiGetColorizationColor" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="6" symbol="ApiGetColorizationColorBeenden" version="0" task="ApiGetColorizationColor" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="7" symbol="ApiGetCompositionTimingInfoStarten" version="0" task="ApiGetCompositionTimingInfo" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="8" symbol="ApiGetCompositionTimingInfoBeenden" version="0" task="ApiGetCompositionTimingInfo" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="9" symbol="ApiGetWindowAttributeStarten" version="0" task="ApiGetWindowAttribute" opcode="win:Starten" level="win:Informational" keywords="DwmApi" template="ApiGetWindowAttributeStartenArgs"/>
+     <event value="10" symbol="ApiGetWindowAttributeBeenden" version="0" task="ApiGetWindowAttribute" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiGetWindowAttributeBeendenArgs"/>
+     <event value="11" symbol="ApiSetWindowAttributeStarten" version="0" task="ApiSetWindowAttribute" opcode="win:Starten" level="win:Informational" keywords="DwmApi" template="ApiGetWindowAttributeStartenArgs"/>
+     <event value="12" symbol="ApiSetWindowAttributeBeenden" version="0" task="ApiSetWindowAttribute" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiGetWindowAttributeBeendenArgs"/>
+     <event value="13" symbol="ApiIsCompositionEnabledStarten" version="0" task="ApiIsCompositionEnabled" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="14" symbol="ApiIsCompositionEnabledBeenden" version="0" task="ApiIsCompositionEnabled" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="15" symbol="ApiRegisterThumbnailStarten" version="0" task="ApiRegisterThumbnail" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="16" symbol="ApiRegisterThumbnailBeenden" version="0" task="ApiRegisterThumbnail" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="17" symbol="ApiUnregisterThumbnailStarten" version="0" task="ApiUnregisterThumbnail" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="18" symbol="ApiUnregisterThumbnailBeenden" version="0" task="ApiUnregisterThumbnail" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="19" symbol="ApiUpdateThumbnailPropertiesStarten" version="0" task="ApiUpdateThumbnailProperties" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="20" symbol="ApiUpdateThumbnailPropertiesBeenden" version="0" task="ApiUpdateThumbnailProperties" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="23" symbol="ApiEnableMMCSSStarten" version="0" task="ApiEnableMMCSS" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="24" symbol="ApiEnableMMCSSBeenden" version="0" task="ApiEnableMMCSS" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="25" symbol="ApiFlushStarten" version="0" task="ApiFlush" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="26" symbol="ApiFlushBeenden" version="0" task="ApiFlush" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="27" symbol="ApiSetIconicThumbnailStarten" version="0" task="ApiSetIconicThumbnail" opcode="win:Starten" level="win:Informational" keywords="DwmApi" template="ApiGetWindowAttributeStartenArgs"/>
+     <event value="28" symbol="ApiSetIconicThumbnailBeenden" version="0" task="ApiSetIconicThumbnail" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiSetIconicThumbnailBeendenArgs"/>
+     <event value="29" symbol="ApipAttachMilContentStarten" version="0" task="ApipAttachMilContent" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="30" symbol="ApipAttachMilContentBeenden" version="0" task="ApipAttachMilContent" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="31" symbol="ApipDetachMilContentStarten" version="0" task="ApipDetachMilContent" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="32" symbol="ApipDetachMilContentBeenden" version="0" task="ApipDetachMilContent" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="33" symbol="ApipOpenGraphicsStreamStarten" version="0" task="ApipOpenGraphicsStream" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="34" symbol="ApipOpenGraphicsStreamBeenden" version="0" task="ApipOpenGraphicsStream" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="35" symbol="ApipCloseGraphicsStreamStarten" version="0" task="ApipCloseGraphicsStream" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="36" symbol="ApipCloseGraphicsStreamBeenden" version="0" task="ApipCloseGraphicsStream" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="37" symbol="ApipEnumGraphicsStreamClientsStarten" version="0" task="ApipEnumGraphicsStreamClients" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="38" symbol="ApipEnumGraphicsStreamClientsBeenden" version="0" task="ApipEnumGraphicsStreamClients" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="39" symbol="ApipQueryGraphicsStreamStarten" version="0" task="ApipQueryGraphicsStream" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="40" symbol="ApipQueryGraphicsStreamBeenden" version="0" task="ApipQueryGraphicsStream" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="41" symbol="ApipSetColorizationColorStarten" version="0" task="ApipSetColorizationColor" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="42" symbol="ApipSetColorizationColorBeenden" version="0" task="ApipSetColorizationColor" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="43" symbol="ApipStartupViaUserInitStarten" version="0" task="ApipStartupViaUserInit" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="44" symbol="ApipStartupViaUserInitBeenden" version="0" task="ApipStartupViaUserInit" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="45" symbol="ApipDxGetWindowSharedSurfaceStarten" version="0" task="ApipDxGetWindowSharedSurface" opcode="win:Starten" level="win:Informational" keywords="DwmApi" template="ApipDxGetWindowSharedSurfaceStartenArgs"/>
+     <event value="46" symbol="ApipDxGetWindowSharedSurfaceBeenden" version="0" task="ApipDxGetWindowSharedSurface" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApipDxGetWindowSharedSurfaceBeendenArgs"/>
+     <event value="47" symbol="ApipDxUpdateWindowSharedSurfaceStarten" version="0" task="ApipDxUpdateWindowSharedSurface" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="48" symbol="ApipDxUpdateWindowSharedSurfaceBeenden" version="0" task="ApipDxUpdateWindowSharedSurface" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApipDxUpdateWindowSharedSurfaceBeendenArgs"/>
+     <event value="49" symbol="ApipEnableCompositionStarten" version="0" task="ApipEnableComposition" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="50" symbol="ApipEnableCompositionBeenden" version="0" task="ApipEnableComposition" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApipEnableCompositionBeendenArgs"/>
+     <event value="51" symbol="ApipQueryThumbnailSourceSizeStarten" version="0" task="ApipQueryThumbnailSourceSize" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="52" symbol="ApipQueryThumbnailSourceSizeBeenden" version="0" task="ApipQueryThumbnailSourceSize" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="53" symbol="ApipGetSpecialWindowStarten" version="0" task="ApipGetSpecialWindow" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="54" symbol="ApipGetSpecialWindowBeenden" version="0" task="ApipGetSpecialWindow" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="55" symbol="ApipRestartCompositionStarten" version="0" task="ApipRestartComposition" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="56" symbol="ApipRestartCompositionBeenden" version="0" task="ApipRestartComposition" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="57" symbol="ApipIsCompositionCapableStarten" version="0" task="ApipIsCompositionCapable" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="58" symbol="ApipIsCompositionCapableBeenden" version="0" task="ApipIsCompositionCapable" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="65" symbol="ApipSetGraphicsStreamTransformHIntStarten" version="0" task="ApipSetGraphicsStreamTransformHInt" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="66" symbol="ApipSetGraphicsStreamTransformHIntBeenden" version="0" task="ApipSetGraphicsStreamTransformHInt" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="67" symbol="ApipEnumGraphicsStreamTransformHIntsStarten" version="0" task="ApipEnumGraphicsStreamTransformHInts" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="68" symbol="ApipEnumGraphicsStreamTransformHIntsBeenden" version="0" task="ApipEnumGraphicsStreamTransformHInts" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="69" symbol="ApipGetGlobalStateStarten" version="0" task="ApipGetGlobalState" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="70" symbol="ApipGetGlobalStateBeenden" version="0" task="ApipGetGlobalState" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="71" symbol="ApiSnapshotIconicThumbnailStarten" version="0" task="ApiSnapshotIconicThumbnail" opcode="win:Starten" level="win:Informational" keywords="DwmApi" template="ApiSnapshotIconicThumbnailStartenArgs"/>
+     <event value="72" symbol="ApiSnapshotIconicThumbnailBeenden" version="0" task="ApiSnapshotIconicThumbnail" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiSetIconicThumbnailBeendenArgs"/>
+     <event value="73" symbol="ApipActivateLivePreviewStarten" version="0" task="ApipActivateLivePreview" opcode="win:Starten" level="win:Informational" keywords="DwmApi" template="ApipActivateLivePreviewStartenArgs"/>
+     <event value="74" symbol="ApipActivateLivePreviewBeenden" version="0" task="ApipActivateLivePreview" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApipActivateLivePreviewStartenArgs"/>
+     <event value="75" symbol="ApiSetIconicLivePreviewBitmapStarten" version="0" task="ApiSetIconicLivePreviewBitmap" opcode="win:Starten" level="win:Informational" keywords="DwmApi" template="ApiGetWindowAttributeStartenArgs"/>
+     <event value="76" symbol="ApiSetIconicLivePreviewBitmapBeenden" version="0" task="ApiSetIconicLivePreviewBitmap" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiSetIconicThumbnailBeendenArgs"/>
+     <event value="77" symbol="ApiInvalidateIconicBitmapsStarten" version="0" task="ApiInvalidateIconicBitmaps" opcode="win:Starten" level="win:Informational" keywords="DwmApi" template="ApiGetWindowAttributeStartenArgs"/>
+     <event value="78" symbol="ApiInvalidateIconicBitmapsBeenden" version="0" task="ApiInvalidateIconicBitmaps" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiSetIconicThumbnailBeendenArgs"/>
+     <event value="79" symbol="ApipDxUpdateWindowRedirectionBltSurfaceStarten" version="0" task="ApipDxUpdateWindowRedirectionBltSurface" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="80" symbol="ApipDxUpdateWindowRedirectionBltSurfaceBeenden" version="0" task="ApipDxUpdateWindowRedirectionBltSurface" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApipDxUpdateWindowSharedSurfaceBeendenArgs"/>
+     <event value="81" symbol="ApipDxSetContentHostingInformationStarten" version="0" task="ApipDxSetContentHostingInformation" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="82" symbol="ApipDxSetContentHostingInformationBeenden" version="0" task="ApipDxSetContentHostingInformation" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApipDxSetContentHostingInformationBeendenArgs"/>
+     <event value="83" symbol="ApipRenderFlickStarten" version="0" task="ApipRenderFlick" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="84" symbol="ApipRenderFlickBeenden" version="0" task="ApipRenderFlick" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="85" symbol="ApiRenderGestureStarten" version="0" task="ApiRenderGesture" opcode="win:Starten" level="win:Informational" keywords="DwmApi" template="ApiRenderGestureStartenArgs"/>
+     <event value="86" symbol="ApiRenderGestureBeenden" version="0" task="ApiRenderGesture" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiRenderGestureBeendenArgs"/>
+     <event value="87" symbol="ApiShowContactStarten" version="0" task="ApiShowContact" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="88" symbol="ApiShowContactBeenden" version="0" task="ApiShowContact" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="89" symbol="ApiTetherContactStarten" version="0" task="ApiTetherContact" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="90" symbol="ApiTetherContactBeenden" version="0" task="ApiTetherContact" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="91" symbol="ApiRegisterTransitionRegionSourceStarten" version="0" task="ApiRegisterTransitionRegionSource" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="92" symbol="ApiRegisterTransitionRegionSourceBeenden" version="0" task="ApiRegisterTransitionRegionSource" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="93" symbol="ApiRegisterTransitionRegionDestinationStarten" version="0" task="ApiRegisterTransitionRegionDestination" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="94" symbol="ApiRegisterTransitionRegionDestinationBeenden" version="0" task="ApiRegisterTransitionRegionDestination" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="95" symbol="ApiStartTransitionRegionStarten" version="0" task="ApiStartTransitionRegion" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="96" symbol="ApiStartTransitionRegionBeenden" version="0" task="ApiStartTransitionRegion" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="97" symbol="ApiUnregisterTransitionRegionStarten" version="0" task="ApiUnregisterTransitionRegion" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="98" symbol="ApiUnregisterTransitionRegionBeenden" version="0" task="ApiUnregisterTransitionRegion" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="99" symbol="ApipStartTransitionStarten" version="0" task="ApipStartTransition" opcode="win:Starten" level="win:Informational" keywords="DwmApi" template="ApipStartTransitionStartenArgs"/>
+     <event value="100" symbol="ApipStartTransitionBeenden" version="0" task="ApipStartTransition" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="101" symbol="ApipEndTransitionStarten" version="0" task="ApipEndTransition" opcode="win:Starten" level="win:Informational" keywords="DwmApi" template="ApipStartTransitionStartenArgs"/>
+     <event value="102" symbol="ApipEndTransitionBeenden" version="0" task="ApipEndTransition" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="103" symbol="ApipTransitionWindowStarten" version="0" task="ApipTransitionWindow" opcode="win:Starten" level="win:Informational" keywords="DwmApi" template="ApipTransitionWindowStartenArgs"/>
+     <event value="104" symbol="ApipTransitionWindowBeenden" version="0" task="ApipTransitionWindow" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="105" symbol="ApiTransitionOwnedWindowStarten" version="0" task="ApiTransitionOwnedWindow" opcode="win:Starten" level="win:Informational" keywords="DwmApi" template="ApipTransitionWindowStartenArgs"/>
+     <event value="106" symbol="ApiTransitionOwnedWindowBeenden" version="0" task="ApiTransitionOwnedWindow" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="107" symbol="ApipUpdateDesktopThumbnailStarten" version="0" task="ApipUpdateDesktopThumbnail" opcode="win:Starten" level="win:Informational" keywords="DwmApi" template="ApiGetWindowAttributeStartenArgs"/>
+     <event value="108" symbol="ApipUpdateDesktopThumbnailBeenden" version="0" task="ApipUpdateDesktopThumbnail" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="109" symbol="ApipActivateHardwareExpressionStarten" version="0" task="ApipActivateHardwareExpression" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="110" symbol="ApipActivateHardwareExpressionBeenden" version="0" task="ApipActivateHardwareExpression" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+     <event value="111" symbol="ApiTetherTextContactStarten" version="0" task="ApiTetherTextContact" opcode="win:Starten" level="win:Informational" keywords="DwmApi"/>
+     <event value="112" symbol="ApiTetherTextContactBeenden" version="0" task="ApiTetherTextContact" opcode="win:Beenden" level="win:Informational" keywords="DwmApi" template="ApiEnableBlurBehindWindowBeendenArgs"/>
+    </events>
+    <templates>
+     <template tid="ApiEnableBlurBehindWindowBeendenArgs">
+      <data name="hr" inType="win:UInt32"/>
+     </template>
+     <template tid="ApiGetWindowAttributeStartenArgs">
+      <data name="hwnd" inType="win:Pointer"/>
+     </template>
+     <template tid="ApiGetWindowAttributeBeendenArgs">
+      <data name="hr" inType="win:UInt32"/>
+      <data name="Hwnd" inType="win:Pointer"/>
+     </template>
+     <template tid="ApiSetIconicThumbnailBeendenArgs">
+      <data name="hr" inType="win:UInt32"/>
+      <data name="hwnd" inType="win:Pointer"/>
+     </template>
+     <template tid="ApipDxGetWindowSharedSurfaceStartenArgs">
+      <data name="Hwnd" inType="win:UInt64"/>
+      <data name="luidAdapter" inType="win:UInt64"/>
+      <data name="hmonAssociation" inType="win:UInt64"/>
+      <data name="dwFlags" inType="win:UInt32" map="DxgiRedirectionFlags"/>
+      <data name="DxgiFormat" inType="win:UInt32"/>
+     </template>
+     <template tid="ApipDxGetWindowSharedSurfaceBeendenArgs">
+      <data name="Hwnd" inType="win:UInt64"/>
+      <data name="hr" inType="win:UInt32"/>
+      <data name="hDxSurface" inType="win:UInt64"/>
+      <data name="uiUpdateId" inType="win:UInt64"/>
+      <data name="DxgiFormat" inType="win:UInt32"/>
+      <data name="cTries" inType="win:UInt32"/>
+     </template>
+     <template tid="ApipDxUpdateWindowSharedSurfaceBeendenArgs">
+      <data name="hr" inType="win:UInt32"/>
+      <data name="Hwnd" inType="win:Pointer"/>
+      <data name="left" inType="win:UInt32"/>
+      <data name="top" inType="win:UInt32"/>
+      <data name="right" inType="win:UInt32"/>
+      <data name="bottom" inType="win:UInt32"/>
+     </template>
+     <template tid="ApipEnableCompositionBeendenArgs">
+      <data name="hr" inType="win:UInt32"/>
+      <data name="fEnable" inType="win:UInt32"/>
+     </template>
+     <template tid="ApiSnapshotIconicThumbnailStartenArgs">
+      <data name="hwndDst" inType="win:Pointer"/>
+      <data name="hwndSrc" inType="win:Pointer"/>
+     </template>
+     <template tid="ApipActivateLivePreviewStartenArgs">
+      <data name="fActivate" inType="win:Boolean"/>
+      <data name="hwndExclude" inType="win:Pointer"/>
+      <data name="trigger" inType="win:UInt32"/>
+     </template>
+     <template tid="ApipDxSetContentHostingInformationBeendenArgs">
+      <data name="hr" inType="win:UInt32"/>
+      <data name="Hwnd" inType="win:Pointer"/>
+      <data name="Flags" inType="win:UInt32"/>
+     </template>
+     <template tid="ApiRenderGestureStartenArgs">
+      <data name="Enum" inType="win:UInt32"/>
+     </template>
+     <template tid="ApiRenderGestureBeendenArgs">
+      <data name="hr" inType="win:UInt32"/>
+      <data name="Enum" inType="win:UInt32"/>
+     </template>
+     <template tid="ApipStartTransitionStartenArgs">
+      <data name="storyid" inType="win:Int32"/>
+     </template>
+     <template tid="ApipTransitionWindowStartenArgs">
+      <data name="Hwnd" inType="win:Pointer"/>
+      <data name="target" inType="win:Int32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_DwmApi" value="DwmApi"/>
+    <string id="task_ApiEnableBlurBehindWindow" value="ApiEnableBlurBehindWindow"/>
+    <string id="task_ApiExtendFrameIntoClientArea" value="ApiExtendFrameIntoClientArea"/>
+    <string id="task_ApiGetColorizationColor" value="ApiGetColorizationColor"/>
+    <string id="task_ApiGetCompositionTimingInfo" value="ApiGetCompositionTimingInfo"/>
+    <string id="task_ApiGetWindowAttribute" value="ApiGetWindowAttribute"/>
+    <string id="task_ApiSetWindowAttribute" value="ApiSetWindowAttribute"/>
+    <string id="task_ApiIsCompositionEnabled" value="ApiIsCompositionEnabled"/>
+    <string id="task_ApiRegisterThumbnail" value="ApiRegisterThumbnail"/>
+    <string id="task_ApiUnregisterThumbnail" value="ApiUnregisterThumbnail"/>
+    <string id="task_ApiUpdateThumbnailProperties" value="ApiUpdateThumbnailProperties"/>
+    <string id="task_ApiEnableMMCSS" value="ApiEnableMMCSS"/>
+    <string id="task_ApiFlush" value="ApiFlush"/>
+    <string id="task_ApiSetIconicThumbnail" value="ApiSetIconicThumbnail"/>
+    <string id="task_ApipAttachMilContent" value="ApipAttachMilContent"/>
+    <string id="task_ApipDetachMilContent" value="ApipDetachMilContent"/>
+    <string id="task_ApipOpenGraphicsStream" value="ApipOpenGraphicsStream"/>
+    <string id="task_ApipCloseGraphicsStream" value="ApipCloseGraphicsStream"/>
+    <string id="task_ApipEnumGraphicsStreamClients" value="ApipEnumGraphicsStreamClients"/>
+    <string id="task_ApipQueryGraphicsStream" value="ApipQueryGraphicsStream"/>
+    <string id="task_ApipSetColorizationColor" value="ApipSetColorizationColor"/>
+    <string id="task_ApipStartupViaUserInit" value="ApipStartupViaUserInit"/>
+    <string id="task_ApipDxGetWindowSharedSurface" value="ApipDxGetWindowSharedSurface"/>
+    <string id="task_ApipDxUpdateWindowSharedSurface" value="ApipDxUpdateWindowSharedSurface"/>
+    <string id="task_ApipEnableComposition" value="ApipEnableComposition"/>
+    <string id="task_ApipQueryThumbnailSourceSize" value="ApipQueryThumbnailSourceSize"/>
+    <string id="task_ApipGetSpecialWindow" value="ApipGetSpecialWindow"/>
+    <string id="task_ApipRestartComposition" value="ApipRestartComposition"/>
+    <string id="task_ApipIsCompositionCapable" value="ApipIsCompositionCapable"/>
+    <string id="task_ApipSetGraphicsStreamTransformHInt" value="ApipSetGraphicsStreamTransformHInt"/>
+    <string id="task_ApipEnumGraphicsStreamTransformHInts" value="ApipEnumGraphicsStreamTransformHInts"/>
+    <string id="task_ApipGetGlobalState" value="ApipGetGlobalState"/>
+    <string id="task_ApiSnapshotIconicThumbnail" value="ApiSnapshotIconicThumbnail"/>
+    <string id="task_ApipActivateLivePreview" value="ApipActivateLivePreview"/>
+    <string id="task_ApiSetIconicLivePreviewBitmap" value="ApiSetIconicLivePreviewBitmap"/>
+    <string id="task_ApiInvalidateIconicBitmaps" value="ApiInvalidateIconicBitmaps"/>
+    <string id="task_ApipDxUpdateWindowRedirectionBltSurface" value="ApipDxUpdateWindowRedirectionBltSurface"/>
+    <string id="task_ApipDxSetContentHostingInformation" value="ApipDxSetContentHostingInformation"/>
+    <string id="task_ApipRenderFlick" value="ApipRenderFlick"/>
+    <string id="task_ApiRenderGesture" value="ApiRenderGesture"/>
+    <string id="task_ApiShowContact" value="ApiShowContact"/>
+    <string id="task_ApiTetherContact" value="ApiTetherContact"/>
+    <string id="task_ApiRegisterTransitionRegionSource" value="ApiRegisterTransitionRegionSource"/>
+    <string id="task_ApiRegisterTransitionRegionDestination" value="ApiRegisterTransitionRegionDestination"/>
+    <string id="task_ApiStartTransitionRegion" value="ApiStartTransitionRegion"/>
+    <string id="task_ApiUnregisterTransitionRegion" value="ApiUnregisterTransitionRegion"/>
+    <string id="task_ApipStartTransition" value="ApipStartTransition"/>
+    <string id="task_ApipEndTransition" value="ApipEndTransition"/>
+    <string id="task_ApipTransitionWindow" value="ApipTransitionWindow"/>
+    <string id="task_ApiTransitionOwnedWindow" value="ApiTransitionOwnedWindow"/>
+    <string id="task_ApipUpdateDesktopThumbnail" value="ApipUpdateDesktopThumbnail"/>
+    <string id="task_ApipActivateHardwareExpression" value="ApipActivateHardwareExpression"/>
+    <string id="task_ApiTetherTextContact" value="ApiTetherTextContact"/>
+    <string id="map_DxgiRedirectionFlagsMapped form INTERVAL_ONE. Will wait for LPC to return with a surface" value="Mapped form INTERVAL_ONE. Will wait for LPC to return with a surface"/>
+    <string id="map_DxgiRedirectionFlagsInstruct the API to wait on behaf of the runtime" value="Instruct the API to wait on behaf of the runtime"/>
+    <string id="map_DxgiRedirectionFlagsClip to the output. Used for content protection" value="Clip to the output. Used for content protection"/>
+    <string id="map_DxgiRedirectionFlagsrespect per-output content protection" value="respect per-output content protection"/>
+    <string id="map_DxgiRedirectionFlagsUse Same-Surface-Present if available" value="Use Same-Surface-Present if available"/>
+    <string id="map_DxgiRedirectionFlagsThe desktop compositor will not expect present-history-tokens" value="The desktop compositor will not expect present-history-tokens"/>
+    <string id="map_DxgiRedirectionFlagsDo not use the Dx-Accumulation-Region for the FlipChain, thus disabling Vista-Blt based DX-GDI mixing" value="Do not use the Dx-Accumulation-Region for the FlipChain, thus disabling Vista-Blt based DX-GDI mixing"/>
+    <string id="map_DxgiRedirectionFlagsAdapterübergreifende Konfiguration ist aktiv." value="Adapterübergreifende Konfiguration ist aktiv."/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,49 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Hyper-V-ComputeLib" guid="{af7fd3a7-b248-460c-a9f5-fec39ef8468c}" resourceFileName="Microsoft-Windows-Hyper-V-ComputeLib" messageFileName="Microsoft-Windows-Hyper-V-ComputeLib" symbol="MicrosoftWindowsHyperVComputeLib" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="101" symbol="task_0101" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="102" symbol="task_0102" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="103" symbol="task_0103" version="0" task="task_0" level="win:Critical" template="task_0Args"/>
+     <event value="1000" symbol="task_01000" version="0" task="task_0" level="win:Error" template="task_01000Args"/>
+     <event value="1001" symbol="task_01001" version="0" task="task_0" level="win:Error" template="task_01000Args"/>
+     <event value="1002" symbol="task_01002" version="0" task="task_0" level="win:Error" template="task_01000Args"/>
+     <event value="1003" symbol="task_01003" version="0" task="task_0" level="win:Error" template="task_01000Args"/>
+     <event value="1004" symbol="task_01004" version="0" task="task_0" level="win:Error" template="task_01000Args"/>
+     <event value="1005" symbol="task_01005" version="0" task="task_0" level="win:Error" template="task_01000Args"/>
+     <event value="1006" symbol="task_01006" version="0" task="task_0" level="win:Error" template="task_01000Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="TraceData" inType="win:UnicodeString"/>
+      <data name="VmName" inType="win:UnicodeString"/>
+      <data name="VmId" inType="win:UnicodeString"/>
+      <data name="StackFrameCount" inType="win:UInt32"/>
+      <data name="StackFrame" inType="win:Pointer" count="StackFrameCount"/>
+      <data name="ModuleCount" inType="win:UInt32"/>
+      <data name="Module" inType="win:Int32" count="ModuleCount"/>
+     </template>
+     <template tid="task_01000Args">
+      <data name="Id" inType="win:UnicodeString"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

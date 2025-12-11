@@ -1,0 +1,50 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-SystemSettingsHandlers" guid="{fbbd52e1-df97-529d-4b67-53f67da99a98}" resourceFileName="Microsoft-Windows-SystemSettingsHandlers" messageFileName="Microsoft-Windows-SystemSettingsHandlers" symbol="MicrosoftWindowsSystemSettingsHandlers" source="Xml" >
+    <keywords>
+     <keyword name="CELL" message="$(string.keyword_CELL)" mask="0x1"/>
+     <keyword name="WIFI" message="$(string.keyword_WIFI)" mask="0x2"/>
+     <keyword name="DATAMART" message="$(string.keyword_DATAMART)" mask="0x4"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="task_0" version="0" task="task_0" level="win:Informational" keywords="CELL DATAMART" template="task_0Args"/>
+     <event value="101" symbol="task_0101" version="0" task="task_0" level="win:Informational" keywords="CELL DATAMART" template="task_0101Args"/>
+     <event value="102" symbol="task_0102" version="0" task="task_0" level="win:Informational" keywords="CELL DATAMART" template="task_0102Args"/>
+     <event value="103" symbol="task_0103" version="0" task="task_0" level="win:Informational" keywords="CELL DATAMART" template="task_0Args"/>
+     <event value="200" symbol="task_0200" version="0" task="task_0" level="win:Informational" keywords="WIFI DATAMART" template="task_0Args"/>
+     <event value="201" symbol="task_0201" version="0" task="task_0" level="win:Informational" keywords="WIFI DATAMART" template="task_0101Args"/>
+     <event value="202" symbol="task_0202" version="0" task="task_0" level="win:Informational" keywords="WIFI DATAMART" template="task_0102Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="HRESULT" inType="win:UInt32"/>
+      <data name="StatusCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0101Args">
+      <data name="HRESULT" inType="win:UInt32"/>
+      <data name="Pfn" inType="win:UnicodeString"/>
+      <data name="Arguments" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0102Args">
+      <data name="HRESULT" inType="win:UInt32"/>
+      <data name="Pfns" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_CELL" value="CELL"/>
+    <string id="keyword_WIFI" value="WIFI"/>
+    <string id="keyword_DATAMART" value="DATAMART"/>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

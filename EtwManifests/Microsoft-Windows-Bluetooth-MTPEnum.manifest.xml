@@ -1,0 +1,44 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Bluetooth-MTPEnum" guid="{04268430-d489-424d-b914-0cff741d6684}" resourceFileName="Microsoft-Windows-Bluetooth-MTPEnum" messageFileName="Microsoft-Windows-Bluetooth-MTPEnum" symbol="MicrosoftWindowsBluetoothMTPEnum" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="Treiberintegrität" message="$(string.task_Treiberintegrität)" value="1"/>
+     <task name="Verbindungszustand" message="$(string.task_Verbindungszustand)" value="2"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="Treiberintegrität" version="0" task="Treiberintegrität" level="win:Informational" template="TreiberintegritätArgs"/>
+     <event value="101" symbol="Treiberintegrität101" version="0" task="Treiberintegrität" level="win:Error" template="TreiberintegritätArgs"/>
+     <event value="102" symbol="Treiberintegrität102" version="0" task="Treiberintegrität" level="win:Informational" template="TreiberintegritätArgs"/>
+     <event value="103" symbol="Treiberintegrität103" version="0" task="Treiberintegrität" level="win:Error" template="TreiberintegritätArgs"/>
+     <event value="200" symbol="Verbindungszustand" version="0" task="Verbindungszustand" level="win:Informational" template="VerbindungszustandArgs"/>
+     <event value="201" symbol="Verbindungszustand201" version="0" task="Verbindungszustand" level="win:Informational" template="VerbindungszustandArgs"/>
+     <event value="202" symbol="Verbindungszustand202" version="0" task="Verbindungszustand" level="win:Informational" template="Verbindungszustand202Args"/>
+     <event value="203" symbol="Verbindungszustand203" version="0" task="Verbindungszustand" level="win:Informational" template="Verbindungszustand202Args"/>
+     <event value="204" symbol="Verbindungszustand204" version="0" task="Verbindungszustand" level="win:Error" template="VerbindungszustandArgs"/>
+    </events>
+    <templates>
+     <template tid="TreiberintegritätArgs">
+      <data name="StatusCode" inType="win:UInt32"/>
+     </template>
+     <template tid="VerbindungszustandArgs">
+      <data name="ResultCode" inType="win:UInt32"/>
+     </template>
+     <template tid="Verbindungszustand202Args">
+      <data name="Name" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_Treiberintegrität" value="Treiberintegrität"/>
+    <string id="task_Verbindungszustand" value="Verbindungszustand"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

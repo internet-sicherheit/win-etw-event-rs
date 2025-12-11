@@ -1,0 +1,787 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-PowerShell" guid="{a0c1853b-5c40-4b15-8766-3cf1c58f985a}" resourceFileName="Microsoft-Windows-PowerShell" messageFileName="Microsoft-Windows-PowerShell" symbol="MicrosoftWindowsPowerShell" source="Xml" >
+    <keywords>
+     <keyword name="Runspace" message="$(string.keyword_Runspace)" mask="0x1"/>
+     <keyword name="Pipeline" message="$(string.keyword_Pipeline)" mask="0x2"/>
+     <keyword name="Protocol" message="$(string.keyword_Protocol)" mask="0x4"/>
+     <keyword name="Transport" message="$(string.keyword_Transport)" mask="0x8"/>
+     <keyword name="Host" message="$(string.keyword_Host)" mask="0x10"/>
+     <keyword name="Cmdlets" message="$(string.keyword_Cmdlets)" mask="0x20"/>
+     <keyword name="Serializer" message="$(string.keyword_Serializer)" mask="0x40"/>
+     <keyword name="Session" message="$(string.keyword_Session)" mask="0x80"/>
+     <keyword name="Plugin" message="$(string.keyword_Plugin)" mask="0x100"/>
+     <keyword name="PSWorkflow" message="$(string.keyword_PSWorkflow)" mask="0x200"/>
+    </keywords>
+    <tasks>
+     <task name="Keine" message="$(string.task_Keine)" value="0">
+      <opcodes>
+       <opcode name="Öffnen(asynchron)" message="$(string.opcode_KeineÖffnen(asynchron))" value="10"/>
+       <opcode name="Verbinden" message="$(string.opcode_KeineVerbinden)" value="12"/>
+       <opcode name="Trennen" message="$(string.opcode_KeineTrennen)" value="13"/>
+       <opcode name="Wirdverwendet,wenneineAusnahmeausgelöstwird." message="$(string.opcode_KeineWirdverwendet,wenneineAusnahmeausgelöstwird.)" value="19"/>
+       <opcode name="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." message="$(string.opcode_KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt.)" value="20"/>
+       <opcode name="Senden(asynchron)" message="$(string.opcode_KeineSenden(asynchron))" value="21"/>
+       <opcode name="Empfangen(asynchron)" message="$(string.opcode_KeineEmpfangen(asynchron))" value="22"/>
+       <opcode name="Herunterfahren" message="$(string.opcode_KeineHerunterfahren)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="Verbinden" message="$(string.task_Verbinden)" value="1">
+      <opcodes>
+       <opcode name="Öffnen(asynchron)" message="$(string.opcode_VerbindenÖffnen(asynchron))" value="10"/>
+       <opcode name="Wirdverwendet,wenneinObjekterstelltwird." message="$(string.opcode_VerbindenWirdverwendet,wenneinObjekterstelltwird.)" value="16"/>
+       <opcode name="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." message="$(string.opcode_VerbindenWirdverwendet,wennderVorganggeradeeineMethodeausführt.)" value="20"/>
+      </opcodes>
+     </task>
+     <task name="Remotingnutzlastserialisierenoderdeserialisieren" message="$(string.task_Remotingnutzlastserialisierenoderdeserialisieren)" value="3">
+      <opcodes>
+       <opcode name="Wirdverwendet,wenneineAusnahmeausgelöstwird." message="$(string.opcode_RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.)" value="19"/>
+       <opcode name="Aktivierung" message="$(string.opcode_RemotingnutzlastserialisierenoderdeserialisierenAktivierung)" value="23"/>
+       <opcode name="Serialisierungseinstellungen" message="$(string.opcode_RemotingnutzlastserialisierenoderdeserialisierenSerialisierungseinstellungen)" value="24"/>
+      </opcodes>
+     </task>
+     <task name="StartderPowerShell_Konsole" message="$(string.task_StartderPowerShell_Konsole)" value="4"/>
+     <task name="Workflowhosting" message="$(string.task_Workflowhosting)" value="5">
+      <opcodes>
+       <opcode name="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." message="$(string.opcode_WorkflowhostingWirdverwendet,wennderVorganggeradeeineMethodeausführt.)" value="20"/>
+      </opcodes>
+     </task>
+     <task name="Workflowausführung" message="$(string.task_Workflowausführung)" value="6">
+      <opcodes>
+       <opcode name="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." message="$(string.opcode_WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.)" value="20"/>
+      </opcodes>
+     </task>
+     <task name="Workflowprüfung" message="$(string.task_Workflowprüfung)" value="8">
+      <opcodes>
+       <opcode name="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." message="$(string.opcode_WorkflowprüfungWirdverwendet,wennderVorganggeradeeineMethodeausführt.)" value="20"/>
+      </opcodes>
+     </task>
+     <task name="Konfiguration" message="$(string.task_Konfiguration)" value="9">
+      <opcodes>
+       <opcode name="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." message="$(string.opcode_KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.)" value="20"/>
+      </opcodes>
+     </task>
+     <task name="Befehlwirdgestartet." message="$(string.task_Befehlwirdgestartet.)" value="102">
+      <opcodes>
+       <opcode name="Öffnen(asynchron)" message="$(string.opcode_Befehlwirdgestartet.Öffnen(asynchron))" value="10"/>
+       <opcode name="BeimErstellenvonAufrufen" message="$(string.opcode_Befehlwirdgestartet.BeimErstellenvonAufrufen)" value="15"/>
+      </opcodes>
+     </task>
+     <task name="Befehlwirdbeendet." message="$(string.task_Befehlwirdbeendet.)" value="103">
+      <opcodes>
+       <opcode name="Schließen(asynchron)" message="$(string.opcode_Befehlwirdbeendet.Schließen(asynchron))" value="11"/>
+      </opcodes>
+     </task>
+     <task name="GeplantePowerShell_Aufträge" message="$(string.task_GeplantePowerShell_Aufträge)" value="110">
+      <opcodes>
+       <opcode name="Wirdverwendet,wenneineAusnahmeausgelöstwird." message="$(string.opcode_GeplantePowerShell_AufträgeWirdverwendet,wenneineAusnahmeausgelöstwird.)" value="19"/>
+       <opcode name="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." message="$(string.opcode_GeplantePowerShell_AufträgeWirdverwendet,wennderVorganggeradeeineMethodeausführt.)" value="20"/>
+      </opcodes>
+     </task>
+     <task name="PowerShellNamedPipeIPC" message="$(string.task_PowerShellNamedPipeIPC)" value="111">
+      <opcodes>
+       <opcode name="Öffnen(asynchron)" message="$(string.opcode_PowerShellNamedPipeIPCÖffnen(asynchron))" value="10"/>
+       <opcode name="Schließen(asynchron)" message="$(string.opcode_PowerShellNamedPipeIPCSchließen(asynchron))" value="11"/>
+       <opcode name="Verbinden" message="$(string.opcode_PowerShellNamedPipeIPCVerbinden)" value="12"/>
+       <opcode name="Wirdverwendet,wenneineAusnahmeausgelöstwird." message="$(string.opcode_PowerShellNamedPipeIPCWirdverwendet,wenneineAusnahmeausgelöstwird.)" value="19"/>
+      </opcodes>
+     </task>
+     <task name="PowerShellISE_Operation" message="$(string.task_PowerShellISE_Operation)" value="120"/>
+    </tasks>
+    <maps>
+     <bitMap name="WSManAuthenticationMechanism">
+      <map value="0x1" message="$(string.map_WSManAuthenticationMechanismWSMAN_FLAG_NO_AUTHENTICATION)"/>
+      <map value="0x2" message="$(string.map_WSManAuthenticationMechanismWSMAN_FLAG_AUTH_DIGEST)"/>
+      <map value="0x4" message="$(string.map_WSManAuthenticationMechanismWSMAN_FLAG_AUTH_NEGOTIATE)"/>
+      <map value="0x8" message="$(string.map_WSManAuthenticationMechanismWSMAN_FLAG_AUTH_BASIC)"/>
+      <map value="0x10" message="$(string.map_WSManAuthenticationMechanismWSMAN_FLAG_AUTH_KERBEROS)"/>
+      <map value="0x20" message="$(string.map_WSManAuthenticationMechanismWSMAN_FLAG_AUTH_CLIENT_CERTIFICATE)"/>
+      <map value="0x80" message="$(string.map_WSManAuthenticationMechanismWSMAN_FLAG_AUTH_CREDSSP)"/>
+     </bitMap>
+     <valueMap name="SerializationMethod">
+      <map value="0x0" message="$(string.map_SerializationMethodAllPublicProperties)"/>
+      <map value="0x1" message="$(string.map_SerializationMethodString)"/>
+      <map value="0x2" message="$(string.map_SerializationMethodSpecificProperties)"/>
+     </valueMap>
+     <bitMap name="RemotingDestination">
+      <map value="0x1" message="$(string.map_RemotingDestinationClient)"/>
+      <map value="0x2" message="$(string.map_RemotingDestinationServer)"/>
+      <map value="0x4" message="$(string.map_RemotingDestinationListener)"/>
+     </bitMap>
+     <valueMap name="RemotingTargetInterface">
+      <map value="0x0" message="$(string.map_RemotingTargetInterfaceInvalidTargetInterface)"/>
+      <map value="0x1" message="$(string.map_RemotingTargetInterfaceSession)"/>
+      <map value="0x2" message="$(string.map_RemotingTargetInterfaceRunspacePool)"/>
+      <map value="0x3" message="$(string.map_RemotingTargetInterfacePowerShell)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="4097" symbol="VerbindenWirdverwendet,wennderVorganggeradeeineMethodeausführt._V1" version="1" task="Verbinden" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="Cmdlets"/>
+     <event value="4098" symbol="VerbindenWirdverwendet,wennderVorganggeradeeineMethodeausführt.4098_V1" version="1" task="Verbinden" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="Cmdlets"/>
+     <event value="4099" symbol="VerbindenWirdverwendet,wennderVorganggeradeeineMethodeausführt.4099_V1" version="1" task="Verbinden" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="Cmdlets"/>
+     <event value="4100" symbol="KeineWirdverwendet,wenneineAusnahmeausgelöstwird._V1" version="1" task="Keine" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Informational" keywords="Cmdlets" template="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.Args_V1"/>
+     <event value="4101" symbol="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.4101_V1" version="1" task="Keine" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Informational" keywords="Cmdlets" template="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.Args_V1"/>
+     <event value="4102" symbol="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.4102_V1" version="1" task="Keine" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Informational" keywords="Cmdlets" template="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.Args_V1"/>
+     <event value="4103" symbol="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.4103_V1" version="1" task="Keine" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Informational" keywords="Cmdlets" template="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.Args_V1"/>
+     <event value="4104" symbol="Befehlwirdgestartet.BeimErstellenvonAufrufen_V1" version="1" task="Befehlwirdgestartet." opcode="BeimErstellenvonAufrufen" level="win:Verbose" keywords="Runspace" template="Befehlwirdgestartet.BeimErstellenvonAufrufenArgs_V1"/>
+     <event value="4105" symbol="Befehlwirdgestartet.Öffnen(asynchron)_V1" version="1" task="Befehlwirdgestartet." opcode="Öffnen(asynchron)" level="win:Verbose" keywords="Runspace" template="Befehlwirdgestartet.Öffnen(asynchron)Args_V1"/>
+     <event value="4106" symbol="Befehlwirdbeendet.Schließen(asynchron)_V1" version="1" task="Befehlwirdbeendet." opcode="Schließen(asynchron)" level="win:Verbose" keywords="Runspace" template="Befehlwirdgestartet.Öffnen(asynchron)Args_V1"/>
+     <event value="7937" symbol="KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt._V1" version="1" task="Keine" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Informational" keywords="Cmdlets" template="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.Args_V1"/>
+     <event value="7938" symbol="KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt.7938_V1" version="1" task="Keine" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Informational" keywords="Cmdlets" template="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.Args_V1"/>
+     <event value="7939" symbol="KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt.7939_V1" version="1" task="Keine" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Informational" keywords="Cmdlets" template="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.Args_V1"/>
+     <event value="7940" symbol="KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt.7940_V1" version="1" task="Keine" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Informational" keywords="Cmdlets" template="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.Args_V1"/>
+     <event value="7941" symbol="task_0Wirdverwendet,wennderVorganggeradeeineMethodeausführt._V1" version="1" task="task_0" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" template="task_0Wirdverwendet,wennderVorganggeradeeineMethodeausführt.Args_V1"/>
+     <event value="7942" symbol="KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt.7942_V1" version="1" task="Keine" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Informational" keywords="Cmdlets" template="KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt.7942Args_V1"/>
+     <event value="8193" symbol="VerbindenWirdverwendet,wenneinObjekterstelltwird._V1" version="1" task="Verbinden" opcode="Wirdverwendet,wenneinObjekterstelltwird." level="win:Verbose" keywords="Runspace" template="VerbindenWirdverwendet,wenneinObjekterstelltwird.Args_V1"/>
+     <event value="8194" symbol="VerbindenWirdverwendet,wenneinObjekterstelltwird.8194_V1" version="1" task="Verbinden" opcode="Wirdverwendet,wenneinObjekterstelltwird." level="win:Verbose" keywords="Runspace" template="VerbindenWirdverwendet,wenneinObjekterstelltwird.8194Args_V1"/>
+     <event value="8195" symbol="VerbindenÖffnen(asynchron)_V1" version="1" task="Verbinden" opcode="Öffnen(asynchron)" level="win:Verbose" keywords="Runspace"/>
+     <event value="8196" symbol="VerbindenÖffnen(asynchron)8196_V1" version="1" task="Verbinden" opcode="Öffnen(asynchron)" level="win:Verbose" keywords="Runspace"/>
+     <event value="8197" symbol="VerbindenÖffnen(asynchron)8197_V1" version="1" task="Verbinden" opcode="Öffnen(asynchron)" level="win:Verbose" keywords="Runspace" template="VerbindenWirdverwendet,wenneinObjekterstelltwird.Args_V1"/>
+     <event value="8198" symbol="VerbindenÖffnen(asynchron)8198_V1" version="1" task="Verbinden" opcode="Öffnen(asynchron)" level="win:Verbose" keywords="Runspace" template="VerbindenÖffnen(asynchron)8198Args_V1"/>
+     <event value="12033" symbol="VerbindenWirdverwendet,wennderVorganggeradeeineMethodeausführt.12033_V1" version="1" task="Verbinden" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="Runspace" template="VerbindenWirdverwendet,wenneinObjekterstelltwird.Args_V1"/>
+     <event value="12034" symbol="VerbindenWirdverwendet,wennderVorganggeradeeineMethodeausführt.12034_V1" version="1" task="Verbinden" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="Runspace" template="VerbindenWirdverwendet,wenneinObjekterstelltwird.Args_V1"/>
+     <event value="12035" symbol="VerbindenWirdverwendet,wennderVorganggeradeeineMethodeausführt.12035_V1" version="1" task="Verbinden" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="Runspace" template="VerbindenWirdverwendet,wenneinObjekterstelltwird.Args_V1"/>
+     <event value="12036" symbol="VerbindenWirdverwendet,wennderVorganggeradeeineMethodeausführt.12036_V1" version="1" task="Verbinden" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="Runspace" template="VerbindenWirdverwendet,wenneinObjekterstelltwird.Args_V1"/>
+     <event value="12037" symbol="VerbindenWirdverwendet,wennderVorganggeradeeineMethodeausführt.12037_V1" version="1" task="Verbinden" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Informational" keywords="Runspace"/>
+     <event value="12038" symbol="VerbindenWirdverwendet,wennderVorganggeradeeineMethodeausführt.12038_V1" version="1" task="Verbinden" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Informational" keywords="Runspace" template="VerbindenWirdverwendet,wennderVorganggeradeeineMethodeausführt.12038Args_V1"/>
+     <event value="12039" symbol="VerbindenÖffnen(asynchron)12039_V1" version="1" task="Verbinden" opcode="Öffnen(asynchron)" level="win:Verbose" keywords="Runspace"/>
+     <event value="24577" symbol="PowerShellISE_Operation_V1" version="1" task="PowerShellISE_Operation" level="win:Informational" template="PowerShellISE_OperationArgs_V1"/>
+     <event value="24578" symbol="PowerShellISE_Operation24578_V1" version="1" task="PowerShellISE_Operation" level="win:Informational" template="PowerShellISE_OperationArgs_V1"/>
+     <event value="24579" symbol="PowerShellISE_Operation24579_V1" version="1" task="PowerShellISE_Operation" level="win:Informational"/>
+     <event value="24580" symbol="PowerShellISE_Operation24580_V1" version="1" task="PowerShellISE_Operation" level="win:Informational"/>
+     <event value="24581" symbol="PowerShellISE_Operation24581_V1" version="1" task="PowerShellISE_Operation" level="win:Informational"/>
+     <event value="24582" symbol="PowerShellISE_Operation24582_V1" version="1" task="PowerShellISE_Operation" level="win:Informational"/>
+     <event value="24583" symbol="PowerShellISE_Operation24583_V1" version="1" task="PowerShellISE_Operation" level="win:Informational"/>
+     <event value="24584" symbol="PowerShellISE_Operation24584_V1" version="1" task="PowerShellISE_Operation" level="win:Informational"/>
+     <event value="24592" symbol="PowerShellISE_Operation24592_V1" version="1" task="PowerShellISE_Operation" level="win:Informational"/>
+     <event value="24593" symbol="Keine_V1" version="1" task="Keine" level="win:Informational"/>
+     <event value="24594" symbol="PowerShellISE_Operation24594_V1" version="1" task="PowerShellISE_Operation" level="win:Informational"/>
+     <event value="24595" symbol="PowerShellISE_Operation24595_V1" version="1" task="PowerShellISE_Operation" level="win:Informational" template="PowerShellISE_Operation24595Args_V1"/>
+     <event value="24596" symbol="PowerShellISE_Operation24596_V1" version="1" task="PowerShellISE_Operation" level="win:Informational" template="PowerShellISE_Operation24595Args_V1"/>
+     <event value="24597" symbol="PowerShellISE_Operation24597_V1" version="1" task="PowerShellISE_Operation" level="win:Informational" template="PowerShellISE_Operation24595Args_V1"/>
+     <event value="24598" symbol="PowerShellISE_Operation24598_V1" version="1" task="PowerShellISE_Operation" level="win:Informational" template="PowerShellISE_Operation24595Args_V1"/>
+     <event value="24599" symbol="PowerShellISE_Operation24599_V1" version="1" task="PowerShellISE_Operation" level="win:Informational" template="PowerShellISE_Operation24595Args_V1"/>
+     <event value="28673" symbol="RemotingnutzlastserialisierenoderdeserialisierenAktivierung_V1" version="1" task="Remotingnutzlastserialisierenoderdeserialisieren" opcode="Aktivierung" level="win:Verbose" keywords="Serializer" template="RemotingnutzlastserialisierenoderdeserialisierenAktivierungArgs_V1"/>
+     <event value="28674" symbol="RemotingnutzlastserialisierenoderdeserialisierenAktivierung28674_V1" version="1" task="Remotingnutzlastserialisierenoderdeserialisieren" opcode="Aktivierung" level="win:Error" keywords="Serializer" template="RemotingnutzlastserialisierenoderdeserialisierenAktivierung28674Args_V1"/>
+     <event value="28675" symbol="RemotingnutzlastserialisierenoderdeserialisierenSerialisierungseinstellungen_V1" version="1" task="Remotingnutzlastserialisierenoderdeserialisieren" opcode="Serialisierungseinstellungen" level="win:Verbose" keywords="Serializer" template="RemotingnutzlastserialisierenoderdeserialisierenSerialisierungseinstellungenArgs_V1"/>
+     <event value="28676" symbol="RemotingnutzlastserialisierenoderdeserialisierenSerialisierungseinstellungen28676_V1" version="1" task="Remotingnutzlastserialisierenoderdeserialisieren" opcode="Serialisierungseinstellungen" level="win:Verbose" keywords="Serializer" template="RemotingnutzlastserialisierenoderdeserialisierenSerialisierungseinstellungen28676Args_V1"/>
+     <event value="28677" symbol="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird._V1" version="1" task="Remotingnutzlastserialisierenoderdeserialisieren" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Warning" keywords="Serializer" template="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.Args_V1"/>
+     <event value="28678" symbol="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28678_V1" version="1" task="Remotingnutzlastserialisierenoderdeserialisieren" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Warning" keywords="Serializer" template="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28678Args_V1"/>
+     <event value="28679" symbol="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28679_V1" version="1" task="Remotingnutzlastserialisierenoderdeserialisieren" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Warning" keywords="Serializer" template="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28679Args_V1"/>
+     <event value="28680" symbol="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28680_V1" version="1" task="Remotingnutzlastserialisierenoderdeserialisieren" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Warning" keywords="Serializer" template="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28680Args_V1"/>
+     <event value="28682" symbol="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28682_V1" version="1" task="Remotingnutzlastserialisierenoderdeserialisieren" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Error" keywords="Serializer" template="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28682Args_V1"/>
+     <event value="28683" symbol="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28683_V1" version="1" task="Remotingnutzlastserialisierenoderdeserialisieren" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Error" keywords="Serializer" template="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28683Args_V1"/>
+     <event value="28684" symbol="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28684_V1" version="1" task="Remotingnutzlastserialisierenoderdeserialisieren" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Warning" keywords="Serializer" template="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28684Args_V1"/>
+     <event value="32769" symbol="task_0Empfangen(asynchron)_V1" version="1" task="task_0" opcode="Empfangen(asynchron)" level="win:Informational" keywords="Transport" template="task_0Empfangen(asynchron)Args_V1"/>
+     <event value="32775" symbol="task_0Öffnen(asynchron)_V1" version="1" task="task_0" opcode="Öffnen(asynchron)" level="win:Error" keywords="Transport" template="VerbindenÖffnen(asynchron)8198Args_V1"/>
+     <event value="32776" symbol="task_0Öffnen(asynchron)32776_V1" version="1" task="task_0" opcode="Öffnen(asynchron)" level="win:Error" keywords="Transport" template="task_0Öffnen(asynchron)32776Args_V1"/>
+     <event value="32777" symbol="task_0Öffnen(asynchron)32777_V1" version="1" task="task_0" opcode="Öffnen(asynchron)" level="win:Error" keywords="Transport" template="VerbindenÖffnen(asynchron)8198Args_V1"/>
+     <event value="32784" symbol="task_0Öffnen(asynchron)32784_V1" version="1" task="task_0" opcode="Öffnen(asynchron)" level="win:Error" keywords="Transport" template="task_0Öffnen(asynchron)32776Args_V1"/>
+     <event value="32785" symbol="task_0Verbinden_V1" version="1" task="task_0" opcode="Verbinden" level="win:Informational" keywords="Transport" template="VerbindenWirdverwendet,wenneinObjekterstelltwird.Args_V1"/>
+     <event value="32786" symbol="task_0Verbinden32786_V1" version="1" task="task_0" opcode="Verbinden" level="win:Informational" keywords="Transport" template="VerbindenWirdverwendet,wenneinObjekterstelltwird.Args_V1"/>
+     <event value="32787" symbol="task_0Trennen_V1" version="1" task="task_0" opcode="Trennen" level="win:Informational" keywords="Transport" template="VerbindenWirdverwendet,wenneinObjekterstelltwird.Args_V1"/>
+     <event value="32788" symbol="task_0Trennen32788_V1" version="1" task="task_0" opcode="Trennen" level="win:Informational" keywords="Transport" template="VerbindenWirdverwendet,wenneinObjekterstelltwird.Args_V1"/>
+     <event value="32789" symbol="task_0Senden(asynchron)_V1" version="1" task="task_0" opcode="Senden(asynchron)" level="win:Informational" keywords="Transport" template="task_0Senden(asynchron)Args_V1"/>
+     <event value="32790" symbol="task_0Senden(asynchron)32790_V1" version="1" task="task_0" opcode="Senden(asynchron)" level="win:Informational" keywords="Transport" template="task_0Senden(asynchron)32790Args_V1"/>
+     <event value="32791" symbol="task_0Empfangen(asynchron)32791_V1" version="1" task="task_0" opcode="Empfangen(asynchron)" level="win:Informational" keywords="Transport" template="task_0Senden(asynchron)32790Args_V1"/>
+     <event value="32792" symbol="task_0Empfangen(asynchron)32792_V1" version="1" task="task_0" opcode="Empfangen(asynchron)" level="win:Informational" keywords="Transport" template="task_0Senden(asynchron)Args_V1"/>
+     <event value="32793" symbol="task_0Verbinden32793_V1" version="1" task="task_0" opcode="Verbinden" level="win:Informational" keywords="Transport" template="task_0Senden(asynchron)32790Args_V1"/>
+     <event value="32800" symbol="task_0Verbinden32800_V1" version="1" task="task_0" opcode="Verbinden" level="win:Informational" keywords="Transport" template="task_0Senden(asynchron)32790Args_V1"/>
+     <event value="32801" symbol="task_0Trennen32801_V1" version="1" task="task_0" opcode="Trennen" level="win:Informational" keywords="Transport" template="task_0Senden(asynchron)32790Args_V1"/>
+     <event value="32802" symbol="task_0Trennen32802_V1" version="1" task="task_0" opcode="Trennen" level="win:Informational" keywords="Transport" template="task_0Senden(asynchron)32790Args_V1"/>
+     <event value="32803" symbol="task_0Trennen32803_V1" version="1" task="task_0" opcode="Trennen" level="win:Informational" keywords="Transport" template="task_0Trennen32803Args_V1"/>
+     <event value="32804" symbol="task_0Trennen32804_V1" version="1" task="task_0" opcode="Trennen" level="win:Informational" keywords="Transport" template="task_0Senden(asynchron)32790Args_V1"/>
+     <event value="32805" symbol="task_0Verbinden32805_V1" version="1" task="task_0" opcode="Verbinden" level="win:Informational" keywords="Transport" template="task_0Verbinden32805Args_V1"/>
+     <event value="32849" symbol="task_0Senden(asynchron)32849_V1" version="1" task="task_0" opcode="Senden(asynchron)" level="win:Informational" keywords="Transport" template="task_0Senden(asynchron)32849Args_V1"/>
+     <event value="32850" symbol="task_0Verbinden32850_V1" version="1" task="task_0" opcode="Verbinden" level="win:Informational" keywords="Transport" template="VerbindenÖffnen(asynchron)8198Args_V1"/>
+     <event value="32851" symbol="task_0Verbinden32851_V1" version="1" task="task_0" opcode="Verbinden" level="win:Informational" keywords="Transport" template="task_0Verbinden32851Args_V1"/>
+     <event value="32852" symbol="task_0Verbinden32852_V1" version="1" task="task_0" opcode="Verbinden" level="win:Informational" keywords="Transport" template="task_0Verbinden32852Args_V1"/>
+     <event value="32853" symbol="task_0Verbinden32853_V1" version="1" task="task_0" opcode="Verbinden" level="win:Informational" keywords="Transport" template="task_0Verbinden32851Args_V1"/>
+     <event value="32854" symbol="task_0Trennen32854_V1" version="1" task="task_0" opcode="Trennen" level="win:Informational" keywords="Transport" template="VerbindenÖffnen(asynchron)8198Args_V1"/>
+     <event value="32855" symbol="task_0Öffnen(asynchron)32855_V1" version="1" task="task_0" opcode="Öffnen(asynchron)" level="win:Informational" keywords="Transport" template="VerbindenÖffnen(asynchron)8198Args_V1"/>
+     <event value="32856" symbol="task_0Öffnen(asynchron)32856_V1" version="1" task="task_0" opcode="Öffnen(asynchron)" level="win:Informational" keywords="Transport" template="VerbindenÖffnen(asynchron)8198Args_V1"/>
+     <event value="32857" symbol="task_0Trennen32857_V1" version="1" task="task_0" opcode="Trennen" level="win:Informational" keywords="Transport" template="VerbindenÖffnen(asynchron)8198Args_V1"/>
+     <event value="32865" symbol="task_0Verbinden32865_V1" version="1" task="task_0" opcode="Verbinden" level="win:Informational" keywords="Transport" template="task_0Verbinden32851Args_V1"/>
+     <event value="32866" symbol="task_0Verbinden32866_V1" version="1" task="task_0" opcode="Verbinden" level="win:Informational" keywords="Transport" template="task_0Verbinden32851Args_V1"/>
+     <event value="32867" symbol="task_0Empfangen(asynchron)32867_V1" version="1" task="task_0" opcode="Empfangen(asynchron)" level="win:Verbose" keywords="Transport" template="task_0Empfangen(asynchron)32867Args_V1"/>
+     <event value="32868" symbol="task_0Senden(asynchron)32868_V1" version="1" task="task_0" opcode="Senden(asynchron)" level="win:Verbose" keywords="Transport" template="task_0Empfangen(asynchron)32867Args_V1"/>
+     <event value="32869" symbol="task_0Herunterfahren_V1" version="1" task="task_0" opcode="Herunterfahren" level="win:Verbose" keywords="Transport"/>
+     <event value="40961" symbol="StartderPowerShell_KonsoleStarten_V1" version="1" task="StartderPowerShell_Konsole" opcode="win:Starten" level="win:Informational"/>
+     <event value="40962" symbol="StartderPowerShell_KonsoleBeenden_V1" version="1" task="StartderPowerShell_Konsole" opcode="win:Beenden" level="win:Informational"/>
+     <event value="45057" symbol="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.45057_V1" version="1" task="Keine" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Error" template="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.45057Args_V1"/>
+     <event value="45058" symbol="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.45058_V1" version="1" task="Keine" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Error" template="VerbindenÖffnen(asynchron)8198Args_V1"/>
+     <event value="45059" symbol="KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt.45059_V1" version="1" task="Keine" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Informational"/>
+     <event value="45060" symbol="KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt.45060_V1" version="1" task="Keine" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Informational" template="KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt.45060Args_V1"/>
+     <event value="45061" symbol="Keine45061_V1" version="1" task="Keine" level="win:Informational" template="VerbindenWirdverwendet,wenneinObjekterstelltwird.Args_V1"/>
+     <event value="45062" symbol="KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt.45062_V1" version="1" task="Keine" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Informational" template="KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt.45062Args_V1"/>
+     <event value="45063" symbol="WorkflowhostingWirdverwendet,wennderVorganggeradeeineMethodeausführt._V1" version="1" task="Workflowhosting" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowhostingWirdverwendet,wennderVorganggeradeeineMethodeausführt.Args_V1"/>
+     <event value="45064" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt._V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.Args_V1"/>
+     <event value="45065" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45065_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45065Args_V1"/>
+     <event value="45072" symbol="WorkflowhostingWirdverwendet,wennderVorganggeradeeineMethodeausführt.45072_V1" version="1" task="Workflowhosting" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowhostingWirdverwendet,wennderVorganggeradeeineMethodeausführt.45072Args_V1"/>
+     <event value="45073" symbol="WorkflowhostingWirdverwendet,wennderVorganggeradeeineMethodeausführt.45073_V1" version="1" task="Workflowhosting" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowhostingWirdverwendet,wennderVorganggeradeeineMethodeausführt.45072Args_V1"/>
+     <event value="45074" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45075" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45075_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45075Args_V1"/>
+     <event value="45076" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45076_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45078" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45078_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45078Args_V1"/>
+     <event value="45079" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45079_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45079Args_V1"/>
+     <event value="45080" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45080_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45080Args_V1"/>
+     <event value="45081" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45081_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45081Args_V1"/>
+     <event value="45082" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45082_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45081Args_V1"/>
+     <event value="45083" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45083_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45083Args_V1"/>
+     <event value="45084" symbol="WorkflowprüfungWirdverwendet,wennderVorganggeradeeineMethodeausführt._V1" version="1" task="Workflowprüfung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45085" symbol="WorkflowprüfungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45085_V1" version="1" task="Workflowprüfung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45086" symbol="WorkflowprüfungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45086_V1" version="1" task="Workflowprüfung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45087" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45087_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45087Args_V1"/>
+     <event value="45088" symbol="WorkflowprüfungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45088_V1" version="1" task="Workflowprüfung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45087Args_V1"/>
+     <event value="45089" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45089_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45089Args_V1"/>
+     <event value="45090" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45090_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45090Args_V1"/>
+     <event value="45091" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45091_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45091Args_V1"/>
+     <event value="45092" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45092_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45093" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45093_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45094" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45094_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45095" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45095_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45096" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45096_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45097" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45097_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45097Args_V1"/>
+     <event value="45098" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45098_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45097Args_V1"/>
+     <event value="45100" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45100_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45100Args_V1"/>
+     <event value="45101" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45101_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45101Args_V1"/>
+     <event value="45102" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45102_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45102Args_V1"/>
+     <event value="45104" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45104_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45104Args_V1"/>
+     <event value="45105" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45105_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45100Args_V1"/>
+     <event value="45106" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45106_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45106Args_V1"/>
+     <event value="45107" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45107_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45107Args_V1"/>
+     <event value="45108" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45108_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45108Args_V1"/>
+     <event value="45109" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45109_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45110" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45110_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45111" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45111_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45112" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45112_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45112Args_V1"/>
+     <event value="45113" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45113_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45114" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45114_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45115" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45115_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45116" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45116_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45083Args_V1"/>
+     <event value="45117" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45117_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45117Args_V1"/>
+     <event value="45118" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45118_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1"/>
+     <event value="45119" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45119_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45119Args_V1"/>
+     <event value="45120" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45120_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45083Args_V1"/>
+     <event value="45121" symbol="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt._V1" version="1" task="Konfiguration" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.Args_V1"/>
+     <event value="45122" symbol="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.45122_V1" version="1" task="Konfiguration" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.45122Args_V1"/>
+     <event value="45123" symbol="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.45123_V1" version="1" task="Konfiguration" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.45123Args_V1"/>
+     <event value="45124" symbol="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.45124_V1" version="1" task="Konfiguration" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.45124Args_V1"/>
+     <event value="45125" symbol="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.45125_V1" version="1" task="Konfiguration" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.45125Args_V1"/>
+     <event value="45126" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45126_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45126Args_V1"/>
+     <event value="45127" symbol="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45127_V1" version="1" task="Workflowausführung" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45127Args_V1"/>
+     <event value="45128" symbol="WorkflowhostingWirdverwendet,wennderVorganggeradeeineMethodeausführt.45128_V1" version="1" task="Workflowhosting" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Verbose" keywords="PSWorkflow" template="WorkflowhostingWirdverwendet,wennderVorganggeradeeineMethodeausführt.45072Args_V1"/>
+     <event value="45129" symbol="Keine45129_V1" version="1" task="Keine" level="win:Informational" keywords="PSWorkflow" template="Keine45129Args_V1"/>
+     <event value="46337" symbol="Keine46337_V1" version="1" task="Keine" level="win:Informational" template="Keine46337Args_V1"/>
+     <event value="46338" symbol="Keine46338_V1" version="1" task="Keine" level="win:Informational" template="Keine46337Args_V1"/>
+     <event value="46339" symbol="Keine46339_V1" version="1" task="Keine" level="win:Informational" template="Keine46337Args_V1"/>
+     <event value="46340" symbol="Keine46340_V1" version="1" task="Keine" level="win:Informational" template="Keine46337Args_V1"/>
+     <event value="46341" symbol="Keine46341_V1" version="1" task="Keine" level="win:Informational" template="Keine46341Args_V1"/>
+     <event value="46342" symbol="Keine46342_V1" version="1" task="Keine" level="win:Informational" template="Keine46342Args_V1"/>
+     <event value="46343" symbol="Keine46343_V1" version="1" task="Keine" level="win:Informational" template="Keine46342Args_V1"/>
+     <event value="46344" symbol="Keine46344_V1" version="1" task="Keine" level="win:Informational" template="Keine46342Args_V1"/>
+     <event value="46345" symbol="Keine46345_V1" version="1" task="Keine" level="win:Informational" template="Keine46342Args_V1"/>
+     <event value="46346" symbol="Keine46346_V1" version="1" task="Keine" level="win:Informational" template="Keine46346Args_V1"/>
+     <event value="46347" symbol="Keine46347_V1" version="1" task="Keine" level="win:Informational" template="Keine46347Args_V1"/>
+     <event value="46348" symbol="Keine46348_V1" version="1" task="Keine" level="win:Informational" template="Keine46348Args_V1"/>
+     <event value="46349" symbol="Keine46349_V1" version="1" task="Keine" level="win:Informational" template="Keine46348Args_V1"/>
+     <event value="46350" symbol="Keine46350_V1" version="1" task="Keine" level="win:Informational" template="Keine46350Args_V1"/>
+     <event value="46351" symbol="Keine46351_V1" version="1" task="Keine" level="win:Informational" template="Keine46350Args_V1"/>
+     <event value="46352" symbol="Keine46352_V1" version="1" task="Keine" level="win:Informational" template="Keine46350Args_V1"/>
+     <event value="46353" symbol="Keine46353_V1" version="1" task="Keine" level="win:Informational" template="Keine46350Args_V1"/>
+     <event value="46354" symbol="Keine46354_V1" version="1" task="Keine" level="win:Informational" template="Keine46354Args_V1"/>
+     <event value="46355" symbol="Keine46355_V1" version="1" task="Keine" level="win:Informational" template="Keine46354Args_V1"/>
+     <event value="46356" symbol="Keine46356_V1" version="1" task="Keine" level="win:Informational"/>
+     <event value="46357" symbol="Keine46357_V1" version="1" task="Keine" level="win:Informational"/>
+     <event value="46358" symbol="Keine46358_V1" version="1" task="Keine" level="win:Warning"/>
+     <event value="49152" symbol="Keine49152_V1" version="1" task="Keine" level="win:Informational" template="Keine49152Args_V1"/>
+     <event value="49153" symbol="Keine49153_V1" version="1" task="Keine" level="win:Informational" template="task_0Verbinden32851Args_V1"/>
+     <event value="53249" symbol="GeplantePowerShell_AufträgeWirdverwendet,wennderVorganggeradeeineMethodeausführt._V1" version="1" task="GeplantePowerShell_Aufträge" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Informational" template="GeplantePowerShell_AufträgeWirdverwendet,wennderVorganggeradeeineMethodeausführt.Args_V1"/>
+     <event value="53250" symbol="GeplantePowerShell_AufträgeWirdverwendet,wennderVorganggeradeeineMethodeausführt.53250_V1" version="1" task="GeplantePowerShell_Aufträge" opcode="Wirdverwendet,wennderVorganggeradeeineMethodeausführt." level="win:Informational" template="GeplantePowerShell_AufträgeWirdverwendet,wennderVorganggeradeeineMethodeausführt.53250Args_V1"/>
+     <event value="53251" symbol="GeplantePowerShell_AufträgeWirdverwendet,wenneineAusnahmeausgelöstwird._V1" version="1" task="GeplantePowerShell_Aufträge" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Error" template="GeplantePowerShell_AufträgeWirdverwendet,wenneineAusnahmeausgelöstwird.Args_V1"/>
+     <event value="53504" symbol="PowerShellNamedPipeIPCÖffnen(asynchron)_V1" version="1" task="PowerShellNamedPipeIPC" opcode="Öffnen(asynchron)" level="win:Verbose" keywords="Transport" template="task_0Verbinden32851Args_V1"/>
+     <event value="53505" symbol="PowerShellNamedPipeIPCSchließen(asynchron)_V1" version="1" task="PowerShellNamedPipeIPC" opcode="Schließen(asynchron)" level="win:Verbose" keywords="Transport" template="task_0Verbinden32851Args_V1"/>
+     <event value="53506" symbol="PowerShellNamedPipeIPCWirdverwendet,wenneineAusnahmeausgelöstwird._V1" version="1" task="PowerShellNamedPipeIPC" opcode="Wirdverwendet,wenneineAusnahmeausgelöstwird." level="win:Verbose" keywords="Transport" template="VerbindenÖffnen(asynchron)8198Args_V1"/>
+     <event value="53507" symbol="PowerShellNamedPipeIPCVerbinden_V1" version="1" task="PowerShellNamedPipeIPC" opcode="Verbinden" level="win:Verbose" keywords="Transport" template="VerbindenÖffnen(asynchron)8198Args_V1"/>
+     <event value="53508" symbol="PowerShellNamedPipeIPCSchließen(asynchron)53508_V1" version="1" task="PowerShellNamedPipeIPC" opcode="Schließen(asynchron)" level="win:Verbose" keywords="Transport" template="VerbindenÖffnen(asynchron)8198Args_V1"/>
+    </events>
+    <templates>
+     <template tid="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.Args_V1">
+      <data name="ContextInfo" inType="win:UnicodeString"/>
+      <data name="UserData" inType="win:UnicodeString"/>
+      <data name="Payload" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Befehlwirdgestartet.BeimErstellenvonAufrufenArgs_V1">
+      <data name="MessageNumber" inType="win:Int32"/>
+      <data name="MessageTotal" inType="win:Int32"/>
+      <data name="ScriptBlockText" inType="win:UnicodeString"/>
+      <data name="ScriptBlockId" inType="win:UnicodeString"/>
+      <data name="Path" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Befehlwirdgestartet.Öffnen(asynchron)Args_V1">
+      <data name="ScriptBlockId" inType="win:UnicodeString"/>
+      <data name="RunspaceId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0Wirdverwendet,wennderVorganggeradeeineMethodeausführt.Args_V1">
+      <data name="currentActivityId" inType="win:GUID"/>
+      <data name="parentActivityId" inType="win:GUID"/>
+     </template>
+     <template tid="KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt.7942Args_V1">
+      <data name="ClassName" inType="win:UnicodeString"/>
+      <data name="MethodName" inType="win:UnicodeString"/>
+      <data name="WorkflowGuid" inType="win:UnicodeString"/>
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="JobData" inType="win:UnicodeString"/>
+      <data name="ActivityName" inType="win:UnicodeString"/>
+      <data name="ActivityGuid" inType="win:UnicodeString"/>
+      <data name="Parameters" inType="win:UnicodeString"/>
+     </template>
+     <template tid="VerbindenWirdverwendet,wenneinObjekterstelltwird.Args_V1">
+      <data name="param1" inType="win:UnicodeString"/>
+     </template>
+     <template tid="VerbindenWirdverwendet,wenneinObjekterstelltwird.8194Args_V1">
+      <data name="InstanceId" inType="win:UnicodeString"/>
+      <data name="MaxRunspaces" inType="win:UnicodeString"/>
+      <data name="MinRunspaces" inType="win:UnicodeString"/>
+     </template>
+     <template tid="VerbindenÖffnen(asynchron)8198Args_V1">
+      <data name="param1" inType="win:UnicodeString"/>
+      <data name="param2" inType="win:UnicodeString"/>
+      <data name="param3" inType="win:UnicodeString"/>
+     </template>
+     <template tid="VerbindenWirdverwendet,wennderVorganggeradeeineMethodeausführt.12038Args_V1">
+      <data name="uri" inType="win:UnicodeString"/>
+      <data name="shell" inType="win:UnicodeString"/>
+      <data name="userName" inType="win:UnicodeString"/>
+      <data name="opentimeout" inType="win:UnicodeString"/>
+      <data name="idletimeout" inType="win:UnicodeString"/>
+      <data name="canceltimeout" inType="win:UnicodeString"/>
+      <data name="auth" inType="win:UInt32" map="WSManAuthenticationMechanism"/>
+      <data name="thumbPrint" inType="win:UnicodeString"/>
+      <data name="redircount" inType="win:UnicodeString"/>
+      <data name="recvdDataSize" inType="win:UnicodeString"/>
+      <data name="recvdObjSize" inType="win:UnicodeString"/>
+     </template>
+     <template tid="PowerShellISE_OperationArgs_V1">
+      <data name="FileName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="PowerShellISE_Operation24595Args_V1">
+      <data name="CurrentLine" inType="win:Int32"/>
+      <data name="FileName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemotingnutzlastserialisierenoderdeserialisierenAktivierungArgs_V1">
+      <data name="DeserializedType" inType="win:UnicodeString"/>
+      <data name="CastedToType" inType="win:UnicodeString"/>
+      <data name="RehydratedType" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemotingnutzlastserialisierenoderdeserialisierenAktivierung28674Args_V1">
+      <data name="DeserializedType" inType="win:UnicodeString"/>
+      <data name="CastedToType" inType="win:UnicodeString"/>
+      <data name="TypeCastException" inType="win:UnicodeString"/>
+      <data name="TypeCastInnerException" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemotingnutzlastserialisierenoderdeserialisierenSerialisierungseinstellungenArgs_V1">
+      <data name="SerializedType" inType="win:UnicodeString"/>
+      <data name="OriginalDepth" inType="win:Int32"/>
+      <data name="OverridenDepth" inType="win:Int32"/>
+      <data name="CurrentDepthBelowTopLevel" inType="win:Int32"/>
+     </template>
+     <template tid="RemotingnutzlastserialisierenoderdeserialisierenSerialisierungseinstellungen28676Args_V1">
+      <data name="SerializedType" inType="win:UnicodeString"/>
+      <data name="OverridenMode" inType="win:UInt32" map="SerializationMethod"/>
+     </template>
+     <template tid="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.Args_V1">
+      <data name="PropertyName" inType="win:UnicodeString"/>
+      <data name="PropertyOwnerType" inType="win:UnicodeString"/>
+      <data name="GetterScript" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28678Args_V1">
+      <data name="PropertyName" inType="win:UnicodeString"/>
+      <data name="PropertyOwnerType" inType="win:UnicodeString"/>
+      <data name="Exception" inType="win:UnicodeString"/>
+      <data name="InnerException" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28679Args_V1">
+      <data name="TypeBeingEnumerated" inType="win:UnicodeString"/>
+      <data name="Exception" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28680Args_V1">
+      <data name="Type" inType="win:UnicodeString"/>
+      <data name="Exception" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28682Args_V1">
+      <data name="TypeOfObjectAtMaxDepth" inType="win:UnicodeString"/>
+      <data name="PropertyNameAtMaxDepth" inType="win:UnicodeString"/>
+      <data name="Depth" inType="win:Int32"/>
+     </template>
+     <template tid="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28683Args_V1">
+      <data name="LineNumber" inType="win:Int32"/>
+      <data name="LinePosition" inType="win:Int32"/>
+      <data name="Exception" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird.28684Args_V1">
+      <data name="TypeOfObjectWithMissingProperty" inType="win:UnicodeString"/>
+      <data name="PropertyName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0Empfangen(asynchron)Args_V1">
+      <data name="Runspace_InstanceId" inType="win:UnicodeString"/>
+      <data name="PowerShell_InstanceId" inType="win:UnicodeString"/>
+      <data name="Destination" inType="win:UInt32" map="RemotingDestination"/>
+      <data name="DataType" inType="win:UInt32"/>
+      <data name="TargetInterface" inType="win:UInt32" map="RemotingTargetInterface"/>
+     </template>
+     <template tid="task_0Öffnen(asynchron)32776Args_V1">
+      <data name="SessionId" inType="win:UnicodeString"/>
+      <data name="PipelineId" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UnicodeString"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="StackTrace" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0Senden(asynchron)Args_V1">
+      <data name="SessionId" inType="win:UnicodeString"/>
+      <data name="PipelineId" inType="win:UnicodeString"/>
+      <data name="DataSize" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0Senden(asynchron)32790Args_V1">
+      <data name="SessionId" inType="win:UnicodeString"/>
+      <data name="PipelineId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0Trennen32803Args_V1">
+      <data name="SessionId" inType="win:UnicodeString"/>
+      <data name="PipelineId" inType="win:UnicodeString"/>
+      <data name="SignalCode" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0Verbinden32805Args_V1">
+      <data name="SessionId" inType="win:UnicodeString"/>
+      <data name="Uri" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0Senden(asynchron)32849Args_V1">
+      <data name="Runspace_InstanceId" inType="win:UnicodeString"/>
+      <data name="PowerShell_InstanceId" inType="win:UnicodeString"/>
+      <data name="DataSize" inType="win:UnicodeString"/>
+      <data name="DataType" inType="win:UInt32"/>
+      <data name="TargetInterface" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0Verbinden32851Args_V1">
+      <data name="param1" inType="win:UnicodeString"/>
+      <data name="param2" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0Verbinden32852Args_V1">
+      <data name="param1" inType="win:UnicodeString"/>
+      <data name="param2" inType="win:UnicodeString"/>
+      <data name="param3" inType="win:UnicodeString"/>
+      <data name="param4" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0Empfangen(asynchron)32867Args_V1">
+      <data name="ObjectId" inType="win:Int64"/>
+      <data name="FragmentId" inType="win:Int64"/>
+      <data name="sFlag" inType="win:Int32"/>
+      <data name="eFlag" inType="win:Int32"/>
+      <data name="FragmentLength" inType="win:UInt32"/>
+      <data name="FragmentPayload" inType="win:UnicodeString"/>
+     </template>
+     <template tid="KeineWirdverwendet,wenneineAusnahmeausgelöstwird.45057Args_V1">
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="Category" inType="win:UnicodeString"/>
+      <data name="Reason" inType="win:UnicodeString"/>
+      <data name="TargetName" inType="win:UnicodeString"/>
+      <data name="FullyQualifiedErrorId" inType="win:UnicodeString"/>
+      <data name="ExceptionMessage" inType="win:UnicodeString"/>
+      <data name="ExceptionStackTrace" inType="win:UnicodeString"/>
+      <data name="ExceptionInnerException" inType="win:UnicodeString"/>
+     </template>
+     <template tid="KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt.45060Args_V1">
+      <data name="Id" inType="win:UnicodeString"/>
+      <data name="InstanceId" inType="win:UnicodeString"/>
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Location" inType="win:UnicodeString"/>
+      <data name="State" inType="win:UnicodeString"/>
+      <data name="Command" inType="win:UnicodeString"/>
+     </template>
+     <template tid="KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt.45062Args_V1">
+      <data name="uri" inType="win:UnicodeString"/>
+      <data name="shell" inType="win:UnicodeString"/>
+      <data name="userName" inType="win:UnicodeString"/>
+      <data name="opentimeout" inType="win:UnicodeString"/>
+      <data name="idletimeout" inType="win:UnicodeString"/>
+      <data name="canceltimeout" inType="win:UnicodeString"/>
+      <data name="auth" inType="win:UInt32"/>
+      <data name="thumbPrint" inType="win:UnicodeString"/>
+      <data name="redircount" inType="win:UnicodeString"/>
+      <data name="recvdDataSize" inType="win:UnicodeString"/>
+      <data name="recvdObjSize" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowhostingWirdverwendet,wennderVorganggeradeeineMethodeausführt.Args_V1">
+      <data name="endpointName" inType="win:UnicodeString"/>
+      <data name="user" inType="win:UnicodeString"/>
+      <data name="hostingMode" inType="win:UnicodeString"/>
+      <data name="protocol" inType="win:UnicodeString"/>
+      <data name="configuration" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.Args_V1">
+      <data name="workflowId" inType="win:GUID"/>
+      <data name="managedNodes" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45065Args_V1">
+      <data name="workflowId" inType="win:GUID"/>
+      <data name="newState" inType="win:UnicodeString"/>
+      <data name="oldState" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowhostingWirdverwendet,wennderVorganggeradeeineMethodeausführt.45072Args_V1">
+      <data name="endpointName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45074Args_V1">
+      <data name="workflowId" inType="win:GUID"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45075Args_V1">
+      <data name="endpointName" inType="win:UnicodeString"/>
+      <data name="configName" inType="win:UnicodeString"/>
+      <data name="allowedValue" inType="win:UnicodeString"/>
+      <data name="valueInQuestion" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45078Args_V1">
+      <data name="workflowId" inType="win:GUID"/>
+      <data name="managedNode" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45079Args_V1">
+      <data name="workflowId" inType="win:GUID"/>
+      <data name="activityName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45080Args_V1">
+      <data name="activityName" inType="win:UnicodeString"/>
+      <data name="activityTypeName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45081Args_V1">
+      <data name="workflowId" inType="win:GUID"/>
+      <data name="xamlFile" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45083Args_V1">
+      <data name="workflowId" inType="win:GUID"/>
+      <data name="errorDescription" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45087Args_V1">
+      <data name="workflowId" inType="win:GUID"/>
+      <data name="activityDisplayName" inType="win:UnicodeString"/>
+      <data name="activityType" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45089Args_V1">
+      <data name="workflowId" inType="win:GUID"/>
+      <data name="activityName" inType="win:UnicodeString"/>
+      <data name="failureDescription" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45090Args_V1">
+      <data name="runspaceId" inType="win:UnicodeString"/>
+      <data name="availability" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45091Args_V1">
+      <data name="runspaceId" inType="win:UnicodeString"/>
+      <data name="newState" inType="win:UnicodeString"/>
+      <data name="oldState" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45097Args_V1">
+      <data name="workflowId" inType="win:GUID"/>
+      <data name="path" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45100Args_V1">
+      <data name="jobId" inType="win:GUID"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45101Args_V1">
+      <data name="jobId" inType="win:Int32"/>
+      <data name="workflowId" inType="win:GUID"/>
+      <data name="newState" inType="win:UnicodeString"/>
+      <data name="oldState" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45102Args_V1">
+      <data name="jobId" inType="win:Int32"/>
+      <data name="workflowId" inType="win:GUID"/>
+      <data name="errorDescription" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45104Args_V1">
+      <data name="parentJobId" inType="win:GUID"/>
+      <data name="childJobId" inType="win:GUID"/>
+      <data name="childWorkflowId" inType="win:GUID"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45106Args_V1">
+      <data name="jobId" inType="win:GUID"/>
+      <data name="workflowId" inType="win:GUID"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45107Args_V1">
+      <data name="parentJobId" inType="win:GUID"/>
+      <data name="childJobId" inType="win:GUID"/>
+      <data name="workflowId" inType="win:GUID"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45108Args_V1">
+      <data name="parentJobId" inType="win:GUID"/>
+      <data name="childJobId" inType="win:GUID"/>
+      <data name="workflowId" inType="win:GUID"/>
+      <data name="error" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45112Args_V1">
+      <data name="workflowId" inType="win:GUID"/>
+      <data name="reason" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45117Args_V1">
+      <data name="workflowId" inType="win:GUID"/>
+      <data name="persistPath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45119Args_V1">
+      <data name="activityName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.Args_V1">
+      <data name="endpointName" inType="win:UnicodeString"/>
+      <data name="endpointType" inType="win:UnicodeString"/>
+      <data name="registeredBy" inType="win:UnicodeString"/>
+     </template>
+     <template tid="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.45122Args_V1">
+      <data name="endpointName" inType="win:UnicodeString"/>
+      <data name="modifiedBy" inType="win:UnicodeString"/>
+     </template>
+     <template tid="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.45123Args_V1">
+      <data name="endpointName" inType="win:UnicodeString"/>
+      <data name="unregisteredBy" inType="win:UnicodeString"/>
+     </template>
+     <template tid="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.45124Args_V1">
+      <data name="endpointName" inType="win:UnicodeString"/>
+      <data name="disabledBy" inType="win:UnicodeString"/>
+     </template>
+     <template tid="KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt.45125Args_V1">
+      <data name="endpointName" inType="win:UnicodeString"/>
+      <data name="enabledBy" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45126Args_V1">
+      <data name="command" inType="win:UnicodeString"/>
+     </template>
+     <template tid="WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt.45127Args_V1">
+      <data name="parameters" inType="win:UnicodeString"/>
+      <data name="computers" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Keine45129Args_V1">
+      <data name="checkpointPath" inType="win:UnicodeString"/>
+      <data name="configProviderId" inType="win:UnicodeString"/>
+      <data name="userName" inType="win:UnicodeString"/>
+      <data name="path" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Keine46337Args_V1">
+      <data name="TrackingId" inType="win:GUID"/>
+     </template>
+     <template tid="Keine46341Args_V1">
+      <data name="TrackingId" inType="win:GUID"/>
+      <data name="ContainerParentJobInstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="Keine46342Args_V1">
+      <data name="WorkflowJobJobInstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="Keine46346Args_V1">
+      <data name="WorkflowJobInstanceId" inType="win:GUID"/>
+      <data name="ContainerParentJobInstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="Keine46347Args_V1">
+      <data name="ProxyJobInstanceId" inType="win:GUID"/>
+      <data name="ContainerParentJobInstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="Keine46348Args_V1">
+      <data name="ContainerParentJobInstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="Keine46350Args_V1">
+      <data name="ProxyJobInstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="Keine46354Args_V1">
+      <data name="ProxyChildJobInstanceId" inType="win:GUID"/>
+     </template>
+     <template tid="Keine49152Args_V1">
+      <data name="message" inType="win:UnicodeString"/>
+     </template>
+     <template tid="GeplantePowerShell_AufträgeWirdverwendet,wennderVorganggeradeeineMethodeausführt.Args_V1">
+      <data name="ScheduledJobDefName" inType="win:UnicodeString"/>
+      <data name="StartTime" inType="win:UnicodeString"/>
+     </template>
+     <template tid="GeplantePowerShell_AufträgeWirdverwendet,wennderVorganggeradeeineMethodeausführt.53250Args_V1">
+      <data name="ScheduledJobDefName" inType="win:UnicodeString"/>
+      <data name="StopTime" inType="win:UnicodeString"/>
+      <data name="State" inType="win:UnicodeString"/>
+     </template>
+     <template tid="GeplantePowerShell_AufträgeWirdverwendet,wenneineAusnahmeausgelöstwird.Args_V1">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="StackTrace" inType="win:UnicodeString"/>
+      <data name="InnerException" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Runspace" value="Runspace"/>
+    <string id="keyword_Pipeline" value="Pipeline"/>
+    <string id="keyword_Protocol" value="Protocol"/>
+    <string id="keyword_Transport" value="Transport"/>
+    <string id="keyword_Host" value="Host"/>
+    <string id="keyword_Cmdlets" value="Cmdlets"/>
+    <string id="keyword_Serializer" value="Serializer"/>
+    <string id="keyword_Session" value="Session"/>
+    <string id="keyword_Plugin" value="Plugin"/>
+    <string id="keyword_PSWorkflow" value="PSWorkflow"/>
+    <string id="task_Keine" value="Keine"/>
+    <string id="opcode_KeineÖffnen(asynchron)" value="Öffnen(asynchron)"/>
+    <string id="opcode_KeineVerbinden" value="Verbinden"/>
+    <string id="opcode_KeineTrennen" value="Trennen"/>
+    <string id="opcode_KeineWirdverwendet,wenneineAusnahmeausgelöstwird." value="Wirdverwendet,wenneineAusnahmeausgelöstwird."/>
+    <string id="opcode_KeineWirdverwendet,wennderVorganggeradeeineMethodeausführt." value="Wirdverwendet,wennderVorganggeradeeineMethodeausführt."/>
+    <string id="opcode_KeineSenden(asynchron)" value="Senden(asynchron)"/>
+    <string id="opcode_KeineEmpfangen(asynchron)" value="Empfangen(asynchron)"/>
+    <string id="opcode_KeineHerunterfahren" value="Herunterfahren"/>
+    <string id="task_Verbinden" value="Verbinden"/>
+    <string id="opcode_VerbindenÖffnen(asynchron)" value="Öffnen(asynchron)"/>
+    <string id="opcode_VerbindenWirdverwendet,wenneinObjekterstelltwird." value="Wirdverwendet,wenneinObjekterstelltwird."/>
+    <string id="opcode_VerbindenWirdverwendet,wennderVorganggeradeeineMethodeausführt." value="Wirdverwendet,wennderVorganggeradeeineMethodeausführt."/>
+    <string id="task_Remotingnutzlastserialisierenoderdeserialisieren" value="Remotingnutzlastserialisierenoderdeserialisieren"/>
+    <string id="opcode_RemotingnutzlastserialisierenoderdeserialisierenWirdverwendet,wenneineAusnahmeausgelöstwird." value="Wirdverwendet,wenneineAusnahmeausgelöstwird."/>
+    <string id="opcode_RemotingnutzlastserialisierenoderdeserialisierenAktivierung" value="Aktivierung"/>
+    <string id="opcode_RemotingnutzlastserialisierenoderdeserialisierenSerialisierungseinstellungen" value="Serialisierungseinstellungen"/>
+    <string id="task_StartderPowerShell_Konsole" value="StartderPowerShell_Konsole"/>
+    <string id="task_Workflowhosting" value="Workflowhosting"/>
+    <string id="opcode_WorkflowhostingWirdverwendet,wennderVorganggeradeeineMethodeausführt." value="Wirdverwendet,wennderVorganggeradeeineMethodeausführt."/>
+    <string id="task_Workflowausführung" value="Workflowausführung"/>
+    <string id="opcode_WorkflowausführungWirdverwendet,wennderVorganggeradeeineMethodeausführt." value="Wirdverwendet,wennderVorganggeradeeineMethodeausführt."/>
+    <string id="task_Workflowprüfung" value="Workflowprüfung"/>
+    <string id="opcode_WorkflowprüfungWirdverwendet,wennderVorganggeradeeineMethodeausführt." value="Wirdverwendet,wennderVorganggeradeeineMethodeausführt."/>
+    <string id="task_Konfiguration" value="Konfiguration"/>
+    <string id="opcode_KonfigurationWirdverwendet,wennderVorganggeradeeineMethodeausführt." value="Wirdverwendet,wennderVorganggeradeeineMethodeausführt."/>
+    <string id="task_Befehlwirdgestartet." value="Befehlwirdgestartet."/>
+    <string id="opcode_Befehlwirdgestartet.Öffnen(asynchron)" value="Öffnen(asynchron)"/>
+    <string id="opcode_Befehlwirdgestartet.BeimErstellenvonAufrufen" value="BeimErstellenvonAufrufen"/>
+    <string id="task_Befehlwirdbeendet." value="Befehlwirdbeendet."/>
+    <string id="opcode_Befehlwirdbeendet.Schließen(asynchron)" value="Schließen(asynchron)"/>
+    <string id="task_GeplantePowerShell_Aufträge" value="GeplantePowerShell_Aufträge"/>
+    <string id="opcode_GeplantePowerShell_AufträgeWirdverwendet,wenneineAusnahmeausgelöstwird." value="Wirdverwendet,wenneineAusnahmeausgelöstwird."/>
+    <string id="opcode_GeplantePowerShell_AufträgeWirdverwendet,wennderVorganggeradeeineMethodeausführt." value="Wirdverwendet,wennderVorganggeradeeineMethodeausführt."/>
+    <string id="task_PowerShellNamedPipeIPC" value="PowerShellNamedPipeIPC"/>
+    <string id="opcode_PowerShellNamedPipeIPCÖffnen(asynchron)" value="Öffnen(asynchron)"/>
+    <string id="opcode_PowerShellNamedPipeIPCSchließen(asynchron)" value="Schließen(asynchron)"/>
+    <string id="opcode_PowerShellNamedPipeIPCVerbinden" value="Verbinden"/>
+    <string id="opcode_PowerShellNamedPipeIPCWirdverwendet,wenneineAusnahmeausgelöstwird." value="Wirdverwendet,wenneineAusnahmeausgelöstwird."/>
+    <string id="task_PowerShellISE_Operation" value="PowerShellISE_Operation"/>
+    <string id="map_WSManAuthenticationMechanismWSMAN_FLAG_NO_AUTHENTICATION" value="WSMAN_FLAG_NO_AUTHENTICATION"/>
+    <string id="map_WSManAuthenticationMechanismWSMAN_FLAG_AUTH_DIGEST" value="WSMAN_FLAG_AUTH_DIGEST"/>
+    <string id="map_WSManAuthenticationMechanismWSMAN_FLAG_AUTH_NEGOTIATE" value="WSMAN_FLAG_AUTH_NEGOTIATE"/>
+    <string id="map_WSManAuthenticationMechanismWSMAN_FLAG_AUTH_BASIC" value="WSMAN_FLAG_AUTH_BASIC"/>
+    <string id="map_WSManAuthenticationMechanismWSMAN_FLAG_AUTH_KERBEROS" value="WSMAN_FLAG_AUTH_KERBEROS"/>
+    <string id="map_WSManAuthenticationMechanismWSMAN_FLAG_AUTH_CLIENT_CERTIFICATE" value="WSMAN_FLAG_AUTH_CLIENT_CERTIFICATE"/>
+    <string id="map_WSManAuthenticationMechanismWSMAN_FLAG_AUTH_CREDSSP" value="WSMAN_FLAG_AUTH_CREDSSP"/>
+    <string id="map_SerializationMethodAllPublicProperties" value="AllPublicProperties"/>
+    <string id="map_SerializationMethodString" value="String"/>
+    <string id="map_SerializationMethodSpecificProperties" value="SpecificProperties"/>
+    <string id="map_RemotingDestinationClient" value="Client"/>
+    <string id="map_RemotingDestinationServer" value="Server"/>
+    <string id="map_RemotingDestinationListener" value="Listener"/>
+    <string id="map_RemotingTargetInterfaceInvalidTargetInterface" value="InvalidTargetInterface"/>
+    <string id="map_RemotingTargetInterfaceSession" value="Session"/>
+    <string id="map_RemotingTargetInterfaceRunspacePool" value="RunspacePool"/>
+    <string id="map_RemotingTargetInterfacePowerShell" value="PowerShell"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

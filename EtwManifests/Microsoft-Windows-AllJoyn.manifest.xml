@@ -1,0 +1,52 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-AllJoyn" guid="{2ed299d2-2f6b-411d-8d15-f4cc6fde0c70}" resourceFileName="Microsoft-Windows-AllJoyn" messageFileName="Microsoft-Windows-AllJoyn" symbol="MicrosoftWindowsAllJoyn" source="Xml" >
+    <keywords>
+     <keyword name="AJKeyword" message="$(string.keyword_AJKeyword)" mask="0x1"/>
+     <keyword name="keyword_400000000000" message="$(string.keyword_keyword_400000000000)" mask="0x400000000000"/>
+    </keywords>
+    <tasks>
+     <task name="AJ" message="$(string.task_AJ)" value="1">
+      <opcodes>
+       <opcode name="Fehler" message="$(string.opcode_AJFehler)" value="10"/>
+       <opcode name="Ablaufverfolgung" message="$(string.opcode_AJAblaufverfolgung)" value="11"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1" symbol="AJFehler" version="0" task="AJ" opcode="Fehler" level="win:Error" keywords="AJKeyword" template="AJFehlerArgs"/>
+     <event value="2" symbol="AJFehler2" version="0" task="AJ" opcode="Fehler" level="win:Error" keywords="AJKeyword keyword_400000000000" template="AJFehlerArgs"/>
+     <event value="3" symbol="AJAblaufverfolgung" version="0" task="AJ" opcode="Ablaufverfolgung" level="win:Verbose" keywords="AJKeyword" template="AJAblaufverfolgungArgs"/>
+     <event value="4" symbol="AJAblaufverfolgung4" version="0" task="AJ" opcode="Ablaufverfolgung" level="win:Verbose" keywords="AJKeyword keyword_400000000000" template="AJAblaufverfolgungArgs"/>
+    </events>
+    <templates>
+     <template tid="AJFehlerArgs">
+      <data name="QStatus" inType="win:HexInt32"/>
+      <data name="Message" inType="win:AnsiString"/>
+      <data name="Module" inType="win:AnsiString"/>
+      <data name="File" inType="win:AnsiString"/>
+      <data name="Line" inType="win:UInt32"/>
+     </template>
+     <template tid="AJAblaufverfolgungArgs">
+      <data name="Message" inType="win:AnsiString"/>
+      <data name="Module" inType="win:AnsiString"/>
+      <data name="File" inType="win:AnsiString"/>
+      <data name="Line" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_AJKeyword" value="AJKeyword"/>
+    <string id="keyword_keyword_400000000000" value="keyword_400000000000"/>
+    <string id="task_AJ" value="AJ"/>
+    <string id="opcode_AJFehler" value="Fehler"/>
+    <string id="opcode_AJAblaufverfolgung" value="Ablaufverfolgung"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

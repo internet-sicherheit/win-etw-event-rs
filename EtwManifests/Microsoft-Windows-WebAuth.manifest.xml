@@ -1,0 +1,145 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-WebAuth" guid="{db6972b6-dddf-4820-84b1-2ed6ac0b96e5}" resourceFileName="Microsoft-Windows-WebAuth" messageFileName="Microsoft-Windows-WebAuth" symbol="MicrosoftWindowsWebAuth" source="Xml" >
+    <keywords>
+     <keyword name="AuthHost" message="$(string.keyword_AuthHost)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="Navigation_Starten" message="$(string.task_Navigation_Starten)" value="1"/>
+     <task name="Navigationabgeschlossen" message="$(string.task_Navigationabgeschlossen)" value="2"/>
+     <task name="Navigation_Umleiten" message="$(string.task_Navigation_Umleiten)" value="3"/>
+     <task name="Navigation_NeuesFenster" message="$(string.task_Navigation_NeuesFenster)" value="4"/>
+     <task name="Navigation_Delegieren" message="$(string.task_Navigation_Delegieren)" value="5"/>
+     <task name="Navigation_NeuesSkriptmodul" message="$(string.task_Navigation_NeuesSkriptmodul)" value="6"/>
+     <task name="Navigation_Beenden" message="$(string.task_Navigation_Beenden)" value="20"/>
+     <task name="Navigationsfehler" message="$(string.task_Navigationsfehler)" value="21"/>
+     <task name="Sicherheitsproblem" message="$(string.task_Sicherheitsproblem)" value="30"/>
+     <task name="Sicherheits_Manager" message="$(string.task_Sicherheits_Manager)" value="31"/>
+     <task name="META_Tag" message="$(string.task_META_Tag)" value="40"/>
+    </tasks>
+    <events>
+     <event value="1000" symbol="Navigation_Starten" version="0" task="Navigation_Starten" opcode="win:Starten" level="win:Informational" keywords="AuthHost" template="Navigation_StartenArgs"/>
+     <event value="1001" symbol="Navigation_Starten1001" version="0" task="Navigation_Starten" opcode="win:Starten" level="win:Informational" keywords="AuthHost" template="Navigation_Starten1001Args"/>
+     <event value="1002" symbol="Navigation_Starten1002" version="0" task="Navigation_Starten" opcode="win:Starten" level="win:Informational" keywords="AuthHost" template="Navigation_Starten1002Args"/>
+     <event value="1003" symbol="Navigation_Starten1003" version="0" task="Navigation_Starten" opcode="win:Starten" level="win:Informational" keywords="AuthHost" template="Navigation_Starten1002Args"/>
+     <event value="1010" symbol="NavigationabgeschlossenBeenden" version="0" task="Navigationabgeschlossen" opcode="win:Beenden" level="win:Informational" keywords="AuthHost" template="Navigation_Starten1002Args"/>
+     <event value="1011" symbol="NavigationabgeschlossenBeenden1011" version="0" task="Navigationabgeschlossen" opcode="win:Beenden" level="win:Informational" keywords="AuthHost" template="Navigation_Starten1002Args"/>
+     <event value="1020" symbol="Navigation_UmleitenStarten" version="0" task="Navigation_Umleiten" opcode="win:Starten" level="win:Informational" keywords="AuthHost" template="Navigation_UmleitenStartenArgs"/>
+     <event value="1021" symbol="Navigation_NeuesFensterStarten" version="0" task="Navigation_NeuesFenster" opcode="win:Starten" level="win:Informational" keywords="AuthHost" template="Navigation_NeuesFensterStartenArgs"/>
+     <event value="1022" symbol="Navigation_DelegierenStarten" version="0" task="Navigation_Delegieren" opcode="win:Starten" level="win:Informational" keywords="AuthHost" template="Navigation_Starten1002Args"/>
+     <event value="1023" symbol="Navigation_NeuesSkriptmodulStarten" version="0" task="Navigation_NeuesSkriptmodul" opcode="win:Starten" level="win:Informational" keywords="AuthHost" template="Navigation_Starten1002Args"/>
+     <event value="1024" symbol="Navigation_NeuesFenster" version="0" task="Navigation_NeuesFenster" level="win:Informational" keywords="AuthHost" template="Navigation_NeuesFensterStartenArgs"/>
+     <event value="1040" symbol="Navigation_Beenden" version="0" task="Navigation_Beenden" opcode="win:Beenden" level="win:Informational" keywords="AuthHost" template="Navigation_BeendenArgs"/>
+     <event value="1041" symbol="Navigation_Beenden1041" version="0" task="Navigation_Beenden" opcode="win:Beenden" level="win:Informational" keywords="AuthHost" template="Navigation_Beenden1041Args"/>
+     <event value="1042" symbol="Navigation_Beenden1042" version="0" task="Navigation_Beenden" opcode="win:Beenden" level="win:Informational" keywords="AuthHost"/>
+     <event value="1043" symbol="Navigation_Beenden1043" version="0" task="Navigation_Beenden" opcode="win:Beenden" level="win:Informational" keywords="AuthHost" template="Navigation_Beenden1043Args"/>
+     <event value="1050" symbol="NavigationsfehlerBeenden" version="0" task="Navigationsfehler" opcode="win:Beenden" level="win:Error" keywords="AuthHost" template="NavigationsfehlerBeendenArgs"/>
+     <event value="1051" symbol="NavigationsfehlerBeenden1051" version="0" task="Navigationsfehler" opcode="win:Beenden" level="win:Error" keywords="AuthHost" template="NavigationsfehlerBeenden1051Args"/>
+     <event value="1100" symbol="Sicherheitsproblem" version="0" task="Sicherheitsproblem" level="win:Warning" keywords="AuthHost" template="SicherheitsproblemArgs"/>
+     <event value="1101" symbol="SicherheitsproblemBeenden" version="0" task="Sicherheitsproblem" opcode="win:Beenden" level="win:Error" keywords="AuthHost" template="SicherheitsproblemBeendenArgs"/>
+     <event value="1200" symbol="Sicherheits_Manager" version="0" task="Sicherheits_Manager" level="win:Verbose" keywords="AuthHost" template="Sicherheits_ManagerArgs"/>
+     <event value="1201" symbol="Sicherheits_Manager1201" version="0" task="Sicherheits_Manager" level="win:Verbose" keywords="AuthHost" template="Sicherheits_ManagerArgs"/>
+     <event value="1202" symbol="Sicherheits_Manager1202" version="0" task="Sicherheits_Manager" level="win:Warning" keywords="AuthHost" template="Sicherheits_ManagerArgs"/>
+     <event value="1203" symbol="Sicherheits_Manager1203" version="0" task="Sicherheits_Manager" level="win:Verbose" keywords="AuthHost" template="Navigation_Starten1002Args"/>
+     <event value="1204" symbol="Sicherheits_Manager1204" version="0" task="Sicherheits_Manager" level="win:Informational" keywords="AuthHost" template="Navigation_Starten1002Args"/>
+     <event value="1205" symbol="Sicherheits_Manager1205" version="0" task="Sicherheits_Manager" level="win:Informational" keywords="AuthHost" template="Navigation_Starten1002Args"/>
+     <event value="1206" symbol="Sicherheits_Manager1206" version="0" task="Sicherheits_Manager" level="win:Informational" keywords="AuthHost" template="Navigation_Starten1002Args"/>
+     <event value="1300" symbol="Sicherheits_Manager1300" version="0" task="Sicherheits_Manager" level="win:Informational" keywords="AuthHost" template="Sicherheits_Manager1300Args"/>
+     <event value="1301" symbol="Sicherheits_Manager1301" version="0" task="Sicherheits_Manager" level="win:Warning" keywords="AuthHost" template="Sicherheits_Manager1300Args"/>
+     <event value="1310" symbol="Sicherheits_Manager1310" version="0" task="Sicherheits_Manager" level="win:Informational" keywords="AuthHost" template="Sicherheits_Manager1300Args"/>
+     <event value="1311" symbol="Sicherheits_Manager1311" version="0" task="Sicherheits_Manager" level="win:Warning" keywords="AuthHost" template="Sicherheits_Manager1300Args"/>
+     <event value="1400" symbol="META_Tag" version="0" task="META_Tag" level="win:Informational" keywords="AuthHost" template="META_TagArgs"/>
+     <event value="1401" symbol="META_Tag1401" version="0" task="META_Tag" level="win:Informational" keywords="AuthHost" template="Navigation_Starten1002Args"/>
+     <event value="1402" symbol="META_Tag1402" version="0" task="META_Tag" level="win:Informational" keywords="AuthHost" template="META_Tag1402Args"/>
+     <event value="1403" symbol="META_Tag1403" version="0" task="META_Tag" level="win:Warning" keywords="AuthHost" template="META_TagArgs"/>
+     <event value="1404" symbol="META_Tag1404" version="0" task="META_Tag" level="win:Informational" keywords="AuthHost" template="Navigation_Starten1002Args"/>
+     <event value="1405" symbol="META_Tag1405" version="0" task="META_Tag" level="win:Informational" keywords="AuthHost" template="Navigation_Starten1002Args"/>
+     <event value="1406" symbol="META_Tag1406" version="0" task="META_Tag" level="win:Error" keywords="AuthHost" template="NavigationsfehlerBeendenArgs"/>
+    </events>
+    <templates>
+     <template tid="Navigation_StartenArgs">
+      <data name="StartUrl" inType="win:UnicodeString"/>
+      <data name="TerminateUrl" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Navigation_Starten1001Args">
+      <data name="StartUrl" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Navigation_Starten1002Args">
+      <data name="Url" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Navigation_UmleitenStartenArgs">
+      <data name="RedirectedUrl" inType="win:UnicodeString"/>
+      <data name="OriginalUrl" inType="win:UnicodeString"/>
+      <data name="HttpStatusCode" inType="win:UInt32"/>
+     </template>
+     <template tid="Navigation_NeuesFensterStartenArgs">
+      <data name="Url" inType="win:UnicodeString"/>
+      <data name="ReferrerUrl" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Navigation_BeendenArgs">
+      <data name="Url" inType="win:UnicodeString"/>
+      <data name="TerminateUrl" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Navigation_Beenden1041Args">
+      <data name="Title" inType="win:UnicodeString"/>
+      <data name="Url" inType="win:UnicodeString"/>
+      <data name="TerminateUrl" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Navigation_Beenden1043Args">
+      <data name="Post" inType="win:UnicodeString"/>
+      <data name="Url" inType="win:UnicodeString"/>
+      <data name="TerminateUrl" inType="win:UnicodeString"/>
+     </template>
+     <template tid="NavigationsfehlerBeendenArgs">
+      <data name="Url" inType="win:UnicodeString"/>
+      <data name="StatusCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="NavigationsfehlerBeenden1051Args">
+      <data name="Url" inType="win:UnicodeString"/>
+      <data name="HttpStatusCode" inType="win:UInt32"/>
+     </template>
+     <template tid="SicherheitsproblemArgs">
+      <data name="Problem" inType="win:UInt32"/>
+     </template>
+     <template tid="SicherheitsproblemBeendenArgs">
+      <data name="StatusCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="Sicherheits_ManagerArgs">
+      <data name="Action" inType="win:HexInt32"/>
+      <data name="Url" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Sicherheits_Manager1300Args">
+      <data name="Clsid" inType="win:GUID"/>
+      <data name="Url" inType="win:UnicodeString"/>
+     </template>
+     <template tid="META_TagArgs">
+      <data name="Content" inType="win:UnicodeString"/>
+     </template>
+     <template tid="META_Tag1402Args">
+      <data name="Content" inType="win:UnicodeString"/>
+      <data name="ConvertedValue" inType="win:HexInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_AuthHost" value="AuthHost"/>
+    <string id="task_Navigation_Starten" value="Navigation_Starten"/>
+    <string id="task_Navigationabgeschlossen" value="Navigationabgeschlossen"/>
+    <string id="task_Navigation_Umleiten" value="Navigation_Umleiten"/>
+    <string id="task_Navigation_NeuesFenster" value="Navigation_NeuesFenster"/>
+    <string id="task_Navigation_Delegieren" value="Navigation_Delegieren"/>
+    <string id="task_Navigation_NeuesSkriptmodul" value="Navigation_NeuesSkriptmodul"/>
+    <string id="task_Navigation_Beenden" value="Navigation_Beenden"/>
+    <string id="task_Navigationsfehler" value="Navigationsfehler"/>
+    <string id="task_Sicherheitsproblem" value="Sicherheitsproblem"/>
+    <string id="task_Sicherheits_Manager" value="Sicherheits_Manager"/>
+    <string id="task_META_Tag" value="META_Tag"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

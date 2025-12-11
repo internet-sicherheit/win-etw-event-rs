@@ -51,7 +51,7 @@
      <task name="DnsStateTransition" message="$(string.task_DnsStateTransition)" value="60006"/>
      <task name="DnsContextUpdate" message="$(string.task_DnsContextUpdate)" value="60007"/>
      <task name="DnsPolicyReadError" message="$(string.task_DnsPolicyReadError)" value="60008"/>
-     <task name="DnsV4Tuple" message="$(string.task_DnsV4Tuple)" value="6:0101"/>
+     <task name="DnsV4Tuple" message="$(string.task_DnsV4Tuple)" value="60101"/>
      <task name="DnsV6Tuple" message="$(string.task_DnsV6Tuple)" value="60102"/>
      <task name="DnsInterfaceInfo" message="$(string.task_DnsInterfaceInfo)" value="60103"/>
     </tasks>

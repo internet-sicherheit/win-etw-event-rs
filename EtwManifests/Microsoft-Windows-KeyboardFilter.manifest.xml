@@ -1,0 +1,138 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-KeyboardFilter" guid="{84de80eb-86e8-4ff6-85a6-9319abd578a4}" resourceFileName="Microsoft-Windows-KeyboardFilter" messageFileName="Microsoft-Windows-KeyboardFilter" symbol="MicrosoftWindowsKeyboardFilter" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="MicrosoftKeyboardFilterService" message="$(string.task_MicrosoftKeyboardFilterService)" value="1000">
+      <opcodes>
+       <opcode name="ReadRegistry" message="$(string.opcode_MicrosoftKeyboardFilterServiceReadRegistry)" value="100"/>
+       <opcode name="WriteDriver" message="$(string.opcode_MicrosoftKeyboardFilterServiceWriteDriver)" value="101"/>
+      </opcodes>
+     </task>
+     <task name="KeyboardFilterConfiguration" message="$(string.task_KeyboardFilterConfiguration)" value="1001"/>
+     <task name="Hardwarekeyboardinput" message="$(string.task_Hardwarekeyboardinput)" value="1002"/>
+     <task name="Softwarekeyboardinput" message="$(string.task_Softwarekeyboardinput)" value="1003"/>
+     <task name="LoadConfiguration" message="$(string.task_LoadConfiguration)" value="1004"/>
+     <task name="KeybaordLayoutChange" message="$(string.task_KeybaordLayoutChange)" value="1005"/>
+     <task name="DesktopChange" message="$(string.task_DesktopChange)" value="1006"/>
+     <task name="Userlogin" message="$(string.task_Userlogin)" value="1007"/>
+     <task name="Userlogout" message="$(string.task_Userlogout)" value="1008"/>
+    </tasks>
+    <events>
+     <event value="10001" symbol="MicrosoftKeyboardFilterServiceStarten" version="0" task="MicrosoftKeyboardFilterService" opcode="win:Starten" level="win:Error" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10002" symbol="MicrosoftKeyboardFilterServiceStarten10002" version="0" task="MicrosoftKeyboardFilterService" opcode="win:Starten" level="win:Error" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10003" symbol="MicrosoftKeyboardFilterService" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10004" symbol="MicrosoftKeyboardFilterService10004" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10005" symbol="MicrosoftKeyboardFilterService10005" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10006" symbol="MicrosoftKeyboardFilterService10006" version="0" task="MicrosoftKeyboardFilterService" level="win:Error"/>
+     <event value="10007" symbol="MicrosoftKeyboardFilterService10007" version="0" task="MicrosoftKeyboardFilterService" level="win:Warning" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10008" symbol="MicrosoftKeyboardFilterService10008" version="0" task="MicrosoftKeyboardFilterService" level="win:Warning" template="MicrosoftKeyboardFilterService10008Args"/>
+     <event value="10009" symbol="MicrosoftKeyboardFilterService10009" version="0" task="MicrosoftKeyboardFilterService" level="win:Warning"/>
+     <event value="10010" symbol="MicrosoftKeyboardFilterService10010" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterService10010Args"/>
+     <event value="10011" symbol="MicrosoftKeyboardFilterService10011" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterService10010Args"/>
+     <event value="10012" symbol="MicrosoftKeyboardFilterService10012" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterService10010Args"/>
+     <event value="10013" symbol="MicrosoftKeyboardFilterService10013" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterService10010Args"/>
+     <event value="10014" symbol="MicrosoftKeyboardFilterService10014" version="0" task="MicrosoftKeyboardFilterService" level="win:Warning"/>
+     <event value="10015" symbol="MicrosoftKeyboardFilterService10015" version="0" task="MicrosoftKeyboardFilterService" level="win:Warning" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10016" symbol="MicrosoftKeyboardFilterService10016" version="0" task="MicrosoftKeyboardFilterService" level="win:Warning"/>
+     <event value="10050" symbol="MicrosoftKeyboardFilterService10050" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10051" symbol="MicrosoftKeyboardFilterService10051" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10052" symbol="MicrosoftKeyboardFilterService10052" version="0" task="MicrosoftKeyboardFilterService" level="win:Error"/>
+     <event value="10053" symbol="MicrosoftKeyboardFilterService10053" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10054" symbol="MicrosoftKeyboardFilterService10054" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10055" symbol="MicrosoftKeyboardFilterService10055" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10056" symbol="MicrosoftKeyboardFilterService10056" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10057" symbol="MicrosoftKeyboardFilterService10057" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10058" symbol="MicrosoftKeyboardFilterService10058" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10059" symbol="MicrosoftKeyboardFilterService10059" version="0" task="MicrosoftKeyboardFilterService" level="win:Error" template="MicrosoftKeyboardFilterServiceStartenArgs"/>
+     <event value="10101" symbol="MicrosoftKeyboardFilterService10101" version="0" task="MicrosoftKeyboardFilterService" level="win:Informational"/>
+     <event value="10102" symbol="MicrosoftKeyboardFilterServiceBeenden" version="0" task="MicrosoftKeyboardFilterService" opcode="win:Beenden" level="win:Informational"/>
+     <event value="10103" symbol="MicrosoftKeyboardFilterService10103" version="0" task="MicrosoftKeyboardFilterService" level="win:Informational" template="MicrosoftKeyboardFilterService10103Args"/>
+     <event value="10104" symbol="MicrosoftKeyboardFilterService10104" version="0" task="MicrosoftKeyboardFilterService" level="win:Informational" template="MicrosoftKeyboardFilterService10008Args"/>
+     <event value="10201" symbol="MicrosoftKeyboardFilterService10201" version="0" task="MicrosoftKeyboardFilterService" level="win:Informational" template="MicrosoftKeyboardFilterService10201Args"/>
+     <event value="10202" symbol="MicrosoftKeyboardFilterService10202" version="0" task="MicrosoftKeyboardFilterService" level="win:Informational" template="MicrosoftKeyboardFilterService10201Args"/>
+     <event value="10203" symbol="MicrosoftKeyboardFilterService10203" version="0" task="MicrosoftKeyboardFilterService" level="win:Informational" template="MicrosoftKeyboardFilterService10201Args"/>
+     <event value="10204" symbol="MicrosoftKeyboardFilterService10204" version="0" task="MicrosoftKeyboardFilterService" level="win:Informational" template="MicrosoftKeyboardFilterService10201Args"/>
+     <event value="10205" symbol="MicrosoftKeyboardFilterServiceReadRegistry" version="0" task="MicrosoftKeyboardFilterService" opcode="ReadRegistry" level="win:Informational"/>
+     <event value="10206" symbol="MicrosoftKeyboardFilterService10206" version="0" task="MicrosoftKeyboardFilterService" level="win:Informational" template="MicrosoftKeyboardFilterService10206Args"/>
+     <event value="10207" symbol="MicrosoftKeyboardFilterServiceReadRegistry10207" version="0" task="MicrosoftKeyboardFilterService" opcode="ReadRegistry" level="win:Verbose" template="MicrosoftKeyboardFilterServiceReadRegistry10207Args"/>
+     <event value="10208" symbol="MicrosoftKeyboardFilterServiceWriteDriver" version="0" task="MicrosoftKeyboardFilterService" opcode="WriteDriver" level="win:Informational" template="MicrosoftKeyboardFilterServiceWriteDriverArgs"/>
+     <event value="10301" symbol="KeyboardFilterConfiguration" version="0" task="KeyboardFilterConfiguration" level="win:Warning" template="KeyboardFilterConfigurationArgs"/>
+     <event value="10302" symbol="KeyboardFilterConfiguration10302" version="0" task="KeyboardFilterConfiguration" level="win:Warning" template="KeyboardFilterConfigurationArgs"/>
+     <event value="10303" symbol="KeyboardFilterConfiguration10303" version="0" task="KeyboardFilterConfiguration" level="win:Warning" template="KeyboardFilterConfigurationArgs"/>
+     <event value="10304" symbol="KeyboardFilterConfiguration10304" version="0" task="KeyboardFilterConfiguration" level="win:Warning" template="KeyboardFilterConfiguration10304Args"/>
+     <event value="11000" symbol="HardwarekeyboardinputStarten" version="0" task="Hardwarekeyboardinput" opcode="win:Starten" level="win:Informational"/>
+     <event value="11001" symbol="HardwarekeyboardinputBeenden" version="0" task="Hardwarekeyboardinput" opcode="win:Beenden" level="win:Informational"/>
+     <event value="11002" symbol="SoftwarekeyboardinputStarten" version="0" task="Softwarekeyboardinput" opcode="win:Starten" level="win:Informational"/>
+     <event value="11003" symbol="SoftwarekeyboardinputBeenden" version="0" task="Softwarekeyboardinput" opcode="win:Beenden" level="win:Informational"/>
+     <event value="11004" symbol="LoadConfigurationStarten" version="0" task="LoadConfiguration" opcode="win:Starten" level="win:Informational"/>
+     <event value="11005" symbol="LoadConfigurationBeenden" version="0" task="LoadConfiguration" opcode="win:Beenden" level="win:Informational"/>
+     <event value="11006" symbol="KeybaordLayoutChangeStarten" version="0" task="KeybaordLayoutChange" opcode="win:Starten" level="win:Informational"/>
+     <event value="11007" symbol="KeybaordLayoutChangeBeenden" version="0" task="KeybaordLayoutChange" opcode="win:Beenden" level="win:Informational"/>
+     <event value="11008" symbol="DesktopChangeStarten" version="0" task="DesktopChange" opcode="win:Starten" level="win:Informational"/>
+     <event value="11009" symbol="DesktopChangeBeenden" version="0" task="DesktopChange" opcode="win:Beenden" level="win:Informational"/>
+     <event value="11010" symbol="UserloginStarten" version="0" task="Userlogin" opcode="win:Starten" level="win:Informational"/>
+     <event value="11011" symbol="UserloginBeenden" version="0" task="Userlogin" opcode="win:Beenden" level="win:Informational"/>
+     <event value="11012" symbol="UserlogoutStarten" version="0" task="Userlogout" opcode="win:Starten" level="win:Informational"/>
+     <event value="11013" symbol="UserlogoutBeenden" version="0" task="Userlogout" opcode="win:Beenden" level="win:Informational"/>
+    </events>
+    <templates>
+     <template tid="MicrosoftKeyboardFilterServiceStartenArgs">
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="MicrosoftKeyboardFilterService10008Args">
+      <data name="SdbPath" inType="win:UnicodeString"/>
+      <data name="ExitCode" inType="win:UInt32"/>
+     </template>
+     <template tid="MicrosoftKeyboardFilterService10010Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt32"/>
+     </template>
+     <template tid="MicrosoftKeyboardFilterService10103Args">
+      <data name="Command" inType="win:UnicodeString"/>
+     </template>
+     <template tid="MicrosoftKeyboardFilterService10201Args">
+      <data name="UserName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="MicrosoftKeyboardFilterService10206Args">
+      <data name="Layout" inType="win:UnicodeString"/>
+     </template>
+     <template tid="MicrosoftKeyboardFilterServiceReadRegistry10207Args">
+      <data name="Count" inType="win:UInt32"/>
+      <data name="Policy" inType="win:UnicodeString" count="Count"/>
+     </template>
+     <template tid="MicrosoftKeyboardFilterServiceWriteDriverArgs">
+      <data name="Count" inType="win:UInt32"/>
+      <data name="KeyData" inType="win:AnsiString" count="Count"/>
+     </template>
+     <template tid="KeyboardFilterConfigurationArgs">
+      <data name="Filter" inType="win:UnicodeString"/>
+     </template>
+     <template tid="KeyboardFilterConfiguration10304Args">
+      <data name="Maximum" inType="win:Int32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_MicrosoftKeyboardFilterService" value="MicrosoftKeyboardFilterService"/>
+    <string id="opcode_MicrosoftKeyboardFilterServiceReadRegistry" value="ReadRegistry"/>
+    <string id="opcode_MicrosoftKeyboardFilterServiceWriteDriver" value="WriteDriver"/>
+    <string id="task_KeyboardFilterConfiguration" value="KeyboardFilterConfiguration"/>
+    <string id="task_Hardwarekeyboardinput" value="Hardwarekeyboardinput"/>
+    <string id="task_Softwarekeyboardinput" value="Softwarekeyboardinput"/>
+    <string id="task_LoadConfiguration" value="LoadConfiguration"/>
+    <string id="task_KeybaordLayoutChange" value="KeybaordLayoutChange"/>
+    <string id="task_DesktopChange" value="DesktopChange"/>
+    <string id="task_Userlogin" value="Userlogin"/>
+    <string id="task_Userlogout" value="Userlogout"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

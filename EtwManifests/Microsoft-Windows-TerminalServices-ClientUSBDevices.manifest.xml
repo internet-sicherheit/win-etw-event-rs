@@ -1,0 +1,42 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-TerminalServices-ClientUSBDevices" guid="{6e400999-5b82-475f-b800-cef6fe361539}" resourceFileName="Microsoft-Windows-TerminalServices-ClientUSBDevices" messageFileName="Microsoft-Windows-TerminalServices-ClientUSBDevices" symbol="MicrosoftWindowsTerminalServicesClientUSBDevices" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="FilterfürRemotedesktop_USB_Hub" message="$(string.task_FilterfürRemotedesktop_USB_Hub)" value="1"/>
+    </tasks>
+    <events>
+     <event value="2" symbol="FilterfürRemotedesktop_USB_Hub" version="0" task="FilterfürRemotedesktop_USB_Hub" level="win:Verbose" template="FilterfürRemotedesktop_USB_HubArgs"/>
+     <event value="3" symbol="FilterfürRemotedesktop_USB_Hub3" version="0" task="FilterfürRemotedesktop_USB_Hub" level="win:Verbose" template="FilterfürRemotedesktop_USB_HubArgs"/>
+     <event value="4" symbol="FilterfürRemotedesktop_USB_Hub4" version="0" task="FilterfürRemotedesktop_USB_Hub" level="win:Warning" template="FilterfürRemotedesktop_USB_HubArgs"/>
+     <event value="5" symbol="FilterfürRemotedesktop_USB_Hub5" version="0" task="FilterfürRemotedesktop_USB_Hub" level="win:Error" template="FilterfürRemotedesktop_USB_HubArgs"/>
+     <event value="6" symbol="FilterfürRemotedesktop_USB_Hub6" version="0" task="FilterfürRemotedesktop_USB_Hub" level="win:Verbose" template="FilterfürRemotedesktop_USB_HubArgs"/>
+     <event value="7" symbol="FilterfürRemotedesktop_USB_Hub7" version="0" task="FilterfürRemotedesktop_USB_Hub" level="win:Verbose" template="FilterfürRemotedesktop_USB_HubArgs"/>
+     <event value="8" symbol="FilterfürRemotedesktop_USB_Hub8" version="0" task="FilterfürRemotedesktop_USB_Hub" level="win:Error" template="FilterfürRemotedesktop_USB_HubArgs"/>
+     <event value="9" symbol="FilterfürRemotedesktop_USB_Hub9" version="0" task="FilterfürRemotedesktop_USB_Hub" level="win:Error" template="FilterfürRemotedesktop_USB_HubArgs"/>
+     <event value="43" symbol="FilterfürRemotedesktop_USB_Hub43" version="0" task="FilterfürRemotedesktop_USB_Hub" level="win:Informational"/>
+     <event value="44" symbol="FilterfürRemotedesktop_USB_Hub44" version="0" task="FilterfürRemotedesktop_USB_Hub" level="win:Error"/>
+     <event value="45" symbol="FilterfürRemotedesktop_USB_Hub45" version="0" task="FilterfürRemotedesktop_USB_Hub" level="win:Error"/>
+     <event value="46" symbol="FilterfürRemotedesktop_USB_Hub46" version="0" task="FilterfürRemotedesktop_USB_Hub" level="win:Warning" template="FilterfürRemotedesktop_USB_Hub46Args"/>
+    </events>
+    <templates>
+     <template tid="FilterfürRemotedesktop_USB_HubArgs">
+      <data name="message" inType="win:AnsiString"/>
+     </template>
+     <template tid="FilterfürRemotedesktop_USB_Hub46Args">
+      <data name="deviceName" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_FilterfürRemotedesktop_USB_Hub" value="FilterfürRemotedesktop_USB_Hub"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

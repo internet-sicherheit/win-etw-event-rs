@@ -1,0 +1,65 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-TerminalServices-RdpSoundDriver" guid="{127e0dc5-e13b-4935-985e-78fd508b1d80}" resourceFileName="Microsoft-Windows-TerminalServices-RdpSoundDriver" messageFileName="Microsoft-Windows-TerminalServices-RdpSoundDriver" symbol="MicrosoftWindowsTerminalServicesRdpSoundDriver" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="ÜberprüfungderEinstellungen" message="$(string.task_ÜberprüfungderEinstellungen)" value="100"/>
+     <task name="ÄnderungderEinstellungen" message="$(string.task_ÄnderungderEinstellungen)" value="101"/>
+     <task name="EinrichtungdesDatenstroms" message="$(string.task_EinrichtungdesDatenstroms)" value="102"/>
+    </tasks>
+    <events>
+     <event value="1000" symbol="ÜberprüfungderEinstellungen" version="0" task="ÜberprüfungderEinstellungen" level="win:Informational" template="ÜberprüfungderEinstellungenArgs"/>
+     <event value="1001" symbol="EinrichtungdesDatenstroms" version="0" task="EinrichtungdesDatenstroms" level="win:Informational" template="EinrichtungdesDatenstromsArgs"/>
+     <event value="1002" symbol="ÄnderungderEinstellungen" version="0" task="ÄnderungderEinstellungen" level="win:Informational" template="EinrichtungdesDatenstromsArgs"/>
+     <event value="1003" symbol="ÜberprüfungderEinstellungen1003" version="0" task="ÜberprüfungderEinstellungen" level="win:Informational" template="ÜberprüfungderEinstellungen1003Args"/>
+     <event value="1004" symbol="ÜberprüfungderEinstellungen1004" version="0" task="ÜberprüfungderEinstellungen" level="win:Error" template="ÜberprüfungderEinstellungen1003Args"/>
+     <event value="1005" symbol="ÜberprüfungderEinstellungen1005" version="0" task="ÜberprüfungderEinstellungen" level="win:Error" template="ÜberprüfungderEinstellungen1003Args"/>
+     <event value="1006" symbol="ÜberprüfungderEinstellungen1006" version="0" task="ÜberprüfungderEinstellungen" level="win:Error" template="ÜberprüfungderEinstellungen1003Args"/>
+     <event value="1007" symbol="ÜberprüfungderEinstellungen1007" version="0" task="ÜberprüfungderEinstellungen" level="win:Error" template="ÜberprüfungderEinstellungen1003Args"/>
+     <event value="1008" symbol="ÜberprüfungderEinstellungen1008" version="0" task="ÜberprüfungderEinstellungen" level="win:Error" template="ÜberprüfungderEinstellungen1003Args"/>
+     <event value="1009" symbol="ÜberprüfungderEinstellungen1009" version="0" task="ÜberprüfungderEinstellungen" level="win:Informational" template="ÜberprüfungderEinstellungen1003Args"/>
+     <event value="2003" symbol="ÜberprüfungderEinstellungen2003" version="0" task="ÜberprüfungderEinstellungen" level="win:Informational" template="ÜberprüfungderEinstellungen1003Args"/>
+     <event value="2004" symbol="ÜberprüfungderEinstellungen2004" version="0" task="ÜberprüfungderEinstellungen" level="win:Error" template="ÜberprüfungderEinstellungen1003Args"/>
+     <event value="2005" symbol="ÜberprüfungderEinstellungen2005" version="0" task="ÜberprüfungderEinstellungen" level="win:Error" template="ÜberprüfungderEinstellungen1003Args"/>
+     <event value="2006" symbol="ÜberprüfungderEinstellungen2006" version="0" task="ÜberprüfungderEinstellungen" level="win:Error" template="ÜberprüfungderEinstellungen1003Args"/>
+     <event value="2007" symbol="ÜberprüfungderEinstellungen2007" version="0" task="ÜberprüfungderEinstellungen" level="win:Error" template="ÜberprüfungderEinstellungen1003Args"/>
+     <event value="2008" symbol="ÜberprüfungderEinstellungen2008" version="0" task="ÜberprüfungderEinstellungen" level="win:Error" template="ÜberprüfungderEinstellungen1003Args"/>
+     <event value="2009" symbol="ÜberprüfungderEinstellungen2009" version="0" task="ÜberprüfungderEinstellungen" level="win:Error" template="ÜberprüfungderEinstellungen1003Args"/>
+    </events>
+    <templates>
+     <template tid="ÜberprüfungderEinstellungenArgs">
+      <data name="UInt32_1" inType="win:UInt32"/>
+      <data name="UInt32_2" inType="win:UInt32"/>
+      <data name="SessionID" inType="win:UInt32"/>
+     </template>
+     <template tid="EinrichtungdesDatenstromsArgs">
+      <data name="UINT16_FORMAT_TAG" inType="win:UInt16"/>
+      <data name="UINT16_NUM_CHANNELS" inType="win:UInt16"/>
+      <data name="UINT32_SAMPLES_PER_SECOND" inType="win:UInt32"/>
+      <data name="UINT32_AVERAGE_BYTES_PER_SECOND" inType="win:UInt32"/>
+      <data name="UINT16_BLOCK_ALIGN" inType="win:UInt16"/>
+      <data name="UINT16_BITS_PER_SAMPLE" inType="win:UInt16"/>
+      <data name="UINT16_STRUCTURE_SIZE" inType="win:UInt16"/>
+      <data name="SessionID" inType="win:UInt32"/>
+     </template>
+     <template tid="ÜberprüfungderEinstellungen1003Args">
+      <data name="StringParameter" inType="win:UnicodeString"/>
+      <data name="UInt32Parameter" inType="win:UInt32"/>
+      <data name="SessionID" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_ÜberprüfungderEinstellungen" value="ÜberprüfungderEinstellungen"/>
+    <string id="task_ÄnderungderEinstellungen" value="ÄnderungderEinstellungen"/>
+    <string id="task_EinrichtungdesDatenstroms" value="EinrichtungdesDatenstroms"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

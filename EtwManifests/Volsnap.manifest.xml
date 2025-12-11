@@ -1,0 +1,116 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Volsnap" guid="{cb017cd2-1f37-4e65-82bc-3e91f6a37559}" resourceFileName="Volsnap" messageFileName="Volsnap" symbol="Volsnap" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0">
+
+      <opcodes>
+       <opcode name="opcode_64" message="$(string.opcode_task_0opcode_64)" value="64"/>
+       <opcode name="opcode_128" message="$(string.opcode_task_0opcode_128)" value="128"/>
+       <opcode name="opcode_192" message="$(string.opcode_task_0opcode_192)" value="192"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1" symbol="task_0PCODE_192pcode_192_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="2" symbol="task_0PCODE_192pcode_1922_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="3" symbol="task_0PCODE_192pcode_1923_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="4" symbol="task_0PCODE_192pcode_1924_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="5" symbol="task_0PCODE_192pcode_1925_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="6" symbol="task_0PCODE_192pcode_1926_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="7" symbol="task_0PCODE_192pcode_1927_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="8" symbol="task_0PCODE_192pcode_1928_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="9" symbol="task_0PCODE_192pcode_1929_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="10" symbol="task_0PCODE_192pcode_19210_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="13" symbol="task_0PCODE_192pcode_19213_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="14" symbol="task_0PCODE_192pcode_19214_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="15" symbol="task_0PCODE_192pcode_19215_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="16" symbol="task_0PCODE_192pcode_19216_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="17" symbol="task_0PCODE_192pcode_19217_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="20" symbol="task_0PCODE_192pcode_19220_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="21" symbol="task_0PCODE_192pcode_19221_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="22" symbol="task_0PCODE_192pcode_19222_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="23" symbol="task_0PCODE_192pcode_19223_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="24" symbol="task_0PCODE_128pcode_128_V6" version="6" task="task_0" opcode="opcode_128" level="win:Warning" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="25" symbol="task_0PCODE_192pcode_19225_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="27" symbol="task_0PCODE_192pcode_19227_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="28" symbol="task_0PCODE_192pcode_19228_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="29" symbol="task_0PCODE_192pcode_19229_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="30" symbol="task_0PCODE_128pcode_12830_V6" version="6" task="task_0" opcode="opcode_128" level="win:Warning" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="31" symbol="task_0PCODE_192pcode_19231_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="32" symbol="task_0PCODE_192pcode_19232_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="33" symbol="task_0PCODE_64pcode_64_V6" version="6" task="task_0" opcode="opcode_64" level="win:Informational" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="35" symbol="task_0PCODE_192pcode_19235_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="36" symbol="task_0PCODE_192pcode_19236_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="38" symbol="task_0PCODE_128pcode_12838_V6" version="6" task="task_0" opcode="opcode_128" level="win:Warning" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="39" symbol="task_0PCODE_192pcode_19239_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="40" symbol="task_0PCODE_192pcode_19240_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="41" symbol="task_0PCODE_192pcode_19241_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="48" symbol="task_0PCODE_192pcode_19248_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="58" symbol="task_0PCODE_64pcode_6458_V6" version="6" task="task_0" opcode="opcode_64" level="win:Informational" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="59" symbol="task_0PCODE_192pcode_19259_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="60" symbol="task_0PCODE_192pcode_19260_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_192Args_V6"/>
+     <event value="61" symbol="task_0PCODE_128pcode_12861_V6" version="6" task="task_0" opcode="opcode_128" level="win:Warning" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="62" symbol="task_0PCODE_128pcode_12862_V6" version="6" task="task_0" opcode="opcode_128" level="win:Warning" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="63" symbol="task_0PCODE_192pcode_19263_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="64" symbol="task_0PCODE_64pcode_6464_V6" version="6" task="task_0" opcode="opcode_64" level="win:Informational" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="65" symbol="task_0PCODE_64pcode_6465_V6" version="6" task="task_0" opcode="opcode_64" level="win:Informational" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="66" symbol="task_0PCODE_64pcode_6466_V6" version="6" task="task_0" opcode="opcode_64" level="win:Informational" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="67" symbol="task_0PCODE_192pcode_19267_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="80" symbol="task_0PCODE_192pcode_19280_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="81" symbol="task_0PCODE_192pcode_19281_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="82" symbol="task_0PCODE_192pcode_19282_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="83" symbol="task_0PCODE_192pcode_19283_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="84" symbol="task_0PCODE_192pcode_19284_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="85" symbol="task_0PCODE_192pcode_19285_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="86" symbol="task_0PCODE_192pcode_19286_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="87" symbol="task_0PCODE_192pcode_19287_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="88" symbol="task_0PCODE_192pcode_19288_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="89" symbol="task_0PCODE_192pcode_19289_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="90" symbol="task_0PCODE_192pcode_19290_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="91" symbol="task_0PCODE_192pcode_19291_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="92" symbol="task_0PCODE_192pcode_19292_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="93" symbol="task_0PCODE_192pcode_19293_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="94" symbol="task_0PCODE_192pcode_19294_V6" version="6" task="task_0" opcode="opcode_192" level="win:Error" template="task_0PCODE_192pcode_1924Args_V6"/>
+     <event value="95" symbol="task_0PCODE_64pcode_6495_V6" version="6" task="task_0" opcode="opcode_64" level="win:Informational" template="task_0PCODE_192pcode_1924Args_V6"/>
+    </events>
+    <templates>
+     <template tid="task_0PCODE_192pcode_192Args_V6">
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="DiffAreaVolumeName" inType="win:UnicodeString"/>
+      <data name="NTSTATUS" inType="win:UnicodeString"/>
+      <data name="SourceTag" inType="win:UnicodeString"/>
+      <data name="SourceFileID" inType="win:UnicodeString"/>
+      <data name="SourceLine" inType="win:UnicodeString"/>
+      <data name="__binLength" inType="win:UInt32"/>
+      <data name="binary" inType="win:Binary" length="__binLength"/>
+     </template>
+     <template tid="task_0PCODE_192pcode_1924Args_V6">
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="NTSTATUS" inType="win:UnicodeString"/>
+      <data name="SourceTag" inType="win:UnicodeString"/>
+      <data name="SourceFileID" inType="win:UnicodeString"/>
+      <data name="SourceLine" inType="win:UnicodeString"/>
+      <data name="__binLength" inType="win:UInt32"/>
+      <data name="binary" inType="win:Binary" length="__binLength"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="opcode_task_0opcode_64" value="opcode_64"/>
+    <string id="opcode_task_0opcode_128" value="opcode_128"/>
+    <string id="opcode_task_0opcode_192" value="opcode_192"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

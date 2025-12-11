@@ -1,0 +1,154 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Sdbus" guid="{fe28004e-b08f-4407-92b3-bad3a2c51708}" resourceFileName="Microsoft-Windows-Sdbus" messageFileName="Microsoft-Windows-Sdbus" symbol="MicrosoftWindowsSdbus" source="Xml" >
+    <keywords>
+     <keyword name="Interrupt" message="$(string.keyword_Interrupt)" mask="0x1"/>
+     <keyword name="Emmc" message="$(string.keyword_Emmc)" mask="0x2"/>
+     <keyword name="Sdio" message="$(string.keyword_Sdio)" mask="0x4"/>
+     <keyword name="Sd" message="$(string.keyword_Sd)" mask="0x8"/>
+     <keyword name="Perf" message="$(string.keyword_Perf)" mask="0x10"/>
+     <keyword name="Error" message="$(string.keyword_Error)" mask="0x20"/>
+     <keyword name="Dpc" message="$(string.keyword_Dpc)" mask="0x40"/>
+     <keyword name="Request" message="$(string.keyword_Request)" mask="0x80"/>
+    </keywords>
+    <tasks>
+     <task name="Interrupt" message="$(string.task_Interrupt)" value="1"/>
+     <task name="Rückrufroutine" message="$(string.task_Rückrufroutine)" value="2"/>
+     <task name="Retuningausführen" message="$(string.task_Retuningausführen)" value="3"/>
+     <task name="Error" message="$(string.task_Error)" value="4"/>
+     <task name="HPIIO" message="$(string.task_HPIIO)" value="5"/>
+     <task name="P_State_Anforderung" message="$(string.task_P_State_Anforderung)" value="6"/>
+     <task name="P_State_Beendigung" message="$(string.task_P_State_Beendigung)" value="7"/>
+     <task name="Befehlausgegeben" message="$(string.task_Befehlausgegeben)" value="8"/>
+     <task name="Befehlabgeschlossen" message="$(string.task_Befehlabgeschlossen)" value="9"/>
+     <task name="HPICMDausgegeben" message="$(string.task_HPICMDausgegeben)" value="10"/>
+     <task name="HPI_Arbeitsprozess" message="$(string.task_HPI_Arbeitsprozess)" value="12"/>
+     <task name="P_State_Verwendung" message="$(string.task_P_State_Verwendung)" value="13"/>
+     <task name="SdbusWorkerDpc" message="$(string.task_SdbusWorkerDpc)" value="14"/>
+     <task name="SdbusRequest" message="$(string.task_SdbusRequest)" value="15"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="Interrupt" version="0" task="Interrupt" level="win:Informational" keywords="Interrupt" template="InterruptArgs"/>
+     <event value="101" symbol="RückrufroutineStarten" version="0" task="Rückrufroutine" opcode="win:Starten" level="win:Informational" keywords="Sdio" template="RückrufroutineStartenArgs"/>
+     <event value="102" symbol="RückrufroutineBeenden" version="0" task="Rückrufroutine" opcode="win:Beenden" level="win:Informational" keywords="Sdio" template="RückrufroutineStartenArgs"/>
+     <event value="103" symbol="Retuningausführen" version="0" task="Retuningausführen" level="win:Informational" keywords="Emmc" template="RetuningausführenArgs"/>
+     <event value="104" symbol="Error" version="0" task="Error" level="win:Informational" keywords="Emmc" template="ErrorArgs"/>
+     <event value="105" symbol="HPIIO" version="0" task="HPIIO" level="win:Informational" keywords="Emmc" template="HPIIOArgs"/>
+     <event value="106" symbol="P_State_Anforderung" version="0" task="P_State_Anforderung" level="win:Informational" keywords="Perf" template="P_State_AnforderungArgs"/>
+     <event value="107" symbol="P_State_Beendigung" version="0" task="P_State_Beendigung" level="win:Informational" keywords="Perf" template="P_State_BeendigungArgs"/>
+     <event value="108" symbol="Befehlausgegeben" version="0" task="Befehlausgegeben" level="win:Informational" keywords="Perf" template="BefehlausgegebenArgs"/>
+     <event value="109" symbol="Befehlabgeschlossen" version="0" task="Befehlabgeschlossen" level="win:Informational" keywords="Perf" template="BefehlausgegebenArgs"/>
+     <event value="110" symbol="HPICMDausgegeben" version="0" task="HPICMDausgegeben" level="win:Informational" keywords="Emmc" template="HPICMDausgegebenArgs"/>
+     <event value="111" symbol="HPICMDausgegeben111" version="0" task="HPICMDausgegeben" level="win:Informational" keywords="Emmc" template="HPICMDausgegebenArgs"/>
+     <event value="112" symbol="HPI_Arbeitsprozess" version="0" task="HPI_Arbeitsprozess" level="win:Informational" keywords="Emmc" template="HPICMDausgegebenArgs"/>
+     <event value="113" symbol="HPI_Arbeitsprozess113" version="0" task="HPI_Arbeitsprozess" level="win:Informational" keywords="Emmc" template="HPI_Arbeitsprozess113Args"/>
+     <event value="114" symbol="P_State_Verwendung" version="0" task="P_State_Verwendung" level="win:Informational" keywords="Perf" template="P_State_VerwendungArgs"/>
+     <event value="115" symbol="SdbusWorkerDpc" version="0" task="SdbusWorkerDpc" level="win:Informational" keywords="Dpc" template="SdbusWorkerDpcArgs"/>
+     <event value="116" symbol="SdbusWorkerDpc116" version="0" task="SdbusWorkerDpc" level="win:Informational" keywords="Dpc" template="SdbusWorkerDpcArgs"/>
+     <event value="117" symbol="SdbusRequest" version="0" task="SdbusRequest" level="win:Informational" keywords="Request" template="SdbusRequestArgs"/>
+     <event value="118" symbol="SdbusRequest118" version="0" task="SdbusRequest" level="win:Informational" keywords="Request" template="SdbusRequestArgs"/>
+     <event value="119" symbol="RückrufroutineStarten119" version="0" task="Rückrufroutine" opcode="win:Starten" level="win:Informational" keywords="Sdio" template="RückrufroutineStartenArgs"/>
+     <event value="120" symbol="InterruptStarten" version="0" task="Interrupt" opcode="win:Starten" level="win:Informational" keywords="Sdio"/>
+     <event value="121" symbol="InterruptStarten121" version="0" task="Interrupt" opcode="win:Starten" level="win:Informational" keywords="Sdio"/>
+     <event value="122" symbol="InterruptStarten122" version="0" task="Interrupt" opcode="win:Starten" level="win:Informational" keywords="Sdio"/>
+    </events>
+    <templates>
+     <template tid="InterruptArgs">
+      <data name="SDHostPhysicalAddress" inType="win:HexInt64"/>
+      <data name="EventMask" inType="win:HexInt32"/>
+     </template>
+     <template tid="RückrufroutineStartenArgs">
+      <data name="SDHostPhysicalAddress" inType="win:HexInt64"/>
+     </template>
+     <template tid="RetuningausführenArgs">
+      <data name="SDHostPhysicalAddress" inType="win:HexInt64"/>
+      <data name="RetuneCount" inType="win:UInt64"/>
+     </template>
+     <template tid="ErrorArgs">
+      <data name="SDHostPhysicalAddress" inType="win:HexInt64"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+      <data name="ErrorCount" inType="win:UInt32"/>
+     </template>
+     <template tid="HPIIOArgs">
+      <data name="SDHostPhysicalAddress" inType="win:HexInt64"/>
+      <data name="HpiIoCount" inType="win:UInt64"/>
+     </template>
+     <template tid="P_State_AnforderungArgs">
+      <data name="PoFxDeviceHandle" inType="win:HexInt64"/>
+      <data name="PStateRequested" inType="win:UInt32"/>
+      <data name="PStateRequestCount" inType="win:UInt64"/>
+     </template>
+     <template tid="P_State_BeendigungArgs">
+      <data name="PoFxDeviceHandle" inType="win:HexInt64"/>
+      <data name="PStateCompleted" inType="win:UInt32"/>
+      <data name="PStateCompletionCount" inType="win:UInt64"/>
+     </template>
+     <template tid="BefehlausgegebenArgs">
+      <data name="SDHostPhysicalAddress" inType="win:HexInt64"/>
+      <data name="Command" inType="win:UInt8"/>
+      <data name="Argument" inType="win:HexInt64"/>
+      <data name="Size" inType="win:UInt64"/>
+     </template>
+     <template tid="HPICMDausgegebenArgs">
+      <data name="Irp" inType="win:HexInt64"/>
+     </template>
+     <template tid="HPI_Arbeitsprozess113Args">
+      <data name="Irp" inType="win:HexInt64"/>
+      <data name="HpiExitReason" inType="win:UInt32"/>
+     </template>
+     <template tid="P_State_VerwendungArgs">
+      <data name="PoFxDeviceHandle" inType="win:HexInt64"/>
+      <data name="PStateActivePercent" inType="win:UInt32"/>
+      <data name="PStateActiveDuration" inType="win:UInt32"/>
+      <data name="PStateSampleDuration" inType="win:UInt32"/>
+      <data name="PStateCurrentFrequency" inType="win:UInt32"/>
+      <data name="PStateRequestedFrequency" inType="win:UInt32"/>
+     </template>
+     <template tid="SdbusWorkerDpcArgs">
+      <data name="SDHostPhysicalAddress" inType="win:HexInt64"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="WorkPacketWorkerProcFunction" inType="win:UInt32"/>
+      <data name="WorkEngineCurrentState" inType="win:HexInt32"/>
+      <data name="WorkEngineFunctionPhase" inType="win:HexInt32"/>
+     </template>
+     <template tid="SdbusRequestArgs">
+      <data name="SDHostPhysicalAddress" inType="win:HexInt64"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="WorkEngineCommand" inType="win:HexInt32"/>
+      <data name="WorkEngineArgument" inType="win:HexInt32"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Interrupt" value="Interrupt"/>
+    <string id="keyword_Emmc" value="Emmc"/>
+    <string id="keyword_Sdio" value="Sdio"/>
+    <string id="keyword_Sd" value="Sd"/>
+    <string id="keyword_Perf" value="Perf"/>
+    <string id="keyword_Error" value="Error"/>
+    <string id="keyword_Dpc" value="Dpc"/>
+    <string id="keyword_Request" value="Request"/>
+    <string id="task_Interrupt" value="Interrupt"/>
+    <string id="task_Rückrufroutine" value="Rückrufroutine"/>
+    <string id="task_Retuningausführen" value="Retuningausführen"/>
+    <string id="task_Error" value="Error"/>
+    <string id="task_HPIIO" value="HPIIO"/>
+    <string id="task_P_State_Anforderung" value="P_State_Anforderung"/>
+    <string id="task_P_State_Beendigung" value="P_State_Beendigung"/>
+    <string id="task_Befehlausgegeben" value="Befehlausgegeben"/>
+    <string id="task_Befehlabgeschlossen" value="Befehlabgeschlossen"/>
+    <string id="task_HPICMDausgegeben" value="HPICMDausgegeben"/>
+    <string id="task_HPI_Arbeitsprozess" value="HPI_Arbeitsprozess"/>
+    <string id="task_P_State_Verwendung" value="P_State_Verwendung"/>
+    <string id="task_SdbusWorkerDpc" value="SdbusWorkerDpc"/>
+    <string id="task_SdbusRequest" value="SdbusRequest"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

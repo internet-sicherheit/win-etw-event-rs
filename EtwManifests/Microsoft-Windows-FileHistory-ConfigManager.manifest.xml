@@ -1,0 +1,53 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-FileHistory-ConfigManager" guid="{b447b4dd-7780-11e0-ada3-18a90531a85a}" resourceFileName="Microsoft-Windows-FileHistory-ConfigManager" messageFileName="Microsoft-Windows-FileHistory-ConfigManager" symbol="MicrosoftWindowsFileHistoryConfigManager" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="ValidateTarget" message="$(string.task_ValidateTarget)" value="1"/>
+     <task name="ProvisionAndSetTarget" message="$(string.task_ProvisionAndSetTarget)" value="2"/>
+     <task name="Reassociation" message="$(string.task_Reassociation)" value="3"/>
+     <task name="Migration" message="$(string.task_Migration)" value="4"/>
+     <task name="SettingChangeNotification" message="$(string.task_SettingChangeNotification)" value="5"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="ValidateTargetStarten" version="0" task="ValidateTarget" opcode="win:Starten" level="win:Always" template="ValidateTargetStartenArgs"/>
+     <event value="2" symbol="ValidateTargetBeenden" version="0" task="ValidateTarget" opcode="win:Beenden" level="win:Always" template="ValidateTargetStartenArgs"/>
+     <event value="3" symbol="ProvisionAndSetTargetStarten" version="0" task="ProvisionAndSetTarget" opcode="win:Starten" level="win:Always" template="ValidateTargetStartenArgs"/>
+     <event value="4" symbol="ProvisionAndSetTargetBeenden" version="0" task="ProvisionAndSetTarget" opcode="win:Beenden" level="win:Always" template="ValidateTargetStartenArgs"/>
+     <event value="5" symbol="ReassociationStarten" version="0" task="Reassociation" opcode="win:Starten" level="win:Always" template="ValidateTargetStartenArgs"/>
+     <event value="6" symbol="ReassociationBeenden" version="0" task="Reassociation" opcode="win:Beenden" level="win:Always" template="ValidateTargetStartenArgs"/>
+     <event value="7" symbol="ReassociationStarten7" version="0" task="Reassociation" opcode="win:Starten" level="win:Always" template="ReassociationStarten7Args"/>
+     <event value="8" symbol="ReassociationBeenden8" version="0" task="Reassociation" opcode="win:Beenden" level="win:Always"/>
+     <event value="9" symbol="MigrationStarten" version="0" task="Migration" opcode="win:Starten" level="win:Always" template="ValidateTargetStartenArgs"/>
+     <event value="10" symbol="MigrationBeenden" version="0" task="Migration" opcode="win:Beenden" level="win:Always"/>
+     <event value="11" symbol="MigrationStarten11" version="0" task="Migration" opcode="win:Starten" level="win:Always" template="ValidateTargetStartenArgs"/>
+     <event value="12" symbol="MigrationBeenden12" version="0" task="Migration" opcode="win:Beenden" level="win:Always"/>
+     <event value="13" symbol="MigrationStarten13" version="0" task="Migration" opcode="win:Starten" level="win:Always" template="ValidateTargetStartenArgs"/>
+     <event value="14" symbol="MigrationBeenden14" version="0" task="Migration" opcode="win:Beenden" level="win:Always"/>
+     <event value="15" symbol="SettingChangeNotification" version="0" task="SettingChangeNotification" level="win:Always"/>
+    </events>
+    <templates>
+     <template tid="ValidateTargetStartenArgs">
+      <data name="TargetUrl" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ReassociationStarten7Args">
+      <data name="OverwriteIfExists" inType="win:Boolean"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_ValidateTarget" value="ValidateTarget"/>
+    <string id="task_ProvisionAndSetTarget" value="ProvisionAndSetTarget"/>
+    <string id="task_Reassociation" value="Reassociation"/>
+    <string id="task_Migration" value="Migration"/>
+    <string id="task_SettingChangeNotification" value="SettingChangeNotification"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

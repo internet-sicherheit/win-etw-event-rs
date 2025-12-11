@@ -1,0 +1,37 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-EapMethods-Ttls" guid="{d710d46c-235d-4798-ac20-9f83e1dcd557}" resourceFileName="Microsoft-Windows-EapMethods-Ttls" messageFileName="Microsoft-Windows-EapMethods-Ttls" symbol="MicrosoftWindowsEapMethodsTtls" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="FehlerbeiderTTLS_Authentifizierung" message="$(string.task_FehlerbeiderTTLS_Authentifizierung)" value="1"/>
+     <task name="Leistungsmetrikereignis" message="$(string.task_Leistungsmetrikereignis)" value="2"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="FehlerbeiderTTLS_Authentifizierung" version="0" task="FehlerbeiderTTLS_Authentifizierung" level="win:Error"/>
+     <event value="101" symbol="FehlerbeiderTTLS_Authentifizierung101" version="0" task="FehlerbeiderTTLS_Authentifizierung" level="win:Error"/>
+     <event value="200" symbol="LeistungsmetrikereignisStarten" version="0" task="Leistungsmetrikereignis" opcode="win:Starten" level="win:Informational"/>
+     <event value="201" symbol="LeistungsmetrikereignisBeenden" version="0" task="Leistungsmetrikereignis" opcode="win:Beenden" level="win:Informational"/>
+     <event value="202" symbol="LeistungsmetrikereignisStarten202" version="0" task="Leistungsmetrikereignis" opcode="win:Starten" level="win:Informational"/>
+     <event value="203" symbol="LeistungsmetrikereignisBeenden203" version="0" task="Leistungsmetrikereignis" opcode="win:Beenden" level="win:Informational"/>
+     <event value="204" symbol="LeistungsmetrikereignisStarten204" version="0" task="Leistungsmetrikereignis" opcode="win:Starten" level="win:Informational" template="LeistungsmetrikereignisStarten204Args"/>
+    </events>
+    <templates>
+     <template tid="LeistungsmetrikereignisStarten204Args">
+      <data name="CAThumbprint" inType="win:UnicodeString"/>
+      <data name="ServerName" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_FehlerbeiderTTLS_Authentifizierung" value="FehlerbeiderTTLS_Authentifizierung"/>
+    <string id="task_Leistungsmetrikereignis" value="Leistungsmetrikereignis"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

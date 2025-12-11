@@ -1,0 +1,157 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-FileHistory-Catalog" guid="{b447b4dc-7780-11e0-ada3-18a90531a85a}" resourceFileName="Microsoft-Windows-FileHistory-Catalog" messageFileName="Microsoft-Windows-FileHistory-Catalog" symbol="MicrosoftWindowsFileHistoryCatalog" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="Attach" message="$(string.task_Attach)" value="1"/>
+     <task name="Detach" message="$(string.task_Detach)" value="2"/>
+     <task name="Create" message="$(string.task_Create)" value="3"/>
+     <task name="AddNamespaceRecord" message="$(string.task_AddNamespaceRecord)" value="4"/>
+     <task name="UpdateNamespaceRecord" message="$(string.task_UpdateNamespaceRecord)" value="5"/>
+     <task name="GetNamespaceRecord" message="$(string.task_GetNamespaceRecord)" value="6"/>
+     <task name="AddFileRecord" message="$(string.task_AddFileRecord)" value="7"/>
+     <task name="UpdateFileRecord" message="$(string.task_UpdateFileRecord)" value="8"/>
+     <task name="GetFileRecord" message="$(string.task_GetFileRecord)" value="9"/>
+     <task name="FindNsRecordsByFullPath" message="$(string.task_FindNsRecordsByFullPath)" value="10"/>
+     <task name="FindPointInTimeFolder" message="$(string.task_FindPointInTimeFolder)" value="11"/>
+     <task name="FindNsRecordsByFileRecordId" message="$(string.task_FindNsRecordsByFileRecordId)" value="12"/>
+     <task name="FindFileRecordsByState" message="$(string.task_FindFileRecordsByState)" value="13"/>
+     <task name="FindLibrariesTimeline" message="$(string.task_FindLibrariesTimeline)" value="14"/>
+     <task name="FindLibraryTimeline" message="$(string.task_FindLibraryTimeline)" value="15"/>
+     <task name="FindPointInTimeLibrary" message="$(string.task_FindPointInTimeLibrary)" value="16"/>
+     <task name="FindPointInTimeLibraries" message="$(string.task_FindPointInTimeLibraries)" value="17"/>
+     <task name="FindAllLibraryRecords" message="$(string.task_FindAllLibraryRecords)" value="18"/>
+     <task name="Reattach" message="$(string.task_Reattach)" value="19"/>
+     <task name="MoveNext" message="$(string.task_MoveNext)" value="20"/>
+     <task name="MovePrevious" message="$(string.task_MovePrevious)" value="21"/>
+     <task name="FindNsRecordsByTVisible" message="$(string.task_FindNsRecordsByTVisible)" value="22"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="AttachStarten" version="0" task="Attach" opcode="win:Starten" level="win:Always" template="AttachStartenArgs"/>
+     <event value="2" symbol="AttachBeenden" version="0" task="Attach" opcode="win:Beenden" level="win:Always" template="AttachStartenArgs"/>
+     <event value="3" symbol="DetachStarten" version="0" task="Detach" opcode="win:Starten" level="win:Always"/>
+     <event value="4" symbol="DetachBeenden" version="0" task="Detach" opcode="win:Beenden" level="win:Always"/>
+     <event value="5" symbol="CreateStarten" version="0" task="Create" opcode="win:Starten" level="win:Always" template="CreateStartenArgs"/>
+     <event value="6" symbol="CreateBeenden" version="0" task="Create" opcode="win:Beenden" level="win:Always" template="CreateStartenArgs"/>
+     <event value="7" symbol="AddNamespaceRecordStarten" version="0" task="AddNamespaceRecord" opcode="win:Starten" level="win:Always" template="AddNamespaceRecordStartenArgs"/>
+     <event value="8" symbol="AddNamespaceRecordBeenden" version="0" task="AddNamespaceRecord" opcode="win:Beenden" level="win:Always" template="AddNamespaceRecordStartenArgs"/>
+     <event value="9" symbol="UpdateNamespaceRecordStarten" version="0" task="UpdateNamespaceRecord" opcode="win:Starten" level="win:Always" template="UpdateNamespaceRecordStartenArgs"/>
+     <event value="10" symbol="UpdateNamespaceRecordBeenden" version="0" task="UpdateNamespaceRecord" opcode="win:Beenden" level="win:Always" template="UpdateNamespaceRecordStartenArgs"/>
+     <event value="11" symbol="GetNamespaceRecordStarten" version="0" task="GetNamespaceRecord" opcode="win:Starten" level="win:Always" template="GetNamespaceRecordStartenArgs"/>
+     <event value="12" symbol="GetNamespaceRecordBeenden" version="0" task="GetNamespaceRecord" opcode="win:Beenden" level="win:Always" template="GetNamespaceRecordStartenArgs"/>
+     <event value="13" symbol="AddFileRecordStarten" version="0" task="AddFileRecord" opcode="win:Starten" level="win:Always" template="AddNamespaceRecordStartenArgs"/>
+     <event value="14" symbol="AddFileRecordBeenden" version="0" task="AddFileRecord" opcode="win:Beenden" level="win:Always" template="AddNamespaceRecordStartenArgs"/>
+     <event value="15" symbol="UpdateFileRecordStarten" version="0" task="UpdateFileRecord" opcode="win:Starten" level="win:Always" template="UpdateNamespaceRecordStartenArgs"/>
+     <event value="16" symbol="UpdateFileRecordBeenden" version="0" task="UpdateFileRecord" opcode="win:Beenden" level="win:Always" template="UpdateNamespaceRecordStartenArgs"/>
+     <event value="17" symbol="GetFileRecordStarten" version="0" task="GetFileRecord" opcode="win:Starten" level="win:Always" template="GetNamespaceRecordStartenArgs"/>
+     <event value="18" symbol="GetFileRecordBeenden" version="0" task="GetFileRecord" opcode="win:Beenden" level="win:Always" template="GetNamespaceRecordStartenArgs"/>
+     <event value="19" symbol="FindNsRecordsByFullPathStarten" version="0" task="FindNsRecordsByFullPath" opcode="win:Starten" level="win:Always" template="FindNsRecordsByFullPathStartenArgs"/>
+     <event value="20" symbol="FindNsRecordsByFullPathBeenden" version="0" task="FindNsRecordsByFullPath" opcode="win:Beenden" level="win:Always" template="FindNsRecordsByFullPathStartenArgs"/>
+     <event value="21" symbol="FindPointInTimeFolderStarten" version="0" task="FindPointInTimeFolder" opcode="win:Starten" level="win:Always" template="FindPointInTimeFolderStartenArgs"/>
+     <event value="22" symbol="FindPointInTimeFolderBeenden" version="0" task="FindPointInTimeFolder" opcode="win:Beenden" level="win:Always" template="FindPointInTimeFolderStartenArgs"/>
+     <event value="23" symbol="FindNsRecordsByFileRecordIdStarten" version="0" task="FindNsRecordsByFileRecordId" opcode="win:Starten" level="win:Always" template="FindNsRecordsByFileRecordIdStartenArgs"/>
+     <event value="24" symbol="FindNsRecordsByFileRecordIdBeenden" version="0" task="FindNsRecordsByFileRecordId" opcode="win:Beenden" level="win:Always" template="FindNsRecordsByFileRecordIdStartenArgs"/>
+     <event value="25" symbol="FindFileRecordsByStateStarten" version="0" task="FindFileRecordsByState" opcode="win:Starten" level="win:Always" template="FindFileRecordsByStateStartenArgs"/>
+     <event value="26" symbol="FindFileRecordsByStateBeenden" version="0" task="FindFileRecordsByState" opcode="win:Beenden" level="win:Always" template="FindFileRecordsByStateStartenArgs"/>
+     <event value="27" symbol="FindLibrariesTimelineStarten" version="0" task="FindLibrariesTimeline" opcode="win:Starten" level="win:Always"/>
+     <event value="28" symbol="FindLibrariesTimelineBeenden" version="0" task="FindLibrariesTimeline" opcode="win:Beenden" level="win:Always"/>
+     <event value="29" symbol="FindLibraryTimelineStarten" version="0" task="FindLibraryTimeline" opcode="win:Starten" level="win:Always" template="FindLibraryTimelineStartenArgs"/>
+     <event value="30" symbol="FindLibraryTimelineBeenden" version="0" task="FindLibraryTimeline" opcode="win:Beenden" level="win:Always" template="FindLibraryTimelineStartenArgs"/>
+     <event value="31" symbol="FindPointInTimeLibrariesStarten" version="0" task="FindPointInTimeLibraries" opcode="win:Starten" level="win:Always" template="FindPointInTimeLibrariesStartenArgs"/>
+     <event value="32" symbol="FindPointInTimeLibrariesBeenden" version="0" task="FindPointInTimeLibraries" opcode="win:Beenden" level="win:Always" template="FindPointInTimeLibrariesStartenArgs"/>
+     <event value="33" symbol="FindPointInTimeLibraryStarten" version="0" task="FindPointInTimeLibrary" opcode="win:Starten" level="win:Always" template="FindPointInTimeLibraryStartenArgs"/>
+     <event value="34" symbol="FindPointInTimeLibraryBeenden" version="0" task="FindPointInTimeLibrary" opcode="win:Beenden" level="win:Always" template="FindPointInTimeLibraryStartenArgs"/>
+     <event value="35" symbol="FindAllLibraryRecordsStarten" version="0" task="FindAllLibraryRecords" opcode="win:Starten" level="win:Always"/>
+     <event value="36" symbol="FindAllLibraryRecordsBeenden" version="0" task="FindAllLibraryRecords" opcode="win:Beenden" level="win:Always"/>
+     <event value="37" symbol="ReattachStarten" version="0" task="Reattach" opcode="win:Starten" level="win:Always"/>
+     <event value="38" symbol="ReattachBeenden" version="0" task="Reattach" opcode="win:Beenden" level="win:Always"/>
+     <event value="39" symbol="MoveNextStarten" version="0" task="MoveNext" opcode="win:Starten" level="win:Always" template="MoveNextStartenArgs"/>
+     <event value="40" symbol="MoveNextBeenden" version="0" task="MoveNext" opcode="win:Beenden" level="win:Always" template="MoveNextStartenArgs"/>
+     <event value="41" symbol="MovePreviousStarten" version="0" task="MovePrevious" opcode="win:Starten" level="win:Always" template="MoveNextStartenArgs"/>
+     <event value="42" symbol="MovePreviousBeenden" version="0" task="MovePrevious" opcode="win:Beenden" level="win:Always" template="MoveNextStartenArgs"/>
+     <event value="43" symbol="FindNsRecordsByTVisibleStarten" version="0" task="FindNsRecordsByTVisible" opcode="win:Starten" level="win:Always" template="FindPointInTimeLibrariesStartenArgs"/>
+     <event value="44" symbol="FindNsRecordsByTVisibleBeenden" version="0" task="FindNsRecordsByTVisible" opcode="win:Beenden" level="win:Always" template="FindPointInTimeLibrariesStartenArgs"/>
+    </events>
+    <templates>
+     <template tid="AttachStartenArgs">
+      <data name="CatalogPath" inType="win:UnicodeString"/>
+      <data name="CatalogPath2" inType="win:UnicodeString"/>
+      <data name="ReadOnly" inType="win:Int32"/>
+     </template>
+     <template tid="CreateStartenArgs">
+      <data name="CatalogPath" inType="win:UnicodeString"/>
+      <data name="CatalogPath2" inType="win:UnicodeString"/>
+     </template>
+     <template tid="AddNamespaceRecordStartenArgs">
+      <data name="Path" inType="win:UnicodeString"/>
+     </template>
+     <template tid="UpdateNamespaceRecordStartenArgs">
+      <data name="id" inType="win:Int32"/>
+      <data name="Path" inType="win:UnicodeString"/>
+     </template>
+     <template tid="GetNamespaceRecordStartenArgs">
+      <data name="id" inType="win:Int32"/>
+     </template>
+     <template tid="FindNsRecordsByFullPathStartenArgs">
+      <data name="Path" inType="win:UnicodeString"/>
+      <data name="InitialPosition" inType="win:Int32"/>
+     </template>
+     <template tid="FindPointInTimeFolderStartenArgs">
+      <data name="Path" inType="win:UnicodeString"/>
+      <data name="BackupSetId" inType="win:Int32"/>
+     </template>
+     <template tid="FindNsRecordsByFileRecordIdStartenArgs">
+      <data name="FileRecordId" inType="win:Int32"/>
+     </template>
+     <template tid="FindFileRecordsByStateStartenArgs">
+      <data name="State" inType="win:Int32"/>
+      <data name="Sort" inType="win:Int32"/>
+     </template>
+     <template tid="FindLibraryTimelineStartenArgs">
+      <data name="LibraryName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="FindPointInTimeLibrariesStartenArgs">
+      <data name="BackupSetId" inType="win:Int32"/>
+     </template>
+     <template tid="FindPointInTimeLibraryStartenArgs">
+      <data name="LibraryName" inType="win:UnicodeString"/>
+      <data name="BackupSetId" inType="win:Int32"/>
+     </template>
+     <template tid="MoveNextStartenArgs">
+      <data name="IteratorName" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_Attach" value="Attach"/>
+    <string id="task_Detach" value="Detach"/>
+    <string id="task_Create" value="Create"/>
+    <string id="task_AddNamespaceRecord" value="AddNamespaceRecord"/>
+    <string id="task_UpdateNamespaceRecord" value="UpdateNamespaceRecord"/>
+    <string id="task_GetNamespaceRecord" value="GetNamespaceRecord"/>
+    <string id="task_AddFileRecord" value="AddFileRecord"/>
+    <string id="task_UpdateFileRecord" value="UpdateFileRecord"/>
+    <string id="task_GetFileRecord" value="GetFileRecord"/>
+    <string id="task_FindNsRecordsByFullPath" value="FindNsRecordsByFullPath"/>
+    <string id="task_FindPointInTimeFolder" value="FindPointInTimeFolder"/>
+    <string id="task_FindNsRecordsByFileRecordId" value="FindNsRecordsByFileRecordId"/>
+    <string id="task_FindFileRecordsByState" value="FindFileRecordsByState"/>
+    <string id="task_FindLibrariesTimeline" value="FindLibrariesTimeline"/>
+    <string id="task_FindLibraryTimeline" value="FindLibraryTimeline"/>
+    <string id="task_FindPointInTimeLibrary" value="FindPointInTimeLibrary"/>
+    <string id="task_FindPointInTimeLibraries" value="FindPointInTimeLibraries"/>
+    <string id="task_FindAllLibraryRecords" value="FindAllLibraryRecords"/>
+    <string id="task_Reattach" value="Reattach"/>
+    <string id="task_MoveNext" value="MoveNext"/>
+    <string id="task_MovePrevious" value="MovePrevious"/>
+    <string id="task_FindNsRecordsByTVisible" value="FindNsRecordsByTVisible"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,80 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-WPD-CompositeClassDriver" guid="{355c44fe-0c8e-4bf8-be28-8bc7b5a42720}" resourceFileName="Microsoft-Windows-WPD-CompositeClassDriver" messageFileName="Microsoft-Windows-WPD-CompositeClassDriver" symbol="MicrosoftWindowsWPDCompositeClassDriver" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="Treiberleistung" message="$(string.task_Treiberleistung)" value="1"/>
+     <task name="Transportverwaltung" message="$(string.task_Transportverwaltung)" value="32"/>
+     <task name="Treiberfehler" message="$(string.task_Treiberfehler)" value="48"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="TreiberleistungStarten" version="0" task="Treiberleistung" opcode="win:Starten" level="win:Informational" template="TreiberleistungStartenArgs"/>
+     <event value="101" symbol="TreiberleistungBeenden" version="0" task="Treiberleistung" opcode="win:Beenden" level="win:Informational" template="TreiberleistungStartenArgs"/>
+     <event value="102" symbol="TreiberleistungStarten102" version="0" task="Treiberleistung" opcode="win:Starten" level="win:Informational" template="TreiberleistungStartenArgs"/>
+     <event value="103" symbol="TreiberleistungBeenden103" version="0" task="Treiberleistung" opcode="win:Beenden" level="win:Informational" template="TreiberleistungStartenArgs"/>
+     <event value="104" symbol="TreiberleistungStarten104" version="0" task="Treiberleistung" opcode="win:Starten" level="win:Informational" template="TreiberleistungStarten104Args"/>
+     <event value="105" symbol="TreiberleistungBeenden105" version="0" task="Treiberleistung" opcode="win:Beenden" level="win:Informational" template="TreiberleistungStarten104Args"/>
+     <event value="106" symbol="TreiberleistungStarten106" version="0" task="Treiberleistung" opcode="win:Starten" level="win:Informational"/>
+     <event value="107" symbol="TreiberleistungBeenden107" version="0" task="Treiberleistung" opcode="win:Beenden" level="win:Informational"/>
+     <event value="108" symbol="TreiberleistungStarten108" version="0" task="Treiberleistung" opcode="win:Starten" level="win:Informational"/>
+     <event value="109" symbol="TreiberleistungBeenden109" version="0" task="Treiberleistung" opcode="win:Beenden" level="win:Informational"/>
+     <event value="110" symbol="TreiberleistungStarten110" version="0" task="Treiberleistung" opcode="win:Starten" level="win:Informational"/>
+     <event value="111" symbol="TreiberleistungBeenden111" version="0" task="Treiberleistung" opcode="win:Beenden" level="win:Informational"/>
+     <event value="112" symbol="TreiberleistungStarten112" version="0" task="Treiberleistung" opcode="win:Starten" level="win:Informational"/>
+     <event value="113" symbol="TreiberleistungBeenden113" version="0" task="Treiberleistung" opcode="win:Beenden" level="win:Informational"/>
+     <event value="200" symbol="Transportverwaltung" version="0" task="Transportverwaltung" level="win:Informational" template="TreiberleistungStartenArgs"/>
+     <event value="201" symbol="Transportverwaltung201" version="0" task="Transportverwaltung" level="win:Informational" template="TreiberleistungStartenArgs"/>
+     <event value="202" symbol="Transportverwaltung202" version="0" task="Transportverwaltung" level="win:Informational" template="Transportverwaltung202Args"/>
+     <event value="203" symbol="Transportverwaltung203" version="0" task="Transportverwaltung" level="win:Informational" template="Transportverwaltung202Args"/>
+     <event value="300" symbol="Treiberfehler" version="0" task="Treiberfehler" level="win:Critical"/>
+     <event value="301" symbol="Treiberfehler301" version="0" task="Treiberfehler" level="win:Critical" template="TreiberleistungStartenArgs"/>
+     <event value="302" symbol="Treiberfehler302" version="0" task="Treiberfehler" level="win:Critical" template="TreiberleistungStartenArgs"/>
+     <event value="303" symbol="Transportverwaltung303" version="0" task="Transportverwaltung" level="win:Error" template="Transportverwaltung303Args"/>
+     <event value="304" symbol="Transportverwaltung304" version="0" task="Transportverwaltung" level="win:Error" template="Transportverwaltung303Args"/>
+     <event value="305" symbol="Transportverwaltung305" version="0" task="Transportverwaltung" level="win:Error" template="Transportverwaltung303Args"/>
+     <event value="306" symbol="Transportverwaltung306" version="0" task="Transportverwaltung" level="win:Error"/>
+     <event value="307" symbol="Transportverwaltung307" version="0" task="Transportverwaltung" level="win:Error"/>
+     <event value="308" symbol="Transportverwaltung308" version="0" task="Transportverwaltung" level="win:Error" template="Transportverwaltung308Args"/>
+     <event value="309" symbol="Transportverwaltung309" version="0" task="Transportverwaltung" level="win:Error" template="Transportverwaltung308Args"/>
+     <event value="310" symbol="Transportverwaltung310" version="0" task="Transportverwaltung" level="win:Error" template="Transportverwaltung308Args"/>
+     <event value="311" symbol="Transportverwaltung311" version="0" task="Transportverwaltung" level="win:Error" template="Transportverwaltung308Args"/>
+     <event value="312" symbol="Transportverwaltung312" version="0" task="Transportverwaltung" level="win:Error" template="Transportverwaltung303Args"/>
+     <event value="313" symbol="Transportverwaltung313" version="0" task="Transportverwaltung" level="win:Error" template="Transportverwaltung303Args"/>
+     <event value="314" symbol="Transportverwaltung314" version="0" task="Transportverwaltung" level="win:Error"/>
+     <event value="315" symbol="Transportverwaltung315" version="0" task="Transportverwaltung" level="win:Error"/>
+     <event value="316" symbol="Transportverwaltung316" version="0" task="Transportverwaltung" level="win:Error"/>
+    </events>
+    <templates>
+     <template tid="TreiberleistungStartenArgs">
+      <data name="TransportSymbolicLink" inType="win:UnicodeString"/>
+     </template>
+     <template tid="TreiberleistungStarten104Args">
+      <data name="ReferenceString" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Transportverwaltung202Args">
+      <data name="InterfaceGUID" inType="win:GUID"/>
+      <data name="ReferenceString" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Transportverwaltung303Args">
+      <data name="ExpectedSize" inType="win:UInt64"/>
+      <data name="ActualSize" inType="win:UInt64"/>
+     </template>
+     <template tid="Transportverwaltung308Args">
+      <data name="Value" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_Treiberleistung" value="Treiberleistung"/>
+    <string id="task_Transportverwaltung" value="Transportverwaltung"/>
+    <string id="task_Treiberfehler" value="Treiberfehler"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

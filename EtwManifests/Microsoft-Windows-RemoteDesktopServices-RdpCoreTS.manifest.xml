@@ -1,0 +1,366 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-RemoteDesktopServices-RdpCoreTS" guid="{1139c61b-b549-4251-8ed3-27250a1edec8}" resourceFileName="Microsoft-Windows-RemoteDesktopServices-RdpCoreTS" messageFileName="Microsoft-Windows-RemoteDesktopServices-RdpCoreTS" symbol="MicrosoftWindowsRemoteDesktopServicesRdpCoreTS" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="RDP_Stapel" message="$(string.task_RDP_Stapel)" value="1">
+      <opcodes>
+       <opcode name="Initialisieren" message="$(string.opcode_RDP_StapelInitialisieren)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="RemoteFX_Modul" message="$(string.task_RemoteFX_Modul)" value="3">
+      <opcodes>
+       <opcode name="Initialisieren" message="$(string.opcode_RemoteFX_ModulInitialisieren)" value="11"/>
+       <opcode name="Beenden" message="$(string.opcode_RemoteFX_ModulBeenden)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="RemoteFX_Modul_4" message="$(string.task_RemoteFX_Modul_4)" value="4">
+      <opcodes>
+       <opcode name="Initialisieren" message="$(string.opcode_RemoteFX_Modul_4Initialisieren)" value="11"/>
+       <opcode name="RCMProtocolImpl" message="$(string.opcode_RemoteFX_Modul_4RCMProtocolImpl)" value="13"/>
+       <opcode name="ProtocolExchange" message="$(string.opcode_RemoteFX_Modul_4ProtocolExchange)" value="14"/>
+       <opcode name="EstablishConnection" message="$(string.opcode_RemoteFX_Modul_4EstablishConnection)" value="15"/>
+       <opcode name="NetworkDetect" message="$(string.opcode_RemoteFX_Modul_4NetworkDetect)" value="16"/>
+       <opcode name="CloseConnection" message="$(string.opcode_RemoteFX_Modul_4CloseConnection)" value="17"/>
+       <opcode name="NetworkBinding" message="$(string.opcode_RemoteFX_Modul_4NetworkBinding)" value="18"/>
+       <opcode name="Runtime" message="$(string.opcode_RemoteFX_Modul_4Runtime)" value="19"/>
+       <opcode name="AdvancedRemoteAppEnabled" message="$(string.opcode_RemoteFX_Modul_4AdvancedRemoteAppEnabled)" value="20"/>
+       <opcode name="AdvancedRemoteAppNotEnabled" message="$(string.opcode_RemoteFX_Modul_4AdvancedRemoteAppNotEnabled)" value="21"/>
+       <opcode name="UDPReverseConnect" message="$(string.opcode_RemoteFX_Modul_4UDPReverseConnect)" value="22"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1" symbol="RDP_StapelInitialisieren" version="0" task="RDP_Stapel" opcode="Initialisieren" level="win:Warning" template="RDP_StapelInitialisierenArgs"/>
+     <event value="2" symbol="RDP_StapelInitialisieren2" version="0" task="RDP_Stapel" opcode="Initialisieren" level="win:Informational"/>
+     <event value="3" symbol="RemoteFX_ModulInitialisieren" version="0" task="RemoteFX_Modul" opcode="Initialisieren" level="win:Warning" template="RemoteFX_ModulInitialisierenArgs"/>
+     <event value="4" symbol="RemoteFX_ModulInitialisieren4" version="0" task="RemoteFX_Modul" opcode="Initialisieren" level="win:Critical" template="RemoteFX_ModulInitialisierenArgs"/>
+     <event value="5" symbol="RemoteFX_ModulInitialisieren5" version="0" task="RemoteFX_Modul" opcode="Initialisieren" level="win:Warning" template="RemoteFX_ModulInitialisieren5Args"/>
+     <event value="6" symbol="RemoteFX_ModulInitialisieren6" version="0" task="RemoteFX_Modul" opcode="Initialisieren" level="win:Warning" template="RemoteFX_ModulInitialisieren6Args"/>
+     <event value="7" symbol="RemoteFX_ModulInitialisieren7" version="0" task="RemoteFX_Modul" opcode="Initialisieren" level="win:Critical"/>
+     <event value="8" symbol="RemoteFX_ModulBeenden" version="0" task="RemoteFX_Modul" opcode="Beenden" level="win:Informational"/>
+     <event value="33" symbol="RemoteFX_Modul_4Initialisieren" version="0" task="RemoteFX_Modul_4" opcode="Initialisieren" level="win:Informational"/>
+     <event value="34" symbol="RemoteFX_Modul_4Initialisieren34" version="0" task="RemoteFX_Modul_4" opcode="Initialisieren" level="win:Informational"/>
+     <event value="35" symbol="RemoteFX_Modul_4Initialisieren35" version="0" task="RemoteFX_Modul_4" opcode="Initialisieren" level="win:Critical" template="RDP_StapelInitialisierenArgs"/>
+     <event value="36" symbol="RemoteFX_Modul_4Initialisieren36" version="0" task="RemoteFX_Modul_4" opcode="Initialisieren" level="win:Critical" template="RemoteFX_ModulInitialisierenArgs"/>
+     <event value="37" symbol="RemoteFX_Modul_4Initialisieren37" version="0" task="RemoteFX_Modul_4" opcode="Initialisieren" level="win:Warning" template="RemoteFX_ModulInitialisieren6Args"/>
+     <event value="38" symbol="RemoteFX_Modul_4Initialisieren38" version="0" task="RemoteFX_Modul_4" opcode="Initialisieren" level="win:Warning"/>
+     <event value="65" symbol="RemoteFX_Modul_4RCMProtocolImpl" version="0" task="RemoteFX_Modul_4" opcode="RCMProtocolImpl" level="win:Informational" template="RemoteFX_Modul_4RCMProtocolImplArgs"/>
+     <event value="66" symbol="RemoteFX_Modul_4RCMProtocolImpl66" version="0" task="RemoteFX_Modul_4" opcode="RCMProtocolImpl" level="win:Informational" template="RemoteFX_Modul_4RCMProtocolImpl66Args"/>
+     <event value="67" symbol="RemoteFX_Modul_4RCMProtocolImpl67" version="0" task="RemoteFX_Modul_4" opcode="RCMProtocolImpl" level="win:Error" template="RemoteFX_Modul_4RCMProtocolImpl67Args"/>
+     <event value="68" symbol="RemoteFX_Modul_4RCMProtocolImpl68" version="0" task="RemoteFX_Modul_4" opcode="RCMProtocolImpl" level="win:Informational" template="RemoteFX_Modul_4RCMProtocolImpl68Args"/>
+     <event value="69" symbol="RemoteFX_Modul_4RCMProtocolImpl69" version="0" task="RemoteFX_Modul_4" opcode="RCMProtocolImpl" level="win:Informational" template="RemoteFX_Modul_4RCMProtocolImpl69Args"/>
+     <event value="70" symbol="RemoteFX_Modul_4RCMProtocolImpl70" version="0" task="RemoteFX_Modul_4" opcode="RCMProtocolImpl" level="win:Informational" template="RemoteFX_Modul_4RCMProtocolImpl70Args"/>
+     <event value="71" symbol="RemoteFX_Modul_4RCMProtocolImpl71" version="0" task="RemoteFX_Modul_4" opcode="RCMProtocolImpl" level="win:Informational" template="RemoteFX_Modul_4RCMProtocolImpl71Args"/>
+     <event value="72" symbol="RemoteFX_Modul_4RCMProtocolImpl72" version="0" task="RemoteFX_Modul_4" opcode="RCMProtocolImpl" level="win:Informational" template="RemoteFX_Modul_4RCMProtocolImpl72Args"/>
+     <event value="73" symbol="RemoteFX_Modul_4RCMProtocolImpl73" version="0" task="RemoteFX_Modul_4" opcode="RCMProtocolImpl" level="win:Informational" template="RemoteFX_Modul_4RCMProtocolImpl73Args"/>
+     <event value="97" symbol="RemoteFX_Modul_4ProtocolExchange" version="0" task="RemoteFX_Modul_4" opcode="ProtocolExchange" level="win:Warning" template="RemoteFX_Modul_4ProtocolExchangeArgs"/>
+     <event value="98" symbol="RemoteFX_Modul_4EstablishConnection" version="0" task="RemoteFX_Modul_4" opcode="EstablishConnection" level="win:Informational"/>
+     <event value="99" symbol="RemoteFX_Modul_4EstablishConnection99" version="0" task="RemoteFX_Modul_4" opcode="EstablishConnection" level="win:Warning" template="RemoteFX_Modul_4EstablishConnection99Args"/>
+     <event value="100" symbol="RemoteFX_Modul_4EstablishConnection100" version="0" task="RemoteFX_Modul_4" opcode="EstablishConnection" level="win:Informational"/>
+     <event value="101" symbol="RemoteFX_Modul_4NetworkDetect" version="0" task="RemoteFX_Modul_4" opcode="NetworkDetect" level="win:Warning" template="RemoteFX_Modul_4NetworkDetectArgs"/>
+     <event value="102" symbol="RemoteFX_Modul_4CloseConnection" version="0" task="RemoteFX_Modul_4" opcode="CloseConnection" level="win:Informational"/>
+     <event value="103" symbol="RemoteFX_Modul_4CloseConnection103" version="0" task="RemoteFX_Modul_4" opcode="CloseConnection" level="win:Informational" template="RemoteFX_Modul_4CloseConnection103Args"/>
+     <event value="104" symbol="RemoteFX_Modul_4EstablishConnection104" version="0" task="RemoteFX_Modul_4" opcode="EstablishConnection" level="win:Informational" template="RemoteFX_Modul_4EstablishConnection104Args"/>
+     <event value="105" symbol="RemoteFX_Modul_4ProtocolExchange105" version="0" task="RemoteFX_Modul_4" opcode="ProtocolExchange" level="win:Warning"/>
+     <event value="106" symbol="RemoteFX_Modul_4CloseConnection106" version="0" task="RemoteFX_Modul_4" opcode="CloseConnection" level="win:Informational"/>
+     <event value="107" symbol="RemoteFX_Modul_4CloseConnection107" version="0" task="RemoteFX_Modul_4" opcode="CloseConnection" level="win:Informational"/>
+     <event value="129" symbol="RemoteFX_Modul_4NetworkBinding" version="0" task="RemoteFX_Modul_4" opcode="NetworkBinding" level="win:Informational" template="RemoteFX_Modul_4NetworkBindingArgs"/>
+     <event value="130" symbol="RemoteFX_Modul_4EstablishConnection130" version="0" task="RemoteFX_Modul_4" opcode="EstablishConnection" level="win:Informational" template="RemoteFX_Modul_4EstablishConnection130Args"/>
+     <event value="131" symbol="RemoteFX_Modul_4EstablishConnection131" version="0" task="RemoteFX_Modul_4" opcode="EstablishConnection" level="win:Informational" template="RemoteFX_Modul_4EstablishConnection131Args"/>
+     <event value="132" symbol="RemoteFX_Modul_4EstablishConnection132" version="0" task="RemoteFX_Modul_4" opcode="EstablishConnection" level="win:Informational" template="RemoteFX_Modul_4EstablishConnection132Args"/>
+     <event value="133" symbol="RemoteFX_Modul_4NetworkDetect133" version="0" task="RemoteFX_Modul_4" opcode="NetworkDetect" level="win:Informational" template="RemoteFX_Modul_4NetworkDetect133Args"/>
+     <event value="134" symbol="RemoteFX_Modul_4NetworkDetect134" version="0" task="RemoteFX_Modul_4" opcode="NetworkDetect" level="win:Warning" template="RemoteFX_Modul_4NetworkDetect134Args"/>
+     <event value="135" symbol="RemoteFX_Modul_4EstablishConnection135" version="0" task="RemoteFX_Modul_4" opcode="EstablishConnection" level="win:Informational" template="RemoteFX_Modul_4EstablishConnection135Args"/>
+     <event value="136" symbol="RemoteFX_Modul_4EstablishConnection136" version="0" task="RemoteFX_Modul_4" opcode="EstablishConnection" level="win:Error"/>
+     <event value="137" symbol="RemoteFX_Modul_4NetworkDetect137" version="0" task="RemoteFX_Modul_4" opcode="NetworkDetect" level="win:Warning" template="RemoteFX_Modul_4NetworkDetect133Args"/>
+     <event value="138" symbol="RemoteFX_Modul_4EstablishConnection138" version="0" task="RemoteFX_Modul_4" opcode="EstablishConnection" level="win:Warning" template="RemoteFX_Modul_4EstablishConnection99Args"/>
+     <event value="139" symbol="RemoteFX_Modul_4ProtocolExchange139" version="0" task="RemoteFX_Modul_4" opcode="ProtocolExchange" level="win:Warning" template="RemoteFX_Modul_4ProtocolExchange139Args"/>
+     <event value="140" symbol="RemoteFX_Modul_4ProtocolExchange140" version="0" task="RemoteFX_Modul_4" opcode="ProtocolExchange" level="win:Warning" template="RemoteFX_Modul_4ProtocolExchange140Args"/>
+     <event value="141" symbol="RemoteFX_Modul_4Initialisieren141" version="0" task="RemoteFX_Modul_4" opcode="Initialisieren" level="win:Informational" template="RemoteFX_Modul_4Initialisieren141Args"/>
+     <event value="142" symbol="RemoteFX_Modul_4EstablishConnection142" version="0" task="RemoteFX_Modul_4" opcode="EstablishConnection" level="win:Warning" template="RemoteFX_Modul_4EstablishConnection142Args"/>
+     <event value="143" symbol="RemoteFX_Modul_4EstablishConnection143" version="0" task="RemoteFX_Modul_4" opcode="EstablishConnection" level="win:Warning" template="RemoteFX_Modul_4EstablishConnection142Args"/>
+     <event value="144" symbol="RemoteFX_Modul_4EstablishConnection144" version="0" task="RemoteFX_Modul_4" opcode="EstablishConnection" level="win:Warning"/>
+     <event value="145" symbol="RemoteFX_Modul_4Runtime" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4RuntimeArgs"/>
+     <event value="146" symbol="RemoteFX_Modul_4Runtime146" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Error" template="RemoteFX_Modul_4Runtime146Args"/>
+     <event value="147" symbol="RemoteFX_Modul_4Runtime147" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Error" template="RemoteFX_Modul_4Runtime147Args"/>
+     <event value="148" symbol="RemoteFX_Modul_4CloseConnection148" version="0" task="RemoteFX_Modul_4" opcode="CloseConnection" level="win:Informational" template="RemoteFX_Modul_4EstablishConnection132Args"/>
+     <event value="149" symbol="RemoteFX_Modul_4Runtime149" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Error" template="RemoteFX_ModulInitialisierenArgs"/>
+     <event value="150" symbol="RemoteFX_Modul_4Runtime150" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4Runtime150Args"/>
+     <event value="151" symbol="RemoteFX_Modul_4Runtime151" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4Runtime151Args"/>
+     <event value="152" symbol="RemoteFX_Modul_4Runtime152" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4Runtime152Args"/>
+     <event value="153" symbol="RemoteFX_Modul_4Runtime153" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4Runtime153Args"/>
+     <event value="154" symbol="RemoteFX_Modul_4Runtime154" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Error" template="RemoteFX_Modul_4Runtime154Args"/>
+     <event value="155" symbol="RemoteFX_Modul_4Runtime155" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational"/>
+     <event value="161" symbol="RemoteFX_Modul_4Runtime161" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Error" template="RemoteFX_Modul_4Runtime161Args"/>
+     <event value="162" symbol="RemoteFX_Modul_4Runtime162" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4Runtime162Args"/>
+     <event value="163" symbol="RemoteFX_Modul_4Runtime163" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4Runtime163Args"/>
+     <event value="164" symbol="RemoteFX_Modul_4Runtime164" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4Runtime163Args"/>
+     <event value="165" symbol="RemoteFX_Modul_4Runtime165" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4Runtime163Args"/>
+     <event value="166" symbol="RemoteFX_Modul_4Runtime166" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4Runtime163Args"/>
+     <event value="167" symbol="RemoteFX_Modul_4Runtime167" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4Runtime163Args"/>
+     <event value="168" symbol="RemoteFX_Modul_4Initialisieren168" version="0" task="RemoteFX_Modul_4" opcode="Initialisieren" level="win:Informational" template="RemoteFX_Modul_4Initialisieren168Args"/>
+     <event value="169" symbol="RemoteFX_Modul_4Runtime169" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4Runtime169Args"/>
+     <event value="170" symbol="RemoteFX_Modul_4Runtime170" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4Runtime170Args"/>
+     <event value="193" symbol="RemoteFX_Modul_4Runtime193" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational"/>
+     <event value="194" symbol="RemoteFX_Modul_4Runtime194" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational"/>
+     <event value="195" symbol="RemoteFX_Modul_4Runtime195" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_ModulInitialisierenArgs"/>
+     <event value="225" symbol="RemoteFX_Modul_4Runtime225" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4Runtime225Args"/>
+     <event value="226" symbol="RemoteFX_Modul_4Runtime226" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Warning" template="RemoteFX_Modul_4Runtime226Args"/>
+     <event value="227" symbol="RemoteFX_Modul_4Runtime227" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Error" template="RemoteFX_Modul_4Runtime227Args"/>
+     <event value="228" symbol="RemoteFX_Modul_4Runtime228" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Warning" template="RemoteFX_Modul_4Runtime228Args"/>
+     <event value="229" symbol="RemoteFX_Modul_4Runtime229" version="0" task="RemoteFX_Modul_4" opcode="Runtime" level="win:Informational" template="RemoteFX_Modul_4Runtime229Args"/>
+     <event value="257" symbol="RemoteFX_Modul_4AdvancedRemoteAppEnabled" version="0" task="RemoteFX_Modul_4" opcode="AdvancedRemoteAppEnabled" level="win:Informational"/>
+     <event value="258" symbol="RemoteFX_Modul_4AdvancedRemoteAppNotEnabled" version="0" task="RemoteFX_Modul_4" opcode="AdvancedRemoteAppNotEnabled" level="win:Informational"/>
+     <event value="289" symbol="RemoteFX_Modul_4UDPReverseConnect" version="0" task="RemoteFX_Modul_4" opcode="UDPReverseConnect" level="win:Informational" template="RemoteFX_Modul_4UDPReverseConnectArgs"/>
+     <event value="290" symbol="RemoteFX_Modul_4UDPReverseConnect290" version="0" task="RemoteFX_Modul_4" opcode="UDPReverseConnect" level="win:Informational"/>
+     <event value="291" symbol="RemoteFX_Modul_4UDPReverseConnect291" version="0" task="RemoteFX_Modul_4" opcode="UDPReverseConnect" level="win:Informational" template="RemoteFX_Modul_4Runtime147Args"/>
+     <event value="292" symbol="RemoteFX_Modul_4UDPReverseConnect292" version="0" task="RemoteFX_Modul_4" opcode="UDPReverseConnect" level="win:Informational"/>
+     <event value="293" symbol="RemoteFX_Modul_4UDPReverseConnect293" version="0" task="RemoteFX_Modul_4" opcode="UDPReverseConnect" level="win:Informational"/>
+     <event value="294" symbol="RemoteFX_Modul_4UDPReverseConnect294" version="0" task="RemoteFX_Modul_4" opcode="UDPReverseConnect" level="win:Informational"/>
+    </events>
+    <templates>
+     <template tid="RDP_StapelInitialisierenArgs">
+      <data name="HresultCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="RemoteFX_ModulInitialisierenArgs">
+      <data name="ErrorCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="RemoteFX_ModulInitialisieren5Args">
+      <data name="StatusCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="RemoteFX_ModulInitialisieren6Args">
+      <data name="NumMonitors" inType="win:UInt32"/>
+      <data name="RequestedMode" inType="win:UnicodeString"/>
+      <data name="AppliedMode" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4RCMProtocolImplArgs">
+      <data name="ConnectionName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4RCMProtocolImpl66Args">
+      <data name="ConnectionName" inType="win:UnicodeString"/>
+      <data name="SessionID" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4RCMProtocolImpl67Args">
+      <data name="ConnectionName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4RCMProtocolImpl68Args">
+      <data name="ConnectionName" inType="win:UnicodeString"/>
+      <data name="PromptForCredentials" inType="win:UInt32"/>
+      <data name="PromptForCredentialsDone" inType="win:UInt32"/>
+      <data name="GfxChannelOpened" inType="win:UInt32"/>
+      <data name="FirstGraphicsReceived" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4RCMProtocolImpl69Args">
+      <data name="ModuleName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4RCMProtocolImpl70Args">
+      <data name="DisplayDriverName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4RCMProtocolImpl71Args">
+      <data name="ConnectionName" inType="win:UnicodeString"/>
+      <data name="DisplayDriverName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4RCMProtocolImpl72Args">
+      <data name="MethodName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4RCMProtocolImpl73Args">
+      <data name="Disabled" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4ProtocolExchangeArgs">
+      <data name="ComponentName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4EstablishConnection99Args">
+      <data name="ResultCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4NetworkDetectArgs">
+      <data name="ReasonString" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4CloseConnection103Args">
+      <data name="ReasonCode" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4EstablishConnection104Args">
+      <data name="TimezoneBiasHour" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4NetworkBindingArgs">
+      <data name="TransportProtocolName" inType="win:UnicodeString"/>
+      <data name="Port" inType="win:UInt16"/>
+     </template>
+     <template tid="RemoteFX_Modul_4EstablishConnection130Args">
+      <data name="TunnelID" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4EstablishConnection131Args">
+      <data name="ConnType" inType="win:UnicodeString"/>
+      <data name="ClientIP" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4EstablishConnection132Args">
+      <data name="ChannelName" inType="win:UnicodeString"/>
+      <data name="TunnelID" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4NetworkDetect133Args">
+      <data name="TunnelID" inType="win:UInt32"/>
+      <data name="RTT" inType="win:UInt32"/>
+      <data name="Bandwidth" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4NetworkDetect134Args">
+      <data name="ResultCode" inType="win:HexInt32"/>
+      <data name="TunnelID" inType="win:UInt32"/>
+      <data name="RTT" inType="win:UInt32"/>
+      <data name="Bandwidth" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4EstablishConnection135Args">
+      <data name="TunnelID" inType="win:UInt32"/>
+      <data name="TransportType" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4ProtocolExchange139Args">
+      <data name="ResultCode" inType="win:HexInt32"/>
+      <data name="IPString" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4ProtocolExchange140Args">
+      <data name="IPString" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Initialisieren141Args">
+      <data name="InstanceID" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4EstablishConnection142Args">
+      <data name="error" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4RuntimeArgs">
+      <data name="IdleSeconds" inType="win:UInt32"/>
+      <data name="IdleSeconds1" inType="win:UInt32"/>
+      <data name="IdleSeconds2" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime146Args">
+      <data name="Error" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime147Args">
+      <data name="Error" inType="win:HexInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime150Args">
+      <data name="FlushTimeMs" inType="win:UInt32"/>
+      <data name="FlushIntervalMs" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime151Args">
+      <data name="HistoryMs" inType="win:UInt32"/>
+      <data name="NumHeartbeats" inType="win:UInt32"/>
+      <data name="MaxRecentTimeNoPacketMs" inType="win:UInt32"/>
+      <data name="MaxTotalTimeNoDataMs" inType="win:UInt32"/>
+      <data name="MaxTotalTimeNoHeartbeatMs" inType="win:UInt32"/>
+      <data name="MaxTotalTimeNoPacketMs" inType="win:UInt32"/>
+      <data name="TimeNoLastPacketMs" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime152Args">
+      <data name="TimestampMs" inType="win:UInt32"/>
+      <data name="NumHeartbeats" inType="win:UInt32"/>
+      <data name="LastDataPacketMs" inType="win:UInt32"/>
+      <data name="LastHeartbeatMs" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime153Args">
+      <data name="TLSVersion" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime154Args">
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:HexInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime161Args">
+      <data name="ErrorCode" inType="win:HexInt32"/>
+      <data name="ServerName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime162Args">
+      <data name="Version" inType="win:HexInt32"/>
+      <data name="ClientMode" inType="win:UInt32"/>
+      <data name="AvcEnabled" inType="win:UInt32"/>
+      <data name="ProfileIdNum" inType="win:UInt32"/>
+      <data name="ServerName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime163Args">
+      <data name="ServerName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Initialisieren168Args">
+      <data name="MonitorNum" inType="win:UInt32"/>
+      <data name="MonitorWidth" inType="win:UInt32"/>
+      <data name="MonitorHeight" inType="win:UInt32"/>
+      <data name="MonitorX" inType="win:UInt32"/>
+      <data name="MonitorY" inType="win:UInt32"/>
+      <data name="ServerName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime169Args">
+      <data name="MajorType" inType="win:UInt32"/>
+      <data name="MinorType" inType="win:UInt32"/>
+      <data name="ServerName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime170Args">
+      <data name="IsHardwareEncode" inType="win:UInt32"/>
+      <data name="EncoderMFTName" inType="win:UnicodeString"/>
+      <data name="ServerName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime225Args">
+      <data name="StateTransition" inType="win:UnicodeString"/>
+      <data name="PreviousState" inType="win:UInt32"/>
+      <data name="PreviousStateName" inType="win:UnicodeString"/>
+      <data name="NewState" inType="win:UInt32"/>
+      <data name="NewStateName" inType="win:UnicodeString"/>
+      <data name="Event" inType="win:UInt32"/>
+      <data name="EventName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime226Args">
+      <data name="StateTransition" inType="win:UnicodeString"/>
+      <data name="PreviousState" inType="win:UInt32"/>
+      <data name="PreviousStateName" inType="win:UnicodeString"/>
+      <data name="NewState" inType="win:UInt32"/>
+      <data name="NewStateName" inType="win:UnicodeString"/>
+      <data name="Event" inType="win:UInt32"/>
+      <data name="EventName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime227Args">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Value" inType="win:UInt32"/>
+      <data name="CustomLevel" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime228Args">
+      <data name="ComponentName" inType="win:UnicodeString"/>
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="RemoteFX_Modul_4Runtime229Args">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="CustomLevel" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RemoteFX_Modul_4UDPReverseConnectArgs">
+      <data name="URL" inType="win:UnicodeString"/>
+      <data name="Port" inType="win:UInt32"/>
+      <data name="ConnectionID" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_RDP_Stapel" value="RDP_Stapel"/>
+    <string id="opcode_RDP_StapelInitialisieren" value="Initialisieren"/>
+    <string id="task_RemoteFX_Modul" value="RemoteFX_Modul"/>
+    <string id="opcode_RemoteFX_ModulInitialisieren" value="Initialisieren"/>
+    <string id="opcode_RemoteFX_ModulBeenden" value="Beenden"/>
+    <string id="task_RemoteFX_Modul_4" value="RemoteFX_Modul_4"/>
+    <string id="opcode_RemoteFX_Modul_4Initialisieren" value="Initialisieren"/>
+    <string id="opcode_RemoteFX_Modul_4RCMProtocolImpl" value="RCMProtocolImpl"/>
+    <string id="opcode_RemoteFX_Modul_4ProtocolExchange" value="ProtocolExchange"/>
+    <string id="opcode_RemoteFX_Modul_4EstablishConnection" value="EstablishConnection"/>
+    <string id="opcode_RemoteFX_Modul_4NetworkDetect" value="NetworkDetect"/>
+    <string id="opcode_RemoteFX_Modul_4CloseConnection" value="CloseConnection"/>
+    <string id="opcode_RemoteFX_Modul_4NetworkBinding" value="NetworkBinding"/>
+    <string id="opcode_RemoteFX_Modul_4Runtime" value="Runtime"/>
+    <string id="opcode_RemoteFX_Modul_4AdvancedRemoteAppEnabled" value="AdvancedRemoteAppEnabled"/>
+    <string id="opcode_RemoteFX_Modul_4AdvancedRemoteAppNotEnabled" value="AdvancedRemoteAppNotEnabled"/>
+    <string id="opcode_RemoteFX_Modul_4UDPReverseConnect" value="UDPReverseConnect"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,1238 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-USB-USBPORT" guid="{c88a4ef5-d048-4013-9408-e04b7db2814a}" resourceFileName="Microsoft-Windows-USB-USBPORT" messageFileName="Microsoft-Windows-USB-USBPORT" symbol="MicrosoftWindowsUSBUSBPORT" source="Xml" >
+    <keywords>
+     <keyword name="Diagnostic" message="$(string.keyword_Diagnostic)" mask="0x1"/>
+     <keyword name="PowerDiagnostics" message="$(string.keyword_PowerDiagnostics)" mask="0x2"/>
+     <keyword name="PerfDiagnostics" message="$(string.keyword_PerfDiagnostics)" mask="0x4"/>
+     <keyword name="keyword_400000000000" message="$(string.keyword_keyword_400000000000)" mask="0x400000000000"/>
+    </keywords>
+    <tasks>
+     <task name="Hostcontroller" message="$(string.task_Hostcontroller)" value="1">
+      <opcodes>
+       <opcode name="Hinzufügen" message="$(string.opcode_HostcontrollerHinzufügen)" value="10"/>
+       <opcode name="Entfernen" message="$(string.opcode_HostcontrollerEntfernen)" value="13"/>
+       <opcode name="Informationen" message="$(string.opcode_HostcontrollerInformationen)" value="14"/>
+       <opcode name="Starten" message="$(string.opcode_HostcontrollerStarten)" value="15"/>
+       <opcode name="Beenden" message="$(string.opcode_HostcontrollerBeenden)" value="16"/>
+       <opcode name="Anhalten" message="$(string.opcode_HostcontrollerAnhalten)" value="17"/>
+       <opcode name="Fortsetzen" message="$(string.opcode_HostcontrollerFortsetzen)" value="18"/>
+      </opcodes>
+     </task>
+     <task name="Hostcontroller_AsynchronerZeitplan" message="$(string.task_Hostcontroller_AsynchronerZeitplan)" value="2">
+      <opcodes>
+       <opcode name="Aktivieren" message="$(string.opcode_Hostcontroller_AsynchronerZeitplanAktivieren)" value="19"/>
+       <opcode name="Deaktivieren" message="$(string.opcode_Hostcontroller_AsynchronerZeitplanDeaktivieren)" value="20"/>
+      </opcodes>
+     </task>
+     <task name="Hostcontroller_PeriodischerZeitplan" message="$(string.task_Hostcontroller_PeriodischerZeitplan)" value="3">
+      <opcodes>
+       <opcode name="Aktivieren" message="$(string.opcode_Hostcontroller_PeriodischerZeitplanAktivieren)" value="19"/>
+       <opcode name="Deaktivieren" message="$(string.opcode_Hostcontroller_PeriodischerZeitplanDeaktivieren)" value="20"/>
+      </opcodes>
+     </task>
+     <task name="Gerät" message="$(string.task_Gerät)" value="4">
+      <opcodes>
+       <opcode name="Erstellen" message="$(string.opcode_GerätErstellen)" value="11"/>
+       <opcode name="Initialisieren" message="$(string.opcode_GerätInitialisieren)" value="12"/>
+       <opcode name="Entfernen" message="$(string.opcode_GerätEntfernen)" value="13"/>
+       <opcode name="Informationen" message="$(string.opcode_GerätInformationen)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="LeerlaufzustandfürGerät" message="$(string.task_LeerlaufzustandfürGerät)" value="5">
+      <opcodes>
+       <opcode name="Festlegen" message="$(string.opcode_LeerlaufzustandfürGerätFestlegen)" value="21"/>
+       <opcode name="Löschen" message="$(string.opcode_LeerlaufzustandfürGerätLöschen)" value="22"/>
+      </opcodes>
+     </task>
+     <task name="Endpunkt" message="$(string.task_Endpunkt)" value="6">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_EndpunktInformationen)" value="14"/>
+       <opcode name="Öffnen" message="$(string.opcode_EndpunktÖffnen)" value="23"/>
+       <opcode name="Schließen" message="$(string.opcode_EndpunktSchließen)" value="24"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_SELECT_CONFIGURATION" message="$(string.task_URB_FUNCTION_SELECT_CONFIGURATION)" value="7">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_SELECT_CONFIGURATIONVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_SELECT_INTERFACE" message="$(string.task_URB_FUNCTION_SELECT_INTERFACE)" value="8">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_SELECT_INTERFACEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_GET_CURRENT_FRAME_NUMBER" message="$(string.task_URB_FUNCTION_GET_CURRENT_FRAME_NUMBER)" value="9">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_GET_CURRENT_FRAME_NUMBERVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_CONTROL_TRANSFER" message="$(string.task_URB_FUNCTION_CONTROL_TRANSFER)" value="10">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_CONTROL_TRANSFERVerteilen)" value="25"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_URB_FUNCTION_CONTROL_TRANSFERAbgeschlossen)" value="26"/>
+       <opcode name="MitDatenabschließen" message="$(string.opcode_URB_FUNCTION_CONTROL_TRANSFERMitDatenabschließen)" value="27"/>
+       <opcode name="InterneVerteilung" message="$(string.opcode_URB_FUNCTION_CONTROL_TRANSFERInterneVerteilung)" value="28"/>
+       <opcode name="InternerAbschluss" message="$(string.opcode_URB_FUNCTION_CONTROL_TRANSFERInternerAbschluss)" value="29"/>
+       <opcode name="InternerAbschlussmitDaten" message="$(string.opcode_URB_FUNCTION_CONTROL_TRANSFERInternerAbschlussmitDaten)" value="30"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_CONTROL_TRANSFER_EX" message="$(string.task_URB_FUNCTION_CONTROL_TRANSFER_EX)" value="11">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_CONTROL_TRANSFER_EXVerteilen)" value="25"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_URB_FUNCTION_CONTROL_TRANSFER_EXAbgeschlossen)" value="26"/>
+       <opcode name="MitDatenabschließen" message="$(string.opcode_URB_FUNCTION_CONTROL_TRANSFER_EXMitDatenabschließen)" value="27"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER" message="$(string.task_URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER)" value="12">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERVerteilen)" value="25"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERAbgeschlossen)" value="26"/>
+       <opcode name="MitDatenabschließen" message="$(string.opcode_URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERMitDatenabschließen)" value="27"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_ISOCH_TRANSFER" message="$(string.task_URB_FUNCTION_ISOCH_TRANSFER)" value="13">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_ISOCH_TRANSFERVerteilen)" value="25"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_URB_FUNCTION_ISOCH_TRANSFERAbgeschlossen)" value="26"/>
+       <opcode name="MitDatenabschließen" message="$(string.opcode_URB_FUNCTION_ISOCH_TRANSFERMitDatenabschließen)" value="27"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_GET_DESCRIPTOR_FROM_DEVICE" message="$(string.task_URB_FUNCTION_GET_DESCRIPTOR_FROM_DEVICE)" value="14">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_GET_DESCRIPTOR_FROM_DEVICEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_SET_DESCRIPTOR_TO_DEVICE" message="$(string.task_URB_FUNCTION_SET_DESCRIPTOR_TO_DEVICE)" value="15">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_SET_DESCRIPTOR_TO_DEVICEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_GET_DESCRIPTOR_FROM_ENDPOINT" message="$(string.task_URB_FUNCTION_GET_DESCRIPTOR_FROM_ENDPOINT)" value="16">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_GET_DESCRIPTOR_FROM_ENDPOINTVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_SET_DESCRIPTOR_TO_ENDPOINT" message="$(string.task_URB_FUNCTION_SET_DESCRIPTOR_TO_ENDPOINT)" value="17">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_SET_DESCRIPTOR_TO_ENDPOINTVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_GET_DESCRIPTOR_FROM_INTERFACE" message="$(string.task_URB_FUNCTION_GET_DESCRIPTOR_FROM_INTERFACE)" value="18">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_GET_DESCRIPTOR_FROM_INTERFACEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_SET_DESCRIPTOR_TO_INTERFACE" message="$(string.task_URB_FUNCTION_SET_DESCRIPTOR_TO_INTERFACE)" value="19">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_SET_DESCRIPTOR_TO_INTERFACEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_SET_FEATURE_TO_DEVICE" message="$(string.task_URB_FUNCTION_SET_FEATURE_TO_DEVICE)" value="20">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_SET_FEATURE_TO_DEVICEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_SET_FEATURE_TO_INTERFACE" message="$(string.task_URB_FUNCTION_SET_FEATURE_TO_INTERFACE)" value="21">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_SET_FEATURE_TO_INTERFACEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_SET_FEATURE_TO_ENDPOINT" message="$(string.task_URB_FUNCTION_SET_FEATURE_TO_ENDPOINT)" value="22">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_SET_FEATURE_TO_ENDPOINTVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_CLEAR_FEATURE_TO_DEVICE" message="$(string.task_URB_FUNCTION_CLEAR_FEATURE_TO_DEVICE)" value="23">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_CLEAR_FEATURE_TO_DEVICEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_CLEAR_FEATURE_TO_INTERFACE" message="$(string.task_URB_FUNCTION_CLEAR_FEATURE_TO_INTERFACE)" value="24">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_CLEAR_FEATURE_TO_INTERFACEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_CLEAR_FEATURE_TO_ENDPOINT" message="$(string.task_URB_FUNCTION_CLEAR_FEATURE_TO_ENDPOINT)" value="25">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_CLEAR_FEATURE_TO_ENDPOINTVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_CLEAR_FEATURE_TO_OTHER" message="$(string.task_URB_FUNCTION_CLEAR_FEATURE_TO_OTHER)" value="26">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_CLEAR_FEATURE_TO_OTHERVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_SET_FEATURE_TO_OTHER" message="$(string.task_URB_FUNCTION_SET_FEATURE_TO_OTHER)" value="27">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_SET_FEATURE_TO_OTHERVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_GET_STATUS_FROM_DEVICE" message="$(string.task_URB_FUNCTION_GET_STATUS_FROM_DEVICE)" value="28">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_GET_STATUS_FROM_DEVICEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_GET_STATUS_FROM_INTERFACE" message="$(string.task_URB_FUNCTION_GET_STATUS_FROM_INTERFACE)" value="29">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_GET_STATUS_FROM_INTERFACEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_GET_STATUS_FROM_ENDPOINT" message="$(string.task_URB_FUNCTION_GET_STATUS_FROM_ENDPOINT)" value="30">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_GET_STATUS_FROM_ENDPOINTVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_GET_STATUS_FROM_OTHER" message="$(string.task_URB_FUNCTION_GET_STATUS_FROM_OTHER)" value="31">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_GET_STATUS_FROM_OTHERVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_VENDOR_DEVICE" message="$(string.task_URB_FUNCTION_VENDOR_DEVICE)" value="32">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_VENDOR_DEVICEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_VENDOR_INTERFACE" message="$(string.task_URB_FUNCTION_VENDOR_INTERFACE)" value="33">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_VENDOR_INTERFACEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_VENDOR_ENDPOINT" message="$(string.task_URB_FUNCTION_VENDOR_ENDPOINT)" value="34">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_VENDOR_ENDPOINTVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_CLASS_DEVICE" message="$(string.task_URB_FUNCTION_CLASS_DEVICE)" value="35">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_CLASS_DEVICEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_CLASS_INTERFACE" message="$(string.task_URB_FUNCTION_CLASS_INTERFACE)" value="36">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_CLASS_INTERFACEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_CLASS_ENDPOINT" message="$(string.task_URB_FUNCTION_CLASS_ENDPOINT)" value="37">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_CLASS_ENDPOINTVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_CLASS_OTHER" message="$(string.task_URB_FUNCTION_CLASS_OTHER)" value="38">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_CLASS_OTHERVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_VENDOR_OTHER" message="$(string.task_URB_FUNCTION_VENDOR_OTHER)" value="39">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_VENDOR_OTHERVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_ABORT_PIPE" message="$(string.task_URB_FUNCTION_ABORT_PIPE)" value="40">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_ABORT_PIPEVerteilen)" value="25"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_URB_FUNCTION_ABORT_PIPEAbgeschlossen)" value="26"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_SYNC_RESET_PIPE_AND_CLEAR_STALL" message="$(string.task_URB_FUNCTION_SYNC_RESET_PIPE_AND_CLEAR_STALL)" value="41">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_SYNC_RESET_PIPE_AND_CLEAR_STALLVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_SYNC_RESET_PIPE" message="$(string.task_URB_FUNCTION_SYNC_RESET_PIPE)" value="42">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_SYNC_RESET_PIPEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_SYNC_CLEAR_STALL" message="$(string.task_URB_FUNCTION_SYNC_CLEAR_STALL)" value="43">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_SYNC_CLEAR_STALLVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_GET_CONFIGURATION" message="$(string.task_URB_FUNCTION_GET_CONFIGURATION)" value="44">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_GET_CONFIGURATIONVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_GET_INTERFACE" message="$(string.task_URB_FUNCTION_GET_INTERFACE)" value="45">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_GET_INTERFACEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_GET_MS_FEATURE_DESCRIPTOR" message="$(string.task_URB_FUNCTION_GET_MS_FEATURE_DESCRIPTOR)" value="46">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_GET_MS_FEATURE_DESCRIPTORVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_TAKE_FRAME_LENGTH_CONTROL" message="$(string.task_URB_FUNCTION_TAKE_FRAME_LENGTH_CONTROL)" value="47">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_TAKE_FRAME_LENGTH_CONTROLVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_RELEASE_FRAME_LENGTH_CONTROL" message="$(string.task_URB_FUNCTION_RELEASE_FRAME_LENGTH_CONTROL)" value="48">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_RELEASE_FRAME_LENGTH_CONTROLVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_GET_FRAME_LENGTH" message="$(string.task_URB_FUNCTION_GET_FRAME_LENGTH)" value="49">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_GET_FRAME_LENGTHVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_SET_FRAME_LENGTH" message="$(string.task_URB_FUNCTION_SET_FRAME_LENGTH)" value="50">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_SET_FRAME_LENGTHVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="URB_FUNCTION_RESERVED" message="$(string.task_URB_FUNCTION_RESERVED)" value="51">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_URB_FUNCTION_RESERVEDVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_HEADER_LENGTH_WARNING" message="$(string.task_USBPORT_URB_INVALID_HEADER_LENGTH_WARNING)" value="52">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_HEADER_LENGTH_WARNINGVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_FUNCTION" message="$(string.task_USBPORT_URB_INVALID_FUNCTION)" value="53">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_FUNCTIONVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_HEADER_LENGTH" message="$(string.task_USBPORT_URB_INVALID_HEADER_LENGTH)" value="54">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_HEADER_LENGTHVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_DEVICE_HANDLE" message="$(string.task_USBPORT_URB_INVALID_DEVICE_HANDLE)" value="55">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_DEVICE_HANDLEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_FUNCTION_NOT_SUPPORTED" message="$(string.task_USBPORT_URB_INVALID_FUNCTION_NOT_SUPPORTED)" value="56">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_FUNCTION_NOT_SUPPORTEDVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_FUNCTION_RESERVED" message="$(string.task_USBPORT_URB_INVALID_FUNCTION_RESERVED)" value="57">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_FUNCTION_RESERVEDVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_DUE_TO_HC_SUSPEND" message="$(string.task_USBPORT_URB_INVALID_DUE_TO_HC_SUSPEND)" value="58">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_DUE_TO_HC_SUSPENDVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_URB_LINK" message="$(string.task_USBPORT_URB_INVALID_URB_LINK)" value="59">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_URB_LINKVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_PIPE_HANDLE" message="$(string.task_USBPORT_URB_INVALID_PIPE_HANDLE)" value="60">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_PIPE_HANDLEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_ZERO_BW_PIPE_HANDLE" message="$(string.task_USBPORT_URB_INVALID_ZERO_BW_PIPE_HANDLE)" value="61">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_ZERO_BW_PIPE_HANDLEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_NOP_ZERO_BW_PIPE_HANDLE_REQUEST" message="$(string.task_USBPORT_URB_NOP_ZERO_BW_PIPE_HANDLE_REQUEST)" value="62">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_NOP_ZERO_BW_PIPE_HANDLE_REQUESTVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_CONTROL_TRANSFER_ENDPOINT" message="$(string.task_USBPORT_URB_INVALID_CONTROL_TRANSFER_ENDPOINT)" value="63">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_CONTROL_TRANSFER_ENDPOINTVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_CONTROL_TRANSFER_BUFFER_LENGTH" message="$(string.task_USBPORT_URB_INVALID_CONTROL_TRANSFER_BUFFER_LENGTH)" value="64">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_CONTROL_TRANSFER_BUFFER_LENGTHVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_ENDPOINT" message="$(string.task_USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_ENDPOINT)" value="65">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_ENDPOINTVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_BUFFER_LENGTH" message="$(string.task_USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_BUFFER_LENGTH)" value="66">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_BUFFER_LENGTHVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_ISOCHRONOUS_TRANSFER_ENDPOINT" message="$(string.task_USBPORT_URB_INVALID_ISOCHRONOUS_TRANSFER_ENDPOINT)" value="67">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_ISOCHRONOUS_TRANSFER_ENDPOINTVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_NULL_TRANSFER_BUFFER_AND_MDL" message="$(string.task_USBPORT_URB_INVALID_NULL_TRANSFER_BUFFER_AND_MDL)" value="68">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_NULL_TRANSFER_BUFFER_AND_MDLVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_NON_NULL_TRANSFER_BUFFER_MDL" message="$(string.task_USBPORT_URB_INVALID_NON_NULL_TRANSFER_BUFFER_MDL)" value="69">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_NON_NULL_TRANSFER_BUFFER_MDLVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_ALLOCATE_MDL_FAILURE" message="$(string.task_USBPORT_URB_ALLOCATE_MDL_FAILURE)" value="70">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_ALLOCATE_MDL_FAILUREVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_ALLOCATE_TRANSFER_CONTEXT_FAILURE" message="$(string.task_USBPORT_URB_ALLOCATE_TRANSFER_CONTEXT_FAILURE)" value="71">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_ALLOCATE_TRANSFER_CONTEXT_FAILUREVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_NOP_ROOTHUB_PIPE_HANDLE_REQUEST" message="$(string.task_USBPORT_URB_NOP_ROOTHUB_PIPE_HANDLE_REQUEST)" value="72">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_NOP_ROOTHUB_PIPE_HANDLE_REQUESTVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_ISOCHRONOUS_ZERO_LENGTH" message="$(string.task_USBPORT_URB_INVALID_ISOCHRONOUS_ZERO_LENGTH)" value="73">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_ISOCHRONOUS_ZERO_LENGTHVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_ISOCHRONOUS_NUM_PACKETS" message="$(string.task_USBPORT_URB_INVALID_ISOCHRONOUS_NUM_PACKETS)" value="74">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_ISOCHRONOUS_NUM_PACKETSVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="USBPORT_URB_INVALID_ISOCHRONOUS_START_FRAME" message="$(string.task_USBPORT_URB_INVALID_ISOCHRONOUS_START_FRAME)" value="75">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBPORT_URB_INVALID_ISOCHRONOUS_START_FRAMEVerteilen)" value="25"/>
+      </opcodes>
+     </task>
+     <task name="Irp" message="$(string.task_Irp)" value="76">
+      <opcodes>
+       <opcode name="Abbrechen" message="$(string.opcode_IrpAbbrechen)" value="31"/>
+      </opcodes>
+     </task>
+     <task name="USBUSER_OP_RAW_RESET_PORT" message="$(string.task_USBUSER_OP_RAW_RESET_PORT)" value="77">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBUSER_OP_RAW_RESET_PORTVerteilen)" value="25"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_USBUSER_OP_RAW_RESET_PORTAbgeschlossen)" value="26"/>
+       <opcode name="Status" message="$(string.opcode_USBUSER_OP_RAW_RESET_PORTStatus)" value="33"/>
+      </opcodes>
+     </task>
+     <task name="USBUSER_OP_SEND_ONE_PACKET" message="$(string.task_USBUSER_OP_SEND_ONE_PACKET)" value="78">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_USBUSER_OP_SEND_ONE_PACKETVerteilen)" value="25"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_USBUSER_OP_SEND_ONE_PACKETAbgeschlossen)" value="26"/>
+       <opcode name="MitDatenabschließen" message="$(string.opcode_USBUSER_OP_SEND_ONE_PACKETMitDatenabschließen)" value="27"/>
+       <opcode name="VerteilungmitDaten" message="$(string.opcode_USBUSER_OP_SEND_ONE_PACKETVerteilungmitDaten)" value="32"/>
+       <opcode name="Status" message="$(string.opcode_USBUSER_OP_SEND_ONE_PACKETStatus)" value="33"/>
+      </opcodes>
+     </task>
+     <task name="Miniport_Starten" message="$(string.task_Miniport_Starten)" value="79">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_Miniport_StartenVerteilen)" value="25"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_Miniport_StartenAbgeschlossen)" value="26"/>
+       <opcode name="MitFehlernabgeschlossen" message="$(string.opcode_Miniport_StartenMitFehlernabgeschlossen)" value="34"/>
+      </opcodes>
+     </task>
+     <task name="Miniport_Beenden" message="$(string.task_Miniport_Beenden)" value="80">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_Miniport_BeendenVerteilen)" value="25"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_Miniport_BeendenAbgeschlossen)" value="26"/>
+      </opcodes>
+     </task>
+     <task name="Miniport_Anhalten" message="$(string.task_Miniport_Anhalten)" value="81">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_Miniport_AnhaltenVerteilen)" value="25"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_Miniport_AnhaltenAbgeschlossen)" value="26"/>
+      </opcodes>
+     </task>
+     <task name="Miniport_Fortsetzen" message="$(string.task_Miniport_Fortsetzen)" value="82">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_Miniport_FortsetzenVerteilen)" value="25"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_Miniport_FortsetzenAbgeschlossen)" value="26"/>
+       <opcode name="MitFehlernabgeschlossen" message="$(string.opcode_Miniport_FortsetzenMitFehlernabgeschlossen)" value="34"/>
+      </opcodes>
+     </task>
+     <task name="Codeleistung" message="$(string.task_Codeleistung)" value="83">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_CodeleistungInformationen)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="Codeleistungmit"PutScatterGatherList"" message="$(string.task_Codeleistungmit"PutScatterGatherList")" value="84">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_Codeleistungmit"PutScatterGatherList"Informationen)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="Codeleistungmit"BuildScatterGatherList"" message="$(string.task_Codeleistungmit"BuildScatterGatherList")" value="85">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_Codeleistungmit"BuildScatterGatherList"Informationen)" value="14"/>
+      </opcodes>
+     </task>
+     <task name="Laufzeitenergieverwaltung" message="$(string.task_Laufzeitenergieverwaltung)" value="86">
+      <opcodes>
+       <opcode name="Laufzeit_Energieverwaltungsübergang" message="$(string.opcode_LaufzeitenergieverwaltungLaufzeit_Energieverwaltungsübergang)" value="35"/>
+      </opcodes>
+     </task>
+     <task name="ControllerfürAktivierungeinrichten" message="$(string.task_ControllerfürAktivierungeinrichten)" value="87">
+      <opcodes>
+       <opcode name="Verteilen" message="$(string.opcode_ControllerfürAktivierungeinrichtenVerteilen)" value="25"/>
+       <opcode name="Abgeschlossen" message="$(string.opcode_ControllerfürAktivierungeinrichtenAbgeschlossen)" value="26"/>
+      </opcodes>
+     </task>
+     <task name="GerätedatendesHostcontrollers" message="$(string.task_GerätedatendesHostcontrollers)" value="88">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_GerätedatendesHostcontrollersInformationen)" value="14"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <maps>
+     <valueMap name="RunTimePmSetupStatus">
+      <map value="0x0" message="$(string.map_RunTimePmSetupStatusErfolgreich)"/>
+      <map value="0x1" message="$(string.map_RunTimePmSetupStatusFailedDueToCompanionController)"/>
+      <map value="0x2" message="$(string.map_RunTimePmSetupStatusFailedDueToNoS0WakeSupport)"/>
+      <map value="0x3" message="$(string.map_RunTimePmSetupStatusFailedDueToFailedPoRegistration)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="HostcontrollerHinzufügen" version="0" task="Hostcontroller" opcode="Hinzufügen" level="win:Informational" keywords="Diagnostic PowerDiagnostics keyword_400000000000" template="HostcontrollerHinzufügenArgs"/>
+     <event value="2" symbol="HostcontrollerEntfernen" version="0" task="Hostcontroller" opcode="Entfernen" level="win:Informational" keywords="Diagnostic PowerDiagnostics keyword_400000000000" template="HostcontrollerHinzufügenArgs"/>
+     <event value="3" symbol="HostcontrollerInformationen" version="0" task="Hostcontroller" opcode="Informationen" level="win:Informational" keywords="Diagnostic PowerDiagnostics keyword_400000000000" template="HostcontrollerInformationenArgs"/>
+     <event value="4" symbol="HostcontrollerStarten" version="0" task="Hostcontroller" opcode="Starten" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="HostcontrollerHinzufügenArgs"/>
+     <event value="5" symbol="HostcontrollerBeenden" version="0" task="Hostcontroller" opcode="Beenden" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="HostcontrollerHinzufügenArgs"/>
+     <event value="6" symbol="HostcontrollerAnhalten" version="0" task="Hostcontroller" opcode="Anhalten" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="HostcontrollerHinzufügenArgs"/>
+     <event value="7" symbol="HostcontrollerFortsetzen" version="0" task="Hostcontroller" opcode="Fortsetzen" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="HostcontrollerHinzufügenArgs"/>
+     <event value="8" symbol="Hostcontroller_AsynchronerZeitplanAktivieren" version="0" task="Hostcontroller_AsynchronerZeitplan" opcode="Aktivieren" level="win:Verbose" keywords="Diagnostic PowerDiagnostics" template="HostcontrollerHinzufügenArgs"/>
+     <event value="9" symbol="Hostcontroller_AsynchronerZeitplanDeaktivieren" version="0" task="Hostcontroller_AsynchronerZeitplan" opcode="Deaktivieren" level="win:Verbose" keywords="Diagnostic PowerDiagnostics" template="HostcontrollerHinzufügenArgs"/>
+     <event value="10" symbol="Hostcontroller_PeriodischerZeitplanAktivieren" version="0" task="Hostcontroller_PeriodischerZeitplan" opcode="Aktivieren" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="HostcontrollerHinzufügenArgs"/>
+     <event value="11" symbol="Hostcontroller_PeriodischerZeitplanDeaktivieren" version="0" task="Hostcontroller_PeriodischerZeitplan" opcode="Deaktivieren" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="HostcontrollerHinzufügenArgs"/>
+     <event value="12" symbol="GerätErstellen" version="0" task="Gerät" opcode="Erstellen" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="GerätErstellenArgs"/>
+     <event value="13" symbol="GerätInitialisieren" version="0" task="Gerät" opcode="Initialisieren" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="GerätErstellenArgs"/>
+     <event value="14" symbol="GerätEntfernen" version="0" task="Gerät" opcode="Entfernen" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="GerätEntfernenArgs"/>
+     <event value="15" symbol="GerätInformationen" version="0" task="Gerät" opcode="Informationen" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="GerätInformationenArgs"/>
+     <event value="16" symbol="LeerlaufzustandfürGerätFestlegen" version="0" task="LeerlaufzustandfürGerät" opcode="Festlegen" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="LeerlaufzustandfürGerätFestlegenArgs"/>
+     <event value="17" symbol="LeerlaufzustandfürGerätLöschen" version="0" task="LeerlaufzustandfürGerät" opcode="Löschen" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="LeerlaufzustandfürGerätFestlegenArgs"/>
+     <event value="18" symbol="EndpunktÖffnen" version="0" task="Endpunkt" opcode="Öffnen" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="EndpunktÖffnenArgs"/>
+     <event value="19" symbol="EndpunktSchließen" version="0" task="Endpunkt" opcode="Schließen" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="EndpunktÖffnenArgs"/>
+     <event value="20" symbol="EndpunktInformationen" version="0" task="Endpunkt" opcode="Informationen" level="win:Informational" keywords="Diagnostic PowerDiagnostics" template="EndpunktÖffnenArgs"/>
+     <event value="21" symbol="URB_FUNCTION_SELECT_CONFIGURATIONVerteilen" version="0" task="URB_FUNCTION_SELECT_CONFIGURATION" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_SELECT_CONFIGURATIONVerteilenArgs"/>
+     <event value="22" symbol="URB_FUNCTION_SELECT_INTERFACEVerteilen" version="0" task="URB_FUNCTION_SELECT_INTERFACE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_SELECT_INTERFACEVerteilenArgs"/>
+     <event value="23" symbol="URB_FUNCTION_GET_CURRENT_FRAME_NUMBERVerteilen" version="0" task="URB_FUNCTION_GET_CURRENT_FRAME_NUMBER" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_GET_CURRENT_FRAME_NUMBERVerteilenArgs"/>
+     <event value="24" symbol="URB_FUNCTION_CONTROL_TRANSFERVerteilen" version="0" task="URB_FUNCTION_CONTROL_TRANSFER" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="25" symbol="URB_FUNCTION_CONTROL_TRANSFER_EXVerteilen" version="0" task="URB_FUNCTION_CONTROL_TRANSFER_EX" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="26" symbol="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERVerteilen" version="0" task="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERVerteilenArgs"/>
+     <event value="27" symbol="URB_FUNCTION_ISOCH_TRANSFERVerteilen" version="0" task="URB_FUNCTION_ISOCH_TRANSFER" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_ISOCH_TRANSFERVerteilenArgs"/>
+     <event value="28" symbol="URB_FUNCTION_GET_DESCRIPTOR_FROM_DEVICEVerteilen" version="0" task="URB_FUNCTION_GET_DESCRIPTOR_FROM_DEVICE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="29" symbol="URB_FUNCTION_SET_DESCRIPTOR_TO_DEVICEVerteilen" version="0" task="URB_FUNCTION_SET_DESCRIPTOR_TO_DEVICE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="30" symbol="URB_FUNCTION_GET_DESCRIPTOR_FROM_ENDPOINTVerteilen" version="0" task="URB_FUNCTION_GET_DESCRIPTOR_FROM_ENDPOINT" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="31" symbol="URB_FUNCTION_SET_DESCRIPTOR_TO_ENDPOINTVerteilen" version="0" task="URB_FUNCTION_SET_DESCRIPTOR_TO_ENDPOINT" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="32" symbol="URB_FUNCTION_GET_DESCRIPTOR_FROM_INTERFACEVerteilen" version="0" task="URB_FUNCTION_GET_DESCRIPTOR_FROM_INTERFACE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="33" symbol="URB_FUNCTION_SET_DESCRIPTOR_TO_INTERFACEVerteilen" version="0" task="URB_FUNCTION_SET_DESCRIPTOR_TO_INTERFACE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="34" symbol="URB_FUNCTION_SET_FEATURE_TO_DEVICEVerteilen" version="0" task="URB_FUNCTION_SET_FEATURE_TO_DEVICE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="35" symbol="URB_FUNCTION_SET_FEATURE_TO_INTERFACEVerteilen" version="0" task="URB_FUNCTION_SET_FEATURE_TO_INTERFACE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="36" symbol="URB_FUNCTION_SET_FEATURE_TO_ENDPOINTVerteilen" version="0" task="URB_FUNCTION_SET_FEATURE_TO_ENDPOINT" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="37" symbol="URB_FUNCTION_CLEAR_FEATURE_TO_DEVICEVerteilen" version="0" task="URB_FUNCTION_CLEAR_FEATURE_TO_DEVICE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="38" symbol="URB_FUNCTION_CLEAR_FEATURE_TO_INTERFACEVerteilen" version="0" task="URB_FUNCTION_CLEAR_FEATURE_TO_INTERFACE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="39" symbol="URB_FUNCTION_CLEAR_FEATURE_TO_ENDPOINTVerteilen" version="0" task="URB_FUNCTION_CLEAR_FEATURE_TO_ENDPOINT" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="40" symbol="URB_FUNCTION_CLEAR_FEATURE_TO_OTHERVerteilen" version="0" task="URB_FUNCTION_CLEAR_FEATURE_TO_OTHER" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="41" symbol="URB_FUNCTION_SET_FEATURE_TO_OTHERVerteilen" version="0" task="URB_FUNCTION_SET_FEATURE_TO_OTHER" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="42" symbol="URB_FUNCTION_GET_STATUS_FROM_DEVICEVerteilen" version="0" task="URB_FUNCTION_GET_STATUS_FROM_DEVICE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="43" symbol="URB_FUNCTION_GET_STATUS_FROM_INTERFACEVerteilen" version="0" task="URB_FUNCTION_GET_STATUS_FROM_INTERFACE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="44" symbol="URB_FUNCTION_GET_STATUS_FROM_ENDPOINTVerteilen" version="0" task="URB_FUNCTION_GET_STATUS_FROM_ENDPOINT" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="45" symbol="URB_FUNCTION_GET_STATUS_FROM_OTHERVerteilen" version="0" task="URB_FUNCTION_GET_STATUS_FROM_OTHER" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="46" symbol="URB_FUNCTION_VENDOR_DEVICEVerteilen" version="0" task="URB_FUNCTION_VENDOR_DEVICE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="47" symbol="URB_FUNCTION_VENDOR_INTERFACEVerteilen" version="0" task="URB_FUNCTION_VENDOR_INTERFACE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="48" symbol="URB_FUNCTION_VENDOR_ENDPOINTVerteilen" version="0" task="URB_FUNCTION_VENDOR_ENDPOINT" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="49" symbol="URB_FUNCTION_CLASS_DEVICEVerteilen" version="0" task="URB_FUNCTION_CLASS_DEVICE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="50" symbol="URB_FUNCTION_CLASS_INTERFACEVerteilen" version="0" task="URB_FUNCTION_CLASS_INTERFACE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="51" symbol="URB_FUNCTION_CLASS_ENDPOINTVerteilen" version="0" task="URB_FUNCTION_CLASS_ENDPOINT" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="52" symbol="URB_FUNCTION_CLASS_OTHERVerteilen" version="0" task="URB_FUNCTION_CLASS_OTHER" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="53" symbol="URB_FUNCTION_VENDOR_OTHERVerteilen" version="0" task="URB_FUNCTION_VENDOR_OTHER" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="54" symbol="URB_FUNCTION_ABORT_PIPEVerteilen" version="0" task="URB_FUNCTION_ABORT_PIPE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_ABORT_PIPEVerteilenArgs"/>
+     <event value="55" symbol="URB_FUNCTION_SYNC_RESET_PIPE_AND_CLEAR_STALLVerteilen" version="0" task="URB_FUNCTION_SYNC_RESET_PIPE_AND_CLEAR_STALL" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_ABORT_PIPEVerteilenArgs"/>
+     <event value="56" symbol="URB_FUNCTION_SYNC_RESET_PIPEVerteilen" version="0" task="URB_FUNCTION_SYNC_RESET_PIPE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_ABORT_PIPEVerteilenArgs"/>
+     <event value="57" symbol="URB_FUNCTION_SYNC_CLEAR_STALLVerteilen" version="0" task="URB_FUNCTION_SYNC_CLEAR_STALL" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_ABORT_PIPEVerteilenArgs"/>
+     <event value="58" symbol="URB_FUNCTION_GET_CONFIGURATIONVerteilen" version="0" task="URB_FUNCTION_GET_CONFIGURATION" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="59" symbol="URB_FUNCTION_GET_INTERFACEVerteilen" version="0" task="URB_FUNCTION_GET_INTERFACE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="60" symbol="URB_FUNCTION_GET_MS_FEATURE_DESCRIPTORVerteilen" version="0" task="URB_FUNCTION_GET_MS_FEATURE_DESCRIPTOR" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="61" symbol="URB_FUNCTION_TAKE_FRAME_LENGTH_CONTROLVerteilen" version="0" task="URB_FUNCTION_TAKE_FRAME_LENGTH_CONTROL" opcode="Verteilen" level="win:Informational" keywords="Diagnostic"/>
+     <event value="62" symbol="URB_FUNCTION_RELEASE_FRAME_LENGTH_CONTROLVerteilen" version="0" task="URB_FUNCTION_RELEASE_FRAME_LENGTH_CONTROL" opcode="Verteilen" level="win:Informational" keywords="Diagnostic"/>
+     <event value="63" symbol="URB_FUNCTION_GET_FRAME_LENGTHVerteilen" version="0" task="URB_FUNCTION_GET_FRAME_LENGTH" opcode="Verteilen" level="win:Informational" keywords="Diagnostic"/>
+     <event value="64" symbol="URB_FUNCTION_SET_FRAME_LENGTHVerteilen" version="0" task="URB_FUNCTION_SET_FRAME_LENGTH" opcode="Verteilen" level="win:Informational" keywords="Diagnostic"/>
+     <event value="65" symbol="URB_FUNCTION_RESERVEDVerteilen" version="0" task="URB_FUNCTION_RESERVED" opcode="Verteilen" level="win:Informational" keywords="Diagnostic"/>
+     <event value="66" symbol="URB_FUNCTION_CONTROL_TRANSFERAbgeschlossen" version="0" task="URB_FUNCTION_CONTROL_TRANSFER" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="67" symbol="URB_FUNCTION_CONTROL_TRANSFER_EXAbgeschlossen" version="0" task="URB_FUNCTION_CONTROL_TRANSFER_EX" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="68" symbol="URB_FUNCTION_CONTROL_TRANSFERMitDatenabschließen" version="0" task="URB_FUNCTION_CONTROL_TRANSFER" opcode="MitDatenabschließen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERMitDatenabschließenArgs"/>
+     <event value="69" symbol="URB_FUNCTION_CONTROL_TRANSFER_EXMitDatenabschließen" version="0" task="URB_FUNCTION_CONTROL_TRANSFER_EX" opcode="MitDatenabschließen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERMitDatenabschließenArgs"/>
+     <event value="70" symbol="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERAbgeschlossen" version="0" task="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERVerteilenArgs"/>
+     <event value="71" symbol="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERMitDatenabschließen" version="0" task="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER" opcode="MitDatenabschließen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERMitDatenabschließenArgs"/>
+     <event value="72" symbol="URB_FUNCTION_ISOCH_TRANSFERAbgeschlossen" version="0" task="URB_FUNCTION_ISOCH_TRANSFER" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_ISOCH_TRANSFERVerteilenArgs"/>
+     <event value="73" symbol="URB_FUNCTION_ISOCH_TRANSFERMitDatenabschließen" version="0" task="URB_FUNCTION_ISOCH_TRANSFER" opcode="MitDatenabschließen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_ISOCH_TRANSFERVerteilenArgs"/>
+     <event value="74" symbol="URB_FUNCTION_CONTROL_TRANSFERInterneVerteilung" version="0" task="URB_FUNCTION_CONTROL_TRANSFER" opcode="InterneVerteilung" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERInterneVerteilungArgs"/>
+     <event value="75" symbol="URB_FUNCTION_CONTROL_TRANSFERInternerAbschluss" version="0" task="URB_FUNCTION_CONTROL_TRANSFER" opcode="InternerAbschluss" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERInterneVerteilungArgs"/>
+     <event value="76" symbol="URB_FUNCTION_CONTROL_TRANSFERInternerAbschlussmitDaten" version="0" task="URB_FUNCTION_CONTROL_TRANSFER" opcode="InternerAbschlussmitDaten" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERInternerAbschlussmitDatenArgs"/>
+     <event value="77" symbol="URB_FUNCTION_ABORT_PIPEAbgeschlossen" version="0" task="URB_FUNCTION_ABORT_PIPE" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_ABORT_PIPEVerteilenArgs"/>
+     <event value="78" symbol="USBPORT_URB_INVALID_HEADER_LENGTH_WARNINGVerteilen" version="0" task="USBPORT_URB_INVALID_HEADER_LENGTH_WARNING" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_HEADER_LENGTH_WARNINGVerteilenArgs"/>
+     <event value="79" symbol="USBPORT_URB_INVALID_FUNCTIONVerteilen" version="0" task="USBPORT_URB_INVALID_FUNCTION" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_HEADER_LENGTH_WARNINGVerteilenArgs"/>
+     <event value="80" symbol="USBPORT_URB_INVALID_HEADER_LENGTHVerteilen" version="0" task="USBPORT_URB_INVALID_HEADER_LENGTH" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_HEADER_LENGTH_WARNINGVerteilenArgs"/>
+     <event value="81" symbol="USBPORT_URB_INVALID_DEVICE_HANDLEVerteilen" version="0" task="USBPORT_URB_INVALID_DEVICE_HANDLE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_HEADER_LENGTH_WARNINGVerteilenArgs"/>
+     <event value="82" symbol="USBPORT_URB_INVALID_FUNCTION_NOT_SUPPORTEDVerteilen" version="0" task="USBPORT_URB_INVALID_FUNCTION_NOT_SUPPORTED" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_FUNCTION_NOT_SUPPORTEDVerteilenArgs"/>
+     <event value="83" symbol="USBPORT_URB_INVALID_FUNCTION_RESERVEDVerteilen" version="0" task="USBPORT_URB_INVALID_FUNCTION_RESERVED" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_FUNCTION_NOT_SUPPORTEDVerteilenArgs"/>
+     <event value="84" symbol="USBPORT_URB_INVALID_DUE_TO_HC_SUSPENDVerteilen" version="0" task="USBPORT_URB_INVALID_DUE_TO_HC_SUSPEND" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_FUNCTION_NOT_SUPPORTEDVerteilenArgs"/>
+     <event value="85" symbol="USBPORT_URB_INVALID_URB_LINKVerteilen" version="0" task="USBPORT_URB_INVALID_URB_LINK" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_FUNCTION_NOT_SUPPORTEDVerteilenArgs"/>
+     <event value="86" symbol="USBPORT_URB_INVALID_PIPE_HANDLEVerteilen" version="0" task="USBPORT_URB_INVALID_PIPE_HANDLE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_PIPE_HANDLEVerteilenArgs"/>
+     <event value="87" symbol="USBPORT_URB_INVALID_ZERO_BW_PIPE_HANDLEVerteilen" version="0" task="USBPORT_URB_INVALID_ZERO_BW_PIPE_HANDLE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_PIPE_HANDLEVerteilenArgs"/>
+     <event value="88" symbol="USBPORT_URB_NOP_ZERO_BW_PIPE_HANDLE_REQUESTVerteilen" version="0" task="USBPORT_URB_NOP_ZERO_BW_PIPE_HANDLE_REQUEST" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_PIPE_HANDLEVerteilenArgs"/>
+     <event value="89" symbol="USBPORT_URB_INVALID_CONTROL_TRANSFER_ENDPOINTVerteilen" version="0" task="USBPORT_URB_INVALID_CONTROL_TRANSFER_ENDPOINT" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="90" symbol="USBPORT_URB_INVALID_CONTROL_TRANSFER_BUFFER_LENGTHVerteilen" version="0" task="USBPORT_URB_INVALID_CONTROL_TRANSFER_BUFFER_LENGTH" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs"/>
+     <event value="91" symbol="USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_ENDPOINTVerteilen" version="0" task="USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_ENDPOINT" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERVerteilenArgs"/>
+     <event value="92" symbol="USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_BUFFER_LENGTHVerteilen" version="0" task="USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_BUFFER_LENGTH" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERVerteilenArgs"/>
+     <event value="93" symbol="USBPORT_URB_INVALID_ISOCHRONOUS_TRANSFER_ENDPOINTVerteilen" version="0" task="USBPORT_URB_INVALID_ISOCHRONOUS_TRANSFER_ENDPOINT" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_ISOCHRONOUS_TRANSFER_ENDPOINTVerteilenArgs"/>
+     <event value="94" symbol="USBPORT_URB_INVALID_NULL_TRANSFER_BUFFER_AND_MDLVerteilen" version="0" task="USBPORT_URB_INVALID_NULL_TRANSFER_BUFFER_AND_MDL" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_NULL_TRANSFER_BUFFER_AND_MDLVerteilenArgs"/>
+     <event value="95" symbol="USBPORT_URB_INVALID_NON_NULL_TRANSFER_BUFFER_MDLVerteilen" version="0" task="USBPORT_URB_INVALID_NON_NULL_TRANSFER_BUFFER_MDL" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_NULL_TRANSFER_BUFFER_AND_MDLVerteilenArgs"/>
+     <event value="96" symbol="USBPORT_URB_ALLOCATE_MDL_FAILUREVerteilen" version="0" task="USBPORT_URB_ALLOCATE_MDL_FAILURE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_NULL_TRANSFER_BUFFER_AND_MDLVerteilenArgs"/>
+     <event value="97" symbol="USBPORT_URB_ALLOCATE_TRANSFER_CONTEXT_FAILUREVerteilen" version="0" task="USBPORT_URB_ALLOCATE_TRANSFER_CONTEXT_FAILURE" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_NULL_TRANSFER_BUFFER_AND_MDLVerteilenArgs"/>
+     <event value="98" symbol="USBPORT_URB_NOP_ROOTHUB_PIPE_HANDLE_REQUESTVerteilen" version="0" task="USBPORT_URB_NOP_ROOTHUB_PIPE_HANDLE_REQUEST" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_PIPE_HANDLEVerteilenArgs"/>
+     <event value="99" symbol="USBPORT_URB_INVALID_ISOCHRONOUS_ZERO_LENGTHVerteilen" version="0" task="USBPORT_URB_INVALID_ISOCHRONOUS_ZERO_LENGTH" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_ISOCHRONOUS_TRANSFER_ENDPOINTVerteilenArgs"/>
+     <event value="100" symbol="USBPORT_URB_INVALID_ISOCHRONOUS_NUM_PACKETSVerteilen" version="0" task="USBPORT_URB_INVALID_ISOCHRONOUS_NUM_PACKETS" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_ISOCHRONOUS_TRANSFER_ENDPOINTVerteilenArgs"/>
+     <event value="101" symbol="USBPORT_URB_INVALID_ISOCHRONOUS_START_FRAMEVerteilen" version="0" task="USBPORT_URB_INVALID_ISOCHRONOUS_START_FRAME" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBPORT_URB_INVALID_ISOCHRONOUS_START_FRAMEVerteilenArgs"/>
+     <event value="102" symbol="IrpAbbrechen" version="0" task="Irp" opcode="Abbrechen" level="win:Informational" keywords="Diagnostic" template="IrpAbbrechenArgs"/>
+     <event value="103" symbol="USBUSER_OP_RAW_RESET_PORTVerteilen" version="0" task="USBUSER_OP_RAW_RESET_PORT" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBUSER_OP_RAW_RESET_PORTVerteilenArgs"/>
+     <event value="104" symbol="USBUSER_OP_RAW_RESET_PORTStatus" version="0" task="USBUSER_OP_RAW_RESET_PORT" opcode="Status" level="win:Informational" keywords="Diagnostic" template="USBUSER_OP_RAW_RESET_PORTStatusArgs"/>
+     <event value="105" symbol="USBUSER_OP_RAW_RESET_PORTStatus105" version="0" task="USBUSER_OP_RAW_RESET_PORT" opcode="Status" level="win:Informational" keywords="Diagnostic" template="USBUSER_OP_RAW_RESET_PORTStatusArgs"/>
+     <event value="106" symbol="USBUSER_OP_RAW_RESET_PORTStatus106" version="0" task="USBUSER_OP_RAW_RESET_PORT" opcode="Status" level="win:Informational" keywords="Diagnostic" template="USBUSER_OP_RAW_RESET_PORTStatusArgs"/>
+     <event value="107" symbol="USBUSER_OP_RAW_RESET_PORTAbgeschlossen" version="0" task="USBUSER_OP_RAW_RESET_PORT" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="USBUSER_OP_RAW_RESET_PORTAbgeschlossenArgs"/>
+     <event value="108" symbol="USBUSER_OP_SEND_ONE_PACKETVerteilen" version="0" task="USBUSER_OP_SEND_ONE_PACKET" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="USBUSER_OP_SEND_ONE_PACKETVerteilenArgs"/>
+     <event value="109" symbol="USBUSER_OP_SEND_ONE_PACKETVerteilungmitDaten" version="0" task="USBUSER_OP_SEND_ONE_PACKET" opcode="VerteilungmitDaten" level="win:Informational" keywords="Diagnostic" template="USBUSER_OP_SEND_ONE_PACKETVerteilungmitDatenArgs"/>
+     <event value="110" symbol="USBUSER_OP_SEND_ONE_PACKETStatus" version="0" task="USBUSER_OP_SEND_ONE_PACKET" opcode="Status" level="win:Informational" keywords="Diagnostic" template="USBUSER_OP_SEND_ONE_PACKETVerteilenArgs"/>
+     <event value="111" symbol="USBUSER_OP_SEND_ONE_PACKETAbgeschlossen" version="0" task="USBUSER_OP_SEND_ONE_PACKET" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="USBUSER_OP_SEND_ONE_PACKETAbgeschlossenArgs"/>
+     <event value="112" symbol="USBUSER_OP_SEND_ONE_PACKETMitDatenabschließen" version="0" task="USBUSER_OP_SEND_ONE_PACKET" opcode="MitDatenabschließen" level="win:Informational" keywords="Diagnostic" template="USBUSER_OP_SEND_ONE_PACKETVerteilungmitDatenArgs"/>
+     <event value="113" symbol="CodeleistungInformationen" version="0" task="Codeleistung" opcode="Informationen" level="win:Verbose" keywords="PerfDiagnostics" template="CodeleistungInformationenArgs"/>
+     <event value="114" symbol="Codeleistungmit"PutScatterGatherList"Informationen" version="0" task="Codeleistungmit"PutScatterGatherList"" opcode="Informationen" level="win:Verbose" keywords="PerfDiagnostics" template="Codeleistungmit"PutScatterGatherList"InformationenArgs"/>
+     <event value="115" symbol="Codeleistungmit"BuildScatterGatherList"Informationen" version="0" task="Codeleistungmit"BuildScatterGatherList"" opcode="Informationen" level="win:Verbose" keywords="PerfDiagnostics" template="Codeleistungmit"BuildScatterGatherList"InformationenArgs"/>
+     <event value="1024" symbol="Miniport_StartenVerteilen" version="0" task="Miniport_Starten" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="1025" symbol="Miniport_StartenAbgeschlossen" version="0" task="Miniport_Starten" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="1026" symbol="Miniport_StartenMitFehlernabgeschlossen" version="0" task="Miniport_Starten" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="1027" symbol="Miniport_StartenMitFehlernabgeschlossen1027" version="0" task="Miniport_Starten" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="1028" symbol="Miniport_StartenMitFehlernabgeschlossen1028" version="0" task="Miniport_Starten" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="1029" symbol="Miniport_StartenMitFehlernabgeschlossen1029" version="0" task="Miniport_Starten" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="1030" symbol="Miniport_StartenMitFehlernabgeschlossen1030" version="0" task="Miniport_Starten" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="1031" symbol="Miniport_BeendenVerteilen" version="0" task="Miniport_Beenden" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="1032" symbol="Miniport_BeendenAbgeschlossen" version="0" task="Miniport_Beenden" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="1033" symbol="Miniport_AnhaltenVerteilen" version="0" task="Miniport_Anhalten" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="1034" symbol="Miniport_AnhaltenAbgeschlossen" version="0" task="Miniport_Anhalten" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="1035" symbol="Miniport_FortsetzenVerteilen" version="0" task="Miniport_Fortsetzen" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="1036" symbol="Miniport_FortsetzenAbgeschlossen" version="0" task="Miniport_Fortsetzen" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="1037" symbol="Miniport_FortsetzenMitFehlernabgeschlossen" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="1038" symbol="Miniport_FortsetzenMitFehlernabgeschlossen1038" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="1039" symbol="Miniport_FortsetzenMitFehlernabgeschlossen1039" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="1040" symbol="Miniport_FortsetzenMitFehlernabgeschlossen1040" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="1041" symbol="Miniport_FortsetzenMitFehlernabgeschlossen1041" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="1042" symbol="Miniport_FortsetzenMitFehlernabgeschlossen1042" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="1043" symbol="GerätedatendesHostcontrollersInformationen" version="0" task="GerätedatendesHostcontrollers" opcode="Informationen" level="win:Informational" keywords="Diagnostic" template="GerätedatendesHostcontrollersInformationenArgs"/>
+     <event value="2048" symbol="Miniport_StartenVerteilen2048" version="0" task="Miniport_Starten" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="2049" symbol="Miniport_StartenAbgeschlossen2049" version="0" task="Miniport_Starten" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="2050" symbol="Miniport_StartenMitFehlernabgeschlossen2050" version="0" task="Miniport_Starten" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="2051" symbol="Miniport_StartenMitFehlernabgeschlossen2051" version="0" task="Miniport_Starten" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="2052" symbol="Miniport_StartenMitFehlernabgeschlossen2052" version="0" task="Miniport_Starten" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="2053" symbol="Miniport_StartenMitFehlernabgeschlossen2053" version="0" task="Miniport_Starten" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="2054" symbol="Miniport_StartenMitFehlernabgeschlossen2054" version="0" task="Miniport_Starten" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="2055" symbol="Miniport_BeendenVerteilen2055" version="0" task="Miniport_Beenden" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="2056" symbol="Miniport_BeendenAbgeschlossen2056" version="0" task="Miniport_Beenden" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="2057" symbol="Miniport_AnhaltenVerteilen2057" version="0" task="Miniport_Anhalten" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="2058" symbol="Miniport_AnhaltenAbgeschlossen2058" version="0" task="Miniport_Anhalten" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="2059" symbol="Miniport_FortsetzenVerteilen2059" version="0" task="Miniport_Fortsetzen" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="2060" symbol="Miniport_FortsetzenAbgeschlossen2060" version="0" task="Miniport_Fortsetzen" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="2061" symbol="Miniport_FortsetzenMitFehlernabgeschlossen2061" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="2062" symbol="Miniport_FortsetzenMitFehlernabgeschlossen2062" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="2063" symbol="Miniport_FortsetzenMitFehlernabgeschlossen2063" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="2064" symbol="Miniport_FortsetzenMitFehlernabgeschlossen2064" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="2065" symbol="Miniport_FortsetzenMitFehlernabgeschlossen2065" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="3072" symbol="Miniport_StartenVerteilen3072" version="0" task="Miniport_Starten" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="3073" symbol="Miniport_StartenAbgeschlossen3073" version="0" task="Miniport_Starten" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="3074" symbol="Miniport_StartenMitFehlernabgeschlossen3074" version="0" task="Miniport_Starten" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="3075" symbol="Miniport_StartenMitFehlernabgeschlossen3075" version="0" task="Miniport_Starten" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="3076" symbol="Miniport_StartenMitFehlernabgeschlossen3076" version="0" task="Miniport_Starten" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="3077" symbol="Miniport_StartenMitFehlernabgeschlossen3077" version="0" task="Miniport_Starten" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_StartenAbgeschlossenArgs"/>
+     <event value="3078" symbol="Miniport_BeendenVerteilen3078" version="0" task="Miniport_Beenden" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="3079" symbol="Miniport_BeendenAbgeschlossen3079" version="0" task="Miniport_Beenden" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="3080" symbol="Miniport_AnhaltenVerteilen3080" version="0" task="Miniport_Anhalten" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="3081" symbol="Miniport_AnhaltenAbgeschlossen3081" version="0" task="Miniport_Anhalten" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="3082" symbol="Miniport_FortsetzenVerteilen3082" version="0" task="Miniport_Fortsetzen" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="HostcontrollerHinzufügenArgs"/>
+     <event value="3083" symbol="Miniport_FortsetzenAbgeschlossen3083" version="0" task="Miniport_Fortsetzen" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="3084" symbol="Miniport_FortsetzenMitFehlernabgeschlossen3084" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="3085" symbol="Miniport_FortsetzenMitFehlernabgeschlossen3085" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="3086" symbol="Miniport_FortsetzenMitFehlernabgeschlossen3086" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="3087" symbol="Miniport_FortsetzenMitFehlernabgeschlossen3087" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="3088" symbol="Miniport_FortsetzenMitFehlernabgeschlossen3088" version="0" task="Miniport_Fortsetzen" opcode="MitFehlernabgeschlossen" level="win:Informational" keywords="Diagnostic" template="Miniport_FortsetzenAbgeschlossenArgs"/>
+     <event value="3089" symbol="LaufzeitenergieverwaltungLaufzeit_Energieverwaltungsübergang" version="0" task="Laufzeitenergieverwaltung" opcode="Laufzeit_Energieverwaltungsübergang" level="win:Informational" keywords="Diagnostic" template="LaufzeitenergieverwaltungLaufzeit_EnergieverwaltungsübergangArgs"/>
+     <event value="3090" symbol="ControllerfürAktivierungeinrichtenVerteilen" version="0" task="ControllerfürAktivierungeinrichten" opcode="Verteilen" level="win:Informational" keywords="Diagnostic" template="ControllerfürAktivierungeinrichtenVerteilenArgs"/>
+     <event value="3091" symbol="ControllerfürAktivierungeinrichtenAbgeschlossen" version="0" task="ControllerfürAktivierungeinrichten" opcode="Abgeschlossen" level="win:Informational" keywords="Diagnostic" template="ControllerfürAktivierungeinrichtenVerteilenArgs"/>
+    </events>
+    <templates>
+     <template tid="HostcontrollerHinzufügenArgs">
+      <data name="fid_USBPORT_HC" inType="win:UnicodeString"/>
+     </template>
+     <template tid="HostcontrollerInformationenArgs">
+      <data name="fid_USBPORT_HC" inType="win:UInt16"/>
+      <data name="fid_USBPORT_HC_Idle_Status" inType="win:Double"/>
+      <data name="fid_USBPORT_HC_Pdo_Name" inType="win:UnicodeString"/>
+      <data name="fid_RunTimePmSetupStatus" inType="win:UInt32" map="RunTimePmSetupStatus"/>
+      <data name="fid_DevicePowerState" inType="win:UInt32"/>
+      <data name="fid_AcpiInstanceId" inType="win:AnsiString"/>
+     </template>
+     <template tid="GerätErstellenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int8"/>
+      <data name="fid_USBPORT_Device" inType="win:Int64"/>
+      <data name="fid_USBPORT_Device_Descriptor" inType="win:Pointer"/>
+     </template>
+     <template tid="GerätEntfernenArgs">
+      <data name="fid_USBPORT_HC" inType="win:AnsiString"/>
+      <data name="fid_USBPORT_Device" inType="win:UInt32"/>
+     </template>
+     <template tid="GerätInformationenArgs">
+      <data name="fid_USBPORT_HC" inType="win:UInt16"/>
+      <data name="fid_USBPORT_Device" inType="win:Double"/>
+      <data name="fid_USBPORT_Device_Descriptor" inType="win:SID"/>
+      <data name="fid_USBPORT_Device_Driver_Name" inType="win:UnicodeString"/>
+      <data name="fid_USBPORT_Device_Idle_State" inType="win:UInt32"/>
+      <data name="fid_USBPORT_Device_Pdo_Name" inType="win:UnicodeString"/>
+     </template>
+     <template tid="LeerlaufzustandfürGerätFestlegenArgs">
+      <data name="fid_USBPORT_HC" inType="win:UInt8"/>
+      <data name="fid_USBPORT_Device" inType="win:UInt64"/>
+      <data name="fid_USBPORT_Device_Idle_Previous_State" inType="win:UInt32"/>
+      <data name="fid_USBPORT_Device_Idle_New_State" inType="win:UInt32"/>
+     </template>
+     <template tid="EndpunktÖffnenArgs">
+      <data name="fid_USBPORT_HC" inType="win:UInt8"/>
+      <data name="fid_USBPORT_Device" inType="win:UInt64"/>
+      <data name="fid_USBPORT_Endpoint" inType="win:FILETIME"/>
+      <data name="fid_USBPORT_Endpoint_Descriptor" inType="win:HexInt32"/>
+     </template>
+     <template tid="URB_FUNCTION_SELECT_CONFIGURATIONVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:UInt32"/>
+      <data name="fid_USBPORT_Device" inType="win:Binary"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Length" inType="win:UInt16"/>
+      <data name="fid_URB" inType="win:UInt8" count="fid_URB_Length"/>
+      <data name="fid_Configuration_Descriptor_Length" inType="win:UInt16"/>
+      <data name="fid_Configuration_Descriptor" inType="win:UInt8" count="fid_Configuration_Descriptor_Length"/>
+     </template>
+     <template tid="URB_FUNCTION_SELECT_INTERFACEVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:UInt16"/>
+      <data name="fid_USBPORT_Device" inType="win:Double"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Length" inType="win:UInt16"/>
+      <data name="fid_URB" inType="win:UInt8" count="fid_URB_Length"/>
+     </template>
+     <template tid="URB_FUNCTION_GET_CURRENT_FRAME_NUMBERVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int16"/>
+      <data name="fid_USBPORT_Device" inType="win:Float"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_FrameNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="URB_FUNCTION_CONTROL_TRANSFERVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int32"/>
+      <data name="fid_USBPORT_Device" inType="win:Boolean"/>
+      <data name="fid_USBPORT_Endpoint" inType="win:HexInt32"/>
+      <data name="fid_USBPORT_Endpoint_Descriptor" inType="win:CountedMbcsString"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_USBPORT_URB_CONTROL_TRANSFER" inType="win:29"/>
+     </template>
+     <template tid="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int32"/>
+      <data name="fid_USBPORT_Device" inType="win:Boolean"/>
+      <data name="fid_USBPORT_Endpoint" inType="win:HexInt32"/>
+      <data name="fid_USBPORT_Endpoint_Descriptor" inType="win:CountedMbcsString"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_USBPORT_URB_BULK_OR_INTERRUPT_TRANSFER" inType="win:29"/>
+     </template>
+     <template tid="URB_FUNCTION_ISOCH_TRANSFERVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int64"/>
+      <data name="fid_USBPORT_Device" inType="win:GUID"/>
+      <data name="fid_USBPORT_Endpoint" inType="win:CountedUtf16String"/>
+      <data name="fid_USBPORT_Endpoint_Descriptor" inType="win:25"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_USBPORT_URB_NumberOfPackets" inType="win:UInt16"/>
+      <data name="fid_USBPORT_URB_ISOCH_TRANSFER" inType="win:31"/>
+      <data name="fid_USBPORT_URB_ISO_PACKETS" inType="win:46" count="fid_USBPORT_URB_NumberOfPackets"/>
+     </template>
+     <template tid="URB_FUNCTION_ABORT_PIPEVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int32"/>
+      <data name="fid_USBPORT_Device" inType="win:Boolean"/>
+      <data name="fid_USBPORT_Endpoint" inType="win:HexInt32"/>
+      <data name="fid_USBPORT_Endpoint_Descriptor" inType="win:CountedMbcsString"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_USBPORT_URB_URB_PIPE_REQUEST" inType="win:29"/>
+     </template>
+     <template tid="URB_FUNCTION_CONTROL_TRANSFERMitDatenabschließenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int64"/>
+      <data name="fid_USBPORT_Device" inType="win:GUID"/>
+      <data name="fid_USBPORT_Endpoint" inType="win:CountedUtf16String"/>
+      <data name="fid_USBPORT_Endpoint_Descriptor" inType="win:25"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_USBPORT_URB_CONTROL_TRANSFER" inType="win:31"/>
+      <data name="fid_URB_TransferDataLength" inType="win:UInt16"/>
+      <data name="fid_URB_TransferData" inType="win:UInt8" count="fid_URB_TransferDataLength"/>
+     </template>
+     <template tid="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERMitDatenabschließenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int64"/>
+      <data name="fid_USBPORT_Device" inType="win:GUID"/>
+      <data name="fid_USBPORT_Endpoint" inType="win:CountedUtf16String"/>
+      <data name="fid_USBPORT_Endpoint_Descriptor" inType="win:25"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_USBPORT_URB_BULK_OR_INTERRUPT_TRANSFER" inType="win:31"/>
+      <data name="fid_URB_TransferDataLength" inType="win:UInt16"/>
+      <data name="fid_URB_TransferData" inType="win:UInt8" count="fid_URB_TransferDataLength"/>
+     </template>
+     <template tid="URB_FUNCTION_CONTROL_TRANSFERInterneVerteilungArgs">
+      <data name="fid_USBPORT_HC" inType="win:UInt16"/>
+      <data name="fid_USBPORT_Device" inType="win:Double"/>
+      <data name="fid_USBPORT_Endpoint" inType="win:SID"/>
+      <data name="fid_USBPORT_Endpoint_Descriptor" inType="win:CountedUtf16String"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_USBPORT_URB_CONTROL_TRANSFER" inType="win:28"/>
+     </template>
+     <template tid="URB_FUNCTION_CONTROL_TRANSFERInternerAbschlussmitDatenArgs">
+      <data name="fid_USBPORT_HC" inType="win:UInt32"/>
+      <data name="fid_USBPORT_Device" inType="win:Binary"/>
+      <data name="fid_USBPORT_Endpoint" inType="win:HexInt64"/>
+      <data name="fid_USBPORT_Endpoint_Descriptor" inType="win:Struct"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_USBPORT_URB_CONTROL_TRANSFER" inType="win:30"/>
+      <data name="fid_URB_TransferDataLength" inType="win:UInt16"/>
+      <data name="fid_URB_TransferData" inType="win:UInt8" count="fid_URB_TransferDataLength"/>
+     </template>
+     <template tid="USBPORT_URB_INVALID_HEADER_LENGTH_WARNINGVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:UInt8"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_USBPORT_URB_HEADER" inType="win:UInt64"/>
+     </template>
+     <template tid="USBPORT_URB_INVALID_FUNCTION_NOT_SUPPORTEDVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int16"/>
+      <data name="fid_USBPORT_Device" inType="win:Float"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_USBPORT_URB_HEADER" inType="win:SYSTEMTIME"/>
+     </template>
+     <template tid="USBPORT_URB_INVALID_PIPE_HANDLEVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int16"/>
+      <data name="fid_USBPORT_Device" inType="win:Float"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_USBPORT_URB_INVALID_PIPE_REQUEST" inType="win:SYSTEMTIME"/>
+     </template>
+     <template tid="USBPORT_URB_INVALID_ISOCHRONOUS_TRANSFER_ENDPOINTVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int32"/>
+      <data name="fid_USBPORT_Device" inType="win:Boolean"/>
+      <data name="fid_USBPORT_Endpoint" inType="win:HexInt32"/>
+      <data name="fid_USBPORT_Endpoint_Descriptor" inType="win:CountedMbcsString"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_USBPORT_URB_ISOCH_TRANSFER" inType="win:29"/>
+     </template>
+     <template tid="USBPORT_URB_INVALID_NULL_TRANSFER_BUFFER_AND_MDLVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int32"/>
+      <data name="fid_USBPORT_Device" inType="win:Boolean"/>
+      <data name="fid_USBPORT_Endpoint" inType="win:HexInt32"/>
+      <data name="fid_USBPORT_Endpoint_Descriptor" inType="win:CountedMbcsString"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_USBPORT_URB_HEADER" inType="win:29"/>
+     </template>
+     <template tid="USBPORT_URB_INVALID_ISOCHRONOUS_START_FRAMEVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:UInt64"/>
+      <data name="fid_USBPORT_Device" inType="win:Pointer"/>
+      <data name="fid_USBPORT_Endpoint" inType="win:CountedMbcsString"/>
+      <data name="fid_USBPORT_Endpoint_Descriptor" inType="win:26"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_URB_Ptr" inType="win:Pointer"/>
+      <data name="fid_USBPORT_URB_NumberOfPackets" inType="win:UInt16"/>
+      <data name="fid_USBPORT_URB_ISOCH_TRANSFER" inType="win:32"/>
+      <data name="fid_USBPORT_URB_ISO_PACKETS" inType="win:47" count="fid_USBPORT_URB_NumberOfPackets"/>
+      <data name="fid_URB_FrameNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="IrpAbbrechenArgs">
+      <data name="fid_USBPORT_HC" inType="win:AnsiString"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+     </template>
+     <template tid="USBUSER_OP_RAW_RESET_PORTVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:AnsiString"/>
+      <data name="fid_PortNumber" inType="win:UInt16"/>
+     </template>
+     <template tid="USBUSER_OP_RAW_RESET_PORTStatusArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int8"/>
+      <data name="fid_PortNumber" inType="win:UInt16"/>
+      <data name="fid_PortStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="USBUSER_OP_RAW_RESET_PORTAbgeschlossenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int8"/>
+      <data name="fid_PortNumber" inType="win:UInt16"/>
+      <data name="fid_UsbStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="USBUSER_OP_SEND_ONE_PACKETVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:AnsiString"/>
+      <data name="fid_USBPORT_Usbuser_Op_Send_One_Packet" inType="win:UInt32"/>
+     </template>
+     <template tid="USBUSER_OP_SEND_ONE_PACKETVerteilungmitDatenArgs">
+      <data name="fid_USBPORT_HC" inType="win:UInt8"/>
+      <data name="fid_USBPORT_Usbuser_Op_Send_One_Packet" inType="win:UInt64"/>
+      <data name="fid_PacketDataLength" inType="win:UInt16"/>
+      <data name="fid_PacketData" inType="win:UInt8" count="fid_PacketDataLength"/>
+     </template>
+     <template tid="USBUSER_OP_SEND_ONE_PACKETAbgeschlossenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int8"/>
+      <data name="fid_USBPORT_Usbuser_Op_Send_One_Packet" inType="win:Int64"/>
+      <data name="fid_UsbStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="CodeleistungInformationenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int8"/>
+      <data name="fid_USBPORT_Execution_Metrics" inType="win:Int64"/>
+      <data name="fid_CodeTag" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Codeleistungmit"PutScatterGatherList"InformationenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Float"/>
+      <data name="fid_USBPORT_Device" inType="win:FILETIME"/>
+      <data name="fid_USBPORT_Endpoint" inType="win:Struct"/>
+      <data name="fid_USBPORT_Endpoint_Descriptor" inType="win:27"/>
+      <data name="fid_USBPORT_Execution_Metrics" inType="win:33"/>
+      <data name="fid_AdapterObject" inType="win:Pointer"/>
+      <data name="fid_NumPutScatterGatherList" inType="win:UInt32"/>
+      <data name="fid_WriteData" inType="win:Boolean"/>
+      <data name="fid_FlushLength" inType="win:UInt32"/>
+      <data name="fid_CurrentVA" inType="win:Pointer"/>
+      <data name="fid_CodeTag" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Codeleistungmit"BuildScatterGatherList"InformationenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Float"/>
+      <data name="fid_USBPORT_Device" inType="win:FILETIME"/>
+      <data name="fid_USBPORT_Endpoint" inType="win:Struct"/>
+      <data name="fid_USBPORT_Endpoint_Descriptor" inType="win:27"/>
+      <data name="fid_USBPORT_Execution_Metrics" inType="win:33"/>
+      <data name="fid_AdapterObject" inType="win:Pointer"/>
+      <data name="fid_TransferBufferLength" inType="win:UInt32"/>
+      <data name="fid_WriteData" inType="win:Boolean"/>
+      <data name="fid_LengthRemaining" inType="win:UInt32"/>
+      <data name="fid_CurrentVA" inType="win:Pointer"/>
+      <data name="fid_CodeTag" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Miniport_StartenAbgeschlossenArgs">
+      <data name="fid_USBPORT_HC" inType="win:AnsiString"/>
+      <data name="fid_MiniportStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="Miniport_FortsetzenAbgeschlossenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int16"/>
+      <data name="fid_MiniportStatus" inType="win:UInt32"/>
+      <data name="fid_NumberOfPorts" inType="win:UInt16"/>
+      <data name="fid_SuspendPortStatus" inType="win:UInt32" count="fid_NumberOfPorts"/>
+      <data name="fid_ResumePortStatus" inType="win:UInt32" count="fid_NumberOfPorts"/>
+     </template>
+     <template tid="GerätedatendesHostcontrollersInformationenArgs">
+      <data name="fid_USBPORT_HC" inType="win:50"/>
+      <data name="fid_HcSuspendedFlag" inType="win:UInt32"/>
+      <data name="fid_SuspendHcNotHalted" inType="win:UInt32"/>
+      <data name="fid_HostSystemErrorCount" inType="win:UInt32"/>
+      <data name="fid_HostSystemErrorResetNeeded" inType="win:UInt32"/>
+      <data name="fid_StatAsyncEnableCount" inType="win:UInt32"/>
+      <data name="fid_StatAsyncDisableCount" inType="win:UInt32"/>
+      <data name="fid_StatPeriodicEnableCount" inType="win:UInt32"/>
+      <data name="fid_StatPeriodicDisableCount" inType="win:UInt32"/>
+      <data name="fid_StatAsyncEnableTimeoutCount" inType="win:UInt32"/>
+      <data name="fid_StatAsyncDisableTimeoutCount" inType="win:UInt32"/>
+      <data name="fid_StatPeriodicEnableTimeoutCount" inType="win:UInt32"/>
+      <data name="fid_StatPeriodicDisableTimeoutCount" inType="win:UInt32"/>
+      <data name="fid_StatRingDoorbellDisabledCount" inType="win:UInt32"/>
+      <data name="fid_StatRingDoorbellDisablingCount" inType="win:UInt32"/>
+      <data name="fid_StatRingDoorbellEnablingCount" inType="win:UInt32"/>
+      <data name="fid_StatRingDoorbellEnabledCount" inType="win:UInt32"/>
+      <data name="fid_StatRingDoorbellHwRemovedCount" inType="win:UInt32"/>
+      <data name="fid_StatAnswerDoorbell" inType="win:UInt32"/>
+      <data name="fid_StatAsyncCacheFlushIdle" inType="win:UInt32"/>
+      <data name="fid_StatAsyncCacheFlushNormal" inType="win:UInt32"/>
+      <data name="fid_StatAsyncCacheFlushRetry" inType="win:UInt32"/>
+      <data name="fid_StatIntOnAsyncAdvancePendingCount" inType="win:UInt32"/>
+      <data name="fid_StatIntOnAsyncAdvanceSyncRoutineCount" inType="win:UInt32"/>
+      <data name="fid_StatRingDoorbellEnabledWithRetryCount" inType="win:UInt32"/>
+      <data name="fid_StatRingDoorbellEnabledWithRetryIgnoredCount" inType="win:UInt32"/>
+      <data name="fid_StatAsyncCacheFlushPrevented" inType="win:UInt32"/>
+      <data name="fid_CurrentRingDoorbellDisablingTimerCount" inType="win:UInt32"/>
+      <data name="fid_CurrentRingDoorbellEnablingTimerCount" inType="win:UInt32"/>
+      <data name="fid_CurrentRingDoorbellEnabledTimerCount" inType="win:UInt32"/>
+      <data name="fid_CurrentIntOnAsyncAdvancePendingCount" inType="win:UInt32"/>
+      <data name="fid_StatResetNeededCount" inType="win:UInt32"/>
+      <data name="fid_ResetNeeded" inType="win:UInt32"/>
+      <data name="fid_ResetRecoveryEnable" inType="win:UInt32"/>
+      <data name="fid_ResetRecoveryBreak" inType="win:UInt32"/>
+      <data name="fid_AsyncScheduleState" inType="win:UInt32"/>
+      <data name="fid_AsyncDoorbellState" inType="win:UInt32"/>
+      <data name="fid_PeriodicScheduleState" inType="win:UInt32"/>
+      <data name="fid_EhciInternalFlags" inType="win:UInt32"/>
+      <data name="fid_PreventCmdChangesWithDoorbellPending" inType="win:UInt8"/>
+      <data name="fid_OptimizeInactiveQhFlush" inType="win:UInt8"/>
+      <data name="fid_DisableTwoDoorbellWorkaround" inType="win:UInt8"/>
+      <data name="fid_StrictTransitionChecksEnabled" inType="win:UInt8"/>
+      <data name="fid_IntegratedTTSupportRegistryOverride" inType="win:UInt8"/>
+      <data name="fid_CurrentAsyncEnableCount" inType="win:UInt32"/>
+      <data name="fid_InitialDoorbellRetryEnableValue" inType="win:UInt32"/>
+      <data name="fid_CurrentDoorbellRetryEnableValue" inType="win:UInt32"/>
+      <data name="fid_DoorbellRetryRequired" inType="win:UInt32"/>
+      <data name="fid_PeriodicEnableChangeWithDoorbellPending" inType="win:UInt32"/>
+      <data name="fid_PeriodicDisableChangeWithDoorbellPending" inType="win:UInt32"/>
+     </template>
+     <template tid="LaufzeitenergieverwaltungLaufzeit_EnergieverwaltungsübergangArgs">
+      <data name="fid_USBPORT_HC" inType="win:AnsiString"/>
+      <data name="fid_RunTimePmEvent" inType="win:UInt32"/>
+     </template>
+     <template tid="ControllerfürAktivierungeinrichtenVerteilenArgs">
+      <data name="fid_USBPORT_HC" inType="win:Int8"/>
+      <data name="fid_IRP_Ptr" inType="win:Pointer"/>
+      <data name="fid_Status" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Diagnostic" value="Diagnostic"/>
+    <string id="keyword_PowerDiagnostics" value="PowerDiagnostics"/>
+    <string id="keyword_PerfDiagnostics" value="PerfDiagnostics"/>
+    <string id="keyword_keyword_400000000000" value="keyword_400000000000"/>
+    <string id="task_Hostcontroller" value="Hostcontroller"/>
+    <string id="opcode_HostcontrollerHinzufügen" value="Hinzufügen"/>
+    <string id="opcode_HostcontrollerEntfernen" value="Entfernen"/>
+    <string id="opcode_HostcontrollerInformationen" value="Informationen"/>
+    <string id="opcode_HostcontrollerStarten" value="Starten"/>
+    <string id="opcode_HostcontrollerBeenden" value="Beenden"/>
+    <string id="opcode_HostcontrollerAnhalten" value="Anhalten"/>
+    <string id="opcode_HostcontrollerFortsetzen" value="Fortsetzen"/>
+    <string id="task_Hostcontroller_AsynchronerZeitplan" value="Hostcontroller_AsynchronerZeitplan"/>
+    <string id="opcode_Hostcontroller_AsynchronerZeitplanAktivieren" value="Aktivieren"/>
+    <string id="opcode_Hostcontroller_AsynchronerZeitplanDeaktivieren" value="Deaktivieren"/>
+    <string id="task_Hostcontroller_PeriodischerZeitplan" value="Hostcontroller_PeriodischerZeitplan"/>
+    <string id="opcode_Hostcontroller_PeriodischerZeitplanAktivieren" value="Aktivieren"/>
+    <string id="opcode_Hostcontroller_PeriodischerZeitplanDeaktivieren" value="Deaktivieren"/>
+    <string id="task_Gerät" value="Gerät"/>
+    <string id="opcode_GerätErstellen" value="Erstellen"/>
+    <string id="opcode_GerätInitialisieren" value="Initialisieren"/>
+    <string id="opcode_GerätEntfernen" value="Entfernen"/>
+    <string id="opcode_GerätInformationen" value="Informationen"/>
+    <string id="task_LeerlaufzustandfürGerät" value="LeerlaufzustandfürGerät"/>
+    <string id="opcode_LeerlaufzustandfürGerätFestlegen" value="Festlegen"/>
+    <string id="opcode_LeerlaufzustandfürGerätLöschen" value="Löschen"/>
+    <string id="task_Endpunkt" value="Endpunkt"/>
+    <string id="opcode_EndpunktInformationen" value="Informationen"/>
+    <string id="opcode_EndpunktÖffnen" value="Öffnen"/>
+    <string id="opcode_EndpunktSchließen" value="Schließen"/>
+    <string id="task_URB_FUNCTION_SELECT_CONFIGURATION" value="URB_FUNCTION_SELECT_CONFIGURATION"/>
+    <string id="opcode_URB_FUNCTION_SELECT_CONFIGURATIONVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_SELECT_INTERFACE" value="URB_FUNCTION_SELECT_INTERFACE"/>
+    <string id="opcode_URB_FUNCTION_SELECT_INTERFACEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_GET_CURRENT_FRAME_NUMBER" value="URB_FUNCTION_GET_CURRENT_FRAME_NUMBER"/>
+    <string id="opcode_URB_FUNCTION_GET_CURRENT_FRAME_NUMBERVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_CONTROL_TRANSFER" value="URB_FUNCTION_CONTROL_TRANSFER"/>
+    <string id="opcode_URB_FUNCTION_CONTROL_TRANSFERVerteilen" value="Verteilen"/>
+    <string id="opcode_URB_FUNCTION_CONTROL_TRANSFERAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_URB_FUNCTION_CONTROL_TRANSFERMitDatenabschließen" value="MitDatenabschließen"/>
+    <string id="opcode_URB_FUNCTION_CONTROL_TRANSFERInterneVerteilung" value="InterneVerteilung"/>
+    <string id="opcode_URB_FUNCTION_CONTROL_TRANSFERInternerAbschluss" value="InternerAbschluss"/>
+    <string id="opcode_URB_FUNCTION_CONTROL_TRANSFERInternerAbschlussmitDaten" value="InternerAbschlussmitDaten"/>
+    <string id="task_URB_FUNCTION_CONTROL_TRANSFER_EX" value="URB_FUNCTION_CONTROL_TRANSFER_EX"/>
+    <string id="opcode_URB_FUNCTION_CONTROL_TRANSFER_EXVerteilen" value="Verteilen"/>
+    <string id="opcode_URB_FUNCTION_CONTROL_TRANSFER_EXAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_URB_FUNCTION_CONTROL_TRANSFER_EXMitDatenabschließen" value="MitDatenabschließen"/>
+    <string id="task_URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER" value="URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFER"/>
+    <string id="opcode_URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERVerteilen" value="Verteilen"/>
+    <string id="opcode_URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_URB_FUNCTION_BULK_OR_INTERRUPT_TRANSFERMitDatenabschließen" value="MitDatenabschließen"/>
+    <string id="task_URB_FUNCTION_ISOCH_TRANSFER" value="URB_FUNCTION_ISOCH_TRANSFER"/>
+    <string id="opcode_URB_FUNCTION_ISOCH_TRANSFERVerteilen" value="Verteilen"/>
+    <string id="opcode_URB_FUNCTION_ISOCH_TRANSFERAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_URB_FUNCTION_ISOCH_TRANSFERMitDatenabschließen" value="MitDatenabschließen"/>
+    <string id="task_URB_FUNCTION_GET_DESCRIPTOR_FROM_DEVICE" value="URB_FUNCTION_GET_DESCRIPTOR_FROM_DEVICE"/>
+    <string id="opcode_URB_FUNCTION_GET_DESCRIPTOR_FROM_DEVICEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_SET_DESCRIPTOR_TO_DEVICE" value="URB_FUNCTION_SET_DESCRIPTOR_TO_DEVICE"/>
+    <string id="opcode_URB_FUNCTION_SET_DESCRIPTOR_TO_DEVICEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_GET_DESCRIPTOR_FROM_ENDPOINT" value="URB_FUNCTION_GET_DESCRIPTOR_FROM_ENDPOINT"/>
+    <string id="opcode_URB_FUNCTION_GET_DESCRIPTOR_FROM_ENDPOINTVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_SET_DESCRIPTOR_TO_ENDPOINT" value="URB_FUNCTION_SET_DESCRIPTOR_TO_ENDPOINT"/>
+    <string id="opcode_URB_FUNCTION_SET_DESCRIPTOR_TO_ENDPOINTVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_GET_DESCRIPTOR_FROM_INTERFACE" value="URB_FUNCTION_GET_DESCRIPTOR_FROM_INTERFACE"/>
+    <string id="opcode_URB_FUNCTION_GET_DESCRIPTOR_FROM_INTERFACEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_SET_DESCRIPTOR_TO_INTERFACE" value="URB_FUNCTION_SET_DESCRIPTOR_TO_INTERFACE"/>
+    <string id="opcode_URB_FUNCTION_SET_DESCRIPTOR_TO_INTERFACEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_SET_FEATURE_TO_DEVICE" value="URB_FUNCTION_SET_FEATURE_TO_DEVICE"/>
+    <string id="opcode_URB_FUNCTION_SET_FEATURE_TO_DEVICEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_SET_FEATURE_TO_INTERFACE" value="URB_FUNCTION_SET_FEATURE_TO_INTERFACE"/>
+    <string id="opcode_URB_FUNCTION_SET_FEATURE_TO_INTERFACEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_SET_FEATURE_TO_ENDPOINT" value="URB_FUNCTION_SET_FEATURE_TO_ENDPOINT"/>
+    <string id="opcode_URB_FUNCTION_SET_FEATURE_TO_ENDPOINTVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_CLEAR_FEATURE_TO_DEVICE" value="URB_FUNCTION_CLEAR_FEATURE_TO_DEVICE"/>
+    <string id="opcode_URB_FUNCTION_CLEAR_FEATURE_TO_DEVICEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_CLEAR_FEATURE_TO_INTERFACE" value="URB_FUNCTION_CLEAR_FEATURE_TO_INTERFACE"/>
+    <string id="opcode_URB_FUNCTION_CLEAR_FEATURE_TO_INTERFACEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_CLEAR_FEATURE_TO_ENDPOINT" value="URB_FUNCTION_CLEAR_FEATURE_TO_ENDPOINT"/>
+    <string id="opcode_URB_FUNCTION_CLEAR_FEATURE_TO_ENDPOINTVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_CLEAR_FEATURE_TO_OTHER" value="URB_FUNCTION_CLEAR_FEATURE_TO_OTHER"/>
+    <string id="opcode_URB_FUNCTION_CLEAR_FEATURE_TO_OTHERVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_SET_FEATURE_TO_OTHER" value="URB_FUNCTION_SET_FEATURE_TO_OTHER"/>
+    <string id="opcode_URB_FUNCTION_SET_FEATURE_TO_OTHERVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_GET_STATUS_FROM_DEVICE" value="URB_FUNCTION_GET_STATUS_FROM_DEVICE"/>
+    <string id="opcode_URB_FUNCTION_GET_STATUS_FROM_DEVICEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_GET_STATUS_FROM_INTERFACE" value="URB_FUNCTION_GET_STATUS_FROM_INTERFACE"/>
+    <string id="opcode_URB_FUNCTION_GET_STATUS_FROM_INTERFACEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_GET_STATUS_FROM_ENDPOINT" value="URB_FUNCTION_GET_STATUS_FROM_ENDPOINT"/>
+    <string id="opcode_URB_FUNCTION_GET_STATUS_FROM_ENDPOINTVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_GET_STATUS_FROM_OTHER" value="URB_FUNCTION_GET_STATUS_FROM_OTHER"/>
+    <string id="opcode_URB_FUNCTION_GET_STATUS_FROM_OTHERVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_VENDOR_DEVICE" value="URB_FUNCTION_VENDOR_DEVICE"/>
+    <string id="opcode_URB_FUNCTION_VENDOR_DEVICEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_VENDOR_INTERFACE" value="URB_FUNCTION_VENDOR_INTERFACE"/>
+    <string id="opcode_URB_FUNCTION_VENDOR_INTERFACEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_VENDOR_ENDPOINT" value="URB_FUNCTION_VENDOR_ENDPOINT"/>
+    <string id="opcode_URB_FUNCTION_VENDOR_ENDPOINTVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_CLASS_DEVICE" value="URB_FUNCTION_CLASS_DEVICE"/>
+    <string id="opcode_URB_FUNCTION_CLASS_DEVICEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_CLASS_INTERFACE" value="URB_FUNCTION_CLASS_INTERFACE"/>
+    <string id="opcode_URB_FUNCTION_CLASS_INTERFACEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_CLASS_ENDPOINT" value="URB_FUNCTION_CLASS_ENDPOINT"/>
+    <string id="opcode_URB_FUNCTION_CLASS_ENDPOINTVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_CLASS_OTHER" value="URB_FUNCTION_CLASS_OTHER"/>
+    <string id="opcode_URB_FUNCTION_CLASS_OTHERVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_VENDOR_OTHER" value="URB_FUNCTION_VENDOR_OTHER"/>
+    <string id="opcode_URB_FUNCTION_VENDOR_OTHERVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_ABORT_PIPE" value="URB_FUNCTION_ABORT_PIPE"/>
+    <string id="opcode_URB_FUNCTION_ABORT_PIPEVerteilen" value="Verteilen"/>
+    <string id="opcode_URB_FUNCTION_ABORT_PIPEAbgeschlossen" value="Abgeschlossen"/>
+    <string id="task_URB_FUNCTION_SYNC_RESET_PIPE_AND_CLEAR_STALL" value="URB_FUNCTION_SYNC_RESET_PIPE_AND_CLEAR_STALL"/>
+    <string id="opcode_URB_FUNCTION_SYNC_RESET_PIPE_AND_CLEAR_STALLVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_SYNC_RESET_PIPE" value="URB_FUNCTION_SYNC_RESET_PIPE"/>
+    <string id="opcode_URB_FUNCTION_SYNC_RESET_PIPEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_SYNC_CLEAR_STALL" value="URB_FUNCTION_SYNC_CLEAR_STALL"/>
+    <string id="opcode_URB_FUNCTION_SYNC_CLEAR_STALLVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_GET_CONFIGURATION" value="URB_FUNCTION_GET_CONFIGURATION"/>
+    <string id="opcode_URB_FUNCTION_GET_CONFIGURATIONVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_GET_INTERFACE" value="URB_FUNCTION_GET_INTERFACE"/>
+    <string id="opcode_URB_FUNCTION_GET_INTERFACEVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_GET_MS_FEATURE_DESCRIPTOR" value="URB_FUNCTION_GET_MS_FEATURE_DESCRIPTOR"/>
+    <string id="opcode_URB_FUNCTION_GET_MS_FEATURE_DESCRIPTORVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_TAKE_FRAME_LENGTH_CONTROL" value="URB_FUNCTION_TAKE_FRAME_LENGTH_CONTROL"/>
+    <string id="opcode_URB_FUNCTION_TAKE_FRAME_LENGTH_CONTROLVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_RELEASE_FRAME_LENGTH_CONTROL" value="URB_FUNCTION_RELEASE_FRAME_LENGTH_CONTROL"/>
+    <string id="opcode_URB_FUNCTION_RELEASE_FRAME_LENGTH_CONTROLVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_GET_FRAME_LENGTH" value="URB_FUNCTION_GET_FRAME_LENGTH"/>
+    <string id="opcode_URB_FUNCTION_GET_FRAME_LENGTHVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_SET_FRAME_LENGTH" value="URB_FUNCTION_SET_FRAME_LENGTH"/>
+    <string id="opcode_URB_FUNCTION_SET_FRAME_LENGTHVerteilen" value="Verteilen"/>
+    <string id="task_URB_FUNCTION_RESERVED" value="URB_FUNCTION_RESERVED"/>
+    <string id="opcode_URB_FUNCTION_RESERVEDVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_HEADER_LENGTH_WARNING" value="USBPORT_URB_INVALID_HEADER_LENGTH_WARNING"/>
+    <string id="opcode_USBPORT_URB_INVALID_HEADER_LENGTH_WARNINGVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_FUNCTION" value="USBPORT_URB_INVALID_FUNCTION"/>
+    <string id="opcode_USBPORT_URB_INVALID_FUNCTIONVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_HEADER_LENGTH" value="USBPORT_URB_INVALID_HEADER_LENGTH"/>
+    <string id="opcode_USBPORT_URB_INVALID_HEADER_LENGTHVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_DEVICE_HANDLE" value="USBPORT_URB_INVALID_DEVICE_HANDLE"/>
+    <string id="opcode_USBPORT_URB_INVALID_DEVICE_HANDLEVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_FUNCTION_NOT_SUPPORTED" value="USBPORT_URB_INVALID_FUNCTION_NOT_SUPPORTED"/>
+    <string id="opcode_USBPORT_URB_INVALID_FUNCTION_NOT_SUPPORTEDVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_FUNCTION_RESERVED" value="USBPORT_URB_INVALID_FUNCTION_RESERVED"/>
+    <string id="opcode_USBPORT_URB_INVALID_FUNCTION_RESERVEDVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_DUE_TO_HC_SUSPEND" value="USBPORT_URB_INVALID_DUE_TO_HC_SUSPEND"/>
+    <string id="opcode_USBPORT_URB_INVALID_DUE_TO_HC_SUSPENDVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_URB_LINK" value="USBPORT_URB_INVALID_URB_LINK"/>
+    <string id="opcode_USBPORT_URB_INVALID_URB_LINKVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_PIPE_HANDLE" value="USBPORT_URB_INVALID_PIPE_HANDLE"/>
+    <string id="opcode_USBPORT_URB_INVALID_PIPE_HANDLEVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_ZERO_BW_PIPE_HANDLE" value="USBPORT_URB_INVALID_ZERO_BW_PIPE_HANDLE"/>
+    <string id="opcode_USBPORT_URB_INVALID_ZERO_BW_PIPE_HANDLEVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_NOP_ZERO_BW_PIPE_HANDLE_REQUEST" value="USBPORT_URB_NOP_ZERO_BW_PIPE_HANDLE_REQUEST"/>
+    <string id="opcode_USBPORT_URB_NOP_ZERO_BW_PIPE_HANDLE_REQUESTVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_CONTROL_TRANSFER_ENDPOINT" value="USBPORT_URB_INVALID_CONTROL_TRANSFER_ENDPOINT"/>
+    <string id="opcode_USBPORT_URB_INVALID_CONTROL_TRANSFER_ENDPOINTVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_CONTROL_TRANSFER_BUFFER_LENGTH" value="USBPORT_URB_INVALID_CONTROL_TRANSFER_BUFFER_LENGTH"/>
+    <string id="opcode_USBPORT_URB_INVALID_CONTROL_TRANSFER_BUFFER_LENGTHVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_ENDPOINT" value="USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_ENDPOINT"/>
+    <string id="opcode_USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_ENDPOINTVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_BUFFER_LENGTH" value="USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_BUFFER_LENGTH"/>
+    <string id="opcode_USBPORT_URB_INVALID_BULK_OR_INTERRUPT_TRANSFER_BUFFER_LENGTHVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_ISOCHRONOUS_TRANSFER_ENDPOINT" value="USBPORT_URB_INVALID_ISOCHRONOUS_TRANSFER_ENDPOINT"/>
+    <string id="opcode_USBPORT_URB_INVALID_ISOCHRONOUS_TRANSFER_ENDPOINTVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_NULL_TRANSFER_BUFFER_AND_MDL" value="USBPORT_URB_INVALID_NULL_TRANSFER_BUFFER_AND_MDL"/>
+    <string id="opcode_USBPORT_URB_INVALID_NULL_TRANSFER_BUFFER_AND_MDLVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_NON_NULL_TRANSFER_BUFFER_MDL" value="USBPORT_URB_INVALID_NON_NULL_TRANSFER_BUFFER_MDL"/>
+    <string id="opcode_USBPORT_URB_INVALID_NON_NULL_TRANSFER_BUFFER_MDLVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_ALLOCATE_MDL_FAILURE" value="USBPORT_URB_ALLOCATE_MDL_FAILURE"/>
+    <string id="opcode_USBPORT_URB_ALLOCATE_MDL_FAILUREVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_ALLOCATE_TRANSFER_CONTEXT_FAILURE" value="USBPORT_URB_ALLOCATE_TRANSFER_CONTEXT_FAILURE"/>
+    <string id="opcode_USBPORT_URB_ALLOCATE_TRANSFER_CONTEXT_FAILUREVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_NOP_ROOTHUB_PIPE_HANDLE_REQUEST" value="USBPORT_URB_NOP_ROOTHUB_PIPE_HANDLE_REQUEST"/>
+    <string id="opcode_USBPORT_URB_NOP_ROOTHUB_PIPE_HANDLE_REQUESTVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_ISOCHRONOUS_ZERO_LENGTH" value="USBPORT_URB_INVALID_ISOCHRONOUS_ZERO_LENGTH"/>
+    <string id="opcode_USBPORT_URB_INVALID_ISOCHRONOUS_ZERO_LENGTHVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_ISOCHRONOUS_NUM_PACKETS" value="USBPORT_URB_INVALID_ISOCHRONOUS_NUM_PACKETS"/>
+    <string id="opcode_USBPORT_URB_INVALID_ISOCHRONOUS_NUM_PACKETSVerteilen" value="Verteilen"/>
+    <string id="task_USBPORT_URB_INVALID_ISOCHRONOUS_START_FRAME" value="USBPORT_URB_INVALID_ISOCHRONOUS_START_FRAME"/>
+    <string id="opcode_USBPORT_URB_INVALID_ISOCHRONOUS_START_FRAMEVerteilen" value="Verteilen"/>
+    <string id="task_Irp" value="Irp"/>
+    <string id="opcode_IrpAbbrechen" value="Abbrechen"/>
+    <string id="task_USBUSER_OP_RAW_RESET_PORT" value="USBUSER_OP_RAW_RESET_PORT"/>
+    <string id="opcode_USBUSER_OP_RAW_RESET_PORTVerteilen" value="Verteilen"/>
+    <string id="opcode_USBUSER_OP_RAW_RESET_PORTAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_USBUSER_OP_RAW_RESET_PORTStatus" value="Status"/>
+    <string id="task_USBUSER_OP_SEND_ONE_PACKET" value="USBUSER_OP_SEND_ONE_PACKET"/>
+    <string id="opcode_USBUSER_OP_SEND_ONE_PACKETVerteilen" value="Verteilen"/>
+    <string id="opcode_USBUSER_OP_SEND_ONE_PACKETAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_USBUSER_OP_SEND_ONE_PACKETMitDatenabschließen" value="MitDatenabschließen"/>
+    <string id="opcode_USBUSER_OP_SEND_ONE_PACKETVerteilungmitDaten" value="VerteilungmitDaten"/>
+    <string id="opcode_USBUSER_OP_SEND_ONE_PACKETStatus" value="Status"/>
+    <string id="task_Miniport_Starten" value="Miniport_Starten"/>
+    <string id="opcode_Miniport_StartenVerteilen" value="Verteilen"/>
+    <string id="opcode_Miniport_StartenAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_Miniport_StartenMitFehlernabgeschlossen" value="MitFehlernabgeschlossen"/>
+    <string id="task_Miniport_Beenden" value="Miniport_Beenden"/>
+    <string id="opcode_Miniport_BeendenVerteilen" value="Verteilen"/>
+    <string id="opcode_Miniport_BeendenAbgeschlossen" value="Abgeschlossen"/>
+    <string id="task_Miniport_Anhalten" value="Miniport_Anhalten"/>
+    <string id="opcode_Miniport_AnhaltenVerteilen" value="Verteilen"/>
+    <string id="opcode_Miniport_AnhaltenAbgeschlossen" value="Abgeschlossen"/>
+    <string id="task_Miniport_Fortsetzen" value="Miniport_Fortsetzen"/>
+    <string id="opcode_Miniport_FortsetzenVerteilen" value="Verteilen"/>
+    <string id="opcode_Miniport_FortsetzenAbgeschlossen" value="Abgeschlossen"/>
+    <string id="opcode_Miniport_FortsetzenMitFehlernabgeschlossen" value="MitFehlernabgeschlossen"/>
+    <string id="task_Codeleistung" value="Codeleistung"/>
+    <string id="opcode_CodeleistungInformationen" value="Informationen"/>
+    <string id="task_Codeleistungmit"PutScatterGatherList"" value="Codeleistungmit"PutScatterGatherList""/>
+    <string id="opcode_Codeleistungmit"PutScatterGatherList"Informationen" value="Informationen"/>
+    <string id="task_Codeleistungmit"BuildScatterGatherList"" value="Codeleistungmit"BuildScatterGatherList""/>
+    <string id="opcode_Codeleistungmit"BuildScatterGatherList"Informationen" value="Informationen"/>
+    <string id="task_Laufzeitenergieverwaltung" value="Laufzeitenergieverwaltung"/>
+    <string id="opcode_LaufzeitenergieverwaltungLaufzeit_Energieverwaltungsübergang" value="Laufzeit_Energieverwaltungsübergang"/>
+    <string id="task_ControllerfürAktivierungeinrichten" value="ControllerfürAktivierungeinrichten"/>
+    <string id="opcode_ControllerfürAktivierungeinrichtenVerteilen" value="Verteilen"/>
+    <string id="opcode_ControllerfürAktivierungeinrichtenAbgeschlossen" value="Abgeschlossen"/>
+    <string id="task_GerätedatendesHostcontrollers" value="GerätedatendesHostcontrollers"/>
+    <string id="opcode_GerätedatendesHostcontrollersInformationen" value="Informationen"/>
+    <string id="map_RunTimePmSetupStatusErfolgreich" value="Erfolgreich"/>
+    <string id="map_RunTimePmSetupStatusFailedDueToCompanionController" value="FailedDueToCompanionController"/>
+    <string id="map_RunTimePmSetupStatusFailedDueToNoS0WakeSupport" value="FailedDueToNoS0WakeSupport"/>
+    <string id="map_RunTimePmSetupStatusFailedDueToFailedPoRegistration" value="FailedDueToFailedPoRegistration"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

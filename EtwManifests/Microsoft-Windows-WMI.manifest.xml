@@ -1,0 +1,172 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-WMI" guid="{1edeee53-0afe-4609-b846-d8c0b2075b1f}" resourceFileName="Microsoft-Windows-WMI" messageFileName="Microsoft-Windows-WMI" symbol="MicrosoftWindowsWMI" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0">
+
+      <opcodes>
+       <opcode name="opcode_64" message="$(string.opcode_task_0opcode_64)" value="64"/>
+       <opcode name="opcode_128" message="$(string.opcode_task_0opcode_128)" value="128"/>
+       <opcode name="opcode_192" message="$(string.opcode_task_0opcode_192)" value="192"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="4" symbol="task_0PCODE_192pcode_192" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="4" symbol="task_04_V2" version="2" task="task_0" level="win:Error" template="task_04Args_V2"/>
+     <event value="10" symbol="task_0PCODE_192pcode_19210" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="10" symbol="task_010_V2" version="2" task="task_0" level="win:Error" template="task_010Args_V2"/>
+     <event value="21" symbol="task_0PCODE_192pcode_19221" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="21" symbol="task_021_V2" version="2" task="task_0" level="win:Error" template="task_021Args_V2"/>
+     <event value="22" symbol="task_0PCODE_192pcode_19222" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="22" symbol="task_022_V2" version="2" task="task_0" level="win:Error" template="task_022Args_V2"/>
+     <event value="23" symbol="task_0PCODE_192pcode_19223" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="23" symbol="task_023_V2" version="2" task="task_0" level="win:Error" template="task_022Args_V2"/>
+     <event value="24" symbol="task_0PCODE_192pcode_19224" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="24" symbol="task_024_V2" version="2" task="task_0" level="win:Error" template="task_024Args_V2"/>
+     <event value="25" symbol="task_0PCODE_192pcode_19225" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="25" symbol="task_025_V2" version="2" task="task_0" level="win:Error" template="task_025Args_V2"/>
+     <event value="28" symbol="task_0PCODE_192pcode_19228" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="28" symbol="task_028_V2" version="2" task="task_0" level="win:Error" template="task_028Args_V2"/>
+     <event value="29" symbol="task_0PCODE_192pcode_19229" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="29" symbol="task_029_V2" version="2" task="task_0" level="win:Error" template="task_028Args_V2"/>
+     <event value="43" symbol="task_0PCODE_192pcode_19243" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="43" symbol="task_043_V2" version="2" task="task_0" level="win:Warning" template="task_043Args_V2"/>
+     <event value="48" symbol="task_0PCODE_192pcode_19248" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="48" symbol="task_048_V2" version="2" task="task_0" level="win:Warning" template="task_048Args_V2"/>
+     <event value="58" symbol="task_0PCODE_192pcode_19258" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="58" symbol="task_058_V2" version="2" task="task_0" level="win:Warning" template="task_058Args_V2"/>
+     <event value="59" symbol="task_0PCODE_192pcode_19259" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="59" symbol="task_059_V2" version="2" task="task_0" level="win:Warning" template="task_059Args_V2"/>
+     <event value="63" symbol="task_0PCODE_128pcode_128" version="0" task="task_0" opcode="opcode_128" level="win:Always"/>
+     <event value="63" symbol="task_063_V2" version="2" task="task_0" level="win:Warning" template="task_063Args_V2"/>
+     <event value="65" symbol="task_0PCODE_192pcode_19265" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="65" symbol="task_065_V2" version="2" task="task_0" level="win:Warning"/>
+     <event value="66" symbol="task_0PCODE_192pcode_19266" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="66" symbol="task_066_V2" version="2" task="task_0" level="win:Warning" template="task_066Args_V2"/>
+     <event value="67" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="67" symbol="task_0PCODE_192pcode_19267" version="0" task="task_0" opcode="opcode_192" level="win:Always" template="task_0Args"/>
+     <event value="68" symbol="task_068" version="0" task="task_0" level="win:Informational" template="task_068Args"/>
+     <event value="68" symbol="task_0PCODE_192pcode_19268" version="0" task="task_0" opcode="opcode_192" level="win:Always" template="task_068Args"/>
+     <event value="5600" symbol="task_0PCODE_64pcode_64" version="0" task="task_0" opcode="opcode_64" level="win:Always"/>
+     <event value="5600" symbol="task_05600_V2" version="2" task="task_0" level="win:Informational"/>
+     <event value="5601" symbol="task_0PCODE_192pcode_1925601" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="5601" symbol="task_05601_V2" version="2" task="task_0" level="win:Error"/>
+     <event value="5602" symbol="task_0PCODE_192pcode_1925602" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="5602" symbol="task_05602_V2" version="2" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="5604" symbol="task_0PCODE_192pcode_1925604" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="5604" symbol="task_05604_V2" version="2" task="task_0" level="win:Error" template="task_05604Args_V2"/>
+     <event value="5605" symbol="task_0PCODE_192pcode_1925605" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="5605" symbol="task_05605_V2" version="2" task="task_0" level="win:Informational" template="task_05605Args_V2"/>
+     <event value="5606" symbol="task_0PCODE_192pcode_1925606" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="5606" symbol="task_05606_V2" version="2" task="task_0" level="win:Error" template="task_05605Args_V2"/>
+     <event value="5611" symbol="task_0PCODE_192pcode_1925611" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="5611" symbol="task_05611_V2" version="2" task="task_0" level="win:Informational"/>
+     <event value="5612" symbol="task_0PCODE_192pcode_1925612" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="5612" symbol="task_05612_V2" version="2" task="task_0" level="win:Warning" template="task_05612Args_V2"/>
+     <event value="5614" symbol="task_0PCODE_192pcode_1925614" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="5614" symbol="task_05614_V2" version="2" task="task_0" level="win:Informational"/>
+     <event value="5615" symbol="task_0PCODE_192pcode_1925615" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="5615" symbol="task_05615_V2" version="2" task="task_0" level="win:Informational"/>
+     <event value="5616" symbol="task_0PCODE_192pcode_1925616" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="5616" symbol="task_05616_V2" version="2" task="task_0" level="win:Informational"/>
+     <event value="5617" symbol="task_0PCODE_192pcode_1925617" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="5617" symbol="task_05617_V2" version="2" task="task_0" level="win:Informational"/>
+     <event value="5631" symbol="task_0PCODE_192pcode_1925631" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="5631" symbol="task_05631_V2" version="2" task="task_0" level="win:Informational" template="task_059Args_V2"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="BackupFile" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_068Args">
+      <data name="BackupFile" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04Args_V2">
+      <data name="Error" inType="win:UnicodeString"/>
+      <data name="MOF" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_010Args_V2">
+      <data name="Query" inType="win:UnicodeString"/>
+      <data name="Namespace" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_021Args_V2">
+      <data name="EventProvider" inType="win:UnicodeString"/>
+      <data name="Query" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_022Args_V2">
+      <data name="EventProvider" inType="win:UnicodeString"/>
+      <data name="Query" inType="win:UnicodeString"/>
+      <data name="Namespace" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_024Args_V2">
+      <data name="EventProvider" inType="win:UnicodeString"/>
+      <data name="Query" inType="win:UnicodeString"/>
+      <data name="Class" inType="win:UnicodeString"/>
+      <data name="Namespace" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_025Args_V2">
+      <data name="EventProvider" inType="win:UnicodeString"/>
+      <data name="Query" inType="win:UnicodeString"/>
+      <data name="Class" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_028Args_V2">
+      <data name="ErrorNumber" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_043Args_V2">
+      <data name="Namespace" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_048Args_V2">
+      <data name="Object" inType="win:UnicodeString"/>
+      <data name="Namespace" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_058Args_V2">
+      <data name="Class" inType="win:UnicodeString"/>
+      <data name="Result" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_059Args_V2">
+      <data name="Class" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_063Args_V2">
+      <data name="Provider" inType="win:UnicodeString"/>
+      <data name="Namespace" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_066Args_V2">
+      <data name="BackupRepository" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_05604Args_V2">
+      <data name="Error" inType="win:UnicodeString"/>
+      <data name="BackupRepository" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_05605Args_V2">
+      <data name="Namespace" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_05612Args_V2">
+      <data name="QuotaName" inType="win:UnicodeString"/>
+      <data name="QuotaValue" inType="win:UnicodeString"/>
+      <data name="QuotaThreshold" inType="win:UnicodeString"/>
+      <data name="HostProcessID" inType="win:UnicodeString"/>
+      <data name="ProvidersInHost" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="opcode_task_0opcode_64" value="opcode_64"/>
+    <string id="opcode_task_0opcode_128" value="opcode_128"/>
+    <string id="opcode_task_0opcode_192" value="opcode_192"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

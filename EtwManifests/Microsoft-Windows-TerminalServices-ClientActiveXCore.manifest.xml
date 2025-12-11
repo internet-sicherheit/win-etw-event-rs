@@ -1,0 +1,361 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-TerminalServices-ClientActiveXCore" guid="{28aa95bb-d444-4719-a36f-40462168127e}" resourceFileName="Microsoft-Windows-TerminalServices-ClientActiveXCore" messageFileName="Microsoft-Windows-TerminalServices-ClientActiveXCore" symbol="MicrosoftWindowsTerminalServicesClientActiveXCore" source="Xml" >
+    <keywords>
+     <keyword name="AccessDenied" message="$(string.keyword_AccessDenied)" mask="0x100"/>
+     <keyword name="Disconnected" message="$(string.keyword_Disconnected)" mask="0x200"/>
+     <keyword name="AuthFailed" message="$(string.keyword_AuthFailed)" mask="0x400"/>
+     <keyword name="LicenseError" message="$(string.keyword_LicenseError)" mask="0x800"/>
+     <keyword name="TimedOut" message="$(string.keyword_TimedOut)" mask="0x1000"/>
+     <keyword name="InvalidState" message="$(string.keyword_InvalidState)" mask="0x2000"/>
+     <keyword name="GatewayConnectFailed" message="$(string.keyword_GatewayConnectFailed)" mask="0x4000"/>
+     <keyword name="NetworkUnAvailable" message="$(string.keyword_NetworkUnAvailable)" mask="0x8000"/>
+     <keyword name="DnsResolutionFailure" message="$(string.keyword_DnsResolutionFailure)" mask="0x10000"/>
+     <keyword name="SignVerifFailed" message="$(string.keyword_SignVerifFailed)" mask="0x20000"/>
+     <keyword name="ResourceFailure" message="$(string.keyword_ResourceFailure)" mask="0x40000"/>
+     <keyword name="LogonFailed" message="$(string.keyword_LogonFailed)" mask="0x80000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="Allgemein" message="$(string.task_Allgemein)" value="100">
+      <opcodes>
+       <opcode name="DiesesEreigniswirdbeimTrennungsprozessaufgerufen." message="$(string.opcode_AllgemeinDiesesEreigniswirdbeimTrennungsprozessaufgerufen.)" value="11"/>
+       <opcode name="DiesisteinallgemeinesEreignis,dasvomClientausgelöstwerdenkann." message="$(string.opcode_AllgemeinDiesisteinallgemeinesEreignis,dasvomClientausgelöstwerdenkann.)" value="47"/>
+       <opcode name="DiesisteinallgemeinerFehler,dervomClientsignalisiertwerdenkann." message="$(string.opcode_AllgemeinDiesisteinallgemeinerFehler,dervomClientsignalisiertwerdenkann.)" value="48"/>
+      </opcodes>
+     </task>
+     <task name="Verbindungssequenz" message="$(string.task_Verbindungssequenz)" value="101">
+      <opcodes>
+       <opcode name="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." message="$(string.opcode_VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.)" value="10"/>
+       <opcode name="DiesesEreigniswirdbeimTrennungsprozessaufgerufen." message="$(string.opcode_VerbindungssequenzDiesesEreigniswirdbeimTrennungsprozessaufgerufen.)" value="11"/>
+       <opcode name="DiesesEreigniswirdbeimAuthentifizierungsprozessaufgerufen." message="$(string.opcode_VerbindungssequenzDiesesEreigniswirdbeimAuthentifizierungsprozessaufgerufen.)" value="12"/>
+       <opcode name="DiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen." message="$(string.opcode_VerbindungssequenzDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.)" value="13"/>
+       <opcode name="DiesesEreigniswirdbeimAuflösendesServernamensaufgerufen." message="$(string.opcode_VerbindungssequenzDiesesEreigniswirdbeimAuflösendesServernamensaufgerufen.)" value="14"/>
+       <opcode name="DiesesEreigniswirdbeidemVersuchaufgerufen,einegültigeLizenzzuerhalten." message="$(string.opcode_VerbindungssequenzDiesesEreigniswirdbeidemVersuchaufgerufen,einegültigeLizenzzuerhalten.)" value="15"/>
+       <opcode name="DiesesEreigniswirdbeieinemSchließvorgangausgelöst,durchdendieVerbindunggeschlossenwird." message="$(string.opcode_VerbindungssequenzDiesesEreigniswirdbeieinemSchließvorgangausgelöst,durchdendieVerbindunggeschlossenwird.)" value="35"/>
+      </opcodes>
+     </task>
+     <task name="AutomatischeSequenzdererneutenVerbindung" message="$(string.task_AutomatischeSequenzdererneutenVerbindung)" value="102">
+      <opcodes>
+       <opcode name="DiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen." message="$(string.opcode_AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="Gatewayverbindungssequenz" message="$(string.task_Gatewayverbindungssequenz)" value="103">
+      <opcodes>
+       <opcode name="DiesesEreigniswirdinderGatewaytransportschichtaufgerufen." message="$(string.opcode_GatewayverbindungssequenzDiesesEreigniswirdinderGatewaytransportschichtaufgerufen.)" value="16"/>
+      </opcodes>
+     </task>
+     <task name="RDP_Statusübergang" message="$(string.task_RDP_Statusübergang)" value="104">
+      <opcodes>
+       <opcode name="DiesesEreigniswirdbeieinemStatusübergangaufgerufen." message="$(string.opcode_RDP_StatusübergangDiesesEreigniswirdbeieinemStatusübergangaufgerufen.)" value="19"/>
+      </opcodes>
+     </task>
+     <task name="RADC_Arbeitsbereichvon"RdClient"" message="$(string.task_RADC_Arbeitsbereichvon"RdClient")" value="105">
+      <opcodes>
+       <opcode name="DiesesEreigniswirdbeieinemStatusübergangaufgerufen." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinemStatusübergangaufgerufen.)" value="19"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wennderClientnichtsauberheruntergefahrenwurde." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderClientnichtsauberheruntergefahrenwurde.)" value="20"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wennderBenutzerversucht,sichvomOOB_Clientabzumelden." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerversucht,sichvomOOB_Clientabzumelden.)" value="21"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wennderBenutzerversucht,einemanuelleFeedaktualisierungdurchzuführen." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerversucht,einemanuelleFeedaktualisierungdurchzuführen.)" value="22"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wennderBenutzerversucht,sichmiteinemanderenBenutzernamenbeiderADAL_Seiteanzumelden." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerversucht,sichmiteinemanderenBenutzernamenbeiderADAL_Seiteanzumelden.)" value="23"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/Aktualisierenerfolgreichausgeführtwird." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/Aktualisierenerfolgreichausgeführtwird.)" value="24"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/AktualisiereneinenFehlerverursacht." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/AktualisiereneinenFehlerverursacht.)" value="25"/>
+       <opcode name="DiesesEreigniswirdbeieinererfolgreichenFeedsucheausgelöst." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinererfolgreichenFeedsucheausgelöst.)" value="26"/>
+       <opcode name="DiesesEreigniswirdbeieinerfehlerhaftenFeedsucheausgelöst." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinerfehlerhaftenFeedsucheausgelöst.)" value="27"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wennimFeedcacheaufdemlokalenClientcomputerSymboleoderRDP_DateienaufgrundeinerBeschädigungdesCachesfehlen." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennimFeedcacheaufdemlokalenClientcomputerSymboleoderRDP_DateienaufgrundeinerBeschädigungdesCachesfehlen.)" value="28"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wennderBenutzerdenZustimmungsstatusserverseitigerfolgreichaktualisierthat." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerdenZustimmungsstatusserverseitigerfolgreichaktualisierthat.)" value="29"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wennderBenutzerdenZustimmungsstatusaufdemServernichtaktualisierenkann." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerdenZustimmungsstatusaufdemServernichtaktualisierenkann.)" value="30"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wennderBenutzermanuellaufdieSchaltfläche"Einladungenanzeigen"klickt." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzermanuellaufdieSchaltfläche"Einladungenanzeigen"klickt.)" value="32"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wennderBenutzereinenneuenZyklusderFeedsuchestartet.DerUPNmitHashunddieZeitzoneninformationenwerdenhierprotokolliert." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzereinenneuenZyklusderFeedsuchestartet.DerUPNmitHashunddieZeitzoneninformationenwerdenhierprotokolliert.)" value="33"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wennalleFeedsdesBenutzersvollständigabonniertoderaktualisiertwurden.WirprotokollierendieGesamtzeit,diefürdasparalleleHerunterladenallerFeedsbenötigtwurde." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennalleFeedsdesBenutzersvollständigabonniertoderaktualisiertwurden.WirprotokollierendieGesamtzeit,diefürdasparalleleHerunterladenallerFeedsbenötigtwurde.)" value="34"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wennbeimAbrufdesADAL_TokenseinFehlerauftritt." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennbeimAbrufdesADAL_TokenseinFehlerauftritt.)" value="39"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wenndasADAL_Authentifizierungstokenerfolgreicherstelltwird." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenndasADAL_Authentifizierungstokenerfolgreicherstelltwird.)" value="40"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wenndieADAL_Authentifizierungabgebrochenwird." message="$(string.opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenndieADAL_Authentifizierungabgebrochenwird.)" value="41"/>
+      </opcodes>
+     </task>
+     <task name="RdClient_Pipeline_Arbeitsbereich" message="$(string.task_RdClient_Pipeline_Arbeitsbereich)" value="106">
+      <opcodes>
+       <opcode name="DiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.WirprotokollierendieausgewählteVersionsowiedenClientmodusunddieAVC_Funktion." message="$(string.opcode_RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.WirprotokollierendieausgewählteVersionsowiedenClientmodusunddieAVC_Funktion.)" value="36"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.Wirprotokollieren,dassHardwareressourcenverwendetwerden." message="$(string.opcode_RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.Wirprotokollieren,dassHardwareressourcenverwendetwerden.)" value="37"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.Wirprotokollieren,dasskeineHardwareressourcenverwendetwerden." message="$(string.opcode_RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.Wirprotokollieren,dasskeineHardwareressourcenverwendetwerden.)" value="38"/>
+       <opcode name="DiesesEreigniswirdausgelöst,wennwährendderAusführungeinPipelinefehlerauftritt.FehlerhafteKomponente,FunktionundFehlercodewerdenprotokolliert." message="$(string.opcode_RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennwährendderAusführungeinPipelinefehlerauftritt.FehlerhafteKomponente,FunktionundFehlercodewerdenprotokolliert.)" value="44"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="225" symbol="RDP_StatusübergangDiesesEreigniswirdbeieinemStatusübergangaufgerufen." version="0" task="RDP_Statusübergang" opcode="DiesesEreigniswirdbeieinemStatusübergangaufgerufen." level="win:Informational" template="RDP_StatusübergangDiesesEreigniswirdbeieinemStatusübergangaufgerufen.Args"/>
+     <event value="226" symbol="RDP_StatusübergangDiesesEreigniswirdbeieinemStatusübergangaufgerufen.226" version="0" task="RDP_Statusübergang" opcode="DiesesEreigniswirdbeieinemStatusübergangaufgerufen." level="win:Warning" template="RDP_StatusübergangDiesesEreigniswirdbeieinemStatusübergangaufgerufen.226Args"/>
+     <event value="227" symbol="RDP_StatusübergangDiesesEreigniswirdbeieinemStatusübergangaufgerufen.227" version="0" task="RDP_Statusübergang" opcode="DiesesEreigniswirdbeieinemStatusübergangaufgerufen." level="win:Informational" template="RDP_StatusübergangDiesesEreigniswirdbeieinemStatusübergangaufgerufen.227Args"/>
+     <event value="1000" symbol="task_0" version="0" task="task_0" level="win:Verbose" template="task_0Args"/>
+     <event value="1001" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen." version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Verbose" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.Args"/>
+     <event value="1002" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1002" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Informational"/>
+     <event value="1003" symbol="VerbindungssequenzDiesesEreigniswirdbeimTrennungsprozessaufgerufen." version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimTrennungsprozessaufgerufen." level="win:Informational" template="VerbindungssequenzDiesesEreigniswirdbeimTrennungsprozessaufgerufen.Args"/>
+     <event value="1004" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1004" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Informational" template="VerbindungssequenzDiesesEreigniswirdbeimTrennungsprozessaufgerufen.Args"/>
+     <event value="1005" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1005" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Error" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1005Args"/>
+     <event value="1006" symbol="VerbindungssequenzDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen." version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen." level="win:Warning" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1005Args"/>
+     <event value="1007" symbol="VerbindungssequenzDiesesEreigniswirdbeimAuflösendesServernamensaufgerufen." version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimAuflösendesServernamensaufgerufen." level="win:Error" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1005Args"/>
+     <event value="1008" symbol="VerbindungssequenzDiesesEreigniswirdbeimAuthentifizierungsprozessaufgerufen." version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimAuthentifizierungsprozessaufgerufen." level="win:Verbose" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1005Args"/>
+     <event value="1009" symbol="VerbindungssequenzDiesesEreigniswirdbeimAuthentifizierungsprozessaufgerufen.1009" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimAuthentifizierungsprozessaufgerufen." level="win:Warning" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1005Args"/>
+     <event value="1010" symbol="GatewayverbindungssequenzDiesesEreigniswirdinderGatewaytransportschichtaufgerufen." version="0" task="Gatewayverbindungssequenz" opcode="DiesesEreigniswirdinderGatewaytransportschichtaufgerufen." level="win:Informational" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.Args"/>
+     <event value="1011" symbol="GatewayverbindungssequenzDiesesEreigniswirdinderGatewaytransportschichtaufgerufen.1011" version="0" task="Gatewayverbindungssequenz" opcode="DiesesEreigniswirdinderGatewaytransportschichtaufgerufen." level="win:Informational"/>
+     <event value="1012" symbol="GatewayverbindungssequenzDiesesEreigniswirdinderGatewaytransportschichtaufgerufen.1012" version="0" task="Gatewayverbindungssequenz" opcode="DiesesEreigniswirdinderGatewaytransportschichtaufgerufen." level="win:Error" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1005Args"/>
+     <event value="1013" symbol="AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen." version="0" task="AutomatischeSequenzdererneutenVerbindung" opcode="DiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen." level="win:Informational" template="VerbindungssequenzDiesesEreigniswirdbeimTrennungsprozessaufgerufen.Args"/>
+     <event value="1014" symbol="AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.1014" version="0" task="AutomatischeSequenzdererneutenVerbindung" opcode="DiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen." level="win:Informational" template="AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.1014Args"/>
+     <event value="1015" symbol="AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.1015" version="0" task="AutomatischeSequenzdererneutenVerbindung" opcode="DiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen." level="win:Error" template="AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.1014Args"/>
+     <event value="1016" symbol="VerbindungssequenzDiesesEreigniswirdbeidemVersuchaufgerufen,einegültigeLizenzzuerhalten." version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeidemVersuchaufgerufen,einegültigeLizenzzuerhalten." level="win:Verbose" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.Args"/>
+     <event value="1017" symbol="VerbindungssequenzDiesesEreigniswirdbeidemVersuchaufgerufen,einegültigeLizenzzuerhalten.1017" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeidemVersuchaufgerufen,einegültigeLizenzzuerhalten." level="win:Warning" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1005Args"/>
+     <event value="1018" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1018" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Error" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1005Args"/>
+     <event value="1019" symbol="Allgemein" version="0" task="Allgemein" level="win:Informational" template="AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.1014Args"/>
+     <event value="1020" symbol="Allgemein1020" version="0" task="Allgemein" level="win:Error" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1005Args"/>
+     <event value="1021" symbol="GatewayverbindungssequenzDiesesEreigniswirdinderGatewaytransportschichtaufgerufen.1021" version="0" task="Gatewayverbindungssequenz" opcode="DiesesEreigniswirdinderGatewaytransportschichtaufgerufen." level="win:Warning" template="VerbindungssequenzDiesesEreigniswirdbeimTrennungsprozessaufgerufen.Args"/>
+     <event value="1022" symbol="GatewayverbindungssequenzDiesesEreigniswirdinderGatewaytransportschichtaufgerufen.1022" version="0" task="Gatewayverbindungssequenz" opcode="DiesesEreigniswirdinderGatewaytransportschichtaufgerufen." level="win:Informational" template="AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.1014Args"/>
+     <event value="1023" symbol="Verbindungssequenz" version="0" task="Verbindungssequenz" level="win:Informational" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.Args"/>
+     <event value="1024" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1024" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Informational" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.Args"/>
+     <event value="1025" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1025" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Informational"/>
+     <event value="1026" symbol="VerbindungssequenzDiesesEreigniswirdbeimTrennungsprozessaufgerufen.1026" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimTrennungsprozessaufgerufen." level="win:Informational" template="VerbindungssequenzDiesesEreigniswirdbeimTrennungsprozessaufgerufen.Args"/>
+     <event value="1027" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1027" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Informational" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1027Args"/>
+     <event value="1028" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1028" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Informational" template="AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.1014Args"/>
+     <event value="1029" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1029" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Informational" template="AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.1014Args"/>
+     <event value="1030" symbol="Verbindungssequenz1030" version="0" task="Verbindungssequenz" level="win:Informational" template="Verbindungssequenz1030Args"/>
+     <event value="1031" symbol="VerbindungssequenzDiesesEreigniswirdbeimTrennungsprozessaufgerufen.1031" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimTrennungsprozessaufgerufen." level="win:Error" template="AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.1014Args"/>
+     <event value="1032" symbol="AllgemeinDiesisteinallgemeinesEreignis,dasvomClientausgelöstwerdenkann." version="0" task="Allgemein" opcode="DiesisteinallgemeinesEreignis,dasvomClientausgelöstwerdenkann." level="win:Informational" template="AllgemeinDiesisteinallgemeinesEreignis,dasvomClientausgelöstwerdenkann.Args"/>
+     <event value="1033" symbol="AllgemeinDiesisteinallgemeinerFehler,dervomClientsignalisiertwerdenkann." version="0" task="Allgemein" opcode="DiesisteinallgemeinerFehler,dervomClientsignalisiertwerdenkann." level="win:Error" template="AllgemeinDiesisteinallgemeinerFehler,dervomClientsignalisiertwerdenkann.Args"/>
+     <event value="1034" symbol="AllgemeinDiesisteinallgemeinesEreignis,dasvomClientausgelöstwerdenkann.1034" version="0" task="Allgemein" opcode="DiesisteinallgemeinesEreignis,dasvomClientausgelöstwerdenkann." level="win:Informational" template="AllgemeinDiesisteinallgemeinesEreignis,dasvomClientausgelöstwerdenkann.Args"/>
+     <event value="1100" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1100" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Informational" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.Args"/>
+     <event value="1101" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1101" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Informational" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.Args"/>
+     <event value="1102" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1102" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Informational" template="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.Args"/>
+     <event value="1103" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1103" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Informational"/>
+     <event value="1104" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1104" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Informational" template="VerbindungssequenzDiesesEreigniswirdbeimTrennungsprozessaufgerufen.Args"/>
+     <event value="1105" symbol="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1105" version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen." level="win:Informational"/>
+     <event value="1106" symbol="VerbindungssequenzDiesesEreigniswirdbeieinemSchließvorgangausgelöst,durchdendieVerbindunggeschlossenwird." version="0" task="Verbindungssequenz" opcode="DiesesEreigniswirdbeieinemSchließvorgangausgelöst,durchdendieVerbindunggeschlossenwird." level="win:Informational" template="VerbindungssequenzDiesesEreigniswirdbeieinemSchließvorgangausgelöst,durchdendieVerbindunggeschlossenwird.Args"/>
+     <event value="1107" symbol="AllgemeinDiesesEreigniswirdbeimTrennungsprozessaufgerufen." version="0" task="Allgemein" opcode="DiesesEreigniswirdbeimTrennungsprozessaufgerufen." level="win:Informational" template="AllgemeinDiesesEreigniswirdbeimTrennungsprozessaufgerufen.Args"/>
+     <event value="1201" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderClientnichtsauberheruntergefahrenwurde." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wennderClientnichtsauberheruntergefahrenwurde." level="win:Informational"/>
+     <event value="1202" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerversucht,sichvomOOB_Clientabzumelden." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wennderBenutzerversucht,sichvomOOB_Clientabzumelden." level="win:Informational"/>
+     <event value="1203" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerversucht,einemanuelleFeedaktualisierungdurchzuführen." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wennderBenutzerversucht,einemanuelleFeedaktualisierungdurchzuführen." level="win:Informational"/>
+     <event value="1204" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerversucht,sichmiteinemanderenBenutzernamenbeiderADAL_Seiteanzumelden." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wennderBenutzerversucht,sichmiteinemanderenBenutzernamenbeiderADAL_Seiteanzumelden." level="win:Informational"/>
+     <event value="1205" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/Aktualisierenerfolgreichausgeführtwird." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/Aktualisierenerfolgreichausgeführtwird." level="win:Informational" template="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/Aktualisierenerfolgreichausgeführtwird.Args"/>
+     <event value="1206" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/AktualisiereneinenFehlerverursacht." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/AktualisiereneinenFehlerverursacht." level="win:Error" template="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/Aktualisierenerfolgreichausgeführtwird.Args"/>
+     <event value="1207" symbol="RADC_Arbeitsbereichvon"RdClient"" version="0" task="RADC_Arbeitsbereichvon"RdClient"" level="win:Informational" template="Verbindungssequenz1030Args"/>
+     <event value="1208" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinererfolgreichenFeedsucheausgelöst." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdbeieinererfolgreichenFeedsucheausgelöst." level="win:Informational" template="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinererfolgreichenFeedsucheausgelöst.Args"/>
+     <event value="1209" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinerfehlerhaftenFeedsucheausgelöst." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdbeieinerfehlerhaftenFeedsucheausgelöst." level="win:Error" template="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinerfehlerhaftenFeedsucheausgelöst.Args"/>
+     <event value="1210" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennimFeedcacheaufdemlokalenClientcomputerSymboleoderRDP_DateienaufgrundeinerBeschädigungdesCachesfehlen." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wennimFeedcacheaufdemlokalenClientcomputerSymboleoderRDP_DateienaufgrundeinerBeschädigungdesCachesfehlen." level="win:Error" template="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennimFeedcacheaufdemlokalenClientcomputerSymboleoderRDP_DateienaufgrundeinerBeschädigungdesCachesfehlen.Args"/>
+     <event value="1211" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerdenZustimmungsstatusserverseitigerfolgreichaktualisierthat." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wennderBenutzerdenZustimmungsstatusserverseitigerfolgreichaktualisierthat." level="win:Informational" template="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerdenZustimmungsstatusserverseitigerfolgreichaktualisierthat.Args"/>
+     <event value="1212" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerdenZustimmungsstatusaufdemServernichtaktualisierenkann." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wennderBenutzerdenZustimmungsstatusaufdemServernichtaktualisierenkann." level="win:Error" template="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinerfehlerhaftenFeedsucheausgelöst.Args"/>
+     <event value="1213" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzermanuellaufdieSchaltfläche"Einladungenanzeigen"klickt." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wennderBenutzermanuellaufdieSchaltfläche"Einladungenanzeigen"klickt." level="win:Informational"/>
+     <event value="1214" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzereinenneuenZyklusderFeedsuchestartet.DerUPNmitHashunddieZeitzoneninformationenwerdenhierprotokolliert." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wennderBenutzereinenneuenZyklusderFeedsuchestartet.DerUPNmitHashunddieZeitzoneninformationenwerdenhierprotokolliert." level="win:Informational" template="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzereinenneuenZyklusderFeedsuchestartet.DerUPNmitHashunddieZeitzoneninformationenwerdenhierprotokolliert.Args"/>
+     <event value="1215" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennalleFeedsdesBenutzersvollständigabonniertoderaktualisiertwurden.WirprotokollierendieGesamtzeit,diefürdasparalleleHerunterladenallerFeedsbenötigtwurde." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wennalleFeedsdesBenutzersvollständigabonniertoderaktualisiertwurden.WirprotokollierendieGesamtzeit,diefürdasparalleleHerunterladenallerFeedsbenötigtwurde." level="win:Informational" template="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennalleFeedsdesBenutzersvollständigabonniertoderaktualisiertwurden.WirprotokollierendieGesamtzeit,diefürdasparalleleHerunterladenallerFeedsbenötigtwurde.Args"/>
+     <event value="1216" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennbeimAbrufdesADAL_TokenseinFehlerauftritt." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wennbeimAbrufdesADAL_TokenseinFehlerauftritt." level="win:Error" template="AllgemeinDiesisteinallgemeinesEreignis,dasvomClientausgelöstwerdenkann.Args"/>
+     <event value="1217" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenndasADAL_Authentifizierungstokenerfolgreicherstelltwird." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wenndasADAL_Authentifizierungstokenerfolgreicherstelltwird." level="win:Error"/>
+     <event value="1218" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenndieADAL_Authentifizierungabgebrochenwird." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdausgelöst,wenndieADAL_Authentifizierungabgebrochenwird." level="win:Error"/>
+     <event value="1227" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinemStatusübergangaufgerufen." version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdbeieinemStatusübergangaufgerufen." level="win:Informational" template="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinemStatusübergangaufgerufen.Args"/>
+     <event value="1228" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinemStatusübergangaufgerufen.1228" version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdbeieinemStatusübergangaufgerufen." level="win:Informational" template="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinemStatusübergangaufgerufen.1228Args"/>
+     <event value="1229" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinemStatusübergangaufgerufen.1229" version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdbeieinemStatusübergangaufgerufen." level="win:Informational" template="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinemStatusübergangaufgerufen.1229Args"/>
+     <event value="1230" symbol="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinemStatusübergangaufgerufen.1230" version="0" task="RADC_Arbeitsbereichvon"RdClient"" opcode="DiesesEreigniswirdbeieinemStatusübergangaufgerufen." level="win:Informational" template="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinemStatusübergangaufgerufen.1229Args"/>
+     <event value="1401" symbol="RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.WirprotokollierendieausgewählteVersionsowiedenClientmodusunddieAVC_Funktion." version="0" task="RdClient_Pipeline_Arbeitsbereich" opcode="DiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.WirprotokollierendieausgewählteVersionsowiedenClientmodusunddieAVC_Funktion." level="win:Informational" template="RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.WirprotokollierendieausgewählteVersionsowiedenClientmodusunddieAVC_Funktion.Args"/>
+     <event value="1402" symbol="RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.Wirprotokollieren,dassHardwareressourcenverwendetwerden." version="0" task="RdClient_Pipeline_Arbeitsbereich" opcode="DiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.Wirprotokollieren,dassHardwareressourcenverwendetwerden." level="win:Informational"/>
+     <event value="1403" symbol="RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.Wirprotokollieren,dasskeineHardwareressourcenverwendetwerden." version="0" task="RdClient_Pipeline_Arbeitsbereich" opcode="DiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.Wirprotokollieren,dasskeineHardwareressourcenverwendetwerden." level="win:Informational"/>
+     <event value="1404" symbol="RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennwährendderAusführungeinPipelinefehlerauftritt.FehlerhafteKomponente,FunktionundFehlercodewerdenprotokolliert." version="0" task="RdClient_Pipeline_Arbeitsbereich" opcode="DiesesEreigniswirdausgelöst,wennwährendderAusführungeinPipelinefehlerauftritt.FehlerhafteKomponente,FunktionundFehlercodewerdenprotokolliert." level="win:Error" template="RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennwährendderAusführungeinPipelinefehlerauftritt.FehlerhafteKomponente,FunktionundFehlercodewerdenprotokolliert.Args"/>
+     <event value="1501" symbol="Allgemein1501" version="0" task="Allgemein" level="win:Informational" template="AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.1014Args"/>
+     <event value="1502" symbol="Allgemein1502" version="0" task="Allgemein" level="win:Informational" template="AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.1014Args"/>
+     <event value="1503" symbol="Allgemein1503" version="0" task="Allgemein" level="win:Informational" template="AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.1014Args"/>
+    </events>
+    <templates>
+     <template tid="RDP_StatusübergangDiesesEreigniswirdbeieinemStatusübergangaufgerufen.Args">
+      <data name="StateTransitionName" inType="win:UnicodeString"/>
+      <data name="PreviousState" inType="win:UInt32"/>
+      <data name="PreviousStateName" inType="win:UnicodeString"/>
+      <data name="NewState" inType="win:UInt32"/>
+      <data name="NewStateName" inType="win:UnicodeString"/>
+      <data name="Event" inType="win:UInt32"/>
+      <data name="EventName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RDP_StatusübergangDiesesEreigniswirdbeieinemStatusübergangaufgerufen.226Args">
+      <data name="StateTransitionName" inType="win:UnicodeString"/>
+      <data name="PreviousState" inType="win:UInt32"/>
+      <data name="PreviousStateName" inType="win:UnicodeString"/>
+      <data name="NewState" inType="win:UInt32"/>
+      <data name="NewStateName" inType="win:UnicodeString"/>
+      <data name="Event" inType="win:UInt32"/>
+      <data name="EventName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="RDP_StatusübergangDiesesEreigniswirdbeieinemStatusübergangaufgerufen.227Args">
+      <data name="StateTransitionName" inType="win:UnicodeString"/>
+      <data name="ChannelID" inType="win:UInt32"/>
+      <data name="ChannelName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0Args">
+      <data name="Function" inType="win:UnicodeString"/>
+      <data name="Line" inType="win:UnicodeString"/>
+      <data name="DebugMessage" inType="win:UnicodeString"/>
+     </template>
+     <template tid="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.Args">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Value" inType="win:UnicodeString"/>
+      <data name="CustomLevel" inType="win:UnicodeString"/>
+     </template>
+     <template tid="VerbindungssequenzDiesesEreigniswirdbeimTrennungsprozessaufgerufen.Args">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Value" inType="win:UInt32"/>
+      <data name="CustomLevel" inType="win:UnicodeString"/>
+     </template>
+     <template tid="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1005Args">
+      <data name="TraceMessage" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen.1014Args">
+      <data name="TraceMessage" inType="win:UnicodeString"/>
+     </template>
+     <template tid="VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen.1027Args">
+      <data name="DomainName" inType="win:UnicodeString"/>
+      <data name="SessionId" inType="win:UInt32"/>
+     </template>
+     <template tid="Verbindungssequenz1030Args">
+      <data name="BuildBranch" inType="win:UnicodeString"/>
+      <data name="BuildDate" inType="win:UnicodeString"/>
+      <data name="BuildTime" inType="win:UnicodeString"/>
+      <data name="BuildVersion" inType="win:UnicodeString"/>
+      <data name="ArchAndFlavour" inType="win:UnicodeString"/>
+     </template>
+     <template tid="AllgemeinDiesisteinallgemeinesEreignis,dasvomClientausgelöstwerdenkann.Args">
+      <data name="ErrorCode" inType="win:UnicodeString"/>
+      <data name="ErrorDescription" inType="win:UnicodeString"/>
+     </template>
+     <template tid="AllgemeinDiesisteinallgemeinerFehler,dervomClientsignalisiertwerdenkann.Args">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="CustomLevel" inType="win:UnicodeString"/>
+      <data name="Value" inType="win:HexInt32"/>
+     </template>
+     <template tid="VerbindungssequenzDiesesEreigniswirdbeieinemSchließvorgangausgelöst,durchdendieVerbindunggeschlossenwird.Args">
+      <data name="Code" inType="win:UInt32"/>
+     </template>
+     <template tid="AllgemeinDiesesEreigniswirdbeimTrennungsprozessaufgerufen.Args">
+      <data name="ComponentName" inType="win:UnicodeString"/>
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/Aktualisierenerfolgreichausgeführtwird.Args">
+      <data name="Event" inType="win:UnicodeString"/>
+      <data name="TenantId" inType="win:UnicodeString"/>
+      <data name="TotalTimeWithoutAdal" inType="win:UInt32"/>
+      <data name="AdalTime" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinererfolgreichenFeedsucheausgelöst.Args">
+      <data name="TotalTimeWithoutAdal" inType="win:UInt32"/>
+      <data name="AdalTime" inType="win:UInt32"/>
+      <data name="NumberOfFeeds" inType="win:UInt32"/>
+     </template>
+     <template tid="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinerfehlerhaftenFeedsucheausgelöst.Args">
+      <data name="TotalTimeWithoutAdal" inType="win:UInt32"/>
+      <data name="AdalTime" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennimFeedcacheaufdemlokalenClientcomputerSymboleoderRDP_DateienaufgrundeinerBeschädigungdesCachesfehlen.Args">
+      <data name="TenantId" inType="win:UnicodeString"/>
+      <data name="ResourceIndex" inType="win:UInt32"/>
+      <data name="ResourceType" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerdenZustimmungsstatusserverseitigerfolgreichaktualisierthat.Args">
+      <data name="TotalTimeWithoutAdal" inType="win:UInt32"/>
+      <data name="AdalTime" inType="win:UInt32"/>
+     </template>
+     <template tid="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzereinenneuenZyklusderFeedsuchestartet.DerUPNmitHashunddieZeitzoneninformationenwerdenhierprotokolliert.Args">
+      <data name="UserNameHash" inType="win:UnicodeString"/>
+      <data name="TimeZoneBias" inType="win:Int32"/>
+      <data name="TimeZoneName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennalleFeedsdesBenutzersvollständigabonniertoderaktualisiertwurden.WirprotokollierendieGesamtzeit,diefürdasparalleleHerunterladenallerFeedsbenötigtwurde.Args">
+      <data name="refreshTime" inType="win:UInt32"/>
+      <data name="numberOfFeeds" inType="win:UInt32"/>
+     </template>
+     <template tid="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinemStatusübergangaufgerufen.Args">
+      <data name="RadcClientType" inType="win:UnicodeString"/>
+      <data name="RadcClientStage" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinemStatusübergangaufgerufen.1228Args">
+      <data name="RadcClientStage" inType="win:UnicodeString"/>
+      <data name="RadcHttpEvent" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinemStatusübergangaufgerufen.1229Args">
+      <data name="RadcClientStage" inType="win:UnicodeString"/>
+      <data name="RadcHttpEvent" inType="win:UnicodeString"/>
+      <data name="Code" inType="win:UInt32"/>
+     </template>
+     <template tid="RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.WirprotokollierendieausgewählteVersionsowiedenClientmodusunddieAVC_Funktion.Args">
+      <data name="Version" inType="win:HexInt32"/>
+      <data name="ClientMode" inType="win:UInt32"/>
+      <data name="AvcEnabled" inType="win:UInt32"/>
+     </template>
+     <template tid="RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennwährendderAusführungeinPipelinefehlerauftritt.FehlerhafteKomponente,FunktionundFehlercodewerdenprotokolliert.Args">
+      <data name="Component" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_AccessDenied" value="AccessDenied"/>
+    <string id="keyword_Disconnected" value="Disconnected"/>
+    <string id="keyword_AuthFailed" value="AuthFailed"/>
+    <string id="keyword_LicenseError" value="LicenseError"/>
+    <string id="keyword_TimedOut" value="TimedOut"/>
+    <string id="keyword_InvalidState" value="InvalidState"/>
+    <string id="keyword_GatewayConnectFailed" value="GatewayConnectFailed"/>
+    <string id="keyword_NetworkUnAvailable" value="NetworkUnAvailable"/>
+    <string id="keyword_DnsResolutionFailure" value="DnsResolutionFailure"/>
+    <string id="keyword_SignVerifFailed" value="SignVerifFailed"/>
+    <string id="keyword_ResourceFailure" value="ResourceFailure"/>
+    <string id="keyword_LogonFailed" value="LogonFailed"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_Allgemein" value="Allgemein"/>
+    <string id="opcode_AllgemeinDiesesEreigniswirdbeimTrennungsprozessaufgerufen." value="DiesesEreigniswirdbeimTrennungsprozessaufgerufen."/>
+    <string id="opcode_AllgemeinDiesisteinallgemeinesEreignis,dasvomClientausgelöstwerdenkann." value="DiesisteinallgemeinesEreignis,dasvomClientausgelöstwerdenkann."/>
+    <string id="opcode_AllgemeinDiesisteinallgemeinerFehler,dervomClientsignalisiertwerdenkann." value="DiesisteinallgemeinerFehler,dervomClientsignalisiertwerdenkann."/>
+    <string id="task_Verbindungssequenz" value="Verbindungssequenz"/>
+    <string id="opcode_VerbindungssequenzDiesesEreigniswirdbeimVerbindungsprozessaufgerufen." value="DiesesEreigniswirdbeimVerbindungsprozessaufgerufen."/>
+    <string id="opcode_VerbindungssequenzDiesesEreigniswirdbeimTrennungsprozessaufgerufen." value="DiesesEreigniswirdbeimTrennungsprozessaufgerufen."/>
+    <string id="opcode_VerbindungssequenzDiesesEreigniswirdbeimAuthentifizierungsprozessaufgerufen." value="DiesesEreigniswirdbeimAuthentifizierungsprozessaufgerufen."/>
+    <string id="opcode_VerbindungssequenzDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen." value="DiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen."/>
+    <string id="opcode_VerbindungssequenzDiesesEreigniswirdbeimAuflösendesServernamensaufgerufen." value="DiesesEreigniswirdbeimAuflösendesServernamensaufgerufen."/>
+    <string id="opcode_VerbindungssequenzDiesesEreigniswirdbeidemVersuchaufgerufen,einegültigeLizenzzuerhalten." value="DiesesEreigniswirdbeidemVersuchaufgerufen,einegültigeLizenzzuerhalten."/>
+    <string id="opcode_VerbindungssequenzDiesesEreigniswirdbeieinemSchließvorgangausgelöst,durchdendieVerbindunggeschlossenwird." value="DiesesEreigniswirdbeieinemSchließvorgangausgelöst,durchdendieVerbindunggeschlossenwird."/>
+    <string id="task_AutomatischeSequenzdererneutenVerbindung" value="AutomatischeSequenzdererneutenVerbindung"/>
+    <string id="opcode_AutomatischeSequenzdererneutenVerbindungDiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen." value="DiesesEreigniswirdbeidemVersuchaufgerufen,automatischeineVerbindungmitdemServerherzustellen."/>
+    <string id="task_Gatewayverbindungssequenz" value="Gatewayverbindungssequenz"/>
+    <string id="opcode_GatewayverbindungssequenzDiesesEreigniswirdinderGatewaytransportschichtaufgerufen." value="DiesesEreigniswirdinderGatewaytransportschichtaufgerufen."/>
+    <string id="task_RDP_Statusübergang" value="RDP_Statusübergang"/>
+    <string id="opcode_RDP_StatusübergangDiesesEreigniswirdbeieinemStatusübergangaufgerufen." value="DiesesEreigniswirdbeieinemStatusübergangaufgerufen."/>
+    <string id="task_RADC_Arbeitsbereichvon"RdClient"" value="RADC_Arbeitsbereichvon"RdClient""/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinemStatusübergangaufgerufen." value="DiesesEreigniswirdbeieinemStatusübergangaufgerufen."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderClientnichtsauberheruntergefahrenwurde." value="DiesesEreigniswirdausgelöst,wennderClientnichtsauberheruntergefahrenwurde."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerversucht,sichvomOOB_Clientabzumelden." value="DiesesEreigniswirdausgelöst,wennderBenutzerversucht,sichvomOOB_Clientabzumelden."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerversucht,einemanuelleFeedaktualisierungdurchzuführen." value="DiesesEreigniswirdausgelöst,wennderBenutzerversucht,einemanuelleFeedaktualisierungdurchzuführen."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerversucht,sichmiteinemanderenBenutzernamenbeiderADAL_Seiteanzumelden." value="DiesesEreigniswirdausgelöst,wennderBenutzerversucht,sichmiteinemanderenBenutzernamenbeiderADAL_Seiteanzumelden."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/Aktualisierenerfolgreichausgeführtwird." value="DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/Aktualisierenerfolgreichausgeführtwird."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/AktualisiereneinenFehlerverursacht." value="DiesesEreigniswirdausgelöst,wenneinArbeitsbereichsereigniswieAbonnieren/AktualisiereneinenFehlerverursacht."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinererfolgreichenFeedsucheausgelöst." value="DiesesEreigniswirdbeieinererfolgreichenFeedsucheausgelöst."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdbeieinerfehlerhaftenFeedsucheausgelöst." value="DiesesEreigniswirdbeieinerfehlerhaftenFeedsucheausgelöst."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennimFeedcacheaufdemlokalenClientcomputerSymboleoderRDP_DateienaufgrundeinerBeschädigungdesCachesfehlen." value="DiesesEreigniswirdausgelöst,wennimFeedcacheaufdemlokalenClientcomputerSymboleoderRDP_DateienaufgrundeinerBeschädigungdesCachesfehlen."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerdenZustimmungsstatusserverseitigerfolgreichaktualisierthat." value="DiesesEreigniswirdausgelöst,wennderBenutzerdenZustimmungsstatusserverseitigerfolgreichaktualisierthat."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzerdenZustimmungsstatusaufdemServernichtaktualisierenkann." value="DiesesEreigniswirdausgelöst,wennderBenutzerdenZustimmungsstatusaufdemServernichtaktualisierenkann."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzermanuellaufdieSchaltfläche"Einladungenanzeigen"klickt." value="DiesesEreigniswirdausgelöst,wennderBenutzermanuellaufdieSchaltfläche"Einladungenanzeigen"klickt."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennderBenutzereinenneuenZyklusderFeedsuchestartet.DerUPNmitHashunddieZeitzoneninformationenwerdenhierprotokolliert." value="DiesesEreigniswirdausgelöst,wennderBenutzereinenneuenZyklusderFeedsuchestartet.DerUPNmitHashunddieZeitzoneninformationenwerdenhierprotokolliert."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennalleFeedsdesBenutzersvollständigabonniertoderaktualisiertwurden.WirprotokollierendieGesamtzeit,diefürdasparalleleHerunterladenallerFeedsbenötigtwurde." value="DiesesEreigniswirdausgelöst,wennalleFeedsdesBenutzersvollständigabonniertoderaktualisiertwurden.WirprotokollierendieGesamtzeit,diefürdasparalleleHerunterladenallerFeedsbenötigtwurde."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wennbeimAbrufdesADAL_TokenseinFehlerauftritt." value="DiesesEreigniswirdausgelöst,wennbeimAbrufdesADAL_TokenseinFehlerauftritt."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenndasADAL_Authentifizierungstokenerfolgreicherstelltwird." value="DiesesEreigniswirdausgelöst,wenndasADAL_Authentifizierungstokenerfolgreicherstelltwird."/>
+    <string id="opcode_RADC_Arbeitsbereichvon"RdClient"DiesesEreigniswirdausgelöst,wenndieADAL_Authentifizierungabgebrochenwird." value="DiesesEreigniswirdausgelöst,wenndieADAL_Authentifizierungabgebrochenwird."/>
+    <string id="task_RdClient_Pipeline_Arbeitsbereich" value="RdClient_Pipeline_Arbeitsbereich"/>
+    <string id="opcode_RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.WirprotokollierendieausgewählteVersionsowiedenClientmodusunddieAVC_Funktion." value="DiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.WirprotokollierendieausgewählteVersionsowiedenClientmodusunddieAVC_Funktion."/>
+    <string id="opcode_RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.Wirprotokollieren,dassHardwareressourcenverwendetwerden." value="DiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.Wirprotokollieren,dassHardwareressourcenverwendetwerden."/>
+    <string id="opcode_RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.Wirprotokollieren,dasskeineHardwareressourcenverwendetwerden." value="DiesesEreigniswirdausgelöst,wennProtokollerfassungenvomServerempfangenwerden.Wirprotokollieren,dasskeineHardwareressourcenverwendetwerden."/>
+    <string id="opcode_RdClient_Pipeline_ArbeitsbereichDiesesEreigniswirdausgelöst,wennwährendderAusführungeinPipelinefehlerauftritt.FehlerhafteKomponente,FunktionundFehlercodewerdenprotokolliert." value="DiesesEreigniswirdausgelöst,wennwährendderAusführungeinPipelinefehlerauftritt.FehlerhafteKomponente,FunktionundFehlercodewerdenprotokolliert."/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

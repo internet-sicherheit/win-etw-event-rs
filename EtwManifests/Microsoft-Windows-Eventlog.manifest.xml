@@ -1,0 +1,239 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Eventlog" guid="{fc65ddd8-d6ef-4962-83d5-6e5cfe9ce148}" resourceFileName="Microsoft-Windows-Eventlog" messageFileName="Microsoft-Windows-Eventlog" symbol="MicrosoftWindowsEventlog" source="Xml" >
+    <keywords>
+     <keyword name="el:Availability" message="$(string.keyword_el:Availability)" mask="0x20000"/>
+     <keyword name="el:Settings" message="$(string.keyword_el:Settings)" mask="0x40000"/>
+     <keyword name="el:SystemAvailability" message="$(string.keyword_el:SystemAvailability)" mask="0x80000"/>
+     <keyword name="el:Audit" message="$(string.keyword_el:Audit)" mask="0x100000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="Dienststart" message="$(string.task_Dienststart)" value="100"/>
+     <task name="Ereignispozessor" message="$(string.task_Ereignispozessor)" value="101"/>
+     <task name="Dienstwirdheruntergefahren" message="$(string.task_Dienstwirdheruntergefahren)" value="103"/>
+     <task name="Protokollgelöscht" message="$(string.task_Protokollgelöscht)" value="104"/>
+     <task name="Protokollautomatischgesichert" message="$(string.task_Protokollautomatischgesichert)" value="105"/>
+     <task name="UngeplantesHerunterfahrendesSystems" message="$(string.task_UngeplantesHerunterfahrendesSystems)" value="108"/>
+     <task name="AuditzurBenutzungderDienste" message="$(string.task_AuditzurBenutzungderDienste)" value="109"/>
+    </tasks>
+    <maps>
+     <valueMap name="DroppedEventReasons">
+      <map value="0x20" message="$(string.map_DroppedEventReasonsEreignisse sind verloren gegangen, da keine freien Puffer verfügbar waren. Bei der Leerung des Cache und Übertragung auf den Datenträger konnten eingehende Ereignisse nicht schnell genug verarbeitet werden.)"/>
+      <map value="0x21" message="$(string.map_DroppedEventReasonsMindestens ein Puffer wurde verworfen, da ein Echtzeitanwender nicht schnell genug reagieren konnte.)"/>
+      <map value="0x22" message="$(string.map_DroppedEventReasonsDie Echtzeit-Sicherungsdatei war beschädigt, da das System nicht ordnungsgemäß heruntergefahren wurde.)"/>
+     </valueMap>
+     <valueMap name="ChannelType">
+      <map value="0x0" message="$(string.map_ChannelTypeAdministrator)"/>
+      <map value="0x1" message="$(string.map_ChannelTypeBetriebsbereit)"/>
+      <map value="0x2" message="$(string.map_ChannelTypeAnalytisch)"/>
+      <map value="0x3" message="$(string.map_ChannelTypeDebug)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="20" symbol="Dienststart" version="0" task="Dienststart" level="win:Error" keywords="el:Availability" template="DienststartArgs"/>
+     <event value="21" symbol="Dienststart21" version="0" task="Dienststart" level="win:Error" keywords="el:Availability el:Settings" template="Dienststart21Args"/>
+     <event value="22" symbol="Dienststart22" version="0" task="Dienststart" level="win:Error" keywords="el:Availability" template="DienststartArgs"/>
+     <event value="23" symbol="Dienststart23" version="0" task="Dienststart" level="win:Error" keywords="el:Availability" template="DienststartArgs"/>
+     <event value="25" symbol="Dienststart25" version="0" task="Dienststart" level="win:Informational" keywords="el:Availability" template="Dienststart25Args"/>
+     <event value="26" symbol="Dienststart26" version="0" task="Dienststart" level="win:Informational" keywords="el:Availability" template="Dienststart25Args"/>
+     <event value="27" symbol="Dienststart27" version="0" task="Dienststart" level="win:Warning" keywords="el:Availability el:Settings" template="Dienststart27Args"/>
+     <event value="27" symbol="Dienststart27_V1" version="1" task="Dienststart" level="win:Warning" keywords="el:Availability el:Settings" template="Dienststart27Args_V1"/>
+     <event value="28" symbol="Dienststart28" version="0" task="Dienststart" level="win:Warning" keywords="el:Availability el:Settings" template="Dienststart28Args"/>
+     <event value="29" symbol="task_0" version="0" task="task_0" level="win:Critical" keywords="el:Availability" template="Dienststart28Args"/>
+     <event value="30" symbol="Dienststart30" version="0" task="Dienststart" level="win:Error" keywords="el:Availability" template="Dienststart30Args"/>
+     <event value="31" symbol="Dienststart31" version="0" task="Dienststart" level="win:Warning" keywords="el:Availability el:Settings" template="Dienststart28Args"/>
+     <event value="40" symbol="task_040" version="0" task="task_0" level="win:Error" keywords="el:Availability" template="Dienststart28Args"/>
+     <event value="100" symbol="Ereignispozessor" version="0" task="Ereignispozessor" level="win:Error" keywords="el:Availability" template="EreignispozessorArgs"/>
+     <event value="102" symbol="Ereignispozessor102" version="0" task="Ereignispozessor" level="win:Error" keywords="el:Availability" template="Ereignispozessor102Args"/>
+     <event value="103" symbol="Ereignispozessor103" version="0" task="Ereignispozessor" level="win:Error" template="Ereignispozessor103Args"/>
+     <event value="104" symbol="Protokollgelöscht" version="0" task="Protokollgelöscht" level="win:Informational" template="ProtokollgelöschtArgs"/>
+     <event value="105" symbol="Protokollautomatischgesichert" version="0" task="Protokollautomatischgesichert" level="win:Informational" template="ProtokollautomatischgesichertArgs"/>
+     <event value="106" symbol="task_0106" version="0" task="task_0" level="win:Error" keywords="el:Availability" template="task_0106Args"/>
+     <event value="107" symbol="task_0107" version="0" task="task_0" level="win:Error" template="task_0107Args"/>
+     <event value="108" symbol="UngeplantesHerunterfahrendesSystems" version="0" task="UngeplantesHerunterfahrendesSystems" level="win:Informational" keywords="el:SystemAvailability" template="UngeplantesHerunterfahrendesSystemsArgs"/>
+     <event value="109" symbol="Ereignispozessor109" version="0" task="Ereignispozessor" level="win:Error" keywords="el:Availability" template="Ereignispozessor109Args"/>
+     <event value="110" symbol="EreignispozessorStarten" version="0" task="Ereignispozessor" opcode="win:Starten" level="win:Verbose" template="EreignispozessorStartenArgs"/>
+     <event value="111" symbol="EreignispozessorBeenden" version="0" task="Ereignispozessor" opcode="win:Beenden" level="win:Verbose" template="EreignispozessorBeendenArgs"/>
+     <event value="112" symbol="EreignispozessorBeenden112" version="0" task="Ereignispozessor" opcode="win:Beenden" level="win:Verbose" template="EreignispozessorBeenden112Args"/>
+     <event value="200" symbol="AuditzurBenutzungderDienste" version="0" task="AuditzurBenutzungderDienste" level="win:Verbose" keywords="el:Audit" template="AuditzurBenutzungderDiensteArgs"/>
+     <event value="201" symbol="AuditzurBenutzungderDienste201" version="0" task="AuditzurBenutzungderDienste" level="win:Verbose" keywords="el:Audit" template="AuditzurBenutzungderDienste201Args"/>
+     <event value="202" symbol="AuditzurBenutzungderDienste202" version="0" task="AuditzurBenutzungderDienste" level="win:Verbose" keywords="el:Audit" template="AuditzurBenutzungderDienste201Args"/>
+     <event value="203" symbol="AuditzurBenutzungderDienste203" version="0" task="AuditzurBenutzungderDienste" level="win:Verbose" keywords="el:Audit" template="AuditzurBenutzungderDienste203Args"/>
+     <event value="204" symbol="AuditzurBenutzungderDienste204" version="0" task="AuditzurBenutzungderDienste" level="win:Verbose" keywords="el:Audit" template="AuditzurBenutzungderDienste203Args"/>
+     <event value="205" symbol="AuditzurBenutzungderDienste205_V1" version="1" task="AuditzurBenutzungderDienste" level="win:Verbose" keywords="el:Audit" template="AuditzurBenutzungderDienste203Args"/>
+     <event value="205" symbol="AuditzurBenutzungderDienste205_V2" version="2" task="AuditzurBenutzungderDienste" level="win:Verbose" keywords="el:Audit" template="AuditzurBenutzungderDienste205Args_V2"/>
+     <event value="1100" symbol="Dienstwirdheruntergefahren" version="0" task="Dienstwirdheruntergefahren" level="win:Informational"/>
+     <event value="1101" symbol="Ereignispozessor1101" version="0" task="Ereignispozessor" level="win:Error" template="Ereignispozessor1101Args"/>
+     <event value="1102" symbol="Protokollgelöscht1102" version="0" task="Protokollgelöscht" level="win:Informational" template="Protokollgelöscht1102Args"/>
+     <event value="1103" symbol="Ereignispozessor1103" version="0" task="Ereignispozessor" level="win:Informational" template="Ereignispozessor1103Args"/>
+     <event value="1104" symbol="Ereignispozessor1104" version="0" task="Ereignispozessor" level="win:Error"/>
+     <event value="1105" symbol="Protokollautomatischgesichert1105" version="0" task="Protokollautomatischgesichert" level="win:Informational" template="ProtokollautomatischgesichertArgs"/>
+     <event value="1106" symbol="Ereignispozessor1106" version="0" task="Ereignispozessor" level="win:Error" template="Ereignispozessor1106Args"/>
+     <event value="1107" symbol="Ereignispozessor1107" version="0" task="Ereignispozessor" level="win:Error" template="Ereignispozessor102Args"/>
+     <event value="1108" symbol="Ereignispozessor1108" version="0" task="Ereignispozessor" level="win:Error" template="EreignispozessorArgs"/>
+     <event value="6000" symbol="task_06000" version="0" task="task_0" level="win:Informational" template="task_0106Args"/>
+    </events>
+    <templates>
+     <template tid="DienststartArgs">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Path" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Dienststart21Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ChannelPath" inType="win:UnicodeString"/>
+      <data name="ConfigProperty" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Dienststart25Args">
+      <data name="ChannelPath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Dienststart27Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ChannelPath" inType="win:UnicodeString"/>
+      <data name="NewLogFilePath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Dienststart28Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ChannelPath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Dienststart30Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ChannelPath" inType="win:UnicodeString"/>
+      <data name="PublisherGuid" inType="win:GUID"/>
+     </template>
+     <template tid="EreignispozessorArgs">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="EventID" inType="win:UInt16"/>
+      <data name="PubID" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Ereignispozessor102Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="EventID" inType="win:UInt16"/>
+      <data name="PublisherName" inType="win:UnicodeString"/>
+      <data name="PublisherGuid" inType="win:GUID"/>
+      <data name="ProcessID" inType="win:UInt32"/>
+     </template>
+     <template tid="Ereignispozessor103Args">
+      <data name="Reason" inType="win:UInt8" map="DroppedEventReasons"/>
+      <data name="SessionName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ProtokollgelöschtArgs">
+      <data name="SubjectUserName" inType="win:UnicodeString"/>
+      <data name="SubjectDomainName" inType="win:UnicodeString"/>
+      <data name="Channel" inType="win:UnicodeString"/>
+      <data name="BackupPath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ProtokollautomatischgesichertArgs">
+      <data name="Channel" inType="win:UnicodeString"/>
+      <data name="BackupPath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0106Args">
+      <data name="Channel" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0107Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ProviderName" inType="win:UnicodeString"/>
+      <data name="PublisherGuid" inType="win:GUID"/>
+     </template>
+     <template tid="UngeplantesHerunterfahrendesSystemsArgs">
+      <data name="ShutdownTime" inType="win:SYSTEMTIME"/>
+      <data name="ActualMaxInterval" inType="win:UInt32"/>
+      <data name="DiskPmDisabledMaxInterval" inType="win:UInt32"/>
+      <data name="DiskPmEnabledFlag" inType="win:UInt32"/>
+      <data name="DiskPmEnabledMaxInterval" inType="win:UInt32"/>
+      <data name="TimestampForced" inType="win:UInt32"/>
+      <data name="DiskPmPolicy" inType="win:UInt32"/>
+      <data name="BiasValid" inType="win:UInt32"/>
+      <data name="StartBias" inType="win:UInt32"/>
+     </template>
+     <template tid="Ereignispozessor109Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="EventID" inType="win:UInt16"/>
+      <data name="PublisherName" inType="win:UnicodeString"/>
+      <data name="PublisherGuid" inType="win:GUID"/>
+      <data name="ProcessID" inType="win:UInt32"/>
+      <data name="EventName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EreignispozessorStartenArgs">
+      <data name="PublisherGuid" inType="win:GUID"/>
+      <data name="PublisherName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EreignispozessorBeendenArgs">
+      <data name="PublisherGuid" inType="win:GUID"/>
+      <data name="PublisherName" inType="win:UnicodeString"/>
+      <data name="EventMetaDataCount" inType="win:UInt32"/>
+     </template>
+     <template tid="EreignispozessorBeenden112Args">
+      <data name="PublisherGuid" inType="win:GUID"/>
+      <data name="PublisherName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="AuditzurBenutzungderDiensteArgs">
+      <data name="ChannelName" inType="win:UnicodeString"/>
+      <data name="ChannelType" inType="win:UInt8" map="ChannelType"/>
+      <data name="Enabled" inType="win:Boolean"/>
+     </template>
+     <template tid="AuditzurBenutzungderDienste201Args">
+      <data name="ChannelName" inType="win:UnicodeString"/>
+      <data name="Query" inType="win:UnicodeString"/>
+     </template>
+     <template tid="AuditzurBenutzungderDienste203Args">
+      <data name="ModuleNameLen" inType="win:UInt8"/>
+      <data name="ModuleName" inType="win:UnicodeString" length="ModuleNameLen"/>
+     </template>
+     <template tid="Ereignispozessor1101Args">
+      <data name="Reason" inType="win:UInt8"/>
+     </template>
+     <template tid="Protokollgelöscht1102Args">
+      <data name="SubjectUserSid" inType="win:SID"/>
+      <data name="SubjectUserName" inType="win:UnicodeString"/>
+      <data name="SubjectDomainName" inType="win:UnicodeString"/>
+      <data name="SubjectLogonId" inType="win:HexInt64"/>
+     </template>
+     <template tid="Ereignispozessor1103Args">
+      <data name="PercentFull" inType="win:UInt32"/>
+     </template>
+     <template tid="Ereignispozessor1106Args">
+      <data name="Reason" inType="win:HexInt32"/>
+     </template>
+     <template tid="Dienststart27Args_V1">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ChannelPath" inType="win:UnicodeString"/>
+      <data name="FailedLogFilePath" inType="win:UnicodeString"/>
+      <data name="NewLogFilePath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="AuditzurBenutzungderDienste205Args_V2">
+      <data name="ModuleNameLen" inType="win:UInt8"/>
+      <data name="ModuleName" inType="win:AnsiString" length="ModuleNameLen"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_el:Availability" value="el:Availability"/>
+    <string id="keyword_el:Settings" value="el:Settings"/>
+    <string id="keyword_el:SystemAvailability" value="el:SystemAvailability"/>
+    <string id="keyword_el:Audit" value="el:Audit"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_Dienststart" value="Dienststart"/>
+    <string id="task_Ereignispozessor" value="Ereignispozessor"/>
+    <string id="task_Dienstwirdheruntergefahren" value="Dienstwirdheruntergefahren"/>
+    <string id="task_Protokollgelöscht" value="Protokollgelöscht"/>
+    <string id="task_Protokollautomatischgesichert" value="Protokollautomatischgesichert"/>
+    <string id="task_UngeplantesHerunterfahrendesSystems" value="UngeplantesHerunterfahrendesSystems"/>
+    <string id="task_AuditzurBenutzungderDienste" value="AuditzurBenutzungderDienste"/>
+    <string id="map_DroppedEventReasonsEreignisse sind verloren gegangen, da keine freien Puffer verfügbar waren. Bei der Leerung des Cache und Übertragung auf den Datenträger konnten eingehende Ereignisse nicht schnell genug verarbeitet werden." value="Ereignisse sind verloren gegangen, da keine freien Puffer verfügbar waren. Bei der Leerung des Cache und Übertragung auf den Datenträger konnten eingehende Ereignisse nicht schnell genug verarbeitet werden."/>
+    <string id="map_DroppedEventReasonsMindestens ein Puffer wurde verworfen, da ein Echtzeitanwender nicht schnell genug reagieren konnte." value="Mindestens ein Puffer wurde verworfen, da ein Echtzeitanwender nicht schnell genug reagieren konnte."/>
+    <string id="map_DroppedEventReasonsDie Echtzeit-Sicherungsdatei war beschädigt, da das System nicht ordnungsgemäß heruntergefahren wurde." value="Die Echtzeit-Sicherungsdatei war beschädigt, da das System nicht ordnungsgemäß heruntergefahren wurde."/>
+    <string id="map_ChannelTypeAdministrator" value="Administrator"/>
+    <string id="map_ChannelTypeBetriebsbereit" value="Betriebsbereit"/>
+    <string id="map_ChannelTypeAnalytisch" value="Analytisch"/>
+    <string id="map_ChannelTypeDebug" value="Debug"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

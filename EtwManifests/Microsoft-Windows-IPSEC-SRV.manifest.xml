@@ -1,0 +1,84 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-IPSEC-SRV" guid="{c91ef675-842f-4fcf-a5c9-6ea93f2e4f8b}" resourceFileName="Microsoft-Windows-IPSEC-SRV" messageFileName="Microsoft-Windows-IPSEC-SRV" symbol="MicrosoftWindowsIPSECSRV" source="Xml" >
+    <keywords>
+     <keyword name="PolicyAgent" message="$(string.keyword_PolicyAgent)" mask="0x10000"/>
+    </keywords>
+    <tasks>
+     <task name="StartService" message="$(string.task_StartService)" value="101"/>
+     <task name="StopService" message="$(string.task_StopService)" value="103"/>
+     <task name="ApplyDomainPolicy" message="$(string.task_ApplyDomainPolicy)" value="105"/>
+     <task name="IPSEC_BFE_EngineOpen" message="$(string.task_IPSEC_BFE_EngineOpen)" value="107"/>
+     <task name="IPSEC_BFE_EngineClose" message="$(string.task_IPSEC_BFE_EngineClose)" value="109"/>
+     <task name="IPSEC_BFE_TransactionBegin" message="$(string.task_IPSEC_BFE_TransactionBegin)" value="111"/>
+     <task name="IPSEC_BFE_TransactionCommit" message="$(string.task_IPSEC_BFE_TransactionCommit)" value="113"/>
+     <task name="IPSEC_BFE_TransactionAbort" message="$(string.task_IPSEC_BFE_TransactionAbort)" value="115"/>
+     <task name="IPSEC_BFE_ProviderContextAdd" message="$(string.task_IPSEC_BFE_ProviderContextAdd)" value="117"/>
+     <task name="IPSEC_BFE_ProviderContextDeleteByKey" message="$(string.task_IPSEC_BFE_ProviderContextDeleteByKey)" value="119"/>
+     <task name="IPSEC_BFE_FilterAdd" message="$(string.task_IPSEC_BFE_FilterAdd)" value="121"/>
+     <task name="IPSEC_BFE_FilterDeleteByKey" message="$(string.task_IPSEC_BFE_FilterDeleteByKey)" value="123"/>
+     <task name="IPSEC_BFE_IPsecTunnelAdd" message="$(string.task_IPSEC_BFE_IPsecTunnelAdd)" value="125"/>
+     <task name="ApplyLocalPolicy" message="$(string.task_ApplyLocalPolicy)" value="127"/>
+     <task name="ApplyCachePolicy" message="$(string.task_ApplyCachePolicy)" value="129"/>
+    </tasks>
+    <events>
+     <event value="101" symbol="StartServiceStarten" version="0" task="StartService" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="102" symbol="StartServiceBeenden" version="0" task="StartService" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="103" symbol="StopServiceStarten" version="0" task="StopService" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="104" symbol="StopServiceBeenden" version="0" task="StopService" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="105" symbol="ApplyDomainPolicyStarten" version="0" task="ApplyDomainPolicy" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="106" symbol="ApplyDomainPolicyBeenden" version="0" task="ApplyDomainPolicy" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="107" symbol="IPSEC_BFE_EngineOpenStarten" version="0" task="IPSEC_BFE_EngineOpen" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="108" symbol="IPSEC_BFE_EngineOpenBeenden" version="0" task="IPSEC_BFE_EngineOpen" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="109" symbol="IPSEC_BFE_EngineCloseStarten" version="0" task="IPSEC_BFE_EngineClose" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="110" symbol="IPSEC_BFE_EngineCloseBeenden" version="0" task="IPSEC_BFE_EngineClose" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="111" symbol="IPSEC_BFE_TransactionBeginStarten" version="0" task="IPSEC_BFE_TransactionBegin" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="112" symbol="IPSEC_BFE_TransactionBeginBeenden" version="0" task="IPSEC_BFE_TransactionBegin" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="113" symbol="IPSEC_BFE_TransactionCommitStarten" version="0" task="IPSEC_BFE_TransactionCommit" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="114" symbol="IPSEC_BFE_TransactionCommitBeenden" version="0" task="IPSEC_BFE_TransactionCommit" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="115" symbol="IPSEC_BFE_TransactionAbortStarten" version="0" task="IPSEC_BFE_TransactionAbort" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="116" symbol="IPSEC_BFE_TransactionAbortBeenden" version="0" task="IPSEC_BFE_TransactionAbort" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="117" symbol="IPSEC_BFE_ProviderContextAddStarten" version="0" task="IPSEC_BFE_ProviderContextAdd" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="118" symbol="IPSEC_BFE_ProviderContextAddBeenden" version="0" task="IPSEC_BFE_ProviderContextAdd" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="119" symbol="IPSEC_BFE_ProviderContextDeleteByKeyStarten" version="0" task="IPSEC_BFE_ProviderContextDeleteByKey" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="120" symbol="IPSEC_BFE_ProviderContextDeleteByKeyBeenden" version="0" task="IPSEC_BFE_ProviderContextDeleteByKey" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="121" symbol="IPSEC_BFE_FilterAddStarten" version="0" task="IPSEC_BFE_FilterAdd" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="122" symbol="IPSEC_BFE_FilterAddBeenden" version="0" task="IPSEC_BFE_FilterAdd" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="123" symbol="IPSEC_BFE_FilterDeleteByKeyStarten" version="0" task="IPSEC_BFE_FilterDeleteByKey" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="124" symbol="IPSEC_BFE_FilterDeleteByKeyBeenden" version="0" task="IPSEC_BFE_FilterDeleteByKey" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="125" symbol="IPSEC_BFE_IPsecTunnelAddStarten" version="0" task="IPSEC_BFE_IPsecTunnelAdd" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="126" symbol="IPSEC_BFE_IPsecTunnelAddBeenden" version="0" task="IPSEC_BFE_IPsecTunnelAdd" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="127" symbol="ApplyLocalPolicyStarten" version="0" task="ApplyLocalPolicy" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="128" symbol="ApplyLocalPolicyBeenden" version="0" task="ApplyLocalPolicy" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="129" symbol="ApplyCachePolicyStarten" version="0" task="ApplyCachePolicy" opcode="win:Starten" level="win:Informational" keywords="PolicyAgent"/>
+     <event value="130" symbol="ApplyCachePolicyBeenden" version="0" task="ApplyCachePolicy" opcode="win:Beenden" level="win:Informational" keywords="PolicyAgent"/>
+    </events>
+    <templates>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_PolicyAgent" value="PolicyAgent"/>
+    <string id="task_StartService" value="StartService"/>
+    <string id="task_StopService" value="StopService"/>
+    <string id="task_ApplyDomainPolicy" value="ApplyDomainPolicy"/>
+    <string id="task_IPSEC_BFE_EngineOpen" value="IPSEC_BFE_EngineOpen"/>
+    <string id="task_IPSEC_BFE_EngineClose" value="IPSEC_BFE_EngineClose"/>
+    <string id="task_IPSEC_BFE_TransactionBegin" value="IPSEC_BFE_TransactionBegin"/>
+    <string id="task_IPSEC_BFE_TransactionCommit" value="IPSEC_BFE_TransactionCommit"/>
+    <string id="task_IPSEC_BFE_TransactionAbort" value="IPSEC_BFE_TransactionAbort"/>
+    <string id="task_IPSEC_BFE_ProviderContextAdd" value="IPSEC_BFE_ProviderContextAdd"/>
+    <string id="task_IPSEC_BFE_ProviderContextDeleteByKey" value="IPSEC_BFE_ProviderContextDeleteByKey"/>
+    <string id="task_IPSEC_BFE_FilterAdd" value="IPSEC_BFE_FilterAdd"/>
+    <string id="task_IPSEC_BFE_FilterDeleteByKey" value="IPSEC_BFE_FilterDeleteByKey"/>
+    <string id="task_IPSEC_BFE_IPsecTunnelAdd" value="IPSEC_BFE_IPsecTunnelAdd"/>
+    <string id="task_ApplyLocalPolicy" value="ApplyLocalPolicy"/>
+    <string id="task_ApplyCachePolicy" value="ApplyCachePolicy"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

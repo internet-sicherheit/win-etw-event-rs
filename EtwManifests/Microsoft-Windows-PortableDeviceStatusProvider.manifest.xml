@@ -1,0 +1,60 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-PortableDeviceStatusProvider" guid="{8c63b5a5-b484-4381-892d-edd424582df7}" resourceFileName="Microsoft-Windows-PortableDeviceStatusProvider" messageFileName="Microsoft-Windows-PortableDeviceStatusProvider" symbol="MicrosoftWindowsPortableDeviceStatusProvider" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="DLLLifetime" message="$(string.task_DLLLifetime)" value="64"/>
+     <task name="AllSourcesCreation" message="$(string.task_AllSourcesCreation)" value="65"/>
+     <task name="WPDSourcesCreation" message="$(string.task_WPDSourcesCreation)" value="66"/>
+     <task name="SyncSourcesCreation" message="$(string.task_SyncSourcesCreation)" value="67"/>
+     <task name="GetDeviceStatusService" message="$(string.task_GetDeviceStatusService)" value="69"/>
+     <task name="GetBattery" message="$(string.task_GetBattery)" value="70"/>
+     <task name="GetStorage" message="$(string.task_GetStorage)" value="71"/>
+     <task name="GetStatusServiceProperties" message="$(string.task_GetStatusServiceProperties)" value="72"/>
+     <task name="UpdateSyncProperties" message="$(string.task_UpdateSyncProperties)" value="73"/>
+    </tasks>
+    <events>
+     <event value="500" symbol="DLLLifetimeStarten" version="0" task="DLLLifetime" opcode="win:Starten" level="win:Informational"/>
+     <event value="501" symbol="DLLLifetimeBeenden" version="0" task="DLLLifetime" opcode="win:Beenden" level="win:Informational"/>
+     <event value="502" symbol="AllSourcesCreationStarten" version="0" task="AllSourcesCreation" opcode="win:Starten" level="win:Informational"/>
+     <event value="503" symbol="AllSourcesCreationBeenden" version="0" task="AllSourcesCreation" opcode="win:Beenden" level="win:Informational"/>
+     <event value="504" symbol="WPDSourcesCreationStarten" version="0" task="WPDSourcesCreation" opcode="win:Starten" level="win:Informational"/>
+     <event value="505" symbol="WPDSourcesCreationBeenden" version="0" task="WPDSourcesCreation" opcode="win:Beenden" level="win:Informational"/>
+     <event value="506" symbol="SyncSourcesCreationStarten" version="0" task="SyncSourcesCreation" opcode="win:Starten" level="win:Informational"/>
+     <event value="507" symbol="SyncSourcesCreationBeenden" version="0" task="SyncSourcesCreation" opcode="win:Beenden" level="win:Informational"/>
+     <event value="510" symbol="GetDeviceStatusServiceStarten" version="0" task="GetDeviceStatusService" opcode="win:Starten" level="win:Informational"/>
+     <event value="511" symbol="GetDeviceStatusServiceBeenden" version="0" task="GetDeviceStatusService" opcode="win:Beenden" level="win:Informational"/>
+     <event value="514" symbol="GetBatteryStarten" version="0" task="GetBattery" opcode="win:Starten" level="win:Informational"/>
+     <event value="515" symbol="GetBatteryBeenden" version="0" task="GetBattery" opcode="win:Beenden" level="win:Informational"/>
+     <event value="516" symbol="GetStorageStarten" version="0" task="GetStorage" opcode="win:Starten" level="win:Informational"/>
+     <event value="517" symbol="GetStorageBeenden" version="0" task="GetStorage" opcode="win:Beenden" level="win:Informational"/>
+     <event value="518" symbol="GetStatusServicePropertiesStarten" version="0" task="GetStatusServiceProperties" opcode="win:Starten" level="win:Informational"/>
+     <event value="519" symbol="GetStatusServicePropertiesBeenden" version="0" task="GetStatusServiceProperties" opcode="win:Beenden" level="win:Informational"/>
+     <event value="520" symbol="UpdateSyncPropertiesStarten" version="0" task="UpdateSyncProperties" opcode="win:Starten" level="win:Informational"/>
+     <event value="521" symbol="UpdateSyncPropertiesBeenden" version="0" task="UpdateSyncProperties" opcode="win:Beenden" level="win:Informational"/>
+     <event value="522" symbol="SyncSourcesCreationStarten522" version="0" task="SyncSourcesCreation" opcode="win:Starten" level="win:Informational"/>
+     <event value="523" symbol="SyncSourcesCreationBeenden523" version="0" task="SyncSourcesCreation" opcode="win:Beenden" level="win:Informational"/>
+    </events>
+    <templates>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_DLLLifetime" value="DLLLifetime"/>
+    <string id="task_AllSourcesCreation" value="AllSourcesCreation"/>
+    <string id="task_WPDSourcesCreation" value="WPDSourcesCreation"/>
+    <string id="task_SyncSourcesCreation" value="SyncSourcesCreation"/>
+    <string id="task_GetDeviceStatusService" value="GetDeviceStatusService"/>
+    <string id="task_GetBattery" value="GetBattery"/>
+    <string id="task_GetStorage" value="GetStorage"/>
+    <string id="task_GetStatusServiceProperties" value="GetStatusServiceProperties"/>
+    <string id="task_UpdateSyncProperties" value="UpdateSyncProperties"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

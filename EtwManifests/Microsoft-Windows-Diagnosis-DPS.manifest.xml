@@ -1,0 +1,177 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Diagnosis-DPS" guid="{6bba3851-2c7e-4dea-8f54-31e5afd029e3}" resourceFileName="Microsoft-Windows-Diagnosis-DPS" messageFileName="Microsoft-Windows-Diagnosis-DPS" symbol="MicrosoftWindowsDiagnosisDPS" source="Xml" >
+    <keywords>
+     <keyword name="memory" message="$(string.keyword_memory)" mask="0x200"/>
+     <keyword name="perf" message="$(string.keyword_perf)" mask="0x100000000"/>
+     <keyword name="scenario" message="$(string.keyword_scenario)" mask="0x200000000"/>
+     <keyword name="debug" message="$(string.keyword_debug)" mask="0x400000000"/>
+     <keyword name="lifecycle" message="$(string.keyword_lifecycle)" mask="0x800000000"/>
+     <keyword name="notification" message="$(string.keyword_notification)" mask="0x1000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="Szenariozyklus" message="$(string.task_Szenariozyklus)" value="1">
+      <opcodes>
+       <opcode name="VoneinemDiagnosemodulwurdeeinProblemfestgestellt." message="$(string.opcode_SzenariozyklusVoneinemDiagnosemodulwurdeeinProblemfestgestellt.)" value="12"/>
+       <opcode name="EineSzenarioinstanzwurdezurProblembehandlungweitergeleitet." message="$(string.opcode_SzenariozyklusEineSzenarioinstanzwurdezurProblembehandlungweitergeleitet.)" value="13"/>
+       <opcode name="VoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossen,ohneeineLösungfestzulegen." message="$(string.opcode_SzenariozyklusVoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossen,ohneeineLösungfestzulegen.)" value="14"/>
+       <opcode name="VoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeinesofortigeLösungfestgelegt." message="$(string.opcode_SzenariozyklusVoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeinesofortigeLösungfestgelegt.)" value="15"/>
+       <opcode name="VoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeineverzögerteLösungfestgelegt." message="$(string.opcode_SzenariozyklusVoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeineverzögerteLösungfestgelegt.)" value="16"/>
+       <opcode name="EineSzenarioinstanzwurdezurLösungweitergeleitet." message="$(string.opcode_SzenariozyklusEineSzenarioinstanzwurdezurLösungweitergeleitet.)" value="17"/>
+       <opcode name="EinDiagnosemodulwurdeeigenständigindieWarteschlangeaufgenommen,umspäteraufgerufenzuwerden." message="$(string.opcode_SzenariozyklusEinDiagnosemodulwurdeeigenständigindieWarteschlangeaufgenommen,umspäteraufgerufenzuwerden.)" value="18"/>
+       <opcode name="VoneinemDiagnosemodulwurdedieLösungabgeschlossen." message="$(string.opcode_SzenariozyklusVoneinemDiagnosemodulwurdedieLösungabgeschlossen.)" value="19"/>
+       <opcode name="VomDiagnoserichtliniendienstkonnteeinDiagnosemodulhostnichtinstanziiertwerden." message="$(string.opcode_SzenariozyklusVomDiagnoserichtliniendienstkonnteeinDiagnosemodulhostnichtinstanziiertwerden.)" value="20"/>
+       <opcode name="DiesesEreigniswirdbeieinemSzenariofehleraufgerufen." message="$(string.opcode_SzenariozyklusDiesesEreigniswirdbeieinemSzenariofehleraufgerufen.)" value="21"/>
+       <opcode name="EinDiagnosemodulwurdeindenStatus"Fehlerhaft"versetzt." message="$(string.opcode_SzenariozyklusEinDiagnosemodulwurdeindenStatus"Fehlerhaft"versetzt.)" value="22"/>
+      </opcodes>
+     </task>
+     <task name="Debugaufgabe" message="$(string.task_Debugaufgabe)" value="2">
+      <opcodes>
+       <opcode name="Debugereignis" message="$(string.opcode_DebugaufgabeDebugereignis)" value="23"/>
+       <opcode name="DiesesEreigniswirdbeimServiceMainfürdenDienstaufgerufen." message="$(string.opcode_DebugaufgabeDiesesEreigniswirdbeimServiceMainfürdenDienstaufgerufen.)" value="24"/>
+       <opcode name="DiesesEreigniswirdaufgerufen,wennderDPSseinenStatusals"wirdausgeführt"andenSCMübermittelt." message="$(string.opcode_DebugaufgabeDiesesEreigniswirdaufgerufen,wennderDPSseinenStatusals"wirdausgeführt"andenSCMübermittelt.)" value="25"/>
+       <opcode name="DiesesEreigniswirdaufgerufen,wennderDiensteineHerunterfahren/Beenden_BenachrichtigungvomSCMempfängt." message="$(string.opcode_DebugaufgabeDiesesEreigniswirdaufgerufen,wennderDiensteineHerunterfahren/Beenden_BenachrichtigungvomSCMempfängt.)" value="26"/>
+       <opcode name="DiesesEreigniswirdaufgerufen,wennderDiensterfolgreichbeendetwurde." message="$(string.opcode_DebugaufgabeDiesesEreigniswirdaufgerufen,wennderDiensterfolgreichbeendetwurde.)" value="27"/>
+      </opcodes>
+     </task>
+     <task name="DPS_Initialisierung" message="$(string.task_DPS_Initialisierung)" value="3">
+      <opcodes>
+       <opcode name="DerDiagnoserichtliniendienstwurdegestartet." message="$(string.opcode_DPS_InitialisierungDerDiagnoserichtliniendienstwurdegestartet.)" value="10"/>
+       <opcode name="EinDiagnoseszenariowurdefalschkonfiguriert." message="$(string.opcode_DPS_InitialisierungEinDiagnoseszenariowurdefalschkonfiguriert.)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="Benachrichtigungsaufgabe" message="$(string.task_Benachrichtigungsaufgabe)" value="4">
+      <opcodes>
+       <opcode name="DiesesEreigniswirdaufgerufen,wenndieGruppenrichtlinievomDPSaktualisiertwird." message="$(string.opcode_BenachrichtigungsaufgabeDiesesEreigniswirdaufgerufen,wenndieGruppenrichtlinievomDPSaktualisiertwird.)" value="28"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1" symbol="DPS_InitialisierungDerDiagnoserichtliniendienstwurdegestartet." version="0" task="DPS_Initialisierung" opcode="DerDiagnoserichtliniendienstwurdegestartet." level="win:Verbose" keywords="scenario"/>
+     <event value="2" symbol="DPS_InitialisierungDerDiagnoserichtliniendienstwurdegestartet.2" version="0" task="DPS_Initialisierung" opcode="DerDiagnoserichtliniendienstwurdegestartet." level="win:Verbose" keywords="scenario"/>
+     <event value="5" symbol="DPS_InitialisierungEinDiagnoseszenariowurdefalschkonfiguriert." version="0" task="DPS_Initialisierung" opcode="EinDiagnoseszenariowurdefalschkonfiguriert." level="win:Warning" keywords="lifecycle" template="DPS_InitialisierungEinDiagnoseszenariowurdefalschkonfiguriert.Args"/>
+     <event value="100" symbol="SzenariozyklusVoneinemDiagnosemodulwurdeeinProblemfestgestellt." version="0" task="Szenariozyklus" opcode="VoneinemDiagnosemodulwurdeeinProblemfestgestellt." level="win:Informational" keywords="lifecycle" template="SzenariozyklusVoneinemDiagnosemodulwurdeeinProblemfestgestellt.Args"/>
+     <event value="105" symbol="SzenariozyklusEineSzenarioinstanzwurdezurProblembehandlungweitergeleitet." version="0" task="Szenariozyklus" opcode="EineSzenarioinstanzwurdezurProblembehandlungweitergeleitet." level="win:Informational" keywords="lifecycle" template="SzenariozyklusVoneinemDiagnosemodulwurdeeinProblemfestgestellt.Args"/>
+     <event value="110" symbol="SzenariozyklusVoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossen,ohneeineLösungfestzulegen." version="0" task="Szenariozyklus" opcode="VoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossen,ohneeineLösungfestzulegen." level="win:Informational" keywords="lifecycle" template="SzenariozyklusVoneinemDiagnosemodulwurdeeinProblemfestgestellt.Args"/>
+     <event value="115" symbol="SzenariozyklusVoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeinesofortigeLösungfestgelegt." version="0" task="Szenariozyklus" opcode="VoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeinesofortigeLösungfestgelegt." level="win:Informational" keywords="lifecycle" template="SzenariozyklusVoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeinesofortigeLösungfestgelegt.Args"/>
+     <event value="120" symbol="SzenariozyklusVoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeineverzögerteLösungfestgelegt." version="0" task="Szenariozyklus" opcode="VoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeineverzögerteLösungfestgelegt." level="win:Informational" keywords="lifecycle" template="SzenariozyklusVoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeinesofortigeLösungfestgelegt.Args"/>
+     <event value="125" symbol="SzenariozyklusEineSzenarioinstanzwurdezurLösungweitergeleitet." version="0" task="Szenariozyklus" opcode="EineSzenarioinstanzwurdezurLösungweitergeleitet." level="win:Informational" keywords="lifecycle" template="SzenariozyklusVoneinemDiagnosemodulwurdeeinProblemfestgestellt.Args"/>
+     <event value="126" symbol="SzenariozyklusEinDiagnosemodulwurdeeigenständigindieWarteschlangeaufgenommen,umspäteraufgerufenzuwerden." version="0" task="Szenariozyklus" opcode="EinDiagnosemodulwurdeeigenständigindieWarteschlangeaufgenommen,umspäteraufgerufenzuwerden." level="win:Informational" keywords="lifecycle" template="SzenariozyklusVoneinemDiagnosemodulwurdeeinProblemfestgestellt.Args"/>
+     <event value="130" symbol="SzenariozyklusVoneinemDiagnosemodulwurdedieLösungabgeschlossen." version="0" task="Szenariozyklus" opcode="VoneinemDiagnosemodulwurdedieLösungabgeschlossen." level="win:Informational" keywords="lifecycle" template="SzenariozyklusVoneinemDiagnosemodulwurdeeinProblemfestgestellt.Args"/>
+     <event value="135" symbol="SzenariozyklusVomDiagnoserichtliniendienstkonnteeinDiagnosemodulhostnichtinstanziiertwerden." version="0" task="Szenariozyklus" opcode="VomDiagnoserichtliniendienstkonnteeinDiagnosemodulhostnichtinstanziiertwerden." level="win:Error" keywords="lifecycle" template="SzenariozyklusVomDiagnoserichtliniendienstkonnteeinDiagnosemodulhostnichtinstanziiertwerden.Args"/>
+     <event value="140" symbol="DebugaufgabeDebugereignis" version="0" task="Debugaufgabe" opcode="Debugereignis" level="win:Error" keywords="debug" template="DebugaufgabeDebugereignisArgs"/>
+     <event value="145" symbol="DebugaufgabeDiesesEreigniswirdbeimServiceMainfürdenDienstaufgerufen." version="0" task="Debugaufgabe" opcode="DiesesEreigniswirdbeimServiceMainfürdenDienstaufgerufen." level="win:Verbose" keywords="perf"/>
+     <event value="150" symbol="DebugaufgabeDiesesEreigniswirdaufgerufen,wennderDPSseinenStatusals"wirdausgeführt"andenSCMübermittelt." version="0" task="Debugaufgabe" opcode="DiesesEreigniswirdaufgerufen,wennderDPSseinenStatusals"wirdausgeführt"andenSCMübermittelt." level="win:Verbose" keywords="perf"/>
+     <event value="155" symbol="DebugaufgabeDiesesEreigniswirdaufgerufen,wennderDiensteineHerunterfahren/Beenden_BenachrichtigungvomSCMempfängt." version="0" task="Debugaufgabe" opcode="DiesesEreigniswirdaufgerufen,wennderDiensteineHerunterfahren/Beenden_BenachrichtigungvomSCMempfängt." level="win:Verbose" keywords="perf"/>
+     <event value="160" symbol="DebugaufgabeDiesesEreigniswirdaufgerufen,wennderDiensterfolgreichbeendetwurde." version="0" task="Debugaufgabe" opcode="DiesesEreigniswirdaufgerufen,wennderDiensterfolgreichbeendetwurde." level="win:Verbose" keywords="perf"/>
+     <event value="165" symbol="SzenariozyklusDiesesEreigniswirdbeieinemSzenariofehleraufgerufen." version="0" task="Szenariozyklus" opcode="DiesesEreigniswirdbeieinemSzenariofehleraufgerufen." level="win:Warning" keywords="lifecycle" template="SzenariozyklusVomDiagnoserichtliniendienstkonnteeinDiagnosemodulhostnichtinstanziiertwerden.Args"/>
+     <event value="170" symbol="SzenariozyklusDiesesEreigniswirdbeieinemSzenariofehleraufgerufen.170" version="0" task="Szenariozyklus" opcode="DiesesEreigniswirdbeieinemSzenariofehleraufgerufen." level="win:Warning" keywords="lifecycle" template="SzenariozyklusDiesesEreigniswirdbeieinemSzenariofehleraufgerufen.170Args"/>
+     <event value="175" symbol="SzenariozyklusDiesesEreigniswirdbeieinemSzenariofehleraufgerufen.175" version="0" task="Szenariozyklus" opcode="DiesesEreigniswirdbeieinemSzenariofehleraufgerufen." level="win:Warning" keywords="lifecycle" template="SzenariozyklusDiesesEreigniswirdbeieinemSzenariofehleraufgerufen.170Args"/>
+     <event value="180" symbol="BenachrichtigungsaufgabeDiesesEreigniswirdaufgerufen,wenndieGruppenrichtlinievomDPSaktualisiertwird." version="0" task="Benachrichtigungsaufgabe" opcode="DiesesEreigniswirdaufgerufen,wenndieGruppenrichtlinievomDPSaktualisiertwird." level="win:Verbose" keywords="notification"/>
+     <event value="185" symbol="SzenariozyklusEinDiagnosemodulwurdeindenStatus"Fehlerhaft"versetzt." version="0" task="Szenariozyklus" opcode="EinDiagnosemodulwurdeindenStatus"Fehlerhaft"versetzt." level="win:Warning" keywords="lifecycle" template="SzenariozyklusEinDiagnosemodulwurdeindenStatus"Fehlerhaft"versetzt.Args"/>
+     <event value="5016" symbol="task_0" version="0" task="task_0" level="win:Always" keywords="memory" template="task_0Args"/>
+     <event value="5017" symbol="task_05017" version="0" task="task_0" level="win:Always" keywords="memory" template="task_05017Args"/>
+    </events>
+    <templates>
+     <template tid="DPS_InitialisierungEinDiagnoseszenariowurdefalschkonfiguriert.Args">
+      <data name="ScenarioId" inType="win:GUID"/>
+     </template>
+     <template tid="SzenariozyklusVoneinemDiagnosemodulwurdeeinProblemfestgestellt.Args">
+      <data name="ScenarioId" inType="win:GUID"/>
+      <data name="InstanceId" inType="win:GUID"/>
+      <data name="OriginalActivityId" inType="win:GUID"/>
+      <data name="DiagnosticModuleImageName" inType="win:UnicodeString"/>
+      <data name="DiagnosticModuleId" inType="win:GUID"/>
+     </template>
+     <template tid="SzenariozyklusVoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeinesofortigeLösungfestgelegt.Args">
+      <data name="ScenarioId" inType="win:GUID"/>
+      <data name="InstanceId" inType="win:GUID"/>
+      <data name="OriginalActivityId" inType="win:GUID"/>
+      <data name="DiagnosticModuleImageName" inType="win:UnicodeString"/>
+      <data name="ResolutionId" inType="win:GUID"/>
+      <data name="ResolutionSID" inType="win:SID"/>
+      <data name="ResolutionSessionId" inType="win:UInt32"/>
+      <data name="ResolutionExpirationDate" inType="win:FILETIME"/>
+      <data name="DiagnosticModuleId" inType="win:GUID"/>
+     </template>
+     <template tid="SzenariozyklusVomDiagnoserichtliniendienstkonnteeinDiagnosemodulhostnichtinstanziiertwerden.Args">
+      <data name="ScenarioId" inType="win:GUID"/>
+      <data name="InstanceId" inType="win:GUID"/>
+      <data name="OriginalActivityId" inType="win:GUID"/>
+      <data name="StatusCode" inType="win:UInt32"/>
+      <data name="DiagnosticModuleImageName" inType="win:UnicodeString"/>
+      <data name="DiagnosticModuleId" inType="win:GUID"/>
+     </template>
+     <template tid="DebugaufgabeDebugereignisArgs">
+      <data name="FileName" inType="win:UnicodeString"/>
+      <data name="FunctionName" inType="win:UnicodeString"/>
+      <data name="LineNumber" inType="win:Int32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SzenariozyklusDiesesEreigniswirdbeieinemSzenariofehleraufgerufen.170Args">
+      <data name="ScenarioId" inType="win:GUID"/>
+      <data name="InstanceId" inType="win:GUID"/>
+      <data name="OriginalActivityId" inType="win:GUID"/>
+      <data name="DiagnosticModuleImageName" inType="win:UnicodeString"/>
+      <data name="StatusCode" inType="win:Int32"/>
+      <data name="DiagnosticModuleId" inType="win:GUID"/>
+     </template>
+     <template tid="SzenariozyklusEinDiagnosemodulwurdeindenStatus"Fehlerhaft"versetzt.Args">
+      <data name="DiagnosticModuleImageName" inType="win:UnicodeString"/>
+      <data name="DiagnosticModuleId" inType="win:GUID"/>
+      <data name="StatusCode" inType="win:Int32"/>
+     </template>
+     <template tid="task_0Args">
+      <data name="FileName" inType="win:AnsiString"/>
+      <data name="Line" inType="win:UInt32"/>
+      <data name="Address" inType="win:Pointer"/>
+      <data name="Size" inType="win:Pointer"/>
+     </template>
+     <template tid="task_05017Args">
+      <data name="FileName" inType="win:AnsiString"/>
+      <data name="Line" inType="win:UInt32"/>
+      <data name="Address" inType="win:Pointer"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_memory" value="memory"/>
+    <string id="keyword_perf" value="perf"/>
+    <string id="keyword_scenario" value="scenario"/>
+    <string id="keyword_debug" value="debug"/>
+    <string id="keyword_lifecycle" value="lifecycle"/>
+    <string id="keyword_notification" value="notification"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_Szenariozyklus" value="Szenariozyklus"/>
+    <string id="opcode_SzenariozyklusVoneinemDiagnosemodulwurdeeinProblemfestgestellt." value="VoneinemDiagnosemodulwurdeeinProblemfestgestellt."/>
+    <string id="opcode_SzenariozyklusEineSzenarioinstanzwurdezurProblembehandlungweitergeleitet." value="EineSzenarioinstanzwurdezurProblembehandlungweitergeleitet."/>
+    <string id="opcode_SzenariozyklusVoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossen,ohneeineLösungfestzulegen." value="VoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossen,ohneeineLösungfestzulegen."/>
+    <string id="opcode_SzenariozyklusVoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeinesofortigeLösungfestgelegt." value="VoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeinesofortigeLösungfestgelegt."/>
+    <string id="opcode_SzenariozyklusVoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeineverzögerteLösungfestgelegt." value="VoneinemDiagnosemodulwurdedieProblembehandlungabgeschlossenundeineverzögerteLösungfestgelegt."/>
+    <string id="opcode_SzenariozyklusEineSzenarioinstanzwurdezurLösungweitergeleitet." value="EineSzenarioinstanzwurdezurLösungweitergeleitet."/>
+    <string id="opcode_SzenariozyklusEinDiagnosemodulwurdeeigenständigindieWarteschlangeaufgenommen,umspäteraufgerufenzuwerden." value="EinDiagnosemodulwurdeeigenständigindieWarteschlangeaufgenommen,umspäteraufgerufenzuwerden."/>
+    <string id="opcode_SzenariozyklusVoneinemDiagnosemodulwurdedieLösungabgeschlossen." value="VoneinemDiagnosemodulwurdedieLösungabgeschlossen."/>
+    <string id="opcode_SzenariozyklusVomDiagnoserichtliniendienstkonnteeinDiagnosemodulhostnichtinstanziiertwerden." value="VomDiagnoserichtliniendienstkonnteeinDiagnosemodulhostnichtinstanziiertwerden."/>
+    <string id="opcode_SzenariozyklusDiesesEreigniswirdbeieinemSzenariofehleraufgerufen." value="DiesesEreigniswirdbeieinemSzenariofehleraufgerufen."/>
+    <string id="opcode_SzenariozyklusEinDiagnosemodulwurdeindenStatus"Fehlerhaft"versetzt." value="EinDiagnosemodulwurdeindenStatus"Fehlerhaft"versetzt."/>
+    <string id="task_Debugaufgabe" value="Debugaufgabe"/>
+    <string id="opcode_DebugaufgabeDebugereignis" value="Debugereignis"/>
+    <string id="opcode_DebugaufgabeDiesesEreigniswirdbeimServiceMainfürdenDienstaufgerufen." value="DiesesEreigniswirdbeimServiceMainfürdenDienstaufgerufen."/>
+    <string id="opcode_DebugaufgabeDiesesEreigniswirdaufgerufen,wennderDPSseinenStatusals"wirdausgeführt"andenSCMübermittelt." value="DiesesEreigniswirdaufgerufen,wennderDPSseinenStatusals"wirdausgeführt"andenSCMübermittelt."/>
+    <string id="opcode_DebugaufgabeDiesesEreigniswirdaufgerufen,wennderDiensteineHerunterfahren/Beenden_BenachrichtigungvomSCMempfängt." value="DiesesEreigniswirdaufgerufen,wennderDiensteineHerunterfahren/Beenden_BenachrichtigungvomSCMempfängt."/>
+    <string id="opcode_DebugaufgabeDiesesEreigniswirdaufgerufen,wennderDiensterfolgreichbeendetwurde." value="DiesesEreigniswirdaufgerufen,wennderDiensterfolgreichbeendetwurde."/>
+    <string id="task_DPS_Initialisierung" value="DPS_Initialisierung"/>
+    <string id="opcode_DPS_InitialisierungDerDiagnoserichtliniendienstwurdegestartet." value="DerDiagnoserichtliniendienstwurdegestartet."/>
+    <string id="opcode_DPS_InitialisierungEinDiagnoseszenariowurdefalschkonfiguriert." value="EinDiagnoseszenariowurdefalschkonfiguriert."/>
+    <string id="task_Benachrichtigungsaufgabe" value="Benachrichtigungsaufgabe"/>
+    <string id="opcode_BenachrichtigungsaufgabeDiesesEreigniswirdaufgerufen,wenndieGruppenrichtlinievomDPSaktualisiertwird." value="DiesesEreigniswirdaufgerufen,wenndieGruppenrichtlinievomDPSaktualisiertwird."/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

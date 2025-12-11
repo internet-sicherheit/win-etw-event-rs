@@ -1,0 +1,87 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-mobsync" guid="{b44aec44-38f4-4b59-8df3-10306abf19b2}" resourceFileName="Microsoft-Windows-mobsync" messageFileName="Microsoft-Windows-mobsync" symbol="MicrosoftWindowsmobsync" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="SyncMgrTraceId_SyncFolderContextMenuInit" message="$(string.task_SyncMgrTraceId_SyncFolderContextMenuInit)" value="60101"/>
+     <task name="SyncMgrTraceId_SyncFolderRemoveConflicts" message="$(string.task_SyncMgrTraceId_SyncFolderRemoveConflicts)" value="60103"/>
+     <task name="SyncMgrTraceId_SyncFolderSyncTime" message="$(string.task_SyncMgrTraceId_SyncFolderSyncTime)" value="60105"/>
+     <task name="SyncMgrTraceId_SyncFolderHandlerNotifyStop" message="$(string.task_SyncMgrTraceId_SyncFolderHandlerNotifyStop)" value="60107"/>
+     <task name="SyncMgrTraceId_SyncFolderHandlerNotifyStart" message="$(string.task_SyncMgrTraceId_SyncFolderHandlerNotifyStart)" value="60109"/>
+     <task name="SyncMgrTraceId_HandlerLoad" message="$(string.task_SyncMgrTraceId_HandlerLoad)" value="60111"/>
+     <task name="SyncMgrTraceId_HandlerCollectionEnumeration" message="$(string.task_SyncMgrTraceId_HandlerCollectionEnumeration)" value="60113"/>
+     <task name="SyncMgrTraceId_ViewCBRegistration" message="$(string.task_SyncMgrTraceId_ViewCBRegistration)" value="60115"/>
+     <task name="SyncMgrTraceId_HandlerCacheEnum" message="$(string.task_SyncMgrTraceId_HandlerCacheEnum)" value="60117"/>
+     <task name="SyncMgrTraceId_HandlerCacheCreate" message="$(string.task_SyncMgrTraceId_HandlerCacheCreate)" value="60119"/>
+     <task name="SyncMgrTraceId_FolderItemCacheLoad" message="$(string.task_SyncMgrTraceId_FolderItemCacheLoad)" value="60121"/>
+     <task name="SyncMgrTraceId_SyncFolderRemoveEvents" message="$(string.task_SyncMgrTraceId_SyncFolderRemoveEvents)" value="60123"/>
+    </tasks>
+    <events>
+     <event value="60101" symbol="SyncMgrTraceId_SyncFolderContextMenuInitStarten" version="0" task="SyncMgrTraceId_SyncFolderContextMenuInit" opcode="win:Starten" level="win:Informational"/>
+     <event value="60102" symbol="SyncMgrTraceId_SyncFolderContextMenuInitBeenden" version="0" task="SyncMgrTraceId_SyncFolderContextMenuInit" opcode="win:Beenden" level="win:Informational"/>
+     <event value="60103" symbol="SyncMgrTraceId_SyncFolderRemoveConflictsStarten" version="0" task="SyncMgrTraceId_SyncFolderRemoveConflicts" opcode="win:Starten" level="win:Informational"/>
+     <event value="60103" symbol="SyncMgrTraceId_SyncFolderRemoveConflictsStarten_V1" version="1" task="SyncMgrTraceId_SyncFolderRemoveConflicts" opcode="win:Starten" level="win:Informational" template="SyncMgrTraceId_SyncFolderRemoveConflictsStartenArgs_V1"/>
+     <event value="60104" symbol="SyncMgrTraceId_SyncFolderRemoveConflictsBeenden" version="0" task="SyncMgrTraceId_SyncFolderRemoveConflicts" opcode="win:Beenden" level="win:Informational"/>
+     <event value="60104" symbol="SyncMgrTraceId_SyncFolderRemoveConflictsBeenden_V1" version="1" task="SyncMgrTraceId_SyncFolderRemoveConflicts" opcode="win:Beenden" level="win:Informational" template="SyncMgrTraceId_SyncFolderRemoveConflictsStartenArgs_V1"/>
+     <event value="60105" symbol="SyncMgrTraceId_SyncFolderSyncTimeStarten" version="0" task="SyncMgrTraceId_SyncFolderSyncTime" opcode="win:Starten" level="win:Informational"/>
+     <event value="60106" symbol="SyncMgrTraceId_SyncFolderSyncTimeBeenden" version="0" task="SyncMgrTraceId_SyncFolderSyncTime" opcode="win:Beenden" level="win:Informational"/>
+     <event value="60107" symbol="SyncMgrTraceId_SyncFolderHandlerNotifyStopStarten" version="0" task="SyncMgrTraceId_SyncFolderHandlerNotifyStop" opcode="win:Starten" level="win:Informational"/>
+     <event value="60108" symbol="SyncMgrTraceId_SyncFolderHandlerNotifyStopBeenden" version="0" task="SyncMgrTraceId_SyncFolderHandlerNotifyStop" opcode="win:Beenden" level="win:Informational"/>
+     <event value="60109" symbol="SyncMgrTraceId_SyncFolderHandlerNotifyStartStarten" version="0" task="SyncMgrTraceId_SyncFolderHandlerNotifyStart" opcode="win:Starten" level="win:Informational"/>
+     <event value="60110" symbol="SyncMgrTraceId_SyncFolderHandlerNotifyStartBeenden" version="0" task="SyncMgrTraceId_SyncFolderHandlerNotifyStart" opcode="win:Beenden" level="win:Informational"/>
+     <event value="60111" symbol="SyncMgrTraceId_HandlerLoadStarten" version="0" task="SyncMgrTraceId_HandlerLoad" opcode="win:Starten" level="win:Informational"/>
+     <event value="60111" symbol="SyncMgrTraceId_HandlerLoadStarten_V1" version="1" task="SyncMgrTraceId_HandlerLoad" opcode="win:Starten" level="win:Informational" template="SyncMgrTraceId_HandlerLoadStartenArgs_V1"/>
+     <event value="60112" symbol="SyncMgrTraceId_HandlerLoadBeenden" version="0" task="SyncMgrTraceId_HandlerLoad" opcode="win:Beenden" level="win:Informational"/>
+     <event value="60112" symbol="SyncMgrTraceId_HandlerLoadBeenden_V1" version="1" task="SyncMgrTraceId_HandlerLoad" opcode="win:Beenden" level="win:Informational" template="SyncMgrTraceId_HandlerLoadStartenArgs_V1"/>
+     <event value="60113" symbol="SyncMgrTraceId_HandlerCollectionEnumerationStarten" version="0" task="SyncMgrTraceId_HandlerCollectionEnumeration" opcode="win:Starten" level="win:Informational"/>
+     <event value="60113" symbol="SyncMgrTraceId_HandlerCollectionEnumerationStarten_V1" version="1" task="SyncMgrTraceId_HandlerCollectionEnumeration" opcode="win:Starten" level="win:Informational" template="SyncMgrTraceId_HandlerCollectionEnumerationStartenArgs_V1"/>
+     <event value="60114" symbol="SyncMgrTraceId_HandlerCollectionEnumerationBeenden" version="0" task="SyncMgrTraceId_HandlerCollectionEnumeration" opcode="win:Beenden" level="win:Informational"/>
+     <event value="60114" symbol="SyncMgrTraceId_HandlerCollectionEnumerationBeenden_V1" version="1" task="SyncMgrTraceId_HandlerCollectionEnumeration" opcode="win:Beenden" level="win:Informational" template="SyncMgrTraceId_HandlerCollectionEnumerationStartenArgs_V1"/>
+     <event value="60115" symbol="SyncMgrTraceId_ViewCBRegistrationStarten" version="0" task="SyncMgrTraceId_ViewCBRegistration" opcode="win:Starten" level="win:Informational"/>
+     <event value="60116" symbol="SyncMgrTraceId_ViewCBRegistrationBeenden" version="0" task="SyncMgrTraceId_ViewCBRegistration" opcode="win:Beenden" level="win:Informational"/>
+     <event value="60117" symbol="SyncMgrTraceId_HandlerCacheEnumStarten" version="0" task="SyncMgrTraceId_HandlerCacheEnum" opcode="win:Starten" level="win:Informational"/>
+     <event value="60118" symbol="SyncMgrTraceId_HandlerCacheEnumBeenden" version="0" task="SyncMgrTraceId_HandlerCacheEnum" opcode="win:Beenden" level="win:Informational"/>
+     <event value="60119" symbol="SyncMgrTraceId_HandlerCacheCreateStarten" version="0" task="SyncMgrTraceId_HandlerCacheCreate" opcode="win:Starten" level="win:Informational"/>
+     <event value="60120" symbol="SyncMgrTraceId_HandlerCacheCreateBeenden" version="0" task="SyncMgrTraceId_HandlerCacheCreate" opcode="win:Beenden" level="win:Informational"/>
+     <event value="60121" symbol="SyncMgrTraceId_FolderItemCacheLoadStarten" version="0" task="SyncMgrTraceId_FolderItemCacheLoad" opcode="win:Starten" level="win:Informational"/>
+     <event value="60122" symbol="SyncMgrTraceId_FolderItemCacheLoadBeenden" version="0" task="SyncMgrTraceId_FolderItemCacheLoad" opcode="win:Beenden" level="win:Informational"/>
+     <event value="60123" symbol="SyncMgrTraceId_SyncFolderRemoveEventsStarten" version="0" task="SyncMgrTraceId_SyncFolderRemoveEvents" opcode="win:Starten" level="win:Informational"/>
+     <event value="60123" symbol="SyncMgrTraceId_SyncFolderRemoveEventsStarten_V1" version="1" task="SyncMgrTraceId_SyncFolderRemoveEvents" opcode="win:Starten" level="win:Informational" template="SyncMgrTraceId_SyncFolderRemoveConflictsStartenArgs_V1"/>
+     <event value="60124" symbol="SyncMgrTraceId_SyncFolderRemoveEventsBeenden" version="0" task="SyncMgrTraceId_SyncFolderRemoveEvents" opcode="win:Beenden" level="win:Informational"/>
+     <event value="60124" symbol="SyncMgrTraceId_SyncFolderRemoveEventsBeenden_V1" version="1" task="SyncMgrTraceId_SyncFolderRemoveEvents" opcode="win:Beenden" level="win:Informational" template="SyncMgrTraceId_SyncFolderRemoveConflictsStartenArgs_V1"/>
+    </events>
+    <templates>
+     <template tid="SyncMgrTraceId_SyncFolderRemoveConflictsStartenArgs_V1">
+      <data name="LoopCount" inType="win:UInt32"/>
+     </template>
+     <template tid="SyncMgrTraceId_HandlerLoadStartenArgs_V1">
+      <data name="psz" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SyncMgrTraceId_HandlerCollectionEnumerationStartenArgs_V1">
+      <data name="guid" inType="win:GUID"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_SyncMgrTraceId_SyncFolderContextMenuInit" value="SyncMgrTraceId_SyncFolderContextMenuInit"/>
+    <string id="task_SyncMgrTraceId_SyncFolderRemoveConflicts" value="SyncMgrTraceId_SyncFolderRemoveConflicts"/>
+    <string id="task_SyncMgrTraceId_SyncFolderSyncTime" value="SyncMgrTraceId_SyncFolderSyncTime"/>
+    <string id="task_SyncMgrTraceId_SyncFolderHandlerNotifyStop" value="SyncMgrTraceId_SyncFolderHandlerNotifyStop"/>
+    <string id="task_SyncMgrTraceId_SyncFolderHandlerNotifyStart" value="SyncMgrTraceId_SyncFolderHandlerNotifyStart"/>
+    <string id="task_SyncMgrTraceId_HandlerLoad" value="SyncMgrTraceId_HandlerLoad"/>
+    <string id="task_SyncMgrTraceId_HandlerCollectionEnumeration" value="SyncMgrTraceId_HandlerCollectionEnumeration"/>
+    <string id="task_SyncMgrTraceId_ViewCBRegistration" value="SyncMgrTraceId_ViewCBRegistration"/>
+    <string id="task_SyncMgrTraceId_HandlerCacheEnum" value="SyncMgrTraceId_HandlerCacheEnum"/>
+    <string id="task_SyncMgrTraceId_HandlerCacheCreate" value="SyncMgrTraceId_HandlerCacheCreate"/>
+    <string id="task_SyncMgrTraceId_FolderItemCacheLoad" value="SyncMgrTraceId_FolderItemCacheLoad"/>
+    <string id="task_SyncMgrTraceId_SyncFolderRemoveEvents" value="SyncMgrTraceId_SyncFolderRemoveEvents"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

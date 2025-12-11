@@ -1,0 +1,975 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-USB-USBXHCI" guid="{30e1d284-5d88-459c-83fd-6345b39b19ec}" resourceFileName="Microsoft-Windows-USB-USBXHCI" messageFileName="Microsoft-Windows-USB-USBXHCI" symbol="MicrosoftWindowsUSBUSBXHCI" source="Xml" >
+    <keywords>
+     <keyword name="Default" message="$(string.keyword_Default)" mask="0x1"/>
+     <keyword name="USBError" message="$(string.keyword_USBError)" mask="0x2"/>
+     <keyword name="IRP" message="$(string.keyword_IRP)" mask="0x4"/>
+     <keyword name="Power" message="$(string.keyword_Power)" mask="0x8"/>
+     <keyword name="PnP" message="$(string.keyword_PnP)" mask="0x10"/>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x20"/>
+     <keyword name="HeadersBusTrace" message="$(string.keyword_HeadersBusTrace)" mask="0x40"/>
+     <keyword name="PartialDataBusTrace" message="$(string.keyword_PartialDataBusTrace)" mask="0x80"/>
+     <keyword name="FullDataBusTrace" message="$(string.keyword_FullDataBusTrace)" mask="0x100"/>
+     <keyword name="StateMachine" message="$(string.keyword_StateMachine)" mask="0x200"/>
+     <keyword name="Enumeration" message="$(string.keyword_Enumeration)" mask="0x400"/>
+     <keyword name="VerifyDriver" message="$(string.keyword_VerifyDriver)" mask="0x800"/>
+     <keyword name="HWVerifyHost" message="$(string.keyword_HWVerifyHost)" mask="0x1000"/>
+     <keyword name="HWVerifyHub" message="$(string.keyword_HWVerifyHub)" mask="0x2000"/>
+     <keyword name="HWVerifyDevice" message="$(string.keyword_HWVerifyDevice)" mask="0x4000"/>
+     <keyword name="Rundown" message="$(string.keyword_Rundown)" mask="0x8000"/>
+     <keyword name="Device" message="$(string.keyword_Device)" mask="0x10000"/>
+     <keyword name="Hub" message="$(string.keyword_Hub)" mask="0x20000"/>
+     <keyword name="Compat" message="$(string.keyword_Compat)" mask="0x40000"/>
+     <keyword name="ControllerCommand" message="$(string.keyword_ControllerCommand)" mask="0x80000"/>
+     <keyword name="keyword_400000000000" message="$(string.keyword_keyword_400000000000)" mask="0x400000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_task_0Informationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="USBXHCI_Treiber_Rundown" message="$(string.task_USBXHCI_Treiber_Rundown)" value="1"/>
+     <task name="USBXHCI_Controller_Rundown" message="$(string.task_USBXHCI_Controller_Rundown)" value="2">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_USBXHCI_Controller_RundownInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="USBXHCI_Gerät_Rundown" message="$(string.task_USBXHCI_Gerät_Rundown)" value="3">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_USBXHCI_Gerät_RundownInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="USBXHCI_Endpunkt_Rundown" message="$(string.task_USBXHCI_Endpunkt_Rundown)" value="4">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_USBXHCI_Endpunkt_RundownInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="USBXHCI_Controller_Erstellen" message="$(string.task_USBXHCI_Controller_Erstellen)" value="5">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_USBXHCI_Controller_ErstellenInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="USBXHCI_Controller_Löschen" message="$(string.task_USBXHCI_Controller_Löschen)" value="6">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_USBXHCI_Controller_LöschenInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="USBXHCI_Gerät_Erstellen" message="$(string.task_USBXHCI_Gerät_Erstellen)" value="7">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_USBXHCI_Gerät_ErstellenInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="USBXHCI_Gerät_Aktualisieren" message="$(string.task_USBXHCI_Gerät_Aktualisieren)" value="8">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_USBXHCI_Gerät_AktualisierenInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="USBXHCI_Gerät_Löschen" message="$(string.task_USBXHCI_Gerät_Löschen)" value="9">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_USBXHCI_Gerät_LöschenInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="USBXHCI_Endpunkt_Erstellen" message="$(string.task_USBXHCI_Endpunkt_Erstellen)" value="10">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_USBXHCI_Endpunkt_ErstellenInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="USBXHCI_Endpunkt_Aktualisieren" message="$(string.task_USBXHCI_Endpunkt_Aktualisieren)" value="11">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_USBXHCI_Endpunkt_AktualisierenInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="USBXHCI_Endpunkt_Löschen" message="$(string.task_USBXHCI_Endpunkt_Löschen)" value="12">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_USBXHCI_Endpunkt_LöschenInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="FirmwareversionsupdatefürUSBXHCI_Controller" message="$(string.task_FirmwareversionsupdatefürUSBXHCI_Controller)" value="13">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_FirmwareversionsupdatefürUSBXHCI_ControllerInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="USBXHCI_Controller_D0Entry" message="$(string.task_USBXHCI_Controller_D0Entry)" value="14"/>
+     <task name="USBXHCI_Controller_D0EntryPostInterruptsEnabled" message="$(string.task_USBXHCI_Controller_D0EntryPostInterruptsEnabled)" value="15"/>
+     <task name="USBXHCI_Controller_D0ExitPreInterruptsDisabled" message="$(string.task_USBXHCI_Controller_D0ExitPreInterruptsDisabled)" value="16"/>
+     <task name="USBXHCI_Controller_D0Exit" message="$(string.task_USBXHCI_Controller_D0Exit)" value="17"/>
+     <task name="USBXHCI_Controller_SpeicherungdesZustands" message="$(string.task_USBXHCI_Controller_SpeicherungdesZustands)" value="18"/>
+     <task name="USBXHCI_Controller_WiederherstellungdesZustands" message="$(string.task_USBXHCI_Controller_WiederherstellungdesZustands)" value="19"/>
+     <task name="USBXHCI_Controller_InterneZurücksetzung" message="$(string.task_USBXHCI_Controller_InterneZurücksetzung)" value="20"/>
+     <task name="USBXHCI_Controller_Fehler" message="$(string.task_USBXHCI_Controller_Fehler)" value="21">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_USBXHCI_Controller_FehlerInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="USBXHCI_Befehl" message="$(string.task_USBXHCI_Befehl)" value="22">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_USBXHCI_BefehlInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="AnforderunganVTL1IUM_TrustLet" message="$(string.task_AnforderunganVTL1IUM_TrustLet)" value="23">
+      <opcodes>
+       <opcode name="VTL0_TreiberanforderungwurdeinTrustLetempfangen." message="$(string.opcode_AnforderunganVTL1IUM_TrustLetVTL0_TreiberanforderungwurdeinTrustLetempfangen.)" value="10"/>
+       <opcode name="VTL0_TreiberanforderungwurdeinTrustLetabgeschlossen." message="$(string.opcode_AnforderunganVTL1IUM_TrustLetVTL0_TreiberanforderungwurdeinTrustLetabgeschlossen.)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="USB_Übertragung" message="$(string.task_USB_Übertragung)" value="24">
+      <opcodes>
+       <opcode name="USB_Übertragunginitialisiert" message="$(string.opcode_USB_ÜbertragungUSB_Übertragunginitialisiert)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="VerzögerteArbeit(DPC/WorkItem)" message="$(string.task_VerzögerteArbeit(DPC/WorkItem))" value="25"/>
+     <task name="NachverfolgungfürdieZeitsynchronisierungstarten" message="$(string.task_NachverfolgungfürdieZeitsynchronisierungstarten)" value="26">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_NachverfolgungfürdieZeitsynchronisierungstartenInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="NachverfolgungfürdieZeitsynchronisierungbeenden" message="$(string.task_NachverfolgungfürdieZeitsynchronisierungbeenden)" value="27">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_NachverfolgungfürdieZeitsynchronisierungbeendenInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="Endpunktkonfigurieren" message="$(string.task_Endpunktkonfigurieren)" value="28">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_EndpunktkonfigurierenInformationen)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="IntegritätsinformationenfürUSBXHCI_Controller" message="$(string.task_IntegritätsinformationenfürUSBXHCI_Controller)" value="29">
+      <opcodes>
+       <opcode name="Informationen" message="$(string.opcode_IntegritätsinformationenfürUSBXHCI_ControllerInformationen)" value="10"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <maps>
+     <valueMap name="MapParentBusType">
+      <map value="0x1" message="$(string.map_MapParentBusTypeParentBusTypePci)"/>
+      <map value="0x2" message="$(string.map_MapParentBusTypeParentBusTypeAcpi)"/>
+     </valueMap>
+     <valueMap name="S0IdleStatus">
+      <map value="0x0" message="$(string.map_S0IdleStatusS0IdleConfigured)"/>
+      <map value="0x1" message="$(string.map_S0IdleStatusS0IdleNotConfiguredDueToHackFlag)"/>
+      <map value="0x2" message="$(string.map_S0IdleStatusNotConfiguredDueToNoS0WakeCapability)"/>
+     </valueMap>
+     <valueMap name="CommandWaitlistReason">
+      <map value="0x1" message="$(string.map_CommandWaitlistReasonCommandRingFull)"/>
+      <map value="0x2" message="$(string.map_CommandWaitlistReasonCommandsSerialized)"/>
+      <map value="0x3" message="$(string.map_CommandWaitlistReasonCommandAbortInProgress)"/>
+      <map value="0x4" message="$(string.map_CommandWaitlistReasonControllerResetInProgress)"/>
+     </valueMap>
+     <valueMap name="TrbCompletionStatus">
+      <map value="0x0" message="$(string.map_TrbCompletionStatusErfolgreich)"/>
+      <map value="0x1" message="$(string.map_TrbCompletionStatusNicht erfolgreich)"/>
+      <map value="0x2" message="$(string.map_TrbCompletionStatusZeitüberschreitung)"/>
+      <map value="0x3" message="$(string.map_TrbCompletionStatusController nicht vorhanden)"/>
+      <map value="0x4" message="$(string.map_TrbCompletionStatusNicht abgeschlossen)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="USBXHCI_Treiber_RundownStarten" version="0" task="USBXHCI_Treiber_Rundown" opcode="win:Starten" level="win:Informational" keywords="Default Rundown"/>
+     <event value="2" symbol="USBXHCI_Treiber_RundownBeenden" version="0" task="USBXHCI_Treiber_Rundown" opcode="win:Beenden" level="win:Informational" keywords="Default Rundown"/>
+     <event value="3" symbol="USBXHCI_Controller_RundownInformationen" version="0" task="USBXHCI_Controller_Rundown" opcode="Informationen" level="win:Informational" keywords="Default Rundown" template="USBXHCI_Controller_RundownInformationenArgs"/>
+     <event value="3" symbol="USBXHCI_Controller_RundownInformationen_V1" version="1" task="USBXHCI_Controller_Rundown" opcode="Informationen" level="win:Informational" keywords="Default Rundown" template="USBXHCI_Controller_RundownInformationenArgs_V1"/>
+     <event value="3" symbol="USBXHCI_Controller_RundownInformationen_V2" version="2" task="USBXHCI_Controller_Rundown" opcode="Informationen" level="win:Informational" keywords="Default Rundown" template="USBXHCI_Controller_RundownInformationenArgs_V2"/>
+     <event value="3" symbol="USBXHCI_Controller_RundownInformationen_V3" version="3" task="USBXHCI_Controller_Rundown" opcode="Informationen" level="win:Informational" keywords="Default Rundown" template="USBXHCI_Controller_RundownInformationenArgs_V3"/>
+     <event value="3" symbol="USBXHCI_Controller_RundownInformationen_V4" version="4" task="USBXHCI_Controller_Rundown" opcode="Informationen" level="win:Informational" keywords="Default Rundown" template="USBXHCI_Controller_RundownInformationenArgs_V4"/>
+     <event value="4" symbol="USBXHCI_Gerät_RundownInformationen" version="0" task="USBXHCI_Gerät_Rundown" opcode="Informationen" level="win:Informational" keywords="Default Rundown" template="USBXHCI_Gerät_RundownInformationenArgs"/>
+     <event value="4" symbol="USBXHCI_Gerät_RundownInformationen_V1" version="1" task="USBXHCI_Gerät_Rundown" opcode="Informationen" level="win:Informational" keywords="Default Rundown" template="USBXHCI_Gerät_RundownInformationenArgs_V1"/>
+     <event value="4" symbol="USBXHCI_Gerät_RundownInformationen_V2" version="2" task="USBXHCI_Gerät_Rundown" opcode="Informationen" level="win:Informational" keywords="Default Rundown" template="USBXHCI_Gerät_RundownInformationenArgs_V2"/>
+     <event value="4" symbol="USBXHCI_Gerät_RundownInformationen_V3" version="3" task="USBXHCI_Gerät_Rundown" opcode="Informationen" level="win:Informational" keywords="Default Rundown" template="USBXHCI_Gerät_RundownInformationenArgs_V3"/>
+     <event value="5" symbol="USBXHCI_Endpunkt_RundownInformationen" version="0" task="USBXHCI_Endpunkt_Rundown" opcode="Informationen" level="win:Informational" keywords="Default Rundown" template="USBXHCI_Endpunkt_RundownInformationenArgs"/>
+     <event value="6" symbol="USBXHCI_Controller_ErstellenInformationen" version="0" task="USBXHCI_Controller_Erstellen" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Controller_ErstellenInformationenArgs"/>
+     <event value="6" symbol="USBXHCI_Controller_ErstellenInformationen_V1" version="1" task="USBXHCI_Controller_Erstellen" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Controller_ErstellenInformationenArgs_V1"/>
+     <event value="7" symbol="USBXHCI_Controller_LöschenInformationen" version="0" task="USBXHCI_Controller_Löschen" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Controller_LöschenInformationenArgs"/>
+     <event value="8" symbol="USBXHCI_Gerät_ErstellenInformationen" version="0" task="USBXHCI_Gerät_Erstellen" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Gerät_RundownInformationenArgs"/>
+     <event value="8" symbol="USBXHCI_Gerät_ErstellenInformationen_V1" version="1" task="USBXHCI_Gerät_Erstellen" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Gerät_RundownInformationenArgs_V1"/>
+     <event value="8" symbol="USBXHCI_Gerät_ErstellenInformationen_V2" version="2" task="USBXHCI_Gerät_Erstellen" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Gerät_RundownInformationenArgs_V2"/>
+     <event value="8" symbol="USBXHCI_Gerät_ErstellenInformationen_V3" version="3" task="USBXHCI_Gerät_Erstellen" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Gerät_RundownInformationenArgs_V3"/>
+     <event value="9" symbol="USBXHCI_Gerät_AktualisierenInformationen" version="0" task="USBXHCI_Gerät_Aktualisieren" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Gerät_RundownInformationenArgs"/>
+     <event value="9" symbol="USBXHCI_Gerät_AktualisierenInformationen_V1" version="1" task="USBXHCI_Gerät_Aktualisieren" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Gerät_RundownInformationenArgs_V1"/>
+     <event value="9" symbol="USBXHCI_Gerät_AktualisierenInformationen_V2" version="2" task="USBXHCI_Gerät_Aktualisieren" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Gerät_RundownInformationenArgs_V2"/>
+     <event value="9" symbol="USBXHCI_Gerät_AktualisierenInformationen_V3" version="3" task="USBXHCI_Gerät_Aktualisieren" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Gerät_RundownInformationenArgs_V3"/>
+     <event value="10" symbol="USBXHCI_Gerät_LöschenInformationen" version="0" task="USBXHCI_Gerät_Löschen" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Gerät_RundownInformationenArgs"/>
+     <event value="10" symbol="USBXHCI_Gerät_LöschenInformationen_V1" version="1" task="USBXHCI_Gerät_Löschen" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Gerät_RundownInformationenArgs_V1"/>
+     <event value="10" symbol="USBXHCI_Gerät_LöschenInformationen_V2" version="2" task="USBXHCI_Gerät_Löschen" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Gerät_RundownInformationenArgs_V2"/>
+     <event value="10" symbol="USBXHCI_Gerät_LöschenInformationen_V3" version="3" task="USBXHCI_Gerät_Löschen" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Gerät_RundownInformationenArgs_V3"/>
+     <event value="11" symbol="USBXHCI_Endpunkt_ErstellenInformationen" version="0" task="USBXHCI_Endpunkt_Erstellen" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Endpunkt_RundownInformationenArgs"/>
+     <event value="12" symbol="USBXHCI_Endpunkt_AktualisierenInformationen" version="0" task="USBXHCI_Endpunkt_Aktualisieren" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Endpunkt_RundownInformationenArgs"/>
+     <event value="13" symbol="USBXHCI_Endpunkt_LöschenInformationen" version="0" task="USBXHCI_Endpunkt_Löschen" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Endpunkt_RundownInformationenArgs"/>
+     <event value="14" symbol="task_0" version="0" task="task_0" level="win:Error" keywords="keyword_400000000000" template="task_0Args"/>
+     <event value="15" symbol="FirmwareversionsupdatefürUSBXHCI_ControllerInformationen" version="0" task="FirmwareversionsupdatefürUSBXHCI_Controller" opcode="Informationen" level="win:Informational" keywords="Default" template="USBXHCI_Controller_LöschenInformationenArgs"/>
+     <event value="16" symbol="USBXHCI_Controller_D0EntryStarten" version="0" task="USBXHCI_Controller_D0Entry" opcode="win:Starten" level="win:Informational" keywords="Default Power" template="USBXHCI_Controller_D0EntryStartenArgs"/>
+     <event value="17" symbol="USBXHCI_Controller_D0EntryBeenden" version="0" task="USBXHCI_Controller_D0Entry" opcode="win:Beenden" level="win:Informational" keywords="Default Power" template="USBXHCI_Controller_D0EntryBeendenArgs"/>
+     <event value="18" symbol="USBXHCI_Controller_D0EntryPostInterruptsEnabledStarten" version="0" task="USBXHCI_Controller_D0EntryPostInterruptsEnabled" opcode="win:Starten" level="win:Informational" keywords="Default Power" template="USBXHCI_Controller_D0EntryStartenArgs"/>
+     <event value="19" symbol="USBXHCI_Controller_D0EntryPostInterruptsEnabledBeenden" version="0" task="USBXHCI_Controller_D0EntryPostInterruptsEnabled" opcode="win:Beenden" level="win:Informational" keywords="Default Power" template="USBXHCI_Controller_D0EntryBeendenArgs"/>
+     <event value="20" symbol="USBXHCI_Controller_D0ExitPreInterruptsDisabledStarten" version="0" task="USBXHCI_Controller_D0ExitPreInterruptsDisabled" opcode="win:Starten" level="win:Informational" keywords="Default Power" template="USBXHCI_Controller_D0EntryStartenArgs"/>
+     <event value="21" symbol="USBXHCI_Controller_D0ExitPreInterruptsDisabledBeenden" version="0" task="USBXHCI_Controller_D0ExitPreInterruptsDisabled" opcode="win:Beenden" level="win:Informational" keywords="Default Power" template="USBXHCI_Controller_D0EntryBeendenArgs"/>
+     <event value="22" symbol="USBXHCI_Controller_D0ExitStarten" version="0" task="USBXHCI_Controller_D0Exit" opcode="win:Starten" level="win:Informational" keywords="Default Power" template="USBXHCI_Controller_D0EntryStartenArgs"/>
+     <event value="23" symbol="USBXHCI_Controller_D0ExitBeenden" version="0" task="USBXHCI_Controller_D0Exit" opcode="win:Beenden" level="win:Informational" keywords="Default Power" template="USBXHCI_Controller_D0EntryBeendenArgs"/>
+     <event value="24" symbol="USBXHCI_Controller_SpeicherungdesZustandsStarten" version="0" task="USBXHCI_Controller_SpeicherungdesZustands" opcode="win:Starten" level="win:Informational" keywords="Default Power" template="USBXHCI_Controller_SpeicherungdesZustandsStartenArgs"/>
+     <event value="25" symbol="USBXHCI_Controller_SpeicherungdesZustandsBeenden" version="0" task="USBXHCI_Controller_SpeicherungdesZustands" opcode="win:Beenden" level="win:Informational" keywords="Default Power" template="USBXHCI_Controller_SpeicherungdesZustandsBeendenArgs"/>
+     <event value="26" symbol="USBXHCI_Controller_WiederherstellungdesZustandsStarten" version="0" task="USBXHCI_Controller_WiederherstellungdesZustands" opcode="win:Starten" level="win:Informational" keywords="Default Power" template="USBXHCI_Controller_SpeicherungdesZustandsStartenArgs"/>
+     <event value="27" symbol="USBXHCI_Controller_WiederherstellungdesZustandsBeenden" version="0" task="USBXHCI_Controller_WiederherstellungdesZustands" opcode="win:Beenden" level="win:Informational" keywords="Default Power" template="USBXHCI_Controller_SpeicherungdesZustandsBeendenArgs"/>
+     <event value="28" symbol="USBXHCI_Controller_InterneZurücksetzungStarten" version="0" task="USBXHCI_Controller_InterneZurücksetzung" opcode="win:Starten" level="win:Informational" keywords="Default" template="USBXHCI_Controller_SpeicherungdesZustandsStartenArgs"/>
+     <event value="29" symbol="USBXHCI_Controller_InterneZurücksetzungBeenden" version="0" task="USBXHCI_Controller_InterneZurücksetzung" opcode="win:Beenden" level="win:Informational" keywords="Default" template="USBXHCI_Controller_SpeicherungdesZustandsBeendenArgs"/>
+     <event value="30" symbol="USBXHCI_Controller_FehlerInformationen" version="0" task="USBXHCI_Controller_Fehler" opcode="Informationen" level="win:Error" keywords="Default HWVerifyHost keyword_400000000000" template="USBXHCI_Controller_FehlerInformationenArgs"/>
+     <event value="31" symbol="USBXHCI_BefehlInformationen" version="0" task="USBXHCI_Befehl" opcode="Informationen" level="win:Informational" keywords="Default ControllerCommand" template="USBXHCI_BefehlInformationenArgs"/>
+     <event value="32" symbol="USBXHCI_BefehlInformationen32" version="0" task="USBXHCI_Befehl" opcode="Informationen" level="win:Informational" keywords="Default ControllerCommand" template="USBXHCI_BefehlInformationen32Args"/>
+     <event value="33" symbol="USBXHCI_BefehlInformationen33" version="0" task="USBXHCI_Befehl" opcode="Informationen" level="win:Informational" keywords="Default ControllerCommand" template="USBXHCI_BefehlInformationen33Args"/>
+     <event value="34" symbol="USBXHCI_BefehlInformationen34" version="0" task="USBXHCI_Befehl" opcode="Informationen" level="win:Error" keywords="Default ControllerCommand keyword_400000000000" template="USBXHCI_BefehlInformationen34Args"/>
+     <event value="35" symbol="USBXHCI_BefehlInformationen35" version="0" task="USBXHCI_Befehl" opcode="Informationen" level="win:Informational" keywords="Default IRP" template="USBXHCI_BefehlInformationen35Args"/>
+     <event value="36" symbol="task_0Informationen" version="0" task="task_0" opcode="Informationen" level="win:Informational" keywords="Default Power" template="task_0InformationenArgs"/>
+     <event value="37" symbol="AnforderunganVTL1IUM_TrustLetStarten" version="0" task="AnforderunganVTL1IUM_TrustLet" opcode="win:Starten" level="win:Informational" keywords="Default Performance" template="AnforderunganVTL1IUM_TrustLetStartenArgs"/>
+     <event value="37" symbol="AnforderunganVTL1IUM_TrustLetStarten_V1" version="1" task="AnforderunganVTL1IUM_TrustLet" opcode="win:Starten" level="win:Informational" keywords="Performance" template="AnforderunganVTL1IUM_TrustLetStartenArgs"/>
+     <event value="38" symbol="AnforderunganVTL1IUM_TrustLetVTL0_TreiberanforderungwurdeinTrustLetempfangen." version="0" task="AnforderunganVTL1IUM_TrustLet" opcode="VTL0_TreiberanforderungwurdeinTrustLetempfangen." level="win:Informational" keywords="Default Performance" template="AnforderunganVTL1IUM_TrustLetVTL0_TreiberanforderungwurdeinTrustLetempfangen.Args"/>
+     <event value="38" symbol="AnforderunganVTL1IUM_TrustLetVTL0_TreiberanforderungwurdeinTrustLetempfangen._V1" version="1" task="AnforderunganVTL1IUM_TrustLet" opcode="VTL0_TreiberanforderungwurdeinTrustLetempfangen." level="win:Informational" keywords="Performance" template="AnforderunganVTL1IUM_TrustLetVTL0_TreiberanforderungwurdeinTrustLetempfangen.Args"/>
+     <event value="39" symbol="AnforderunganVTL1IUM_TrustLetVTL0_TreiberanforderungwurdeinTrustLetabgeschlossen." version="0" task="AnforderunganVTL1IUM_TrustLet" opcode="VTL0_TreiberanforderungwurdeinTrustLetabgeschlossen." level="win:Informational" keywords="Default Performance" template="AnforderunganVTL1IUM_TrustLetVTL0_TreiberanforderungwurdeinTrustLetempfangen.Args"/>
+     <event value="39" symbol="AnforderunganVTL1IUM_TrustLetVTL0_TreiberanforderungwurdeinTrustLetabgeschlossen._V1" version="1" task="AnforderunganVTL1IUM_TrustLet" opcode="VTL0_TreiberanforderungwurdeinTrustLetabgeschlossen." level="win:Informational" keywords="Performance" template="AnforderunganVTL1IUM_TrustLetVTL0_TreiberanforderungwurdeinTrustLetempfangen.Args"/>
+     <event value="40" symbol="AnforderunganVTL1IUM_TrustLetBeenden" version="0" task="AnforderunganVTL1IUM_TrustLet" opcode="win:Beenden" level="win:Informational" keywords="Default Performance" template="AnforderunganVTL1IUM_TrustLetBeendenArgs"/>
+     <event value="40" symbol="AnforderunganVTL1IUM_TrustLetBeenden_V1" version="1" task="AnforderunganVTL1IUM_TrustLet" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="AnforderunganVTL1IUM_TrustLetBeendenArgs"/>
+     <event value="41" symbol="USB_ÜbertragungUSB_Übertragunginitialisiert" version="0" task="USB_Übertragung" opcode="USB_Übertragunginitialisiert" level="win:Informational" keywords="Default Performance" template="USB_ÜbertragungUSB_ÜbertragunginitialisiertArgs"/>
+     <event value="41" symbol="USB_ÜbertragungUSB_Übertragunginitialisiert_V1" version="1" task="USB_Übertragung" opcode="USB_Übertragunginitialisiert" level="win:Informational" keywords="Performance" template="USB_ÜbertragungUSB_ÜbertragunginitialisiertArgs"/>
+     <event value="42" symbol="task_042" version="0" task="task_0" level="win:Informational" keywords="Default Performance" template="task_042Args"/>
+     <event value="42" symbol="task_042_V1" version="1" task="task_0" level="win:Informational" keywords="Performance" template="task_042Args"/>
+     <event value="43" symbol="VerzögerteArbeit(DPC/WorkItem)Starten" version="0" task="VerzögerteArbeit(DPC/WorkItem)" opcode="win:Starten" level="win:Informational" keywords="Default Performance" template="task_042Args"/>
+     <event value="43" symbol="VerzögerteArbeit(DPC/WorkItem)Starten_V1" version="1" task="VerzögerteArbeit(DPC/WorkItem)" opcode="win:Starten" level="win:Informational" keywords="Performance" template="task_042Args"/>
+     <event value="44" symbol="VerzögerteArbeit(DPC/WorkItem)Beenden" version="0" task="VerzögerteArbeit(DPC/WorkItem)" opcode="win:Beenden" level="win:Informational" keywords="Default Performance" template="task_042Args"/>
+     <event value="44" symbol="VerzögerteArbeit(DPC/WorkItem)Beenden_V1" version="1" task="VerzögerteArbeit(DPC/WorkItem)" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="task_042Args"/>
+     <event value="45" symbol="task_045" version="0" task="task_0" level="win:Informational" keywords="Default Performance" template="task_045Args"/>
+     <event value="45" symbol="task_045_V1" version="1" task="task_0" level="win:Informational" keywords="Performance" template="task_045Args"/>
+     <event value="46" symbol="NachverfolgungfürdieZeitsynchronisierungstartenInformationen" version="0" task="NachverfolgungfürdieZeitsynchronisierungstarten" opcode="Informationen" level="win:Informational" keywords="Default keyword_400000000000" template="NachverfolgungfürdieZeitsynchronisierungstartenInformationenArgs"/>
+     <event value="47" symbol="NachverfolgungfürdieZeitsynchronisierungbeendenInformationen" version="0" task="NachverfolgungfürdieZeitsynchronisierungbeenden" opcode="Informationen" level="win:Informational" keywords="Default keyword_400000000000" template="NachverfolgungfürdieZeitsynchronisierungbeendenInformationenArgs"/>
+     <event value="48" symbol="EndpunktkonfigurierenInformationen" version="0" task="Endpunktkonfigurieren" opcode="Informationen" level="win:Informational" keywords="Default" template="EndpunktkonfigurierenInformationenArgs"/>
+     <event value="49" symbol="IntegritätsinformationenfürUSBXHCI_ControllerInformationen" version="0" task="IntegritätsinformationenfürUSBXHCI_Controller" opcode="Informationen" level="win:Error" keywords="Default keyword_400000000000" template="IntegritätsinformationenfürUSBXHCI_ControllerInformationenArgs"/>
+     <event value="49" symbol="IntegritätsinformationenfürUSBXHCI_ControllerInformationen_V1" version="1" task="IntegritätsinformationenfürUSBXHCI_Controller" opcode="Informationen" level="win:Error" keywords="Default keyword_400000000000" template="IntegritätsinformationenfürUSBXHCI_ControllerInformationenArgs_V1"/>
+     <event value="49" symbol="IntegritätsinformationenfürUSBXHCI_ControllerInformationen_V2" version="2" task="IntegritätsinformationenfürUSBXHCI_Controller" opcode="Informationen" level="win:Error" keywords="Default keyword_400000000000" template="IntegritätsinformationenfürUSBXHCI_ControllerInformationenArgs_V2"/>
+     <event value="49" symbol="IntegritätsinformationenfürUSBXHCI_ControllerInformationen_V3" version="3" task="IntegritätsinformationenfürUSBXHCI_Controller" opcode="Informationen" level="win:Error" keywords="Default keyword_400000000000" template="IntegritätsinformationenfürUSBXHCI_ControllerInformationenArgs_V3"/>
+    </events>
+    <templates>
+     <template tid="USBXHCI_Controller_RundownInformationenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_ParentBusType" inType="win:UInt32" map="MapParentBusType"/>
+      <data name="fid_PciBus" inType="win:UInt32"/>
+      <data name="fid_PciDevice" inType="win:UInt32"/>
+      <data name="fid_PciFunction" inType="win:UInt32"/>
+      <data name="fid_PciVendorId" inType="win:UInt32"/>
+      <data name="fid_PciDeviceId" inType="win:UInt32"/>
+      <data name="fid_PciRevisionId" inType="win:UInt32"/>
+      <data name="fid_AcpiVendorId" inType="win:AnsiString"/>
+      <data name="fid_AcpiDeviceId" inType="win:AnsiString"/>
+      <data name="fid_AcpiRevisionId" inType="win:AnsiString"/>
+      <data name="fid_FirmwareVersion" inType="win:UInt64"/>
+      <data name="fid_S0IdleStatus" inType="win:UInt32"/>
+      <data name="fid_WdfDevicePowerState" inType="win:UInt32"/>
+      <data name="fid_InstanceNumber" inType="win:UInt32"/>
+      <data name="fid_WdfPowerReferenceForDebuggerAcquired" inType="win:Boolean"/>
+     </template>
+     <template tid="USBXHCI_Gerät_RundownInformationenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_UsbTtHubDevice" inType="win:Pointer"/>
+      <data name="fid_UsbDevice" inType="win:Pointer"/>
+      <data name="DeviceSpeed" inType="win:UInt32"/>
+      <data name="PortPathDepth" inType="win:UInt32"/>
+      <data name="PortPath" inType="win:UInt32"/>
+      <data name="fid_SlotId" inType="win:UInt32"/>
+      <data name="fid_DeviceIsHub" inType="win:UInt32"/>
+      <data name="fid_NumberOfPorts" inType="win:UInt32"/>
+      <data name="fid_NumberOfTTs" inType="win:UInt32"/>
+      <data name="fid_USB_Device_Descriptor" inType="win:Float"/>
+     </template>
+     <template tid="USBXHCI_Endpunkt_RundownInformationenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_UsbDevice" inType="win:Pointer"/>
+      <data name="fid_Endpoint" inType="win:Pointer"/>
+      <data name="fid_USB_Endpoint_Descriptor" inType="win:UInt16"/>
+      <data name="fid_USB_SuperSpeed_Endpoint_Companion_Descriptor" inType="win:Double"/>
+      <data name="fid_USB_SuperSpeedPlus_Isoch_Endpoint_Companion_Descriptor" inType="win:FILETIME"/>
+     </template>
+     <template tid="USBXHCI_Controller_ErstellenInformationenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_ParentBusType" inType="win:UInt32"/>
+      <data name="fid_PciBus" inType="win:UInt32"/>
+      <data name="fid_PciDevice" inType="win:UInt32"/>
+      <data name="fid_PciFunction" inType="win:UInt32"/>
+      <data name="fid_PciVendorId" inType="win:UInt32"/>
+      <data name="fid_PciDeviceId" inType="win:UInt32"/>
+      <data name="fid_PciRevisionId" inType="win:UInt32"/>
+      <data name="fid_AcpiVendorId" inType="win:AnsiString"/>
+      <data name="fid_AcpiDeviceId" inType="win:AnsiString"/>
+      <data name="fid_AcpiRevisionId" inType="win:AnsiString"/>
+      <data name="fid_FirmwareVersion" inType="win:UInt64"/>
+      <data name="fid_S0IdleStatus" inType="win:UInt32" map="S0IdleStatus"/>
+      <data name="fid_WdfDevicePowerState" inType="win:UInt32"/>
+      <data name="fid_InstanceNumber" inType="win:UInt32"/>
+      <data name="fid_WdfPowerReferenceForDebuggerAcquired" inType="win:Boolean"/>
+     </template>
+     <template tid="USBXHCI_Controller_LöschenInformationenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_ParentBusType" inType="win:UInt32"/>
+      <data name="fid_PciBus" inType="win:UInt32"/>
+      <data name="fid_PciDevice" inType="win:UInt32"/>
+      <data name="fid_PciFunction" inType="win:UInt32"/>
+      <data name="fid_PciVendorId" inType="win:UInt32"/>
+      <data name="fid_PciDeviceId" inType="win:UInt32"/>
+      <data name="fid_PciRevisionId" inType="win:UInt32"/>
+      <data name="fid_AcpiVendorId" inType="win:AnsiString"/>
+      <data name="fid_AcpiDeviceId" inType="win:AnsiString"/>
+      <data name="fid_AcpiRevisionId" inType="win:AnsiString"/>
+      <data name="fid_FirmwareVersion" inType="win:UInt64"/>
+      <data name="fid_S0IdleStatus" inType="win:UInt32"/>
+      <data name="fid_WdfDevicePowerState" inType="win:UInt32"/>
+      <data name="fid_InstanceNumber" inType="win:UInt32"/>
+      <data name="fid_WdfPowerReferenceForDebuggerAcquired" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0Args">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="DeviceDescLength" inType="win:UInt32"/>
+      <data name="DeviceDescription" inType="win:UnicodeString" length="DeviceDescLength"/>
+      <data name="StartDeviceFailReason" inType="win:UInt32"/>
+     </template>
+     <template tid="USBXHCI_Controller_D0EntryStartenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_DeviceState" inType="win:UInt32"/>
+      <data name="fid_PowerAction" inType="win:UInt32"/>
+      <data name="fid_WaitWakePending" inType="win:UInt16"/>
+     </template>
+     <template tid="USBXHCI_Controller_D0EntryBeendenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_DeviceState" inType="win:UInt32"/>
+      <data name="fid_PowerAction" inType="win:UInt32"/>
+      <data name="fid_NtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="USBXHCI_Controller_SpeicherungdesZustandsStartenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+     </template>
+     <template tid="USBXHCI_Controller_SpeicherungdesZustandsBeendenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_NtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="USBXHCI_Controller_FehlerInformationenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_UcxDevice" inType="win:Pointer"/>
+      <data name="fid_UcxEndpoint" inType="win:Pointer"/>
+      <data name="fid_HWVerifierFlag" inType="win:UInt64"/>
+      <data name="fid_Description" inType="win:AnsiString"/>
+      <data name="fid_CommandTRB" inType="win:Binary"/>
+      <data name="fid_EventTRB" inType="win:Binary"/>
+     </template>
+     <template tid="USBXHCI_BefehlInformationenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_CrbPointer" inType="win:Pointer"/>
+      <data name="fid_Command_TRB" inType="win:Binary"/>
+     </template>
+     <template tid="USBXHCI_BefehlInformationen32Args">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_CrbPointer" inType="win:Pointer"/>
+      <data name="fid_Command_TRB" inType="win:Binary"/>
+      <data name="fid_CommandWaitlistReason" inType="win:UInt8" map="CommandWaitlistReason"/>
+     </template>
+     <template tid="USBXHCI_BefehlInformationen33Args">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_CrbPointer" inType="win:Pointer"/>
+      <data name="fid_Command_TRB" inType="win:Binary"/>
+      <data name="fid_CompletionStatus" inType="win:UInt32"/>
+      <data name="fid_CompletionCode" inType="win:UInt8"/>
+     </template>
+     <template tid="USBXHCI_BefehlInformationen34Args">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_CrbPointer" inType="win:Pointer"/>
+      <data name="fid_Command_TRB" inType="win:Binary"/>
+      <data name="fid_CompletionStatus" inType="win:UInt32" map="TrbCompletionStatus"/>
+      <data name="fid_CompletionCode" inType="win:UInt8"/>
+     </template>
+     <template tid="USBXHCI_BefehlInformationen35Args">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_Capability" inType="win:GUID"/>
+      <data name="fid_NtStatus" inType="win:UInt32"/>
+      <data name="fid_NumStaticStreams" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0InformationenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_WdfPowerReferenceForDebuggerAcquired" inType="win:Boolean"/>
+     </template>
+     <template tid="AnforderunganVTL1IUM_TrustLetStartenArgs">
+      <data name="fid_TrustletRequestOpCode" inType="win:UInt32"/>
+      <data name="fid_InputBufferLength" inType="win:UInt32"/>
+      <data name="fid_OutputBufferLength" inType="win:UInt32"/>
+      <data name="fid_OutstandingRequestsAtSendTime" inType="win:UInt32"/>
+     </template>
+     <template tid="AnforderunganVTL1IUM_TrustLetVTL0_TreiberanforderungwurdeinTrustLetempfangen.Args">
+      <data name="fid_TrustletRequestOpCode" inType="win:UInt32"/>
+      <data name="fid_OutstandingRequestsAtSendTime" inType="win:UInt32"/>
+     </template>
+     <template tid="AnforderunganVTL1IUM_TrustLetBeendenArgs">
+      <data name="fid_TrustletRequestOpCode" inType="win:UInt32"/>
+      <data name="fid_OutstandingRequestsAtSendTime" inType="win:UInt32"/>
+      <data name="fid_TimeInNs" inType="win:UInt64"/>
+     </template>
+     <template tid="USB_ÜbertragungUSB_ÜbertragunginitialisiertArgs">
+      <data name="fid_SlotId" inType="win:UInt8"/>
+      <data name="fid_EndpointContextIndex" inType="win:UInt32"/>
+      <data name="fid_StreamId" inType="win:UInt32"/>
+      <data name="fid_BytesTotal" inType="win:UInt32"/>
+     </template>
+     <template tid="task_042Args">
+      <data name="fid_InterrupterNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="task_045Args">
+      <data name="fid_SlotId" inType="win:UInt8"/>
+      <data name="fid_EndpointContextIndex" inType="win:UInt32"/>
+      <data name="fid_StreamId" inType="win:UInt32"/>
+     </template>
+     <template tid="NachverfolgungfürdieZeitsynchronisierungstartenInformationenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_IsStartupDelayTolerable" inType="win:Boolean"/>
+      <data name="fid_RequestorMode" inType="win:UInt32"/>
+      <data name="fid_NtStatus" inType="win:UInt32"/>
+      <data name="fid_TimeTrackingHandle" inType="win:Pointer"/>
+     </template>
+     <template tid="NachverfolgungfürdieZeitsynchronisierungbeendenInformationenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_TimeTrackingHandle" inType="win:Pointer"/>
+      <data name="fid_IsCloseHandleFromClient" inType="win:Boolean"/>
+      <data name="fid_RequestorMode" inType="win:UInt32"/>
+      <data name="fid_NtStatus" inType="win:UInt32"/>
+      <data name="fid_NumberOfGetFrameQpcCalls" inType="win:UInt32"/>
+      <data name="fid_NumberOfFrameQpcTranslations" inType="win:UInt32"/>
+     </template>
+     <template tid="EndpunktkonfigurierenInformationenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_UsbDevice" inType="win:Pointer"/>
+      <data name="fid_ConfigurationValue" inType="win:UInt32"/>
+      <data name="fid_InterfaceNumber" inType="win:UInt32"/>
+      <data name="fid_AlternateSetting" inType="win:UInt32"/>
+      <data name="fid_LastConfigureEndpointStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="IntegritätsinformationenfürUSBXHCI_ControllerInformationenArgs">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_ParentBusType" inType="win:UInt32"/>
+      <data name="fid_MajorVersion" inType="win:UInt8"/>
+      <data name="fid_MinorVersion" inType="win:UInt8"/>
+      <data name="fid_PciBus" inType="win:UInt32"/>
+      <data name="fid_PciDevice" inType="win:UInt32"/>
+      <data name="fid_PciFunction" inType="win:UInt32"/>
+      <data name="fid_PciVendorId" inType="win:UInt32"/>
+      <data name="fid_PciDeviceId" inType="win:UInt32"/>
+      <data name="fid_PciRevisionId" inType="win:UInt32"/>
+      <data name="fid_AcpiVendorId" inType="win:AnsiString"/>
+      <data name="fid_AcpiDeviceId" inType="win:AnsiString"/>
+      <data name="fid_AcpiRevisionId" inType="win:AnsiString"/>
+      <data name="fid_FirmwareVersion" inType="win:UInt64"/>
+      <data name="fid_S0IdleStatus" inType="win:UInt32"/>
+      <data name="fid_WdfDevicePowerState" inType="win:UInt32"/>
+      <data name="fid_InstanceNumber" inType="win:UInt32"/>
+      <data name="fid_WdfPowerReferenceForDebuggerAcquired" inType="win:Boolean"/>
+      <data name="fid_IsSecureDevice" inType="win:Boolean"/>
+      <data name="fid_DMAModeInVSM" inType="win:UInt32"/>
+      <data name="fid_NumberOfDMATargetsInVSM" inType="win:UInt32"/>
+      <data name="fid_UsbEndpointOffloadMode" inType="win:UInt32"/>
+      <data name="fid_IsTimeTrackingEnabled" inType="win:Boolean"/>
+      <data name="fid_DeviceFlags_0" inType="win:UInt64"/>
+      <data name="fid_DeviceFlags_1" inType="win:UInt64"/>
+      <data name="fid_CachedHcsParams1" inType="win:UInt32"/>
+      <data name="fid_CachedHcsParams2" inType="win:UInt32"/>
+      <data name="fid_CachedHcsParams3" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams1" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams2" inType="win:UInt32"/>
+      <data name="fid_MapRegisterCount" inType="win:UInt32"/>
+      <data name="fid_SecondaryInterrupterCount" inType="win:UInt32"/>
+      <data name="fid_InterruptMechanism" inType="win:UInt32"/>
+      <data name="fid_SupportedNumberOfStreams" inType="win:UInt32"/>
+      <data name="fid_ControllerSuspendResumeCount" inType="win:UInt32"/>
+      <data name="fid_NumberOfResetRecoveryAttempts" inType="win:UInt32"/>
+      <data name="fid_RestoreStateFailureCount" inType="win:UInt32"/>
+      <data name="fid_RHResumeTimeoutCount" inType="win:UInt32"/>
+      <data name="fid_RHResumeNeededExtendedWaitCount" inType="win:UInt32"/>
+      <data name="fid_RHSuspendTimeoutCount" inType="win:UInt32"/>
+      <data name="fid_RHSuspendNeededExtendedWaitCount" inType="win:UInt32"/>
+      <data name="fid_RHPLCClearedOnU0PriorToU3Count" inType="win:UInt32"/>
+      <data name="fid_Device_Capabilities" inType="win:45"/>
+      <data name="fid_ErrorPortNumber" inType="win:UInt32"/>
+      <data name="fid_PortStatusAndControl" inType="win:UInt32"/>
+     </template>
+     <template tid="USBXHCI_Controller_RundownInformationenArgs_V1">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_ParentBusType" inType="win:UInt32"/>
+      <data name="fid_PciBus" inType="win:UInt32"/>
+      <data name="fid_PciDevice" inType="win:UInt32"/>
+      <data name="fid_PciFunction" inType="win:UInt32"/>
+      <data name="fid_PciVendorId" inType="win:UInt32"/>
+      <data name="fid_PciDeviceId" inType="win:UInt32"/>
+      <data name="fid_PciRevisionId" inType="win:UInt32"/>
+      <data name="fid_AcpiVendorId" inType="win:AnsiString"/>
+      <data name="fid_AcpiDeviceId" inType="win:AnsiString"/>
+      <data name="fid_AcpiRevisionId" inType="win:AnsiString"/>
+      <data name="fid_FirmwareVersion" inType="win:UInt64"/>
+      <data name="fid_S0IdleStatus" inType="win:UInt32"/>
+      <data name="fid_WdfDevicePowerState" inType="win:UInt32"/>
+      <data name="fid_InstanceNumber" inType="win:UInt32"/>
+      <data name="fid_WdfPowerReferenceForDebuggerAcquired" inType="win:Boolean"/>
+      <data name="fid_MajorVersion" inType="win:UInt8"/>
+      <data name="fid_MinorVersion" inType="win:UInt8"/>
+      <data name="fid_IsSecureDevice" inType="win:Boolean"/>
+      <data name="fid_DMAModeInVSM" inType="win:UInt32"/>
+      <data name="fid_NumberOfDMATargetsInVSM" inType="win:UInt32"/>
+      <data name="fid_NumberOfResetRecoveryAttempts" inType="win:UInt32"/>
+      <data name="fid_UsbEndpointOffloadMode" inType="win:UInt32"/>
+      <data name="fid_IsTimeTrackingEnabled" inType="win:Boolean"/>
+      <data name="fid_DeviceFlags_0" inType="win:UInt64"/>
+      <data name="fid_DeviceFlags_1" inType="win:UInt64"/>
+      <data name="fid_CachedHccParams" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams2" inType="win:UInt32"/>
+      <data name="fid_MapRegisterCount" inType="win:UInt32"/>
+      <data name="fid_SecondaryInterrupterCount" inType="win:UInt32"/>
+      <data name="fid_InterruptMechanism" inType="win:UInt32"/>
+     </template>
+     <template tid="USBXHCI_Gerät_RundownInformationenArgs_V1">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_UsbTtHubDevice" inType="win:Pointer"/>
+      <data name="fid_UsbDevice" inType="win:Pointer"/>
+      <data name="DeviceSpeed" inType="win:UInt32"/>
+      <data name="PortPathDepth" inType="win:UInt32"/>
+      <data name="PortPath" inType="win:UInt32"/>
+      <data name="fid_SlotId" inType="win:UInt32"/>
+      <data name="fid_DeviceIsHub" inType="win:UInt32"/>
+      <data name="fid_NumberOfPorts" inType="win:UInt32"/>
+      <data name="fid_NumberOfTTs" inType="win:UInt32"/>
+      <data name="fid_USB_Device_Descriptor" inType="win:Binary"/>
+      <data name="fid_IsSecureUSBDevice" inType="win:Boolean"/>
+      <data name="fid_IsProxyUSBDevice" inType="win:Boolean"/>
+      <data name="fid_IsDeviceContextLocal" inType="win:Boolean"/>
+     </template>
+     <template tid="USBXHCI_Controller_ErstellenInformationenArgs_V1">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_ParentBusType" inType="win:UInt32"/>
+      <data name="fid_PciBus" inType="win:UInt32"/>
+      <data name="fid_PciDevice" inType="win:UInt32"/>
+      <data name="fid_PciFunction" inType="win:UInt32"/>
+      <data name="fid_PciVendorId" inType="win:UInt32"/>
+      <data name="fid_PciDeviceId" inType="win:UInt32"/>
+      <data name="fid_PciRevisionId" inType="win:UInt32"/>
+      <data name="fid_AcpiVendorId" inType="win:AnsiString"/>
+      <data name="fid_AcpiDeviceId" inType="win:AnsiString"/>
+      <data name="fid_AcpiRevisionId" inType="win:AnsiString"/>
+      <data name="fid_FirmwareVersion" inType="win:UInt64"/>
+      <data name="fid_S0IdleStatus" inType="win:UInt32"/>
+      <data name="fid_WdfDevicePowerState" inType="win:UInt32"/>
+      <data name="fid_InstanceNumber" inType="win:UInt32"/>
+      <data name="fid_WdfPowerReferenceForDebuggerAcquired" inType="win:Boolean"/>
+      <data name="fid_Device_Capabilities" inType="win:FILETIME"/>
+     </template>
+     <template tid="IntegritätsinformationenfürUSBXHCI_ControllerInformationenArgs_V1">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_ParentBusType" inType="win:UInt32"/>
+      <data name="fid_MajorVersion" inType="win:UInt8"/>
+      <data name="fid_MinorVersion" inType="win:UInt8"/>
+      <data name="fid_PciBus" inType="win:UInt32"/>
+      <data name="fid_PciDevice" inType="win:UInt32"/>
+      <data name="fid_PciFunction" inType="win:UInt32"/>
+      <data name="fid_PciVendorId" inType="win:UInt32"/>
+      <data name="fid_PciDeviceId" inType="win:UInt32"/>
+      <data name="fid_PciRevisionId" inType="win:UInt32"/>
+      <data name="fid_AcpiVendorId" inType="win:AnsiString"/>
+      <data name="fid_AcpiDeviceId" inType="win:AnsiString"/>
+      <data name="fid_AcpiRevisionId" inType="win:AnsiString"/>
+      <data name="fid_FirmwareVersion" inType="win:UInt64"/>
+      <data name="fid_S0IdleStatus" inType="win:UInt32"/>
+      <data name="fid_WdfDevicePowerState" inType="win:UInt32"/>
+      <data name="fid_InstanceNumber" inType="win:UInt32"/>
+      <data name="fid_WdfPowerReferenceForDebuggerAcquired" inType="win:Boolean"/>
+      <data name="fid_IsSecureDevice" inType="win:Boolean"/>
+      <data name="fid_DMAModeInVSM" inType="win:UInt32"/>
+      <data name="fid_NumberOfDMATargetsInVSM" inType="win:UInt32"/>
+      <data name="fid_UsbEndpointOffloadMode" inType="win:UInt32"/>
+      <data name="fid_IsTimeTrackingEnabled" inType="win:Boolean"/>
+      <data name="fid_DeviceFlags_0" inType="win:UInt64"/>
+      <data name="fid_DeviceFlags_1" inType="win:UInt64"/>
+      <data name="fid_CachedHcsParams1" inType="win:UInt32"/>
+      <data name="fid_CachedHcsParams2" inType="win:UInt32"/>
+      <data name="fid_CachedHcsParams3" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams1" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams2" inType="win:UInt32"/>
+      <data name="fid_MapRegisterCount" inType="win:UInt32"/>
+      <data name="fid_SecondaryInterrupterCount" inType="win:UInt32"/>
+      <data name="fid_InterruptMechanism" inType="win:UInt32"/>
+      <data name="fid_SupportedNumberOfStreams" inType="win:UInt32"/>
+      <data name="fid_ControllerSuspendResumeCount" inType="win:UInt32"/>
+      <data name="fid_NumberOfResetRecoveryAttempts" inType="win:UInt32"/>
+      <data name="fid_RestoreStateFailureCount" inType="win:UInt32"/>
+      <data name="fid_RHResumeTimeoutCount" inType="win:UInt32"/>
+      <data name="fid_RHResumeNeededExtendedWaitCount" inType="win:UInt32"/>
+      <data name="fid_RHSuspendTimeoutCount" inType="win:UInt32"/>
+      <data name="fid_RHSuspendNeededExtendedWaitCount" inType="win:UInt32"/>
+      <data name="fid_RHPLCClearedOnU0PriorToU3Count" inType="win:UInt32"/>
+      <data name="fid_Device_Capabilities" inType="win:46"/>
+      <data name="fid_ErrorPortNumber" inType="win:UInt32"/>
+      <data name="fid_PortStatusAndControl" inType="win:UInt32"/>
+      <data name="fid_IsPortErrorRecovered" inType="win:Boolean"/>
+     </template>
+     <template tid="USBXHCI_Controller_RundownInformationenArgs_V2">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_ParentBusType" inType="win:UInt32"/>
+      <data name="fid_MajorVersion" inType="win:UInt8"/>
+      <data name="fid_MinorVersion" inType="win:UInt8"/>
+      <data name="fid_PciBus" inType="win:UInt32"/>
+      <data name="fid_PciDevice" inType="win:UInt32"/>
+      <data name="fid_PciFunction" inType="win:UInt32"/>
+      <data name="fid_PciVendorId" inType="win:UInt32"/>
+      <data name="fid_PciDeviceId" inType="win:UInt32"/>
+      <data name="fid_PciRevisionId" inType="win:UInt32"/>
+      <data name="fid_AcpiVendorId" inType="win:AnsiString"/>
+      <data name="fid_AcpiDeviceId" inType="win:AnsiString"/>
+      <data name="fid_AcpiRevisionId" inType="win:AnsiString"/>
+      <data name="fid_FirmwareVersion" inType="win:UInt64"/>
+      <data name="fid_S0IdleStatus" inType="win:UInt32"/>
+      <data name="fid_WdfDevicePowerState" inType="win:UInt32"/>
+      <data name="fid_InstanceNumber" inType="win:UInt32"/>
+      <data name="fid_WdfPowerReferenceForDebuggerAcquired" inType="win:Boolean"/>
+      <data name="fid_IsSecureDevice" inType="win:Boolean"/>
+      <data name="fid_DMAModeInVSM" inType="win:UInt32"/>
+      <data name="fid_NumberOfDMATargetsInVSM" inType="win:UInt32"/>
+      <data name="fid_UsbEndpointOffloadMode" inType="win:UInt32"/>
+      <data name="fid_IsTimeTrackingEnabled" inType="win:Boolean"/>
+      <data name="fid_DeviceFlags_0" inType="win:UInt64"/>
+      <data name="fid_DeviceFlags_1" inType="win:UInt64"/>
+      <data name="fid_CachedHcsParams1" inType="win:UInt32"/>
+      <data name="fid_CachedHcsParams2" inType="win:UInt32"/>
+      <data name="fid_CachedHcsParams3" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams1" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams2" inType="win:UInt32"/>
+      <data name="fid_MapRegisterCount" inType="win:UInt32"/>
+      <data name="fid_SecondaryInterrupterCount" inType="win:UInt32"/>
+      <data name="fid_InterruptMechanism" inType="win:UInt32"/>
+      <data name="fid_SupportedNumberOfStreams" inType="win:UInt32"/>
+      <data name="fid_ControllerSuspendResumeCount" inType="win:UInt32"/>
+      <data name="fid_NumberOfResetRecoveryAttempts" inType="win:UInt32"/>
+      <data name="fid_RestoreStateFailureCount" inType="win:UInt32"/>
+      <data name="fid_RHResumeTimeoutCount" inType="win:UInt32"/>
+      <data name="fid_RHResumeNeededExtendedWaitCount" inType="win:UInt32"/>
+      <data name="fid_RHSuspendTimeoutCount" inType="win:UInt32"/>
+      <data name="fid_RHSuspendNeededExtendedWaitCount" inType="win:UInt32"/>
+      <data name="fid_RHPLCClearedOnU0PriorToU3Count" inType="win:UInt32"/>
+     </template>
+     <template tid="USBXHCI_Gerät_RundownInformationenArgs_V2">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_UsbTtHubDevice" inType="win:Pointer"/>
+      <data name="fid_UsbDevice" inType="win:Pointer"/>
+      <data name="DeviceSpeed" inType="win:UInt32"/>
+      <data name="PortPathDepth" inType="win:UInt32"/>
+      <data name="PortPath" inType="win:UInt32"/>
+      <data name="fid_SlotId" inType="win:UInt32"/>
+      <data name="fid_DeviceIsHub" inType="win:UInt32"/>
+      <data name="fid_NumberOfPorts" inType="win:UInt32"/>
+      <data name="fid_NumberOfTTs" inType="win:UInt32"/>
+      <data name="fid_USB_Device_Descriptor" inType="win:SYSTEMTIME"/>
+      <data name="fid_IsSecureUSBDevice" inType="win:Boolean"/>
+      <data name="fid_IsProxyUSBDevice" inType="win:Boolean"/>
+      <data name="fid_IsDeviceContextLocal" inType="win:Boolean"/>
+      <data name="fid_ConfigurationValue" inType="win:UInt8"/>
+      <data name="fid_InterfaceNumber" inType="win:UInt8"/>
+      <data name="fid_AlternateSetting" inType="win:UInt8"/>
+      <data name="fid_LastConfigureEndpointStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="IntegritätsinformationenfürUSBXHCI_ControllerInformationenArgs_V2">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_ParentBusType" inType="win:UInt32"/>
+      <data name="fid_MajorVersion" inType="win:UInt8"/>
+      <data name="fid_MinorVersion" inType="win:UInt8"/>
+      <data name="fid_PciBus" inType="win:UInt32"/>
+      <data name="fid_PciDevice" inType="win:UInt32"/>
+      <data name="fid_PciFunction" inType="win:UInt32"/>
+      <data name="fid_PciVendorId" inType="win:UInt32"/>
+      <data name="fid_PciDeviceId" inType="win:UInt32"/>
+      <data name="fid_PciRevisionId" inType="win:UInt32"/>
+      <data name="fid_AcpiVendorId" inType="win:AnsiString"/>
+      <data name="fid_AcpiDeviceId" inType="win:AnsiString"/>
+      <data name="fid_AcpiRevisionId" inType="win:AnsiString"/>
+      <data name="fid_FirmwareVersion" inType="win:UInt64"/>
+      <data name="fid_S0IdleStatus" inType="win:UInt32"/>
+      <data name="fid_WdfDevicePowerState" inType="win:UInt32"/>
+      <data name="fid_InstanceNumber" inType="win:UInt32"/>
+      <data name="fid_WdfPowerReferenceForDebuggerAcquired" inType="win:Boolean"/>
+      <data name="fid_IsSecureDevice" inType="win:Boolean"/>
+      <data name="fid_DMAModeInVSM" inType="win:UInt32"/>
+      <data name="fid_NumberOfDMATargetsInVSM" inType="win:UInt32"/>
+      <data name="fid_UsbEndpointOffloadMode" inType="win:UInt32"/>
+      <data name="fid_IsTimeTrackingEnabled" inType="win:Boolean"/>
+      <data name="fid_DeviceFlags_0" inType="win:UInt64"/>
+      <data name="fid_DeviceFlags_1" inType="win:UInt64"/>
+      <data name="fid_CachedHcsParams1" inType="win:UInt32"/>
+      <data name="fid_CachedHcsParams2" inType="win:UInt32"/>
+      <data name="fid_CachedHcsParams3" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams1" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams2" inType="win:UInt32"/>
+      <data name="fid_MapRegisterCount" inType="win:UInt32"/>
+      <data name="fid_SecondaryInterrupterCount" inType="win:UInt32"/>
+      <data name="fid_InterruptMechanism" inType="win:UInt32"/>
+      <data name="fid_SupportedNumberOfStreams" inType="win:UInt32"/>
+      <data name="fid_ControllerSuspendResumeCount" inType="win:UInt32"/>
+      <data name="fid_NumberOfResetRecoveryAttempts" inType="win:UInt32"/>
+      <data name="fid_RestoreStateFailureCount" inType="win:UInt32"/>
+      <data name="fid_RHResumeTimeoutCount" inType="win:UInt32"/>
+      <data name="fid_RHResumeNeededExtendedWaitCount" inType="win:UInt32"/>
+      <data name="fid_RHSuspendTimeoutCount" inType="win:UInt32"/>
+      <data name="fid_RHSuspendNeededExtendedWaitCount" inType="win:UInt32"/>
+      <data name="fid_RHPLCClearedOnU0PriorToU3Count" inType="win:UInt32"/>
+      <data name="fid_Device_Capabilities" inType="win:48"/>
+      <data name="fid_ErrorPortNumber" inType="win:UInt32"/>
+      <data name="fid_PortStatusAndControl" inType="win:UInt32"/>
+      <data name="fid_IsPortErrorRecovered" inType="win:Boolean"/>
+      <data name="fid_WasPortErrorReported" inType="win:Boolean"/>
+      <data name="fid_WasPortRecoveryAssisted" inType="win:Boolean"/>
+     </template>
+     <template tid="USBXHCI_Controller_RundownInformationenArgs_V3">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_ParentBusType" inType="win:UInt32"/>
+      <data name="fid_MajorVersion" inType="win:UInt8"/>
+      <data name="fid_MinorVersion" inType="win:UInt8"/>
+      <data name="fid_PciBus" inType="win:UInt32"/>
+      <data name="fid_PciDevice" inType="win:UInt32"/>
+      <data name="fid_PciFunction" inType="win:UInt32"/>
+      <data name="fid_PciVendorId" inType="win:UInt32"/>
+      <data name="fid_PciDeviceId" inType="win:UInt32"/>
+      <data name="fid_PciRevisionId" inType="win:UInt32"/>
+      <data name="fid_AcpiVendorId" inType="win:AnsiString"/>
+      <data name="fid_AcpiDeviceId" inType="win:AnsiString"/>
+      <data name="fid_AcpiRevisionId" inType="win:AnsiString"/>
+      <data name="fid_FirmwareVersion" inType="win:UInt64"/>
+      <data name="fid_S0IdleStatus" inType="win:UInt32"/>
+      <data name="fid_WdfDevicePowerState" inType="win:UInt32"/>
+      <data name="fid_InstanceNumber" inType="win:UInt32"/>
+      <data name="fid_WdfPowerReferenceForDebuggerAcquired" inType="win:Boolean"/>
+      <data name="fid_IsSecureDevice" inType="win:Boolean"/>
+      <data name="fid_DMAModeInVSM" inType="win:UInt32"/>
+      <data name="fid_NumberOfDMATargetsInVSM" inType="win:UInt32"/>
+      <data name="fid_UsbEndpointOffloadMode" inType="win:UInt32"/>
+      <data name="fid_IsTimeTrackingEnabled" inType="win:Boolean"/>
+      <data name="fid_DeviceFlags_0" inType="win:UInt64"/>
+      <data name="fid_DeviceFlags_1" inType="win:UInt64"/>
+      <data name="fid_CachedHcsParams1" inType="win:UInt32"/>
+      <data name="fid_CachedHcsParams2" inType="win:UInt32"/>
+      <data name="fid_CachedHcsParams3" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams1" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams2" inType="win:UInt32"/>
+      <data name="fid_MapRegisterCount" inType="win:UInt32"/>
+      <data name="fid_SecondaryInterrupterCount" inType="win:UInt32"/>
+      <data name="fid_InterruptMechanism" inType="win:UInt32"/>
+      <data name="fid_SupportedNumberOfStreams" inType="win:UInt32"/>
+      <data name="fid_ControllerSuspendResumeCount" inType="win:UInt32"/>
+      <data name="fid_NumberOfResetRecoveryAttempts" inType="win:UInt32"/>
+      <data name="fid_RestoreStateFailureCount" inType="win:UInt32"/>
+      <data name="fid_RHResumeTimeoutCount" inType="win:UInt32"/>
+      <data name="fid_RHResumeNeededExtendedWaitCount" inType="win:UInt32"/>
+      <data name="fid_RHSuspendTimeoutCount" inType="win:UInt32"/>
+      <data name="fid_RHSuspendNeededExtendedWaitCount" inType="win:UInt32"/>
+      <data name="fid_RHPLCClearedOnU0PriorToU3Count" inType="win:UInt32"/>
+      <data name="fid_Device_Capabilities" inType="win:43"/>
+     </template>
+     <template tid="USBXHCI_Gerät_RundownInformationenArgs_V3">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_UsbTtHubDevice" inType="win:Pointer"/>
+      <data name="fid_UsbDevice" inType="win:Pointer"/>
+      <data name="DeviceSpeed" inType="win:UInt32"/>
+      <data name="PortPathDepth" inType="win:UInt32"/>
+      <data name="PortPath" inType="win:UInt32"/>
+      <data name="fid_SlotId" inType="win:UInt32"/>
+      <data name="fid_DeviceIsHub" inType="win:UInt32"/>
+      <data name="fid_NumberOfPorts" inType="win:UInt32"/>
+      <data name="fid_NumberOfTTs" inType="win:UInt32"/>
+      <data name="fid_USB_Device_Descriptor" inType="win:Struct"/>
+      <data name="fid_IsSecureUSBDevice" inType="win:Boolean"/>
+      <data name="fid_IsProxyUSBDevice" inType="win:Boolean"/>
+      <data name="fid_IsDeviceContextLocal" inType="win:Boolean"/>
+      <data name="fid_ConfigurationValue" inType="win:UInt8"/>
+      <data name="fid_InterfaceNumber" inType="win:UInt8"/>
+      <data name="fid_AlternateSetting" inType="win:UInt8"/>
+      <data name="fid_LastConfigureEndpointStatus" inType="win:UInt32"/>
+      <data name="fid_IsFirmwareHashValid" inType="win:Boolean"/>
+      <data name="fid_IsFirmwareHashQueried" inType="win:Boolean"/>
+      <data name="fid_IsFirmwareHashFromDevicePresent" inType="win:Boolean"/>
+      <data name="fid_IsFirmwareHashFromSDEVEntryPresent" inType="win:Boolean"/>
+      <data name="FirmwareHashFromDevice" inType="win:UInt8"/>
+      <data name="FirmwareHashFromSDEVEntry" inType="win:UInt8"/>
+     </template>
+     <template tid="IntegritätsinformationenfürUSBXHCI_ControllerInformationenArgs_V3">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_ParentBusType" inType="win:UInt32"/>
+      <data name="fid_MajorVersion" inType="win:UInt8"/>
+      <data name="fid_MinorVersion" inType="win:UInt8"/>
+      <data name="fid_PciBus" inType="win:UInt32"/>
+      <data name="fid_PciDevice" inType="win:UInt32"/>
+      <data name="fid_PciFunction" inType="win:UInt32"/>
+      <data name="fid_PciVendorId" inType="win:UInt32"/>
+      <data name="fid_PciDeviceId" inType="win:UInt32"/>
+      <data name="fid_PciRevisionId" inType="win:UInt32"/>
+      <data name="fid_AcpiVendorId" inType="win:AnsiString"/>
+      <data name="fid_AcpiDeviceId" inType="win:AnsiString"/>
+      <data name="fid_AcpiRevisionId" inType="win:AnsiString"/>
+      <data name="fid_FirmwareVersion" inType="win:UInt64"/>
+      <data name="fid_S0IdleStatus" inType="win:UInt32"/>
+      <data name="fid_WdfDevicePowerState" inType="win:UInt32"/>
+      <data name="fid_InstanceNumber" inType="win:UInt32"/>
+      <data name="fid_WdfPowerReferenceForDebuggerAcquired" inType="win:Boolean"/>
+      <data name="fid_IsSecureDevice" inType="win:Boolean"/>
+      <data name="fid_DMAModeInVSM" inType="win:UInt32"/>
+      <data name="fid_NumberOfDMATargetsInVSM" inType="win:UInt32"/>
+      <data name="fid_UsbEndpointOffloadMode" inType="win:UInt32"/>
+      <data name="fid_IsTimeTrackingEnabled" inType="win:Boolean"/>
+      <data name="fid_DeviceFlags_0" inType="win:UInt64"/>
+      <data name="fid_DeviceFlags_1" inType="win:UInt64"/>
+      <data name="fid_CachedHcsParams1" inType="win:UInt32"/>
+      <data name="fid_CachedHcsParams2" inType="win:UInt32"/>
+      <data name="fid_CachedHcsParams3" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams1" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams2" inType="win:UInt32"/>
+      <data name="fid_MapRegisterCount" inType="win:UInt32"/>
+      <data name="fid_SecondaryInterrupterCount" inType="win:UInt32"/>
+      <data name="fid_InterruptMechanism" inType="win:UInt32"/>
+      <data name="fid_SupportedNumberOfStreams" inType="win:UInt32"/>
+      <data name="fid_ControllerSuspendResumeCount" inType="win:UInt32"/>
+      <data name="fid_Controller_Counters" inType="win:42"/>
+      <data name="fid_Device_Capabilities" inType="win:53"/>
+      <data name="fid_ErrorPortNumber" inType="win:UInt32"/>
+      <data name="fid_PortStatusAndControl" inType="win:UInt32"/>
+      <data name="fid_IsPortErrorRecovered" inType="win:Boolean"/>
+      <data name="fid_WasPortErrorReported" inType="win:Boolean"/>
+      <data name="fid_WasPortRecoveryAssisted" inType="win:Boolean"/>
+     </template>
+     <template tid="USBXHCI_Controller_RundownInformationenArgs_V4">
+      <data name="fid_UcxController" inType="win:Pointer"/>
+      <data name="fid_ParentBusType" inType="win:UInt32"/>
+      <data name="fid_MajorVersion" inType="win:UInt8"/>
+      <data name="fid_MinorVersion" inType="win:UInt8"/>
+      <data name="fid_PciBus" inType="win:UInt32"/>
+      <data name="fid_PciDevice" inType="win:UInt32"/>
+      <data name="fid_PciFunction" inType="win:UInt32"/>
+      <data name="fid_PciVendorId" inType="win:UInt32"/>
+      <data name="fid_PciDeviceId" inType="win:UInt32"/>
+      <data name="fid_PciRevisionId" inType="win:UInt32"/>
+      <data name="fid_AcpiVendorId" inType="win:AnsiString"/>
+      <data name="fid_AcpiDeviceId" inType="win:AnsiString"/>
+      <data name="fid_AcpiRevisionId" inType="win:AnsiString"/>
+      <data name="fid_FirmwareVersion" inType="win:UInt64"/>
+      <data name="fid_S0IdleStatus" inType="win:UInt32"/>
+      <data name="fid_WdfDevicePowerState" inType="win:UInt32"/>
+      <data name="fid_InstanceNumber" inType="win:UInt32"/>
+      <data name="fid_WdfPowerReferenceForDebuggerAcquired" inType="win:Boolean"/>
+      <data name="fid_IsSecureDevice" inType="win:Boolean"/>
+      <data name="fid_DMAModeInVSM" inType="win:UInt32"/>
+      <data name="fid_NumberOfDMATargetsInVSM" inType="win:UInt32"/>
+      <data name="fid_UsbEndpointOffloadMode" inType="win:UInt32"/>
+      <data name="fid_IsTimeTrackingEnabled" inType="win:Boolean"/>
+      <data name="fid_DeviceFlags_0" inType="win:UInt64"/>
+      <data name="fid_DeviceFlags_1" inType="win:UInt64"/>
+      <data name="fid_CachedHcsParams1" inType="win:UInt32"/>
+      <data name="fid_CachedHcsParams2" inType="win:UInt32"/>
+      <data name="fid_CachedHcsParams3" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams1" inType="win:UInt32"/>
+      <data name="fid_CachedHccParams2" inType="win:UInt32"/>
+      <data name="fid_MapRegisterCount" inType="win:UInt32"/>
+      <data name="fid_SecondaryInterrupterCount" inType="win:UInt32"/>
+      <data name="fid_InterruptMechanism" inType="win:UInt32"/>
+      <data name="fid_SupportedNumberOfStreams" inType="win:UInt32"/>
+      <data name="fid_ControllerSuspendResumeCount" inType="win:UInt32"/>
+      <data name="fid_Controller_Counters" inType="win:37"/>
+      <data name="fid_Device_Capabilities" inType="win:48"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Default" value="Default"/>
+    <string id="keyword_USBError" value="USBError"/>
+    <string id="keyword_IRP" value="IRP"/>
+    <string id="keyword_Power" value="Power"/>
+    <string id="keyword_PnP" value="PnP"/>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="keyword_HeadersBusTrace" value="HeadersBusTrace"/>
+    <string id="keyword_PartialDataBusTrace" value="PartialDataBusTrace"/>
+    <string id="keyword_FullDataBusTrace" value="FullDataBusTrace"/>
+    <string id="keyword_StateMachine" value="StateMachine"/>
+    <string id="keyword_Enumeration" value="Enumeration"/>
+    <string id="keyword_VerifyDriver" value="VerifyDriver"/>
+    <string id="keyword_HWVerifyHost" value="HWVerifyHost"/>
+    <string id="keyword_HWVerifyHub" value="HWVerifyHub"/>
+    <string id="keyword_HWVerifyDevice" value="HWVerifyDevice"/>
+    <string id="keyword_Rundown" value="Rundown"/>
+    <string id="keyword_Device" value="Device"/>
+    <string id="keyword_Hub" value="Hub"/>
+    <string id="keyword_Compat" value="Compat"/>
+    <string id="keyword_ControllerCommand" value="ControllerCommand"/>
+    <string id="keyword_keyword_400000000000" value="keyword_400000000000"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="opcode_task_0Informationen" value="Informationen"/>
+    <string id="task_USBXHCI_Treiber_Rundown" value="USBXHCI_Treiber_Rundown"/>
+    <string id="task_USBXHCI_Controller_Rundown" value="USBXHCI_Controller_Rundown"/>
+    <string id="opcode_USBXHCI_Controller_RundownInformationen" value="Informationen"/>
+    <string id="task_USBXHCI_Gerät_Rundown" value="USBXHCI_Gerät_Rundown"/>
+    <string id="opcode_USBXHCI_Gerät_RundownInformationen" value="Informationen"/>
+    <string id="task_USBXHCI_Endpunkt_Rundown" value="USBXHCI_Endpunkt_Rundown"/>
+    <string id="opcode_USBXHCI_Endpunkt_RundownInformationen" value="Informationen"/>
+    <string id="task_USBXHCI_Controller_Erstellen" value="USBXHCI_Controller_Erstellen"/>
+    <string id="opcode_USBXHCI_Controller_ErstellenInformationen" value="Informationen"/>
+    <string id="task_USBXHCI_Controller_Löschen" value="USBXHCI_Controller_Löschen"/>
+    <string id="opcode_USBXHCI_Controller_LöschenInformationen" value="Informationen"/>
+    <string id="task_USBXHCI_Gerät_Erstellen" value="USBXHCI_Gerät_Erstellen"/>
+    <string id="opcode_USBXHCI_Gerät_ErstellenInformationen" value="Informationen"/>
+    <string id="task_USBXHCI_Gerät_Aktualisieren" value="USBXHCI_Gerät_Aktualisieren"/>
+    <string id="opcode_USBXHCI_Gerät_AktualisierenInformationen" value="Informationen"/>
+    <string id="task_USBXHCI_Gerät_Löschen" value="USBXHCI_Gerät_Löschen"/>
+    <string id="opcode_USBXHCI_Gerät_LöschenInformationen" value="Informationen"/>
+    <string id="task_USBXHCI_Endpunkt_Erstellen" value="USBXHCI_Endpunkt_Erstellen"/>
+    <string id="opcode_USBXHCI_Endpunkt_ErstellenInformationen" value="Informationen"/>
+    <string id="task_USBXHCI_Endpunkt_Aktualisieren" value="USBXHCI_Endpunkt_Aktualisieren"/>
+    <string id="opcode_USBXHCI_Endpunkt_AktualisierenInformationen" value="Informationen"/>
+    <string id="task_USBXHCI_Endpunkt_Löschen" value="USBXHCI_Endpunkt_Löschen"/>
+    <string id="opcode_USBXHCI_Endpunkt_LöschenInformationen" value="Informationen"/>
+    <string id="task_FirmwareversionsupdatefürUSBXHCI_Controller" value="FirmwareversionsupdatefürUSBXHCI_Controller"/>
+    <string id="opcode_FirmwareversionsupdatefürUSBXHCI_ControllerInformationen" value="Informationen"/>
+    <string id="task_USBXHCI_Controller_D0Entry" value="USBXHCI_Controller_D0Entry"/>
+    <string id="task_USBXHCI_Controller_D0EntryPostInterruptsEnabled" value="USBXHCI_Controller_D0EntryPostInterruptsEnabled"/>
+    <string id="task_USBXHCI_Controller_D0ExitPreInterruptsDisabled" value="USBXHCI_Controller_D0ExitPreInterruptsDisabled"/>
+    <string id="task_USBXHCI_Controller_D0Exit" value="USBXHCI_Controller_D0Exit"/>
+    <string id="task_USBXHCI_Controller_SpeicherungdesZustands" value="USBXHCI_Controller_SpeicherungdesZustands"/>
+    <string id="task_USBXHCI_Controller_WiederherstellungdesZustands" value="USBXHCI_Controller_WiederherstellungdesZustands"/>
+    <string id="task_USBXHCI_Controller_InterneZurücksetzung" value="USBXHCI_Controller_InterneZurücksetzung"/>
+    <string id="task_USBXHCI_Controller_Fehler" value="USBXHCI_Controller_Fehler"/>
+    <string id="opcode_USBXHCI_Controller_FehlerInformationen" value="Informationen"/>
+    <string id="task_USBXHCI_Befehl" value="USBXHCI_Befehl"/>
+    <string id="opcode_USBXHCI_BefehlInformationen" value="Informationen"/>
+    <string id="task_AnforderunganVTL1IUM_TrustLet" value="AnforderunganVTL1IUM_TrustLet"/>
+    <string id="opcode_AnforderunganVTL1IUM_TrustLetVTL0_TreiberanforderungwurdeinTrustLetempfangen." value="VTL0_TreiberanforderungwurdeinTrustLetempfangen."/>
+    <string id="opcode_AnforderunganVTL1IUM_TrustLetVTL0_TreiberanforderungwurdeinTrustLetabgeschlossen." value="VTL0_TreiberanforderungwurdeinTrustLetabgeschlossen."/>
+    <string id="task_USB_Übertragung" value="USB_Übertragung"/>
+    <string id="opcode_USB_ÜbertragungUSB_Übertragunginitialisiert" value="USB_Übertragunginitialisiert"/>
+    <string id="task_VerzögerteArbeit(DPC/WorkItem)" value="VerzögerteArbeit(DPC/WorkItem)"/>
+    <string id="task_NachverfolgungfürdieZeitsynchronisierungstarten" value="NachverfolgungfürdieZeitsynchronisierungstarten"/>
+    <string id="opcode_NachverfolgungfürdieZeitsynchronisierungstartenInformationen" value="Informationen"/>
+    <string id="task_NachverfolgungfürdieZeitsynchronisierungbeenden" value="NachverfolgungfürdieZeitsynchronisierungbeenden"/>
+    <string id="opcode_NachverfolgungfürdieZeitsynchronisierungbeendenInformationen" value="Informationen"/>
+    <string id="task_Endpunktkonfigurieren" value="Endpunktkonfigurieren"/>
+    <string id="opcode_EndpunktkonfigurierenInformationen" value="Informationen"/>
+    <string id="task_IntegritätsinformationenfürUSBXHCI_Controller" value="IntegritätsinformationenfürUSBXHCI_Controller"/>
+    <string id="opcode_IntegritätsinformationenfürUSBXHCI_ControllerInformationen" value="Informationen"/>
+    <string id="map_MapParentBusTypeParentBusTypePci" value="ParentBusTypePci"/>
+    <string id="map_MapParentBusTypeParentBusTypeAcpi" value="ParentBusTypeAcpi"/>
+    <string id="map_S0IdleStatusS0IdleConfigured" value="S0IdleConfigured"/>
+    <string id="map_S0IdleStatusS0IdleNotConfiguredDueToHackFlag" value="S0IdleNotConfiguredDueToHackFlag"/>
+    <string id="map_S0IdleStatusNotConfiguredDueToNoS0WakeCapability" value="NotConfiguredDueToNoS0WakeCapability"/>
+    <string id="map_CommandWaitlistReasonCommandRingFull" value="CommandRingFull"/>
+    <string id="map_CommandWaitlistReasonCommandsSerialized" value="CommandsSerialized"/>
+    <string id="map_CommandWaitlistReasonCommandAbortInProgress" value="CommandAbortInProgress"/>
+    <string id="map_CommandWaitlistReasonControllerResetInProgress" value="ControllerResetInProgress"/>
+    <string id="map_TrbCompletionStatusErfolgreich" value="Erfolgreich"/>
+    <string id="map_TrbCompletionStatusNicht erfolgreich" value="Nicht erfolgreich"/>
+    <string id="map_TrbCompletionStatusZeitüberschreitung" value="Zeitüberschreitung"/>
+    <string id="map_TrbCompletionStatusController nicht vorhanden" value="Controller nicht vorhanden"/>
+    <string id="map_TrbCompletionStatusNicht abgeschlossen" value="Nicht abgeschlossen"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

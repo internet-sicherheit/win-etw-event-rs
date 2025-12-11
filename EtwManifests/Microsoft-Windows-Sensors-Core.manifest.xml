@@ -1,0 +1,350 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Sensors-Core" guid="{751c292b-23e6-58cf-1fd4-38f8512c66c2}" resourceFileName="Microsoft-Windows-Sensors-Core" messageFileName="Microsoft-Windows-Sensors-Core" symbol="MicrosoftWindowsSensorsCore" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="SensorsCxInitializationTask" message="$(string.task_SensorsCxInitializationTask)" value="101"/>
+     <task name="SensorsCxGetDataIntervalTask" message="$(string.task_SensorsCxGetDataIntervalTask)" value="102"/>
+     <task name="SensorsCxSetDataIntervalTask" message="$(string.task_SensorsCxSetDataIntervalTask)" value="103"/>
+     <task name="SensorsCxGetDataThresholdsTask" message="$(string.task_SensorsCxGetDataThresholdsTask)" value="104"/>
+     <task name="SensorsCxSetDataThresholdsTask" message="$(string.task_SensorsCxSetDataThresholdsTask)" value="105"/>
+     <task name="SensorsCxGetPropertiesTask" message="$(string.task_SensorsCxGetPropertiesTask)" value="106"/>
+     <task name="SensorsCxGetSupportedDatafieldsTask" message="$(string.task_SensorsCxGetSupportedDatafieldsTask)" value="107"/>
+     <task name="SensorsCxGetDatafieldPropertiesTask" message="$(string.task_SensorsCxGetDatafieldPropertiesTask)" value="108"/>
+     <task name="SensorsCxStartSensorTask" message="$(string.task_SensorsCxStartSensorTask)" value="109"/>
+     <task name="SensorsCxStopSensorTask" message="$(string.task_SensorsCxStopSensorTask)" value="110"/>
+     <task name="SensorsCxStartHistoryTask" message="$(string.task_SensorsCxStartHistoryTask)" value="111"/>
+     <task name="SensorsCxStopHistoryTask" message="$(string.task_SensorsCxStopHistoryTask)" value="112"/>
+     <task name="SensorsCxStartHistoryRetrievalTask" message="$(string.task_SensorsCxStartHistoryRetrievalTask)" value="113"/>
+     <task name="SensorsCxCancelHistoryRetrievalTask" message="$(string.task_SensorsCxCancelHistoryRetrievalTask)" value="114"/>
+     <task name="SensorsCxClearHistoryTask" message="$(string.task_SensorsCxClearHistoryTask)" value="115"/>
+     <task name="SensorsCxSetReportLatencyTask" message="$(string.task_SensorsCxSetReportLatencyTask)" value="116"/>
+     <task name="SensorsCxEnableWakeTask" message="$(string.task_SensorsCxEnableWakeTask)" value="117"/>
+     <task name="SensorsCxDisableWakeTask" message="$(string.task_SensorsCxDisableWakeTask)" value="118"/>
+     <task name="SensorsCxRundownTask" message="$(string.task_SensorsCxRundownTask)" value="119"/>
+     <task name="SensorsDefaultDeviceSelectionTask" message="$(string.task_SensorsDefaultDeviceSelectionTask)" value="200"/>
+     <task name="SensorsHidInitializationTask" message="$(string.task_SensorsHidInitializationTask)" value="300"/>
+     <task name="SensorsHidReportParsingTask" message="$(string.task_SensorsHidReportParsingTask)" value="301"/>
+     <task name="SensorsHidGetInputReportTask" message="$(string.task_SensorsHidGetInputReportTask)" value="302"/>
+     <task name="SensorsHidGetFeatureReportTask" message="$(string.task_SensorsHidGetFeatureReportTask)" value="303"/>
+     <task name="SensorsHidSetFeatureReportTask" message="$(string.task_SensorsHidSetFeatureReportTask)" value="304"/>
+     <task name="SensorServiceSdoCreateTask" message="$(string.task_SensorServiceSdoCreateTask)" value="400"/>
+     <task name="SensorServiceSdoRemoveTask" message="$(string.task_SensorServiceSdoRemoveTask)" value="401"/>
+    </tasks>
+    <events>
+     <event value="1001" symbol="SensorsCxInitializationTask" version="0" task="SensorsCxInitializationTask" level="win:Error" template="SensorsCxInitializationTaskArgs"/>
+     <event value="1002" symbol="SensorsCxInitializationTask1002" version="0" task="SensorsCxInitializationTask" level="win:Error" template="SensorsCxInitializationTask1002Args"/>
+     <event value="1003" symbol="SensorsCxInitializationTask1003" version="0" task="SensorsCxInitializationTask" level="win:Informational" template="SensorsCxInitializationTask1003Args"/>
+     <event value="1004" symbol="SensorsCxInitializationTask1004" version="0" task="SensorsCxInitializationTask" level="win:Informational" template="SensorsCxInitializationTask1004Args"/>
+     <event value="1005" symbol="SensorsCxInitializationTask1005" version="0" task="SensorsCxInitializationTask" level="win:Informational" template="SensorsCxInitializationTask1005Args"/>
+     <event value="1006" symbol="SensorsCxInitializationTask1006" version="0" task="SensorsCxInitializationTask" level="win:Informational" template="SensorsCxInitializationTask1006Args"/>
+     <event value="1007" symbol="SensorsCxInitializationTask1007" version="0" task="SensorsCxInitializationTask" level="win:Error" template="SensorsCxInitializationTask1007Args"/>
+     <event value="1008" symbol="SensorsCxInitializationTask1008" version="0" task="SensorsCxInitializationTask" level="win:Informational" template="SensorsCxInitializationTask1005Args"/>
+     <event value="1009" symbol="SensorsCxInitializationTask1009" version="0" task="SensorsCxInitializationTask" level="win:Warning" template="SensorsCxInitializationTask1009Args"/>
+     <event value="1010" symbol="SensorsCxInitializationTask1010" version="0" task="SensorsCxInitializationTask" level="win:Informational" template="SensorsCxInitializationTask1010Args"/>
+     <event value="1011" symbol="SensorsCxInitializationTask1011" version="0" task="SensorsCxInitializationTask" level="win:Error" template="SensorsCxInitializationTask1011Args"/>
+     <event value="1012" symbol="SensorsCxInitializationTask1012" version="0" task="SensorsCxInitializationTask" level="win:Error" template="SensorsCxInitializationTask1011Args"/>
+     <event value="1013" symbol="SensorsCxInitializationTask1013" version="0" task="SensorsCxInitializationTask" level="win:Error" template="SensorsCxInitializationTask1013Args"/>
+     <event value="1014" symbol="SensorsCxInitializationTask1014" version="0" task="SensorsCxInitializationTask" level="win:Error" template="SensorsCxInitializationTask1013Args"/>
+     <event value="1015" symbol="SensorsCxInitializationTask1015" version="0" task="SensorsCxInitializationTask" level="win:Error" template="SensorsCxInitializationTask1015Args"/>
+     <event value="1016" symbol="SensorsCxInitializationTask1016" version="0" task="SensorsCxInitializationTask" level="win:Error"/>
+     <event value="1017" symbol="SensorsCxInitializationTask1017" version="0" task="SensorsCxInitializationTask" level="win:Error"/>
+     <event value="1018" symbol="SensorsCxInitializationTask1018" version="0" task="SensorsCxInitializationTask" level="win:Error"/>
+     <event value="1019" symbol="SensorsCxGetDataIntervalTask" version="0" task="SensorsCxGetDataIntervalTask" level="win:Error" template="SensorsCxGetDataIntervalTaskArgs"/>
+     <event value="1020" symbol="SensorsCxSetDataIntervalTask" version="0" task="SensorsCxSetDataIntervalTask" level="win:Error" template="SensorsCxSetDataIntervalTaskArgs"/>
+     <event value="1021" symbol="SensorsCxGetDataThresholdsTask" version="0" task="SensorsCxGetDataThresholdsTask" level="win:Error" template="SensorsCxGetDataThresholdsTaskArgs"/>
+     <event value="1022" symbol="SensorsCxSetDataThresholdsTask" version="0" task="SensorsCxSetDataThresholdsTask" level="win:Error" template="SensorsCxSetDataThresholdsTaskArgs"/>
+     <event value="1023" symbol="SensorsCxGetPropertiesTask" version="0" task="SensorsCxGetPropertiesTask" level="win:Error" template="SensorsCxGetPropertiesTaskArgs"/>
+     <event value="1024" symbol="SensorsCxGetSupportedDatafieldsTask" version="0" task="SensorsCxGetSupportedDatafieldsTask" level="win:Error" template="SensorsCxGetPropertiesTaskArgs"/>
+     <event value="1025" symbol="SensorsCxGetDatafieldPropertiesTask" version="0" task="SensorsCxGetDatafieldPropertiesTask" level="win:Error" template="SensorsCxGetDatafieldPropertiesTaskArgs"/>
+     <event value="1026" symbol="SensorsCxStartSensorTask" version="0" task="SensorsCxStartSensorTask" level="win:Error" template="SensorsCxStartSensorTaskArgs"/>
+     <event value="1027" symbol="SensorsCxStopSensorTask" version="0" task="SensorsCxStopSensorTask" level="win:Error" template="SensorsCxStartSensorTaskArgs"/>
+     <event value="1028" symbol="SensorsCxStartHistoryTask" version="0" task="SensorsCxStartHistoryTask" level="win:Error" template="SensorsCxStartSensorTaskArgs"/>
+     <event value="1029" symbol="SensorsCxStopHistoryTask" version="0" task="SensorsCxStopHistoryTask" level="win:Error" template="SensorsCxStartSensorTaskArgs"/>
+     <event value="1030" symbol="SensorsCxStartHistoryRetrievalTask" version="0" task="SensorsCxStartHistoryRetrievalTask" level="win:Error" template="SensorsCxStartHistoryRetrievalTaskArgs"/>
+     <event value="1031" symbol="SensorsCxCancelHistoryRetrievalTask" version="0" task="SensorsCxCancelHistoryRetrievalTask" level="win:Error" template="SensorsCxCancelHistoryRetrievalTaskArgs"/>
+     <event value="1032" symbol="SensorsCxClearHistoryTask" version="0" task="SensorsCxClearHistoryTask" level="win:Error" template="SensorsCxStartSensorTaskArgs"/>
+     <event value="1033" symbol="SensorsCxSetReportLatencyTask" version="0" task="SensorsCxSetReportLatencyTask" level="win:Error" template="SensorsCxSetReportLatencyTaskArgs"/>
+     <event value="1034" symbol="SensorsCxEnableWakeTask" version="0" task="SensorsCxEnableWakeTask" level="win:Error" template="SensorsCxStartSensorTaskArgs"/>
+     <event value="1035" symbol="SensorsCxDisableWakeTask" version="0" task="SensorsCxDisableWakeTask" level="win:Error" template="SensorsCxStartSensorTaskArgs"/>
+     <event value="1036" symbol="SensorsCxRundownTask" version="0" task="SensorsCxRundownTask" level="win:Informational" template="SensorsCxRundownTaskArgs"/>
+     <event value="1100" symbol="SensorsCxRundownTask1100" version="0" task="SensorsCxRundownTask" level="win:Informational" template="SensorsCxRundownTask1100Args"/>
+     <event value="1101" symbol="SensorsDefaultDeviceSelectionTask" version="0" task="SensorsDefaultDeviceSelectionTask" level="win:Informational" template="SensorsDefaultDeviceSelectionTaskArgs"/>
+     <event value="1102" symbol="SensorsDefaultDeviceSelectionTask1102" version="0" task="SensorsDefaultDeviceSelectionTask" level="win:Informational" template="SensorsDefaultDeviceSelectionTaskArgs"/>
+     <event value="1103" symbol="SensorsDefaultDeviceSelectionTask1103" version="0" task="SensorsDefaultDeviceSelectionTask" level="win:Informational" template="SensorsDefaultDeviceSelectionTaskArgs"/>
+     <event value="1104" symbol="SensorsDefaultDeviceSelectionTask1104" version="0" task="SensorsDefaultDeviceSelectionTask" level="win:Informational" template="SensorsDefaultDeviceSelectionTaskArgs"/>
+     <event value="1105" symbol="SensorsDefaultDeviceSelectionTask1105" version="0" task="SensorsDefaultDeviceSelectionTask" level="win:Informational" template="SensorsDefaultDeviceSelectionTask1105Args"/>
+     <event value="1106" symbol="SensorsDefaultDeviceSelectionTask1106" version="0" task="SensorsDefaultDeviceSelectionTask" level="win:Informational" template="SensorsDefaultDeviceSelectionTaskArgs"/>
+     <event value="1107" symbol="SensorsDefaultDeviceSelectionTask1107" version="0" task="SensorsDefaultDeviceSelectionTask" level="win:Informational" template="SensorsDefaultDeviceSelectionTaskArgs"/>
+     <event value="1108" symbol="SensorsDefaultDeviceSelectionTask1108" version="0" task="SensorsDefaultDeviceSelectionTask" level="win:Informational" template="SensorsDefaultDeviceSelectionTaskArgs"/>
+     <event value="1200" symbol="SensorsHidInitializationTask" version="0" task="SensorsHidInitializationTask" level="win:Informational" template="SensorsHidInitializationTaskArgs"/>
+     <event value="1201" symbol="SensorsHidInitializationTask1201" version="0" task="SensorsHidInitializationTask" level="win:Informational" template="SensorsHidInitializationTaskArgs"/>
+     <event value="1202" symbol="SensorsHidInitializationTask1202" version="0" task="SensorsHidInitializationTask" level="win:Error" template="SensorsHidInitializationTask1202Args"/>
+     <event value="1203" symbol="SensorsHidInitializationTask1203" version="0" task="SensorsHidInitializationTask" level="win:Error" template="SensorsHidInitializationTask1203Args"/>
+     <event value="1204" symbol="SensorsHidInitializationTask1204" version="0" task="SensorsHidInitializationTask" level="win:Warning" template="SensorsHidInitializationTask1204Args"/>
+     <event value="1205" symbol="SensorsHidInitializationTask1205" version="0" task="SensorsHidInitializationTask" level="win:Informational" template="SensorsHidInitializationTask1205Args"/>
+     <event value="1206" symbol="SensorsHidInitializationTask1206" version="0" task="SensorsHidInitializationTask" level="win:Informational" template="SensorsHidInitializationTask1205Args"/>
+     <event value="1207" symbol="SensorsHidInitializationTask1207" version="0" task="SensorsHidInitializationTask" level="win:Informational" template="SensorsHidInitializationTask1205Args"/>
+     <event value="1208" symbol="SensorsHidInitializationTask1208" version="0" task="SensorsHidInitializationTask" level="win:Warning" template="SensorsHidInitializationTask1208Args"/>
+     <event value="1209" symbol="SensorsHidInitializationTask1209" version="0" task="SensorsHidInitializationTask" level="win:Informational" template="SensorsHidInitializationTask1203Args"/>
+     <event value="1210" symbol="SensorsHidInitializationTask1210" version="0" task="SensorsHidInitializationTask" level="win:Error" template="SensorsHidInitializationTask1203Args"/>
+     <event value="1211" symbol="SensorsHidInitializationTask1211" version="0" task="SensorsHidInitializationTask" level="win:Informational" template="SensorsHidInitializationTask1203Args"/>
+     <event value="1212" symbol="SensorsHidInitializationTask1212" version="0" task="SensorsHidInitializationTask" level="win:Error" template="SensorsHidInitializationTask1203Args"/>
+     <event value="1213" symbol="SensorsHidInitializationTask1213" version="0" task="SensorsHidInitializationTask" level="win:Informational" template="SensorsHidInitializationTask1203Args"/>
+     <event value="1214" symbol="SensorsHidInitializationTask1214" version="0" task="SensorsHidInitializationTask" level="win:Error" template="SensorsHidInitializationTask1203Args"/>
+     <event value="1215" symbol="SensorsHidInitializationTask1215" version="0" task="SensorsHidInitializationTask" level="win:Informational" template="SensorsHidInitializationTask1203Args"/>
+     <event value="1216" symbol="SensorsHidInitializationTask1216" version="0" task="SensorsHidInitializationTask" level="win:Error" template="SensorsHidInitializationTask1203Args"/>
+     <event value="1217" symbol="SensorsHidInitializationTask1217" version="0" task="SensorsHidInitializationTask" level="win:Informational" template="SensorsHidInitializationTask1203Args"/>
+     <event value="1218" symbol="SensorsHidInitializationTask1218" version="0" task="SensorsHidInitializationTask" level="win:Informational" template="SensorsHidInitializationTask1203Args"/>
+     <event value="1219" symbol="SensorsHidInitializationTask1219" version="0" task="SensorsHidInitializationTask" level="win:Informational" template="SensorsHidInitializationTask1219Args"/>
+     <event value="1220" symbol="SensorsHidReportParsingTask" version="0" task="SensorsHidReportParsingTask" level="win:Error" template="SensorsHidReportParsingTaskArgs"/>
+     <event value="1221" symbol="SensorsHidGetInputReportTask" version="0" task="SensorsHidGetInputReportTask" level="win:Error" template="SensorsHidGetInputReportTaskArgs"/>
+     <event value="1222" symbol="SensorsHidGetFeatureReportTask" version="0" task="SensorsHidGetFeatureReportTask" level="win:Error" template="SensorsHidGetInputReportTaskArgs"/>
+     <event value="1223" symbol="SensorsHidSetFeatureReportTask" version="0" task="SensorsHidSetFeatureReportTask" level="win:Error" template="SensorsHidGetInputReportTaskArgs"/>
+     <event value="1224" symbol="SensorsHidInitializationTask1224" version="0" task="SensorsHidInitializationTask" level="win:Error" template="SensorsHidInitializationTask1203Args"/>
+     <event value="1300" symbol="SensorServiceSdoCreateTask" version="0" task="SensorServiceSdoCreateTask" level="win:Error" template="SensorsDefaultDeviceSelectionTaskArgs"/>
+     <event value="1301" symbol="SensorServiceSdoCreateTask1301" version="0" task="SensorServiceSdoCreateTask" level="win:Error" template="SensorsDefaultDeviceSelectionTaskArgs"/>
+     <event value="1302" symbol="SensorServiceSdoRemoveTask" version="0" task="SensorServiceSdoRemoveTask" level="win:Error" template="SensorsDefaultDeviceSelectionTaskArgs"/>
+    </events>
+    <templates>
+     <template tid="SensorsCxInitializationTaskArgs">
+      <data name="WdfDeviceInit" inType="win:Pointer"/>
+     </template>
+     <template tid="SensorsCxInitializationTask1002Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+     </template>
+     <template tid="SensorsCxInitializationTask1003Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="IsStateChangeSupported" inType="win:Boolean"/>
+     </template>
+     <template tid="SensorsCxInitializationTask1004Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="IsDriverPowerPolicyOwner" inType="win:Boolean"/>
+     </template>
+     <template tid="SensorsCxInitializationTask1005Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="SensorType" inType="win:GUID"/>
+      <data name="PersistentUniqueID" inType="win:GUID"/>
+     </template>
+     <template tid="SensorsCxInitializationTask1006Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="VendorDefinedSubType" inType="win:GUID"/>
+      <data name="PersistentUniqueID" inType="win:GUID"/>
+     </template>
+     <template tid="SensorsCxInitializationTask1007Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="PersistentUniqueID" inType="win:GUID"/>
+     </template>
+     <template tid="SensorsCxInitializationTask1009Args">
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+     </template>
+     <template tid="SensorsCxInitializationTask1010Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="FmtId" inType="win:GUID"/>
+      <data name="Pid" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxInitializationTask1011Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="IntervalMs" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxInitializationTask1013Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="MaxDataSize" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxInitializationTask1015Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="BatchSize" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxGetDataIntervalTaskArgs">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="pIntervalMs" inType="win:Pointer"/>
+      <data name="NtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxSetDataIntervalTaskArgs">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="IntervalMs" inType="win:UInt32"/>
+      <data name="NtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxGetDataThresholdsTaskArgs">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="pThresholds" inType="win:Pointer"/>
+      <data name="pSize" inType="win:Pointer"/>
+      <data name="NtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxSetDataThresholdsTaskArgs">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="pThresholds" inType="win:Pointer"/>
+      <data name="NtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxGetPropertiesTaskArgs">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="pProperties" inType="win:Pointer"/>
+      <data name="pSize" inType="win:Pointer"/>
+      <data name="NtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxGetDatafieldPropertiesTaskArgs">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="pDatafield" inType="win:Pointer"/>
+      <data name="pProperties" inType="win:Pointer"/>
+      <data name="pSize" inType="win:Pointer"/>
+      <data name="NtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxStartSensorTaskArgs">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="NtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxStartHistoryRetrievalTaskArgs">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="pHistoryCollection" inType="win:Pointer"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="NtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxCancelHistoryRetrievalTaskArgs">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="pBytesWritten" inType="win:Pointer"/>
+      <data name="NtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxSetReportLatencyTaskArgs">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="ReportLatencyMs" inType="win:UInt32"/>
+      <data name="NtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsCxRundownTaskArgs">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SENSOROBJECT" inType="win:Pointer"/>
+      <data name="Type" inType="win:GUID"/>
+      <data name="Category" inType="win:GUID"/>
+      <data name="SubType" inType="win:GUID"/>
+      <data name="PeristentUniqueId" inType="win:GUID"/>
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Model" inType="win:UnicodeString"/>
+      <data name="Manufacturer" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SensorsCxRundownTask1100Args">
+      <data name="PeristentUniqueId" inType="win:GUID"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ReportIntervalMs" inType="win:UInt32"/>
+      <data name="ReportLatencyMs" inType="win:UInt32"/>
+      <data name="IsStreaming" inType="win:Boolean"/>
+     </template>
+     <template tid="SensorsDefaultDeviceSelectionTaskArgs">
+      <data name="Interface" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SensorsDefaultDeviceSelectionTask1105Args">
+      <data name="Interface" inType="win:UnicodeString"/>
+      <data name="PowerUsage" inType="win:Float"/>
+     </template>
+     <template tid="SensorsHidInitializationTaskArgs">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="Usage" inType="win:UInt16"/>
+     </template>
+     <template tid="SensorsHidInitializationTask1202Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SensorUsage" inType="win:UInt16"/>
+      <data name="ReportIdInCaps" inType="win:UInt8"/>
+      <data name="ReportIdInReport" inType="win:UInt8"/>
+     </template>
+     <template tid="SensorsHidInitializationTask1203Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SensorUsage" inType="win:UInt16"/>
+      <data name="ReportId" inType="win:UInt8"/>
+     </template>
+     <template tid="SensorsHidInitializationTask1204Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SensorUsage" inType="win:UInt16"/>
+      <data name="ReportId" inType="win:UInt8"/>
+      <data name="Usage" inType="win:UInt16"/>
+     </template>
+     <template tid="SensorsHidInitializationTask1205Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SensorUsage" inType="win:UInt16"/>
+      <data name="ReportId" inType="win:UInt8"/>
+      <data name="Usage" inType="win:UInt16"/>
+      <data name="fmtid" inType="win:GUID"/>
+      <data name="pid" inType="win:UInt32"/>
+     </template>
+     <template tid="SensorsHidInitializationTask1208Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SensorUsage" inType="win:UInt16"/>
+      <data name="ReportId" inType="win:UInt8"/>
+      <data name="BitSize" inType="win:UInt16"/>
+      <data name="ExpectedBitSize" inType="win:UInt16"/>
+      <data name="ReportCount" inType="win:UInt16"/>
+      <data name="ExpectedReportCount" inType="win:UInt16"/>
+      <data name="Exponent" inType="win:UInt16"/>
+      <data name="ExpectedExponent" inType="win:UInt16"/>
+     </template>
+     <template tid="SensorsHidInitializationTask1219Args">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SensorUsage" inType="win:UInt16"/>
+      <data name="ReportId" inType="win:UInt8"/>
+      <data name="IsWakeReportingStateSupported" inType="win:Boolean"/>
+      <data name="IsWakePowerStateSupported" inType="win:Boolean"/>
+     </template>
+     <template tid="SensorsHidReportParsingTaskArgs">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="ReportIdInReport" inType="win:UInt8"/>
+     </template>
+     <template tid="SensorsHidGetInputReportTaskArgs">
+      <data name="WdfDevice" inType="win:Pointer"/>
+      <data name="SensorUsage" inType="win:UInt16"/>
+      <data name="ReportId" inType="win:UInt8"/>
+      <data name="NtStatus" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_SensorsCxInitializationTask" value="SensorsCxInitializationTask"/>
+    <string id="task_SensorsCxGetDataIntervalTask" value="SensorsCxGetDataIntervalTask"/>
+    <string id="task_SensorsCxSetDataIntervalTask" value="SensorsCxSetDataIntervalTask"/>
+    <string id="task_SensorsCxGetDataThresholdsTask" value="SensorsCxGetDataThresholdsTask"/>
+    <string id="task_SensorsCxSetDataThresholdsTask" value="SensorsCxSetDataThresholdsTask"/>
+    <string id="task_SensorsCxGetPropertiesTask" value="SensorsCxGetPropertiesTask"/>
+    <string id="task_SensorsCxGetSupportedDatafieldsTask" value="SensorsCxGetSupportedDatafieldsTask"/>
+    <string id="task_SensorsCxGetDatafieldPropertiesTask" value="SensorsCxGetDatafieldPropertiesTask"/>
+    <string id="task_SensorsCxStartSensorTask" value="SensorsCxStartSensorTask"/>
+    <string id="task_SensorsCxStopSensorTask" value="SensorsCxStopSensorTask"/>
+    <string id="task_SensorsCxStartHistoryTask" value="SensorsCxStartHistoryTask"/>
+    <string id="task_SensorsCxStopHistoryTask" value="SensorsCxStopHistoryTask"/>
+    <string id="task_SensorsCxStartHistoryRetrievalTask" value="SensorsCxStartHistoryRetrievalTask"/>
+    <string id="task_SensorsCxCancelHistoryRetrievalTask" value="SensorsCxCancelHistoryRetrievalTask"/>
+    <string id="task_SensorsCxClearHistoryTask" value="SensorsCxClearHistoryTask"/>
+    <string id="task_SensorsCxSetReportLatencyTask" value="SensorsCxSetReportLatencyTask"/>
+    <string id="task_SensorsCxEnableWakeTask" value="SensorsCxEnableWakeTask"/>
+    <string id="task_SensorsCxDisableWakeTask" value="SensorsCxDisableWakeTask"/>
+    <string id="task_SensorsCxRundownTask" value="SensorsCxRundownTask"/>
+    <string id="task_SensorsDefaultDeviceSelectionTask" value="SensorsDefaultDeviceSelectionTask"/>
+    <string id="task_SensorsHidInitializationTask" value="SensorsHidInitializationTask"/>
+    <string id="task_SensorsHidReportParsingTask" value="SensorsHidReportParsingTask"/>
+    <string id="task_SensorsHidGetInputReportTask" value="SensorsHidGetInputReportTask"/>
+    <string id="task_SensorsHidGetFeatureReportTask" value="SensorsHidGetFeatureReportTask"/>
+    <string id="task_SensorsHidSetFeatureReportTask" value="SensorsHidSetFeatureReportTask"/>
+    <string id="task_SensorServiceSdoCreateTask" value="SensorServiceSdoCreateTask"/>
+    <string id="task_SensorServiceSdoRemoveTask" value="SensorServiceSdoRemoveTask"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

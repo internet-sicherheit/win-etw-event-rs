@@ -1,0 +1,47 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-EapMethods-RasTls" guid="{9cc0413e-5717-4af5-82eb-6103d8707b45}" resourceFileName="Microsoft-Windows-EapMethods-RasTls" messageFileName="Microsoft-Windows-EapMethods-RasTls" symbol="MicrosoftWindowsEapMethodsRasTls" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="FehlerbeiderRasTls_Authentifizierung" message="$(string.task_FehlerbeiderRasTls_Authentifizierung)" value="1"/>
+     <task name="RasTls_Authentifizierungerfolgreich" message="$(string.task_RasTls_Authentifizierungerfolgreich)" value="2"/>
+     <task name="RasTls_AuthentifizierunginBearbeitung" message="$(string.task_RasTls_AuthentifizierunginBearbeitung)" value="3"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="RasTls_Authentifizierungerfolgreich" version="0" task="RasTls_Authentifizierungerfolgreich" level="win:Informational" template="RasTls_AuthentifizierungerfolgreichArgs"/>
+     <event value="101" symbol="FehlerbeiderRasTls_Authentifizierung" version="0" task="FehlerbeiderRasTls_Authentifizierung" level="win:Error" template="FehlerbeiderRasTls_AuthentifizierungArgs"/>
+     <event value="102" symbol="FehlerbeiderRasTls_Authentifizierung102" version="0" task="FehlerbeiderRasTls_Authentifizierung" level="win:Error" template="FehlerbeiderRasTls_AuthentifizierungArgs"/>
+     <event value="103" symbol="FehlerbeiderRasTls_Authentifizierung103" version="0" task="FehlerbeiderRasTls_Authentifizierung" level="win:Error" template="FehlerbeiderRasTls_AuthentifizierungArgs"/>
+     <event value="104" symbol="FehlerbeiderRasTls_Authentifizierung104" version="0" task="FehlerbeiderRasTls_Authentifizierung" level="win:Error" template="FehlerbeiderRasTls_AuthentifizierungArgs"/>
+     <event value="105" symbol="FehlerbeiderRasTls_Authentifizierung105" version="0" task="FehlerbeiderRasTls_Authentifizierung" level="win:Informational" template="RasTls_AuthentifizierungerfolgreichArgs"/>
+     <event value="106" symbol="RasTls_AuthentifizierunginBearbeitung" version="0" task="RasTls_AuthentifizierunginBearbeitung" level="win:Informational"/>
+     <event value="107" symbol="RasTls_AuthentifizierunginBearbeitung107" version="0" task="RasTls_AuthentifizierunginBearbeitung" level="win:Informational" template="RasTls_AuthentifizierunginBearbeitung107Args"/>
+    </events>
+    <templates>
+     <template tid="RasTls_AuthentifizierungerfolgreichArgs">
+      <data name="uint1" inType="win:UInt32"/>
+     </template>
+     <template tid="FehlerbeiderRasTls_AuthentifizierungArgs">
+      <data name="uint1" inType="win:UInt32"/>
+      <data name="uint2" inType="win:UInt32"/>
+     </template>
+     <template tid="RasTls_AuthentifizierunginBearbeitung107Args">
+      <data name="CAThumbprint" inType="win:UnicodeString"/>
+      <data name="ServerName" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_FehlerbeiderRasTls_Authentifizierung" value="FehlerbeiderRasTls_Authentifizierung"/>
+    <string id="task_RasTls_Authentifizierungerfolgreich" value="RasTls_Authentifizierungerfolgreich"/>
+    <string id="task_RasTls_AuthentifizierunginBearbeitung" value="RasTls_AuthentifizierunginBearbeitung"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,37 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-RemoteDesktopServices-SessionServices" guid="{f1394de0-32c7-4a76-a6de-b245e48f4615}" resourceFileName="Microsoft-Windows-RemoteDesktopServices-SessionServices" messageFileName="Microsoft-Windows-RemoteDesktopServices-SessionServices" symbol="MicrosoftWindowsRemoteDesktopServicesSessionServices" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="Anzeigesteuerung" message="$(string.task_Anzeigesteuerung)" value="1">
+      <opcodes>
+       <opcode name="Sitzungsauflösungändern" message="$(string.opcode_AnzeigesteuerungSitzungsauflösungändern)" value="11"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1" symbol="AnzeigesteuerungSitzungsauflösungändern" version="0" task="Anzeigesteuerung" opcode="Sitzungsauflösungändern" level="win:Informational" template="AnzeigesteuerungSitzungsauflösungändernArgs"/>
+     <event value="2" symbol="AnzeigesteuerungSitzungsauflösungändern2" version="0" task="Anzeigesteuerung" opcode="Sitzungsauflösungändern" level="win:Error" template="AnzeigesteuerungSitzungsauflösungändern2Args"/>
+    </events>
+    <templates>
+     <template tid="AnzeigesteuerungSitzungsauflösungändernArgs">
+      <data name="NumMonitors" inType="win:UInt32"/>
+     </template>
+     <template tid="AnzeigesteuerungSitzungsauflösungändern2Args">
+      <data name="ErrorCode" inType="win:HexInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_Anzeigesteuerung" value="Anzeigesteuerung"/>
+    <string id="opcode_AnzeigesteuerungSitzungsauflösungändern" value="Sitzungsauflösungändern"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

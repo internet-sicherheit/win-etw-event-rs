@@ -1,0 +1,266 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Hyper-V-NetVsc" guid="{152fbe4b-c7ad-4f68-bada-a4fcc1464f6c}" resourceFileName="Microsoft-Windows-Hyper-V-NetVsc" messageFileName="Microsoft-Windows-Hyper-V-NetVsc" symbol="MicrosoftWindowsHyperVNetVsc" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="ProtocolNegotiate" message="$(string.task_ProtocolNegotiate)" value="1001"/>
+     <task name="RndisMPInit" message="$(string.task_RndisMPInit)" value="1002"/>
+     <task name="RndisStatusChange" message="$(string.task_RndisStatusChange)" value="1003"/>
+     <task name="MicroportInit" message="$(string.task_MicroportInit)" value="1004"/>
+     <task name="PdApi" message="$(string.task_PdApi)" value="1006"/>
+     <task name="NdkOpenAdapter" message="$(string.task_NdkOpenAdapter)" value="1007"/>
+     <task name="NdkPnPEvent" message="$(string.task_NdkPnPEvent)" value="1008"/>
+     <task name="VfBindAdapter" message="$(string.task_VfBindAdapter)" value="1009"/>
+    </tasks>
+    <maps>
+     <valueMap name="NVSC_PACKET_OPERATION_VALUEMAP">
+      <map value="0x0" message="$(string.map_NVSC_PACKET_OPERATION_VALUEMAPUnbekannt)"/>
+      <map value="0x1" message="$(string.map_NVSC_PACKET_OPERATION_VALUEMAPgesendet von)"/>
+      <map value="0x2" message="$(string.map_NVSC_PACKET_OPERATION_VALUEMAPempfangen von)"/>
+     </valueMap>
+     <valueMap name="NVSC_DROP_REASON_VALUEMAP">
+      <map value="0x0" message="$(string.map_NVSC_DROP_REASON_VALUEMAPUnbekannt)"/>
+      <map value="0x1" message="$(string.map_NVSC_DROP_REASON_VALUEMAPDas Paket wurde am Mikroport verworfen.)"/>
+      <map value="0x2" message="$(string.map_NVSC_DROP_REASON_VALUEMAPDer Adapter wird angehalten.)"/>
+      <map value="0x3" message="$(string.map_NVSC_DROP_REASON_VALUEMAPEs sind nicht genügend Ressourcen zum Zuordnen des Nachrichtenrahmens vorhanden.)"/>
+      <map value="0x4" message="$(string.map_NVSC_DROP_REASON_VALUEMAPDer Adapter hat die maximale Anzahl ausstehender Pakete erreicht.)"/>
+      <map value="0x5" message="$(string.map_NVSC_DROP_REASON_VALUEMAPDer VF-Adapter ist nicht aktiv.)"/>
+      <map value="0x6" message="$(string.map_NVSC_DROP_REASON_VALUEMAPDer Adapter wurde angehalten.)"/>
+      <map value="0x7" message="$(string.map_NVSC_DROP_REASON_VALUEMAPFehler beim Konvertieren von MDL in NBL.)"/>
+      <map value="0x8" message="$(string.map_NVSC_DROP_REASON_VALUEMAPEs sind nicht genügend Ressourcen zum Zuordnen des NBL-Kontexts vorhanden.)"/>
+      <map value="0x9" message="$(string.map_NVSC_DROP_REASON_VALUEMAPDas Gerät wurde nicht ordnungsgemäß gestartet oder unterwartet entfernt.)"/>
+      <map value="0xa" message="$(string.map_NVSC_DROP_REASON_VALUEMAPEs sind keine VMBUS-Pakete verfügbar.)"/>
+      <map value="0xb" message="$(string.map_NVSC_DROP_REASON_VALUEMAPFehler beim Zuordnen und Vorbereiten der Sendemeldung.)"/>
+      <map value="0xc" message="$(string.map_NVSC_DROP_REASON_VALUEMAPVMBUS konnte das Paket nicht übertragen.)"/>
+     </valueMap>
+     <valueMap name="NVSC_OPEN_NDK_FAILURE_REASON_VALUEMAP">
+      <map value="0x0" message="$(string.map_NVSC_OPEN_NDK_FAILURE_REASON_VALUEMAPUnbekannt.)"/>
+      <map value="0x1" message="$(string.map_NVSC_OPEN_NDK_FAILURE_REASON_VALUEMAPUngültige Parameter.)"/>
+      <map value="0x2" message="$(string.map_NVSC_OPEN_NDK_FAILURE_REASON_VALUEMAPRDMA wird für den VF-Adapter nicht unterstützt.)"/>
+      <map value="0x3" message="$(string.map_NVSC_OPEN_NDK_FAILURE_REASON_VALUEMAPFehler beim Aufruf des NDK-Adapters für den VF-Protokolltreiber.)"/>
+      <map value="0x4" message="$(string.map_NVSC_OPEN_NDK_FAILURE_REASON_VALUEMAPEs wurde kein NDK-Adapter zurückgegeben, obwohl der Aufruf ggf. erfolgreich war.)"/>
+      <map value="0x5" message="$(string.map_NVSC_OPEN_NDK_FAILURE_REASON_VALUEMAPNicht genügend Ressourcen.)"/>
+     </valueMap>
+     <valueMap name="NVSC_NDK_PNP_EVENT_VALUEMAP">
+      <map value="0x0" message="$(string.map_NVSC_NDK_PNP_EVENT_VALUEMAPUnbekanntes NDK PnP-Ereignis)"/>
+      <map value="0xd" message="$(string.map_NVSC_NDK_PNP_EVENT_VALUEMAPNDK – PnP-Ereignis aktivieren)"/>
+      <map value="0xe" message="$(string.map_NVSC_NDK_PNP_EVENT_VALUEMAPNDK – PnP-Ereignis deaktivieren)"/>
+     </valueMap>
+     <valueMap name="NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAP">
+      <map value="0x0" message="$(string.map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPUnbekannt.)"/>
+      <map value="0x1" message="$(string.map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPUnzureichende Systemressourcen.)"/>
+      <map value="0x2" message="$(string.map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPDer VF-Adapter kann nicht geöffnet werden.)"/>
+      <map value="0x3" message="$(string.map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPDie VF-Seriennummer kann nicht abgerufen werden.)"/>
+      <map value="0x4" message="$(string.map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPVF-MTU-Konflikt.)"/>
+      <map value="0x5" message="$(string.map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPUngültiger VF-Gerätezustand.)"/>
+      <map value="0x6" message="$(string.map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPVF-Medien wurden getrennt.)"/>
+      <map value="0x7" message="$(string.map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPIn diesen VF-Datenpfad kann nicht gewechselt werden.)"/>
+      <map value="0x8" message="$(string.map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPDer VF-Paketfilter kann nicht festgelegt werden.)"/>
+      <map value="0x9" message="$(string.map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPVF-TCP-Auslagerungsparameter können nicht festgelegt werden.)"/>
+     </valueMap>
+     <valueMap name="NVSC_LOW_MEMORY_TASK_MAP">
+      <map value="0x0" message="$(string.map_NVSC_LOW_MEMORY_TASK_MAPUnbekannt)"/>
+      <map value="0x1" message="$(string.map_NVSC_LOW_MEMORY_TASK_MAPObjektzuweisung für Statusanzeige)"/>
+      <map value="0x2" message="$(string.map_NVSC_LOW_MEMORY_TASK_MAPPufferzuweisung für Statusanzeige)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="ProtocolNegotiate" version="0" task="ProtocolNegotiate" level="win:Informational" template="ProtocolNegotiateArgs"/>
+     <event value="2" symbol="ProtocolNegotiate2" version="0" task="ProtocolNegotiate" level="win:Error" template="ProtocolNegotiateArgs"/>
+     <event value="3" symbol="RndisMPInit" version="0" task="RndisMPInit" level="win:Informational" template="RndisMPInitArgs"/>
+     <event value="4" symbol="RndisMPInit4" version="0" task="RndisMPInit" level="win:Error" template="RndisMPInit4Args"/>
+     <event value="5" symbol="RndisMPInit5" version="0" task="RndisMPInit" level="win:Error" template="RndisMPInit5Args"/>
+     <event value="6" symbol="RndisStatusChange" version="0" task="RndisStatusChange" level="win:Informational" template="RndisMPInitArgs"/>
+     <event value="7" symbol="RndisStatusChange7" version="0" task="RndisStatusChange" level="win:Informational" template="RndisMPInitArgs"/>
+     <event value="8" symbol="RndisStatusChange8" version="0" task="RndisStatusChange" level="win:Warning" template="RndisMPInitArgs"/>
+     <event value="9" symbol="RndisStatusChange9" version="0" task="RndisStatusChange" level="win:Warning" template="RndisMPInitArgs"/>
+     <event value="10" symbol="RndisStatusChange10" version="0" task="RndisStatusChange" level="win:Informational" template="RndisMPInitArgs"/>
+     <event value="11" symbol="RndisStatusChange11" version="0" task="RndisStatusChange" level="win:Informational" template="RndisMPInitArgs"/>
+     <event value="12" symbol="RndisStatusChange12" version="0" task="RndisStatusChange" level="win:Informational" template="RndisMPInitArgs"/>
+     <event value="13" symbol="RndisStatusChange13" version="0" task="RndisStatusChange" level="win:Informational" template="RndisMPInitArgs"/>
+     <event value="14" symbol="RndisStatusChange14" version="0" task="RndisStatusChange" level="win:Informational" template="RndisMPInitArgs"/>
+     <event value="15" symbol="MicroportInit" version="0" task="MicroportInit" level="win:Error" template="RndisMPInit4Args"/>
+     <event value="16" symbol="task_0" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="17" symbol="task_017" version="0" task="task_0" level="win:Error" template="task_017Args"/>
+     <event value="18" symbol="task_018" version="0" task="task_0" level="win:Error" template="task_018Args"/>
+     <event value="19" symbol="task_019" version="0" task="task_0" level="win:Informational" template="task_019Args"/>
+     <event value="20" symbol="task_020" version="0" task="task_0" level="win:Informational" template="task_019Args"/>
+     <event value="34" symbol="PdApi" version="0" task="PdApi" level="win:Informational" template="PdApiArgs"/>
+     <event value="35" symbol="PdApi35" version="0" task="PdApi" level="win:Error" template="PdApi35Args"/>
+     <event value="36" symbol="PdApi36" version="0" task="PdApi" level="win:Informational" template="PdApiArgs"/>
+     <event value="37" symbol="NdkOpenAdapter" version="0" task="NdkOpenAdapter" level="win:Error" template="NdkOpenAdapterArgs"/>
+     <event value="38" symbol="NdkPnPEvent" version="0" task="NdkPnPEvent" level="win:Error" template="NdkPnPEventArgs"/>
+     <event value="39" symbol="VfBindAdapter" version="0" task="VfBindAdapter" level="win:Error" template="VfBindAdapterArgs"/>
+     <event value="40" symbol="task_040" version="0" task="task_0" level="win:Error" template="task_040Args"/>
+     <event value="41" symbol="task_041" version="0" task="task_0" level="win:Informational" template="task_041Args"/>
+     <event value="42" symbol="task_042" version="0" task="task_0" level="win:Error" template="task_041Args"/>
+     <event value="43" symbol="task_043" version="0" task="task_0" level="win:Informational" template="task_043Args"/>
+     <event value="44" symbol="task_044" version="0" task="task_0" level="win:Informational" template="task_044Args"/>
+     <event value="45" symbol="task_045" version="0" task="task_0" level="win:Error" template="task_044Args"/>
+     <event value="46" symbol="task_046" version="0" task="task_0" level="win:Informational" template="task_046Args"/>
+     <event value="47" symbol="task_047" version="0" task="task_0" level="win:Informational" template="task_046Args"/>
+     <event value="48" symbol="task_048" version="0" task="task_0" level="win:Warning" template="task_046Args"/>
+    </events>
+    <templates>
+     <template tid="ProtocolNegotiateArgs">
+      <data name="VersionLen" inType="win:UInt32"/>
+      <data name="Version" inType="win:UnicodeString" length="VersionLen"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="RndisMPInitArgs">
+      <data name="MiniportNameLen" inType="win:UInt32"/>
+      <data name="MiniportName" inType="win:UnicodeString" length="MiniportNameLen"/>
+     </template>
+     <template tid="RndisMPInit4Args">
+      <data name="MiniportNameLen" inType="win:UInt32"/>
+      <data name="MiniportName" inType="win:UnicodeString" length="MiniportNameLen"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="UniqueEventValue" inType="win:UInt32"/>
+     </template>
+     <template tid="RndisMPInit5Args">
+      <data name="MiniportNameLen" inType="win:UInt32"/>
+      <data name="MiniportName" inType="win:UnicodeString" length="MiniportNameLen"/>
+      <data name="SubkeyNameLen" inType="win:UInt32"/>
+      <data name="SubkeyName" inType="win:UnicodeString" length="SubkeyNameLen"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0Args">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="Operation" inType="win:UInt32" map="NVSC_PACKET_OPERATION_VALUEMAP"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="MiniportNameLen" inType="win:UInt32"/>
+      <data name="MiniportName" inType="win:UnicodeString" length="MiniportNameLen"/>
+     </template>
+     <template tid="task_017Args">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="DropReason" inType="win:UInt32" map="NVSC_DROP_REASON_VALUEMAP"/>
+     </template>
+     <template tid="task_018Args">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="Direction" inType="win:UInt32"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="Pointer" inType="win:Pointer"/>
+      <data name="CorrelationId" inType="win:UInt64"/>
+      <data name="IfIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="task_019Args">
+      <data name="Direction" inType="win:UInt32"/>
+      <data name="Pointer" inType="win:Pointer"/>
+      <data name="CorrelationId" inType="win:UInt64"/>
+      <data name="IfIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="PdApiArgs">
+      <data name="ClientContext" inType="win:Pointer"/>
+     </template>
+     <template tid="PdApi35Args">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ClientContext" inType="win:Pointer"/>
+     </template>
+     <template tid="NdkOpenAdapterArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="failureReason" inType="win:UInt32" map="NVSC_OPEN_NDK_FAILURE_REASON_VALUEMAP"/>
+      <data name="MiniportNameLen" inType="win:UInt32"/>
+      <data name="MiniportName" inType="win:UnicodeString" length="MiniportNameLen"/>
+     </template>
+     <template tid="NdkPnPEventArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="NetEvent" inType="win:UInt32" map="NVSC_NDK_PNP_EVENT_VALUEMAP"/>
+      <data name="failureReason" inType="win:UInt32"/>
+      <data name="MiniportNameLen" inType="win:UInt32"/>
+      <data name="MiniportName" inType="win:UnicodeString" length="MiniportNameLen"/>
+     </template>
+     <template tid="VfBindAdapterArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="failureReason" inType="win:UInt32" map="NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAP"/>
+     </template>
+     <template tid="task_040Args">
+      <data name="Task" inType="win:UInt32" map="NVSC_LOW_MEMORY_TASK_MAP"/>
+      <data name="MemoryRequired" inType="win:UInt32"/>
+     </template>
+     <template tid="task_041Args">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="RequestHandled" inType="win:Boolean"/>
+      <data name="IfIndex" inType="win:UInt32"/>
+      <data name="MiniportNameLen" inType="win:UInt32"/>
+      <data name="MiniportName" inType="win:UnicodeString" length="MiniportNameLen"/>
+      <data name="VfAdapterNameLen" inType="win:UInt32"/>
+      <data name="VfAdapterName" inType="win:UnicodeString" length="VfAdapterNameLen"/>
+     </template>
+     <template tid="task_043Args">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="NetEvent" inType="win:UInt32"/>
+      <data name="failureReason" inType="win:UInt32"/>
+      <data name="MiniportNameLen" inType="win:UInt32"/>
+      <data name="MiniportName" inType="win:UnicodeString" length="MiniportNameLen"/>
+     </template>
+     <template tid="task_044Args">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="NdkEnabled" inType="win:Boolean"/>
+      <data name="MiniportNameLen" inType="win:UInt32"/>
+      <data name="MiniportName" inType="win:UnicodeString" length="MiniportNameLen"/>
+     </template>
+     <template tid="task_046Args">
+      <data name="VfAdapterNameLen" inType="win:UInt32"/>
+      <data name="VfAdapterName" inType="win:UnicodeString" length="VfAdapterNameLen"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_ProtocolNegotiate" value="ProtocolNegotiate"/>
+    <string id="task_RndisMPInit" value="RndisMPInit"/>
+    <string id="task_RndisStatusChange" value="RndisStatusChange"/>
+    <string id="task_MicroportInit" value="MicroportInit"/>
+    <string id="task_PdApi" value="PdApi"/>
+    <string id="task_NdkOpenAdapter" value="NdkOpenAdapter"/>
+    <string id="task_NdkPnPEvent" value="NdkPnPEvent"/>
+    <string id="task_VfBindAdapter" value="VfBindAdapter"/>
+    <string id="map_NVSC_PACKET_OPERATION_VALUEMAPUnbekannt" value="Unbekannt"/>
+    <string id="map_NVSC_PACKET_OPERATION_VALUEMAPgesendet von" value="gesendet von"/>
+    <string id="map_NVSC_PACKET_OPERATION_VALUEMAPempfangen von" value="empfangen von"/>
+    <string id="map_NVSC_DROP_REASON_VALUEMAPUnbekannt" value="Unbekannt"/>
+    <string id="map_NVSC_DROP_REASON_VALUEMAPDas Paket wurde am Mikroport verworfen." value="Das Paket wurde am Mikroport verworfen."/>
+    <string id="map_NVSC_DROP_REASON_VALUEMAPDer Adapter wird angehalten." value="Der Adapter wird angehalten."/>
+    <string id="map_NVSC_DROP_REASON_VALUEMAPEs sind nicht genügend Ressourcen zum Zuordnen des Nachrichtenrahmens vorhanden." value="Es sind nicht genügend Ressourcen zum Zuordnen des Nachrichtenrahmens vorhanden."/>
+    <string id="map_NVSC_DROP_REASON_VALUEMAPDer Adapter hat die maximale Anzahl ausstehender Pakete erreicht." value="Der Adapter hat die maximale Anzahl ausstehender Pakete erreicht."/>
+    <string id="map_NVSC_DROP_REASON_VALUEMAPDer VF-Adapter ist nicht aktiv." value="Der VF-Adapter ist nicht aktiv."/>
+    <string id="map_NVSC_DROP_REASON_VALUEMAPDer Adapter wurde angehalten." value="Der Adapter wurde angehalten."/>
+    <string id="map_NVSC_DROP_REASON_VALUEMAPFehler beim Konvertieren von MDL in NBL." value="Fehler beim Konvertieren von MDL in NBL."/>
+    <string id="map_NVSC_DROP_REASON_VALUEMAPEs sind nicht genügend Ressourcen zum Zuordnen des NBL-Kontexts vorhanden." value="Es sind nicht genügend Ressourcen zum Zuordnen des NBL-Kontexts vorhanden."/>
+    <string id="map_NVSC_DROP_REASON_VALUEMAPDas Gerät wurde nicht ordnungsgemäß gestartet oder unterwartet entfernt." value="Das Gerät wurde nicht ordnungsgemäß gestartet oder unterwartet entfernt."/>
+    <string id="map_NVSC_DROP_REASON_VALUEMAPEs sind keine VMBUS-Pakete verfügbar." value="Es sind keine VMBUS-Pakete verfügbar."/>
+    <string id="map_NVSC_DROP_REASON_VALUEMAPFehler beim Zuordnen und Vorbereiten der Sendemeldung." value="Fehler beim Zuordnen und Vorbereiten der Sendemeldung."/>
+    <string id="map_NVSC_DROP_REASON_VALUEMAPVMBUS konnte das Paket nicht übertragen." value="VMBUS konnte das Paket nicht übertragen."/>
+    <string id="map_NVSC_OPEN_NDK_FAILURE_REASON_VALUEMAPUnbekannt." value="Unbekannt."/>
+    <string id="map_NVSC_OPEN_NDK_FAILURE_REASON_VALUEMAPUngültige Parameter." value="Ungültige Parameter."/>
+    <string id="map_NVSC_OPEN_NDK_FAILURE_REASON_VALUEMAPRDMA wird für den VF-Adapter nicht unterstützt." value="RDMA wird für den VF-Adapter nicht unterstützt."/>
+    <string id="map_NVSC_OPEN_NDK_FAILURE_REASON_VALUEMAPFehler beim Aufruf des NDK-Adapters für den VF-Protokolltreiber." value="Fehler beim Aufruf des NDK-Adapters für den VF-Protokolltreiber."/>
+    <string id="map_NVSC_OPEN_NDK_FAILURE_REASON_VALUEMAPEs wurde kein NDK-Adapter zurückgegeben, obwohl der Aufruf ggf. erfolgreich war." value="Es wurde kein NDK-Adapter zurückgegeben, obwohl der Aufruf ggf. erfolgreich war."/>
+    <string id="map_NVSC_OPEN_NDK_FAILURE_REASON_VALUEMAPNicht genügend Ressourcen." value="Nicht genügend Ressourcen."/>
+    <string id="map_NVSC_NDK_PNP_EVENT_VALUEMAPUnbekanntes NDK PnP-Ereignis" value="Unbekanntes NDK PnP-Ereignis"/>
+    <string id="map_NVSC_NDK_PNP_EVENT_VALUEMAPNDK – PnP-Ereignis aktivieren" value="NDK – PnP-Ereignis aktivieren"/>
+    <string id="map_NVSC_NDK_PNP_EVENT_VALUEMAPNDK – PnP-Ereignis deaktivieren" value="NDK – PnP-Ereignis deaktivieren"/>
+    <string id="map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPUnbekannt." value="Unbekannt."/>
+    <string id="map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPUnzureichende Systemressourcen." value="Unzureichende Systemressourcen."/>
+    <string id="map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPDer VF-Adapter kann nicht geöffnet werden." value="Der VF-Adapter kann nicht geöffnet werden."/>
+    <string id="map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPDie VF-Seriennummer kann nicht abgerufen werden." value="Die VF-Seriennummer kann nicht abgerufen werden."/>
+    <string id="map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPVF-MTU-Konflikt." value="VF-MTU-Konflikt."/>
+    <string id="map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPUngültiger VF-Gerätezustand." value="Ungültiger VF-Gerätezustand."/>
+    <string id="map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPVF-Medien wurden getrennt." value="VF-Medien wurden getrennt."/>
+    <string id="map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPIn diesen VF-Datenpfad kann nicht gewechselt werden." value="In diesen VF-Datenpfad kann nicht gewechselt werden."/>
+    <string id="map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPDer VF-Paketfilter kann nicht festgelegt werden." value="Der VF-Paketfilter kann nicht festgelegt werden."/>
+    <string id="map_NVSC_SRIOV_VF_FAILURE_REASON_VALUEMAPVF-TCP-Auslagerungsparameter können nicht festgelegt werden." value="VF-TCP-Auslagerungsparameter können nicht festgelegt werden."/>
+    <string id="map_NVSC_LOW_MEMORY_TASK_MAPUnbekannt" value="Unbekannt"/>
+    <string id="map_NVSC_LOW_MEMORY_TASK_MAPObjektzuweisung für Statusanzeige" value="Objektzuweisung für Statusanzeige"/>
+    <string id="map_NVSC_LOW_MEMORY_TASK_MAPPufferzuweisung für Statusanzeige" value="Pufferzuweisung für Statusanzeige"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,80 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-DisplayColorCalibration" guid="{3239eb6f-c7fc-4953-aa15-646829a4ca4c}" resourceFileName="Microsoft-Windows-DisplayColorCalibration" messageFileName="Microsoft-Windows-DisplayColorCalibration" symbol="MicrosoftWindowsDisplayColorCalibration" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="Bildschirm_Farbkalibrierung" message="$(string.task_Bildschirm_Farbkalibrierung)" value="1"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="Bildschirm_Farbkalibrierung" version="0" task="Bildschirm_Farbkalibrierung" level="win:Informational" template="Bildschirm_FarbkalibrierungArgs"/>
+     <event value="2" symbol="Bildschirm_Farbkalibrierung2" version="0" task="Bildschirm_Farbkalibrierung" level="win:Informational" template="Bildschirm_FarbkalibrierungArgs"/>
+     <event value="3" symbol="Bildschirm_Farbkalibrierung3" version="0" task="Bildschirm_Farbkalibrierung" level="win:Informational" template="Bildschirm_Farbkalibrierung3Args"/>
+     <event value="4" symbol="Bildschirm_Farbkalibrierung4" version="0" task="Bildschirm_Farbkalibrierung" level="win:Informational" template="Bildschirm_Farbkalibrierung4Args"/>
+     <event value="5" symbol="Bildschirm_Farbkalibrierung5" version="0" task="Bildschirm_Farbkalibrierung" level="win:Informational" template="Bildschirm_Farbkalibrierung5Args"/>
+     <event value="6" symbol="Bildschirm_Farbkalibrierung6" version="0" task="Bildschirm_Farbkalibrierung" level="win:Informational" template="Bildschirm_Farbkalibrierung6Args"/>
+     <event value="7" symbol="Bildschirm_Farbkalibrierung7" version="0" task="Bildschirm_Farbkalibrierung" level="win:Informational" template="Bildschirm_Farbkalibrierung7Args"/>
+     <event value="8" symbol="Bildschirm_Farbkalibrierung8" version="0" task="Bildschirm_Farbkalibrierung" level="win:Informational" template="Bildschirm_Farbkalibrierung8Args"/>
+     <event value="100" symbol="Bildschirm_Farbkalibrierung100" version="0" task="Bildschirm_Farbkalibrierung" level="win:Informational" template="Bildschirm_Farbkalibrierung100Args"/>
+    </events>
+    <templates>
+     <template tid="Bildschirm_FarbkalibrierungArgs">
+      <data name="Device" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Bildschirm_Farbkalibrierung3Args">
+      <data name="Device" inType="win:UnicodeString"/>
+      <data name="Profile" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Bildschirm_Farbkalibrierung4Args">
+      <data name="Setting" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Bildschirm_Farbkalibrierung5Args">
+      <data name="Setting" inType="win:UnicodeString"/>
+      <data name="OldValue" inType="win:UInt32"/>
+      <data name="NewValue" inType="win:UInt32"/>
+     </template>
+     <template tid="Bildschirm_Farbkalibrierung6Args">
+      <data name="Setting" inType="win:UnicodeString"/>
+      <data name="OldValue" inType="win:UInt32"/>
+      <data name="NewValue" inType="win:UInt32"/>
+      <data name="RedLuts" inType="win:UInt16"/>
+      <data name="GreenLuts" inType="win:UInt16"/>
+      <data name="BlueLuts" inType="win:UInt16"/>
+     </template>
+     <template tid="Bildschirm_Farbkalibrierung7Args">
+      <data name="Setting" inType="win:UnicodeString"/>
+      <data name="OldRedGain" inType="win:UInt32"/>
+      <data name="NewRedGain" inType="win:UInt32"/>
+      <data name="OldGreenGain" inType="win:UInt32"/>
+      <data name="NewGreenGain" inType="win:UInt32"/>
+      <data name="OldBlueGain" inType="win:UInt32"/>
+      <data name="NewBlueGain" inType="win:UInt32"/>
+     </template>
+     <template tid="Bildschirm_Farbkalibrierung8Args">
+      <data name="Setting" inType="win:UnicodeString"/>
+      <data name="OldRedGain" inType="win:UInt32"/>
+      <data name="NewRedGain" inType="win:UInt32"/>
+      <data name="OldGreenGain" inType="win:UInt32"/>
+      <data name="NewGreenGain" inType="win:UInt32"/>
+      <data name="OldBlueGain" inType="win:UInt32"/>
+      <data name="NewBlueGain" inType="win:UInt32"/>
+      <data name="RedLuts" inType="win:UInt16"/>
+      <data name="GreenLuts" inType="win:UInt16"/>
+      <data name="BlueLuts" inType="win:UInt16"/>
+     </template>
+     <template tid="Bildschirm_Farbkalibrierung100Args">
+      <data name="Message" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_Bildschirm_Farbkalibrierung" value="Bildschirm_Farbkalibrierung"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

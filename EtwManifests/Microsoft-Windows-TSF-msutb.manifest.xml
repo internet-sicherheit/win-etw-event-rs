@@ -1,0 +1,65 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-TSF-msutb" guid="{74b655a2-8958-410e-80e2-3457051b8dff}" resourceFileName="Microsoft-Windows-TSF-msutb" messageFileName="Microsoft-Windows-TSF-msutb" symbol="MicrosoftWindowsTSFmsutb" source="Xml" >
+    <keywords>
+     <keyword name="Status" message="$(string.keyword_Status)" mask="0x10000"/>
+     <keyword name="Perf" message="$(string.keyword_Perf)" mask="0x20000"/>
+     <keyword name="Focus" message="$(string.keyword_Focus)" mask="0x100000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="CreateLanguageBar" message="$(string.task_CreateLanguageBar)" value="1"/>
+     <task name="DestroyLanguageBar" message="$(string.task_DestroyLanguageBar)" value="2"/>
+     <task name="CloseDeskband" message="$(string.task_CloseDeskband)" value="3"/>
+     <task name="HandleLanguageBarStatusChange" message="$(string.task_HandleLanguageBarStatusChange)" value="4"/>
+     <task name="HandleFocusThreadChange" message="$(string.task_HandleFocusThreadChange)" value="5"/>
+     <task name="ShowHideLanguageBar" message="$(string.task_ShowHideLanguageBar)" value="6"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="CreateLanguageBarStarten" version="0" task="CreateLanguageBar" opcode="win:Starten" level="win:Informational" keywords="Perf" template="CreateLanguageBarStartenArgs"/>
+     <event value="2" symbol="CreateLanguageBarBeenden" version="0" task="CreateLanguageBar" opcode="win:Beenden" level="win:Informational" keywords="Perf"/>
+     <event value="3" symbol="DestroyLanguageBarStarten" version="0" task="DestroyLanguageBar" opcode="win:Starten" level="win:Informational" keywords="Perf"/>
+     <event value="4" symbol="DestroyLanguageBarBeenden" version="0" task="DestroyLanguageBar" opcode="win:Beenden" level="win:Informational" keywords="Perf"/>
+     <event value="5" symbol="CloseDeskbandStarten" version="0" task="CloseDeskband" opcode="win:Starten" level="win:Informational" keywords="Perf"/>
+     <event value="6" symbol="CloseDeskbandBeenden" version="0" task="CloseDeskband" opcode="win:Beenden" level="win:Informational" keywords="Perf"/>
+     <event value="7" symbol="HandleLanguageBarStatusChangeStarten" version="0" task="HandleLanguageBarStatusChange" opcode="win:Starten" level="win:Informational" keywords="Perf" template="HandleLanguageBarStatusChangeStartenArgs"/>
+     <event value="8" symbol="HandleLanguageBarStatusChangeBeenden" version="0" task="HandleLanguageBarStatusChange" opcode="win:Beenden" level="win:Informational" keywords="Perf" template="HandleLanguageBarStatusChangeStartenArgs"/>
+     <event value="9" symbol="ShowHideLanguageBar" version="0" task="ShowHideLanguageBar" level="win:Informational" keywords="Perf" template="CreateLanguageBarStartenArgs"/>
+     <event value="10" symbol="HandleFocusThreadChangeStarten" version="0" task="HandleFocusThreadChange" opcode="win:Starten" level="win:Informational" keywords="Perf Focus" template="HandleFocusThreadChangeStartenArgs"/>
+     <event value="11" symbol="HandleFocusThreadChangeBeenden" version="0" task="HandleFocusThreadChange" opcode="win:Beenden" level="win:Informational" keywords="Perf" template="HandleFocusThreadChangeStartenArgs"/>
+     <event value="12" symbol="task_0" version="0" task="task_0" level="win:Informational" keywords="Perf" template="CreateLanguageBarStartenArgs"/>
+    </events>
+    <templates>
+     <template tid="CreateLanguageBarStartenArgs">
+      <data name="param" inType="win:UInt32"/>
+     </template>
+     <template tid="HandleLanguageBarStatusChangeStartenArgs">
+      <data name="flags_current" inType="win:UInt32"/>
+      <data name="flags_new" inType="win:UInt32"/>
+     </template>
+     <template tid="HandleFocusThreadChangeStartenArgs">
+      <data name="tid_current" inType="win:UInt32"/>
+      <data name="tid_new" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Status" value="Status"/>
+    <string id="keyword_Perf" value="Perf"/>
+    <string id="keyword_Focus" value="Focus"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_CreateLanguageBar" value="CreateLanguageBar"/>
+    <string id="task_DestroyLanguageBar" value="DestroyLanguageBar"/>
+    <string id="task_CloseDeskband" value="CloseDeskband"/>
+    <string id="task_HandleLanguageBarStatusChange" value="HandleLanguageBarStatusChange"/>
+    <string id="task_HandleFocusThreadChange" value="HandleFocusThreadChange"/>
+    <string id="task_ShowHideLanguageBar" value="ShowHideLanguageBar"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

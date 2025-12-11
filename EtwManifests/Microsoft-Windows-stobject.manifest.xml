@@ -1,0 +1,156 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-stobject" guid="{86133982-63d7-4741-928e-ef1349b80219}" resourceFileName="Microsoft-Windows-stobject" messageFileName="Microsoft-Windows-stobject" symbol="MicrosoftWindowsstobject" source="Xml" >
+    <keywords>
+     <keyword name="BatteryMeter" message="$(string.keyword_BatteryMeter)" mask="0x10000"/>
+     <keyword name="Slideshow" message="$(string.keyword_Slideshow)" mask="0x100000"/>
+     <keyword name="SSO" message="$(string.keyword_SSO)" mask="0x200000"/>
+     <keyword name="BatteryCriticalSystemNotification" message="$(string.keyword_BatteryCriticalSystemNotification)" mask="0x400000"/>
+    </keywords>
+    <tasks>
+     <task name="BatteryMeter_DisplayRichTooltip" message="$(string.task_BatteryMeter_DisplayRichTooltip)" value="101"/>
+     <task name="BatteryMeter_DismissRichTooltip" message="$(string.task_BatteryMeter_DismissRichTooltip)" value="103"/>
+     <task name="BatteryMeter_DisplayContextMenu" message="$(string.task_BatteryMeter_DisplayContextMenu)" value="105"/>
+     <task name="BatteryMeter_DisplayPowerOptions" message="$(string.task_BatteryMeter_DisplayPowerOptions)" value="107"/>
+     <task name="BatteryMeter_DisplayMobilityCenter" message="$(string.task_BatteryMeter_DisplayMobilityCenter)" value="109"/>
+     <task name="BatteryMeter_DisplayTaskbarProperties" message="$(string.task_BatteryMeter_DisplayTaskbarProperties)" value="111"/>
+     <task name="BatteryMeter_ChangeIconState" message="$(string.task_BatteryMeter_ChangeIconState)" value="113"/>
+     <task name="BatteryMeter_ChangeIconAnimationState" message="$(string.task_BatteryMeter_ChangeIconAnimationState)" value="115"/>
+     <task name="BatteryMeter_IconAnimationTimeDelay" message="$(string.task_BatteryMeter_IconAnimationTimeDelay)" value="117"/>
+     <task name="BatteryMeter_DisplayFlyout" message="$(string.task_BatteryMeter_DisplayFlyout)" value="119"/>
+     <task name="BatteryMeter_DismissFlyout" message="$(string.task_BatteryMeter_DismissFlyout)" value="121"/>
+     <task name="BatteryMeter_DisplayHelpTopic" message="$(string.task_BatteryMeter_DisplayHelpTopic)" value="123"/>
+     <task name="BatteryMeter_PowerPlanDescription" message="$(string.task_BatteryMeter_PowerPlanDescription)" value="125"/>
+     <task name="BatteryMeter_BigBatteryAnimation" message="$(string.task_BatteryMeter_BigBatteryAnimation)" value="127"/>
+     <task name="BatteryMeter_RunCustomization" message="$(string.task_BatteryMeter_RunCustomization)" value="129"/>
+     <task name="BatteryMeter_FlyoutRadioAnimation" message="$(string.task_BatteryMeter_FlyoutRadioAnimation)" value="131"/>
+     <task name="KeepAwake_ResumeDisplay" message="$(string.task_KeepAwake_ResumeDisplay)" value="133"/>
+     <task name="BatteryMeter_DisplayPowerOptionsFromFlyout" message="$(string.task_BatteryMeter_DisplayPowerOptionsFromFlyout)" value="134"/>
+     <task name="BatteryMeter_FlyoutSliderDimScreen" message="$(string.task_BatteryMeter_FlyoutSliderDimScreen)" value="136"/>
+     <task name="BatteryCriticalSystemNotification_DisplayLowBatteryNotification" message="$(string.task_BatteryCriticalSystemNotification_DisplayLowBatteryNotification)" value="138"/>
+     <task name="BatteryCriticalSystemNotification_DismissNotificationByACPower" message="$(string.task_BatteryCriticalSystemNotification_DismissNotificationByACPower)" value="140"/>
+     <task name="BatteryMeter_BatteryDrain" message="$(string.task_BatteryMeter_BatteryDrain)" value="142"/>
+     <task name="SSO_Load" message="$(string.task_SSO_Load)" value="302"/>
+     <task name="SSO_OnHandleSignaled" message="$(string.task_SSO_OnHandleSignaled)" value="303"/>
+    </tasks>
+    <maps>
+     <bitMap name="BatteryDrainInfoFlags">
+      <map value="0x1" message="$(string.map_BatteryDrainInfoFlagsComputer wurde abgesteckt.)"/>
+      <map value="0x2" message="$(string.map_BatteryDrainInfoFlagsComputer wurde eingesteckt.)"/>
+      <map value="0x4" message="$(string.map_BatteryDrainInfoFlagsComputer wurde reaktiviert.)"/>
+      <map value="0x8" message="$(string.map_BatteryDrainInfoFlagsComputer wurde angehalten.)"/>
+      <map value="0x10" message="$(string.map_BatteryDrainInfoFlagsMonitor hat vom Status "Aus" zum Status "Ein" gewechselt.)"/>
+      <map value="0x20" message="$(string.map_BatteryDrainInfoFlagsMonitor hat vom Status "Ein" zum Status "Aus" gewechselt.)"/>
+      <map value="0x40" message="$(string.map_BatteryDrainInfoFlagsAkkuentladerate wurde aufgrund des Zeitablaufs und nicht aufgrund einer Statusänderung protokolliert.)"/>
+      <map value="0x100" message="$(string.map_BatteryDrainInfoFlagsDer Computer ist derzeit nicht eingesteckt und läuft im Akkubetrieb.)"/>
+      <map value="0x200" message="$(string.map_BatteryDrainInfoFlagsMonitor ausgeschaltet)"/>
+     </bitMap>
+    </maps>
+    <events>
+     <event value="101" symbol="BatteryMeter_DisplayRichTooltipStarten" version="0" task="BatteryMeter_DisplayRichTooltip" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="102" symbol="BatteryMeter_DisplayRichTooltipBeenden" version="0" task="BatteryMeter_DisplayRichTooltip" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="103" symbol="BatteryMeter_DismissRichTooltipStarten" version="0" task="BatteryMeter_DismissRichTooltip" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="104" symbol="BatteryMeter_DismissRichTooltipBeenden" version="0" task="BatteryMeter_DismissRichTooltip" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="105" symbol="BatteryMeter_DisplayContextMenuStarten" version="0" task="BatteryMeter_DisplayContextMenu" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="106" symbol="BatteryMeter_DisplayContextMenuBeenden" version="0" task="BatteryMeter_DisplayContextMenu" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="107" symbol="BatteryMeter_DisplayPowerOptionsStarten" version="0" task="BatteryMeter_DisplayPowerOptions" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="108" symbol="BatteryMeter_DisplayPowerOptionsBeenden" version="0" task="BatteryMeter_DisplayPowerOptions" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="109" symbol="BatteryMeter_DisplayMobilityCenterStarten" version="0" task="BatteryMeter_DisplayMobilityCenter" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="110" symbol="BatteryMeter_DisplayMobilityCenterBeenden" version="0" task="BatteryMeter_DisplayMobilityCenter" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="111" symbol="BatteryMeter_DisplayTaskbarPropertiesStarten" version="0" task="BatteryMeter_DisplayTaskbarProperties" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="112" symbol="BatteryMeter_DisplayTaskbarPropertiesBeenden" version="0" task="BatteryMeter_DisplayTaskbarProperties" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="113" symbol="BatteryMeter_ChangeIconStateStarten" version="0" task="BatteryMeter_ChangeIconState" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="114" symbol="BatteryMeter_ChangeIconStateBeenden" version="0" task="BatteryMeter_ChangeIconState" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="115" symbol="BatteryMeter_ChangeIconAnimationStateStarten" version="0" task="BatteryMeter_ChangeIconAnimationState" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="116" symbol="BatteryMeter_ChangeIconAnimationStateBeenden" version="0" task="BatteryMeter_ChangeIconAnimationState" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="117" symbol="BatteryMeter_IconAnimationTimeDelayStarten" version="0" task="BatteryMeter_IconAnimationTimeDelay" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="118" symbol="BatteryMeter_IconAnimationTimeDelayBeenden" version="0" task="BatteryMeter_IconAnimationTimeDelay" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="119" symbol="BatteryMeter_DisplayFlyoutStarten" version="0" task="BatteryMeter_DisplayFlyout" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="120" symbol="BatteryMeter_DisplayFlyoutBeenden" version="0" task="BatteryMeter_DisplayFlyout" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="121" symbol="BatteryMeter_DismissFlyoutStarten" version="0" task="BatteryMeter_DismissFlyout" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="122" symbol="BatteryMeter_DismissFlyoutBeenden" version="0" task="BatteryMeter_DismissFlyout" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="123" symbol="BatteryMeter_DisplayHelpTopicStarten" version="0" task="BatteryMeter_DisplayHelpTopic" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="124" symbol="BatteryMeter_DisplayHelpTopicBeenden" version="0" task="BatteryMeter_DisplayHelpTopic" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="125" symbol="BatteryMeter_PowerPlanDescriptionStarten" version="0" task="BatteryMeter_PowerPlanDescription" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="126" symbol="BatteryMeter_PowerPlanDescriptionBeenden" version="0" task="BatteryMeter_PowerPlanDescription" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="127" symbol="BatteryMeter_BigBatteryAnimationStarten" version="0" task="BatteryMeter_BigBatteryAnimation" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="128" symbol="BatteryMeter_BigBatteryAnimationBeenden" version="0" task="BatteryMeter_BigBatteryAnimation" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="129" symbol="BatteryMeter_RunCustomizationStarten" version="0" task="BatteryMeter_RunCustomization" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="130" symbol="BatteryMeter_RunCustomizationBeenden" version="0" task="BatteryMeter_RunCustomization" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="131" symbol="BatteryMeter_FlyoutRadioAnimationStarten" version="0" task="BatteryMeter_FlyoutRadioAnimation" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="132" symbol="BatteryMeter_FlyoutRadioAnimationBeenden" version="0" task="BatteryMeter_FlyoutRadioAnimation" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="133" symbol="KeepAwake_ResumeDisplayStarten" version="0" task="KeepAwake_ResumeDisplay" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="134" symbol="KeepAwake_ResumeDisplayBeenden" version="0" task="KeepAwake_ResumeDisplay" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="135" symbol="BatteryMeter_DisplayPowerOptionsFromFlyoutStarten" version="0" task="BatteryMeter_DisplayPowerOptionsFromFlyout" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="136" symbol="BatteryMeter_FlyoutSliderDimScreenStarten" version="0" task="BatteryMeter_FlyoutSliderDimScreen" opcode="win:Starten" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="137" symbol="BatteryMeter_FlyoutSliderDimScreenBeenden" version="0" task="BatteryMeter_FlyoutSliderDimScreen" opcode="win:Beenden" level="win:Informational" keywords="BatteryMeter"/>
+     <event value="138" symbol="BatteryCriticalSystemNotification_DisplayLowBatteryNotificationStarten" version="0" task="BatteryCriticalSystemNotification_DisplayLowBatteryNotification" opcode="win:Starten" level="win:Informational" keywords="BatteryCriticalSystemNotification"/>
+     <event value="139" symbol="BatteryCriticalSystemNotification_DisplayLowBatteryNotificationBeenden" version="0" task="BatteryCriticalSystemNotification_DisplayLowBatteryNotification" opcode="win:Beenden" level="win:Informational" keywords="BatteryCriticalSystemNotification"/>
+     <event value="140" symbol="BatteryCriticalSystemNotification_DismissNotificationByACPowerStarten" version="0" task="BatteryCriticalSystemNotification_DismissNotificationByACPower" opcode="win:Starten" level="win:Informational" keywords="BatteryCriticalSystemNotification"/>
+     <event value="141" symbol="BatteryCriticalSystemNotification_DismissNotificationByACPowerBeenden" version="0" task="BatteryCriticalSystemNotification_DismissNotificationByACPower" opcode="win:Beenden" level="win:Informational" keywords="BatteryCriticalSystemNotification"/>
+     <event value="142" symbol="BatteryMeter_BatteryDrain" version="0" task="BatteryMeter_BatteryDrain" level="win:Informational" keywords="BatteryMeter" template="BatteryMeter_BatteryDrainArgs"/>
+     <event value="302" symbol="SSO_Load" version="0" task="SSO_Load" level="win:Informational" keywords="SSO" template="SSO_LoadArgs"/>
+     <event value="303" symbol="SSO_OnHandleSignaledStarten" version="0" task="SSO_OnHandleSignaled" opcode="win:Starten" level="win:Informational" keywords="SSO" template="SSO_LoadArgs"/>
+     <event value="304" symbol="SSO_OnHandleSignaledBeenden" version="0" task="SSO_OnHandleSignaled" opcode="win:Beenden" level="win:Informational" keywords="SSO" template="SSO_LoadArgs"/>
+    </events>
+    <templates>
+     <template tid="BatteryMeter_BatteryDrainArgs">
+      <data name="BatteryDrainRate" inType="win:Int32"/>
+      <data name="CurrentBatteryPercent" inType="win:UInt32"/>
+      <data name="TimeSinceLastLogged" inType="win:UInt32"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+      <data name="ChargeCapacityRatio" inType="win:UInt32"/>
+      <data name="BatteryDrainInfoFlags" inType="win:UInt32" map="BatteryDrainInfoFlags"/>
+     </template>
+     <template tid="SSO_LoadArgs">
+      <data name="guid" inType="win:GUID"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_BatteryMeter" value="BatteryMeter"/>
+    <string id="keyword_Slideshow" value="Slideshow"/>
+    <string id="keyword_SSO" value="SSO"/>
+    <string id="keyword_BatteryCriticalSystemNotification" value="BatteryCriticalSystemNotification"/>
+    <string id="task_BatteryMeter_DisplayRichTooltip" value="BatteryMeter_DisplayRichTooltip"/>
+    <string id="task_BatteryMeter_DismissRichTooltip" value="BatteryMeter_DismissRichTooltip"/>
+    <string id="task_BatteryMeter_DisplayContextMenu" value="BatteryMeter_DisplayContextMenu"/>
+    <string id="task_BatteryMeter_DisplayPowerOptions" value="BatteryMeter_DisplayPowerOptions"/>
+    <string id="task_BatteryMeter_DisplayMobilityCenter" value="BatteryMeter_DisplayMobilityCenter"/>
+    <string id="task_BatteryMeter_DisplayTaskbarProperties" value="BatteryMeter_DisplayTaskbarProperties"/>
+    <string id="task_BatteryMeter_ChangeIconState" value="BatteryMeter_ChangeIconState"/>
+    <string id="task_BatteryMeter_ChangeIconAnimationState" value="BatteryMeter_ChangeIconAnimationState"/>
+    <string id="task_BatteryMeter_IconAnimationTimeDelay" value="BatteryMeter_IconAnimationTimeDelay"/>
+    <string id="task_BatteryMeter_DisplayFlyout" value="BatteryMeter_DisplayFlyout"/>
+    <string id="task_BatteryMeter_DismissFlyout" value="BatteryMeter_DismissFlyout"/>
+    <string id="task_BatteryMeter_DisplayHelpTopic" value="BatteryMeter_DisplayHelpTopic"/>
+    <string id="task_BatteryMeter_PowerPlanDescription" value="BatteryMeter_PowerPlanDescription"/>
+    <string id="task_BatteryMeter_BigBatteryAnimation" value="BatteryMeter_BigBatteryAnimation"/>
+    <string id="task_BatteryMeter_RunCustomization" value="BatteryMeter_RunCustomization"/>
+    <string id="task_BatteryMeter_FlyoutRadioAnimation" value="BatteryMeter_FlyoutRadioAnimation"/>
+    <string id="task_KeepAwake_ResumeDisplay" value="KeepAwake_ResumeDisplay"/>
+    <string id="task_BatteryMeter_DisplayPowerOptionsFromFlyout" value="BatteryMeter_DisplayPowerOptionsFromFlyout"/>
+    <string id="task_BatteryMeter_FlyoutSliderDimScreen" value="BatteryMeter_FlyoutSliderDimScreen"/>
+    <string id="task_BatteryCriticalSystemNotification_DisplayLowBatteryNotification" value="BatteryCriticalSystemNotification_DisplayLowBatteryNotification"/>
+    <string id="task_BatteryCriticalSystemNotification_DismissNotificationByACPower" value="BatteryCriticalSystemNotification_DismissNotificationByACPower"/>
+    <string id="task_BatteryMeter_BatteryDrain" value="BatteryMeter_BatteryDrain"/>
+    <string id="task_SSO_Load" value="SSO_Load"/>
+    <string id="task_SSO_OnHandleSignaled" value="SSO_OnHandleSignaled"/>
+    <string id="map_BatteryDrainInfoFlagsComputer wurde abgesteckt." value="Computer wurde abgesteckt."/>
+    <string id="map_BatteryDrainInfoFlagsComputer wurde eingesteckt." value="Computer wurde eingesteckt."/>
+    <string id="map_BatteryDrainInfoFlagsComputer wurde reaktiviert." value="Computer wurde reaktiviert."/>
+    <string id="map_BatteryDrainInfoFlagsComputer wurde angehalten." value="Computer wurde angehalten."/>
+    <string id="map_BatteryDrainInfoFlagsMonitor hat vom Status "Aus" zum Status "Ein" gewechselt." value="Monitor hat vom Status "Aus" zum Status "Ein" gewechselt."/>
+    <string id="map_BatteryDrainInfoFlagsMonitor hat vom Status "Ein" zum Status "Aus" gewechselt." value="Monitor hat vom Status "Ein" zum Status "Aus" gewechselt."/>
+    <string id="map_BatteryDrainInfoFlagsAkkuentladerate wurde aufgrund des Zeitablaufs und nicht aufgrund einer Statusänderung protokolliert." value="Akkuentladerate wurde aufgrund des Zeitablaufs und nicht aufgrund einer Statusänderung protokolliert."/>
+    <string id="map_BatteryDrainInfoFlagsDer Computer ist derzeit nicht eingesteckt und läuft im Akkubetrieb." value="Der Computer ist derzeit nicht eingesteckt und läuft im Akkubetrieb."/>
+    <string id="map_BatteryDrainInfoFlagsMonitor ausgeschaltet" value="Monitor ausgeschaltet"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

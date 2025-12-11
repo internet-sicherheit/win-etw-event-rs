@@ -1,0 +1,54 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Shell-Shwebsvc" guid="{f61cefc0-aa2e-11da-a746-0800200c9a66}" resourceFileName="Microsoft-Windows-Shell-Shwebsvc" messageFileName="Microsoft-Windows-Shell-Shwebsvc" symbol="MicrosoftWindowsShellShwebsvc" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="Startup" message="$(string.task_Startup)" value="1"/>
+     <task name="AddPages" message="$(string.task_AddPages)" value="3"/>
+     <task name="BuildManifest" message="$(string.task_BuildManifest)" value="5"/>
+     <task name="InitServices" message="$(string.task_InitServices)" value="7"/>
+     <task name="Cancel" message="$(string.task_Cancel)" value="9"/>
+     <task name="Next" message="$(string.task_Next)" value="11"/>
+     <task name="Back" message="$(string.task_Back)" value="13"/>
+     <task name="Upload" message="$(string.task_Upload)" value="15"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="StartupStarten" version="0" task="Startup" opcode="win:Starten" level="win:Informational"/>
+     <event value="2" symbol="StartupBeenden" version="0" task="Startup" opcode="win:Beenden" level="win:Informational"/>
+     <event value="3" symbol="AddPagesStarten" version="0" task="AddPages" opcode="win:Starten" level="win:Informational"/>
+     <event value="4" symbol="AddPagesBeenden" version="0" task="AddPages" opcode="win:Beenden" level="win:Informational"/>
+     <event value="5" symbol="BuildManifestStarten" version="0" task="BuildManifest" opcode="win:Starten" level="win:Informational"/>
+     <event value="6" symbol="BuildManifestBeenden" version="0" task="BuildManifest" opcode="win:Beenden" level="win:Informational"/>
+     <event value="7" symbol="InitServicesStarten" version="0" task="InitServices" opcode="win:Starten" level="win:Informational"/>
+     <event value="8" symbol="InitServicesBeenden" version="0" task="InitServices" opcode="win:Beenden" level="win:Informational"/>
+     <event value="9" symbol="CancelStarten" version="0" task="Cancel" opcode="win:Starten" level="win:Informational"/>
+     <event value="10" symbol="CancelBeenden" version="0" task="Cancel" opcode="win:Beenden" level="win:Informational"/>
+     <event value="11" symbol="NextStarten" version="0" task="Next" opcode="win:Starten" level="win:Informational"/>
+     <event value="12" symbol="NextBeenden" version="0" task="Next" opcode="win:Beenden" level="win:Informational"/>
+     <event value="13" symbol="BackStarten" version="0" task="Back" opcode="win:Starten" level="win:Informational"/>
+     <event value="14" symbol="BackBeenden" version="0" task="Back" opcode="win:Beenden" level="win:Informational"/>
+     <event value="15" symbol="UploadStarten" version="0" task="Upload" opcode="win:Starten" level="win:Informational"/>
+     <event value="16" symbol="UploadBeenden" version="0" task="Upload" opcode="win:Beenden" level="win:Informational"/>
+    </events>
+    <templates>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_Startup" value="Startup"/>
+    <string id="task_AddPages" value="AddPages"/>
+    <string id="task_BuildManifest" value="BuildManifest"/>
+    <string id="task_InitServices" value="InitServices"/>
+    <string id="task_Cancel" value="Cancel"/>
+    <string id="task_Next" value="Next"/>
+    <string id="task_Back" value="Back"/>
+    <string id="task_Upload" value="Upload"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

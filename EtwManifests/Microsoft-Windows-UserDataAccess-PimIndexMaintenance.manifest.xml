@@ -1,0 +1,205 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-UserDataAccess-PimIndexMaintenance" guid="{99c66ba7-5a97-40d5-aa01-8a07fb3db292}" resourceFileName="Microsoft-Windows-UserDataAccess-PimIndexMaintenance" messageFileName="Microsoft-Windows-UserDataAccess-PimIndexMaintenance" symbol="MicrosoftWindowsUserDataAccessPimIndexMaintenance" source="Xml" >
+    <keywords>
+     <keyword name="Error" message="$(string.keyword_Error)" mask="0x1"/>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x2"/>
+     <keyword name="PimIndexMaintenance" message="$(string.keyword_PimIndexMaintenance)" mask="0x4"/>
+     <keyword name="IndexFilter" message="$(string.keyword_IndexFilter)" mask="0x8"/>
+     <keyword name="debug" message="$(string.keyword_debug)" mask="0x100"/>
+     <keyword name="Warning" message="$(string.keyword_Warning)" mask="0x4000000000"/>
+     <keyword name="StateTransition" message="$(string.keyword_StateTransition)" mask="0x8000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="THREAD_PREP" message="$(string.task_THREAD_PREP)" value="1"/>
+     <task name="ON_BOOT" message="$(string.task_ON_BOOT)" value="2"/>
+     <task name="ON_EVENT" message="$(string.task_ON_EVENT)" value="3"/>
+     <task name="CONFIGURE_SYNC" message="$(string.task_CONFIGURE_SYNC)" value="4"/>
+     <task name="UPDATE_STORE" message="$(string.task_UPDATE_STORE)" value="5"/>
+     <task name="SETUP" message="$(string.task_SETUP)" value="6"/>
+     <task name="UPDATE_FOLDER" message="$(string.task_UPDATE_FOLDER)" value="7"/>
+     <task name="COLLECT_CHANGES" message="$(string.task_COLLECT_CHANGES)" value="8"/>
+     <task name="SYNC_SESSION" message="$(string.task_SYNC_SESSION)" value="9"/>
+     <task name="END_TRANSACTION" message="$(string.task_END_TRANSACTION)" value="10"/>
+     <task name="UPDATE_PICTURE" message="$(string.task_UPDATE_PICTURE)" value="11"/>
+     <task name="HANDLE_CHANGES" message="$(string.task_HANDLE_CHANGES)" value="12"/>
+     <task name="HANDLE_ADD_OR_EDIT" message="$(string.task_HANDLE_ADD_OR_EDIT)" value="13"/>
+     <task name="HANDLE_DELETE" message="$(string.task_HANDLE_DELETE)" value="14"/>
+     <task name="COMMIT_CHANGES" message="$(string.task_COMMIT_CHANGES)" value="15"/>
+     <task name="AUTO_LINK" message="$(string.task_AUTO_LINK)" value="16"/>
+     <task name="AUTO_LINK_PHONE_CORROBORATION" message="$(string.task_AUTO_LINK_PHONE_CORROBORATION)" value="17"/>
+     <task name="AUTO_LINK_EMAIL_CORROBORATION" message="$(string.task_AUTO_LINK_EMAIL_CORROBORATION)" value="18"/>
+     <task name="Ablaufverfolgung" message="$(string.task_Ablaufverfolgung)" value="19"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="task_0" version="0" task="task_0" level="win:Error" keywords="Error" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0Args"/>
+     <event value="3" symbol="Ablaufverfolgung" version="0" task="Ablaufverfolgung" level="win:Verbose" keywords="debug" template="AblaufverfolgungArgs"/>
+     <event value="1000" symbol="task_01000" version="0" task="task_0" level="win:Error" keywords="PimIndexMaintenance" template="task_01000Args"/>
+     <event value="1001" symbol="task_01001" version="0" task="task_0" level="win:Verbose" keywords="PimIndexMaintenance"/>
+     <event value="1002" symbol="task_01002" version="0" task="task_0" level="win:Verbose" keywords="PimIndexMaintenance"/>
+     <event value="1003" symbol="task_01003" version="0" task="task_0" level="win:Verbose" keywords="PimIndexMaintenance"/>
+     <event value="1004" symbol="task_01004" version="0" task="task_0" level="win:Verbose" keywords="PimIndexMaintenance"/>
+     <event value="1005" symbol="task_01005" version="0" task="task_0" level="win:Verbose" keywords="PimIndexMaintenance"/>
+     <event value="1006" symbol="task_01006" version="0" task="task_0" level="win:Verbose" keywords="PimIndexMaintenance"/>
+     <event value="1007" symbol="task_01007" version="0" task="task_0" level="win:Verbose" keywords="PimIndexMaintenance"/>
+     <event value="1008" symbol="task_01008" version="0" task="task_0" level="win:Verbose" keywords="PimIndexMaintenance"/>
+     <event value="1009" symbol="task_01009" version="0" task="task_0" level="win:Informational" keywords="PimIndexMaintenance" template="task_01009Args"/>
+     <event value="1010" symbol="task_01010" version="0" task="task_0" level="win:Error" keywords="PimIndexMaintenance" template="task_01010Args"/>
+     <event value="1011" symbol="task_01011" version="0" task="task_0" level="win:Informational" keywords="PimIndexMaintenance"/>
+     <event value="1012" symbol="task_01012" version="0" task="task_0" level="win:Error" keywords="PimIndexMaintenance" template="task_01012Args"/>
+     <event value="1013" symbol="task_01013" version="0" task="task_0" level="win:Error" keywords="PimIndexMaintenance" template="task_01012Args"/>
+     <event value="1014" symbol="task_01014" version="0" task="task_0" level="win:Error" keywords="PimIndexMaintenance" template="task_01010Args"/>
+     <event value="1015" symbol="task_01015" version="0" task="task_0" level="win:Verbose" keywords="PimIndexMaintenance" template="task_01015Args"/>
+     <event value="1017" symbol="task_01017" version="0" task="task_0" level="win:Verbose" keywords="PimIndexMaintenance" template="task_01009Args"/>
+     <event value="1018" symbol="task_01018" version="0" task="task_0" level="win:Informational" keywords="PimIndexMaintenance" template="task_01015Args"/>
+     <event value="1022" symbol="task_01022" version="0" task="task_0" level="win:Verbose" keywords="PimIndexMaintenance"/>
+     <event value="1023" symbol="task_01023" version="0" task="task_0" level="win:Verbose" keywords="PimIndexMaintenance" template="task_01023Args"/>
+     <event value="1024" symbol="task_01024" version="0" task="task_0" level="win:Warning" keywords="PimIndexMaintenance Warning" template="task_01015Args"/>
+     <event value="1025" symbol="task_01025" version="0" task="task_0" level="win:Warning" keywords="PimIndexMaintenance Warning"/>
+     <event value="1026" symbol="task_01026" version="0" task="task_0" level="win:Warning" keywords="PimIndexMaintenance Warning"/>
+     <event value="1027" symbol="task_01027" version="0" task="task_0" level="win:Informational" keywords="PimIndexMaintenance"/>
+     <event value="1028" symbol="task_01028" version="0" task="task_0" level="win:Informational" keywords="PimIndexMaintenance" template="task_01015Args"/>
+     <event value="1029" symbol="task_01029" version="0" task="task_0" level="win:Warning" keywords="PimIndexMaintenance Warning" template="task_01015Args"/>
+     <event value="1030" symbol="task_01030" version="0" task="task_0" level="win:Informational" keywords="PimIndexMaintenance" template="task_01009Args"/>
+     <event value="1031" symbol="task_01031" version="0" task="task_0" level="win:Error" keywords="PimIndexMaintenance" template="task_01012Args"/>
+     <event value="1032" symbol="task_01032" version="0" task="task_0" level="win:Informational" keywords="PimIndexMaintenance" template="task_01015Args"/>
+     <event value="1033" symbol="task_01033" version="0" task="task_0" level="win:Informational" keywords="PimIndexMaintenance" template="task_01033Args"/>
+     <event value="1034" symbol="task_01034" version="0" task="task_0" level="win:Informational" keywords="PimIndexMaintenance"/>
+     <event value="1035" symbol="task_01035" version="0" task="task_0" level="win:Informational" keywords="PimIndexMaintenance"/>
+     <event value="1040" symbol="task_01040" version="0" task="task_0" level="win:Informational" keywords="PimIndexMaintenance" template="task_01040Args"/>
+     <event value="1041" symbol="task_01041" version="0" task="task_0" level="win:Informational" keywords="PimIndexMaintenance StateTransition" template="task_01041Args"/>
+     <event value="1042" symbol="task_01042" version="0" task="task_0" level="win:Informational" keywords="PimIndexMaintenance StateTransition" template="task_01041Args"/>
+     <event value="1043" symbol="task_01043" version="0" task="task_0" level="win:Informational" keywords="PimIndexMaintenance StateTransition" template="task_01043Args"/>
+     <event value="2000" symbol="THREAD_PREPStarten" version="0" task="THREAD_PREP" opcode="win:Starten" level="win:Informational" keywords="Performance PimIndexMaintenance"/>
+     <event value="2001" symbol="THREAD_PREPBeenden" version="0" task="THREAD_PREP" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="2002" symbol="ON_BOOTStarten" version="0" task="ON_BOOT" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="2003" symbol="ON_BOOTBeenden" version="0" task="ON_BOOT" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="2004" symbol="ON_EVENTStarten" version="0" task="ON_EVENT" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="2005" symbol="ON_EVENTBeenden" version="0" task="ON_EVENT" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="2006" symbol="CONFIGURE_SYNCStarten" version="0" task="CONFIGURE_SYNC" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="2007" symbol="CONFIGURE_SYNCBeenden" version="0" task="CONFIGURE_SYNC" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="2008" symbol="UPDATE_STOREStarten" version="0" task="UPDATE_STORE" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="2009" symbol="UPDATE_STOREBeenden" version="0" task="UPDATE_STORE" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="2010" symbol="SETUPStarten" version="0" task="SETUP" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="2011" symbol="SETUPBeenden" version="0" task="SETUP" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="2012" symbol="UPDATE_FOLDERStarten" version="0" task="UPDATE_FOLDER" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="2013" symbol="UPDATE_FOLDERBeenden" version="0" task="UPDATE_FOLDER" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="2014" symbol="COLLECT_CHANGESStarten" version="0" task="COLLECT_CHANGES" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="2015" symbol="COLLECT_CHANGESBeenden" version="0" task="COLLECT_CHANGES" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="2016" symbol="SYNC_SESSIONStarten" version="0" task="SYNC_SESSION" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="2017" symbol="SYNC_SESSIONBeenden" version="0" task="SYNC_SESSION" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="2018" symbol="END_TRANSACTIONStarten" version="0" task="END_TRANSACTION" opcode="win:Starten" level="win:Informational" keywords="Performance" template="END_TRANSACTIONStartenArgs"/>
+     <event value="2019" symbol="END_TRANSACTIONBeenden" version="0" task="END_TRANSACTION" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="END_TRANSACTIONStartenArgs"/>
+     <event value="2020" symbol="UPDATE_PICTUREStarten" version="0" task="UPDATE_PICTURE" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="2021" symbol="UPDATE_PICTUREBeenden" version="0" task="UPDATE_PICTURE" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="2022" symbol="HANDLE_CHANGESStarten" version="0" task="HANDLE_CHANGES" opcode="win:Starten" level="win:Informational" keywords="Performance" template="END_TRANSACTIONStartenArgs"/>
+     <event value="2023" symbol="HANDLE_CHANGESBeenden" version="0" task="HANDLE_CHANGES" opcode="win:Beenden" level="win:Informational" keywords="Performance" template="END_TRANSACTIONStartenArgs"/>
+     <event value="2024" symbol="HANDLE_ADD_OR_EDITStarten" version="0" task="HANDLE_ADD_OR_EDIT" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="2025" symbol="HANDLE_ADD_OR_EDITBeenden" version="0" task="HANDLE_ADD_OR_EDIT" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="2026" symbol="HANDLE_DELETEStarten" version="0" task="HANDLE_DELETE" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="2027" symbol="HANDLE_DELETEBeenden" version="0" task="HANDLE_DELETE" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="2028" symbol="COMMIT_CHANGESStarten" version="0" task="COMMIT_CHANGES" opcode="win:Starten" level="win:Informational" keywords="Performance"/>
+     <event value="2029" symbol="COMMIT_CHANGESBeenden" version="0" task="COMMIT_CHANGES" opcode="win:Beenden" level="win:Informational" keywords="Performance"/>
+     <event value="2030" symbol="AUTO_LINKStarten" version="0" task="AUTO_LINK" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="2031" symbol="AUTO_LINKBeenden" version="0" task="AUTO_LINK" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="2032" symbol="AUTO_LINK_PHONE_CORROBORATIONStarten" version="0" task="AUTO_LINK_PHONE_CORROBORATION" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="2033" symbol="AUTO_LINK_PHONE_CORROBORATIONBeenden" version="0" task="AUTO_LINK_PHONE_CORROBORATION" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="2034" symbol="AUTO_LINK_EMAIL_CORROBORATIONStarten" version="0" task="AUTO_LINK_EMAIL_CORROBORATION" opcode="win:Starten" level="win:Verbose" keywords="Performance"/>
+     <event value="2035" symbol="AUTO_LINK_EMAIL_CORROBORATIONBeenden" version="0" task="AUTO_LINK_EMAIL_CORROBORATION" opcode="win:Beenden" level="win:Verbose" keywords="Performance"/>
+     <event value="7001" symbol="task_07001" version="0" task="task_0" level="win:Verbose" keywords="IndexFilter"/>
+     <event value="7002" symbol="task_07002" version="0" task="task_0" level="win:Verbose" keywords="IndexFilter"/>
+     <event value="7003" symbol="task_07003" version="0" task="task_0" level="win:Error" keywords="Error IndexFilter" template="task_01009Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="P1_HResult" inType="win:Int32"/>
+      <data name="P2_String" inType="win:AnsiString"/>
+      <data name="P3_UInt32" inType="win:UInt32"/>
+     </template>
+     <template tid="AblaufverfolgungArgs">
+      <data name="Message" inType="win:Pointer"/>
+     </template>
+     <template tid="task_01000Args">
+      <data name="Prop_FUNC_AnsiString" inType="win:AnsiString"/>
+      <data name="Prop_LINE_UInt32" inType="win:UInt32"/>
+      <data name="Prop_Hr_Int32" inType="win:Int32"/>
+     </template>
+     <template tid="task_01009Args">
+      <data name="PROP_UInt32_1" inType="win:UInt32"/>
+      <data name="PROP_UInt32_2" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01010Args">
+      <data name="Prop_Hr_UInt32" inType="win:Int32"/>
+     </template>
+     <template tid="task_01012Args">
+      <data name="PROP_UInt32" inType="win:UInt32"/>
+      <data name="Prop_Hr_UInt32" inType="win:Int32"/>
+     </template>
+     <template tid="task_01015Args">
+      <data name="PROP_FILE_uint" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01023Args">
+      <data name="PROP_UInt32_1" inType="win:UInt32"/>
+      <data name="PROP_UInt32_2" inType="win:UInt32"/>
+      <data name="PROP_UInt32_3" inType="win:UInt32"/>
+      <data name="PROP_UInt32_4" inType="win:UInt32"/>
+      <data name="PROP_UInt32_5" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01033Args">
+      <data name="PROP_ByteCount" inType="win:UInt32"/>
+      <data name="PROP_Bytes" inType="win:Binary" length="PROP_ByteCount"/>
+     </template>
+     <template tid="task_01040Args">
+      <data name="App" inType="win:GUID"/>
+      <data name="Result" inType="win:Int32"/>
+     </template>
+     <template tid="task_01041Args">
+      <data name="Prop_Prop" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01043Args">
+      <data name="P1_String" inType="win:AnsiString"/>
+     </template>
+     <template tid="END_TRANSACTIONStartenArgs">
+      <data name="uint" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_Error" value="Error"/>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="keyword_PimIndexMaintenance" value="PimIndexMaintenance"/>
+    <string id="keyword_IndexFilter" value="IndexFilter"/>
+    <string id="keyword_debug" value="debug"/>
+    <string id="keyword_Warning" value="Warning"/>
+    <string id="keyword_StateTransition" value="StateTransition"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_THREAD_PREP" value="THREAD_PREP"/>
+    <string id="task_ON_BOOT" value="ON_BOOT"/>
+    <string id="task_ON_EVENT" value="ON_EVENT"/>
+    <string id="task_CONFIGURE_SYNC" value="CONFIGURE_SYNC"/>
+    <string id="task_UPDATE_STORE" value="UPDATE_STORE"/>
+    <string id="task_SETUP" value="SETUP"/>
+    <string id="task_UPDATE_FOLDER" value="UPDATE_FOLDER"/>
+    <string id="task_COLLECT_CHANGES" value="COLLECT_CHANGES"/>
+    <string id="task_SYNC_SESSION" value="SYNC_SESSION"/>
+    <string id="task_END_TRANSACTION" value="END_TRANSACTION"/>
+    <string id="task_UPDATE_PICTURE" value="UPDATE_PICTURE"/>
+    <string id="task_HANDLE_CHANGES" value="HANDLE_CHANGES"/>
+    <string id="task_HANDLE_ADD_OR_EDIT" value="HANDLE_ADD_OR_EDIT"/>
+    <string id="task_HANDLE_DELETE" value="HANDLE_DELETE"/>
+    <string id="task_COMMIT_CHANGES" value="COMMIT_CHANGES"/>
+    <string id="task_AUTO_LINK" value="AUTO_LINK"/>
+    <string id="task_AUTO_LINK_PHONE_CORROBORATION" value="AUTO_LINK_PHONE_CORROBORATION"/>
+    <string id="task_AUTO_LINK_EMAIL_CORROBORATION" value="AUTO_LINK_EMAIL_CORROBORATION"/>
+    <string id="task_Ablaufverfolgung" value="Ablaufverfolgung"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,58 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-NDF-HelperClassDiscovery" guid="{fc3bc8a7-2f61-449c-a8b4-22ac22058f92}" resourceFileName="Microsoft-Windows-NDF-HelperClassDiscovery" messageFileName="Microsoft-Windows-NDF-HelperClassDiscovery" symbol="MicrosoftWindowsNDFHelperClassDiscovery" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="Hilfsklasseladen" message="$(string.task_Hilfsklasseladen)" value="1"/>
+     <task name="Registrierung" message="$(string.task_Registrierung)" value="2"/>
+    </tasks>
+    <events>
+     <event value="1001" symbol="Hilfsklasseladen" version="0" task="Hilfsklasseladen" level="win:Error" template="HilfsklasseladenArgs"/>
+     <event value="1002" symbol="Hilfsklasseladen1002" version="0" task="Hilfsklasseladen" level="win:Error" template="HilfsklasseladenArgs"/>
+     <event value="1003" symbol="Hilfsklasseladen1003" version="0" task="Hilfsklasseladen" level="win:Error" template="Hilfsklasseladen1003Args"/>
+     <event value="1004" symbol="Hilfsklasseladen1004" version="0" task="Hilfsklasseladen" level="win:Error" template="Hilfsklasseladen1003Args"/>
+     <event value="1005" symbol="Hilfsklasseladen1005" version="0" task="Hilfsklasseladen" level="win:Error" template="Hilfsklasseladen1003Args"/>
+     <event value="1006" symbol="Hilfsklasseladen1006" version="0" task="Hilfsklasseladen" level="win:Warning" template="Hilfsklasseladen1003Args"/>
+     <event value="1007" symbol="Hilfsklasseladen1007" version="0" task="Hilfsklasseladen" level="win:Warning" template="Hilfsklasseladen1003Args"/>
+     <event value="1008" symbol="Hilfsklasseladen1008" version="0" task="Hilfsklasseladen" level="win:Warning" template="HilfsklasseladenArgs"/>
+     <event value="1009" symbol="Hilfsklasseladen1009" version="0" task="Hilfsklasseladen" level="win:Error" template="Hilfsklasseladen1009Args"/>
+     <event value="1010" symbol="Hilfsklasseladen1010" version="0" task="Hilfsklasseladen" level="win:Error" template="Hilfsklasseladen1009Args"/>
+     <event value="1011" symbol="Hilfsklasseladen1011" version="0" task="Hilfsklasseladen" level="win:Error" template="Hilfsklasseladen1009Args"/>
+     <event value="1012" symbol="Hilfsklasseladen1012" version="0" task="Hilfsklasseladen" level="win:Error" template="Hilfsklasseladen1009Args"/>
+     <event value="1100" symbol="Registrierung" version="0" task="Registrierung" level="win:Error" template="RegistrierungArgs"/>
+     <event value="1101" symbol="Registrierung1101" version="0" task="Registrierung" level="win:Warning" template="RegistrierungArgs"/>
+    </events>
+    <templates>
+     <template tid="HilfsklasseladenArgs">
+      <data name="HelperClassName" inType="win:UnicodeString"/>
+      <data name="ComponentName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Hilfsklasseladen1003Args">
+      <data name="HelperClassName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Hilfsklasseladen1009Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Location" inType="win:UInt32"/>
+      <data name="Name" inType="win:UnicodeString"/>
+     </template>
+     <template tid="RegistrierungArgs">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Location" inType="win:UInt32"/>
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="KeyOrValue" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_Hilfsklasseladen" value="Hilfsklasseladen"/>
+    <string id="task_Registrierung" value="Registrierung"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

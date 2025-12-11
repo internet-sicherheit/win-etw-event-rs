@@ -1,0 +1,36 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Security-Vault" guid="{e6c92fb8-89d7-4d1f-be46-d56e59804783}" resourceFileName="Microsoft-Windows-Security-Vault" messageFileName="Microsoft-Windows-Security-Vault" symbol="MicrosoftWindowsSecurityVault" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="Tresorleistung" message="$(string.task_Tresorleistung)" value="1"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="TresorleistungStarten" version="0" task="Tresorleistung" opcode="win:Starten" level="win:Informational"/>
+     <event value="101" symbol="TresorleistungBeenden" version="0" task="Tresorleistung" opcode="win:Beenden" level="win:Informational"/>
+     <event value="102" symbol="TresorleistungStarten102" version="0" task="Tresorleistung" opcode="win:Starten" level="win:Informational"/>
+     <event value="103" symbol="TresorleistungBeenden103" version="0" task="Tresorleistung" opcode="win:Beenden" level="win:Informational"/>
+     <event value="104" symbol="TresorleistungStarten104" version="0" task="Tresorleistung" opcode="win:Starten" level="win:Informational"/>
+     <event value="105" symbol="TresorleistungBeenden105" version="0" task="Tresorleistung" opcode="win:Beenden" level="win:Informational"/>
+     <event value="106" symbol="TresorleistungStarten106" version="0" task="Tresorleistung" opcode="win:Starten" level="win:Informational"/>
+     <event value="107" symbol="TresorleistungBeenden107" version="0" task="Tresorleistung" opcode="win:Beenden" level="win:Informational"/>
+     <event value="108" symbol="TresorleistungStarten108" version="0" task="Tresorleistung" opcode="win:Starten" level="win:Informational"/>
+     <event value="109" symbol="TresorleistungBeenden109" version="0" task="Tresorleistung" opcode="win:Beenden" level="win:Informational"/>
+     <event value="110" symbol="TresorleistungStarten110" version="0" task="Tresorleistung" opcode="win:Starten" level="win:Informational"/>
+     <event value="111" symbol="TresorleistungBeenden111" version="0" task="Tresorleistung" opcode="win:Beenden" level="win:Informational"/>
+    </events>
+    <templates>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="task_Tresorleistung" value="Tresorleistung"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

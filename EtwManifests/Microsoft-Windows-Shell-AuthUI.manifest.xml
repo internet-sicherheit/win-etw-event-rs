@@ -1,0 +1,767 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Shell-AuthUI" guid="{63d2bb1d-e39a-41b8-9a3d-52dd06677588}" resourceFileName="Microsoft-Windows-Shell-AuthUI" messageFileName="Microsoft-Windows-Shell-AuthUI" symbol="MicrosoftWindowsShellAuthUI" source="Xml" >
+    <keywords>
+     <keyword name="keyword_200000000000" message="$(string.keyword_keyword_200000000000)" mask="0x200000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="Common_UserList_TileEnumeration" message="$(string.task_Common_UserList_TileEnumeration)" value="15001"/>
+     <task name="Common_GetMachineName" message="$(string.task_Common_GetMachineName)" value="15002"/>
+     <task name="Common_GetMachineDomainName" message="$(string.task_Common_GetMachineDomainName)" value="15003"/>
+     <task name="Common_GetBuiltInAdministrator" message="$(string.task_Common_GetBuiltInAdministrator)" value="15004"/>
+     <task name="Common_GetInSessionUser" message="$(string.task_Common_GetInSessionUser)" value="15005"/>
+     <task name="Common_GetFriendlyName" message="$(string.task_Common_GetFriendlyName)" value="15006"/>
+     <task name="Common_Tile_FireSubmitEvent" message="$(string.task_Common_Tile_FireSubmitEvent)" value="15007"/>
+     <task name="Common_CreateCredentialProviders" message="$(string.task_Common_CreateCredentialProviders)" value="15008"/>
+     <task name="Common_AddCredProvider" message="$(string.task_Common_AddCredProvider)" value="15009"/>
+     <task name="Common_CreateCredProviderThread" message="$(string.task_Common_CreateCredProviderThread)" value="15010"/>
+     <task name="Common_CredProviderThreadProc" message="$(string.task_Common_CredProviderThreadProc)" value="15011"/>
+     <task name="Common_CredProviderThreadDestroy" message="$(string.task_Common_CredProviderThreadDestroy)" value="15012"/>
+     <task name="Common_SetUsageScenario" message="$(string.task_Common_SetUsageScenario)" value="15013"/>
+     <task name="Common_SetSerialization" message="$(string.task_Common_SetSerialization)" value="15014"/>
+     <task name="Common_GetCredentialAt" message="$(string.task_Common_GetCredentialAt)" value="15015"/>
+     <task name="Common_GetCredentialCount" message="$(string.task_Common_GetCredentialCount)" value="15016"/>
+     <task name="Common_GetFieldDescriptorCount" message="$(string.task_Common_GetFieldDescriptorCount)" value="15017"/>
+     <task name="Common_Credential_GetUserSid" message="$(string.task_Common_Credential_GetUserSid)" value="15018"/>
+     <task name="Common_SetSelected" message="$(string.task_Common_SetSelected)" value="15019"/>
+     <task name="Common_SetDeSelected" message="$(string.task_Common_SetDeSelected)" value="15020"/>
+     <task name="Common_GetSerialization" message="$(string.task_Common_GetSerialization)" value="15021"/>
+     <task name="Common_ReportResult" message="$(string.task_Common_ReportResult)" value="15022"/>
+     <task name="Common_RegisterEnumeration" message="$(string.task_Common_RegisterEnumeration)" value="15023"/>
+     <task name="Common_CreateEnumerationSyncReply" message="$(string.task_Common_CreateEnumerationSyncReply)" value="15024"/>
+     <task name="Common_StartCredProvsForUsageScenario" message="$(string.task_Common_StartCredProvsForUsageScenario)" value="15025"/>
+     <task name="Logon_ServerCallback_Abort" message="$(string.task_Logon_ServerCallback_Abort)" value="25001"/>
+     <task name="Logon_ServerCallback_DisplayLocked" message="$(string.task_Logon_ServerCallback_DisplayLocked)" value="25002"/>
+     <task name="Logon_ServerCallback_DisplayMessage" message="$(string.task_Logon_ServerCallback_DisplayMessage)" value="25003"/>
+     <task name="Logon_ServerCallback_DisplayRequestCredentialsError" message="$(string.task_Logon_ServerCallback_DisplayRequestCredentialsError)" value="25004"/>
+     <task name="Logon_ServerCallback_DisplaySecurityOptions" message="$(string.task_Logon_ServerCallback_DisplaySecurityOptions)" value="25005"/>
+     <task name="Logon_ServerCallback_DisplayStatus" message="$(string.task_Logon_ServerCallback_DisplayStatus)" value="25006"/>
+     <task name="Logon_ServerCallback_DisplayWelcome" message="$(string.task_Logon_ServerCallback_DisplayWelcome)" value="25007"/>
+     <task name="Logon_ServerCallback_ReportResult" message="$(string.task_Logon_ServerCallback_ReportResult)" value="25008"/>
+     <task name="Logon_ServerCallback_RequestCredentials" message="$(string.task_Logon_ServerCallback_RequestCredentials)" value="25009"/>
+     <task name="Logon_ServerCallback_Shutdown" message="$(string.task_Logon_ServerCallback_Shutdown)" value="25010"/>
+     <task name="Logon_ServerCallback_PromptForCredentials" message="$(string.task_Logon_ServerCallback_PromptForCredentials)" value="25011"/>
+     <task name="Logon_LogonFrame_OnSwitchUser" message="$(string.task_Logon_LogonFrame_OnSwitchUser)" value="25012"/>
+     <task name="Logon_LogonFrame_OnOtherTiles" message="$(string.task_Logon_LogonFrame_OnOtherTiles)" value="25013"/>
+     <task name="Logon_LogonFrame_OnGetEnumeratedTilesReply" message="$(string.task_Logon_LogonFrame_OnGetEnumeratedTilesReply)" value="25014"/>
+     <task name="Logon_LogonFrame_OnEnumerationSyncReply" message="$(string.task_Logon_LogonFrame_OnEnumerationSyncReply)" value="25015"/>
+     <task name="Logon_LogonFrame_OnSelectCredentialReply" message="$(string.task_Logon_LogonFrame_OnSelectCredentialReply)" value="25016"/>
+     <task name="Logon_LogonFrame_SetBackgroundGraphics" message="$(string.task_Logon_LogonFrame_SetBackgroundGraphics)" value="25017"/>
+     <task name="Logon_LogonFrame_InitializeFrame" message="$(string.task_Logon_LogonFrame_InitializeFrame)" value="25018"/>
+     <task name="Logon_LogonFrame_CreateStyleParser" message="$(string.task_Logon_LogonFrame_CreateStyleParser)" value="25019"/>
+     <task name="Logon_LogonFrame_CreateFrameElement" message="$(string.task_Logon_LogonFrame_CreateFrameElement)" value="25020"/>
+     <task name="Logon_LogonFrame_InitializeUserLists" message="$(string.task_Logon_LogonFrame_InitializeUserLists)" value="25021"/>
+     <task name="Logon_LogonFrame_BrandingLoadImage" message="$(string.task_Logon_LogonFrame_BrandingLoadImage)" value="25022"/>
+     <task name="Logon_LogonFrame_InitializeSoftKeyboard" message="$(string.task_Logon_LogonFrame_InitializeSoftKeyboard)" value="25024"/>
+     <task name="Logon_LogonFrame_WTSRegisterSessionNotification" message="$(string.task_Logon_LogonFrame_WTSRegisterSessionNotification)" value="25025"/>
+     <task name="Logon_AutoLogon_IsSingleUserNoPassword" message="$(string.task_Logon_AutoLogon_IsSingleUserNoPassword)" value="25026"/>
+     <task name="Logon_AutoLogon_IsLocalNoPasswordUser" message="$(string.task_Logon_AutoLogon_IsLocalNoPasswordUser)" value="25027"/>
+     <task name="Logon_ServerStartup" message="$(string.task_Logon_ServerStartup)" value="25028"/>
+     <task name="Logon_LaunchToReadyForInput" message="$(string.task_Logon_LaunchToReadyForInput)" value="25029"/>
+     <task name="Logon_CredentialsToExit" message="$(string.task_Logon_CredentialsToExit)" value="25030"/>
+     <task name="Logon_RequestCredentialsToReadyForCredentials" message="$(string.task_Logon_RequestCredentialsToReadyForCredentials)" value="25031"/>
+     <task name="Logon_LaunchToAnimationComplete" message="$(string.task_Logon_LaunchToAnimationComplete)" value="25032"/>
+     <task name="Logon_RequestCredentialsToCancelAfterEnumerate" message="$(string.task_Logon_RequestCredentialsToCancelAfterEnumerate)" value="25033"/>
+     <task name="Logon_LaunchToCancelAfterResume" message="$(string.task_Logon_LaunchToCancelAfterResume)" value="25034"/>
+     <task name="LogonUI_SubmitCredentialToExit" message="$(string.task_LogonUI_SubmitCredentialToExit)" value="25038"/>
+     <task name="LogonUI_PerfTrack_UserSwitching" message="$(string.task_LogonUI_PerfTrack_UserSwitching)" value="25039"/>
+     <task name="Logon_LogonFrame_OnGetSerializationReply" message="$(string.task_Logon_LogonFrame_OnGetSerializationReply)" value="25040"/>
+     <task name="Logon_LogonFrame_OnProviderCredentialsChanged" message="$(string.task_Logon_LogonFrame_OnProviderCredentialsChanged)" value="25041"/>
+     <task name="Logon_LogonFrame_DisplayStatusMessage" message="$(string.task_Logon_LogonFrame_DisplayStatusMessage)" value="25042"/>
+     <task name="Logon_LogonFrame_LogonDialogCallback" message="$(string.task_Logon_LogonFrame_LogonDialogCallback)" value="25043"/>
+     <task name="Logon_LogonFrame_DisplayLogonDialog" message="$(string.task_Logon_LogonFrame_DisplayLogonDialog)" value="25044"/>
+     <task name="Logon_Background_GetBackgroundForUser" message="$(string.task_Logon_Background_GetBackgroundForUser)" value="25045"/>
+     <task name="Logon_Background_ShowUserBackground" message="$(string.task_Logon_Background_ShowUserBackground)" value="25046"/>
+     <task name="Logon_AccessPage_LoadBackgroundImage" message="$(string.task_Logon_AccessPage_LoadBackgroundImage)" value="25082"/>
+     <task name="Logon_AutoLogon_QueryAutoLogon_Info" message="$(string.task_Logon_AutoLogon_QueryAutoLogon_Info)" value="25083"/>
+     <task name="Logon_AutoLogon_IgnoreAutoLogonMode_Info" message="$(string.task_Logon_AutoLogon_IgnoreAutoLogonMode_Info)" value="25084"/>
+     <task name="Logon_BSDR_Initialize" message="$(string.task_Logon_BSDR_Initialize)" value="25086"/>
+     <task name="Logon_BSDR_Shown" message="$(string.task_Logon_BSDR_Shown)" value="25089"/>
+     <task name="Logon_BSDR_AddApplication" message="$(string.task_Logon_BSDR_AddApplication)" value="25090"/>
+     <task name="Logon_BSDR_RemoveApplication" message="$(string.task_Logon_BSDR_RemoveApplication)" value="25092"/>
+     <task name="LogonUI_PerfTrack_Lock" message="$(string.task_LogonUI_PerfTrack_Lock)" value="25093"/>
+     <task name="Logon_LanguageProfile_SwitchInputMethods" message="$(string.task_Logon_LanguageProfile_SwitchInputMethods)" value="25094"/>
+     <task name="Logon_AccessPage_CancelFirstRunTasks" message="$(string.task_Logon_AccessPage_CancelFirstRunTasks)" value="25095"/>
+     <task name="Logon_AccessPage_TriggerFirstRunTasks" message="$(string.task_Logon_AccessPage_TriggerFirstRunTasks)" value="25096"/>
+     <task name="Logon_AccessPage_WaitForFirstRunTasks" message="$(string.task_Logon_AccessPage_WaitForFirstRunTasks)" value="25097"/>
+     <task name="Logon_BackButtonNotificationFlyout" message="$(string.task_Logon_BackButtonNotificationFlyout)" value="25098"/>
+     <task name="Logon_AccessPage_Unlock" message="$(string.task_Logon_AccessPage_Unlock)" value="25108"/>
+     <task name="Logon_AccessPage_Lock" message="$(string.task_Logon_AccessPage_Lock)" value="25110"/>
+     <task name="Logon_AccessPage_Camera_ControlCreation" message="$(string.task_Logon_AccessPage_Camera_ControlCreation)" value="25111"/>
+     <task name="Logon_AccessPage_Camera_ViewfinderInitialization" message="$(string.task_Logon_AccessPage_Camera_ViewfinderInitialization)" value="25112"/>
+     <task name="Logon_AccessPage_Camera_ActiveDuration" message="$(string.task_Logon_AccessPage_Camera_ActiveDuration)" value="25113"/>
+     <task name="Logon_AccessPage_Camera_ShutdownDuration" message="$(string.task_Logon_AccessPage_Camera_ShutdownDuration)" value="25114"/>
+     <task name="CredUI_Prompt_Called" message="$(string.task_CredUI_Prompt_Called)" value="35001"/>
+     <task name="CredUI_Dialog_Created" message="$(string.task_CredUI_Dialog_Created)" value="35002"/>
+     <task name="CredUI_UserList_TileEnumeration" message="$(string.task_CredUI_UserList_TileEnumeration)" value="35003"/>
+     <task name="CredUI_Dialog_Destroyed" message="$(string.task_CredUI_Dialog_Destroyed)" value="35004"/>
+     <task name="CredUI_Dialog_DUIInitialize" message="$(string.task_CredUI_Dialog_DUIInitialize)" value="35005"/>
+     <task name="CredUI_Dialog_LoadStyleSheet" message="$(string.task_CredUI_Dialog_LoadStyleSheet)" value="35006"/>
+     <task name="CredUI_ModernDialog_Created" message="$(string.task_CredUI_ModernDialog_Created)" value="35007"/>
+     <task name="CredUI_ModernDialog_DUIInitialize" message="$(string.task_CredUI_ModernDialog_DUIInitialize)" value="35008"/>
+     <task name="CredUI_ModernDialog_LoadStyleSheet" message="$(string.task_CredUI_ModernDialog_LoadStyleSheet)" value="35009"/>
+     <task name="CredUI_EnumerationSync" message="$(string.task_CredUI_EnumerationSync)" value="35010"/>
+     <task name="Shutdown_ShutdownChoices_UserHasShutdownRights" message="$(string.task_Shutdown_ShutdownChoices_UserHasShutdownRights)" value="45001"/>
+     <task name="Shutdown_ShutdownFlyout_CreateAndShow" message="$(string.task_Shutdown_ShutdownFlyout_CreateAndShow)" value="45003"/>
+     <task name="Shutdown_ShutdownFlyout_PromptForReason" message="$(string.task_Shutdown_ShutdownFlyout_PromptForReason)" value="45005"/>
+     <task name="Shutdown_ShutdownFlyout_PromptForConfirmation" message="$(string.task_Shutdown_ShutdownFlyout_PromptForConfirmation)" value="45007"/>
+     <task name="Shutdown_ShutdownFlyout_InitiatePowerTransition" message="$(string.task_Shutdown_ShutdownFlyout_InitiatePowerTransition)" value="45009"/>
+     <task name="Shutdown_SlideToShutDownScreen_Initialize" message="$(string.task_Shutdown_SlideToShutDownScreen_Initialize)" value="45011"/>
+     <task name="Shutdown_SlideToShutDownScreen_ShowModal" message="$(string.task_Shutdown_SlideToShutDownScreen_ShowModal)" value="45013"/>
+     <task name="Shutdown_SlideToShutDownScreen_SelfRevealAnimation" message="$(string.task_Shutdown_SlideToShutDownScreen_SelfRevealAnimation)" value="45015"/>
+     <task name="Shutdown_SlideToShutDownScreen_Dismiss" message="$(string.task_Shutdown_SlideToShutDownScreen_Dismiss)" value="45017"/>
+     <task name="Shutdown_SlideToShutDownScreen_Timeout" message="$(string.task_Shutdown_SlideToShutDownScreen_Timeout)" value="45019"/>
+     <task name="CredentialProviderUser_EnumerateLogonUsers" message="$(string.task_CredentialProviderUser_EnumerateLogonUsers)" value="55001"/>
+     <task name="CredentialProviderUser_EnumerateLastLoggedOnUser" message="$(string.task_CredentialProviderUser_EnumerateLastLoggedOnUser)" value="55002"/>
+     <task name="CredentialProviderUser_EnumerateAutoLogonUser" message="$(string.task_CredentialProviderUser_EnumerateAutoLogonUser)" value="55003"/>
+     <task name="CredentialProviderUser_EnumerateInSessionUser" message="$(string.task_CredentialProviderUser_EnumerateInSessionUser)" value="55004"/>
+     <task name="CredentialProviderUser_EnumerateLocalAdmins" message="$(string.task_CredentialProviderUser_EnumerateLocalAdmins)" value="55006"/>
+     <task name="CredentialProviderUser_Init_CredentialProviderUserArray" message="$(string.task_CredentialProviderUser_Init_CredentialProviderUserArray)" value="55007"/>
+     <task name="CredentialProviderUser_CloneUserArray" message="$(string.task_CredentialProviderUser_CloneUserArray)" value="55008"/>
+     <task name="CredentialProviderUser_SetProviderFilter" message="$(string.task_CredentialProviderUser_SetProviderFilter)" value="55009"/>
+     <task name="CredentialProviderUser_GetAccountOptions" message="$(string.task_CredentialProviderUser_GetAccountOptions)" value="55010"/>
+     <task name="PicturePassword_LaunchEnrollmentUX" message="$(string.task_PicturePassword_LaunchEnrollmentUX)" value="61001"/>
+     <task name="PicturePassword_EnrollmentUXTeachingShown" message="$(string.task_PicturePassword_EnrollmentUXTeachingShown)" value="61002"/>
+     <task name="PicturePassword_EnrollmentUXImageConfirmationShown" message="$(string.task_PicturePassword_EnrollmentUXImageConfirmationShown)" value="61003"/>
+     <task name="PicturePassword_EnrollmentUXRelearnShown" message="$(string.task_PicturePassword_EnrollmentUXRelearnShown)" value="61004"/>
+     <task name="PicturePassword_EnrollmentUXGestureEntryShown" message="$(string.task_PicturePassword_EnrollmentUXGestureEntryShown)" value="61005"/>
+     <task name="PicturePassword_EnrollmentUXGestureConfirmationShown" message="$(string.task_PicturePassword_EnrollmentUXGestureConfirmationShown)" value="61006"/>
+     <task name="PicturePassword_EnrollmentUXEnrollmentConfirmationShown" message="$(string.task_PicturePassword_EnrollmentUXEnrollmentConfirmationShown)" value="61007"/>
+     <task name="PicturePassword_EnrollmentUXErrorShown" message="$(string.task_PicturePassword_EnrollmentUXErrorShown)" value="61008"/>
+     <task name="PicturePassword_RenderFeedback" message="$(string.task_PicturePassword_RenderFeedback)" value="61009"/>
+     <task name="PicturePassword_FeedbackVisible" message="$(string.task_PicturePassword_FeedbackVisible)" value="61010"/>
+     <task name="PicturePassword_SubmitEnrollmentToSystem" message="$(string.task_PicturePassword_SubmitEnrollmentToSystem)" value="61011"/>
+     <task name="PicturePassword_SanitizeImage" message="$(string.task_PicturePassword_SanitizeImage)" value="61012"/>
+     <task name="PicturePassword_EnrollmentHandlerCreate" message="$(string.task_PicturePassword_EnrollmentHandlerCreate)" value="61013"/>
+     <task name="PicturePassword_EnrollmentHandlerGetEnrollmentStatus" message="$(string.task_PicturePassword_EnrollmentHandlerGetEnrollmentStatus)" value="61014"/>
+     <task name="PicturePassword_EnrollmentHandlerGetEnrollmentGestures" message="$(string.task_PicturePassword_EnrollmentHandlerGetEnrollmentGestures)" value="61015"/>
+     <task name="PicturePassword_EnrollmentHandlerSetEnrollment" message="$(string.task_PicturePassword_EnrollmentHandlerSetEnrollment)" value="61016"/>
+     <task name="PicturePassword_EnrollmentHandlerClearEnrollment" message="$(string.task_PicturePassword_EnrollmentHandlerClearEnrollment)" value="61017"/>
+     <task name="PicturePassword_CredentialCreate" message="$(string.task_PicturePassword_CredentialCreate)" value="61018"/>
+     <task name="PicturePassword_CredentialSelected" message="$(string.task_PicturePassword_CredentialSelected)" value="61019"/>
+     <task name="PicturePassword_CredentialDeselected" message="$(string.task_PicturePassword_CredentialDeselected)" value="61020"/>
+     <task name="PicturePassword_CredentialSetSubmitData" message="$(string.task_PicturePassword_CredentialSetSubmitData)" value="61021"/>
+     <task name="PicturePassword_CredentialGetSerialization" message="$(string.task_PicturePassword_CredentialGetSerialization)" value="61022"/>
+     <task name="PicturePassword_SyncedImageLoading" message="$(string.task_PicturePassword_SyncedImageLoading)" value="61023"/>
+     <task name="PicturePassword_EnrollmentImageSavingForRoaming" message="$(string.task_PicturePassword_EnrollmentImageSavingForRoaming)" value="61024"/>
+     <task name="PicturePassword_SyncedImageSelected" message="$(string.task_PicturePassword_SyncedImageSelected)" value="61025"/>
+     <task name="PicturePassword_CheckRoamingImageAvailable" message="$(string.task_PicturePassword_CheckRoamingImageAvailable)" value="61026"/>
+     <task name="LockScreenCall_AcceptCall" message="$(string.task_LockScreenCall_AcceptCall)" value="64001"/>
+     <task name="LockScreenCall_QueueCall" message="$(string.task_LockScreenCall_QueueCall)" value="64003"/>
+     <task name="LockScreenCall_StartCall" message="$(string.task_LockScreenCall_StartCall)" value="64005"/>
+     <task name="LockScreenCall_EndCall" message="$(string.task_LockScreenCall_EndCall)" value="64007"/>
+     <task name="LockScreenCall_EvictCall" message="$(string.task_LockScreenCall_EvictCall)" value="64009"/>
+     <task name="LockScreenCallBroker_StartCall" message="$(string.task_LockScreenCallBroker_StartCall)" value="64501"/>
+     <task name="LockScreenCallBroker_EndCall" message="$(string.task_LockScreenCallBroker_EndCall)" value="64503"/>
+     <task name="LockScreenCallBroker_OnUnlocking" message="$(string.task_LockScreenCallBroker_OnUnlocking)" value="64505"/>
+     <task name="LockScreenCallBroker_EventSignaled" message="$(string.task_LockScreenCallBroker_EventSignaled)" value="64507"/>
+     <task name="LockScreenCallBroker_HostExited" message="$(string.task_LockScreenCallBroker_HostExited)" value="64508"/>
+     <task name="LockScreenCallBroker_AccessibleNameChanged" message="$(string.task_LockScreenCallBroker_AccessibleNameChanged)" value="64509"/>
+     <task name="LockScreenCallBroker_AppExited" message="$(string.task_LockScreenCallBroker_AppExited)" value="64510"/>
+     <task name="Booting_Animation_DoPearlSync" message="$(string.task_Booting_Animation_DoPearlSync)" value="65001"/>
+     <task name="Booting_Animation_Init" message="$(string.task_Booting_Animation_Init)" value="65002"/>
+     <task name="Booting_Animation_TimerProc" message="$(string.task_Booting_Animation_TimerProc)" value="65003"/>
+     <task name="Booting_Animation_LoadImg" message="$(string.task_Booting_Animation_LoadImg)" value="65004"/>
+     <task name="Booting_Animation_AnimationCompleteProc" message="$(string.task_Booting_Animation_AnimationCompleteProc)" value="65005"/>
+     <task name="Booting_Animation_PlaySoundThread" message="$(string.task_Booting_Animation_PlaySoundThread)" value="65006"/>
+     <task name="Booting_Animation_AnimCallbackObjLifetime" message="$(string.task_Booting_Animation_AnimCallbackObjLifetime)" value="65007"/>
+     <task name="Booting_Animation_InitAudioThread" message="$(string.task_Booting_Animation_InitAudioThread)" value="65008"/>
+     <task name="Booting_Animation_AttachToMMCSS" message="$(string.task_Booting_Animation_AttachToMMCSS)" value="65009"/>
+     <task name="Logon_LogonFrame_InitializeInputIndicator" message="$(string.task_Logon_LogonFrame_InitializeInputIndicator)" value="65010"/>
+     <task name="LockscreenNotifications_NotificationUpdated" message="$(string.task_LockscreenNotifications_NotificationUpdated)" value="65030"/>
+     <task name="LockscreenNotifications_NotificationArrived" message="$(string.task_LockscreenNotifications_NotificationArrived)" value="65031"/>
+    </tasks>
+    <maps>
+     <valueMap name="AutoLogonSettingRemovalReason">
+      <map value="0x0" message="$(string.map_AutoLogonSettingRemovalReasonDer Benutzer hat die Einrichtung des Computers abgeschlossen)"/>
+      <map value="0x1" message="$(string.map_AutoLogonSettingRemovalReasonSie ist Teil der automatischen Anmeldung nach einem Neustart)"/>
+      <map value="0x2" message="$(string.map_AutoLogonSettingRemovalReasonDas Kennwort für die automatische Anmeldung konnte nicht geladen werden)"/>
+      <map value="0x3" message="$(string.map_AutoLogonSettingRemovalReasonUnter ClearAutologon ist der Registrierungswert Enabled festgelegt)"/>
+      <map value="0x4" message="$(string.map_AutoLogonSettingRemovalReasonDie EAS-Richtlinie ist festgelegt)"/>
+      <map value="0x5" message="$(string.map_AutoLogonSettingRemovalReasonDer Registrierungswert AutoLogonCount hat Null erreicht)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="5001" symbol="task_0" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="5002" symbol="task_05002" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="5003" symbol="task_05003" version="0" task="task_0" level="win:Error"/>
+     <event value="5004" symbol="task_05004" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="5005" symbol="task_05005" version="0" task="task_0" level="win:Error"/>
+     <event value="5006" symbol="task_05006" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="5007" symbol="task_05007" version="0" task="task_0" level="win:Error" template="task_05007Args"/>
+     <event value="5008" symbol="task_05008" version="0" task="task_0" level="win:Warning" template="task_05007Args"/>
+     <event value="5009" symbol="task_05009" version="0" task="task_0" level="win:Error" template="task_05009Args"/>
+     <event value="5010" symbol="task_05010" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="5011" symbol="task_05011" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="5012" symbol="task_05012" version="0" task="task_0" level="win:Warning" template="task_05012Args"/>
+     <event value="5013" symbol="task_05013" version="0" task="task_0" level="win:Warning" template="task_05013Args"/>
+     <event value="15001" symbol="Common_UserList_TileEnumerationStarten" version="0" task="Common_UserList_TileEnumeration" opcode="win:Starten" level="win:Informational"/>
+     <event value="15002" symbol="Common_UserList_TileEnumerationBeenden" version="0" task="Common_UserList_TileEnumeration" opcode="win:Beenden" level="win:Informational"/>
+     <event value="15003" symbol="Common_GetMachineNameStarten" version="0" task="Common_GetMachineName" opcode="win:Starten" level="win:Informational"/>
+     <event value="15004" symbol="Common_GetMachineNameBeenden" version="0" task="Common_GetMachineName" opcode="win:Beenden" level="win:Informational"/>
+     <event value="15005" symbol="Common_GetMachineDomainNameStarten" version="0" task="Common_GetMachineDomainName" opcode="win:Starten" level="win:Informational"/>
+     <event value="15006" symbol="Common_GetMachineDomainNameBeenden" version="0" task="Common_GetMachineDomainName" opcode="win:Beenden" level="win:Informational"/>
+     <event value="15007" symbol="Common_GetBuiltInAdministratorStarten" version="0" task="Common_GetBuiltInAdministrator" opcode="win:Starten" level="win:Informational"/>
+     <event value="15008" symbol="Common_GetBuiltInAdministratorBeenden" version="0" task="Common_GetBuiltInAdministrator" opcode="win:Beenden" level="win:Informational"/>
+     <event value="15009" symbol="Common_GetInSessionUserStarten" version="0" task="Common_GetInSessionUser" opcode="win:Starten" level="win:Informational"/>
+     <event value="15010" symbol="Common_GetInSessionUserBeenden" version="0" task="Common_GetInSessionUser" opcode="win:Beenden" level="win:Informational"/>
+     <event value="15011" symbol="Common_GetFriendlyNameStarten" version="0" task="Common_GetFriendlyName" opcode="win:Starten" level="win:Informational"/>
+     <event value="15012" symbol="Common_GetFriendlyNameBeenden" version="0" task="Common_GetFriendlyName" opcode="win:Beenden" level="win:Informational"/>
+     <event value="15013" symbol="Common_Tile_FireSubmitEvent" version="0" task="Common_Tile_FireSubmitEvent" level="win:Informational"/>
+     <event value="15014" symbol="Common_CreateCredentialProvidersStarten" version="0" task="Common_CreateCredentialProviders" opcode="win:Starten" level="win:Informational"/>
+     <event value="15015" symbol="Common_CreateCredentialProvidersBeenden" version="0" task="Common_CreateCredentialProviders" opcode="win:Beenden" level="win:Informational"/>
+     <event value="15016" symbol="Common_AddCredProvider" version="0" task="Common_AddCredProvider" level="win:Informational" template="Common_AddCredProviderArgs"/>
+     <event value="15017" symbol="Common_CreateCredProviderThreadStarten" version="0" task="Common_CreateCredProviderThread" opcode="win:Starten" level="win:Informational"/>
+     <event value="15018" symbol="Common_CreateCredProviderThreadBeenden" version="0" task="Common_CreateCredProviderThread" opcode="win:Beenden" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="15019" symbol="Common_CredProviderThreadProcStarten" version="0" task="Common_CredProviderThreadProc" opcode="win:Starten" level="win:Informational"/>
+     <event value="15020" symbol="Common_CredProviderThreadProcBeenden" version="0" task="Common_CredProviderThreadProc" opcode="win:Beenden" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="15021" symbol="Common_CredProviderThreadDestroyStarten" version="0" task="Common_CredProviderThreadDestroy" opcode="win:Starten" level="win:Informational"/>
+     <event value="15022" symbol="Common_CredProviderThreadDestroyBeenden" version="0" task="Common_CredProviderThreadDestroy" opcode="win:Beenden" level="win:Informational"/>
+     <event value="15023" symbol="Common_SetUsageScenario" version="0" task="Common_SetUsageScenario" level="win:Informational" template="Common_SetUsageScenarioArgs"/>
+     <event value="15024" symbol="Common_SetSerialization" version="0" task="Common_SetSerialization" level="win:Informational" template="Common_SetSerializationArgs"/>
+     <event value="15025" symbol="Common_GetCredentialAt" version="0" task="Common_GetCredentialAt" level="win:Informational" template="Common_GetCredentialAtArgs"/>
+     <event value="15026" symbol="Common_GetCredentialCount" version="0" task="Common_GetCredentialCount" level="win:Informational" template="Common_GetCredentialCountArgs"/>
+     <event value="15027" symbol="Common_GetFieldDescriptorCount" version="0" task="Common_GetFieldDescriptorCount" level="win:Informational" template="Common_GetCredentialAtArgs"/>
+     <event value="15028" symbol="Common_Credential_GetUserSid" version="0" task="Common_Credential_GetUserSid" level="win:Informational" template="Common_Credential_GetUserSidArgs"/>
+     <event value="15029" symbol="Common_SetSelected" version="0" task="Common_SetSelected" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="15030" symbol="Common_SetDeSelected" version="0" task="Common_SetDeSelected" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="15031" symbol="Common_GetSerialization" version="0" task="Common_GetSerialization" level="win:Informational" template="Common_GetCredentialAtArgs"/>
+     <event value="15032" symbol="Common_ReportResult" version="0" task="Common_ReportResult" level="win:Informational" template="Common_ReportResultArgs"/>
+     <event value="15033" symbol="Common_RegisterEnumerationStarten" version="0" task="Common_RegisterEnumeration" opcode="win:Starten" level="win:Informational"/>
+     <event value="15034" symbol="Common_RegisterEnumerationBeenden" version="0" task="Common_RegisterEnumeration" opcode="win:Beenden" level="win:Informational"/>
+     <event value="15035" symbol="Common_CreateEnumerationSyncReply" version="0" task="Common_CreateEnumerationSyncReply" level="win:Informational"/>
+     <event value="15036" symbol="Common_StartCredProvsForUsageScenario" version="0" task="Common_StartCredProvsForUsageScenario" level="win:Informational" template="Common_GetCredentialAtArgs"/>
+     <event value="25001" symbol="Logon_ServerCallback_AbortStarten" version="0" task="Logon_ServerCallback_Abort" opcode="win:Starten" level="win:Informational"/>
+     <event value="25002" symbol="Logon_ServerCallback_AbortBeenden" version="0" task="Logon_ServerCallback_Abort" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25003" symbol="Logon_ServerCallback_DisplayLockedStarten" version="0" task="Logon_ServerCallback_DisplayLocked" opcode="win:Starten" level="win:Informational"/>
+     <event value="25004" symbol="Logon_ServerCallback_DisplayLockedBeenden" version="0" task="Logon_ServerCallback_DisplayLocked" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25005" symbol="Logon_ServerCallback_DisplayMessageStarten" version="0" task="Logon_ServerCallback_DisplayMessage" opcode="win:Starten" level="win:Informational"/>
+     <event value="25006" symbol="Logon_ServerCallback_DisplayMessageBeenden" version="0" task="Logon_ServerCallback_DisplayMessage" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25007" symbol="Logon_ServerCallback_DisplayRequestCredentialsErrorStarten" version="0" task="Logon_ServerCallback_DisplayRequestCredentialsError" opcode="win:Starten" level="win:Informational"/>
+     <event value="25008" symbol="Logon_ServerCallback_DisplayRequestCredentialsErrorBeenden" version="0" task="Logon_ServerCallback_DisplayRequestCredentialsError" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25009" symbol="Logon_ServerCallback_DisplaySecurityOptionsStarten" version="0" task="Logon_ServerCallback_DisplaySecurityOptions" opcode="win:Starten" level="win:Informational"/>
+     <event value="25010" symbol="Logon_ServerCallback_DisplaySecurityOptionsBeenden" version="0" task="Logon_ServerCallback_DisplaySecurityOptions" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25011" symbol="Logon_ServerCallback_DisplayStatusStarten" version="0" task="Logon_ServerCallback_DisplayStatus" opcode="win:Starten" level="win:Informational"/>
+     <event value="25012" symbol="Logon_ServerCallback_DisplayStatusBeenden" version="0" task="Logon_ServerCallback_DisplayStatus" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25013" symbol="Logon_ServerCallback_DisplayWelcomeStarten" version="0" task="Logon_ServerCallback_DisplayWelcome" opcode="win:Starten" level="win:Informational"/>
+     <event value="25014" symbol="Logon_ServerCallback_DisplayWelcomeBeenden" version="0" task="Logon_ServerCallback_DisplayWelcome" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25015" symbol="Logon_ServerCallback_ReportResultStarten" version="0" task="Logon_ServerCallback_ReportResult" opcode="win:Starten" level="win:Informational"/>
+     <event value="25016" symbol="Logon_ServerCallback_ReportResultBeenden" version="0" task="Logon_ServerCallback_ReportResult" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25017" symbol="Logon_ServerCallback_RequestCredentialsStarten" version="0" task="Logon_ServerCallback_RequestCredentials" opcode="win:Starten" level="win:Informational"/>
+     <event value="25018" symbol="Logon_ServerCallback_RequestCredentialsBeenden" version="0" task="Logon_ServerCallback_RequestCredentials" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25019" symbol="Logon_ServerCallback_ShutdownStarten" version="0" task="Logon_ServerCallback_Shutdown" opcode="win:Starten" level="win:Informational"/>
+     <event value="25020" symbol="Logon_ServerCallback_ShutdownBeenden" version="0" task="Logon_ServerCallback_Shutdown" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25021" symbol="Logon_ServerCallback_PromptForCredentialsStarten" version="0" task="Logon_ServerCallback_PromptForCredentials" opcode="win:Starten" level="win:Informational"/>
+     <event value="25022" symbol="Logon_ServerCallback_PromptForCredentialsBeenden" version="0" task="Logon_ServerCallback_PromptForCredentials" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25023" symbol="Logon_LogonFrame_OnSwitchUserStarten" version="0" task="Logon_LogonFrame_OnSwitchUser" opcode="win:Starten" level="win:Informational"/>
+     <event value="25024" symbol="Logon_LogonFrame_OnSwitchUserBeenden" version="0" task="Logon_LogonFrame_OnSwitchUser" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25025" symbol="Logon_LogonFrame_OnOtherTilesStarten" version="0" task="Logon_LogonFrame_OnOtherTiles" opcode="win:Starten" level="win:Informational"/>
+     <event value="25026" symbol="Logon_LogonFrame_OnOtherTilesBeenden" version="0" task="Logon_LogonFrame_OnOtherTiles" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25027" symbol="Logon_LogonFrame_OnGetEnumeratedTilesReplyStarten" version="0" task="Logon_LogonFrame_OnGetEnumeratedTilesReply" opcode="win:Starten" level="win:Informational"/>
+     <event value="25028" symbol="Logon_LogonFrame_OnGetEnumeratedTilesReplyBeenden" version="0" task="Logon_LogonFrame_OnGetEnumeratedTilesReply" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25029" symbol="Logon_LogonFrame_OnEnumerationSyncReplyStarten" version="0" task="Logon_LogonFrame_OnEnumerationSyncReply" opcode="win:Starten" level="win:Informational"/>
+     <event value="25030" symbol="Logon_LogonFrame_OnEnumerationSyncReplyBeenden" version="0" task="Logon_LogonFrame_OnEnumerationSyncReply" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25031" symbol="Logon_LogonFrame_OnSelectCredentialReplyStarten" version="0" task="Logon_LogonFrame_OnSelectCredentialReply" opcode="win:Starten" level="win:Informational"/>
+     <event value="25032" symbol="Logon_LogonFrame_OnSelectCredentialReplyBeenden" version="0" task="Logon_LogonFrame_OnSelectCredentialReply" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25033" symbol="Logon_LogonFrame_SetBackgroundGraphicsStarten" version="0" task="Logon_LogonFrame_SetBackgroundGraphics" opcode="win:Starten" level="win:Informational"/>
+     <event value="25034" symbol="Logon_LogonFrame_SetBackgroundGraphicsBeenden" version="0" task="Logon_LogonFrame_SetBackgroundGraphics" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25035" symbol="Logon_LogonFrame_InitializeFrameStarten" version="0" task="Logon_LogonFrame_InitializeFrame" opcode="win:Starten" level="win:Informational"/>
+     <event value="25036" symbol="Logon_LogonFrame_InitializeFrameBeenden" version="0" task="Logon_LogonFrame_InitializeFrame" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25037" symbol="Logon_LogonFrame_CreateStyleParserStarten" version="0" task="Logon_LogonFrame_CreateStyleParser" opcode="win:Starten" level="win:Informational"/>
+     <event value="25038" symbol="Logon_LogonFrame_CreateStyleParserBeenden" version="0" task="Logon_LogonFrame_CreateStyleParser" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25039" symbol="Logon_LogonFrame_CreateFrameElementStarten" version="0" task="Logon_LogonFrame_CreateFrameElement" opcode="win:Starten" level="win:Informational"/>
+     <event value="25040" symbol="Logon_LogonFrame_CreateFrameElementBeenden" version="0" task="Logon_LogonFrame_CreateFrameElement" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25041" symbol="Logon_LogonFrame_InitializeUserListsStarten" version="0" task="Logon_LogonFrame_InitializeUserLists" opcode="win:Starten" level="win:Informational"/>
+     <event value="25042" symbol="Logon_LogonFrame_InitializeUserListsBeenden" version="0" task="Logon_LogonFrame_InitializeUserLists" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25043" symbol="Logon_LogonFrame_BrandingLoadImageStarten" version="0" task="Logon_LogonFrame_BrandingLoadImage" opcode="win:Starten" level="win:Informational"/>
+     <event value="25044" symbol="Logon_LogonFrame_BrandingLoadImageBeenden" version="0" task="Logon_LogonFrame_BrandingLoadImage" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25047" symbol="Logon_LogonFrame_InitializeSoftKeyboardStarten" version="0" task="Logon_LogonFrame_InitializeSoftKeyboard" opcode="win:Starten" level="win:Informational"/>
+     <event value="25048" symbol="Logon_LogonFrame_InitializeSoftKeyboardBeenden" version="0" task="Logon_LogonFrame_InitializeSoftKeyboard" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25049" symbol="Logon_LogonFrame_WTSRegisterSessionNotificationStarten" version="0" task="Logon_LogonFrame_WTSRegisterSessionNotification" opcode="win:Starten" level="win:Informational"/>
+     <event value="25050" symbol="Logon_LogonFrame_WTSRegisterSessionNotificationBeenden" version="0" task="Logon_LogonFrame_WTSRegisterSessionNotification" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25051" symbol="Logon_AutoLogon_IsSingleUserNoPasswordStarten" version="0" task="Logon_AutoLogon_IsSingleUserNoPassword" opcode="win:Starten" level="win:Informational"/>
+     <event value="25052" symbol="Logon_AutoLogon_IsSingleUserNoPasswordBeenden" version="0" task="Logon_AutoLogon_IsSingleUserNoPassword" opcode="win:Beenden" level="win:Informational" template="Logon_AutoLogon_IsSingleUserNoPasswordBeendenArgs"/>
+     <event value="25053" symbol="Logon_AutoLogon_IsLocalNoPasswordUserStarten" version="0" task="Logon_AutoLogon_IsLocalNoPasswordUser" opcode="win:Starten" level="win:Informational"/>
+     <event value="25054" symbol="Logon_AutoLogon_IsSingleUserNoPasswordBeenden25054" version="0" task="Logon_AutoLogon_IsSingleUserNoPassword" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25055" symbol="Logon_ServerStartupStarten" version="0" task="Logon_ServerStartup" opcode="win:Starten" level="win:Informational"/>
+     <event value="25056" symbol="Logon_ServerStartupBeenden" version="0" task="Logon_ServerStartup" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25057" symbol="Logon_LaunchToReadyForInputStarten" version="0" task="Logon_LaunchToReadyForInput" opcode="win:Starten" level="win:Informational"/>
+     <event value="25058" symbol="Logon_LaunchToReadyForInputBeenden" version="0" task="Logon_LaunchToReadyForInput" opcode="win:Beenden" level="win:Informational" template="Logon_LaunchToReadyForInputBeendenArgs"/>
+     <event value="25059" symbol="Logon_CredentialsToExitStarten" version="0" task="Logon_CredentialsToExit" opcode="win:Starten" level="win:Informational"/>
+     <event value="25060" symbol="Logon_CredentialsToExitBeenden" version="0" task="Logon_CredentialsToExit" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25061" symbol="Logon_RequestCredentialsToReadyForCredentialsStarten" version="0" task="Logon_RequestCredentialsToReadyForCredentials" opcode="win:Starten" level="win:Informational"/>
+     <event value="25062" symbol="Logon_RequestCredentialsToReadyForCredentialsBeenden" version="0" task="Logon_RequestCredentialsToReadyForCredentials" opcode="win:Beenden" level="win:Informational" template="Logon_RequestCredentialsToReadyForCredentialsBeendenArgs"/>
+     <event value="25063" symbol="Logon_LaunchToAnimationCompleteStarten" version="0" task="Logon_LaunchToAnimationComplete" opcode="win:Starten" level="win:Informational"/>
+     <event value="25064" symbol="Logon_LaunchToAnimationCompleteBeenden" version="0" task="Logon_LaunchToAnimationComplete" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25065" symbol="LogonUI_PerfTrack_UserSwitchingBeenden" version="0" task="LogonUI_PerfTrack_UserSwitching" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25066" symbol="Logon_RequestCredentialsToCancelAfterEnumerateBeenden" version="0" task="Logon_RequestCredentialsToCancelAfterEnumerate" opcode="win:Beenden" level="win:Informational" template="Logon_RequestCredentialsToReadyForCredentialsBeendenArgs"/>
+     <event value="25068" symbol="Logon_LaunchToCancelAfterResumeBeenden" version="0" task="Logon_LaunchToCancelAfterResume" opcode="win:Beenden" level="win:Informational" template="Logon_LaunchToReadyForInputBeendenArgs"/>
+     <event value="25072" symbol="LogonUI_SubmitCredentialToExitStarten" version="0" task="LogonUI_SubmitCredentialToExit" opcode="win:Starten" level="win:Informational" keywords="keyword_200000000000"/>
+     <event value="25073" symbol="LogonUI_SubmitCredentialToExitBeenden" version="0" task="LogonUI_SubmitCredentialToExit" opcode="win:Beenden" level="win:Informational" template="LogonUI_SubmitCredentialToExitBeendenArgs"/>
+     <event value="25074" symbol="Logon_LogonFrame_OnGetSerializationReply" version="0" task="Logon_LogonFrame_OnGetSerializationReply" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="25075" symbol="Logon_LogonFrame_OnProviderCredentialsChanged" version="0" task="Logon_LogonFrame_OnProviderCredentialsChanged" level="win:Informational" template="Logon_AutoLogon_IsSingleUserNoPasswordBeendenArgs"/>
+     <event value="25076" symbol="Logon_LogonFrame_DisplayStatusMessage" version="0" task="Logon_LogonFrame_DisplayStatusMessage" level="win:Informational" template="Common_AddCredProviderArgs"/>
+     <event value="25077" symbol="Logon_LogonFrame_LogonDialogCallback" version="0" task="Logon_LogonFrame_LogonDialogCallback" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="25078" symbol="Logon_LogonFrame_DisplayLogonDialog" version="0" task="Logon_LogonFrame_DisplayLogonDialog" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="25079" symbol="Logon_Background_GetBackgroundForUser" version="0" task="Logon_Background_GetBackgroundForUser" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="25080" symbol="Logon_Background_ShowUserBackground" version="0" task="Logon_Background_ShowUserBackground" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="25082" symbol="Logon_AccessPage_LoadBackgroundImageStarten" version="0" task="Logon_AccessPage_LoadBackgroundImage" opcode="win:Starten" level="win:Informational"/>
+     <event value="25083" symbol="Logon_AccessPage_LoadBackgroundImageBeenden" version="0" task="Logon_AccessPage_LoadBackgroundImage" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25084" symbol="Logon_AutoLogon_QueryAutoLogon_Info" version="0" task="Logon_AutoLogon_QueryAutoLogon_Info" level="win:Informational" template="Logon_AutoLogon_QueryAutoLogon_InfoArgs"/>
+     <event value="25085" symbol="Logon_AutoLogon_IgnoreAutoLogonMode_Info" version="0" task="Logon_AutoLogon_IgnoreAutoLogonMode_Info" level="win:Informational"/>
+     <event value="25087" symbol="Logon_BSDR_InitializeStarten" version="0" task="Logon_BSDR_Initialize" opcode="win:Starten" level="win:Informational"/>
+     <event value="25088" symbol="Logon_BSDR_InitializeBeenden" version="0" task="Logon_BSDR_Initialize" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25089" symbol="Logon_BSDR_Shown" version="0" task="Logon_BSDR_Shown" level="win:Informational"/>
+     <event value="25090" symbol="Logon_BSDR_AddApplicationStarten" version="0" task="Logon_BSDR_AddApplication" opcode="win:Starten" level="win:Informational" template="Common_SetUsageScenarioArgs"/>
+     <event value="25091" symbol="Logon_BSDR_AddApplicationBeenden" version="0" task="Logon_BSDR_AddApplication" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25093" symbol="Logon_BSDR_RemoveApplicationStarten" version="0" task="Logon_BSDR_RemoveApplication" opcode="win:Starten" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="25094" symbol="Logon_BSDR_RemoveApplicationBeenden" version="0" task="Logon_BSDR_RemoveApplication" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25095" symbol="LogonUI_SubmitCredentialToExitBeenden25095" version="0" task="LogonUI_SubmitCredentialToExit" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25096" symbol="LogonUI_PerfTrack_LockBeenden" version="0" task="LogonUI_PerfTrack_Lock" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25097" symbol="Logon_LanguageProfile_SwitchInputMethodsStarten" version="0" task="Logon_LanguageProfile_SwitchInputMethods" opcode="win:Starten" level="win:Informational"/>
+     <event value="25098" symbol="Logon_LanguageProfile_SwitchInputMethodsBeenden" version="0" task="Logon_LanguageProfile_SwitchInputMethods" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25099" symbol="Logon_AccessPage_CancelFirstRunTasksStarten" version="0" task="Logon_AccessPage_CancelFirstRunTasks" opcode="win:Starten" level="win:Informational"/>
+     <event value="25100" symbol="Logon_AccessPage_CancelFirstRunTasksBeenden" version="0" task="Logon_AccessPage_CancelFirstRunTasks" opcode="win:Beenden" level="win:Informational" template="Logon_AccessPage_CancelFirstRunTasksBeendenArgs"/>
+     <event value="25101" symbol="Logon_AccessPage_CancelFirstRunTasks" version="0" task="Logon_AccessPage_CancelFirstRunTasks" level="win:Informational" template="task_05012Args"/>
+     <event value="25102" symbol="Logon_AccessPage_TriggerFirstRunTasksStarten" version="0" task="Logon_AccessPage_TriggerFirstRunTasks" opcode="win:Starten" level="win:Informational"/>
+     <event value="25103" symbol="Logon_AccessPage_TriggerFirstRunTasksBeenden" version="0" task="Logon_AccessPage_TriggerFirstRunTasks" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25104" symbol="Logon_AccessPage_WaitForFirstRunTasksStarten" version="0" task="Logon_AccessPage_WaitForFirstRunTasks" opcode="win:Starten" level="win:Informational"/>
+     <event value="25105" symbol="Logon_AccessPage_WaitForFirstRunTasksBeenden" version="0" task="Logon_AccessPage_WaitForFirstRunTasks" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25106" symbol="Logon_BackButtonNotificationFlyoutStarten" version="0" task="Logon_BackButtonNotificationFlyout" opcode="win:Starten" level="win:Informational"/>
+     <event value="25107" symbol="Logon_BackButtonNotificationFlyoutBeenden" version="0" task="Logon_BackButtonNotificationFlyout" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25108" symbol="Logon_AccessPage_UnlockStarten" version="0" task="Logon_AccessPage_Unlock" opcode="win:Starten" level="win:Informational"/>
+     <event value="25109" symbol="Logon_AccessPage_UnlockBeenden" version="0" task="Logon_AccessPage_Unlock" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25110" symbol="Logon_AccessPage_LockStarten" version="0" task="Logon_AccessPage_Lock" opcode="win:Starten" level="win:Informational"/>
+     <event value="25111" symbol="Logon_AccessPage_LockBeenden" version="0" task="Logon_AccessPage_Lock" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25112" symbol="Logon_AccessPage_Lock" version="0" task="Logon_AccessPage_Lock" level="win:Informational"/>
+     <event value="25113" symbol="Logon_AccessPage_Camera_ControlCreationStarten" version="0" task="Logon_AccessPage_Camera_ControlCreation" opcode="win:Starten" level="win:Informational" template="Logon_AccessPage_Camera_ControlCreationStartenArgs"/>
+     <event value="25114" symbol="Logon_AccessPage_Camera_ControlCreationBeenden" version="0" task="Logon_AccessPage_Camera_ControlCreation" opcode="win:Beenden" level="win:Informational" template="Logon_AccessPage_Camera_ControlCreationBeendenArgs"/>
+     <event value="25115" symbol="Logon_AccessPage_Camera_ViewfinderInitializationStarten" version="0" task="Logon_AccessPage_Camera_ViewfinderInitialization" opcode="win:Starten" level="win:Informational"/>
+     <event value="25116" symbol="Logon_AccessPage_Camera_ViewfinderInitializationBeenden" version="0" task="Logon_AccessPage_Camera_ViewfinderInitialization" opcode="win:Beenden" level="win:Informational" template="Logon_AccessPage_Camera_ControlCreationBeendenArgs"/>
+     <event value="25117" symbol="Logon_AccessPage_Camera_ActiveDurationStarten" version="0" task="Logon_AccessPage_Camera_ActiveDuration" opcode="win:Starten" level="win:Informational"/>
+     <event value="25118" symbol="Logon_AccessPage_Camera_ActiveDurationBeenden" version="0" task="Logon_AccessPage_Camera_ActiveDuration" opcode="win:Beenden" level="win:Informational"/>
+     <event value="25119" symbol="Logon_AccessPage_Camera_ShutdownDurationStarten" version="0" task="Logon_AccessPage_Camera_ShutdownDuration" opcode="win:Starten" level="win:Informational"/>
+     <event value="25120" symbol="Logon_AccessPage_Camera_ShutdownDurationBeenden" version="0" task="Logon_AccessPage_Camera_ShutdownDuration" opcode="win:Beenden" level="win:Informational"/>
+     <event value="35001" symbol="CredUI_Prompt_Called" version="0" task="CredUI_Prompt_Called" level="win:Informational"/>
+     <event value="35002" symbol="CredUI_Dialog_CreatedStarten" version="0" task="CredUI_Dialog_Created" opcode="win:Starten" level="win:Informational"/>
+     <event value="35003" symbol="CredUI_Dialog_CreatedBeenden" version="0" task="CredUI_Dialog_Created" opcode="win:Beenden" level="win:Informational"/>
+     <event value="35004" symbol="CredUI_UserList_TileEnumeration" version="0" task="CredUI_UserList_TileEnumeration" level="win:Informational"/>
+     <event value="35005" symbol="CredUI_Dialog_Destroyed" version="0" task="CredUI_Dialog_Destroyed" level="win:Informational"/>
+     <event value="35006" symbol="CredUI_Dialog_DUIInitializeStarten" version="0" task="CredUI_Dialog_DUIInitialize" opcode="win:Starten" level="win:Informational"/>
+     <event value="35007" symbol="CredUI_Dialog_DUIInitializeBeenden" version="0" task="CredUI_Dialog_DUIInitialize" opcode="win:Beenden" level="win:Informational"/>
+     <event value="35008" symbol="CredUI_Dialog_LoadStyleSheetStarten" version="0" task="CredUI_Dialog_LoadStyleSheet" opcode="win:Starten" level="win:Informational"/>
+     <event value="35009" symbol="CredUI_Dialog_LoadStyleSheetBeenden" version="0" task="CredUI_Dialog_LoadStyleSheet" opcode="win:Beenden" level="win:Informational"/>
+     <event value="35010" symbol="CredUI_ModernDialog_CreatedStarten" version="0" task="CredUI_ModernDialog_Created" opcode="win:Starten" level="win:Informational"/>
+     <event value="35011" symbol="CredUI_ModernDialog_CreatedBeenden" version="0" task="CredUI_ModernDialog_Created" opcode="win:Beenden" level="win:Informational"/>
+     <event value="35012" symbol="CredUI_ModernDialog_DUIInitializeStarten" version="0" task="CredUI_ModernDialog_DUIInitialize" opcode="win:Starten" level="win:Informational"/>
+     <event value="35013" symbol="CredUI_ModernDialog_DUIInitializeBeenden" version="0" task="CredUI_ModernDialog_DUIInitialize" opcode="win:Beenden" level="win:Informational"/>
+     <event value="35014" symbol="CredUI_ModernDialog_LoadStyleSheetStarten" version="0" task="CredUI_ModernDialog_LoadStyleSheet" opcode="win:Starten" level="win:Informational"/>
+     <event value="35015" symbol="CredUI_ModernDialog_LoadStyleSheetBeenden" version="0" task="CredUI_ModernDialog_LoadStyleSheet" opcode="win:Beenden" level="win:Informational"/>
+     <event value="35016" symbol="CredUI_EnumerationSyncBeenden" version="0" task="CredUI_EnumerationSync" opcode="win:Beenden" level="win:Informational"/>
+     <event value="45001" symbol="Shutdown_ShutdownChoices_UserHasShutdownRightsStarten" version="0" task="Shutdown_ShutdownChoices_UserHasShutdownRights" opcode="win:Starten" level="win:Informational"/>
+     <event value="45002" symbol="Shutdown_ShutdownChoices_UserHasShutdownRightsBeenden" version="0" task="Shutdown_ShutdownChoices_UserHasShutdownRights" opcode="win:Beenden" level="win:Informational"/>
+     <event value="45003" symbol="Shutdown_ShutdownFlyout_CreateAndShowStarten" version="0" task="Shutdown_ShutdownFlyout_CreateAndShow" opcode="win:Starten" level="win:Informational"/>
+     <event value="45004" symbol="Shutdown_ShutdownFlyout_CreateAndShowBeenden" version="0" task="Shutdown_ShutdownFlyout_CreateAndShow" opcode="win:Beenden" level="win:Informational"/>
+     <event value="45005" symbol="Shutdown_ShutdownFlyout_PromptForReasonStarten" version="0" task="Shutdown_ShutdownFlyout_PromptForReason" opcode="win:Starten" level="win:Informational"/>
+     <event value="45006" symbol="Shutdown_ShutdownFlyout_PromptForReasonBeenden" version="0" task="Shutdown_ShutdownFlyout_PromptForReason" opcode="win:Beenden" level="win:Informational"/>
+     <event value="45007" symbol="Shutdown_ShutdownFlyout_PromptForConfirmationStarten" version="0" task="Shutdown_ShutdownFlyout_PromptForConfirmation" opcode="win:Starten" level="win:Informational"/>
+     <event value="45008" symbol="Shutdown_ShutdownFlyout_PromptForConfirmationBeenden" version="0" task="Shutdown_ShutdownFlyout_PromptForConfirmation" opcode="win:Beenden" level="win:Informational"/>
+     <event value="45009" symbol="Shutdown_ShutdownFlyout_InitiatePowerTransitionStarten" version="0" task="Shutdown_ShutdownFlyout_InitiatePowerTransition" opcode="win:Starten" level="win:Informational"/>
+     <event value="45010" symbol="Shutdown_ShutdownFlyout_InitiatePowerTransitionBeenden" version="0" task="Shutdown_ShutdownFlyout_InitiatePowerTransition" opcode="win:Beenden" level="win:Informational"/>
+     <event value="45011" symbol="Shutdown_SlideToShutDownScreen_InitializeStarten" version="0" task="Shutdown_SlideToShutDownScreen_Initialize" opcode="win:Starten" level="win:Informational"/>
+     <event value="45012" symbol="Shutdown_SlideToShutDownScreen_InitializeBeenden" version="0" task="Shutdown_SlideToShutDownScreen_Initialize" opcode="win:Beenden" level="win:Informational"/>
+     <event value="45013" symbol="Shutdown_SlideToShutDownScreen_ShowModalStarten" version="0" task="Shutdown_SlideToShutDownScreen_ShowModal" opcode="win:Starten" level="win:Informational" template="Logon_AutoLogon_IsSingleUserNoPasswordBeendenArgs"/>
+     <event value="45014" symbol="Shutdown_SlideToShutDownScreen_ShowModalBeenden" version="0" task="Shutdown_SlideToShutDownScreen_ShowModal" opcode="win:Beenden" level="win:Informational"/>
+     <event value="45015" symbol="Shutdown_SlideToShutDownScreen_SelfRevealAnimationStarten" version="0" task="Shutdown_SlideToShutDownScreen_SelfRevealAnimation" opcode="win:Starten" level="win:Informational"/>
+     <event value="45016" symbol="Shutdown_SlideToShutDownScreen_SelfRevealAnimationBeenden" version="0" task="Shutdown_SlideToShutDownScreen_SelfRevealAnimation" opcode="win:Beenden" level="win:Informational"/>
+     <event value="45017" symbol="Shutdown_SlideToShutDownScreen_DismissStarten" version="0" task="Shutdown_SlideToShutDownScreen_Dismiss" opcode="win:Starten" level="win:Informational"/>
+     <event value="45018" symbol="Shutdown_SlideToShutDownScreen_DismissBeenden" version="0" task="Shutdown_SlideToShutDownScreen_Dismiss" opcode="win:Beenden" level="win:Informational"/>
+     <event value="45019" symbol="Shutdown_SlideToShutDownScreen_Timeout" version="0" task="Shutdown_SlideToShutDownScreen_Timeout" level="win:Informational"/>
+     <event value="55001" symbol="CredentialProviderUser_EnumerateLogonUsersStarten" version="0" task="CredentialProviderUser_EnumerateLogonUsers" opcode="win:Starten" level="win:Informational"/>
+     <event value="55002" symbol="CredentialProviderUser_EnumerateLogonUsersBeenden" version="0" task="CredentialProviderUser_EnumerateLogonUsers" opcode="win:Beenden" level="win:Informational"/>
+     <event value="55003" symbol="CredentialProviderUser_EnumerateLastLoggedOnUserStarten" version="0" task="CredentialProviderUser_EnumerateLastLoggedOnUser" opcode="win:Starten" level="win:Informational"/>
+     <event value="55004" symbol="CredentialProviderUser_EnumerateLastLoggedOnUserBeenden" version="0" task="CredentialProviderUser_EnumerateLastLoggedOnUser" opcode="win:Beenden" level="win:Informational"/>
+     <event value="55005" symbol="CredentialProviderUser_EnumerateAutoLogonUserStarten" version="0" task="CredentialProviderUser_EnumerateAutoLogonUser" opcode="win:Starten" level="win:Informational"/>
+     <event value="55006" symbol="CredentialProviderUser_EnumerateAutoLogonUserBeenden" version="0" task="CredentialProviderUser_EnumerateAutoLogonUser" opcode="win:Beenden" level="win:Informational"/>
+     <event value="55007" symbol="CredentialProviderUser_EnumerateInSessionUserStarten" version="0" task="CredentialProviderUser_EnumerateInSessionUser" opcode="win:Starten" level="win:Informational"/>
+     <event value="55008" symbol="CredentialProviderUser_EnumerateInSessionUserBeenden" version="0" task="CredentialProviderUser_EnumerateInSessionUser" opcode="win:Beenden" level="win:Informational"/>
+     <event value="55009" symbol="CredentialProviderUser_EnumerateLocalAdminsStarten" version="0" task="CredentialProviderUser_EnumerateLocalAdmins" opcode="win:Starten" level="win:Informational"/>
+     <event value="55010" symbol="CredentialProviderUser_EnumerateLocalAdminsBeenden" version="0" task="CredentialProviderUser_EnumerateLocalAdmins" opcode="win:Beenden" level="win:Informational"/>
+     <event value="55011" symbol="CredentialProviderUser_Init_CredentialProviderUserArrayStarten" version="0" task="CredentialProviderUser_Init_CredentialProviderUserArray" opcode="win:Starten" level="win:Informational"/>
+     <event value="55012" symbol="CredentialProviderUser_Init_CredentialProviderUserArrayBeenden" version="0" task="CredentialProviderUser_Init_CredentialProviderUserArray" opcode="win:Beenden" level="win:Informational"/>
+     <event value="55013" symbol="CredentialProviderUser_CloneUserArray" version="0" task="CredentialProviderUser_CloneUserArray" level="win:Informational" template="task_05009Args"/>
+     <event value="55014" symbol="CredentialProviderUser_SetProviderFilter" version="0" task="CredentialProviderUser_SetProviderFilter" level="win:Informational" template="task_05009Args"/>
+     <event value="55015" symbol="CredentialProviderUser_GetAccountOptions" version="0" task="CredentialProviderUser_GetAccountOptions" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="61001" symbol="PicturePassword_LaunchEnrollmentUX" version="0" task="PicturePassword_LaunchEnrollmentUX" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="61002" symbol="PicturePassword_EnrollmentUXTeachingShown" version="0" task="PicturePassword_EnrollmentUXTeachingShown" level="win:Informational"/>
+     <event value="61003" symbol="PicturePassword_EnrollmentUXImageConfirmationShown" version="0" task="PicturePassword_EnrollmentUXImageConfirmationShown" level="win:Informational"/>
+     <event value="61004" symbol="PicturePassword_EnrollmentUXRelearnShown" version="0" task="PicturePassword_EnrollmentUXRelearnShown" level="win:Informational"/>
+     <event value="61005" symbol="PicturePassword_EnrollmentUXGestureEntryShown" version="0" task="PicturePassword_EnrollmentUXGestureEntryShown" level="win:Informational"/>
+     <event value="61006" symbol="PicturePassword_EnrollmentUXGestureConfirmationShown" version="0" task="PicturePassword_EnrollmentUXGestureConfirmationShown" level="win:Informational"/>
+     <event value="61007" symbol="PicturePassword_EnrollmentUXEnrollmentConfirmationShown" version="0" task="PicturePassword_EnrollmentUXEnrollmentConfirmationShown" level="win:Informational"/>
+     <event value="61008" symbol="PicturePassword_EnrollmentUXErrorShown" version="0" task="PicturePassword_EnrollmentUXErrorShown" level="win:Informational"/>
+     <event value="61009" symbol="PicturePassword_RenderFeedbackStarten" version="0" task="PicturePassword_RenderFeedback" opcode="win:Starten" level="win:Informational"/>
+     <event value="61010" symbol="PicturePassword_RenderFeedbackBeenden" version="0" task="PicturePassword_RenderFeedback" opcode="win:Beenden" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="61011" symbol="PicturePassword_FeedbackVisibleStarten" version="0" task="PicturePassword_FeedbackVisible" opcode="win:Starten" level="win:Informational"/>
+     <event value="61012" symbol="PicturePassword_FeedbackVisibleBeenden" version="0" task="PicturePassword_FeedbackVisible" opcode="win:Beenden" level="win:Informational"/>
+     <event value="61013" symbol="PicturePassword_SubmitEnrollmentToSystemStarten" version="0" task="PicturePassword_SubmitEnrollmentToSystem" opcode="win:Starten" level="win:Informational"/>
+     <event value="61014" symbol="PicturePassword_SubmitEnrollmentToSystemBeenden" version="0" task="PicturePassword_SubmitEnrollmentToSystem" opcode="win:Beenden" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="61015" symbol="PicturePassword_SanitizeImageStarten" version="0" task="PicturePassword_SanitizeImage" opcode="win:Starten" level="win:Informational"/>
+     <event value="61016" symbol="PicturePassword_SanitizeImageBeenden" version="0" task="PicturePassword_SanitizeImage" opcode="win:Beenden" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="61017" symbol="PicturePassword_EnrollmentHandlerCreate" version="0" task="PicturePassword_EnrollmentHandlerCreate" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="61018" symbol="PicturePassword_EnrollmentHandlerGetEnrollmentStatusStarten" version="0" task="PicturePassword_EnrollmentHandlerGetEnrollmentStatus" opcode="win:Starten" level="win:Informational"/>
+     <event value="61019" symbol="PicturePassword_EnrollmentHandlerGetEnrollmentStatusBeenden" version="0" task="PicturePassword_EnrollmentHandlerGetEnrollmentStatus" opcode="win:Beenden" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="61020" symbol="PicturePassword_EnrollmentHandlerGetEnrollmentGesturesStarten" version="0" task="PicturePassword_EnrollmentHandlerGetEnrollmentGestures" opcode="win:Starten" level="win:Informational"/>
+     <event value="61021" symbol="PicturePassword_EnrollmentHandlerGetEnrollmentGesturesBeenden" version="0" task="PicturePassword_EnrollmentHandlerGetEnrollmentGestures" opcode="win:Beenden" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="61022" symbol="PicturePassword_EnrollmentHandlerSetEnrollmentStarten" version="0" task="PicturePassword_EnrollmentHandlerSetEnrollment" opcode="win:Starten" level="win:Informational"/>
+     <event value="61023" symbol="PicturePassword_EnrollmentHandlerSetEnrollmentBeenden" version="0" task="PicturePassword_EnrollmentHandlerSetEnrollment" opcode="win:Beenden" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="61024" symbol="PicturePassword_EnrollmentHandlerClearEnrollmentStarten" version="0" task="PicturePassword_EnrollmentHandlerClearEnrollment" opcode="win:Starten" level="win:Informational"/>
+     <event value="61025" symbol="PicturePassword_EnrollmentHandlerClearEnrollmentBeenden" version="0" task="PicturePassword_EnrollmentHandlerClearEnrollment" opcode="win:Beenden" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="61026" symbol="PicturePassword_CredentialCreate" version="0" task="PicturePassword_CredentialCreate" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="61027" symbol="PicturePassword_CredentialSelected" version="0" task="PicturePassword_CredentialSelected" level="win:Informational"/>
+     <event value="61028" symbol="PicturePassword_CredentialDeselected" version="0" task="PicturePassword_CredentialDeselected" level="win:Informational"/>
+     <event value="61029" symbol="PicturePassword_CredentialSetSubmitData" version="0" task="PicturePassword_CredentialSetSubmitData" level="win:Informational"/>
+     <event value="61030" symbol="PicturePassword_CredentialGetSerializationStarten" version="0" task="PicturePassword_CredentialGetSerialization" opcode="win:Starten" level="win:Informational"/>
+     <event value="61031" symbol="PicturePassword_CredentialGetSerializationBeenden" version="0" task="PicturePassword_CredentialGetSerialization" opcode="win:Beenden" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="61032" symbol="PicturePassword_SyncedImageLoadingStarten" version="0" task="PicturePassword_SyncedImageLoading" opcode="win:Starten" level="win:Informational"/>
+     <event value="61033" symbol="PicturePassword_SyncedImageLoadingBeenden" version="0" task="PicturePassword_SyncedImageLoading" opcode="win:Beenden" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="61034" symbol="PicturePassword_EnrollmentImageSavingForRoamingStarten" version="0" task="PicturePassword_EnrollmentImageSavingForRoaming" opcode="win:Starten" level="win:Informational"/>
+     <event value="61035" symbol="PicturePassword_EnrollmentImageSavingForRoamingBeenden" version="0" task="PicturePassword_EnrollmentImageSavingForRoaming" opcode="win:Beenden" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="61036" symbol="PicturePassword_SyncedImageSelected" version="0" task="PicturePassword_SyncedImageSelected" level="win:Informational"/>
+     <event value="61037" symbol="PicturePassword_CheckRoamingImageAvailable" version="0" task="PicturePassword_CheckRoamingImageAvailable" level="win:Informational" template="Common_CreateCredProviderThreadBeendenArgs"/>
+     <event value="64001" symbol="LockScreenCall_AcceptCallStarten" version="0" task="LockScreenCall_AcceptCall" opcode="win:Starten" level="win:Informational" template="Common_SetSerializationArgs"/>
+     <event value="64002" symbol="LockScreenCall_AcceptCallBeenden" version="0" task="LockScreenCall_AcceptCall" opcode="win:Beenden" level="win:Informational" template="LockScreenCall_AcceptCallBeendenArgs"/>
+     <event value="64003" symbol="LockScreenCall_QueueCallStarten" version="0" task="LockScreenCall_QueueCall" opcode="win:Starten" level="win:Informational" template="Common_SetSerializationArgs"/>
+     <event value="64004" symbol="LockScreenCall_QueueCallBeenden" version="0" task="LockScreenCall_QueueCall" opcode="win:Beenden" level="win:Informational" template="LockScreenCall_AcceptCallBeendenArgs"/>
+     <event value="64005" symbol="LockScreenCall_StartCallStarten" version="0" task="LockScreenCall_StartCall" opcode="win:Starten" level="win:Informational" template="LockScreenCall_StartCallStartenArgs"/>
+     <event value="64006" symbol="LockScreenCall_StartCallBeenden" version="0" task="LockScreenCall_StartCall" opcode="win:Beenden" level="win:Informational" template="LockScreenCall_AcceptCallBeendenArgs"/>
+     <event value="64007" symbol="LockScreenCall_EndCallStarten" version="0" task="LockScreenCall_EndCall" opcode="win:Starten" level="win:Informational" template="LockScreenCall_EndCallStartenArgs"/>
+     <event value="64008" symbol="LockScreenCall_EndCallBeenden" version="0" task="LockScreenCall_EndCall" opcode="win:Beenden" level="win:Informational" template="LockScreenCall_AcceptCallBeendenArgs"/>
+     <event value="64009" symbol="LockScreenCall_EvictCallStarten" version="0" task="LockScreenCall_EvictCall" opcode="win:Starten" level="win:Informational" template="LockScreenCall_EndCallStartenArgs"/>
+     <event value="64010" symbol="LockScreenCall_EvictCallBeenden" version="0" task="LockScreenCall_EvictCall" opcode="win:Beenden" level="win:Informational" template="LockScreenCall_AcceptCallBeendenArgs"/>
+     <event value="64501" symbol="LockScreenCallBroker_StartCallStarten" version="0" task="LockScreenCallBroker_StartCall" opcode="win:Starten" level="win:Informational" template="LockScreenCall_StartCallStartenArgs"/>
+     <event value="64502" symbol="LockScreenCallBroker_StartCallBeenden" version="0" task="LockScreenCallBroker_StartCall" opcode="win:Beenden" level="win:Informational" template="LockScreenCall_AcceptCallBeendenArgs"/>
+     <event value="64503" symbol="LockScreenCallBroker_EndCallStarten" version="0" task="LockScreenCallBroker_EndCall" opcode="win:Starten" level="win:Informational" template="LockScreenCall_EndCallStartenArgs"/>
+     <event value="64504" symbol="LockScreenCallBroker_EndCallBeenden" version="0" task="LockScreenCallBroker_EndCall" opcode="win:Beenden" level="win:Informational" template="LockScreenCall_AcceptCallBeendenArgs"/>
+     <event value="64505" symbol="LockScreenCallBroker_OnUnlockingStarten" version="0" task="LockScreenCallBroker_OnUnlocking" opcode="win:Starten" level="win:Informational" template="Common_SetSerializationArgs"/>
+     <event value="64506" symbol="LockScreenCallBroker_OnUnlockingBeenden" version="0" task="LockScreenCallBroker_OnUnlocking" opcode="win:Beenden" level="win:Informational" template="LockScreenCall_AcceptCallBeendenArgs"/>
+     <event value="64507" symbol="LockScreenCallBroker_EventSignaled" version="0" task="LockScreenCallBroker_EventSignaled" level="win:Informational" template="LockScreenCall_EndCallStartenArgs"/>
+     <event value="64508" symbol="LockScreenCallBroker_HostExited" version="0" task="LockScreenCallBroker_HostExited" level="win:Informational" template="LockScreenCall_EndCallStartenArgs"/>
+     <event value="64509" symbol="LockScreenCallBroker_AccessibleNameChanged" version="0" task="LockScreenCallBroker_AccessibleNameChanged" level="win:Informational" template="LockScreenCallBroker_AccessibleNameChangedArgs"/>
+     <event value="64510" symbol="LockScreenCallBroker_AppExited" version="0" task="LockScreenCallBroker_AppExited" level="win:Informational" template="LockScreenCall_EndCallStartenArgs"/>
+     <event value="65001" symbol="Booting_Animation_DoPearlSyncStarten" version="0" task="Booting_Animation_DoPearlSync" opcode="win:Starten" level="win:Informational"/>
+     <event value="65002" symbol="Booting_Animation_DoPearlSyncBeenden" version="0" task="Booting_Animation_DoPearlSync" opcode="win:Beenden" level="win:Informational"/>
+     <event value="65003" symbol="Booting_Animation_InitStarten" version="0" task="Booting_Animation_Init" opcode="win:Starten" level="win:Informational"/>
+     <event value="65004" symbol="Booting_Animation_InitBeenden" version="0" task="Booting_Animation_Init" opcode="win:Beenden" level="win:Informational"/>
+     <event value="65005" symbol="Booting_Animation_TimerProcStarten" version="0" task="Booting_Animation_TimerProc" opcode="win:Starten" level="win:Informational"/>
+     <event value="65006" symbol="Booting_Animation_TimerProcBeenden" version="0" task="Booting_Animation_TimerProc" opcode="win:Beenden" level="win:Informational"/>
+     <event value="65007" symbol="Booting_Animation_LoadImgStarten" version="0" task="Booting_Animation_LoadImg" opcode="win:Starten" level="win:Informational"/>
+     <event value="65008" symbol="Booting_Animation_LoadImgBeenden" version="0" task="Booting_Animation_LoadImg" opcode="win:Beenden" level="win:Informational"/>
+     <event value="65009" symbol="Booting_Animation_AnimationCompleteProcStarten" version="0" task="Booting_Animation_AnimationCompleteProc" opcode="win:Starten" level="win:Informational"/>
+     <event value="65010" symbol="Booting_Animation_AnimationCompleteProcBeenden" version="0" task="Booting_Animation_AnimationCompleteProc" opcode="win:Beenden" level="win:Informational"/>
+     <event value="65011" symbol="Booting_Animation_AnimCallbackObjLifetimeStarten" version="0" task="Booting_Animation_AnimCallbackObjLifetime" opcode="win:Starten" level="win:Informational"/>
+     <event value="65012" symbol="Booting_Animation_AnimCallbackObjLifetimeBeenden" version="0" task="Booting_Animation_AnimCallbackObjLifetime" opcode="win:Beenden" level="win:Informational"/>
+     <event value="65013" symbol="Booting_Animation_PlaySoundThreadStarten" version="0" task="Booting_Animation_PlaySoundThread" opcode="win:Starten" level="win:Informational"/>
+     <event value="65014" symbol="Booting_Animation_PlaySoundThreadBeenden" version="0" task="Booting_Animation_PlaySoundThread" opcode="win:Beenden" level="win:Informational"/>
+     <event value="65015" symbol="Booting_Animation_InitAudioThreadStarten" version="0" task="Booting_Animation_InitAudioThread" opcode="win:Starten" level="win:Informational"/>
+     <event value="65016" symbol="Booting_Animation_InitAudioThreadBeenden" version="0" task="Booting_Animation_InitAudioThread" opcode="win:Beenden" level="win:Informational"/>
+     <event value="65017" symbol="Booting_Animation_AttachToMMCSSStarten" version="0" task="Booting_Animation_AttachToMMCSS" opcode="win:Starten" level="win:Informational"/>
+     <event value="65018" symbol="Booting_Animation_AttachToMMCSSBeenden" version="0" task="Booting_Animation_AttachToMMCSS" opcode="win:Beenden" level="win:Informational"/>
+     <event value="65019" symbol="Logon_LogonFrame_InitializeInputIndicatorStarten" version="0" task="Logon_LogonFrame_InitializeInputIndicator" opcode="win:Starten" level="win:Informational"/>
+     <event value="65020" symbol="Logon_LogonFrame_InitializeInputIndicatorBeenden" version="0" task="Logon_LogonFrame_InitializeInputIndicator" opcode="win:Beenden" level="win:Informational"/>
+     <event value="65030" symbol="LockscreenNotifications_NotificationUpdatedStarten" version="0" task="LockscreenNotifications_NotificationUpdated" opcode="win:Starten" level="win:Informational" template="LockscreenNotifications_NotificationUpdatedStartenArgs"/>
+     <event value="65031" symbol="LockscreenNotifications_NotificationUpdatedBeenden" version="0" task="LockscreenNotifications_NotificationUpdated" opcode="win:Beenden" level="win:Informational"/>
+     <event value="65032" symbol="LockscreenNotifications_NotificationArrivedStarten" version="0" task="LockscreenNotifications_NotificationArrived" opcode="win:Starten" level="win:Informational" template="LockscreenNotifications_NotificationUpdatedStartenArgs"/>
+     <event value="65033" symbol="LockscreenNotifications_NotificationArrivedBeenden" version="0" task="LockscreenNotifications_NotificationArrived" opcode="win:Beenden" level="win:Informational"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="Error" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_05007Args">
+      <data name="Error" inType="win:UnicodeString"/>
+      <data name="DWORD1" inType="win:UInt32"/>
+      <data name="DWORD2" inType="win:UInt32"/>
+     </template>
+     <template tid="task_05009Args">
+      <data name="Error" inType="win:UnicodeString"/>
+      <data name="DWORD1" inType="win:UInt32"/>
+     </template>
+     <template tid="task_05012Args">
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_05013Args">
+      <data name="AutoLogonSettingRemovalReason" inType="win:UInt32" map="AutoLogonSettingRemovalReason"/>
+     </template>
+     <template tid="Common_AddCredProviderArgs">
+      <data name="message1" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Common_CreateCredProviderThreadBeendenArgs">
+      <data name="DWORD1" inType="win:UInt32"/>
+     </template>
+     <template tid="Common_SetUsageScenarioArgs">
+      <data name="message1" inType="win:UnicodeString"/>
+      <data name="DWORD1" inType="win:UInt32"/>
+     </template>
+     <template tid="Common_SetSerializationArgs">
+      <data name="message1" inType="win:UnicodeString"/>
+      <data name="message2" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Common_GetCredentialAtArgs">
+      <data name="DWORD1" inType="win:UInt32"/>
+      <data name="DWORD2" inType="win:UInt32"/>
+     </template>
+     <template tid="Common_GetCredentialCountArgs">
+      <data name="message1" inType="win:UnicodeString"/>
+      <data name="DWORD1" inType="win:UInt32"/>
+      <data name="DWORD2" inType="win:UInt32"/>
+      <data name="Boolean1" inType="win:Boolean"/>
+     </template>
+     <template tid="Common_Credential_GetUserSidArgs">
+      <data name="DWORD1" inType="win:UInt32"/>
+      <data name="message1" inType="win:UnicodeString"/>
+      <data name="message2" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Common_ReportResultArgs">
+      <data name="DWORD1" inType="win:UInt32"/>
+      <data name="DWORD2" inType="win:UInt32"/>
+      <data name="DWORD3" inType="win:UInt32"/>
+     </template>
+     <template tid="Logon_AutoLogon_IsSingleUserNoPasswordBeendenArgs">
+      <data name="Boolean1" inType="win:Boolean"/>
+     </template>
+     <template tid="Logon_LaunchToReadyForInputBeendenArgs">
+      <data name="ReadyForInputScenario" inType="win:UInt32"/>
+     </template>
+     <template tid="Logon_RequestCredentialsToReadyForCredentialsBeendenArgs">
+      <data name="CredProvUsageScenario" inType="win:UInt32"/>
+     </template>
+     <template tid="LogonUI_SubmitCredentialToExitBeendenArgs">
+      <data name="UserType" inType="win:UInt32"/>
+      <data name="CredProvCount" inType="win:UInt32"/>
+      <data name="IsLogonScenario" inType="win:UInt32"/>
+      <data name="IsFirstLogon" inType="win:UInt32"/>
+     </template>
+     <template tid="Logon_AutoLogon_QueryAutoLogon_InfoArgs">
+      <data name="DWORD1" inType="win:UInt32"/>
+      <data name="DWORD2" inType="win:UInt32"/>
+      <data name="DWORD3" inType="win:UInt32"/>
+      <data name="DWORD4" inType="win:UInt32"/>
+      <data name="DWORD5" inType="win:UInt32"/>
+     </template>
+     <template tid="Logon_AccessPage_CancelFirstRunTasksBeendenArgs">
+      <data name="OutstandingTasks" inType="win:UInt32"/>
+      <data name="TasksCancelled" inType="win:UInt32"/>
+     </template>
+     <template tid="Logon_AccessPage_Camera_ControlCreationStartenArgs">
+      <data name="InvokeObject" inType="win:UInt32"/>
+     </template>
+     <template tid="Logon_AccessPage_Camera_ControlCreationBeendenArgs">
+      <data name="Result" inType="win:UInt32"/>
+     </template>
+     <template tid="LockScreenCall_AcceptCallBeendenArgs">
+      <data name="HRESULT" inType="win:UInt32"/>
+     </template>
+     <template tid="LockScreenCall_StartCallStartenArgs">
+      <data name="guid" inType="win:GUID"/>
+      <data name="message1" inType="win:UnicodeString"/>
+      <data name="message2" inType="win:UnicodeString"/>
+     </template>
+     <template tid="LockScreenCall_EndCallStartenArgs">
+      <data name="guid" inType="win:GUID"/>
+     </template>
+     <template tid="LockScreenCallBroker_AccessibleNameChangedArgs">
+      <data name="guid" inType="win:GUID"/>
+      <data name="message" inType="win:UnicodeString"/>
+     </template>
+     <template tid="LockscreenNotifications_NotificationUpdatedStartenArgs">
+      <data name="NotificationType" inType="win:UInt32"/>
+      <data name="Operation" inType="win:UInt32"/>
+      <data name="AppId" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="de-DE">
+   <stringTable>
+    <string id="keyword_keyword_200000000000" value="keyword_200000000000"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_Common_UserList_TileEnumeration" value="Common_UserList_TileEnumeration"/>
+    <string id="task_Common_GetMachineName" value="Common_GetMachineName"/>
+    <string id="task_Common_GetMachineDomainName" value="Common_GetMachineDomainName"/>
+    <string id="task_Common_GetBuiltInAdministrator" value="Common_GetBuiltInAdministrator"/>
+    <string id="task_Common_GetInSessionUser" value="Common_GetInSessionUser"/>
+    <string id="task_Common_GetFriendlyName" value="Common_GetFriendlyName"/>
+    <string id="task_Common_Tile_FireSubmitEvent" value="Common_Tile_FireSubmitEvent"/>
+    <string id="task_Common_CreateCredentialProviders" value="Common_CreateCredentialProviders"/>
+    <string id="task_Common_AddCredProvider" value="Common_AddCredProvider"/>
+    <string id="task_Common_CreateCredProviderThread" value="Common_CreateCredProviderThread"/>
+    <string id="task_Common_CredProviderThreadProc" value="Common_CredProviderThreadProc"/>
+    <string id="task_Common_CredProviderThreadDestroy" value="Common_CredProviderThreadDestroy"/>
+    <string id="task_Common_SetUsageScenario" value="Common_SetUsageScenario"/>
+    <string id="task_Common_SetSerialization" value="Common_SetSerialization"/>
+    <string id="task_Common_GetCredentialAt" value="Common_GetCredentialAt"/>
+    <string id="task_Common_GetCredentialCount" value="Common_GetCredentialCount"/>
+    <string id="task_Common_GetFieldDescriptorCount" value="Common_GetFieldDescriptorCount"/>
+    <string id="task_Common_Credential_GetUserSid" value="Common_Credential_GetUserSid"/>
+    <string id="task_Common_SetSelected" value="Common_SetSelected"/>
+    <string id="task_Common_SetDeSelected" value="Common_SetDeSelected"/>
+    <string id="task_Common_GetSerialization" value="Common_GetSerialization"/>
+    <string id="task_Common_ReportResult" value="Common_ReportResult"/>
+    <string id="task_Common_RegisterEnumeration" value="Common_RegisterEnumeration"/>
+    <string id="task_Common_CreateEnumerationSyncReply" value="Common_CreateEnumerationSyncReply"/>
+    <string id="task_Common_StartCredProvsForUsageScenario" value="Common_StartCredProvsForUsageScenario"/>
+    <string id="task_Logon_ServerCallback_Abort" value="Logon_ServerCallback_Abort"/>
+    <string id="task_Logon_ServerCallback_DisplayLocked" value="Logon_ServerCallback_DisplayLocked"/>
+    <string id="task_Logon_ServerCallback_DisplayMessage" value="Logon_ServerCallback_DisplayMessage"/>
+    <string id="task_Logon_ServerCallback_DisplayRequestCredentialsError" value="Logon_ServerCallback_DisplayRequestCredentialsError"/>
+    <string id="task_Logon_ServerCallback_DisplaySecurityOptions" value="Logon_ServerCallback_DisplaySecurityOptions"/>
+    <string id="task_Logon_ServerCallback_DisplayStatus" value="Logon_ServerCallback_DisplayStatus"/>
+    <string id="task_Logon_ServerCallback_DisplayWelcome" value="Logon_ServerCallback_DisplayWelcome"/>
+    <string id="task_Logon_ServerCallback_ReportResult" value="Logon_ServerCallback_ReportResult"/>
+    <string id="task_Logon_ServerCallback_RequestCredentials" value="Logon_ServerCallback_RequestCredentials"/>
+    <string id="task_Logon_ServerCallback_Shutdown" value="Logon_ServerCallback_Shutdown"/>
+    <string id="task_Logon_ServerCallback_PromptForCredentials" value="Logon_ServerCallback_PromptForCredentials"/>
+    <string id="task_Logon_LogonFrame_OnSwitchUser" value="Logon_LogonFrame_OnSwitchUser"/>
+    <string id="task_Logon_LogonFrame_OnOtherTiles" value="Logon_LogonFrame_OnOtherTiles"/>
+    <string id="task_Logon_LogonFrame_OnGetEnumeratedTilesReply" value="Logon_LogonFrame_OnGetEnumeratedTilesReply"/>
+    <string id="task_Logon_LogonFrame_OnEnumerationSyncReply" value="Logon_LogonFrame_OnEnumerationSyncReply"/>
+    <string id="task_Logon_LogonFrame_OnSelectCredentialReply" value="Logon_LogonFrame_OnSelectCredentialReply"/>
+    <string id="task_Logon_LogonFrame_SetBackgroundGraphics" value="Logon_LogonFrame_SetBackgroundGraphics"/>
+    <string id="task_Logon_LogonFrame_InitializeFrame" value="Logon_LogonFrame_InitializeFrame"/>
+    <string id="task_Logon_LogonFrame_CreateStyleParser" value="Logon_LogonFrame_CreateStyleParser"/>
+    <string id="task_Logon_LogonFrame_CreateFrameElement" value="Logon_LogonFrame_CreateFrameElement"/>
+    <string id="task_Logon_LogonFrame_InitializeUserLists" value="Logon_LogonFrame_InitializeUserLists"/>
+    <string id="task_Logon_LogonFrame_BrandingLoadImage" value="Logon_LogonFrame_BrandingLoadImage"/>
+    <string id="task_Logon_LogonFrame_InitializeSoftKeyboard" value="Logon_LogonFrame_InitializeSoftKeyboard"/>
+    <string id="task_Logon_LogonFrame_WTSRegisterSessionNotification" value="Logon_LogonFrame_WTSRegisterSessionNotification"/>
+    <string id="task_Logon_AutoLogon_IsSingleUserNoPassword" value="Logon_AutoLogon_IsSingleUserNoPassword"/>
+    <string id="task_Logon_AutoLogon_IsLocalNoPasswordUser" value="Logon_AutoLogon_IsLocalNoPasswordUser"/>
+    <string id="task_Logon_ServerStartup" value="Logon_ServerStartup"/>
+    <string id="task_Logon_LaunchToReadyForInput" value="Logon_LaunchToReadyForInput"/>
+    <string id="task_Logon_CredentialsToExit" value="Logon_CredentialsToExit"/>
+    <string id="task_Logon_RequestCredentialsToReadyForCredentials" value="Logon_RequestCredentialsToReadyForCredentials"/>
+    <string id="task_Logon_LaunchToAnimationComplete" value="Logon_LaunchToAnimationComplete"/>
+    <string id="task_Logon_RequestCredentialsToCancelAfterEnumerate" value="Logon_RequestCredentialsToCancelAfterEnumerate"/>
+    <string id="task_Logon_LaunchToCancelAfterResume" value="Logon_LaunchToCancelAfterResume"/>
+    <string id="task_LogonUI_SubmitCredentialToExit" value="LogonUI_SubmitCredentialToExit"/>
+    <string id="task_LogonUI_PerfTrack_UserSwitching" value="LogonUI_PerfTrack_UserSwitching"/>
+    <string id="task_Logon_LogonFrame_OnGetSerializationReply" value="Logon_LogonFrame_OnGetSerializationReply"/>
+    <string id="task_Logon_LogonFrame_OnProviderCredentialsChanged" value="Logon_LogonFrame_OnProviderCredentialsChanged"/>
+    <string id="task_Logon_LogonFrame_DisplayStatusMessage" value="Logon_LogonFrame_DisplayStatusMessage"/>
+    <string id="task_Logon_LogonFrame_LogonDialogCallback" value="Logon_LogonFrame_LogonDialogCallback"/>
+    <string id="task_Logon_LogonFrame_DisplayLogonDialog" value="Logon_LogonFrame_DisplayLogonDialog"/>
+    <string id="task_Logon_Background_GetBackgroundForUser" value="Logon_Background_GetBackgroundForUser"/>
+    <string id="task_Logon_Background_ShowUserBackground" value="Logon_Background_ShowUserBackground"/>
+    <string id="task_Logon_AccessPage_LoadBackgroundImage" value="Logon_AccessPage_LoadBackgroundImage"/>
+    <string id="task_Logon_AutoLogon_QueryAutoLogon_Info" value="Logon_AutoLogon_QueryAutoLogon_Info"/>
+    <string id="task_Logon_AutoLogon_IgnoreAutoLogonMode_Info" value="Logon_AutoLogon_IgnoreAutoLogonMode_Info"/>
+    <string id="task_Logon_BSDR_Initialize" value="Logon_BSDR_Initialize"/>
+    <string id="task_Logon_BSDR_Shown" value="Logon_BSDR_Shown"/>
+    <string id="task_Logon_BSDR_AddApplication" value="Logon_BSDR_AddApplication"/>
+    <string id="task_Logon_BSDR_RemoveApplication" value="Logon_BSDR_RemoveApplication"/>
+    <string id="task_LogonUI_PerfTrack_Lock" value="LogonUI_PerfTrack_Lock"/>
+    <string id="task_Logon_LanguageProfile_SwitchInputMethods" value="Logon_LanguageProfile_SwitchInputMethods"/>
+    <string id="task_Logon_AccessPage_CancelFirstRunTasks" value="Logon_AccessPage_CancelFirstRunTasks"/>
+    <string id="task_Logon_AccessPage_TriggerFirstRunTasks" value="Logon_AccessPage_TriggerFirstRunTasks"/>
+    <string id="task_Logon_AccessPage_WaitForFirstRunTasks" value="Logon_AccessPage_WaitForFirstRunTasks"/>
+    <string id="task_Logon_BackButtonNotificationFlyout" value="Logon_BackButtonNotificationFlyout"/>
+    <string id="task_Logon_AccessPage_Unlock" value="Logon_AccessPage_Unlock"/>
+    <string id="task_Logon_AccessPage_Lock" value="Logon_AccessPage_Lock"/>
+    <string id="task_Logon_AccessPage_Camera_ControlCreation" value="Logon_AccessPage_Camera_ControlCreation"/>
+    <string id="task_Logon_AccessPage_Camera_ViewfinderInitialization" value="Logon_AccessPage_Camera_ViewfinderInitialization"/>
+    <string id="task_Logon_AccessPage_Camera_ActiveDuration" value="Logon_AccessPage_Camera_ActiveDuration"/>
+    <string id="task_Logon_AccessPage_Camera_ShutdownDuration" value="Logon_AccessPage_Camera_ShutdownDuration"/>
+    <string id="task_CredUI_Prompt_Called" value="CredUI_Prompt_Called"/>
+    <string id="task_CredUI_Dialog_Created" value="CredUI_Dialog_Created"/>
+    <string id="task_CredUI_UserList_TileEnumeration" value="CredUI_UserList_TileEnumeration"/>
+    <string id="task_CredUI_Dialog_Destroyed" value="CredUI_Dialog_Destroyed"/>
+    <string id="task_CredUI_Dialog_DUIInitialize" value="CredUI_Dialog_DUIInitialize"/>
+    <string id="task_CredUI_Dialog_LoadStyleSheet" value="CredUI_Dialog_LoadStyleSheet"/>
+    <string id="task_CredUI_ModernDialog_Created" value="CredUI_ModernDialog_Created"/>
+    <string id="task_CredUI_ModernDialog_DUIInitialize" value="CredUI_ModernDialog_DUIInitialize"/>
+    <string id="task_CredUI_ModernDialog_LoadStyleSheet" value="CredUI_ModernDialog_LoadStyleSheet"/>
+    <string id="task_CredUI_EnumerationSync" value="CredUI_EnumerationSync"/>
+    <string id="task_Shutdown_ShutdownChoices_UserHasShutdownRights" value="Shutdown_ShutdownChoices_UserHasShutdownRights"/>
+    <string id="task_Shutdown_ShutdownFlyout_CreateAndShow" value="Shutdown_ShutdownFlyout_CreateAndShow"/>
+    <string id="task_Shutdown_ShutdownFlyout_PromptForReason" value="Shutdown_ShutdownFlyout_PromptForReason"/>
+    <string id="task_Shutdown_ShutdownFlyout_PromptForConfirmation" value="Shutdown_ShutdownFlyout_PromptForConfirmation"/>
+    <string id="task_Shutdown_ShutdownFlyout_InitiatePowerTransition" value="Shutdown_ShutdownFlyout_InitiatePowerTransition"/>
+    <string id="task_Shutdown_SlideToShutDownScreen_Initialize" value="Shutdown_SlideToShutDownScreen_Initialize"/>
+    <string id="task_Shutdown_SlideToShutDownScreen_ShowModal" value="Shutdown_SlideToShutDownScreen_ShowModal"/>
+    <string id="task_Shutdown_SlideToShutDownScreen_SelfRevealAnimation" value="Shutdown_SlideToShutDownScreen_SelfRevealAnimation"/>
+    <string id="task_Shutdown_SlideToShutDownScreen_Dismiss" value="Shutdown_SlideToShutDownScreen_Dismiss"/>
+    <string id="task_Shutdown_SlideToShutDownScreen_Timeout" value="Shutdown_SlideToShutDownScreen_Timeout"/>
+    <string id="task_CredentialProviderUser_EnumerateLogonUsers" value="CredentialProviderUser_EnumerateLogonUsers"/>
+    <string id="task_CredentialProviderUser_EnumerateLastLoggedOnUser" value="CredentialProviderUser_EnumerateLastLoggedOnUser"/>
+    <string id="task_CredentialProviderUser_EnumerateAutoLogonUser" value="CredentialProviderUser_EnumerateAutoLogonUser"/>
+    <string id="task_CredentialProviderUser_EnumerateInSessionUser" value="CredentialProviderUser_EnumerateInSessionUser"/>
+    <string id="task_CredentialProviderUser_EnumerateLocalAdmins" value="CredentialProviderUser_EnumerateLocalAdmins"/>
+    <string id="task_CredentialProviderUser_Init_CredentialProviderUserArray" value="CredentialProviderUser_Init_CredentialProviderUserArray"/>
+    <string id="task_CredentialProviderUser_CloneUserArray" value="CredentialProviderUser_CloneUserArray"/>
+    <string id="task_CredentialProviderUser_SetProviderFilter" value="CredentialProviderUser_SetProviderFilter"/>
+    <string id="task_CredentialProviderUser_GetAccountOptions" value="CredentialProviderUser_GetAccountOptions"/>
+    <string id="task_PicturePassword_LaunchEnrollmentUX" value="PicturePassword_LaunchEnrollmentUX"/>
+    <string id="task_PicturePassword_EnrollmentUXTeachingShown" value="PicturePassword_EnrollmentUXTeachingShown"/>
+    <string id="task_PicturePassword_EnrollmentUXImageConfirmationShown" value="PicturePassword_EnrollmentUXImageConfirmationShown"/>
+    <string id="task_PicturePassword_EnrollmentUXRelearnShown" value="PicturePassword_EnrollmentUXRelearnShown"/>
+    <string id="task_PicturePassword_EnrollmentUXGestureEntryShown" value="PicturePassword_EnrollmentUXGestureEntryShown"/>
+    <string id="task_PicturePassword_EnrollmentUXGestureConfirmationShown" value="PicturePassword_EnrollmentUXGestureConfirmationShown"/>
+    <string id="task_PicturePassword_EnrollmentUXEnrollmentConfirmationShown" value="PicturePassword_EnrollmentUXEnrollmentConfirmationShown"/>
+    <string id="task_PicturePassword_EnrollmentUXErrorShown" value="PicturePassword_EnrollmentUXErrorShown"/>
+    <string id="task_PicturePassword_RenderFeedback" value="PicturePassword_RenderFeedback"/>
+    <string id="task_PicturePassword_FeedbackVisible" value="PicturePassword_FeedbackVisible"/>
+    <string id="task_PicturePassword_SubmitEnrollmentToSystem" value="PicturePassword_SubmitEnrollmentToSystem"/>
+    <string id="task_PicturePassword_SanitizeImage" value="PicturePassword_SanitizeImage"/>
+    <string id="task_PicturePassword_EnrollmentHandlerCreate" value="PicturePassword_EnrollmentHandlerCreate"/>
+    <string id="task_PicturePassword_EnrollmentHandlerGetEnrollmentStatus" value="PicturePassword_EnrollmentHandlerGetEnrollmentStatus"/>
+    <string id="task_PicturePassword_EnrollmentHandlerGetEnrollmentGestures" value="PicturePassword_EnrollmentHandlerGetEnrollmentGestures"/>
+    <string id="task_PicturePassword_EnrollmentHandlerSetEnrollment" value="PicturePassword_EnrollmentHandlerSetEnrollment"/>
+    <string id="task_PicturePassword_EnrollmentHandlerClearEnrollment" value="PicturePassword_EnrollmentHandlerClearEnrollment"/>
+    <string id="task_PicturePassword_CredentialCreate" value="PicturePassword_CredentialCreate"/>
+    <string id="task_PicturePassword_CredentialSelected" value="PicturePassword_CredentialSelected"/>
+    <string id="task_PicturePassword_CredentialDeselected" value="PicturePassword_CredentialDeselected"/>
+    <string id="task_PicturePassword_CredentialSetSubmitData" value="PicturePassword_CredentialSetSubmitData"/>
+    <string id="task_PicturePassword_CredentialGetSerialization" value="PicturePassword_CredentialGetSerialization"/>
+    <string id="task_PicturePassword_SyncedImageLoading" value="PicturePassword_SyncedImageLoading"/>
+    <string id="task_PicturePassword_EnrollmentImageSavingForRoaming" value="PicturePassword_EnrollmentImageSavingForRoaming"/>
+    <string id="task_PicturePassword_SyncedImageSelected" value="PicturePassword_SyncedImageSelected"/>
+    <string id="task_PicturePassword_CheckRoamingImageAvailable" value="PicturePassword_CheckRoamingImageAvailable"/>
+    <string id="task_LockScreenCall_AcceptCall" value="LockScreenCall_AcceptCall"/>
+    <string id="task_LockScreenCall_QueueCall" value="LockScreenCall_QueueCall"/>
+    <string id="task_LockScreenCall_StartCall" value="LockScreenCall_StartCall"/>
+    <string id="task_LockScreenCall_EndCall" value="LockScreenCall_EndCall"/>
+    <string id="task_LockScreenCall_EvictCall" value="LockScreenCall_EvictCall"/>
+    <string id="task_LockScreenCallBroker_StartCall" value="LockScreenCallBroker_StartCall"/>
+    <string id="task_LockScreenCallBroker_EndCall" value="LockScreenCallBroker_EndCall"/>
+    <string id="task_LockScreenCallBroker_OnUnlocking" value="LockScreenCallBroker_OnUnlocking"/>
+    <string id="task_LockScreenCallBroker_EventSignaled" value="LockScreenCallBroker_EventSignaled"/>
+    <string id="task_LockScreenCallBroker_HostExited" value="LockScreenCallBroker_HostExited"/>
+    <string id="task_LockScreenCallBroker_AccessibleNameChanged" value="LockScreenCallBroker_AccessibleNameChanged"/>
+    <string id="task_LockScreenCallBroker_AppExited" value="LockScreenCallBroker_AppExited"/>
+    <string id="task_Booting_Animation_DoPearlSync" value="Booting_Animation_DoPearlSync"/>
+    <string id="task_Booting_Animation_Init" value="Booting_Animation_Init"/>
+    <string id="task_Booting_Animation_TimerProc" value="Booting_Animation_TimerProc"/>
+    <string id="task_Booting_Animation_LoadImg" value="Booting_Animation_LoadImg"/>
+    <string id="task_Booting_Animation_AnimationCompleteProc" value="Booting_Animation_AnimationCompleteProc"/>
+    <string id="task_Booting_Animation_PlaySoundThread" value="Booting_Animation_PlaySoundThread"/>
+    <string id="task_Booting_Animation_AnimCallbackObjLifetime" value="Booting_Animation_AnimCallbackObjLifetime"/>
+    <string id="task_Booting_Animation_InitAudioThread" value="Booting_Animation_InitAudioThread"/>
+    <string id="task_Booting_Animation_AttachToMMCSS" value="Booting_Animation_AttachToMMCSS"/>
+    <string id="task_Logon_LogonFrame_InitializeInputIndicator" value="Logon_LogonFrame_InitializeInputIndicator"/>
+    <string id="task_LockscreenNotifications_NotificationUpdated" value="LockscreenNotifications_NotificationUpdated"/>
+    <string id="task_LockscreenNotifications_NotificationArrived" value="LockscreenNotifications_NotificationArrived"/>
+    <string id="map_AutoLogonSettingRemovalReasonDer Benutzer hat die Einrichtung des Computers abgeschlossen" value="Der Benutzer hat die Einrichtung des Computers abgeschlossen"/>
+    <string id="map_AutoLogonSettingRemovalReasonSie ist Teil der automatischen Anmeldung nach einem Neustart" value="Sie ist Teil der automatischen Anmeldung nach einem Neustart"/>
+    <string id="map_AutoLogonSettingRemovalReasonDas Kennwort für die automatische Anmeldung konnte nicht geladen werden" value="Das Kennwort für die automatische Anmeldung konnte nicht geladen werden"/>
+    <string id="map_AutoLogonSettingRemovalReasonUnter ClearAutologon ist der Registrierungswert Enabled festgelegt" value="Unter ClearAutologon ist der Registrierungswert Enabled festgelegt"/>
+    <string id="map_AutoLogonSettingRemovalReasonDie EAS-Richtlinie ist festgelegt" value="Die EAS-Richtlinie ist festgelegt"/>
+    <string id="map_AutoLogonSettingRemovalReasonDer Registrierungswert AutoLogonCount hat Null erreicht" value="Der Registrierungswert AutoLogonCount hat Null erreicht"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>
