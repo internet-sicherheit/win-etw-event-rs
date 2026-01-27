@@ -101,12 +101,13 @@
 
                     <template tid="WorkloadStepArgs">
                         <data name="TimestampUTC"            inType="win:FILETIME"      />
-                        <data name="WorkloadDescriptionStep" inType="win:UnicodeString" />
+                        <data name="WorkloadStepDescription" inType="win:UnicodeString" />
                     </template>
 
                     <template tid="ActionArgs">
                         <data name="TimestampUTC"          inType="win:FILETIME"      />
                         <data name="ActionIndex"           inType="win:UInt32"        />
+                        <data name="ActionTypeName"        inType="win:UnicodeString" />
                         <data name="ActionDescription"     inType="win:UnicodeString" />
                         <data name="ActionAttribute1Name"  inType="win:UnicodeString" />
                         <data name="ActionAttribute1Value" inType="win:UnicodeString" />
