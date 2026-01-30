@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<instrumentationManifest
+    xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd"
+    xmlns="http://schemas.microsoft.com/win/2004/08/events"
+    xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:trace="http://schemas.microsoft.com/win/2004/08/events/trace">
+
+    <instrumentation>
+        <events>
+            <provider
+                name="HypErSIS-ETWStim"
+                guid="{C9C3587D-6B1A-4B37-A48C-A8F3C4BD4031}"
+                symbol="HypersisEtwStim"
+                resourceFileName="%SystemDrive%\ETWStim\EtwProviderClass\Hypersis-ETWStim.dll"
+                messageFileName="%SystemDrive%\ETWStim\EtwProviderClass\Hypersis-ETWStim.dll">
+
+                <tasks>
+                    <task value="1" name="Workload"     eventGUID="{60DC8434-B4C6-4F44-905A-E7A8D912D71E}" />
+                    <task value="2" name="WorkloadStep" eventGUID="{F54A22B4-C746-44CC-96D6-7E65F4F8D11C}" />
+                    <task value="3" name="Action"       eventGUID="{B7ADC60B-8103-4742-9515-17A3DA01E365}" />
+                </tasks>
+                
+                <events>
+                    <event
+                        value="11"
+                        version="1"
+                        symbol="WorkloadStart"
+                        task="Workload"
+                        opcode="Start"
+                        channel="c1"
+                        level="win:Informational"
+                        keywords="Workload"
+                        template="WorkloadArgs">
+                    </event>
+                    <event
+                        value="12"
+                        version="1"
+                        symbol="WorkloadEnd"
+                        task="Workload"
+                        opcode="End"
+                        channel="c1"
+                        level="win:Informational"
+                        keywords="Workload"
+                        template="WorkloadArgs">
+                    </event>
+                    <event
+                        value="21"
+                        version="1"
+                        symbol="WorkloadStepStart"
+                        task="WorkloadStep"
+                        opcode="Start"
+                        channel="c1"
+                        level="win:Informational"
+                        keywords="WorkloadStep"
+                        template="WorkloadStepArgs">
+                    </event>
+                    <event
+                        value="22"
+                        version="1"
+                        symbol="WorkloadStepEnd"
+                        task="WorkloadStep"
+                        opcode="End"
+                        channel="c1"
+                        level="win:Informational"
+                        keywords="WorkloadStep"
+                        template="WorkloadStepArgs">
+                    </event>
+                    <event
+                        value="31"
+                        version="1"
+                        symbol="ActionStart"
+                        task="Action"
+                        opcode="Start"
+                        channel="c1"
+                        level="win:Informational"
+                        keywords="Action"
+                        template="ActionArgs">
+                    </event>
+                    <event
+                        value="32"
+                        version="1"
+                        symbol="ActionEnd"
+                        task="Action"
+                        opcode="End"
+                        channel="c1"
+                        level="win:Informational"
+                        keywords="Action"
+                        template="ActionArgs">
+                    </event>
+                </events>
+
+                <templates>
+                    <template tid="WorkloadArgs">
+                        <data name="TimestampUTC"        inType="win:FILETIME"      />
+                        <data name="WorkloadCycle"       inType="win:UInt16"        />
+                        <data name="WorkloadDescription" inType="win:UnicodeString" />
+                    </template>
+
+                    <template tid="WorkloadStepArgs">
+                        <data name="TimestampUTC"            inType="win:FILETIME"      />
+                        <data name="WorkloadStepDescription" inType="win:UnicodeString" />
+                    </template>
+
+                    <template tid="ActionArgs">
+                        <data name="TimestampUTC"          inType="win:FILETIME"      />
+                        <data name="ActionIndex"           inType="win:UInt32"        />
+                        <data name="ActionTypeName"        inType="win:UnicodeString" />
+                        <data name="ActionDescription"     inType="win:UnicodeString" />
+                        <data name="ActionAttribute1Name"  inType="win:UnicodeString" />
+                        <data name="ActionAttribute1Value" inType="win:UnicodeString" />
+                        <data name="ActionAttribute2Name"  inType="win:UnicodeString" />
+                        <data name="ActionAttribute2Value" inType="win:UnicodeString" />
+                        <data name="ActionAttribute3Name"  inType="win:UnicodeString" />
+                        <data name="ActionAttribute3Value" inType="win:UnicodeString" />
+                    </template>
+                </templates>
+
+                <opcodes>
+                    <opcode name="Start" symbol="OPCODE_START" value="11" />
+                    <opcode name="End"   symbol="OPCODE_END"   value="12" />
+                </opcodes>
+
+                <keywords>
+                    <keyword name="Workload"     mask="0x1" symbol="KEYWORD_WORKLOAD"      />
+                    <keyword name="WorkloadStep" mask="0x2" symbol="KEYWORD_WORKLOAD_STEP" />
+                    <keyword name="Action"       mask="0x4" symbol="KEYWORD_ACTION"        />
+                </keywords>
+
+                <channels>
+                    <channel chid="c1" name="HypErSIS-ETWStim/Operational" type="Operational" enabled="true" />
+                </channels>
+				
+            </provider>
+        </events>
+    </instrumentation>
+
+</instrumentationManifest>
