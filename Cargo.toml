@@ -1,21 +1,22 @@
-workspace = { members = ["proc-etw-manifest"] }
+workspace = { members = ["proc-win-etw-manifest"] }
+
 [package]
 name = "win-etw-event"
 version = "0.1.1"
 edition = "2021"
-authors = ["Marvin Gudel <marvin.s.gudel@studmail.w-hs.de>"]
+authors = ["Marvin Gudel <github.marvin@gudel.org>"]
 license = "MIT"
 description = "Event formats used in Event Tracing for Windows (ETW)."
 
 [features]
-default = ["proc-etw-manifest"]
+default = ["proc-win-etw-manifest"]
 
 [dependencies]
 bitflags = { version = "2.4.1", features = ["serde"]}
 log = "0.4.20"
 num_enum = "0.7.1"
 uuid = { version = "1.6.1", features = ["serde"]}
-proc-etw-manifest = { path = "./proc-etw-manifest", optional = true }
+proc-win-etw-manifest = { path = "./proc-win-etw-manifest", optional = true }
 widestring = "1.0.2"
 byteorder = "1.5.0"
 filetime_type = "0.1.3"

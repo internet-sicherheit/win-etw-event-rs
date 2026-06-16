@@ -1,7 +1,7 @@
 use core::panic;
 
 use crate::helper::make_function_name;
-use etw_manifest::template::*;
+use win_etw_manifest::template::*;
 use proc_macro2::{Ident, Literal, Span, TokenStream};
 use quote::{format_ident, quote};
 

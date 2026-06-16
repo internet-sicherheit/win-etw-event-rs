@@ -6,7 +6,7 @@ use std::{
     path::Path,
 };
 
-use etw_manifest::{parse, Event, Provider};
+use win_etw_manifest::{parse, Event, Provider};
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
 
