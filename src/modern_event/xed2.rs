@@ -111,7 +111,7 @@ impl XED2Event {
         let payload = if xed2_header.used_flags.contains(UsedFliedsFlags::Payload) {
             let start = xed2_header.header_size as usize
                 + padding_8_byte(xed2_header.header_size as usize) as usize;
-            let mut payload = Vec::with_capacity(buf.len() - start as usize);
+            let mut payload = Vec::with_capacity(buf.len() - start);
             payload.extend_from_slice(&buf[start..]);
             Some(payload)
         } else {

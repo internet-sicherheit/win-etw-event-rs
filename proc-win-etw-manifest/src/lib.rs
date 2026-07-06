@@ -6,9 +6,9 @@ use std::{
     path::Path,
 };
 
-use win_etw_manifest::{parse, Event, Provider};
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
+use win_etw_manifest::{parse, Event, Provider};
 
 #[proc_macro]
 pub fn include_manifests(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
