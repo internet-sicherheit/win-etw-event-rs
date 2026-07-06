@@ -294,9 +294,9 @@ impl ModernEvent {
                 Box::new(provider::MicrosoftWindowsKernelNetwork::try_from(self).unwrap()),
             ),
             _ => {
-                #[cfg(feature = "proc-etw-manifest")]
+                #[cfg(feature = "proc-win-etw-manifest")]
                 return provider::generated_into_contained_event(self);
-                #[cfg(not(feature = "proc-etw-manifest"))]
+                #[cfg(not(feature = "proc-win-etw-manifest"))]
                 return None;
             }
         }

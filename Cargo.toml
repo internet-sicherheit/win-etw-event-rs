@@ -10,6 +10,7 @@ description = "Event formats used in Event Tracing for Windows (ETW)."
 
 [features]
 default = ["proc-win-etw-manifest"]
+proc-win-etw-manifest = ["dep:proc-win-etw-manifest"]
 
 [dependencies]
 bitflags = { version = "2.4.1", features = ["serde"]}

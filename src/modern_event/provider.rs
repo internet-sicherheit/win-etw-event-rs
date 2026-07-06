@@ -12,5 +12,5 @@ use super::*;
 mod win_kernel_network;
 pub use win_kernel_network::*;
 
-#[cfg(feature = "proc-etw-manifest")]
-proc_etw_manifest::include_manifests!("./manifest/enabled");
+#[cfg(feature = "proc-win-etw-manifest")]
+proc_win_etw_manifest::include_manifests!("./manifest/enabled");
