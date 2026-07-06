@@ -1,9 +1,9 @@
 use core::panic;
 
 use crate::helper::make_function_name;
-use win_etw_manifest::template::*;
 use proc_macro2::{Ident, Literal, Span, TokenStream};
 use quote::{format_ident, quote};
+use win_etw_manifest::template::*;
 
 /// Generate a function for every passed template
 ///

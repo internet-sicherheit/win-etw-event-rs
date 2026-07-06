@@ -94,7 +94,7 @@ pub(crate) fn read_utf16_string<T: AsRef<[u8]>>(r: &mut io::Cursor<T>) -> io::Re
 
 pub(crate) fn read_utf16_string_from_slice(buf: &[u8]) -> io::Result<String> {
     // We get us a &[u8] which contains all remaining bytes and truncate it to a even number of bytes
-    let s = if buf.len() % 2 != 0 {
+    let s = if !buf.len().is_multiple_of(2) {
         &buf[..buf.len() - 1]
     } else {
         buf
