@@ -14,5 +14,5 @@ proc-macro2 = "1.0.76"
 quote = "1.0.35"
 syn = "2.0.39"
 uuid = "1.6.1"
-win-etw-manifest = { git = "ssh://git@github.com/internet-sicherheit/win-etw-manifest-rs.git" }
+win-etw-manifest = { git = "https://github.com/internet-sicherheit/win-etw-manifest-rs.git" }
 
